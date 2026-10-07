@@ -1,7 +1,7 @@
-### Icon / plus   ⚙️ synced: 2026-10-07T17:39:59Z
+### Icon / plus   ⚙️ synced: 2026-10-07T17:42:38Z
 
 <!-- ⚙️ GENERATED:start:icon-plus -->
-- **Figma:** `30:69` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T17:39:59Z
+- **Figma:** `30:69` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T17:42:38Z
 - **Descripción (Figma):** Más: abrir acordeón FAQ. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

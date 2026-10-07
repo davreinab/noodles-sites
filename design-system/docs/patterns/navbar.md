@@ -1,7 +1,7 @@
-### Navbar   ⚙️ synced: 2026-10-07T17:39:59Z
+### Navbar   ⚙️ synced: 2026-10-07T17:42:38Z
 
 <!-- ⚙️ GENERATED:start:navbar -->
-- **Figma:** `55:116` · página «Pattern / Navbar» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T17:39:59Z
+- **Figma:** `55:116` · página «Pattern / Navbar» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T17:42:38Z
 - **Descripción (Figma):** Patrón de cabecera. Desktop: logo · 5 Nav item (Bar) · Lang switch (solo marcas multiidioma) · buscar · CTA «Dónde comprar». Mobile: logo · buscar · menú (abre Mobile menu). Comportamiento: sticky (layer/sticky); se oculta al hacer scroll hacia abajo y reaparece al subir; respeta prefers-reduced-motion. Ancho ligado a layout/frame con modo fijado por variante. Sin variables propias: compone componentes y semánticos.
 - **Anatomía:** `logo` → Version=Positive, `nav-item` → Type=Bar, State=Active, `nav-item` → Type=Bar, State=Default, `nav-item` → Type=Bar, State=Default, `nav-item` → Type=Bar, State=Default, `nav-item` → Type=Bar, State=Default, `lang-switch` → Selected=First, `search` → Hierarchy=Secondary, Size=M, State=Default, `icon` → Icon / search, `cta` → Hierarchy=Primary, Size=M, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right
 - **Breakpoint:** Desktop, Mobile

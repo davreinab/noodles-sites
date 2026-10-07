@@ -1,7 +1,7 @@
-### Icon / instagram   ⚙️ synced: 2026-10-07T17:39:59Z
+### Icon / instagram   ⚙️ synced: 2026-10-07T17:42:38Z
 
 <!-- ⚙️ GENERATED:start:icon-instagram -->
-- **Figma:** `21:65` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T17:39:59Z
+- **Figma:** `21:65` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T17:42:38Z
 - **Descripción (Figma):** Red social: Instagram. Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

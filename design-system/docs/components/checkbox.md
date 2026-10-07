@@ -1,7 +1,7 @@
-### Checkbox   ⚙️ synced: 2026-10-07T17:39:59Z
+### Checkbox   ⚙️ synced: 2026-10-07T17:42:38Z
 
 <!-- ⚙️ GENERATED:start:checkbox -->
-- **Figma:** `47:302` · página «Checkbox» · COMPONENT_SET · 10 variantes · última sync 2026-10-07T17:39:59Z
+- **Figma:** `47:302` · página «Checkbox» · COMPONENT_SET · 10 variantes · última sync 2026-10-07T17:42:38Z
 - **Descripción (Figma):** Casilla de verificación: consentimiento GDPR y aceptación de bases legales de concursos. Toda la fila (caja + etiqueta) es clicable; área táctil mínima 44 px en código. Marcada: tinta con check crema (el estado se ve por la forma, no solo por color). Error: borde rojo; el mensaje va en el formulario con aria-describedby. Nunca premarcada en consentimientos.
 - **Anatomía:** `check` → Icon / check
 - **Checked:** False, True

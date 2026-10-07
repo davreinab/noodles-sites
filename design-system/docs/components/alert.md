@@ -1,7 +1,7 @@
-### Alert   ⚙️ synced: 2026-10-07T17:39:59Z
+### Alert   ⚙️ synced: 2026-10-07T17:42:38Z
 
 <!-- ⚙️ GENERATED:start:alert -->
-- **Figma:** `80:138` · página «Alert» · COMPONENT_SET · 8 variantes · última sync 2026-10-07T17:39:59Z
+- **Figma:** `80:138` · página «Alert» · COMPONENT_SET · 8 variantes · última sync 2026-10-07T17:42:38Z
 - **Descripción (Figma):** Mensaje de estado. Type=Info · Success · Alert · Error, cada uno con su icono fijo (info, circle-check, triangle-alert, circle-alert) y su título: el tipo nunca se comunica solo por color. Layout=Inline: dentro del contenido (formulario, concurso cerrado), radius/sm. Layout=Toast: flotante y temporal en layer/toast, elevation/3, abajo centrado en móvil y abajo a la derecha en desktop; se cierra solo a los 6 s salvo Error, que espera al usuario (y la pausa al pasar el ratón o con el foco). Accesibilidad: Info/Success con role=&quot;status&quot; (aria-live polite); Alert/Error con role=&quot;alert&quot;. Cerrar es un &lt;button aria-label=&quot;Cerrar aviso&quot;&gt;. El título se edita en la instancia (no es propiedad para no perder el título de cada tipo).
 - **Anatomía:** `icon-status` → Icon / info, `icon-close` → Icon / close
 - **Type:** Info, Success, Alert, Error

@@ -1,7 +1,7 @@
-### Mobile menu   ⚙️ synced: 2026-10-07T17:39:59Z
+### Mobile menu   ⚙️ synced: 2026-10-07T17:42:38Z
 
 <!-- ⚙️ GENERATED:start:mobile-menu -->
-- **Figma:** `55:119` · página «Pattern / Mobile menu» · COMPONENT · 1 variantes · última sync 2026-10-07T17:39:59Z
+- **Figma:** `55:119` · página «Pattern / Mobile menu» · COMPONENT · 1 variantes · última sync 2026-10-07T17:42:38Z
 - **Descripción (Figma):** Patrón: menú móvil a pantalla completa (se abre desde el botón menú de la Navbar). Logo negativo · cerrar · 5 Nav item (Menu) · Lang switch (solo marcas multiidioma) · CTA. Accesibilidad: role=&quot;dialog&quot; con aria-modal, foco atrapado dentro, Esc cierra y el foco vuelve al botón menú; layer/modal. Sin variables propias.
 - **Anatomía:** `logo` → Version=Negative, `close` → Hierarchy=Inverse, Size=M, State=Default, `icon` → Icon / close, `nav-item` → Type=Menu, State=Active, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `lang-switch` → Selected=First, `cta` → Hierarchy=Inverse, Size=L, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right
 - **Propiedades de componente:** `Logo#55:6` (INSTANCE_SWAP, por defecto Version=Negative), `Lang switch#55:7` (BOOLEAN, por defecto False)

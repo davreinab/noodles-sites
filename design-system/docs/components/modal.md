@@ -1,7 +1,7 @@
-### Modal   ⚙️ synced: 2026-10-07T17:39:59Z
+### Modal   ⚙️ synced: 2026-10-07T17:42:38Z
 
 <!-- ⚙️ GENERATED:start:modal -->
-- **Figma:** `79:123` · página «Modal» · COMPONENT_SET · 3 variantes · última sync 2026-10-07T17:39:59Z
+- **Figma:** `79:123` · página «Modal» · COMPONENT_SET · 3 variantes · última sync 2026-10-07T17:42:38Z
 - **Descripción (Figma):** Diálogo modal. Size=M (560): alérgenos, resultado de concurso. Size=L (880): etiqueta del envase (imagen ampliable), resultados de búsqueda. Size=Full (móvil, pantalla completa). Anatomía: cabecera (título h3 + Icon button cerrar) · contenido (swap «Content», por defecto Modal / Slot) · pie opcional con acción. Se muestra sobre el velo modal/overlay (layer/overlay) y el diálogo en layer/modal. Accesibilidad: &lt;dialog&gt; o role=&quot;dialog&quot; + aria-modal=&quot;true&quot; + aria-labelledby al título; el foco entra en el primer elemento (o el título), queda atrapado dentro, Esc y el botón cerrar lo cierran y el foco vuelve al disparador; el fondo queda inerte (inert) y sin scroll.
 - **Anatomía:** `close` → Hierarchy=Secondary, Size=M, State=Default, `Icon / close` → Icon / close, `content` → Modal / Slot, `action` → Hierarchy=Primary, Size=M, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right
 - **Size:** M, L, Full

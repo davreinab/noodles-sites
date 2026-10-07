@@ -6,7 +6,7 @@
     "slug": "tab",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T17:39:59Z",
+    "lastSync": "2026-10-07T17:42:38Z",
     "description": "Pestaña del primer nivel del filtro de productos (Cups / Bags / Sauces). Selected en tinta con texto crema. En código: role=&quot;tablist&quot; / role=&quot;tab&quot; con aria-selected y flechas izquierda/derecha para moverse. Alto 48 (mínimo táctil).",
     "figmaPage": "Tab",
     "figmaType": "COMPONENT_SET",

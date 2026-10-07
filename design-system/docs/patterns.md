@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un patrón que no esté aquí; los patrones se componen de átomos y consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 18 patrones sincronizados el 2026-10-07T17:39:59Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 18 patrones sincronizados el 2026-10-07T17:42:38Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -131,3 +131,4 @@ lleva su **Ejemplo de código** con el markup de la página, igual que los compo
 |---|---|---|---|---|
 | _YYYY-MM-DD_ | _Ej.: «Las acciones primarias de un panel van siempre en el pie, alineadas a la derecha.»_ | _UI/<pantalla>.html (sesión 2026-…) · UI/<otra-pantalla>.html (revisión PR #12)_ | _paneles y drawers_ | _vigente · promovida a token `--…` · promovida al contrato «…»_ |
 | 2026-10-07 | Ningún nombre técnico lleva diéresis, tildes ni otros diacríticos: modos, variables, estilos, componentes, capas, slugs y selectores van en ASCII («Aiki», no «Aïki»). La grafía de marca se conserva solo en textos visibles y descripciones. | David Reina: slug `logo-aïki` → `logo-aiki` (sesión 2026-10-07) · modo de marca «Aïki» → «Aiki» y regla general (misma sesión) | Figma (variables, modos, estilos, componentes, capas) y repo (slugs, `[data-brand]`) | vigente · aplicada en Figma y en el sync |
+| 2026-10-07 | El foco es un único anillo de 2 px (`--border-width-thin`) pegado por fuera del componente, sin hueco, con el radio del elemento que rodea y el color `*/focus-ring` del componente. En CSS: `outline: var(--border-width-thin) solid var(--<componente>-focus-ring); outline-offset: 0` sobre `:focus-visible`. No se añaden halos, dobles bordes ni separación. | David Reina: revisión de estados focus de las fases 1-6 («demasiados borders, demasiado duros, sin espacio entre el foco y el componente», sesión 2026-10-07) | Todos los componentes con estado Focus (Button, Icon button, Link, campos, Checkbox, Nav item, Tab, cards, Accordion item, Suggestion bubble) y los que se creen | vigente · aplicada en Figma (31 variantes Focus) |

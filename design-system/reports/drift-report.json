@@ -1,6 +1,6 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": "2026-10-07T08:51:38Z",
+  "generatedAt": "2026-10-07T09:26:01Z",
   "adoptionMode": "new",
   "sourcesCompared": [
     "figma",
@@ -12,29 +12,64 @@
   ],
   "summary": {
     "critical": 0,
-    "warning": 3,
-    "info": 1
+    "warning": 0,
+    "info": 11
   },
   "findings": [
+    {
+      "severity": "info",
+      "check": "missing-variable-description-or-scope",
+      "detail": "Layer / layer/base: sin scopes"
+    },
+    {
+      "severity": "info",
+      "check": "missing-variable-description-or-scope",
+      "detail": "Layer / layer/raised: sin scopes"
+    },
+    {
+      "severity": "info",
+      "check": "missing-variable-description-or-scope",
+      "detail": "Layer / layer/sticky: sin scopes"
+    },
+    {
+      "severity": "info",
+      "check": "missing-variable-description-or-scope",
+      "detail": "Layer / layer/floating: sin scopes"
+    },
+    {
+      "severity": "info",
+      "check": "missing-variable-description-or-scope",
+      "detail": "Layer / layer/overlay: sin scopes"
+    },
+    {
+      "severity": "info",
+      "check": "missing-variable-description-or-scope",
+      "detail": "Layer / layer/modal: sin scopes"
+    },
+    {
+      "severity": "info",
+      "check": "missing-variable-description-or-scope",
+      "detail": "Layer / layer/toast: sin scopes"
+    },
+    {
+      "severity": "info",
+      "check": "missing-variable-description-or-scope",
+      "detail": "Layout / layout/columns: sin scopes"
+    },
+    {
+      "severity": "info",
+      "check": "missing-variable-description-or-scope",
+      "detail": "Motion / motion/duration/fast: sin scopes"
+    },
     {
       "severity": "info",
       "check": "missing-variable-description-or-scope",
       "detail": "Motion / motion/duration/base: sin scopes"
     },
     {
-      "severity": "warning",
-      "check": "foundation-missing",
-      "detail": "Figma no define la familia icon-size"
-    },
-    {
-      "severity": "warning",
-      "check": "foundation-missing",
-      "detail": "Figma no define la familia layer"
-    },
-    {
-      "severity": "warning",
-      "check": "foundation-missing",
-      "detail": "Figma no define la familia elevation"
+      "severity": "info",
+      "check": "missing-variable-description-or-scope",
+      "detail": "Motion / motion/duration/slow: sin scopes"
     }
   ],
   "acceptedStructuralDifferences": [],

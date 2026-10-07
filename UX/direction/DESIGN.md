@@ -10,8 +10,9 @@ Divertido, retador y maduro; nunca infantil ni de «comida barata». Se purga lo
 («anti-bullshit»). (Traspaso §4 y §5.)
 
 ## Paleta (intención)
-Intención heredada de las landings de la Fase 1 (traspaso §9; referencia, no tokens finales):
-el fondo amarillo es común a todas las marcas; cada marca redefine sus colores de marca con
+Los microsites no heredan código ni tokens de las landings: el DS se define desde cero con el
+estándar del proyecto (decisión de David Reina, 2026-10-07). Se conservan solo los **colores de
+marca**, que son de la marca y no del código. El fondo amarillo es común a todas las marcas; cada marca redefine sus colores de marca con
 los mismos nombres de token, así que los componentes no cambian. Un verde dedicado al claim
 natural y un rojo para la pill «NUEVO». Bélgica (Aïki) es la excepción visual más marcada.
 
@@ -23,18 +24,20 @@ un color opaco propio, no una opacidad. Contraste AA obligatorio en claro y oscu
 la intención debe ser alcanzable con ese límite.
 
 ## Tipografía (intención)
-Dos familias (traspaso §9): una display condensada de titulares (Dirty Headline en las landings:
-**hay que comprar la licencia** para uso comercial; Anton es la alternativa aprobada; no tiene
-acentos y el cliente ha pedido una parecida que sí los tenga) y Archivo para el cuerpo. Escala
-fluida.
+Dos familias: una display condensada en mayúsculas para titulares y labels (Anton, provisional:
+Dirty Headline exige licencia comercial y no tiene acentos; el cliente ha pedido una parecida que
+sí los tenga) y Archivo para el cuerpo. Escalas Desktop y Mobile explícitas, definidas en Figma
+(2026-10-07).
 
 ⬜ TODO — Una familia o dos y por qué; carácter (geométrica, humanista, mono para datos…);
 jerarquía esperada (cuántos niveles se necesitan de verdad); densidad de texto típica.
 
 ## Forma, espacio y ritmo
-Heredado de las landings (traspaso §9): radios generosos y pills, bordes gruesos, **sombras
-duras sin blur** con offset sólido del color de marca. Recursos de marca: fideos en SVG, la
-«ball» del pack y texturas orgánicas o hechas a mano.
+Definido desde cero en Figma (2026-10-07): grid de 8, radios 8/16/24 y pill, bordes de 2 y 4,
+sombras duras sin blur como recurso de marca (elevation/1-2) y una suave para capas flotantes
+(elevation/3). Recursos de marca: fideos en SVG, la «ball» del pack y texturas orgánicas o hechas
+a mano. Los componentes base (botones, inputs, iconos, fideos) pueden partir de las landings; los
+complejos se definen de nuevo.
 
 ⬜ TODO — Radios (rectos, suaves, redondos), densidad (compacta / aireada), uso de bordes
 frente a fondos para separar, sombras sí o no y para qué. Todo múltiplo de 4 (regla 8-point).

@@ -154,15 +154,17 @@ Detalle: ⬜ TODO.
 ### 11. Contacto
 Enlace externo.
 
-### Pendiente de decidir (FigJam frente al resto del contexto)
-Lo que el FigJam propone y choca o va más allá de lo ya acordado. No se resuelve aquí: se lleva a
-`synthesis.md` como decisión cuando el cliente o el equipo lo confirmen.
-- **Recipe library:** el tablero pide filtro, búsqueda y orden; la regla vigente descarta el buscador por ingredientes (los filtros por etiqueta o producto no están decididos).
-- **Contest page:** el tablero dibuja formulario de participación propio y testimonios; el traspaso admite tres modelos (estructura propia, iframe, enlace externo).
-- **Product page:** badges «hot!» y «vegan!» y moodboard del sabor, que no existen todavía en el design system; también la navegación cruzada y los packs.
-- **Recipe page:** comensales, utensilios y compartir o guardar la receta, sin componente en el design system.
-- **Contest library y Contest page:** bloque de newsletter o redes, sin regla ni componente.
-- **Footer:** el tablero pide sellos de salud y certificados alimentarios; los aporta GB Foods (pendiente).
+### Elementos sin definir
+Decisión de David Reina (2026-10-07): estos temas quedan **sin definir** de momento. No se
+diseñan, no se especifican y no se crean componentes ni reglas para ellos; ante cualquier
+petición relacionada, la respuesta es que **falta información**.
+- **Suggestion box como formulario propio** (la regla vigente es el enlace al formulario externo de Calidad, [`business-rules.md § Contacto`](./business-rules.md)).
+- **Recipe library:** filtro, búsqueda y orden.
+- **Contest page:** formulario de participación propio y testimonios (el traspaso admite estructura propia, iframe o enlace externo).
+- **Product page:** badges «hot!» y «vegan!», moodboard del sabor y packs.
+- **Recipe page:** comensales, utensilios y compartir o guardar la receta.
+- **Newsletter y redes** en las páginas de concursos.
+- **Sellos de salud y certificados alimentarios** en el footer (pendientes de GB Foods).
 
 ## Estados
 - Home sin promoción activa: el módulo de promo o concurso se oculta.

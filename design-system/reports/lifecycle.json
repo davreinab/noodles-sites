@@ -1,8 +1,20 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": null,
-  "note": "Informe de scripts/ds-lifecycle.py. No editar a mano. ⬜ Pendiente de la primera ejecución.",
-  "summary": { "deprecations": 0, "errors": 0, "warnings": 0, "stillUsed": 0 },
+  "generatedAt": "2026-10-07",
+  "note": "Informe de scripts/ds-lifecycle.py. No editar a mano.",
+  "policy": {
+    "minNoticeDays": 180,
+    "warnFromDay": 0,
+    "blockNewUsageFromDay": 120,
+    "removeIn": "siguiente versión mayor tras cumplirse el plazo",
+    "note": "El plazo corre desde 'since'. Antes de 'blockNewUsageFromDay' el uso existente solo avisa; a partir de ahí, un uso nuevo es error."
+  },
+  "summary": {
+    "deprecations": 0,
+    "errors": 0,
+    "warnings": 0,
+    "stillUsed": 0
+  },
   "errors": [],
   "warnings": [],
   "usage": {},

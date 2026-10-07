@@ -1,20 +1,165 @@
-/* ⚙️ ARCHIVO GENERADO — NO EDITAR A MANO.
-   Fuentes de verdad: consultar design.md; pueden ser varios archivos de Figma.
-   Regenerar con el protocolo de sync de design.md.
-   ⬜ Pendiente del primer sync. */
+/* ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO.
+   Design system: GB Noodles · Microsites · fileKey: v4mnn154qUmiB35CCnRfgh
+   Última sync: 2026-10-07T08:51:38Z · modo de adopción: new
+   Se regenera con el protocolo de sync de design.md. */
 
 :root {
-  /* ---- Primitives ---- */
-  /* ---- Semantic (Light) ---- */
-  /* ---- Spacing / Radius / Layout ---- */
+  /* ---- Primitive ---- */
+  --color-yatekomo-yellow: #ffcb05; /* Amarillo de marca Yatekomo. Primitivo: no se consume en componentes. */
+  --color-yatekomo-yellow-soft: #fff5d9; /* Crema de fondo Yatekomo. Primitivo: no se consume en componentes. */
+  --color-yatekomo-orange: #e8890c; /* Naranja de acento Yatekomo. Primitivo: no se consume en componentes. */
+  --color-yatekomo-green: #007a33; /* Verde Pantone 356 C del claim natural. Primitivo: no se consume en componentes. */
+  --color-neutral-ink-900: #121212; /* Tinta: texto y fondos oscuros. Primitivo: no se consume en componentes. */
+  --color-neutral-ink-600: #6b6455; /* Gris cálido de texto secundario. Primitivo: no se consume en componentes. */
+  --color-neutral-sand-200: #e4dcc8; /* Filete decorativo sobre crema. Primitivo: no se consume en componentes. */
+  --color-neutral-white: #ffffff; /* Blanco. Primitivo: no se consume en componentes. */
+  --color-red-600: #e1251b; /* Rojo del packaging (pill NUEVO). Primitivo: no se consume en componentes. */
+  --color-status-error-50: #fde8e7; /* Fondo de error. Primitivo: no se consume en componentes. */
+  --color-status-error-700: #c81e15; /* Icono y borde de error. Primitivo: no se consume en componentes. */
+  --color-status-error-900: #a3160e; /* Texto de error. Primitivo: no se consume en componentes. */
+  --color-status-success-50: #e3f3e9; /* Fondo de éxito. Primitivo: no se consume en componentes. */
+  --color-status-success-900: #005c26; /* Texto de éxito. Primitivo: no se consume en componentes. */
+  --color-status-alert-50: #ffefc2; /* Fondo de aviso. Primitivo: no se consume en componentes. */
+  --color-status-alert-700: #9a5b00; /* Icono y borde de aviso. Primitivo: no se consume en componentes. */
+  --color-status-alert-900: #6b4100; /* Texto de aviso. Primitivo: no se consume en componentes. */
+  --color-status-info-50: #e5eef9; /* Fondo de información. Primitivo: no se consume en componentes. */
+  --color-status-info-700: #1f63b5; /* Icono y borde de información. Primitivo: no se consume en componentes. */
+  --color-status-info-900: #0b4482; /* Texto de información. Primitivo: no se consume en componentes. */
+  /* ---- Semantic ---- */
+  --color-surface-page: var(--color-yatekomo-yellow-soft); /* Fondo base de página */
+  --color-surface-brand: var(--color-yatekomo-yellow); /* Fondo de marca (amarillo común a todas las marcas) */
+  --color-surface-card: var(--color-neutral-white); /* Fondo de card clara */
+  --color-surface-inverse: var(--color-neutral-ink-900); /* Secciones y fondos oscuros */
+  --color-surface-natural: var(--color-yatekomo-green); /* Fondo del claim natural; texto encima: color/text/on-natural */
+  --color-surface-accent: var(--color-yatekomo-orange); /* Acento decorativo. Texto encima solo color/text/default */
+  --color-surface-badge-new: var(--color-red-600); /* Pill NUEVO; texto encima: color/text/on-badge */
+  --color-text-default: var(--color-neutral-ink-900); /* Texto principal (≥12:1 sobre page, brand y card) */
+  --color-text-secondary: var(--color-neutral-ink-600); /* Texto secundario. Solo sobre page o card (5.4:1); NO sobre brand (3.85:1) */
+  --color-text-on-inverse: var(--color-yatekomo-yellow-soft); /* Texto sobre surface/inverse (17:1) */
+  --color-text-brand-on-inverse: var(--color-yatekomo-yellow); /* Texto destacado amarillo sobre surface/inverse (12:1) */
+  --color-text-on-natural: var(--color-neutral-white); /* Texto sobre surface/natural (5.5:1) */
+  --color-text-natural: var(--color-yatekomo-green); /* Texto verde natural sobre page (5.0:1). Sobre brand solo texto grande (3.6:1) */
+  --color-text-on-badge: var(--color-neutral-white); /* Texto sobre surface/badge-new (4.7:1) */
+  --color-border-default: var(--color-neutral-ink-900); /* Borde de componentes (botón ghost, formularios) */
+  --color-border-subtle: var(--color-neutral-sand-200); /* Filete decorativo de tablas. NO para límites de controles (1.3:1) */
+  --color-effect-shadow-brand: var(--color-yatekomo-yellow); /* Color de sombra dura de marca */
+  --color-effect-shadow-ink: var(--color-neutral-ink-900); /* Color de sombra dura neutra */
+  --color-status-error-bg: var(--color-status-error-50); /* Fondo de mensaje de error */
+  --color-status-error-text: var(--color-status-error-900); /* Texto de error sobre su bg (≥6.6:1) */
+  --color-status-error-icon: var(--color-status-error-700); /* Icono de error (≥4.7:1 sobre bg y page) */
+  --color-status-error-border: var(--color-status-error-700); /* Borde de error (≥4.7:1) */
+  --color-status-success-bg: var(--color-status-success-50); /* Fondo de mensaje de success */
+  --color-status-success-text: var(--color-status-success-900); /* Texto de success sobre su bg (≥6.6:1) */
+  --color-status-success-icon: var(--color-yatekomo-green); /* Icono de success (≥4.7:1 sobre bg y page) */
+  --color-status-success-border: var(--color-yatekomo-green); /* Borde de success (≥4.7:1) */
+  --color-status-alert-bg: var(--color-status-alert-50); /* Fondo de mensaje de alert */
+  --color-status-alert-text: var(--color-status-alert-900); /* Texto de alert sobre su bg (≥6.6:1) */
+  --color-status-alert-icon: var(--color-status-alert-700); /* Icono de alert (≥4.7:1 sobre bg y page) */
+  --color-status-alert-border: var(--color-status-alert-700); /* Borde de alert (≥4.7:1) */
+  --color-status-info-bg: var(--color-status-info-50); /* Fondo de mensaje de info */
+  --color-status-info-text: var(--color-status-info-900); /* Texto de info sobre su bg (≥6.6:1) */
+  --color-status-info-icon: var(--color-status-info-700); /* Icono de info (≥4.7:1 sobre bg y page) */
+  --color-status-info-border: var(--color-status-info-700); /* Borde de info (≥4.7:1) */
+  /* ---- Spacing ---- */
+  --space-quarter: 2px; /* 2px. Sistema de 8 puntos (excepción hairline/micro) */
+  --space-half: 4px; /* 4px. Sistema de 8 puntos (excepción hairline/micro) */
+  --space-1: 8px; /* 8px. Sistema de 8 puntos */
+  --space-2: 16px; /* 16px. Sistema de 8 puntos */
+  --space-3: 24px; /* 24px. Sistema de 8 puntos */
+  --space-4: 32px; /* 32px. Sistema de 8 puntos */
+  --space-5: 40px; /* 40px. Sistema de 8 puntos */
+  --space-6: 48px; /* 48px. Sistema de 8 puntos */
+  --space-7: 56px; /* 56px. Sistema de 8 puntos */
+  --space-8: 64px; /* 64px. Sistema de 8 puntos */
+  --space-9: 72px; /* 72px. Sistema de 8 puntos */
+  --space-10: 80px; /* 80px. Sistema de 8 puntos */
+  --space-12: 96px; /* 96px. Sistema de 8 puntos */
+  --space-14: 112px; /* 112px. Sistema de 8 puntos */
+  --radius-md: 24px; /* Radio de cards, formularios y media */
+  --radius-pill: 80px; /* Radio de botones y pills */
+  --border-width-default: 4px; /* Grosor de borde (botón ghost, formularios) */
+  /* ---- Layout ---- */
+  --layout-max-width: 1400px; /* Ancho máximo de contenido */
+  --layout-max-width-narrow: 1200px; /* Ancho máximo estrecho */
+  --layout-section-padding-y: 112px; /* Padding vertical de sección */
+  --layout-section-padding-x: 64px; /* Padding horizontal de sección */
+  --layout-gap: 24px; /* Gap por defecto entre cards */
   /* ---- Typography ---- */
-  /* ---- Icon size (--icon-size-*) ---- */
-  /* ---- Layer / z-index (--z-*) ---- */
-  /* ---- Motion (--motion-duration-*, --motion-easing-*) ---- */
-  /* ---- Elevation (--elevation-*) ---- */
+  --font-family-display: Anton; /* Display: titulares, kickers, botones, badges. Siempre mayúsculas */
+  --font-family-body: Archivo; /* Cuerpo, formularios, nav */
+  --font-style-display: Regular; /* Anton solo tiene Regular */
+  --font-style-body: Regular; /* Peso de cuerpo */
+  --font-size-hero: 128px; /* Tamaño hero */
+  --font-line-height-hero: 120px; /* Interlineado hero (0.94) */
+  --font-size-h2: 72px; /* Tamaño h2 */
+  --font-line-height-h2: 68px; /* Interlineado h2 (0.94) */
+  --font-size-h3: 44px; /* Tamaño h3 */
+  --font-line-height-h3: 41px; /* Interlineado h3 (0.94) */
+  --font-size-lead: 27px; /* Tamaño lead */
+  --font-line-height-lead: 38px; /* Interlineado lead (1.4) */
+  --font-size-body: 24px; /* Tamaño body */
+  --font-line-height-body: 36px; /* Interlineado body (1.5) */
+  --font-size-kicker: 22px; /* Tamaño kicker */
+  --font-line-height-kicker: 22px; /* Interlineado kicker (1.0) */
+  /* ---- Motion ---- */
+  --motion-duration-base: 500ms; /* Duración base de transiciones (ms) */
+  --motion-easing-punch: "cubic-bezier(.22,1.2,.36,1)"; /* Easing con rebote para hovers y reveal */
+  /* ---- Tipografía (text styles) ---- */
+  /* Hero */
+  --font-hero-family: "Anton";
+  --font-hero-size: var(--font-size-hero);
+  --font-hero-weight: 400;
+  --font-hero-line-height: 120px;
+  --font-hero-letter-spacing: 0;
+  /* H2 */
+  --font-h2-family: "Anton";
+  --font-h2-size: var(--font-size-h2);
+  --font-h2-weight: 400;
+  --font-h2-line-height: 68px;
+  --font-h2-letter-spacing: 0;
+  /* H3 */
+  --font-h3-family: "Anton";
+  --font-h3-size: var(--font-size-h3);
+  --font-h3-weight: 400;
+  --font-h3-line-height: 41px;
+  --font-h3-letter-spacing: 0;
+  /* Lead */
+  --font-lead-family: "Archivo";
+  --font-lead-size: var(--font-size-lead);
+  --font-lead-weight: 400;
+  --font-lead-line-height: 38px;
+  --font-lead-letter-spacing: 0;
+  /* Body */
+  --font-body-family: "Archivo";
+  --font-body-size: var(--font-size-body);
+  --font-body-weight: 400;
+  --font-body-line-height: 36px;
+  --font-body-letter-spacing: 0;
+  /* Kicker */
+  --font-kicker-family: "Anton";
+  --font-kicker-size: var(--font-size-kicker);
+  --font-kicker-weight: 400;
+  --font-kicker-line-height: 22px;
+  --font-kicker-letter-spacing: 0;
 }
 
 :root[data-theme="dark"] {
-  /* ---- Semantic (Dark) ---- */
-  /* ---- Elevation (Dark), si los colores de sombra cambian por modo ---- */
+  /* sin modo Dark en Figma */
+}
+
+@media (max-width: 768px) { /* modo Mobile */
+  :root {
+    --layout-section-padding-y: 40px;
+    --layout-section-padding-x: 24px;
+    --font-size-hero: 64px;
+    --font-line-height-hero: 60px;
+    --font-size-h2: 44px;
+    --font-line-height-h2: 41px;
+    --font-size-h3: 30px;
+    --font-line-height-h3: 28px;
+    --font-size-lead: 20px;
+    --font-line-height-lead: 28px;
+    --font-size-body: 18px;
+    --font-line-height-body: 27px;
+  }
 }

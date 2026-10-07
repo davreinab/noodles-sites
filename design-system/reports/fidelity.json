@@ -1,8 +1,14 @@
 {
-  "designSystem": "GB Noodles · Microsites",
-  "generatedAt": null,
-  "note": "Informe de scripts/ds-fidelity.py: fidelidad de los contratos a su maestro de Figma, con lo que se puede comprobar sin abrir Figma. Se regenera con `--out design-system/reports/fidelity.json`; no editar a mano.",
-  "summary": { "errors": 0, "warnings": 0 },
-  "verification": { "verified": 0, "unverified": 0, "stale": 0 },
+  "root": "/Users/davidreinabartoll/proyectos/claude-projects/noodles-microsites",
+  "errors": 0,
+  "warnings": 0,
+  "byCheck": {},
+  "contracts": 0,
+  "contractsWithCss": 0,
+  "verification": {
+    "verified": 0,
+    "unverified": 0,
+    "stale": 0
+  },
   "findings": []
 }

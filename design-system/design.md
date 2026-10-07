@@ -5,9 +5,9 @@
 
 **Fuentes de verdad en Figma:**
 
-- **GB Noodles · IA & page structure** — ia-sitemap (FigJam: sitemap y blueprints por página) · fileKey `cRgmGl36ELIUZNLUvC8KbW`
-- **Wireframes | Rediseño sites** — wireframes (home mobile alta fidelidad + blueprints desktop; home desktop en 87:642) · fileKey `1YhsCqdqYCHlK4Y82IY5G3`
-- ⬜ TODO — librería del DS (variables y componentes): aún no existe.
+- **DS - Noodles** — design-system: variables, estilos y componentes de los microsites (fuente de verdad del DS) · fileKey `v4mnn154qUmiB35CCnRfgh`
+- **GB Noodles · IA & page structure** — FigJam de sitemap y blueprints; no es fuente del DS · fileKey `cRgmGl36ELIUZNLUvC8KbW`
+- **Wireframes | Rediseño sites** — wireframes; sus componentes locales son solo de wireframe, no del DS · fileKey `1YhsCqdqYCHlK4Y82IY5G3`
 
 **Modo de adopción:** `new`
 

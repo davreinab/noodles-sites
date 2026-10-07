@@ -1,0 +1,2300 @@
+{
+  "collections": [
+    {
+      "id": "VariableCollectionId:5:2",
+      "name": "Primitive",
+      "modes": [
+        {
+          "modeId": "5:0",
+          "name": "Value"
+        }
+      ],
+      "defaultModeId": "5:0",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "source": "v4mnn154qUmiB35CCnRfgh",
+      "variables": [
+        {
+          "id": "VariableID:5:3",
+          "name": "color/yatekomo/yellow",
+          "type": "COLOR",
+          "description": "Amarillo de marca Yatekomo. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-yatekomo-yellow)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 1,
+                "g": 0.7960784435272217,
+                "b": 0.019607843831181526,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:4",
+          "name": "color/yatekomo/yellow-soft",
+          "type": "COLOR",
+          "description": "Crema de fondo Yatekomo. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-yatekomo-yellow-soft)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 1,
+                "g": 0.9607843160629272,
+                "b": 0.8509804010391235,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:5",
+          "name": "color/yatekomo/orange",
+          "type": "COLOR",
+          "description": "Naranja de acento Yatekomo. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-yatekomo-orange)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.9098039269447327,
+                "g": 0.5372549295425415,
+                "b": 0.0470588244497776,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:6",
+          "name": "color/yatekomo/green",
+          "type": "COLOR",
+          "description": "Verde Pantone 356 C del claim natural. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-yatekomo-green)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0,
+                "g": 0.47843137383461,
+                "b": 0.20000000298023224,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:7",
+          "name": "color/neutral/ink-900",
+          "type": "COLOR",
+          "description": "Tinta: texto y fondos oscuros. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-neutral-ink-900)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.07058823853731155,
+                "g": 0.07058823853731155,
+                "b": 0.07058823853731155,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:8",
+          "name": "color/neutral/ink-600",
+          "type": "COLOR",
+          "description": "Gris cálido de texto secundario. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-neutral-ink-600)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.41960784792900085,
+                "g": 0.3921568691730499,
+                "b": 0.3333333432674408,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:9",
+          "name": "color/neutral/sand-200",
+          "type": "COLOR",
+          "description": "Filete decorativo sobre crema. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-neutral-sand-200)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.8941176533699036,
+                "g": 0.8627451062202454,
+                "b": 0.7843137383460999,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:10",
+          "name": "color/neutral/white",
+          "type": "COLOR",
+          "description": "Blanco. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-neutral-white)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:11",
+          "name": "color/red/600",
+          "type": "COLOR",
+          "description": "Rojo del packaging (pill NUEVO). Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-red-600)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.8823529481887817,
+                "g": 0.14509804546833038,
+                "b": 0.10588235408067703,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:12",
+          "name": "color/status/error-50",
+          "type": "COLOR",
+          "description": "Fondo de error. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-status-error-50)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.9921568632125854,
+                "g": 0.9098039269447327,
+                "b": 0.9058823585510254,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:13",
+          "name": "color/status/error-700",
+          "type": "COLOR",
+          "description": "Icono y borde de error. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-status-error-700)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.7843137383460999,
+                "g": 0.11764705926179886,
+                "b": 0.08235294371843338,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:14",
+          "name": "color/status/error-900",
+          "type": "COLOR",
+          "description": "Texto de error. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-status-error-900)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.6392157077789307,
+                "g": 0.08627451211214066,
+                "b": 0.054901961237192154,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:15",
+          "name": "color/status/success-50",
+          "type": "COLOR",
+          "description": "Fondo de éxito. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-status-success-50)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.8901960849761963,
+                "g": 0.9529411792755127,
+                "b": 0.9137254953384399,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:16",
+          "name": "color/status/success-900",
+          "type": "COLOR",
+          "description": "Texto de éxito. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-status-success-900)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0,
+                "g": 0.3607843220233917,
+                "b": 0.14901961386203766,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:17",
+          "name": "color/status/alert-50",
+          "type": "COLOR",
+          "description": "Fondo de aviso. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-status-alert-50)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 1,
+                "g": 0.9372549057006836,
+                "b": 0.7607843279838562,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:18",
+          "name": "color/status/alert-700",
+          "type": "COLOR",
+          "description": "Icono y borde de aviso. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-status-alert-700)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.6039215922355652,
+                "g": 0.35686275362968445,
+                "b": 0,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:19",
+          "name": "color/status/alert-900",
+          "type": "COLOR",
+          "description": "Texto de aviso. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-status-alert-900)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.41960784792900085,
+                "g": 0.2549019753932953,
+                "b": 0,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:20",
+          "name": "color/status/info-50",
+          "type": "COLOR",
+          "description": "Fondo de información. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-status-info-50)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.8980392217636108,
+                "g": 0.9333333373069763,
+                "b": 0.9764705896377563,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:21",
+          "name": "color/status/info-700",
+          "type": "COLOR",
+          "description": "Icono y borde de información. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-status-info-700)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.12156862765550613,
+                "g": 0.38823530077934265,
+                "b": 0.7098039388656616,
+                "a": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:22",
+          "name": "color/status/info-900",
+          "type": "COLOR",
+          "description": "Texto de información. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-status-info-900)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.04313725605607033,
+                "g": 0.2666666805744171,
+                "b": 0.5098039507865906,
+                "a": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "VariableCollectionId:5:23",
+      "name": "Semantic",
+      "modes": [
+        {
+          "modeId": "5:1",
+          "name": "Yatekomo"
+        }
+      ],
+      "defaultModeId": "5:1",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "source": "v4mnn154qUmiB35CCnRfgh",
+      "variables": [
+        {
+          "id": "VariableID:5:24",
+          "name": "color/surface/page",
+          "type": "COLOR",
+          "description": "Fondo base de página",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-surface-page)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:4",
+              "name": "color/yatekomo/yellow-soft"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:25",
+          "name": "color/surface/brand",
+          "type": "COLOR",
+          "description": "Fondo de marca (amarillo común a todas las marcas)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-surface-brand)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:3",
+              "name": "color/yatekomo/yellow"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:26",
+          "name": "color/surface/card",
+          "type": "COLOR",
+          "description": "Fondo de card clara",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-surface-card)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:10",
+              "name": "color/neutral/white"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:27",
+          "name": "color/surface/inverse",
+          "type": "COLOR",
+          "description": "Secciones y fondos oscuros",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-surface-inverse)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:7",
+              "name": "color/neutral/ink-900"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:28",
+          "name": "color/surface/natural",
+          "type": "COLOR",
+          "description": "Fondo del claim natural; texto encima: color/text/on-natural",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-surface-natural)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:6",
+              "name": "color/yatekomo/green"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:29",
+          "name": "color/surface/accent",
+          "type": "COLOR",
+          "description": "Acento decorativo. Texto encima solo color/text/default",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-surface-accent)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:5",
+              "name": "color/yatekomo/orange"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:30",
+          "name": "color/surface/badge-new",
+          "type": "COLOR",
+          "description": "Pill NUEVO; texto encima: color/text/on-badge",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-surface-badge-new)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:11",
+              "name": "color/red/600"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:31",
+          "name": "color/text/default",
+          "type": "COLOR",
+          "description": "Texto principal (≥12:1 sobre page, brand y card)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-text-default)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:7",
+              "name": "color/neutral/ink-900"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:32",
+          "name": "color/text/secondary",
+          "type": "COLOR",
+          "description": "Texto secundario. Solo sobre page o card (5.4:1); NO sobre brand (3.85:1)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-text-secondary)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:8",
+              "name": "color/neutral/ink-600"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:33",
+          "name": "color/text/on-inverse",
+          "type": "COLOR",
+          "description": "Texto sobre surface/inverse (17:1)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-text-on-inverse)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:4",
+              "name": "color/yatekomo/yellow-soft"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:34",
+          "name": "color/text/brand-on-inverse",
+          "type": "COLOR",
+          "description": "Texto destacado amarillo sobre surface/inverse (12:1)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-text-brand-on-inverse)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:3",
+              "name": "color/yatekomo/yellow"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:35",
+          "name": "color/text/on-natural",
+          "type": "COLOR",
+          "description": "Texto sobre surface/natural (5.5:1)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-text-on-natural)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:10",
+              "name": "color/neutral/white"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:36",
+          "name": "color/text/natural",
+          "type": "COLOR",
+          "description": "Texto verde natural sobre page (5.0:1). Sobre brand solo texto grande (3.6:1)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-text-natural)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:6",
+              "name": "color/yatekomo/green"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:37",
+          "name": "color/text/on-badge",
+          "type": "COLOR",
+          "description": "Texto sobre surface/badge-new (4.7:1)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-text-on-badge)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:10",
+              "name": "color/neutral/white"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:38",
+          "name": "color/border/default",
+          "type": "COLOR",
+          "description": "Borde de componentes (botón ghost, formularios)",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-border-default)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:7",
+              "name": "color/neutral/ink-900"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:39",
+          "name": "color/border/subtle",
+          "type": "COLOR",
+          "description": "Filete decorativo de tablas. NO para límites de controles (1.3:1)",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-border-subtle)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:9",
+              "name": "color/neutral/sand-200"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:40",
+          "name": "color/effect/shadow-brand",
+          "type": "COLOR",
+          "description": "Color de sombra dura de marca",
+          "scopes": [
+            "EFFECT_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-effect-shadow-brand)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:3",
+              "name": "color/yatekomo/yellow"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:41",
+          "name": "color/effect/shadow-ink",
+          "type": "COLOR",
+          "description": "Color de sombra dura neutra",
+          "scopes": [
+            "EFFECT_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-effect-shadow-ink)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:7",
+              "name": "color/neutral/ink-900"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:42",
+          "name": "color/status/error/bg",
+          "type": "COLOR",
+          "description": "Fondo de mensaje de error",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-error-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:12",
+              "name": "color/status/error-50"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:43",
+          "name": "color/status/error/text",
+          "type": "COLOR",
+          "description": "Texto de error sobre su bg (≥6.6:1)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-error-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:14",
+              "name": "color/status/error-900"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:44",
+          "name": "color/status/error/icon",
+          "type": "COLOR",
+          "description": "Icono de error (≥4.7:1 sobre bg y page)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-error-icon)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:13",
+              "name": "color/status/error-700"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:45",
+          "name": "color/status/error/border",
+          "type": "COLOR",
+          "description": "Borde de error (≥4.7:1)",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-error-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:13",
+              "name": "color/status/error-700"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:46",
+          "name": "color/status/success/bg",
+          "type": "COLOR",
+          "description": "Fondo de mensaje de success",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-success-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:15",
+              "name": "color/status/success-50"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:47",
+          "name": "color/status/success/text",
+          "type": "COLOR",
+          "description": "Texto de success sobre su bg (≥6.6:1)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-success-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:16",
+              "name": "color/status/success-900"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:48",
+          "name": "color/status/success/icon",
+          "type": "COLOR",
+          "description": "Icono de success (≥4.7:1 sobre bg y page)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-success-icon)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:6",
+              "name": "color/yatekomo/green"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:49",
+          "name": "color/status/success/border",
+          "type": "COLOR",
+          "description": "Borde de success (≥4.7:1)",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-success-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:6",
+              "name": "color/yatekomo/green"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:50",
+          "name": "color/status/alert/bg",
+          "type": "COLOR",
+          "description": "Fondo de mensaje de alert",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-alert-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:17",
+              "name": "color/status/alert-50"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:51",
+          "name": "color/status/alert/text",
+          "type": "COLOR",
+          "description": "Texto de alert sobre su bg (≥6.6:1)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-alert-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:19",
+              "name": "color/status/alert-900"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:52",
+          "name": "color/status/alert/icon",
+          "type": "COLOR",
+          "description": "Icono de alert (≥4.7:1 sobre bg y page)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-alert-icon)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:18",
+              "name": "color/status/alert-700"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:53",
+          "name": "color/status/alert/border",
+          "type": "COLOR",
+          "description": "Borde de alert (≥4.7:1)",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-alert-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:18",
+              "name": "color/status/alert-700"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:54",
+          "name": "color/status/info/bg",
+          "type": "COLOR",
+          "description": "Fondo de mensaje de info",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-info-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:20",
+              "name": "color/status/info-50"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:55",
+          "name": "color/status/info/text",
+          "type": "COLOR",
+          "description": "Texto de info sobre su bg (≥6.6:1)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-info-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:22",
+              "name": "color/status/info-900"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:56",
+          "name": "color/status/info/icon",
+          "type": "COLOR",
+          "description": "Icono de info (≥4.7:1 sobre bg y page)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-info-icon)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:21",
+              "name": "color/status/info-700"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:57",
+          "name": "color/status/info/border",
+          "type": "COLOR",
+          "description": "Borde de info (≥4.7:1)",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-status-info-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:21",
+              "name": "color/status/info-700"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "VariableCollectionId:5:58",
+      "name": "Spacing",
+      "modes": [
+        {
+          "modeId": "5:2",
+          "name": "Value"
+        }
+      ],
+      "defaultModeId": "5:2",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "source": "v4mnn154qUmiB35CCnRfgh",
+      "variables": [
+        {
+          "id": "VariableID:5:59",
+          "name": "space/quarter",
+          "type": "FLOAT",
+          "description": "2px. Sistema de 8 puntos (excepción hairline/micro)",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-quarter)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 2
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:60",
+          "name": "space/half",
+          "type": "FLOAT",
+          "description": "4px. Sistema de 8 puntos (excepción hairline/micro)",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-half)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 4
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:61",
+          "name": "space/1",
+          "type": "FLOAT",
+          "description": "8px. Sistema de 8 puntos",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-1)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 8
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:62",
+          "name": "space/2",
+          "type": "FLOAT",
+          "description": "16px. Sistema de 8 puntos",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-2)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 16
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:63",
+          "name": "space/3",
+          "type": "FLOAT",
+          "description": "24px. Sistema de 8 puntos",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-3)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 24
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:64",
+          "name": "space/4",
+          "type": "FLOAT",
+          "description": "32px. Sistema de 8 puntos",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-4)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 32
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:65",
+          "name": "space/5",
+          "type": "FLOAT",
+          "description": "40px. Sistema de 8 puntos",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-5)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 40
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:66",
+          "name": "space/6",
+          "type": "FLOAT",
+          "description": "48px. Sistema de 8 puntos",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-6)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 48
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:67",
+          "name": "space/7",
+          "type": "FLOAT",
+          "description": "56px. Sistema de 8 puntos",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-7)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 56
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:68",
+          "name": "space/8",
+          "type": "FLOAT",
+          "description": "64px. Sistema de 8 puntos",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-8)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 64
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:69",
+          "name": "space/9",
+          "type": "FLOAT",
+          "description": "72px. Sistema de 8 puntos",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-9)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 72
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:70",
+          "name": "space/10",
+          "type": "FLOAT",
+          "description": "80px. Sistema de 8 puntos",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-10)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 80
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:71",
+          "name": "space/12",
+          "type": "FLOAT",
+          "description": "96px. Sistema de 8 puntos",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-12)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 96
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:72",
+          "name": "space/14",
+          "type": "FLOAT",
+          "description": "112px. Sistema de 8 puntos",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--space-14)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 112
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:73",
+          "name": "radius/md",
+          "type": "FLOAT",
+          "description": "Radio de cards, formularios y media",
+          "scopes": [
+            "CORNER_RADIUS"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--radius-md)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 24
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:74",
+          "name": "radius/pill",
+          "type": "FLOAT",
+          "description": "Radio de botones y pills",
+          "scopes": [
+            "CORNER_RADIUS"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--radius-pill)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 80
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:75",
+          "name": "border/width/default",
+          "type": "FLOAT",
+          "description": "Grosor de borde (botón ghost, formularios)",
+          "scopes": [
+            "STROKE_FLOAT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--border-width-default)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:2": {
+              "type": "value",
+              "value": 4
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "VariableCollectionId:5:76",
+      "name": "Layout",
+      "modes": [
+        {
+          "modeId": "5:3",
+          "name": "Desktop"
+        },
+        {
+          "modeId": "5:4",
+          "name": "Mobile"
+        }
+      ],
+      "defaultModeId": "5:3",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "source": "v4mnn154qUmiB35CCnRfgh",
+      "variables": [
+        {
+          "id": "VariableID:5:77",
+          "name": "layout/max-width",
+          "type": "FLOAT",
+          "description": "Ancho máximo de contenido",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--layout-max-width)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:3": {
+              "type": "value",
+              "value": 1400
+            },
+            "5:4": {
+              "type": "value",
+              "value": 1400
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:78",
+          "name": "layout/max-width-narrow",
+          "type": "FLOAT",
+          "description": "Ancho máximo estrecho",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--layout-max-width-narrow)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:3": {
+              "type": "value",
+              "value": 1200
+            },
+            "5:4": {
+              "type": "value",
+              "value": 1200
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:79",
+          "name": "layout/section-padding-y",
+          "type": "FLOAT",
+          "description": "Padding vertical de sección",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--layout-section-padding-y)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:3": {
+              "type": "value",
+              "value": 112
+            },
+            "5:4": {
+              "type": "value",
+              "value": 40
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:80",
+          "name": "layout/section-padding-x",
+          "type": "FLOAT",
+          "description": "Padding horizontal de sección",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--layout-section-padding-x)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:3": {
+              "type": "value",
+              "value": 64
+            },
+            "5:4": {
+              "type": "value",
+              "value": 24
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:81",
+          "name": "layout/gap",
+          "type": "FLOAT",
+          "description": "Gap por defecto entre cards",
+          "scopes": [
+            "GAP"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--layout-gap)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:3": {
+              "type": "value",
+              "value": 24
+            },
+            "5:4": {
+              "type": "value",
+              "value": 24
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "VariableCollectionId:5:82",
+      "name": "Typography",
+      "modes": [
+        {
+          "modeId": "5:5",
+          "name": "Desktop"
+        },
+        {
+          "modeId": "5:6",
+          "name": "Mobile"
+        }
+      ],
+      "defaultModeId": "5:5",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "source": "v4mnn154qUmiB35CCnRfgh",
+      "variables": [
+        {
+          "id": "VariableID:5:83",
+          "name": "font/family/display",
+          "type": "STRING",
+          "description": "Display: titulares, kickers, botones, badges. Siempre mayúsculas",
+          "scopes": [
+            "FONT_FAMILY"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-family-display)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": "Anton"
+            },
+            "5:6": {
+              "type": "value",
+              "value": "Anton"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:84",
+          "name": "font/family/body",
+          "type": "STRING",
+          "description": "Cuerpo, formularios, nav",
+          "scopes": [
+            "FONT_FAMILY"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-family-body)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": "Archivo"
+            },
+            "5:6": {
+              "type": "value",
+              "value": "Archivo"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:85",
+          "name": "font/style/display",
+          "type": "STRING",
+          "description": "Anton solo tiene Regular",
+          "scopes": [
+            "FONT_STYLE"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-style-display)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": "Regular"
+            },
+            "5:6": {
+              "type": "value",
+              "value": "Regular"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:86",
+          "name": "font/style/body",
+          "type": "STRING",
+          "description": "Peso de cuerpo",
+          "scopes": [
+            "FONT_STYLE"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-style-body)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": "Regular"
+            },
+            "5:6": {
+              "type": "value",
+              "value": "Regular"
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:87",
+          "name": "font/size/hero",
+          "type": "FLOAT",
+          "description": "Tamaño hero",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-size-hero)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": 128
+            },
+            "5:6": {
+              "type": "value",
+              "value": 64
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:88",
+          "name": "font/line-height/hero",
+          "type": "FLOAT",
+          "description": "Interlineado hero (0.94)",
+          "scopes": [
+            "LINE_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-line-height-hero)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": 120
+            },
+            "5:6": {
+              "type": "value",
+              "value": 60
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:89",
+          "name": "font/size/h2",
+          "type": "FLOAT",
+          "description": "Tamaño h2",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-size-h2)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": 72
+            },
+            "5:6": {
+              "type": "value",
+              "value": 44
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:90",
+          "name": "font/line-height/h2",
+          "type": "FLOAT",
+          "description": "Interlineado h2 (0.94)",
+          "scopes": [
+            "LINE_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-line-height-h2)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": 68
+            },
+            "5:6": {
+              "type": "value",
+              "value": 41
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:91",
+          "name": "font/size/h3",
+          "type": "FLOAT",
+          "description": "Tamaño h3",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-size-h3)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": 44
+            },
+            "5:6": {
+              "type": "value",
+              "value": 30
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:92",
+          "name": "font/line-height/h3",
+          "type": "FLOAT",
+          "description": "Interlineado h3 (0.94)",
+          "scopes": [
+            "LINE_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-line-height-h3)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": 41
+            },
+            "5:6": {
+              "type": "value",
+              "value": 28
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:93",
+          "name": "font/size/lead",
+          "type": "FLOAT",
+          "description": "Tamaño lead",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-size-lead)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": 27
+            },
+            "5:6": {
+              "type": "value",
+              "value": 20
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:94",
+          "name": "font/line-height/lead",
+          "type": "FLOAT",
+          "description": "Interlineado lead (1.4)",
+          "scopes": [
+            "LINE_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-line-height-lead)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": 38
+            },
+            "5:6": {
+              "type": "value",
+              "value": 28
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:95",
+          "name": "font/size/body",
+          "type": "FLOAT",
+          "description": "Tamaño body",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-size-body)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": 24
+            },
+            "5:6": {
+              "type": "value",
+              "value": 18
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:96",
+          "name": "font/line-height/body",
+          "type": "FLOAT",
+          "description": "Interlineado body (1.5)",
+          "scopes": [
+            "LINE_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-line-height-body)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": 36
+            },
+            "5:6": {
+              "type": "value",
+              "value": 27
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:97",
+          "name": "font/size/kicker",
+          "type": "FLOAT",
+          "description": "Tamaño kicker",
+          "scopes": [
+            "FONT_SIZE"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-size-kicker)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": 22
+            },
+            "5:6": {
+              "type": "value",
+              "value": 22
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:98",
+          "name": "font/line-height/kicker",
+          "type": "FLOAT",
+          "description": "Interlineado kicker (1.0)",
+          "scopes": [
+            "LINE_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--font-line-height-kicker)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:5": {
+              "type": "value",
+              "value": 22
+            },
+            "5:6": {
+              "type": "value",
+              "value": 22
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "VariableCollectionId:5:99",
+      "name": "Motion",
+      "modes": [
+        {
+          "modeId": "5:7",
+          "name": "Value"
+        }
+      ],
+      "defaultModeId": "5:7",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "source": "v4mnn154qUmiB35CCnRfgh",
+      "variables": [
+        {
+          "id": "VariableID:5:100",
+          "name": "motion/duration/base",
+          "type": "FLOAT",
+          "description": "Duración base de transiciones (ms)",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--motion-duration-base)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:7": {
+              "type": "value",
+              "value": 500
+            }
+          }
+        },
+        {
+          "id": "VariableID:5:101",
+          "name": "motion/easing/punch",
+          "type": "STRING",
+          "description": "Easing con rebote para hovers y reveal",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--motion-easing-punch)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:7": {
+              "type": "value",
+              "value": "cubic-bezier(.22,1.2,.36,1)"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "textStyles": [
+    {
+      "id": "S:b94178623a50104fdcfdecbbbd16aa8f3ef6ec42,",
+      "name": "Hero",
+      "description": "Display · tamaño e interlineado según modo Desktop/Mobile de Typography · siempre mayúsculas",
+      "fontFamily": "Anton",
+      "fontStyle": "Regular",
+      "fontSize": 128,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 120
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontSize": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:87"
+        },
+        "fontStyle": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:85"
+        },
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:83"
+        },
+        "lineHeight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:88"
+        }
+      },
+      "source": "v4mnn154qUmiB35CCnRfgh"
+    },
+    {
+      "id": "S:9bd21bed5492daff5ab0dfca648439fa72fb28be,",
+      "name": "H2",
+      "description": "Display · tamaño e interlineado según modo Desktop/Mobile de Typography · siempre mayúsculas",
+      "fontFamily": "Anton",
+      "fontStyle": "Regular",
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 68
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontSize": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:89"
+        },
+        "fontStyle": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:85"
+        },
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:83"
+        },
+        "lineHeight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:90"
+        }
+      },
+      "source": "v4mnn154qUmiB35CCnRfgh"
+    },
+    {
+      "id": "S:84b79370135f479506779049453d9d0af0bfc6c2,",
+      "name": "H3",
+      "description": "Display · tamaño e interlineado según modo Desktop/Mobile de Typography · siempre mayúsculas",
+      "fontFamily": "Anton",
+      "fontStyle": "Regular",
+      "fontSize": 44,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 41
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontSize": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:91"
+        },
+        "fontStyle": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:85"
+        },
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:83"
+        },
+        "lineHeight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:92"
+        }
+      },
+      "source": "v4mnn154qUmiB35CCnRfgh"
+    },
+    {
+      "id": "S:95dca7fac5877e4412e1dc7b43eee89a1bf4978d,",
+      "name": "Lead",
+      "description": "Cuerpo · tamaño e interlineado según modo Desktop/Mobile de Typography",
+      "fontFamily": "Archivo",
+      "fontStyle": "Regular",
+      "fontSize": 27,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 38
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontSize": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:93"
+        },
+        "fontStyle": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:86"
+        },
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:84"
+        },
+        "lineHeight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:94"
+        }
+      },
+      "source": "v4mnn154qUmiB35CCnRfgh"
+    },
+    {
+      "id": "S:2cfaae9ccf6770606fc00b4203c6c384f64a9eaa,",
+      "name": "Body",
+      "description": "Cuerpo · tamaño e interlineado según modo Desktop/Mobile de Typography",
+      "fontFamily": "Archivo",
+      "fontStyle": "Regular",
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 36
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontSize": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:95"
+        },
+        "fontStyle": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:86"
+        },
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:84"
+        },
+        "lineHeight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:96"
+        }
+      },
+      "source": "v4mnn154qUmiB35CCnRfgh"
+    },
+    {
+      "id": "S:3c24720b4d5e89489456b8121b699c25a704eeee,",
+      "name": "Kicker",
+      "description": "Display · tamaño e interlineado según modo Desktop/Mobile de Typography · siempre mayúsculas",
+      "fontFamily": "Anton",
+      "fontStyle": "Regular",
+      "fontSize": 22,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 22
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontSize": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:97"
+        },
+        "fontStyle": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:85"
+        },
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:83"
+        },
+        "lineHeight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:98"
+        }
+      },
+      "source": "v4mnn154qUmiB35CCnRfgh"
+    }
+  ],
+  "effectStyles": [],
+  "readProgress": {
+    "v4mnn154qUmiB35CCnRfgh": {
+      "total": 100,
+      "read": 100
+    }
+  },
+  "fileKey": "v4mnn154qUmiB35CCnRfgh",
+  "fileName": "Document",
+  "version": null,
+  "readAt": "2026-10-07T08:51:04.138Z"
+}

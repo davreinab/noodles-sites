@@ -1,10 +1,42 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": null,
+  "generatedAt": "2026-10-07T08:51:38Z",
   "adoptionMode": "new",
-  "sourcesCompared": ["figma", "markdown", "tokens-json", "tokens-css", "component-contracts", "code"],
-  "summary": { "critical": 0, "warning": 0, "info": 0 },
-  "findings": [],
+  "sourcesCompared": [
+    "figma",
+    "markdown",
+    "tokens-json",
+    "tokens-css",
+    "component-contracts",
+    "code"
+  ],
+  "summary": {
+    "critical": 0,
+    "warning": 3,
+    "info": 1
+  },
+  "findings": [
+    {
+      "severity": "info",
+      "check": "missing-variable-description-or-scope",
+      "detail": "Motion / motion/duration/base: sin scopes"
+    },
+    {
+      "severity": "warning",
+      "check": "foundation-missing",
+      "detail": "Figma no define la familia icon-size"
+    },
+    {
+      "severity": "warning",
+      "check": "foundation-missing",
+      "detail": "Figma no define la familia layer"
+    },
+    {
+      "severity": "warning",
+      "check": "foundation-missing",
+      "detail": "Figma no define la familia elevation"
+    }
+  ],
   "acceptedStructuralDifferences": [],
   "checks": [
     "figma-vs-tokens-json",
@@ -25,5 +57,11 @@
     "token-audit-errors",
     "code-example-missing-or-stale",
     "composition-rule-missing"
-  ]
+  ],
+  "inputs": {
+    "variables": true,
+    "components": false,
+    "icons": false
+  },
+  "generatedBy": "scripts/ds-sync.py"
 }

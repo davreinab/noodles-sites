@@ -11,7 +11,7 @@
     "controlledFigmaWriteBackAvailable": false
   },
   "checks": {
-    "resolvedTokenLookup": false,
+    "resolvedTokenLookup": true,
     "structuredComponentContract": false,
     "scopedContextRetrieval": false,
     "reviewableChangeProposal": true

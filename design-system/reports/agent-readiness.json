@@ -1,11 +1,70 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "rubricVersion": null,
-  "note": "Informe de scripts/agent-readiness.py. Se regenera con cada auditoría; no editar a mano. ⬜ Pendiente de la primera puntuación.",
-  "score": null,
+  "rubricVersion": "1.0.0",
+  "note": "Informe generado por scripts/agent-readiness.py. No editar a mano.",
+  "score": 2.9,
   "scale": "0-5",
   "passThreshold": 4,
   "passes": false,
-  "counts": { "cumple": 0, "aplicables": 0, "noAplica": 0 },
-  "criteria": []
+  "counts": {
+    "cumple": 4,
+    "aplicables": 7,
+    "noAplica": 2
+  },
+  "criteria": [
+    {
+      "id": "entry-point",
+      "title": "Punto de entrada único para agentes",
+      "status": "cumple",
+      "detail": "manifiesto presente y todas sus rutas existen"
+    },
+    {
+      "id": "machine-readable-tokens",
+      "title": "Tokens legibles por máquina",
+      "status": "cumple",
+      "detail": "94 tokens con contrato completo"
+    },
+    {
+      "id": "component-registry",
+      "title": "Registro de componentes enumerable",
+      "status": "pendiente",
+      "detail": "sin componentes sincronizados todavía"
+    },
+    {
+      "id": "typed-contracts",
+      "title": "Contratos con valores cerrados",
+      "status": "pendiente",
+      "detail": "sin contratos de componente todavía"
+    },
+    {
+      "id": "runnable-patterns",
+      "title": "Ejemplos ejecutables, no capturas",
+      "status": "pendiente",
+      "detail": "sin contratos de componente todavía"
+    },
+    {
+      "id": "scoped-retrieval",
+      "title": "Recuperación parcial",
+      "status": "cumple",
+      "detail": "carga parcial declarada, con ruta por componente"
+    },
+    {
+      "id": "semantic-naming",
+      "title": "Nombres por intención",
+      "status": "cumple",
+      "detail": "capa semántica presente y token-audit sin errores"
+    },
+    {
+      "id": "external-token-format",
+      "title": "Exportación en formato de terceros",
+      "status": "no-aplica",
+      "detail": "exportación no solicitada por el proyecto"
+    },
+    {
+      "id": "context-protocol",
+      "title": "Consultable por protocolo de contexto",
+      "status": "no-aplica",
+      "detail": "el proyecto no usa un servidor de contexto propio; la ruta por archivos cubre el caso"
+    }
+  ]
 }

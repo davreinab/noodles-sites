@@ -5,10 +5,29 @@
   "versionedAt": null,
   "maturityStage": 1,
   "targetMaturityStage": 2,
-  "lastSync": null,
+  "lastSync": "2026-10-07T08:51:38Z",
   "adoptionMode": "new",
   "structuralStandardsEnforced": true,
-  "figmaSources": [{"name": "GB Noodles · IA & page structure", "role": "ia-sitemap (FigJam: sitemap y blueprints por página)", "fileKey": "cRgmGl36ELIUZNLUvC8KbW", "url": "https://www.figma.com/board/cRgmGl36ELIUZNLUvC8KbW"}, {"name": "Wireframes | Rediseño sites", "role": "wireframes (home mobile alta fidelidad + blueprints desktop; home desktop en 87:642)", "fileKey": "1YhsCqdqYCHlK4Y82IY5G3", "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"}],
+  "figmaSources": [
+    {
+      "name": "DS - Noodles",
+      "role": "design-system (variables, estilos y componentes de los microsites) — fuente de verdad del DS",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/DS---Noodles"
+    },
+    {
+      "name": "GB Noodles · IA & page structure",
+      "role": "ia-sitemap (FigJam) — no es fuente del DS",
+      "fileKey": "cRgmGl36ELIUZNLUvC8KbW",
+      "url": "https://www.figma.com/board/cRgmGl36ELIUZNLUvC8KbW"
+    },
+    {
+      "name": "Wireframes | Rediseño sites",
+      "role": "wireframes — sus componentes locales son solo de wireframe, no del DS (David Reina, 2026-10-07)",
+      "fileKey": "1YhsCqdqYCHlK4Y82IY5G3",
+      "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
+    }
+  ],
   "resources": {
     "tokens": "./tokens/tokens.json",
     "tokensCss": "./tokens/tokens.css",

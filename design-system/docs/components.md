@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 16 componentes sincronizados el 2026-10-07T09:35:51Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 16 componentes sincronizados el 2026-10-07T10:17:28Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -27,7 +27,7 @@
 - [Icon / check-hand](components/icon-check-hand.md) · component · `icon-check-hand` · ⬜ 5 pendientes
 - [Decoration / Noodle](components/decoration-noodle.md) · component · `decoration-noodle` · ⬜ 5 pendientes
 - [Logo / GB Foods](components/logo-gb-foods.md) · component · `logo-gb-foods` · ⬜ 5 pendientes
-- [Logo / Aïki](components/logo-aïki.md) · component · `logo-aïki` · ⬜ 5 pendientes
+- [Logo / Aiki](components/logo-aiki.md) · component · `logo-aiki` · ⬜ 5 pendientes
 - [Logo / Yatekomo](components/logo-yatekomo.md) · component · `logo-yatekomo` · ⬜ 5 pendientes
 - [Logo / Saikebon](components/logo-saikebon.md) · component · `logo-saikebon` · ⬜ 5 pendientes
 - [Logo / Daisuki](components/logo-daisuki.md) · component · `logo-daisuki` · ⬜ 5 pendientes

@@ -1,7 +1,7 @@
-### Icon / natural   ⚙️ synced: 2026-10-07T09:35:51Z
+### Icon / natural   ⚙️ synced: 2026-10-07T10:17:28Z
 
 <!-- ⚙️ GENERATED:start:icon-natural -->
-- **Figma:** `21:132` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T09:35:51Z
+- **Figma:** `21:132` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T10:17:28Z
 - **Descripción (Figma):** Ilustrado a mano: naturalidad (hoja/ball). Color: icon/color/illustration. Tamaño por defecto icon/size/xl; escalable
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

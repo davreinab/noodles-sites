@@ -1,7 +1,7 @@
-### Icon / check-hand   ⚙️ synced: 2026-10-07T09:35:51Z
+### Icon / check-hand   ⚙️ synced: 2026-10-07T10:17:28Z
 
 <!-- ⚙️ GENERATED:start:icon-check-hand -->
-- **Figma:** `21:135` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T09:35:51Z
+- **Figma:** `21:135` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T10:17:28Z
 - **Descripción (Figma):** Check ilustrado a mano, para fondos oscuros o de color. Color: icon/color/inverse. Tamaño por defecto icon/size/xl; escalable
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

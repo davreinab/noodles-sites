@@ -1,7 +1,7 @@
-### Logo / GB Foods   ⚙️ synced: 2026-10-07T09:35:51Z
+### Logo / GB Foods   ⚙️ synced: 2026-10-07T10:17:28Z
 
 <!-- ⚙️ GENERATED:start:logo-gb-foods -->
-- **Figma:** `21:180` · página «Brand» · COMPONENT · 1 variantes · última sync 2026-10-07T09:35:51Z
+- **Figma:** `21:180` · página «Brand» · COMPONENT · 1 variantes · última sync 2026-10-07T10:17:28Z
 - **Descripción (Figma):** Logo GB Foods. Marca corporativa (Days you can trust). Solo negativo vectorial. No se recolorea.
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

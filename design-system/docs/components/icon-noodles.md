@@ -1,7 +1,7 @@
-### Icon / noodles   ⚙️ synced: 2026-10-07T09:35:51Z
+### Icon / noodles   ⚙️ synced: 2026-10-07T10:17:28Z
 
 <!-- ⚙️ GENERATED:start:icon-noodles -->
-- **Figma:** `21:133` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T09:35:51Z
+- **Figma:** `21:133` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T10:17:28Z
 - **Descripción (Figma):** Ilustrado a mano: fideos. Color: icon/color/illustration. Tamaño por defecto icon/size/xl; escalable
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

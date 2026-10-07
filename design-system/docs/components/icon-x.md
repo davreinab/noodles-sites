@@ -1,7 +1,7 @@
-### Icon / x   ⚙️ synced: 2026-10-07T09:35:51Z
+### Icon / x   ⚙️ synced: 2026-10-07T10:17:28Z
 
 <!-- ⚙️ GENERATED:start:icon-x -->
-- **Figma:** `21:68` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T09:35:51Z
+- **Figma:** `21:68` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T10:17:28Z
 - **Descripción (Figma):** Red social: X. Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

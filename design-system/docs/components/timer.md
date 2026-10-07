@@ -1,7 +1,7 @@
-### Timer   ⚙️ synced: 2026-10-07T18:27:15Z
+### Timer   ⚙️ synced: 2026-10-07T18:30:51Z
 
 <!-- ⚙️ GENERATED:start:timer -->
-- **Figma:** `82:143` · página «Timer» · COMPONENT_SET · 4 variantes · última sync 2026-10-07T18:27:15Z
+- **Figma:** `82:143` · página «Timer» · COMPONENT_SET · 4 variantes · última sync 2026-10-07T18:30:51Z
 - **Descripción (Figma):** Temporizador de preparación (3 minutos) junto a los Step de la página de producto. State=Idle (3:00, «Empezar») · Running (anillo vaciándose, «Pausar» + reiniciar) · Paused («Seguir» + reiniciar) · Done (anillo verde natural, circle-check, «¡Listo!», «Otra vez»). El anillo es decorativo (aria-hidden) y no comunica nada por sí solo: el tiempo está en texto. Accesibilidad: el tiempo se expone con role=&quot;timer&quot; sin anunciar cada segundo; una región aria-live=&quot;polite&quot; anuncia solo «Quedan 1 minuto» y «¡Listo! Ya puedes comer»; el botón principal cambia su nombre (Empezar/Pausar/Seguir). Puede sonar o vibrar al terminar solo si el usuario lo activa. Respeta prefers-reduced-motion (el anillo salta en vez de animarse).
 - **Anatomía:** `action` → Hierarchy=Primary, Size=M, State=Default, `icon-leading` → Icon / play, `icon-trailing` → Icon / arrow-right
 - **State:** Idle, Running, Paused, Done

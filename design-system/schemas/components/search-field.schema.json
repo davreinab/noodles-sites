@@ -6,13 +6,20 @@
     "slug": "search-field",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Campo de búsqueda (resultados en modal). Sin etiqueta visible: requiere aria-label («Buscar») y role=&quot;search&quot; en el formulario. Lupa delante; con texto aparece el botón borrar (aria-label «Borrar búsqueda»). Forma pill para distinguirlo de los campos de formulario. El valor se edita en la instancia.",
     "figmaPage": "Search field",
     "figmaType": "COMPONENT_SET",
     "variantCount": 4,
     "autoLayout": true,
-    "anatomyHash": "19c5719a95a1"
+    "anatomyHash": "19c5719a95a1",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {

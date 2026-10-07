@@ -1,7 +1,7 @@
-### Library   ⚙️ synced: 2026-10-07T18:27:15Z
+### Library   ⚙️ synced: 2026-10-07T18:30:51Z
 
 <!-- ⚙️ GENERATED:start:library -->
-- **Figma:** `96:1453` · página «Pattern / Library» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:27:15Z
+- **Figma:** `96:1453` · página «Pattern / Library» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:30:51Z
 - **Descripción (Figma):** Librería (Product library; también Recipe y Contest library cambiando la card y el filtro): cabecera de página (h1 + entradilla) · Product filter a sangre (tipo → línea → sabor; sin filtros que den resultados vacíos) · rejilla de cards (Desktop 4 columnas de 310 px con gutter layout/gutter y space/48 entre filas; Mobile 1 columna) · Button Secondary «Ver más» (carga más, no pagina; el foco va a la primera card nueva y se anuncia el número cargado). Recipe library: Recipe card en 3 columnas sin buscador por ingredientes. Contest library: Contest card en 2-3 columnas; la página agregadora es opcional. Al filtrar se anuncia «N productos» (aria-live). Sin variables propias.
 - **Anatomía:** `filter` → Breakpoint=Desktop, `tab` → State=Selected, `tab` → State=Default, `chip` → Size=S, State=Selected, `icon-leading` → Icon / check, `chip` → Size=S, State=Default, `icon-leading` → Icon / check, `product-card` → State=Default, `badge` → Type=New, `link` → Type=Standalone, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right, `badge` → Type=New, `load-more` → Hierarchy=Secondary, Size=M, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right
 - **Breakpoint:** Desktop, Mobile
@@ -12,10 +12,15 @@
 - **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `badge/new/bg`, `badge/new/text`, `button/secondary/border`, `button/secondary/text`, `chip/bg`, `chip/bg-selected`, `chip/border`, `chip/text`, `chip/text-selected`, `color/effect/shadow-ink`, `color/surface/page`, `color/text/default`, `color/text/secondary`, `font/family/body`, `font/family/display`, `font/line-height/desktop/body-l`, `font/line-height/desktop/body-s`, `font/line-height/desktop/caption`, `font/line-height/desktop/h1`, `font/line-height/desktop/h3`, `font/line-height/desktop/label`, `font/line-height/mobile/label`, `font/size/desktop/body-l`, `font/size/desktop/body-s`, `font/size/desktop/caption`, `font/size/desktop/h1`, `font/size/desktop/h3`, `font/size/desktop/label`, `font/size/mobile/label`, `font/style/body`, `font/style/display`, `link/default`, `product-card/bg`, `product-card/border`, `product-card/media-bg`, `product-card/meta`, `product-card/title`, `tab/bg`, `tab/bg-selected`, `tab/border`, `tab/text`, `tab/text-selected`
 <!-- ⚙️ GENERATED:end:library -->
 
-- **Propósito:** ⬜ TODO
-- **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; se copia a `source.code.example` del schema)_
+- **Propósito:** Librería de producto (y de recetas o concursos cambiando la card y el filtro): cabecera, filtro a sangre, rejilla de cards y «Ver más».
+- **Ejemplo de código:**
   ```html
-  <!-- ⬜ TODO -->
+  <section class="library" aria-labelledby="lib-title">
+  <div class="library__header"><h1 class="page-title" id="lib-title">Productos</h1><p class="section__lead">Introducción de la librería.</p></div>
+  <div class="product-filter"><div class="product-filter__group"><span class="product-filter__label">Tipo</span><div class="product-filter__options" role="tablist"><button class="tab" role="tab" aria-selected="true">Cups</button></div></div></div>
+  <ul class="library__grid"><li><a class="product-card" href="/productos/yatekomo-pollo"><div class="product-card__body"><h3 class="product-card__name">Yatekomo Pollo</h3></div></a></li></ul>
+  <div class="library__more"><button class="button button--secondary" type="button">Ver más productos</button></div>
+  </section>
   ```
-- **Accesibilidad (pares AA verificados):** ⬜ TODO
-- **Cuándo usar / qué NO hace:** ⬜ TODO
+- **Accesibilidad (pares AA verificados):** Título tinta sobre crema 17,2:1; entradilla gris cálido sobre crema 5,4:1; el resto, los pares de sus componentes. Al filtrar se anuncia «N productos» (aria-live). «Ver más» carga más resultados (no pagina), mueve el foco a la primera card nueva y anuncia cuántas se han cargado.
+- **Cuándo usar / qué NO hace:** Para Product library, Recipe library (Recipe card en tres columnas, sin buscador por ingredientes) y Contest library (opcional). No muestra filtros vacíos.

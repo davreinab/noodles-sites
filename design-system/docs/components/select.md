@@ -1,7 +1,7 @@
-### Select   ⚙️ synced: 2026-10-07T18:27:15Z
+### Select   ⚙️ synced: 2026-10-07T18:30:51Z
 
 <!-- ⚙️ GENERATED:start:select -->
-- **Figma:** `48:141` · página «Select» · COMPONENT_SET · 6 variantes · última sync 2026-10-07T18:27:15Z
+- **Figma:** `48:141` · página «Select» · COMPONENT_SET · 6 variantes · última sync 2026-10-07T18:30:51Z
 - **Descripción (Figma):** Selector de una opción: país o idioma (Aiki NL/FR), filtros. Open muestra el menú (elevation/3) con la opción activa en amarillo de marca. En código se recomienda &lt;select&gt; nativo o un listbox accesible (teclado: flechas, Enter, Esc). Error con borde, icono y mensaje. Valor y opciones se editan en la instancia.
 - **Anatomía:** `icon-chevron` → Icon / chevron-down, `icon-error` → Icon / circle-alert
 - **State:** Default, Hover, Focus, Open, Error, Disabled

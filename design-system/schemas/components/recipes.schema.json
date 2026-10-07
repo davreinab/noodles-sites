@@ -6,13 +6,20 @@
     "slug": "recipes",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Sección de recetas (Home, página de producto con las recetas que lo usan): título (h2) + entradilla · 3 Recipe card · Link «Ver todas las recetas» a la Recipe library. Fondo color/surface/card para alternar con las secciones crema. Desktop: 3 columnas (421 px); Mobile: scroll horizontal con la siguiente card asomando y el enlace debajo. Sin buscador por ingredientes (regla de negocio). Sin variables propias.",
     "figmaPage": "Pattern / Recipes",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "2aaea9d80c7d"
+    "anatomyHash": "2aaea9d80c7d",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {
@@ -28,8 +35,26 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "carousel",
+        "carousel--3",
+        "icon",
+        "icon-arrow-right",
+        "link",
+        "link--standalone",
+        "recipe-card",
+        "recipe-card__body",
+        "recipe-card__link",
+        "recipe-card__title",
+        "recipes",
+        "section",
+        "section__bar",
+        "section__header",
+        "section__inner",
+        "section__lead",
+        "section__title"
+      ],
+      "example": "<section class=\"section recipes\" aria-labelledby=\"rc-title\">\n<div class=\"section__inner\">\n<div class=\"section__bar\"><div class=\"section__header\"><h2 class=\"section__title\" id=\"rc-title\">Hackea tu noodle</h2><p class=\"section__lead\">Recetas rápidas con nuestros productos.</p></div><a class=\"link link--standalone\" href=\"/recetas\">Ver todas las recetas <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a></div>\n<ul class=\"carousel carousel--3\">\n<li><article class=\"recipe-card\"><div class=\"recipe-card__body\"><h3 class=\"recipe-card__title\"><a class=\"recipe-card__link\" href=\"/recetas/ramen\">Ramen picante</a></h3></div></article></li>\n</ul>\n</div>\n</section>"
     }
   },
   "api": {

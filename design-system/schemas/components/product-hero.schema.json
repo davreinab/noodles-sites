@@ -6,13 +6,20 @@
     "slug": "product-hero",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Cabecera de la página de producto: galería (imagen 3D principal —la «girosu» en Cups— e interior; miniaturas como botones, la seleccionada con borde grueso y aria-current) · Badge New/Natural · tipo y línea · nombre (h1) · descripción · highlights con check en color/text/natural (lista &lt;ul&gt;) · Button «Dónde comprar» (lleva a Where to buy) y Link «Ver ingredientes» (ancla a Product details). Las imágenes son las de marca, nunca generadas con IA. Desktop: galería a la izquierda; Mobile: galería arriba. Sin variables propias.",
     "figmaPage": "Pattern / Product hero",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "4020cfd96191"
+    "anatomyHash": "4020cfd96191",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {
@@ -28,8 +35,34 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "badge",
+        "badge--natural",
+        "button",
+        "button--l",
+        "icon",
+        "icon-arrow-right",
+        "icon-check",
+        "link",
+        "link--standalone",
+        "media-frame",
+        "page-title",
+        "product-hero",
+        "product-hero__actions",
+        "product-hero__description",
+        "product-hero__gallery",
+        "product-hero__grid",
+        "product-hero__highlights",
+        "product-hero__info",
+        "product-hero__line",
+        "product-hero__main",
+        "product-hero__tags",
+        "product-hero__thumb",
+        "product-hero__thumbs",
+        "section",
+        "section__inner"
+      ],
+      "example": "<section class=\"section product-hero\" aria-labelledby=\"ph-title\">\n<div class=\"section__inner\">\n<div class=\"product-hero__grid\">\n<div class=\"product-hero__gallery\">\n<div class=\"media-frame product-hero__main\"><img src=\"/media/yatekomo-pollo-3d.png\" alt=\"Vaso de Yatekomo Pollo\"></div>\n<ul class=\"product-hero__thumbs\"><li><button class=\"product-hero__thumb\" type=\"button\" aria-current=\"true\" aria-label=\"Imagen 3D\"></button></li><li><button class=\"product-hero__thumb\" type=\"button\" aria-label=\"Interior\"></button></li></ul>\n</div>\n<div class=\"product-hero__info\">\n<div class=\"product-hero__tags\"><span class=\"badge\">Nuevo</span><span class=\"badge badge--natural\">100 % natural</span></div>\n<span class=\"product-hero__line\">Cups · Original</span>\n<h1 class=\"page-title\" id=\"ph-title\">Yatekomo Pollo</h1>\n<p class=\"product-hero__description\">Descripción del sabor.</p>\n<ul class=\"product-hero__highlights\"><li><span class=\"icon icon-check\" aria-hidden=\"true\"></span>Listo en 3 minutos</li></ul>\n<div class=\"product-hero__actions\"><a class=\"button button--l\" href=\"#donde-comprar\">Dónde comprar</a><a class=\"link link--standalone\" href=\"#ingredientes\">Ver ingredientes <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a></div>\n</div>\n</div>\n</div>\n</section>"
     }
   },
   "api": {

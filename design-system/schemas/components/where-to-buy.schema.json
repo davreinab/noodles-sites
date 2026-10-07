@@ -6,13 +6,20 @@
     "slug": "where-to-buy",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Dónde comprar (Home, página de producto; destino del CTA «Dónde comprar» de la Navbar): título (h2) · texto · rejilla de distribuidores del país. Cada distribuidor es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; tarjeta color/surface/card con borde de tinta sobre color/surface/brand. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: 5 por fila; Mobile: 2 por fila. Sin variables propias.",
     "figmaPage": "Pattern / Where to buy",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "359fd1b81072"
+    "anatomyHash": "359fd1b81072",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {
@@ -28,8 +35,17 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "section",
+        "section__header",
+        "section__inner",
+        "section__lead",
+        "section__title",
+        "where-to-buy",
+        "where-to-buy__list",
+        "where-to-buy__retailer"
+      ],
+      "example": "<section class=\"section where-to-buy\" id=\"donde-comprar\" aria-labelledby=\"wtb-title\">\n<div class=\"section__inner\">\n<div class=\"section__header\"><h2 class=\"section__title\" id=\"wtb-title\">Dónde comprar</h2><p class=\"section__lead\">Encuentra nuestros noodles en estos distribuidores.</p></div>\n<ul class=\"where-to-buy__list\"><li><a class=\"where-to-buy__retailer\" href=\"https://tienda.example.org\" target=\"_blank\" rel=\"noopener\"><img src=\"/media/distribuidor.svg\" alt=\"Distribuidor (abre en una pestaña nueva)\"></a></li></ul>\n</div>\n</section>"
     }
   },
   "api": {

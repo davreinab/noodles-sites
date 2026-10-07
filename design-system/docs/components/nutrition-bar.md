@@ -1,7 +1,7 @@
-### Nutrition bar   ⚙️ synced: 2026-10-07T18:27:15Z
+### Nutrition bar   ⚙️ synced: 2026-10-07T18:30:51Z
 
 <!-- ⚙️ GENERATED:start:nutrition-bar -->
-- **Figma:** `71:74` · página «Nutrition» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:27:15Z
+- **Figma:** `71:74` · página «Nutrition» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:30:51Z
 - **Descripción (Figma):** Barra de un nutriente: nombre · valor por 100 g (negrita) · % de ingesta de referencia (IR) y barra cuyo relleno mide ese % del ancho de la pista. Highlight=True: relleno verde natural y Badge Natural con el claim del envase (−20 % sal, −80 % grasas saturadas). La barra es decorativa (aria-hidden): el dato accesible es el texto, así que el valor y el % siempre se escriben. Relleno ≥3:1 sobre la pista. Los valores los valida el equipo de Nutrición de GB Foods. En Figma, el % se fija con el padding derecho de «track» (padding-right = ancho × (1 − %)); en código, width: &lt;%&gt; del relleno.
 - **Anatomía:** sin instancias anidadas
 - **Highlight:** False, True

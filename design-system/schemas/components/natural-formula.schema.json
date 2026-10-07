@@ -6,13 +6,20 @@
     "slug": "natural-formula",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Sección de la fórmula natural (Home): título (h2) · texto · 4 claims del pack en display (100 % natural · −20 % sal · −80 % grasas saturadas · 0 aditivos ni conservantes) · Link Standalone Dark a la Natural formula page. Fondo color/surface/natural con texto color/text/on-natural (5,5:1, también en display). Los claims deben coincidir con el envase (restricción regulatoria): no se añaden claims nuevos sin validación de GB Foods. Los claims son una lista (&lt;ul&gt;), no encabezados. Desktop: 4 columnas; Mobile: 2×2. Sin variables propias.",
     "figmaPage": "Pattern / Natural formula",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "d0afc05d5408"
+    "anatomyHash": "d0afc05d5408",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {
@@ -28,8 +35,24 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "icon",
+        "icon-arrow-right",
+        "link",
+        "link--dark",
+        "link--standalone",
+        "natural-formula",
+        "natural-formula__claim",
+        "natural-formula__claims",
+        "natural-formula__label",
+        "natural-formula__value",
+        "section",
+        "section__header",
+        "section__inner",
+        "section__lead",
+        "section__title"
+      ],
+      "example": "<section class=\"section natural-formula\" aria-labelledby=\"nf-title\">\n<div class=\"section__inner\">\n<div class=\"section__header\"><h2 class=\"section__title\" id=\"nf-title\">La fórmula natural</h2><p class=\"section__lead\">Texto alineado con el envase.</p></div>\n<ul class=\"natural-formula__claims\">\n<li class=\"natural-formula__claim\"><span class=\"natural-formula__value\">100 %</span><span class=\"natural-formula__label\">natural</span></li>\n<li class=\"natural-formula__claim\"><span class=\"natural-formula__value\">−20 %</span><span class=\"natural-formula__label\">de sal</span></li>\n</ul>\n<a class=\"link link--standalone link--dark\" href=\"/formula-natural\">Conoce la fórmula natural <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a>\n</div>\n</section>"
     }
   },
   "api": {

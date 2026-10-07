@@ -6,13 +6,20 @@
     "slug": "icon-instagram",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Red social: Instagram. Color: icon/color/*. Tamaño: icon/size/*",
     "figmaPage": "Icons",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "f3cd0a23b61e"
+    "anatomyHash": "f3cd0a23b61e",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {

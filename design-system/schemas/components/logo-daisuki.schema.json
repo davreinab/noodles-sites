@@ -6,13 +6,20 @@
     "slug": "logo-daisuki",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Logo Daisuki. Positivo vectorial; negativo en PNG. No se recolorea.",
     "figmaPage": "Brand",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": false,
-    "anatomyHash": "ba1c2f6d9620"
+    "anatomyHash": "ba1c2f6d9620",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {

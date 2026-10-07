@@ -6,13 +6,20 @@
     "slug": "banner",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Banner promocional de la Home (lanzamiento, sabor nuevo, mensaje de campaña): bloque color/surface/accent (naranja de marca) con borde de tinta, radius/lg y elevation/2 (sombra dura de marca) · titular (h1) · texto · Button Primary · imagen de marca. Sobre el acento solo va color/text/default (regla del token). Desktop: texto a la izquierda; Mobile: texto arriba e imagen debajo. No es un carrusel. Sin variables propias.",
     "figmaPage": "Pattern / Banner",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "0b02ba48b50b"
+    "anatomyHash": "0b02ba48b50b",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {
@@ -28,8 +35,20 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "banner",
+        "banner__body",
+        "banner__box",
+        "banner__content",
+        "banner__media",
+        "banner__title",
+        "button",
+        "button--l",
+        "media-frame",
+        "section",
+        "section__inner"
+      ],
+      "example": "<section class=\"section banner\" aria-labelledby=\"bn-title\">\n<div class=\"section__inner\">\n<div class=\"banner__box\">\n<div class=\"banner__content\"><h2 class=\"banner__title\" id=\"bn-title\">Nuevo sabor</h2><p class=\"banner__body\">Texto del lanzamiento.</p><a class=\"button button--l\" href=\"/productos/nuevo\">Saber más</a></div>\n<div class=\"media-frame banner__media\"><img src=\"/media/banner.jpg\" alt=\"\"></div>\n</div>\n</div>\n</section>"
     }
   },
   "api": {

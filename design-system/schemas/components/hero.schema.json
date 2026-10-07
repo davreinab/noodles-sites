@@ -6,13 +6,20 @@
     "slug": "hero",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Patrón hero de la Home. Slider de máximo 3 slides (regla de negocio): cada slide = imagen de producto o campaña (de marca, sin IA) · sello Badge Natural «The only 100% natural» · claim «Welcome to the new noodles era» (display) · texto · CTA a la acción principal (campaña activa o, sin campaña, producto). Controles: puntos (el activo relleno; el estado no depende solo del color: forma rellena vs contorno) y flechas Icon button. Accesibilidad: carrusel con aria-roledescription=&quot;carrusel&quot;, cada slide «1 de 3», sin autoplay (o con pausa visible y parado con prefers-reduced-motion); flechas con nombre «Slide anterior/siguiente». Fondo color/surface/brand. Desktop: texto a la izquierda e imagen a la derecha; Mobile: imagen arriba. Sin variables propias.",
     "figmaPage": "Pattern / Hero",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "172cbf44b957"
+    "anatomyHash": "172cbf44b957",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {
@@ -28,8 +35,31 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "badge",
+        "badge--natural",
+        "button",
+        "button--l",
+        "hero",
+        "hero__arrows",
+        "hero__content",
+        "hero__controls",
+        "hero__dot",
+        "hero__dots",
+        "hero__lead",
+        "hero__media",
+        "hero__slide",
+        "hero__title",
+        "icon",
+        "icon-arrow-left",
+        "icon-arrow-right",
+        "icon-button",
+        "icon-button--secondary",
+        "media-frame",
+        "section",
+        "section__inner"
+      ],
+      "example": "<section class=\"section hero\" aria-roledescription=\"carrusel\" aria-label=\"Destacados\">\n<div class=\"section__inner\">\n<div class=\"hero__slide\" role=\"group\" aria-roledescription=\"slide\" aria-label=\"1 de 3\">\n<div class=\"hero__content\">\n<span class=\"badge badge--natural\">The only 100% natural</span>\n<h1 class=\"hero__title\">Welcome to the new noodles era</h1>\n<p class=\"hero__lead\">Texto de apoyo.</p>\n<a class=\"button button--l\" href=\"/productos\">Descubre los productos</a>\n</div>\n<div class=\"media-frame hero__media\"><img src=\"/media/hero-1.jpg\" alt=\"\"></div>\n</div>\n<div class=\"hero__controls\">\n<div class=\"hero__dots\"><button class=\"hero__dot\" type=\"button\" aria-current=\"true\" aria-label=\"Slide 1\"></button><button class=\"hero__dot\" type=\"button\" aria-label=\"Slide 2\"></button></div>\n<div class=\"hero__arrows\"><button class=\"icon-button icon-button--secondary\" type=\"button\" aria-label=\"Slide anterior\"><span class=\"icon icon-arrow-left\" aria-hidden=\"true\"></span></button><button class=\"icon-button icon-button--secondary\" type=\"button\" aria-label=\"Slide siguiente\"><span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></button></div>\n</div>\n</div>\n</section>"
     }
   },
   "api": {

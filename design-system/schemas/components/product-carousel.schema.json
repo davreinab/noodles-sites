@@ -6,13 +6,20 @@
     "slug": "product-carousel",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Productos de la Home: título (h2) · flechas Icon button (desktop) · Tabs de tipo (Cups / Bags / Sauces; tablist que filtra el carrusel, solo tipos con productos) · carrusel de Product card · Link «Ver todos los productos» a la Product library. Desktop: 4 cards visibles (310 px, gutter layout/gutter). Mobile: scroll horizontal con la siguiente card asomando (pista que comunica que hay más); sin flechas. Accesibilidad: el carrusel es una lista (&lt;ul&gt;) desplazable con teclado; las flechas son &lt;button&gt; con nombre y se desactivan al llegar al final. Sin variables propias.",
     "figmaPage": "Pattern / Product carousel",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "9caf2bd167ca"
+    "anatomyHash": "9caf2bd167ca",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {
@@ -28,8 +35,27 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "carousel",
+        "icon",
+        "icon-arrow-left",
+        "icon-arrow-right",
+        "icon-button",
+        "icon-button--secondary",
+        "link",
+        "link--standalone",
+        "product-card",
+        "product-card__body",
+        "product-card__name",
+        "product-carousel",
+        "product-carousel__tabs",
+        "section",
+        "section__bar",
+        "section__inner",
+        "section__title",
+        "tab"
+      ],
+      "example": "<section class=\"section product-carousel\" aria-labelledby=\"pc-title\">\n<div class=\"section__inner\">\n<div class=\"section__bar\"><h2 class=\"section__title\" id=\"pc-title\">Nuestros noodles</h2><button class=\"icon-button icon-button--secondary\" type=\"button\" aria-label=\"Anteriores\"><span class=\"icon icon-arrow-left\" aria-hidden=\"true\"></span></button></div>\n<div class=\"product-carousel__tabs\" role=\"tablist\" aria-label=\"Tipo\"><button class=\"tab\" role=\"tab\" aria-selected=\"true\">Cups</button><button class=\"tab\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Bags</button></div>\n<ul class=\"carousel\" role=\"tabpanel\" aria-label=\"Cups\">\n<li><a class=\"product-card\" href=\"/productos/yatekomo-pollo\"><div class=\"product-card__body\"><h3 class=\"product-card__name\">Yatekomo Pollo</h3></div></a></li>\n</ul>\n<a class=\"link link--standalone\" href=\"/productos\">Ver todos los productos <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a>\n</div>\n</section>"
     }
   },
   "api": {

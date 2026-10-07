@@ -6,13 +6,20 @@
     "slug": "promo",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Módulo de promoción o concurso de la Home: Video player 16:9 (fachada) · Badge «Concurso» · título (h2) · texto · Button Primary «Participar» · Link de bases legales (obligatorio). Fondo color/surface/page (crema) para que el póster oscuro del vídeo se distinga; texto color/text/default. Se oculta entero si no hay promoción activa (regla de negocio); si el concurso es iframe de agencia, el CTA lleva external-link y el iframe necesita revisión de protección de datos antes de publicarse. Desktop: vídeo a la izquierda; Mobile: vídeo arriba. Sin variables propias.",
     "figmaPage": "Pattern / Promo",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "b72fcfc48255"
+    "anatomyHash": "b72fcfc48255",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {
@@ -28,8 +35,25 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "badge",
+        "button",
+        "button--l",
+        "icon",
+        "icon-play",
+        "link",
+        "promo",
+        "promo__actions",
+        "promo__body",
+        "promo__content",
+        "promo__grid",
+        "section",
+        "section__inner",
+        "section__title",
+        "video-player",
+        "video-player__play"
+      ],
+      "example": "<section class=\"section promo\" aria-labelledby=\"promo-title\">\n<div class=\"section__inner\">\n<div class=\"promo__grid\">\n<div class=\"video-player\"><button class=\"video-player__play\" type=\"button\" aria-label=\"Reproducir vídeo de la campaña (0:45)\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span></button></div>\n<div class=\"promo__content\">\n<span class=\"badge\">Concurso</span>\n<h2 class=\"section__title\" id=\"promo-title\">Nombre de la campaña</h2>\n<p class=\"promo__body\">Qué se gana, hasta cuándo y cómo participar.</p>\n<div class=\"promo__actions\"><a class=\"button button--l\" href=\"/concursos/tokio\">Participar</a><a class=\"link\" href=\"/concursos/tokio/bases\">Bases legales</a></div>\n</div>\n</div>\n</div>\n</section>"
     }
   },
   "api": {

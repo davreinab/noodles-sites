@@ -6,13 +6,20 @@
     "slug": "footer",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Patrón de pie, en tinta: logo de marca (negativo) y GB Foods · navegación · contacto (formulario externo de GB Foods, icono external-link) · redes · franja legal por país (Privacy, Legal notice, Cookies, Lawful basis, Contest rules) y ©. Los textos legales cambian por país. Sin variables propias: compone Link, Icon y Logo con semánticos.",
     "figmaPage": "Pattern / Footer",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "1bcc16d46dfd"
+    "anatomyHash": "1bcc16d46dfd",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {
@@ -28,8 +35,26 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "footer",
+        "footer__brand",
+        "footer__column",
+        "footer__legal",
+        "footer__links",
+        "footer__main",
+        "footer__social",
+        "footer__title",
+        "icon",
+        "icon-external-link",
+        "icon-instagram",
+        "link",
+        "link--dark",
+        "link--standalone",
+        "logo",
+        "logo--gb-foods",
+        "visually-hidden"
+      ],
+      "example": "<footer class=\"footer\">\n<div class=\"footer__main\">\n<div class=\"footer__brand\"><img class=\"logo\" src=\"../assets/logos/logo-yatekomo-negative.svg\" alt=\"Yatekomo\"><img class=\"logo logo--gb-foods\" src=\"../assets/logos/logo-gb-foods.svg\" alt=\"GB Foods\"></div>\n<nav class=\"footer__column\" aria-label=\"Pie\">\n<h2 class=\"footer__title\">Explora</h2>\n<ul class=\"footer__links\"><li><a class=\"link link--dark\" href=\"/productos\">Productos</a></li><li><a class=\"link link--dark\" href=\"/recetas\">Recetas</a></li></ul>\n</nav>\n<div class=\"footer__column\">\n<a class=\"link link--standalone link--dark\" href=\"https://www.gbfoods.com/contacto\" target=\"_blank\" rel=\"noopener\">Contacto <span class=\"icon icon-external-link\" aria-hidden=\"true\"></span><span class=\"visually-hidden\"> (abre en una pestaña nueva)</span></a>\n<ul class=\"footer__social\" aria-label=\"Redes sociales\"><li><a class=\"link link--dark\" href=\"https://www.instagram.com/\" aria-label=\"Instagram\"><span class=\"icon icon-instagram\" aria-hidden=\"true\"></span></a></li></ul>\n</div>\n</div>\n<div class=\"footer__legal\"><a class=\"link link--dark\" href=\"/privacidad\">Privacy</a><a class=\"link link--dark\" href=\"/cookies\">Cookies</a><span>© 2026 GB Foods</span></div>\n</footer>"
     }
   },
   "api": {

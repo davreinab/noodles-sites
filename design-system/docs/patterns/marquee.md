@@ -1,7 +1,7 @@
-### Marquee   ⚙️ synced: 2026-10-07T18:27:15Z
+### Marquee   ⚙️ synced: 2026-10-07T18:30:51Z
 
 <!-- ⚙️ GENERATED:start:marquee -->
-- **Figma:** `89:78` · página «Pattern / Marquee» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:27:15Z
+- **Figma:** `89:78` · página «Pattern / Marquee» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:30:51Z
 - **Descripción (Figma):** Franja de claim en movimiento horizontal continuo (heredada de las landings): «Welcome to the new noodles era» ✱ «The only 100% natural», en color/text/brand-on-inverse sobre color/surface/inverse (12:1). Se usa entre secciones de la Home, a sangre (sin margen lateral). Accesibilidad: es decorativa y repite el claim del hero, así que va con aria-hidden=&quot;true&quot; y un texto oculto no duplicado; con prefers-reduced-motion se para (texto estático) y tiene botón de pausa si dura más de 5 s (WCAG 2.2.2). Sin variables propias.
 - **Anatomía:** sin instancias anidadas
 - **Breakpoint:** Desktop, Mobile
@@ -12,10 +12,14 @@
 - **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `color/surface/inverse`, `color/text/brand-on-inverse`, `color/text/on-inverse`, `font/family/display`, `font/line-height/desktop/h3`, `font/size/desktop/h3`, `font/style/display`
 <!-- ⚙️ GENERATED:end:marquee -->
 
-- **Propósito:** ⬜ TODO
-- **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; se copia a `source.code.example` del schema)_
+- **Propósito:** Franja de claim en movimiento horizontal (heredada de las landings) entre secciones de la Home.
+- **Ejemplo de código:**
   ```html
-  <!-- ⬜ TODO -->
+  <div class="marquee" aria-hidden="true">
+  <ul class="marquee__track">
+  <li class="marquee__item">Welcome to the new noodles era</li><li class="marquee__item marquee__sep">✱</li><li class="marquee__item">The only 100% natural</li>
+  </ul>
+  </div>
   ```
-- **Accesibilidad (pares AA verificados):** ⬜ TODO
-- **Cuándo usar / qué NO hace:** ⬜ TODO
+- **Accesibilidad (pares AA verificados):** Amarillo sobre tinta 12,3:1; separador crema sobre tinta 17,2:1. Decorativa y redundante con el hero: `aria-hidden="true"`. Se para al pasar el ratón y con reduce-motion; si se mueve más de 5 s necesita control de pausa (WCAG 2.2.2): `.marquee--paused`.
+- **Cuándo usar / qué NO hace:** Como separador de marca en la Home, a sangre. No lleva enlaces ni información que no esté en otro sitio.

@@ -2,12 +2,12 @@
   "designSystem": "GB Noodles · Microsites",
   "rubricVersion": "1.0.0",
   "note": "Informe generado por scripts/agent-readiness.py. No editar a mano.",
-  "score": 4.3,
+  "score": 5.0,
   "scale": "0-5",
   "passThreshold": 4,
   "passes": true,
   "counts": {
-    "cumple": 6,
+    "cumple": 7,
     "aplicables": 7,
     "noAplica": 2
   },
@@ -22,7 +22,7 @@
       "id": "machine-readable-tokens",
       "title": "Tokens legibles por máquina",
       "status": "cumple",
-      "detail": "324 tokens con contrato completo"
+      "detail": "327 tokens con contrato completo"
     },
     {
       "id": "component-registry",
@@ -39,8 +39,8 @@
     {
       "id": "runnable-patterns",
       "title": "Ejemplos ejecutables, no capturas",
-      "status": "no-cumple",
-      "detail": "75 contratos sin ejemplo ejecutable (p. ej. accordion-item: sin ejemplo de código)"
+      "status": "cumple",
+      "detail": "75 contratos con ejemplo y clases existentes"
     },
     {
       "id": "scoped-retrieval",

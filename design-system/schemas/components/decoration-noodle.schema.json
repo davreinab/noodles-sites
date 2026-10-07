@@ -6,13 +6,20 @@
     "slug": "decoration-noodle",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Fideo decorativo de marca (5 trazos). Tone=Brand usa decoration/noodle/brand y Tone=Accent decoration/noodle/accent; ambos cambian con el modo de marca. Escalable; solo decorativo (aria-hidden).",
     "figmaPage": "Decoration",
     "figmaType": "COMPONENT_SET",
     "variantCount": 10,
     "autoLayout": false,
-    "anatomyHash": "c10edbc5ec7b"
+    "anatomyHash": "c10edbc5ec7b",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {

@@ -1,7 +1,7 @@
-### Where to buy   ⚙️ synced: 2026-10-07T18:27:15Z
+### Where to buy   ⚙️ synced: 2026-10-07T18:30:51Z
 
 <!-- ⚙️ GENERATED:start:where-to-buy -->
-- **Figma:** `92:990` · página «Pattern / Where to buy» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:27:15Z
+- **Figma:** `92:990` · página «Pattern / Where to buy» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:30:51Z
 - **Descripción (Figma):** Dónde comprar (Home, página de producto; destino del CTA «Dónde comprar» de la Navbar): título (h2) · texto · rejilla de distribuidores del país. Cada distribuidor es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; tarjeta color/surface/card con borde de tinta sobre color/surface/brand. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: 5 por fila; Mobile: 2 por fila. Sin variables propias.
 - **Anatomía:** sin instancias anidadas
 - **Breakpoint:** Desktop, Mobile
@@ -12,10 +12,15 @@
 - **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `color/border/default`, `color/surface/brand`, `color/surface/card`, `color/text/default`, `color/text/secondary`, `font/family/body`, `font/family/display`, `font/line-height/desktop/body-l`, `font/line-height/desktop/caption`, `font/line-height/desktop/h2`, `font/size/desktop/body-l`, `font/size/desktop/caption`, `font/size/desktop/h2`, `font/style/body`, `font/style/display`
 <!-- ⚙️ GENERATED:end:where-to-buy -->
 
-- **Propósito:** ⬜ TODO
-- **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; se copia a `source.code.example` del schema)_
+- **Propósito:** Dónde comprar: distribuidores del país como enlaces externos con su logo. Es el destino del CTA «Dónde comprar».
+- **Ejemplo de código:**
   ```html
-  <!-- ⬜ TODO -->
+  <section class="section where-to-buy" id="donde-comprar" aria-labelledby="wtb-title">
+  <div class="section__inner">
+  <div class="section__header"><h2 class="section__title" id="wtb-title">Dónde comprar</h2><p class="section__lead">Encuentra nuestros noodles en estos distribuidores.</p></div>
+  <ul class="where-to-buy__list"><li><a class="where-to-buy__retailer" href="https://tienda.example.org" target="_blank" rel="noopener"><img src="/media/distribuidor.svg" alt="Distribuidor (abre en una pestaña nueva)"></a></li></ul>
+  </div>
+  </section>
   ```
-- **Accesibilidad (pares AA verificados):** ⬜ TODO
-- **Cuándo usar / qué NO hace:** ⬜ TODO
+- **Accesibilidad (pares AA verificados):** Título y texto tinta sobre amarillo 12,3:1; tarjetas blancas con borde de tinta. Cada distribuidor es un enlace externo cuyo nombre es el `alt` del logo más el aviso de pestaña nueva. Foco: contorno de 2 px pegado a la tarjeta.
+- **Cuándo usar / qué NO hace:** En la Home y la página de producto. Los distribuidores y sus logos cambian por país y los aporta GB Foods; no se recrean.

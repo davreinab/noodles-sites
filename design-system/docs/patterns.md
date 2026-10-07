@@ -9,30 +9,30 @@
 > Reglas duras: no se inventa un patrón que no esté aquí; los patrones se componen de átomos y consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 18 patrones sincronizados el 2026-10-07T18:27:15Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 18 patrones sincronizados el 2026-10-07T18:30:51Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
 ## Índice
 
-- [Navbar](patterns/navbar.md) · pattern · `navbar` · ⬜ 5 pendientes
-- [Mobile menu](patterns/mobile-menu.md) · pattern · `mobile-menu` · ⬜ 5 pendientes
-- [Product filter](patterns/product-filter.md) · pattern · `product-filter` · ⬜ 5 pendientes
-- [Footer](patterns/footer.md) · pattern · `footer` · ⬜ 5 pendientes
-- [Hero](patterns/hero.md) · pattern · `hero` · ⬜ 5 pendientes
-- [Marquee](patterns/marquee.md) · pattern · `marquee` · ⬜ 5 pendientes
-- [Promo](patterns/promo.md) · pattern · `promo` · ⬜ 5 pendientes
-- [Natural formula](patterns/natural-formula.md) · pattern · `natural-formula` · ⬜ 5 pendientes
-- [Product carousel](patterns/product-carousel.md) · pattern · `product-carousel` · ⬜ 5 pendientes
-- [Recipes](patterns/recipes.md) · pattern · `recipes` · ⬜ 5 pendientes
-- [Banner](patterns/banner.md) · pattern · `banner` · ⬜ 5 pendientes
-- [FAQ](patterns/faq.md) · pattern · `faq` · ⬜ 5 pendientes
-- [Where to buy](patterns/where-to-buy.md) · pattern · `where-to-buy` · ⬜ 5 pendientes
-- [Product hero](patterns/product-hero.md) · pattern · `product-hero` · ⬜ 5 pendientes
-- [Product details](patterns/product-details.md) · pattern · `product-details` · ⬜ 5 pendientes
-- [Preparation](patterns/preparation.md) · pattern · `preparation` · ⬜ 5 pendientes
-- [Recipe hero](patterns/recipe-hero.md) · pattern · `recipe-hero` · ⬜ 5 pendientes
-- [Library](patterns/library.md) · pattern · `library` · ⬜ 5 pendientes
+- [Navbar](patterns/navbar.md) · pattern · `navbar` · ✅ criterio completo
+- [Mobile menu](patterns/mobile-menu.md) · pattern · `mobile-menu` · ✅ criterio completo
+- [Product filter](patterns/product-filter.md) · pattern · `product-filter` · ✅ criterio completo
+- [Footer](patterns/footer.md) · pattern · `footer` · ✅ criterio completo
+- [Hero](patterns/hero.md) · pattern · `hero` · ✅ criterio completo
+- [Marquee](patterns/marquee.md) · pattern · `marquee` · ✅ criterio completo
+- [Promo](patterns/promo.md) · pattern · `promo` · ✅ criterio completo
+- [Natural formula](patterns/natural-formula.md) · pattern · `natural-formula` · ✅ criterio completo
+- [Product carousel](patterns/product-carousel.md) · pattern · `product-carousel` · ✅ criterio completo
+- [Recipes](patterns/recipes.md) · pattern · `recipes` · ✅ criterio completo
+- [Banner](patterns/banner.md) · pattern · `banner` · ✅ criterio completo
+- [FAQ](patterns/faq.md) · pattern · `faq` · ✅ criterio completo
+- [Where to buy](patterns/where-to-buy.md) · pattern · `where-to-buy` · ✅ criterio completo
+- [Product hero](patterns/product-hero.md) · pattern · `product-hero` · ✅ criterio completo
+- [Product details](patterns/product-details.md) · pattern · `product-details` · ✅ criterio completo
+- [Preparation](patterns/preparation.md) · pattern · `preparation` · ✅ criterio completo
+- [Recipe hero](patterns/recipe-hero.md) · pattern · `recipe-hero` · ✅ criterio completo
+- [Library](patterns/library.md) · pattern · `library` · ✅ criterio completo
 
 ## Cómo rellenar una ficha
 

@@ -6,13 +6,20 @@
     "slug": "library",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Librería (Product library; también Recipe y Contest library cambiando la card y el filtro): cabecera de página (h1 + entradilla) · Product filter a sangre (tipo → línea → sabor; sin filtros que den resultados vacíos) · rejilla de cards (Desktop 4 columnas de 310 px con gutter layout/gutter y space/48 entre filas; Mobile 1 columna) · Button Secondary «Ver más» (carga más, no pagina; el foco va a la primera card nueva y se anuncia el número cargado). Recipe library: Recipe card en 3 columnas sin buscador por ingredientes. Contest library: Contest card en 2-3 columnas; la página agregadora es opcional. Al filtrar se anuncia «N productos» (aria-live). Sin variables propias.",
     "figmaPage": "Pattern / Library",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "1ed7b387c97e"
+    "anatomyHash": "1ed7b387c97e",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {
@@ -28,8 +35,25 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "button",
+        "button--secondary",
+        "library",
+        "library__grid",
+        "library__header",
+        "library__more",
+        "page-title",
+        "product-card",
+        "product-card__body",
+        "product-card__name",
+        "product-filter",
+        "product-filter__group",
+        "product-filter__label",
+        "product-filter__options",
+        "section__lead",
+        "tab"
+      ],
+      "example": "<section class=\"library\" aria-labelledby=\"lib-title\">\n<div class=\"library__header\"><h1 class=\"page-title\" id=\"lib-title\">Productos</h1><p class=\"section__lead\">Introducción de la librería.</p></div>\n<div class=\"product-filter\"><div class=\"product-filter__group\"><span class=\"product-filter__label\">Tipo</span><div class=\"product-filter__options\" role=\"tablist\"><button class=\"tab\" role=\"tab\" aria-selected=\"true\">Cups</button></div></div></div>\n<ul class=\"library__grid\"><li><a class=\"product-card\" href=\"/productos/yatekomo-pollo\"><div class=\"product-card__body\"><h3 class=\"product-card__name\">Yatekomo Pollo</h3></div></a></li></ul>\n<div class=\"library__more\"><button class=\"button button--secondary\" type=\"button\">Ver más productos</button></div>\n</section>"
     }
   },
   "api": {

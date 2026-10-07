@@ -6,13 +6,20 @@
     "slug": "product-filter",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias.",
     "figmaPage": "Pattern / Product filter",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "830668440321"
+    "anatomyHash": "830668440321",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {
@@ -28,8 +35,17 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "chip",
+        "icon",
+        "icon-check",
+        "product-filter",
+        "product-filter__group",
+        "product-filter__label",
+        "product-filter__options",
+        "tab"
+      ],
+      "example": "<div class=\"product-filter\">\n<div class=\"product-filter__group\">\n<span class=\"product-filter__label\" id=\"f-tipo\">Tipo</span>\n<div class=\"product-filter__options\" role=\"tablist\" aria-labelledby=\"f-tipo\"><button class=\"tab\" role=\"tab\" aria-selected=\"true\">Cups</button><button class=\"tab\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Bags</button></div>\n</div>\n<fieldset class=\"product-filter__group\">\n<legend class=\"product-filter__label\">Línea</legend>\n<div class=\"product-filter__options\"><button class=\"chip\" type=\"button\" aria-pressed=\"true\"><span class=\"icon icon-check\" aria-hidden=\"true\"></span>Original</button><button class=\"chip\" type=\"button\" aria-pressed=\"false\">Yakisoba</button></div>\n</fieldset>\n</div>"
     }
   },
   "api": {

@@ -6,13 +6,20 @@
     "slug": "preparation",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en &lt;ol&gt; · Timer de 3 minutos. El texto de los pasos sale del envase. Desktop: pasos a la izquierda; vídeo y temporizador a la derecha (560 px). Mobile: vídeo arriba, pasos y temporizador al final (al alcance mientras se cocina). En la Recipe page se reutiliza sin el Timer y con Step Media=True. Sin variables propias.",
     "figmaPage": "Pattern / Preparation",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "9030e8548574"
+    "anatomyHash": "9030e8548574",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {
@@ -28,8 +35,27 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "button",
+        "icon",
+        "icon-play",
+        "preparation",
+        "preparation__grid",
+        "preparation__media",
+        "section",
+        "section__inner",
+        "section__title",
+        "step",
+        "step__content",
+        "step__number",
+        "step__text",
+        "steps",
+        "timer",
+        "timer__controls",
+        "video-player",
+        "video-player__play"
+      ],
+      "example": "<section class=\"section preparation\" aria-labelledby=\"prep-title\">\n<div class=\"section__inner\">\n<h2 class=\"section__title\" id=\"prep-title\">Preparación</h2>\n<div class=\"preparation__grid\">\n<ol class=\"steps\"><li class=\"step\"><span class=\"step__number\" aria-hidden=\"true\">1</span><div class=\"step__content\"><p class=\"step__text\">Abre la tapa hasta la mitad.</p></div></li></ol>\n<div class=\"preparation__media\">\n<div class=\"video-player\"><button class=\"video-player__play\" type=\"button\" aria-label=\"Ver la preparación (0:30)\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span></button></div>\n<section class=\"timer\" data-state=\"idle\" aria-label=\"Temporizador\"><div class=\"timer__controls\"><button class=\"button\" type=\"button\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span>Empezar</button></div></section>\n</div>\n</div>\n</div>\n</section>"
     }
   },
   "api": {

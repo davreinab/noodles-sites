@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-07T18:27:15Z",
+  "lastSync": "2026-10-07T18:30:51Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -1712,7 +1712,23 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "button",
+          "icon",
+          "icon-button",
+          "icon-button--secondary",
+          "icon-menu",
+          "icon-search",
+          "lang-switch",
+          "lang-switch__option",
+          "logo",
+          "nav-item",
+          "navbar",
+          "navbar__actions",
+          "navbar__inner",
+          "navbar__menu-button",
+          "navbar__nav"
+        ]
       }
     },
     {
@@ -1743,7 +1759,22 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "button",
+          "button--inverse",
+          "button--l",
+          "icon",
+          "icon-button",
+          "icon-button--inverse",
+          "icon-close",
+          "logo",
+          "mobile-menu",
+          "mobile-menu__inner",
+          "mobile-menu__nav",
+          "mobile-menu__top",
+          "nav-item",
+          "nav-item--menu"
+        ]
       }
     },
     {
@@ -1770,7 +1801,16 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "chip",
+          "icon",
+          "icon-check",
+          "product-filter",
+          "product-filter__group",
+          "product-filter__label",
+          "product-filter__options",
+          "tab"
+        ]
       }
     },
     {
@@ -1802,7 +1842,25 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "footer",
+          "footer__brand",
+          "footer__column",
+          "footer__legal",
+          "footer__links",
+          "footer__main",
+          "footer__social",
+          "footer__title",
+          "icon",
+          "icon-external-link",
+          "icon-instagram",
+          "link",
+          "link--dark",
+          "link--standalone",
+          "logo",
+          "logo--gb-foods",
+          "visually-hidden"
+        ]
       }
     },
     {
@@ -1830,7 +1888,30 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "badge",
+          "badge--natural",
+          "button",
+          "button--l",
+          "hero",
+          "hero__arrows",
+          "hero__content",
+          "hero__controls",
+          "hero__dot",
+          "hero__dots",
+          "hero__lead",
+          "hero__media",
+          "hero__slide",
+          "hero__title",
+          "icon",
+          "icon-arrow-left",
+          "icon-arrow-right",
+          "icon-button",
+          "icon-button--secondary",
+          "media-frame",
+          "section",
+          "section__inner"
+        ]
       }
     },
     {
@@ -1851,7 +1932,12 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "marquee",
+          "marquee__item",
+          "marquee__sep",
+          "marquee__track"
+        ]
       }
     },
     {
@@ -1880,7 +1966,24 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "badge",
+          "button",
+          "button--l",
+          "icon",
+          "icon-play",
+          "link",
+          "promo",
+          "promo__actions",
+          "promo__body",
+          "promo__content",
+          "promo__grid",
+          "section",
+          "section__inner",
+          "section__title",
+          "video-player",
+          "video-player__play"
+        ]
       }
     },
     {
@@ -1906,7 +2009,23 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "icon",
+          "icon-arrow-right",
+          "link",
+          "link--dark",
+          "link--standalone",
+          "natural-formula",
+          "natural-formula__claim",
+          "natural-formula__claims",
+          "natural-formula__label",
+          "natural-formula__value",
+          "section",
+          "section__header",
+          "section__inner",
+          "section__lead",
+          "section__title"
+        ]
       }
     },
     {
@@ -1937,7 +2056,26 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "carousel",
+          "icon",
+          "icon-arrow-left",
+          "icon-arrow-right",
+          "icon-button",
+          "icon-button--secondary",
+          "link",
+          "link--standalone",
+          "product-card",
+          "product-card__body",
+          "product-card__name",
+          "product-carousel",
+          "product-carousel__tabs",
+          "section",
+          "section__bar",
+          "section__inner",
+          "section__title",
+          "tab"
+        ]
       }
     },
     {
@@ -1966,7 +2104,25 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "carousel",
+          "carousel--3",
+          "icon",
+          "icon-arrow-right",
+          "link",
+          "link--standalone",
+          "recipe-card",
+          "recipe-card__body",
+          "recipe-card__link",
+          "recipe-card__title",
+          "recipes",
+          "section",
+          "section__bar",
+          "section__header",
+          "section__inner",
+          "section__lead",
+          "section__title"
+        ]
       }
     },
     {
@@ -1991,7 +2147,19 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "banner",
+          "banner__body",
+          "banner__box",
+          "banner__content",
+          "banner__media",
+          "banner__title",
+          "button",
+          "button--l",
+          "media-frame",
+          "section",
+          "section__inner"
+        ]
       }
     },
     {
@@ -2019,7 +2187,25 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "accordion-item",
+          "accordion-item__button",
+          "accordion-item__heading",
+          "accordion-item__panel",
+          "faq",
+          "faq__grid",
+          "faq__list",
+          "icon",
+          "icon-arrow-right",
+          "icon-plus",
+          "link",
+          "link--standalone",
+          "section",
+          "section__header",
+          "section__inner",
+          "section__lead",
+          "section__title"
+        ]
       }
     },
     {
@@ -2042,7 +2228,16 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "section",
+          "section__header",
+          "section__inner",
+          "section__lead",
+          "section__title",
+          "where-to-buy",
+          "where-to-buy__list",
+          "where-to-buy__retailer"
+        ]
       }
     },
     {
@@ -2071,7 +2266,33 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "badge",
+          "badge--natural",
+          "button",
+          "button--l",
+          "icon",
+          "icon-arrow-right",
+          "icon-check",
+          "link",
+          "link--standalone",
+          "media-frame",
+          "page-title",
+          "product-hero",
+          "product-hero__actions",
+          "product-hero__description",
+          "product-hero__gallery",
+          "product-hero__grid",
+          "product-hero__highlights",
+          "product-hero__info",
+          "product-hero__line",
+          "product-hero__main",
+          "product-hero__tags",
+          "product-hero__thumb",
+          "product-hero__thumbs",
+          "section",
+          "section__inner"
+        ]
       }
     },
     {
@@ -2102,7 +2323,28 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "badge",
+          "badge--natural",
+          "ingredient-item",
+          "ingredient-item__percent",
+          "ingredients",
+          "ingredients__list",
+          "nutrition-bar",
+          "nutrition-bar--highlight",
+          "nutrition-bar__label",
+          "nutrition-bar__meter",
+          "nutrition-bar__percent",
+          "nutrition-bar__row",
+          "nutrition-bar__value",
+          "nutrition-panel",
+          "nutrition-panel__list",
+          "product-details",
+          "product-details__grid",
+          "section",
+          "section__inner",
+          "section__title"
+        ]
       }
     },
     {
@@ -2131,7 +2373,26 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "button",
+          "icon",
+          "icon-play",
+          "preparation",
+          "preparation__grid",
+          "preparation__media",
+          "section",
+          "section__inner",
+          "section__title",
+          "step",
+          "step__content",
+          "step__number",
+          "step__text",
+          "steps",
+          "timer",
+          "timer__controls",
+          "video-player",
+          "video-player__play"
+        ]
       }
     },
     {
@@ -2159,7 +2420,26 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "chip",
+          "chip--m",
+          "icon",
+          "icon-circle-check",
+          "icon-timer",
+          "media-frame",
+          "page-title",
+          "recipe-hero",
+          "recipe-hero__description",
+          "recipe-hero__grid",
+          "recipe-hero__info",
+          "recipe-hero__kicker",
+          "recipe-hero__media",
+          "recipe-hero__meta",
+          "recipe-hero__products",
+          "recipe-hero__products-label",
+          "section",
+          "section__inner"
+        ]
       }
     },
     {
@@ -2191,7 +2471,24 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "button",
+          "button--secondary",
+          "library",
+          "library__grid",
+          "library__header",
+          "library__more",
+          "page-title",
+          "product-card",
+          "product-card__body",
+          "product-card__name",
+          "product-filter",
+          "product-filter__group",
+          "product-filter__label",
+          "product-filter__options",
+          "section__lead",
+          "tab"
+        ]
       }
     }
   ],

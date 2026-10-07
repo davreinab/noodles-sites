@@ -6,13 +6,20 @@
     "slug": "faq",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:27:15Z",
+    "lastSync": "2026-10-07T18:30:51Z",
     "description": "Bloque de FAQ (Home, Natural formula con su FAQ propio, página FAQS indexada): título (h2) + entradilla + Link «Ver todas las preguntas» · lista de Accordion item (space/16 entre ítems; el primero puede ir abierto). En la página FAQS se repite por categorías sin el enlace. SEO/AEO: las respuestas están en el HTML y la página lleva datos estructurados FAQPage. Desktop: cabecera a la izquierda (400 px) y lista a la derecha; Mobile: apilado. Sin variables propias.",
     "figmaPage": "Pattern / FAQ",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "8d0c5f6c5ec9"
+    "anatomyHash": "8d0c5f6c5ec9",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
   },
   "source": {
     "docs": {
@@ -28,8 +35,26 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "accordion-item",
+        "accordion-item__button",
+        "accordion-item__heading",
+        "accordion-item__panel",
+        "faq",
+        "faq__grid",
+        "faq__list",
+        "icon",
+        "icon-arrow-right",
+        "icon-plus",
+        "link",
+        "link--standalone",
+        "section",
+        "section__header",
+        "section__inner",
+        "section__lead",
+        "section__title"
+      ],
+      "example": "<section class=\"section faq\" aria-labelledby=\"faq-title\">\n<div class=\"section__inner\">\n<div class=\"faq__grid\">\n<div class=\"section__header\"><h2 class=\"section__title\" id=\"faq-title\">Preguntas frecuentes</h2><p class=\"section__lead\">Lo que más nos preguntáis.</p><a class=\"link link--standalone\" href=\"/faqs\">Ver todas las preguntas <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a></div>\n<ul class=\"faq__list\"><li><div class=\"accordion-item\"><h3 class=\"accordion-item__heading\"><button class=\"accordion-item__button\" type=\"button\" aria-expanded=\"false\" aria-controls=\"q1\">¿Cuánto tarda en estar listo?<span class=\"icon icon-plus\" aria-hidden=\"true\"></span></button></h3><div class=\"accordion-item__panel\" id=\"q1\" hidden>Tres minutos.</div></div></li></ul>\n</div>\n</div>\n</section>"
     }
   },
   "api": {

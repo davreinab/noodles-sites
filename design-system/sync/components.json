@@ -5070,8 +5070,2393 @@
       ],
       "total": 1,
       "read": 1
+    },
+    {
+      "name": "Pattern / Hero",
+      "id": "88:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Hero",
+          "name": "Hero",
+          "type": "COMPONENT_SET",
+          "id": "88:132",
+          "key": "fcee0ddc73afc1a3fb701081c9a6645a910b1611",
+          "description": "Patrón hero de la Home. Slider de máximo 3 slides (regla de negocio): cada slide = imagen de producto o campaña (de marca, sin IA) · sello Badge Natural «The only 100% natural» · claim «Welcome to the new noodles era» (display) · texto · CTA a la acción principal (campaña activa o, sin campaña, producto). Controles: puntos (el activo relleno; el estado no depende solo del color: forma rellena vs contorno) y flechas Icon button. Accesibilidad: carrusel con aria-roledescription=&quot;carrusel&quot;, cada slide «1 de 3», sin autoplay (o con pausa visible y parado con prefers-reduced-motion); flechas con nombre «Slide anterior/siguiente». Fondo color/surface/brand. Desktop: texto a la izquierda e imagen a la derecha; Mobile: imagen arriba. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "seal",
+              "component": "Type=Natural",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "cta",
+              "component": "Hierarchy=Primary, Size=L, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "prev",
+              "component": "Hierarchy=Secondary, Size=M, State=Default",
+              "componentSet": "Icon button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / arrow-left",
+              "componentSet": null,
+              "exposedAs": "Icon#33:125",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "next",
+              "component": "Hierarchy=Secondary, Size=M, State=Default",
+              "componentSet": "Icon button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#33:125",
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/48",
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/brand",
+              "color: color/surface/brand",
+              "itemSpacing: space/64",
+              "itemSpacing: space/24",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: badge/natural/bg",
+              "color: badge/natural/bg",
+              "fills: badge/natural/text",
+              "fontSize: font/size/mobile/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/natural/text",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/display",
+              "lineHeight: font/line-height/desktop/display",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "itemSpacing: space/8",
+              "paddingLeft: space/32",
+              "paddingTop: space/24",
+              "paddingRight: space/32",
+              "paddingBottom: space/24",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "fills: color/surface/page",
+              "color: color/surface/page",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: color/text/secondary",
+              "width: space/16",
+              "height: space/16",
+              "strokeWeight: border/width/thin",
+              "strokes: color/border/default",
+              "color: color/border/default",
+              "itemSpacing: space/16",
+              "strokes: button/secondary/border",
+              "color: button/secondary/border",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: button/secondary/text",
+              "color: button/secondary/text"
+            ],
+            "textStyles": [
+              "Mobile/label",
+              "Desktop/display",
+              "Desktop/body-l",
+              "Desktop/label",
+              "Desktop/caption"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Marquee",
+      "id": "89:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Marquee",
+          "name": "Marquee",
+          "type": "COMPONENT_SET",
+          "id": "89:78",
+          "key": "41804e2200f2e3f17589a17f898108556a4e3a3b",
+          "description": "Franja de claim en movimiento horizontal continuo (heredada de las landings): «Welcome to the new noodles era» ✱ «The only 100% natural», en color/text/brand-on-inverse sobre color/surface/inverse (12:1). Se usa entre secciones de la Home, a sangre (sin margen lateral). Accesibilidad: es decorativa y repite el claim del hero, así que va con aria-hidden=&quot;true&quot; y un texto oculto no duplicado; con prefers-reduced-motion se para (texto estático) y tiene botón de pausa si dura más de 5 s (WCAG 2.2.2). Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "paddingTop: space/24",
+              "paddingBottom: space/24",
+              "width: layout/frame",
+              "fills: color/surface/inverse",
+              "color: color/surface/inverse",
+              "itemSpacing: space/32",
+              "fills: color/text/brand-on-inverse",
+              "fontSize: font/size/desktop/h3",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: color/text/brand-on-inverse",
+              "fills: color/text/on-inverse",
+              "color: color/text/on-inverse"
+            ],
+            "textStyles": [
+              "Desktop/h3"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Promo",
+      "id": "91:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Promo",
+          "name": "Promo",
+          "type": "COMPONENT_SET",
+          "id": "91:113",
+          "key": "c30835356fb592621ba20388988656c950b59fe7",
+          "description": "Módulo de promoción o concurso de la Home: Video player 16:9 (fachada) · Badge «Concurso» · título (h2) · texto · Button Primary «Participar» · Link de bases legales (obligatorio). Fondo color/surface/page (crema) para que el póster oscuro del vídeo se distinga; texto color/text/default. Se oculta entero si no hay promoción activa (regla de negocio); si el concurso es iframe de agencia, el CTA lleva external-link y el iframe necesita revisión de protección de datos antes de publicarse. Desktop: vídeo a la izquierda; Mobile: vídeo arriba. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "video",
+              "component": "Ratio=16:9, State=Poster",
+              "componentSet": "Video player",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-play",
+              "component": "Icon / play",
+              "componentSet": null,
+              "exposedAs": "Play icon#83:5",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "badge",
+              "component": "Type=New",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "cta",
+              "component": "Hierarchy=Primary, Size=L, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "rules-link",
+              "component": "Type=Inline, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/page",
+              "color: color/surface/page",
+              "itemSpacing: space/64",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: video/poster-bg",
+              "strokes: video/border",
+              "color: video/poster-bg",
+              "color: video/border",
+              "fills: video/meta-text",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: video/meta-text",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: video/play-bg",
+              "color: video/play-bg",
+              "width: icon/size/lg",
+              "height: icon/size/lg",
+              "strokes: video/play-icon",
+              "color: video/play-icon",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "fills: video/meta-bg",
+              "color: video/meta-bg",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "itemSpacing: space/24",
+              "fills: badge/new/bg",
+              "color: badge/new/bg",
+              "fills: badge/new/text",
+              "fontSize: font/size/mobile/label",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/new/text",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h2",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/body-l",
+              "lineHeight: font/line-height/desktop/body-l",
+              "counterAxisSpacing: space/16",
+              "itemSpacing: space/8",
+              "paddingLeft: space/32",
+              "paddingTop: space/24",
+              "paddingRight: space/32",
+              "paddingBottom: space/24",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text",
+              "fills: link/default",
+              "fontSize: font/size/desktop/body-m",
+              "lineHeight: font/line-height/desktop/body-m",
+              "color: link/default",
+              "strokes: link/default"
+            ],
+            "textStyles": [
+              "Desktop/caption",
+              "Desktop/label",
+              "Mobile/label",
+              "Desktop/h2",
+              "Desktop/body-l",
+              "Desktop/body-m"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Natural formula",
+      "id": "91:657",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Natural formula",
+          "name": "Natural formula",
+          "type": "COMPONENT_SET",
+          "id": "91:704",
+          "key": "28f6f7f9f4d1f9ca9efbdc6c17913332bf299b0b",
+          "description": "Sección de la fórmula natural (Home): título (h2) · texto · 4 claims del pack en display (100 % natural · −20 % sal · −80 % grasas saturadas · 0 aditivos ni conservantes) · Link Standalone Dark a la Natural formula page. Fondo color/surface/natural con texto color/text/on-natural (5,5:1, también en display). Los claims deben coincidir con el envase (restricción regulatoria): no se añaden claims nuevos sin validación de GB Foods. Los claims son una lista (&lt;ul&gt;), no encabezados. Desktop: 4 columnas; Mobile: 2×2. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Dark, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/48",
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/natural",
+              "color: color/surface/natural",
+              "itemSpacing: space/16",
+              "fills: color/text/on-natural",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/on-natural",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "itemSpacing: layout/gutter",
+              "counterAxisSpacing: space/32",
+              "itemSpacing: space/8",
+              "fontSize: font/size/desktop/display",
+              "lineHeight: font/line-height/desktop/display",
+              "fills: link/inverse",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "color: link/inverse",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: link/inverse"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/body-l",
+              "Desktop/display",
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Product carousel",
+      "id": "91:705",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Product carousel",
+          "name": "Product carousel",
+          "type": "COMPONENT_SET",
+          "id": "91:837",
+          "key": "12272bd4c32330984ee62c5ad3e3424bfceb18b4",
+          "description": "Productos de la Home: título (h2) · flechas Icon button (desktop) · Tabs de tipo (Cups / Bags / Sauces; tablist que filtra el carrusel, solo tipos con productos) · carrusel de Product card · Link «Ver todos los productos» a la Product library. Desktop: 4 cards visibles (310 px, gutter layout/gutter). Mobile: scroll horizontal con la siguiente card asomando (pista que comunica que hay más); sin flechas. Accesibilidad: el carrusel es una lista (&lt;ul&gt;) desplazable con teclado; las flechas son &lt;button&gt; con nombre y se desactivan al llegar al final. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "prev",
+              "component": "Hierarchy=Secondary, Size=M, State=Default",
+              "componentSet": "Icon button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / arrow-left",
+              "componentSet": null,
+              "exposedAs": "Icon#33:125",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "next",
+              "component": "Hierarchy=Secondary, Size=M, State=Default",
+              "componentSet": "Icon button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#33:125",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "tab",
+              "component": "State=Selected",
+              "componentSet": "Tab",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "tab",
+              "component": "State=Default",
+              "componentSet": "Tab",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "product-card",
+              "component": "State=Default",
+              "componentSet": "Product card",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "badge",
+              "component": "Type=New",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": "Badge#66:8",
+              "visibleByDefault": true
+            },
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "badge",
+              "component": "Type=New",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": "Badge#66:8",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/32",
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/page",
+              "color: color/surface/page",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/default",
+              "itemSpacing: space/16",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "strokes: button/secondary/border",
+              "color: button/secondary/border",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: button/secondary/text",
+              "color: button/secondary/text",
+              "itemSpacing: space/8",
+              "paddingLeft: space/24",
+              "paddingRight: space/24",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: tab/bg-selected",
+              "strokes: tab/border",
+              "color: tab/bg-selected",
+              "color: tab/border",
+              "fills: tab/text-selected",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "color: tab/text-selected",
+              "fills: tab/bg",
+              "color: tab/bg",
+              "fills: tab/text",
+              "color: tab/text",
+              "itemSpacing: layout/gutter",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "fills: product-card/bg",
+              "strokes: product-card/border",
+              "effects: color/effect/shadow-ink",
+              "color: product-card/bg",
+              "color: product-card/border",
+              "fills: product-card/media-bg",
+              "color: product-card/media-bg",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "fills: badge/new/bg",
+              "color: badge/new/bg",
+              "fills: badge/new/text",
+              "fontSize: font/size/mobile/label",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/new/text",
+              "fills: product-card/meta",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: product-card/meta",
+              "paddingTop: space/24",
+              "paddingBottom: space/24",
+              "fills: product-card/title",
+              "fontSize: font/size/desktop/h3",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: product-card/title",
+              "paddingTop: space/8",
+              "fills: link/default",
+              "color: link/default",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: link/default"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/label",
+              "Mobile/label",
+              "Desktop/caption",
+              "Desktop/h3"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Recipes",
+      "id": "92:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Recipes",
+          "name": "Recipes",
+          "type": "COMPONENT_SET",
+          "id": "92:215",
+          "key": "fb49dc85bcac640a3219e0b712f1c29393dd139a",
+          "description": "Sección de recetas (Home, página de producto con las recetas que lo usan): título (h2) + entradilla · 3 Recipe card · Link «Ver todas las recetas» a la Recipe library. Fondo color/surface/card para alternar con las secciones crema. Desktop: 3 columnas (421 px); Mobile: scroll horizontal con la siguiente card asomando y el enlace debajo. Sin buscador por ingredientes (regla de negocio). Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "recipe-card",
+              "component": "State=Default",
+              "componentSet": "Recipe card",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-time",
+              "component": "Icon / timer",
+              "componentSet": null,
+              "exposedAs": "Time icon#67:8",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "product-chip",
+              "component": "Size=S, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/32",
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/card",
+              "color: color/surface/card",
+              "itemSpacing: space/16",
+              "itemSpacing: space/8",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/default",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "color: color/text/secondary",
+              "fills: link/default",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "color: link/default",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: link/default",
+              "itemSpacing: layout/gutter",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: recipe-card/bg",
+              "strokes: recipe-card/border",
+              "effects: color/effect/shadow-ink",
+              "color: recipe-card/bg",
+              "color: recipe-card/border",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "fills: recipe-card/media-bg",
+              "color: recipe-card/media-bg",
+              "fills: recipe-card/meta",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: recipe-card/meta",
+              "paddingLeft: space/24",
+              "paddingTop: space/24",
+              "paddingRight: space/24",
+              "paddingBottom: space/24",
+              "fills: recipe-card/title",
+              "fontSize: font/size/desktop/h3",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: recipe-card/title",
+              "strokes: recipe-card/meta",
+              "fontSize: font/size/desktop/body-s",
+              "lineHeight: font/line-height/desktop/body-s",
+              "counterAxisSpacing: space/8",
+              "paddingTop: space/8",
+              "paddingBottom: space/8",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "minHeight: chip/height/s",
+              "fills: chip/bg",
+              "strokes: chip/border",
+              "color: chip/bg",
+              "color: chip/border",
+              "strokes: chip/text",
+              "color: chip/text",
+              "fills: chip/text"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/body-l",
+              "Desktop/label",
+              "Desktop/caption",
+              "Desktop/h3",
+              "Desktop/body-s"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Banner",
+      "id": "92:843",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Banner",
+          "name": "Banner",
+          "type": "COMPONENT_SET",
+          "id": "92:884",
+          "key": "72865521a6dda59926e98e33656d07b8716406c8",
+          "description": "Banner promocional de la Home (lanzamiento, sabor nuevo, mensaje de campaña): bloque color/surface/accent (naranja de marca) con borde de tinta, radius/lg y elevation/2 (sombra dura de marca) · titular (h1) · texto · Button Primary · imagen de marca. Sobre el acento solo va color/text/default (regla del token). Desktop: texto a la izquierda; Mobile: texto arriba e imagen debajo. No es un carrusel. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "cta",
+              "component": "Hierarchy=Primary, Size=L, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/page",
+              "color: color/surface/page",
+              "itemSpacing: space/48",
+              "paddingLeft: space/48",
+              "paddingTop: space/48",
+              "paddingRight: space/48",
+              "paddingBottom: space/48",
+              "topLeftRadius: radius/lg",
+              "topRightRadius: radius/lg",
+              "bottomLeftRadius: radius/lg",
+              "bottomRightRadius: radius/lg",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: color/surface/accent",
+              "strokes: color/border/default",
+              "effects: color/effect/shadow-ink",
+              "color: color/surface/accent",
+              "color: color/border/default",
+              "itemSpacing: space/24",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h1",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h1",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "itemSpacing: space/8",
+              "paddingLeft: space/32",
+              "paddingTop: space/24",
+              "paddingRight: space/32",
+              "paddingBottom: space/24",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: color/text/secondary"
+            ],
+            "textStyles": [
+              "Desktop/h1",
+              "Desktop/body-l",
+              "Desktop/label",
+              "Desktop/caption"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / FAQ",
+      "id": "92:885",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / FAQ",
+          "name": "FAQ",
+          "type": "COMPONENT_SET",
+          "id": "92:960",
+          "key": "d6393b085d0e5c126d1891ef1a1477660af75433",
+          "description": "Bloque de FAQ (Home, Natural formula con su FAQ propio, página FAQS indexada): título (h2) + entradilla + Link «Ver todas las preguntas» · lista de Accordion item (space/16 entre ítems; el primero puede ir abierto). En la página FAQS se repite por categorías sin el enlace. SEO/AEO: las respuestas están en el HTML y la página lleva datos estructurados FAQPage. Desktop: cabecera a la izquierda (400 px) y lista a la derecha; Mobile: apilado. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "accordion-item",
+              "component": "Expanded=True, State=Default",
+              "componentSet": "Accordion item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-expanded",
+              "component": "Icon / minus",
+              "componentSet": null,
+              "exposedAs": "Icon expanded#69:21",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "accordion-item",
+              "component": "Expanded=False, State=Default",
+              "componentSet": "Accordion item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-collapsed",
+              "component": "Icon / plus",
+              "componentSet": null,
+              "exposedAs": "Icon collapsed#69:14",
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/page",
+              "color: color/surface/page",
+              "itemSpacing: space/64",
+              "itemSpacing: space/16",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/default",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "color: color/text/secondary",
+              "itemSpacing: space/8",
+              "fills: link/default",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "color: link/default",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: link/default",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: accordion/bg",
+              "strokes: accordion/border",
+              "color: accordion/bg",
+              "color: accordion/border",
+              "paddingLeft: space/24",
+              "paddingTop: space/24",
+              "paddingRight: space/24",
+              "paddingBottom: space/24",
+              "fills: accordion/question",
+              "color: accordion/question",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: accordion/icon",
+              "color: accordion/icon",
+              "fills: accordion/answer",
+              "fontSize: font/size/desktop/body-m",
+              "lineHeight: font/line-height/desktop/body-m",
+              "color: accordion/answer"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/body-l",
+              "Desktop/label",
+              "Desktop/body-m"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Where to buy",
+      "id": "92:961",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Where to buy",
+          "name": "Where to buy",
+          "type": "COMPONENT_SET",
+          "id": "92:990",
+          "key": "433379b602c8052033bb1bac0d338039b7e8a2b0",
+          "description": "Dónde comprar (Home, página de producto; destino del CTA «Dónde comprar» de la Navbar): título (h2) · texto · rejilla de distribuidores del país. Cada distribuidor es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; tarjeta color/surface/card con borde de tinta sobre color/surface/brand. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: 5 por fila; Mobile: 2 por fila. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/32",
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/brand",
+              "color: color/surface/brand",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "itemSpacing: layout/gutter",
+              "counterAxisSpacing: layout/gutter",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: color/surface/card",
+              "strokes: color/border/default",
+              "color: color/surface/card",
+              "color: color/border/default",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: color/text/secondary"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/body-l",
+              "Desktop/caption"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Product hero",
+      "id": "93:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Product hero",
+          "name": "Product hero",
+          "type": "COMPONENT_SET",
+          "id": "93:154",
+          "key": "92ba52b192b524722c008504e30c3430a127489a",
+          "description": "Cabecera de la página de producto: galería (imagen 3D principal —la «girosu» en Cups— e interior; miniaturas como botones, la seleccionada con borde grueso y aria-current) · Badge New/Natural · tipo y línea · nombre (h1) · descripción · highlights con check en color/text/natural (lista &lt;ul&gt;) · Button «Dónde comprar» (lleva a Where to buy) y Link «Ver ingredientes» (ancla a Product details). Las imágenes son las de marca, nunca generadas con IA. Desktop: galería a la izquierda; Mobile: galería arriba. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "badge-new",
+              "component": "Type=New",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "badge-natural",
+              "component": "Type=Natural",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-check",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "cta",
+              "component": "Hierarchy=Primary, Size=L, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/page",
+              "color: color/surface/page",
+              "itemSpacing: space/64",
+              "itemSpacing: space/16",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: color/surface/card",
+              "strokes: color/border/default",
+              "color: color/surface/card",
+              "color: color/border/default",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: color/text/secondary",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "itemSpacing: space/24",
+              "itemSpacing: space/8",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: badge/new/bg",
+              "color: badge/new/bg",
+              "fills: badge/new/text",
+              "fontSize: font/size/mobile/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/new/text",
+              "fills: badge/natural/bg",
+              "color: badge/natural/bg",
+              "fills: badge/natural/text",
+              "color: badge/natural/text",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h1",
+              "lineHeight: font/line-height/desktop/h1",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/body-l",
+              "lineHeight: font/line-height/desktop/body-l",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: color/text/natural",
+              "color: color/text/natural",
+              "counterAxisSpacing: space/16",
+              "paddingLeft: space/32",
+              "paddingTop: space/24",
+              "paddingRight: space/32",
+              "paddingBottom: space/24",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "fills: link/default",
+              "color: link/default",
+              "strokes: link/default"
+            ],
+            "textStyles": [
+              "Desktop/caption",
+              "Mobile/label",
+              "Desktop/h1",
+              "Desktop/body-l",
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Product details",
+      "id": "94:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Product details",
+          "name": "Product details",
+          "type": "COMPONENT_SET",
+          "id": "94:329",
+          "key": "cd2e86ee82d6c917a9fae7407ee52cd96b557eed",
+          "description": "Sección de ingredientes y nutrición (página de producto; en la receta se usa con los valores de la receta): título (h2) · Ingredients (lista jerarquizada, alérgenos en negrita, Link «Ver etiqueta del envase» que abre Modal L con la imagen de la etiqueta) · Nutrition panel (barras proporcionales al % IR, alérgenos y nota de validación). Ancla destino de «Ver ingredientes» del Product hero. Desktop: dos columnas iguales; Mobile: ingredientes y después nutrición. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "ingredients",
+              "component": "Ingredients",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "ingredient-main",
+              "component": "Level=Main",
+              "componentSet": "Ingredient item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "ingredient-secondary",
+              "component": "Level=Secondary",
+              "componentSet": "Ingredient item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "label-link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nutrition-panel",
+              "component": "Nutrition panel",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nutrition-bar",
+              "component": "Highlight=False",
+              "componentSet": "Nutrition bar",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nutrition-bar",
+              "component": "Highlight=True",
+              "componentSet": "Nutrition bar",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "claim",
+              "component": "Type=Natural",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/48",
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/card",
+              "color: color/surface/card",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/default",
+              "itemSpacing: space/64",
+              "itemSpacing: space/16",
+              "fills: ingredient/text",
+              "fontSize: font/size/desktop/h3",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: ingredient/text",
+              "paddingTop: space/16",
+              "paddingBottom: space/16",
+              "strokeBottomWeight: border/width/thin",
+              "strokes: ingredient/divider",
+              "color: ingredient/divider",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "textRangeFills: ingredient/text",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: ingredient/percent-bg",
+              "color: ingredient/percent-bg",
+              "fills: ingredient/percent-text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "color: ingredient/percent-text",
+              "fontSize: font/size/desktop/body-m",
+              "lineHeight: font/line-height/desktop/body-m",
+              "fills: ingredient/meta",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: ingredient/meta",
+              "itemSpacing: space/8",
+              "fills: link/default",
+              "color: link/default",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: link/default",
+              "itemSpacing: space/24",
+              "paddingLeft: space/32",
+              "paddingTop: space/32",
+              "paddingRight: space/32",
+              "paddingBottom: space/32",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: nutrition/bg",
+              "strokes: nutrition/border",
+              "color: nutrition/bg",
+              "color: nutrition/border",
+              "fills: nutrition/label",
+              "color: nutrition/label",
+              "fills: nutrition/meta",
+              "color: nutrition/meta",
+              "counterAxisSpacing: space/4",
+              "fills: nutrition/value",
+              "color: nutrition/value",
+              "height: space/8",
+              "fills: nutrition/track",
+              "color: nutrition/track",
+              "fills: nutrition/fill",
+              "color: nutrition/fill",
+              "fills: badge/natural/bg",
+              "color: badge/natural/bg",
+              "fills: badge/natural/text",
+              "fontSize: font/size/mobile/label",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/natural/text",
+              "fills: nutrition/fill-highlight",
+              "color: nutrition/fill-highlight",
+              "fills: nutrition/allergen",
+              "textRangeFills: nutrition/allergen",
+              "color: nutrition/allergen"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/h3",
+              "Desktop/label",
+              "Desktop/caption",
+              "Desktop/body-m",
+              "Mobile/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Preparation",
+      "id": "95:1077",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Preparation",
+          "name": "Preparation",
+          "type": "COMPONENT_SET",
+          "id": "95:1158",
+          "key": "61aca79da0059db4a6979d5a5b6cacc96282cf8c",
+          "description": "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en &lt;ol&gt; · Timer de 3 minutos. El texto de los pasos sale del envase. Desktop: pasos a la izquierda; vídeo y temporizador a la derecha (560 px). Mobile: vídeo arriba, pasos y temporizador al final (al alcance mientras se cocina). En la Recipe page se reutiliza sin el Timer y con Step Media=True. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "step",
+              "component": "Media=False",
+              "componentSet": "Step",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "video",
+              "component": "Ratio=16:9, State=Poster",
+              "componentSet": "Video player",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-play",
+              "component": "Icon / play",
+              "componentSet": null,
+              "exposedAs": "Play icon#83:5",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "timer",
+              "component": "State=Idle",
+              "componentSet": "Timer",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "action",
+              "component": "Hierarchy=Primary, Size=M, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / play",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/48",
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/page",
+              "color: color/surface/page",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/default",
+              "itemSpacing: space/64",
+              "itemSpacing: space/32",
+              "itemSpacing: space/24",
+              "width: space/56",
+              "height: space/56",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: step/number-bg",
+              "strokes: step/border",
+              "color: step/number-bg",
+              "color: step/border",
+              "fills: step/number-text",
+              "fontSize: font/size/desktop/h3",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: step/number-text",
+              "itemSpacing: space/16",
+              "paddingTop: space/8",
+              "fills: step/text",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "color: step/text",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "fills: video/poster-bg",
+              "strokes: video/border",
+              "color: video/poster-bg",
+              "color: video/border",
+              "fills: video/meta-text",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: video/meta-text",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: video/play-bg",
+              "color: video/play-bg",
+              "width: icon/size/lg",
+              "height: icon/size/lg",
+              "strokes: video/play-icon",
+              "color: video/play-icon",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "fills: video/meta-bg",
+              "color: video/meta-bg",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "paddingLeft: space/32",
+              "paddingTop: space/32",
+              "paddingRight: space/32",
+              "paddingBottom: space/32",
+              "fills: timer/bg",
+              "strokes: timer/border",
+              "color: timer/bg",
+              "color: timer/border",
+              "itemSpacing: space/4",
+              "fills: timer/track",
+              "color: timer/track",
+              "fills: timer/progress",
+              "color: timer/progress",
+              "fills: timer/time",
+              "color: timer/time",
+              "fills: timer/label",
+              "color: timer/label",
+              "itemSpacing: space/8",
+              "paddingLeft: space/24",
+              "paddingTop: space/16",
+              "paddingRight: space/24",
+              "paddingBottom: space/16",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/h3",
+              "Desktop/body-l",
+              "Desktop/caption",
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Recipe hero",
+      "id": "96:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Recipe hero",
+          "name": "Recipe hero",
+          "type": "COMPONENT_SET",
+          "id": "96:113",
+          "key": "3a0e1db0e31dd19939513d4571be367b9c29a29f",
+          "description": "Cabecera de la página de receta: kicker «Receta» · título (h1) · tiempo (timer) y dificultad · descripción · productos usados como Chip M (enlazan a la ficha de producto; lista &lt;ul&gt;) · imagen principal de marca (sin vídeo al principio, regla de negocio). Fondo color/surface/brand. Después van Product details (ingredientes y nutrición de la receta) y Preparation sin Timer con Step Media=True. Desktop: texto a la izquierda; Mobile: imagen arriba. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon",
+              "component": "Icon / timer",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / circle-check",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "product-chip",
+              "component": "Size=M, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/brand",
+              "color: color/surface/brand",
+              "itemSpacing: space/64",
+              "itemSpacing: space/24",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/h1",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h1",
+              "itemSpacing: space/8",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: color/text/default",
+              "fontSize: font/size/desktop/body-l",
+              "lineHeight: font/line-height/desktop/body-l",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "counterAxisSpacing: space/8",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "minHeight: chip/height/m",
+              "fills: chip/bg",
+              "strokes: chip/border",
+              "color: chip/bg",
+              "color: chip/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: chip/text",
+              "color: chip/text",
+              "fills: chip/text",
+              "fontSize: font/size/desktop/body-s",
+              "lineHeight: font/line-height/desktop/body-s",
+              "paddingTop: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "fills: color/surface/page",
+              "strokes: color/border/default",
+              "color: color/surface/page",
+              "color: color/border/default",
+              "fills: color/text/secondary",
+              "color: color/text/secondary"
+            ],
+            "textStyles": [
+              "Desktop/caption",
+              "Desktop/h1",
+              "Desktop/body-l",
+              "Desktop/label",
+              "Desktop/body-s"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Library",
+      "id": "96:1200",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Library",
+          "name": "Library",
+          "type": "COMPONENT_SET",
+          "id": "96:1453",
+          "key": "ab05e99d4f06fba281184c63c10655ed03bb159c",
+          "description": "Librería (Product library; también Recipe y Contest library cambiando la card y el filtro): cabecera de página (h1 + entradilla) · Product filter a sangre (tipo → línea → sabor; sin filtros que den resultados vacíos) · rejilla de cards (Desktop 4 columnas de 310 px con gutter layout/gutter y space/48 entre filas; Mobile 1 columna) · Button Secondary «Ver más» (carga más, no pagina; el foco va a la primera card nueva y se anuncia el número cargado). Recipe library: Recipe card en 3 columnas sin buscador por ingredientes. Contest library: Contest card en 2-3 columnas; la página agregadora es opcional. Al filtrar se anuncia «N productos» (aria-live). Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "filter",
+              "component": "Breakpoint=Desktop",
+              "componentSet": "Product filter",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "tab",
+              "component": "State=Selected",
+              "componentSet": "Tab",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "tab",
+              "component": "State=Default",
+              "componentSet": "Tab",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "chip",
+              "component": "Size=S, State=Selected",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "chip",
+              "component": "Size=S, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "product-card",
+              "component": "State=Default",
+              "componentSet": "Product card",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "badge",
+              "component": "Type=New",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": "Badge#66:8",
+              "visibleByDefault": true
+            },
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "badge",
+              "component": "Type=New",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": "Badge#66:8",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "load-more",
+              "component": "Hierarchy=Secondary, Size=M, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/32",
+              "paddingTop: layout/section-y",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/page",
+              "color: color/surface/page",
+              "itemSpacing: space/16",
+              "paddingLeft: layout/margin",
+              "paddingRight: layout/margin",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h1",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h1",
+              "color: color/text/default",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "color: color/text/secondary",
+              "itemSpacing: space/24",
+              "paddingTop: space/24",
+              "paddingBottom: space/24",
+              "itemSpacing: space/8",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "counterAxisSpacing: space/8",
+              "paddingLeft: space/24",
+              "paddingTop: space/16",
+              "paddingRight: space/24",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: tab/bg-selected",
+              "strokes: tab/border",
+              "color: tab/bg-selected",
+              "color: tab/border",
+              "fills: tab/text-selected",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "color: tab/text-selected",
+              "fills: tab/bg",
+              "color: tab/bg",
+              "fills: tab/text",
+              "color: tab/text",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "minHeight: chip/height/s",
+              "fills: chip/bg-selected",
+              "strokes: chip/border",
+              "color: chip/bg-selected",
+              "color: chip/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: chip/text-selected",
+              "color: chip/text-selected",
+              "fills: chip/text-selected",
+              "fontSize: font/size/desktop/body-s",
+              "lineHeight: font/line-height/desktop/body-s",
+              "fills: chip/bg",
+              "color: chip/bg",
+              "strokes: chip/text",
+              "color: chip/text",
+              "fills: chip/text",
+              "itemSpacing: layout/gutter",
+              "counterAxisSpacing: space/48",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "fills: product-card/bg",
+              "strokes: product-card/border",
+              "effects: color/effect/shadow-ink",
+              "color: product-card/bg",
+              "color: product-card/border",
+              "fills: product-card/media-bg",
+              "color: product-card/media-bg",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "fills: badge/new/bg",
+              "color: badge/new/bg",
+              "fills: badge/new/text",
+              "fontSize: font/size/mobile/label",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/new/text",
+              "fills: product-card/meta",
+              "color: product-card/meta",
+              "fills: product-card/title",
+              "fontSize: font/size/desktop/h3",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: product-card/title",
+              "fills: link/default",
+              "color: link/default",
+              "strokes: link/default",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "strokes: button/secondary/border",
+              "color: button/secondary/border",
+              "strokes: button/secondary/text",
+              "color: button/secondary/text",
+              "fills: button/secondary/text"
+            ],
+            "textStyles": [
+              "Desktop/h1",
+              "Desktop/body-l",
+              "Desktop/caption",
+              "Desktop/label",
+              "Desktop/body-s",
+              "Mobile/label",
+              "Desktop/h3"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
     }
   ],
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
-  "readAt": "2026-10-07T15:14:56.155Z"
+  "readAt": "2026-10-07T17:08:14.189Z"
 }

@@ -6,7 +6,7 @@
     "slug": "contest-card",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T15:16:17Z",
+    "lastSync": "2026-10-07T17:09:12Z",
     "description": "Card de concurso (Contest library, módulo de Home). Status=Active: Badge Natural «En curso» y Button Primary «Participar» (si el concurso es externo o iframe de agencia, activar Icon trailing con external-link y abrir en pestaña nueva avisándolo). Status=Closed: Badge Neutral «Finalizado» y Link «Ver ganadores». Las bases legales (Link inline) aparecen siempre: es obligatorio publicarlas. La card no es enlace en bloque: tiene dos acciones. Desktop 448 px; en móvil FILL.",
     "figmaPage": "Contest card",
     "figmaType": "COMPONENT_SET",

@@ -1,0 +1,131 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:marquee",
+  "meta": {
+    "name": "Marquee",
+    "slug": "marquee",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T17:09:12Z",
+    "description": "Franja de claim en movimiento horizontal continuo (heredada de las landings): «Welcome to the new noodles era» ✱ «The only 100% natural», en color/text/brand-on-inverse sobre color/surface/inverse (12:1). Se usa entre secciones de la Home, a sangre (sin margen lateral). Accesibilidad: es decorativa y repite el claim del hero, así que va con aria-hidden=&quot;true&quot; y un texto oculto no duplicado; con prefers-reduced-motion se para (texto estático) y tiene botón de pausa si dura más de 5 s (WCAG 2.2.2). Sin variables propias.",
+    "figmaPage": "Pattern / Marquee",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "9ef807214d12"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/patterns/marquee.md",
+      "section": "Marquee"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "89:78",
+      "componentKey": "41804e2200f2e3f17589a17f898108556a4e3a3b"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Breakpoint",
+        "kind": "VARIANT",
+        "default": "Desktop",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ]
+      }
+    ],
+    "variants": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "states": [],
+    "defaults": {
+      "Breakpoint": "Desktop"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "color/surface/inverse",
+      "color/text/brand-on-inverse",
+      "color/text/on-inverse",
+      "font/family/display",
+      "font/line-height/desktop/h3",
+      "font/size/desktop/h3",
+      "font/style/display",
+      "layout/frame",
+      "space/24",
+      "space/32"
+    ],
+    "variablesUsed": [
+      "paddingTop: space/24",
+      "paddingBottom: space/24",
+      "width: layout/frame",
+      "fills: color/surface/inverse",
+      "color: color/surface/inverse",
+      "itemSpacing: space/32",
+      "fills: color/text/brand-on-inverse",
+      "fontSize: font/size/desktop/h3",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: color/text/brand-on-inverse",
+      "fills: color/text/on-inverse",
+      "color: color/text/on-inverse"
+    ],
+    "textStyles": [
+      "Desktop/h3"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "color/surface/inverse",
+        "color/text/brand-on-inverse",
+        "color/text/on-inverse",
+        "font/family/display",
+        "font/line-height/desktop/h3",
+        "font/size/desktop/h3",
+        "font/style/display"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [],
+    "related": []
+  }
+}

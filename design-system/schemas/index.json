@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-07T15:16:17Z",
+  "lastSync": "2026-10-07T17:09:12Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -1485,10 +1485,399 @@
         "path": "design-system/css/components.css",
         "classes": []
       }
+    },
+    {
+      "id": "pattern:hero",
+      "name": "Hero",
+      "slug": "hero",
+      "kind": "pattern",
+      "contractPath": "./components/hero.schema.json",
+      "keywords": [
+        "hero",
+        "icon"
+      ],
+      "dependencies": [
+        "badge",
+        "button",
+        "icon-arrow-left",
+        "icon-arrow-right",
+        "icon-button"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "88:132",
+        "componentKey": "fcee0ddc73afc1a3fb701081c9a6645a910b1611"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:marquee",
+      "name": "Marquee",
+      "slug": "marquee",
+      "kind": "pattern",
+      "contractPath": "./components/marquee.schema.json",
+      "keywords": [
+        "marquee"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "89:78",
+        "componentKey": "41804e2200f2e3f17589a17f898108556a4e3a3b"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:promo",
+      "name": "Promo",
+      "slug": "promo",
+      "kind": "pattern",
+      "contractPath": "./components/promo.schema.json",
+      "keywords": [
+        "icon",
+        "promo"
+      ],
+      "dependencies": [
+        "badge",
+        "button",
+        "icon-arrow-right",
+        "icon-play",
+        "link",
+        "video-player"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "91:113",
+        "componentKey": "c30835356fb592621ba20388988656c950b59fe7"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:natural-formula",
+      "name": "Natural formula",
+      "slug": "natural-formula",
+      "kind": "pattern",
+      "contractPath": "./components/natural-formula.schema.json",
+      "keywords": [
+        "formula",
+        "icon",
+        "natural"
+      ],
+      "dependencies": [
+        "icon-arrow-right",
+        "link"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "91:704",
+        "componentKey": "28f6f7f9f4d1f9ca9efbdc6c17913332bf299b0b"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:product-carousel",
+      "name": "Product carousel",
+      "slug": "product-carousel",
+      "kind": "pattern",
+      "contractPath": "./components/product-carousel.schema.json",
+      "keywords": [
+        "carousel",
+        "icon",
+        "product"
+      ],
+      "dependencies": [
+        "badge",
+        "icon-arrow-left",
+        "icon-arrow-right",
+        "icon-button",
+        "link",
+        "product-card",
+        "tab"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "91:837",
+        "componentKey": "12272bd4c32330984ee62c5ad3e3424bfceb18b4"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:recipes",
+      "name": "Recipes",
+      "slug": "recipes",
+      "kind": "pattern",
+      "contractPath": "./components/recipes.schema.json",
+      "keywords": [
+        "icon",
+        "recipes"
+      ],
+      "dependencies": [
+        "chip",
+        "icon-arrow-right",
+        "icon-check",
+        "icon-timer",
+        "link",
+        "recipe-card"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "92:215",
+        "componentKey": "fb49dc85bcac640a3219e0b712f1c29393dd139a"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:banner",
+      "name": "Banner",
+      "slug": "banner",
+      "kind": "pattern",
+      "contractPath": "./components/banner.schema.json",
+      "keywords": [
+        "banner",
+        "icon"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "92:884",
+        "componentKey": "72865521a6dda59926e98e33656d07b8716406c8"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:faq",
+      "name": "FAQ",
+      "slug": "faq",
+      "kind": "pattern",
+      "contractPath": "./components/faq.schema.json",
+      "keywords": [
+        "faq",
+        "icon"
+      ],
+      "dependencies": [
+        "accordion-item",
+        "icon-arrow-right",
+        "icon-minus",
+        "icon-plus",
+        "link"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "92:960",
+        "componentKey": "d6393b085d0e5c126d1891ef1a1477660af75433"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:where-to-buy",
+      "name": "Where to buy",
+      "slug": "where-to-buy",
+      "kind": "pattern",
+      "contractPath": "./components/where-to-buy.schema.json",
+      "keywords": [
+        "buy",
+        "to",
+        "where"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "92:990",
+        "componentKey": "433379b602c8052033bb1bac0d338039b7e8a2b0"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:product-hero",
+      "name": "Product hero",
+      "slug": "product-hero",
+      "kind": "pattern",
+      "contractPath": "./components/product-hero.schema.json",
+      "keywords": [
+        "hero",
+        "icon",
+        "product"
+      ],
+      "dependencies": [
+        "badge",
+        "button",
+        "icon-arrow-right",
+        "icon-check",
+        "link"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "93:154",
+        "componentKey": "92ba52b192b524722c008504e30c3430a127489a"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:product-details",
+      "name": "Product details",
+      "slug": "product-details",
+      "kind": "pattern",
+      "contractPath": "./components/product-details.schema.json",
+      "keywords": [
+        "details",
+        "icon",
+        "product"
+      ],
+      "dependencies": [
+        "badge",
+        "icon-arrow-right",
+        "ingredient-item",
+        "ingredients",
+        "link",
+        "nutrition-bar",
+        "nutrition-panel"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "94:329",
+        "componentKey": "cd2e86ee82d6c917a9fae7407ee52cd96b557eed"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:preparation",
+      "name": "Preparation",
+      "slug": "preparation",
+      "kind": "pattern",
+      "contractPath": "./components/preparation.schema.json",
+      "keywords": [
+        "icon",
+        "preparation"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right",
+        "icon-play",
+        "step",
+        "timer",
+        "video-player"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "95:1158",
+        "componentKey": "61aca79da0059db4a6979d5a5b6cacc96282cf8c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:recipe-hero",
+      "name": "Recipe hero",
+      "slug": "recipe-hero",
+      "kind": "pattern",
+      "contractPath": "./components/recipe-hero.schema.json",
+      "keywords": [
+        "hero",
+        "icon",
+        "recipe"
+      ],
+      "dependencies": [
+        "chip",
+        "icon-check",
+        "icon-circle-check",
+        "icon-timer"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "96:113",
+        "componentKey": "3a0e1db0e31dd19939513d4571be367b9c29a29f"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:library",
+      "name": "Library",
+      "slug": "library",
+      "kind": "pattern",
+      "contractPath": "./components/library.schema.json",
+      "keywords": [
+        "icon",
+        "library"
+      ],
+      "dependencies": [
+        "badge",
+        "button",
+        "chip",
+        "icon-arrow-right",
+        "icon-check",
+        "link",
+        "product-card",
+        "product-filter",
+        "tab"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "96:1453",
+        "componentKey": "ab05e99d4f06fba281184c63c10655ed03bb159c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
     }
   ],
   "counts": {
     "atoms": 57,
-    "patterns": 4
+    "patterns": 18
   }
 }

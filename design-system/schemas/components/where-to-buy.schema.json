@@ -1,0 +1,175 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:where-to-buy",
+  "meta": {
+    "name": "Where to buy",
+    "slug": "where-to-buy",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T17:09:12Z",
+    "description": "Dónde comprar (Home, página de producto; destino del CTA «Dónde comprar» de la Navbar): título (h2) · texto · rejilla de distribuidores del país. Cada distribuidor es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; tarjeta color/surface/card con borde de tinta sobre color/surface/brand. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: 5 por fila; Mobile: 2 por fila. Sin variables propias.",
+    "figmaPage": "Pattern / Where to buy",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "359fd1b81072"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/patterns/where-to-buy.md",
+      "section": "Where to buy"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "92:990",
+      "componentKey": "433379b602c8052033bb1bac0d338039b7e8a2b0"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Breakpoint",
+        "kind": "VARIANT",
+        "default": "Desktop",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ]
+      }
+    ],
+    "variants": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "states": [],
+    "defaults": {
+      "Breakpoint": "Desktop"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "border/width/thin",
+      "color/border/default",
+      "color/surface/brand",
+      "color/surface/card",
+      "color/text/default",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h2",
+      "font/size/desktop/body-l",
+      "font/size/desktop/caption",
+      "font/size/desktop/h2",
+      "font/style/body",
+      "font/style/display",
+      "layout/frame",
+      "layout/gutter",
+      "layout/margin",
+      "layout/section-y",
+      "radius/md",
+      "space/32"
+    ],
+    "variablesUsed": [
+      "itemSpacing: space/32",
+      "paddingLeft: layout/margin",
+      "paddingTop: layout/section-y",
+      "paddingRight: layout/margin",
+      "paddingBottom: layout/section-y",
+      "width: layout/frame",
+      "fills: color/surface/brand",
+      "color: color/surface/brand",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h2",
+      "color: color/text/default",
+      "fontSize: font/size/desktop/body-l",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-l",
+      "itemSpacing: layout/gutter",
+      "counterAxisSpacing: layout/gutter",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: color/surface/card",
+      "strokes: color/border/default",
+      "color: color/surface/card",
+      "color: color/border/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: color/text/secondary"
+    ],
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-l",
+      "Desktop/caption"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "color/border/default",
+        "color/surface/brand",
+        "color/surface/card",
+        "color/text/default",
+        "color/text/secondary",
+        "font/family/body",
+        "font/family/display",
+        "font/line-height/desktop/body-l",
+        "font/line-height/desktop/caption",
+        "font/line-height/desktop/h2",
+        "font/size/desktop/body-l",
+        "font/size/desktop/caption",
+        "font/size/desktop/h2",
+        "font/style/body",
+        "font/style/display"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [],
+    "related": []
+  }
+}

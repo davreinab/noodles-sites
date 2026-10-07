@@ -1,7 +1,7 @@
-### Icon / info   ⚙️ synced: 2026-10-07T15:16:17Z
+### Icon / info   ⚙️ synced: 2026-10-07T17:09:12Z
 
 <!-- ⚙️ GENERATED:start:icon-info -->
-- **Figma:** `76:61` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T15:16:17Z
+- **Figma:** `76:61` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T17:09:12Z
 - **Descripción (Figma):** Información: Alert y Toast de tipo Info. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

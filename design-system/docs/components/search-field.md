@@ -1,7 +1,7 @@
-### Search field   ⚙️ synced: 2026-10-07T15:16:17Z
+### Search field   ⚙️ synced: 2026-10-07T17:09:12Z
 
 <!-- ⚙️ GENERATED:start:search-field -->
-- **Figma:** `48:177` · página «Search field» · COMPONENT_SET · 4 variantes · última sync 2026-10-07T15:16:17Z
+- **Figma:** `48:177` · página «Search field» · COMPONENT_SET · 4 variantes · última sync 2026-10-07T17:09:12Z
 - **Descripción (Figma):** Campo de búsqueda (resultados en modal). Sin etiqueta visible: requiere aria-label («Buscar») y role=&quot;search&quot; en el formulario. Lupa delante; con texto aparece el botón borrar (aria-label «Borrar búsqueda»). Forma pill para distinguirlo de los campos de formulario. El valor se edita en la instancia.
 - **Anatomía:** `icon-search` → Icon / search, `icon-clear` → Icon / close
 - **State:** Default, Hover, Focus, Filled

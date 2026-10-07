@@ -1,5 +1,8 @@
 {
-  "breakpoints": [],
+  "breakpoints": [
+    768,
+    1024
+  ],
   "allow": {
     "lines": []
   }

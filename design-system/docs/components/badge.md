@@ -1,7 +1,7 @@
-### Badge   ⚙️ synced: 2026-10-07T15:16:17Z
+### Badge   ⚙️ synced: 2026-10-07T17:09:12Z
 
 <!-- ⚙️ GENERATED:start:badge -->
-- **Figma:** `35:167` · página «Badge» · COMPONENT_SET · 3 variantes · última sync 2026-10-07T15:16:17Z
+- **Figma:** `35:167` · página «Badge» · COMPONENT_SET · 3 variantes · última sync 2026-10-07T17:09:12Z
 - **Descripción (Figma):** Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). No es interactivo; no usar como botón.
 - **Anatomía:** sin instancias anidadas
 - **Type:** New, Natural, Neutral

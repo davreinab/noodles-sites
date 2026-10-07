@@ -1,6 +1,6 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": "2026-10-07T15:16:17Z",
+  "generatedAt": "2026-10-07T17:09:12Z",
   "adoptionMode": "new",
   "sourcesCompared": [
     "figma",
@@ -12,7 +12,7 @@
   ],
   "summary": {
     "critical": 0,
-    "warning": 63,
+    "warning": 80,
     "info": 11
   },
   "findings": [
@@ -385,6 +385,91 @@
       "severity": "warning",
       "check": "code-example-missing-or-stale",
       "detail": "Footer: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Hero: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Marquee: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Promo: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Natural formula: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Product carousel: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Recipes: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Banner: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "FAQ: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Where to buy: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Product hero: capa «icon-check» (Icon / check) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Product hero: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Product details: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Preparation: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Recipe hero: capa «icon» (Icon / timer) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Recipe hero: capa «icon» (Icon / circle-check) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Recipe hero: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Library: sin «Ejemplo de código» (source.code.example)"
     }
   ],
   "acceptedStructuralDifferences": [],

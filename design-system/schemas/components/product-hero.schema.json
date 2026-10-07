@@ -1,0 +1,339 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:product-hero",
+  "meta": {
+    "name": "Product hero",
+    "slug": "product-hero",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T17:09:12Z",
+    "description": "Cabecera de la página de producto: galería (imagen 3D principal —la «girosu» en Cups— e interior; miniaturas como botones, la seleccionada con borde grueso y aria-current) · Badge New/Natural · tipo y línea · nombre (h1) · descripción · highlights con check en color/text/natural (lista &lt;ul&gt;) · Button «Dónde comprar» (lleva a Where to buy) y Link «Ver ingredientes» (ancla a Product details). Las imágenes son las de marca, nunca generadas con IA. Desktop: galería a la izquierda; Mobile: galería arriba. Sin variables propias.",
+    "figmaPage": "Pattern / Product hero",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "4020cfd96191"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/patterns/product-hero.md",
+      "section": "Product hero"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "93:154",
+      "componentKey": "92ba52b192b524722c008504e30c3430a127489a"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Breakpoint",
+        "kind": "VARIANT",
+        "default": "Desktop",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ]
+      }
+    ],
+    "variants": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "states": [],
+    "defaults": {
+      "Breakpoint": "Desktop"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "badge-new",
+        "component": "Type=New",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "badge-natural",
+        "component": "Type=Natural",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-check",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "cta",
+        "component": "Hierarchy=Primary, Size=L, State=Default",
+        "componentSlug": "button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "toggledBy": "Icon leading#33:25",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "toggledBy": "Icon trailing#33:50",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "link",
+        "component": "Type=Standalone, Surface=Light, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": [
+        "icon-check"
+      ]
+    },
+    "slots": [],
+    "tokensUsed": [
+      "badge/natural/bg",
+      "badge/natural/text",
+      "badge/new/bg",
+      "badge/new/text",
+      "border/width/thick",
+      "border/width/thin",
+      "button/primary/bg",
+      "button/primary/border",
+      "button/primary/text",
+      "color/border/default",
+      "color/surface/card",
+      "color/surface/page",
+      "color/text/default",
+      "color/text/natural",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h1",
+      "font/line-height/desktop/label",
+      "font/line-height/mobile/label",
+      "font/size/desktop/body-l",
+      "font/size/desktop/caption",
+      "font/size/desktop/h1",
+      "font/size/desktop/label",
+      "font/size/mobile/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/md",
+      "icon/size/sm",
+      "layout/frame",
+      "layout/margin",
+      "layout/section-y",
+      "link/default",
+      "radius/md",
+      "radius/pill",
+      "radius/sm",
+      "space/16",
+      "space/24",
+      "space/32",
+      "space/4",
+      "space/64",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "paddingLeft: layout/margin",
+      "paddingTop: layout/section-y",
+      "paddingRight: layout/margin",
+      "paddingBottom: layout/section-y",
+      "width: layout/frame",
+      "fills: color/surface/page",
+      "color: color/surface/page",
+      "itemSpacing: space/64",
+      "itemSpacing: space/16",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: color/surface/card",
+      "strokes: color/border/default",
+      "color: color/surface/card",
+      "color: color/border/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/caption",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: color/text/secondary",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "strokeTopWeight: border/width/thick",
+      "strokeBottomWeight: border/width/thick",
+      "strokeLeftWeight: border/width/thick",
+      "strokeRightWeight: border/width/thick",
+      "itemSpacing: space/24",
+      "itemSpacing: space/8",
+      "paddingLeft: space/8",
+      "paddingTop: space/4",
+      "paddingRight: space/8",
+      "paddingBottom: space/4",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: badge/new/bg",
+      "color: badge/new/bg",
+      "fills: badge/new/text",
+      "fontSize: font/size/mobile/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/mobile/label",
+      "color: badge/new/text",
+      "fills: badge/natural/bg",
+      "color: badge/natural/bg",
+      "fills: badge/natural/text",
+      "color: badge/natural/text",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h1",
+      "lineHeight: font/line-height/desktop/h1",
+      "color: color/text/default",
+      "fontSize: font/size/desktop/body-l",
+      "lineHeight: font/line-height/desktop/body-l",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: color/text/natural",
+      "color: color/text/natural",
+      "counterAxisSpacing: space/16",
+      "paddingLeft: space/32",
+      "paddingTop: space/24",
+      "paddingRight: space/32",
+      "paddingBottom: space/24",
+      "fills: button/primary/bg",
+      "strokes: button/primary/border",
+      "color: button/primary/bg",
+      "color: button/primary/border",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: button/primary/text",
+      "color: button/primary/text",
+      "fills: button/primary/text",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label",
+      "fills: link/default",
+      "color: link/default",
+      "strokes: link/default"
+    ],
+    "textStyles": [
+      "Desktop/caption",
+      "Mobile/label",
+      "Desktop/h1",
+      "Desktop/body-l",
+      "Desktop/label"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "badge/natural/bg",
+        "badge/natural/text",
+        "badge/new/bg",
+        "badge/new/text",
+        "button/primary/bg",
+        "button/primary/border",
+        "button/primary/text",
+        "color/border/default",
+        "color/surface/card",
+        "color/surface/page",
+        "color/text/default",
+        "color/text/natural",
+        "color/text/secondary",
+        "font/family/body",
+        "font/family/display",
+        "font/line-height/desktop/body-l",
+        "font/line-height/desktop/caption",
+        "font/line-height/desktop/h1",
+        "font/line-height/desktop/label",
+        "font/line-height/mobile/label",
+        "font/size/desktop/body-l",
+        "font/size/desktop/caption",
+        "font/size/desktop/h1",
+        "font/size/desktop/label",
+        "font/size/mobile/label",
+        "font/style/body",
+        "font/style/display",
+        "link/default"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "badge",
+      "button",
+      "icon-arrow-right",
+      "icon-check",
+      "link"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

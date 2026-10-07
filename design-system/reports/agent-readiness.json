@@ -22,25 +22,25 @@
       "id": "machine-readable-tokens",
       "title": "Tokens legibles por máquina",
       "status": "cumple",
-      "detail": "233 tokens con contrato completo"
+      "detail": "278 tokens con contrato completo"
     },
     {
       "id": "component-registry",
       "title": "Registro de componentes enumerable",
       "status": "cumple",
-      "detail": "40 componentes con correspondencia 1:1 entre índice y contratos"
+      "detail": "49 componentes con correspondencia 1:1 entre índice y contratos"
     },
     {
       "id": "typed-contracts",
       "title": "Contratos con valores cerrados",
       "status": "cumple",
-      "detail": "40 contratos con claves obligatorias y valores cerrados"
+      "detail": "49 contratos con claves obligatorias y valores cerrados"
     },
     {
       "id": "runnable-patterns",
       "title": "Ejemplos ejecutables, no capturas",
       "status": "no-cumple",
-      "detail": "40 contratos sin ejemplo ejecutable (p. ej. badge: sin ejemplo de código)"
+      "detail": "49 contratos sin ejemplo ejecutable (p. ej. accordion-item: sin ejemplo de código)"
     },
     {
       "id": "scoped-retrieval",

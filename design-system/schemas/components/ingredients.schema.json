@@ -1,0 +1,227 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:ingredients",
+  "meta": {
+    "name": "Ingredients",
+    "slug": "ingredients",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T14:34:50Z",
+    "description": "Bloque de ingredientes de la página de producto y de receta: título (h3) · ingredientes principales (Ingredient item Main, con %) · resto (Ingredient item Secondary) · Link «Ver etiqueta del envase» que abre el modal con la foto de la etiqueta (fase 5). Lista semántica &lt;ul&gt;; alérgenos en &lt;strong&gt;. Sin variables propias de bloque: usa ingredient/*.",
+    "figmaPage": "Ingredients",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": true,
+    "anatomyHash": "265a791e9962"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/ingredients.md",
+      "section": "Ingredients"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "70:59",
+      "componentKey": "2007dbb93c35c3d73ca2d8519000e3785b5a8629"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [],
+    "variants": {},
+    "states": [],
+    "defaults": {},
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "ingredient-main",
+        "component": "Level=Main",
+        "componentSlug": "ingredient-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "ingredient-main",
+        "component": "Level=Main",
+        "componentSlug": "ingredient-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "ingredient-main",
+        "component": "Level=Main",
+        "componentSlug": "ingredient-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "ingredient-secondary",
+        "component": "Level=Secondary",
+        "componentSlug": "ingredient-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "label-link",
+        "component": "Type=Standalone, Surface=Light, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "border/width/thin",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h3",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/h3",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "ingredient/divider",
+      "ingredient/meta",
+      "ingredient/percent-bg",
+      "ingredient/percent-text",
+      "ingredient/text",
+      "link/default",
+      "radius/pill",
+      "space/16",
+      "space/4",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "itemSpacing: space/16",
+      "fills: ingredient/text",
+      "fontSize: font/size/desktop/h3",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: ingredient/text",
+      "paddingTop: space/16",
+      "paddingBottom: space/16",
+      "strokeBottomWeight: border/width/thin",
+      "strokes: ingredient/divider",
+      "color: ingredient/divider",
+      "fontSize: font/size/desktop/body-l",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-l",
+      "textRangeFills: ingredient/text",
+      "paddingLeft: space/8",
+      "paddingTop: space/4",
+      "paddingRight: space/8",
+      "paddingBottom: space/4",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: ingredient/percent-bg",
+      "color: ingredient/percent-bg",
+      "fills: ingredient/percent-text",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label",
+      "color: ingredient/percent-text",
+      "fontSize: font/size/desktop/body-m",
+      "lineHeight: font/line-height/desktop/body-m",
+      "fills: ingredient/meta",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: ingredient/meta",
+      "itemSpacing: space/8",
+      "fills: link/default",
+      "color: link/default",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: link/default"
+    ],
+    "textStyles": [
+      "Desktop/h3",
+      "Desktop/label",
+      "Desktop/caption"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "font/family/body",
+        "font/family/display",
+        "font/line-height/desktop/body-l",
+        "font/line-height/desktop/body-m",
+        "font/line-height/desktop/caption",
+        "font/line-height/desktop/h3",
+        "font/line-height/desktop/label",
+        "font/size/desktop/body-l",
+        "font/size/desktop/body-m",
+        "font/size/desktop/caption",
+        "font/size/desktop/h3",
+        "font/size/desktop/label",
+        "font/style/body",
+        "font/style/display",
+        "ingredient/divider",
+        "ingredient/meta",
+        "ingredient/percent-bg",
+        "ingredient/percent-text",
+        "ingredient/text",
+        "link/default"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "icon-arrow-right",
+      "ingredient-item",
+      "link"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

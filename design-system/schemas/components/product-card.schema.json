@@ -1,0 +1,261 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:product-card",
+  "meta": {
+    "name": "Product card",
+    "slug": "product-card",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T14:34:50Z",
+    "description": "Card de producto (Product library, carruseles, productos relacionados). Anatomía: media (hueco de imagen 3D sobre product-card/media-bg; no se inventa fotografía) con Badge opcional (New/Natural) · línea (Original/Yakisoba/Rice) · nombre (h3) · Link «Ver producto». Toda la card es un único enlace al producto (el Link es la pista visual, no un segundo destino). Hover: elevation/2; Focus: anillo product-card/focus-ring. Desktop 320 px; en móvil ocupa la columna (FILL).",
+    "figmaPage": "Product card",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 3,
+    "autoLayout": true,
+    "anatomyHash": "ff5b9c52204a"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/product-card.md",
+      "section": "Product card"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "66:99",
+      "componentKey": "859162aeda0617a425f8053c4d7309fd593ed44c"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Name#66:0",
+        "kind": "TEXT",
+        "default": "Nombre del producto"
+      },
+      {
+        "name": "Line#66:4",
+        "kind": "TEXT",
+        "default": "Original"
+      },
+      {
+        "name": "Badge#66:8",
+        "kind": "BOOLEAN",
+        "default": true
+      },
+      {
+        "name": "State",
+        "kind": "VARIANT",
+        "default": "Default",
+        "values": [
+          "Default",
+          "Hover",
+          "Focus"
+        ]
+      }
+    ],
+    "variants": {
+      "State": [
+        "Default",
+        "Hover",
+        "Focus"
+      ]
+    },
+    "states": [
+      "Default",
+      "Hover",
+      "Focus"
+    ],
+    "defaults": {
+      "State": "Default"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "badge",
+        "component": "Type=New",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": "Badge#66:8",
+        "visibleByDefault": true
+      },
+      {
+        "layer": "link",
+        "component": "Type=Standalone, Surface=Light, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "badge/new/bg",
+      "badge/new/text",
+      "border/width/thin",
+      "color/effect/shadow-ink",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h3",
+      "font/line-height/desktop/label",
+      "font/line-height/mobile/label",
+      "font/size/desktop/caption",
+      "font/size/desktop/h3",
+      "font/size/desktop/label",
+      "font/size/mobile/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "link/default",
+      "product-card/bg",
+      "product-card/border",
+      "product-card/media-bg",
+      "product-card/meta",
+      "product-card/title",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/4",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: product-card/bg",
+      "strokes: product-card/border",
+      "effects: color/effect/shadow-ink",
+      "color: product-card/bg",
+      "color: product-card/border",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "fills: product-card/media-bg",
+      "color: product-card/media-bg",
+      "paddingLeft: space/8",
+      "paddingTop: space/4",
+      "paddingRight: space/8",
+      "paddingBottom: space/4",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: badge/new/bg",
+      "color: badge/new/bg",
+      "fills: badge/new/text",
+      "fontSize: font/size/mobile/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/mobile/label",
+      "color: badge/new/text",
+      "fills: product-card/meta",
+      "fontSize: font/size/desktop/caption",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: product-card/meta",
+      "itemSpacing: space/8",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "fills: product-card/title",
+      "fontSize: font/size/desktop/h3",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: product-card/title",
+      "paddingTop: space/8",
+      "fills: link/default",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label",
+      "color: link/default",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: link/default"
+    ],
+    "textStyles": [
+      "Mobile/label",
+      "Desktop/caption",
+      "Desktop/h3",
+      "Desktop/label"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "badge/new/bg",
+        "badge/new/text",
+        "color/effect/shadow-ink",
+        "font/family/body",
+        "font/family/display",
+        "font/line-height/desktop/caption",
+        "font/line-height/desktop/h3",
+        "font/line-height/desktop/label",
+        "font/line-height/mobile/label",
+        "font/size/desktop/caption",
+        "font/size/desktop/h3",
+        "font/size/desktop/label",
+        "font/size/mobile/label",
+        "font/style/body",
+        "font/style/display",
+        "link/default",
+        "product-card/bg",
+        "product-card/border",
+        "product-card/media-bg",
+        "product-card/meta",
+        "product-card/title"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "badge",
+      "icon-arrow-right",
+      "link"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

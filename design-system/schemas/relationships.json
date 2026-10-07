@@ -63,6 +63,96 @@
       "type": "uses"
     },
     {
+      "from": "product-card",
+      "to": "badge",
+      "type": "uses"
+    },
+    {
+      "from": "product-card",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "product-card",
+      "to": "link",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-card",
+      "to": "chip",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-card",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-card",
+      "to": "icon-check",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-card",
+      "to": "icon-timer",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-card",
+      "to": "link",
+      "type": "uses"
+    },
+    {
+      "from": "contest-card",
+      "to": "badge",
+      "type": "uses"
+    },
+    {
+      "from": "contest-card",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "contest-card",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "contest-card",
+      "to": "link",
+      "type": "uses"
+    },
+    {
+      "from": "accordion-item",
+      "to": "icon-plus",
+      "type": "uses"
+    },
+    {
+      "from": "ingredients",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "ingredients",
+      "to": "ingredient-item",
+      "type": "uses"
+    },
+    {
+      "from": "ingredients",
+      "to": "link",
+      "type": "uses"
+    },
+    {
+      "from": "nutrition-panel",
+      "to": "badge",
+      "type": "uses"
+    },
+    {
+      "from": "nutrition-panel",
+      "to": "nutrition-bar",
+      "type": "uses"
+    },
+    {
       "from": "navbar",
       "to": "button",
       "type": "uses"
@@ -193,5 +283,5 @@
       "type": "uses"
     }
   ],
-  "lastSync": "2026-10-07T13:55:09Z"
+  "lastSync": "2026-10-07T14:34:50Z"
 }

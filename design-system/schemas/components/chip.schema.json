@@ -6,7 +6,7 @@
     "slug": "chip",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T13:55:09Z",
+    "lastSync": "2026-10-07T14:34:50Z",
     "description": "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Size: S 36 px (filtros densos, productos en receta) · M 40 px (filtros principales, uso táctil preferente); altura mínima ligada a chip/height/*. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP).",
     "figmaPage": "Chip",
     "figmaType": "COMPONENT_SET",
@@ -210,7 +210,8 @@
       "icon-check"
     ],
     "usedBy": [
-      "product-filter"
+      "product-filter",
+      "recipe-card"
     ],
     "related": []
   }

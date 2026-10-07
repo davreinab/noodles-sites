@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 36 componentes sincronizados el 2026-10-07T13:55:09Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 45 componentes sincronizados el 2026-10-07T14:34:50Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -51,6 +51,15 @@
 - [Nav item](components/nav-item.md) · component · `nav-item` · ⬜ 5 pendientes
 - [Tab](components/tab.md) · component · `tab` · ⬜ 5 pendientes
 - [Lang switch](components/lang-switch.md) · component · `lang-switch` · ⬜ 5 pendientes
+- [Product card](components/product-card.md) · component · `product-card` · ⬜ 5 pendientes
+- [Recipe card](components/recipe-card.md) · component · `recipe-card` · ⬜ 5 pendientes
+- [Contest card](components/contest-card.md) · component · `contest-card` · ⬜ 5 pendientes
+- [Accordion item](components/accordion-item.md) · component · `accordion-item` · ⬜ 5 pendientes
+- [Ingredient item](components/ingredient-item.md) · component · `ingredient-item` · ⬜ 5 pendientes
+- [Ingredients](components/ingredients.md) · component · `ingredients` · ⬜ 5 pendientes
+- [Nutrition bar](components/nutrition-bar.md) · component · `nutrition-bar` · ⬜ 5 pendientes
+- [Nutrition panel](components/nutrition-panel.md) · component · `nutrition-panel` · ⬜ 5 pendientes
+- [Step](components/step.md) · component · `step` · ⬜ 5 pendientes
 
 ## Cómo rellenar una ficha
 

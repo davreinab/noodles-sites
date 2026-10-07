@@ -1,7 +1,7 @@
-### Icon / close   ⚙️ synced: 2026-10-07T13:55:09Z
+### Icon / close   ⚙️ synced: 2026-10-07T14:34:50Z
 
 <!-- ⚙️ GENERATED:start:icon-close -->
-- **Figma:** `30:60` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T13:55:09Z
+- **Figma:** `30:60` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T14:34:50Z
 - **Descripción (Figma):** Cerrar: modales, menú móvil. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

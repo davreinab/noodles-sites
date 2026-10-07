@@ -1,0 +1,165 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:ingredient-item",
+  "meta": {
+    "name": "Ingredient item",
+    "slug": "ingredient-item",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T14:34:50Z",
+    "description": "Fila de ingrediente. Level=Main: ingrediente principal con porcentaje en pill (ingredient/percent-bg, verde natural) y filete inferior decorativo. Level=Secondary: el resto de ingredientes en texto corrido. Regla de negocio: los alérgenos van SIEMPRE en negrita (&lt;strong&gt;, Archivo Bold), también dentro del nombre. El texto no es propiedad para conservar la negrita: se edita en la instancia. Los datos salen del envase; los mostrados son de ejemplo.",
+    "figmaPage": "Ingredients",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "7d3cdee35b0d"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/ingredient-item.md",
+      "section": "Ingredient item"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "70:58",
+      "componentKey": "e6b7175c2deb532c3692ed1530968aa69ae4379c"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Percent#70:0",
+        "kind": "TEXT",
+        "default": "52 %"
+      },
+      {
+        "name": "Level",
+        "kind": "VARIANT",
+        "default": "Main",
+        "values": [
+          "Main",
+          "Secondary"
+        ]
+      }
+    ],
+    "variants": {
+      "Level": [
+        "Main",
+        "Secondary"
+      ]
+    },
+    "states": [],
+    "defaults": {
+      "Level": "Main"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "border/width/thin",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-l",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "ingredient/divider",
+      "ingredient/percent-bg",
+      "ingredient/percent-text",
+      "ingredient/text",
+      "radius/pill",
+      "space/16",
+      "space/4",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "itemSpacing: space/16",
+      "paddingTop: space/16",
+      "paddingBottom: space/16",
+      "strokeBottomWeight: border/width/thin",
+      "strokes: ingredient/divider",
+      "color: ingredient/divider",
+      "fills: ingredient/text",
+      "fontSize: font/size/desktop/body-l",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-l",
+      "textRangeFills: ingredient/text",
+      "color: ingredient/text",
+      "paddingLeft: space/8",
+      "paddingTop: space/4",
+      "paddingRight: space/8",
+      "paddingBottom: space/4",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: ingredient/percent-bg",
+      "color: ingredient/percent-bg",
+      "fills: ingredient/percent-text",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label",
+      "color: ingredient/percent-text"
+    ],
+    "textStyles": [
+      "Desktop/label"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "font/family/body",
+        "font/family/display",
+        "font/line-height/desktop/body-l",
+        "font/line-height/desktop/label",
+        "font/size/desktop/body-l",
+        "font/size/desktop/label",
+        "font/style/body",
+        "font/style/display",
+        "ingredient/divider",
+        "ingredient/percent-bg",
+        "ingredient/percent-text",
+        "ingredient/text"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [
+      "ingredients"
+    ],
+    "related": []
+  }
+}

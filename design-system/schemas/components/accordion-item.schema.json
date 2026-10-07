@@ -1,0 +1,209 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:accordion-item",
+  "meta": {
+    "name": "Accordion item",
+    "slug": "accordion-item",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T14:34:50Z",
+    "description": "Ítem de acordeón para FAQ (página FAQS indexada, Natural formula, Home). Cabecera = &lt;button aria-expanded aria-controls&gt; dentro de un encabezado (h3); la respuesta es una región ligada a la cabecera. Enter/Espacio abren y cierran; cada ítem es independiente (varios abiertos a la vez). Icono plus (cerrado) / minus (abierto), swaps Icon collapsed / Icon expanded. Para SEO/AEO la respuesta está en el HTML aunque esté cerrada (FAQPage schema). Hover: accordion/bg-hover; Focus: anillo accordion/focus-ring. Ancho FILL de la columna de lectura.",
+    "figmaPage": "Accordion item",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 6,
+    "autoLayout": true,
+    "anatomyHash": "997e42acb572"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/accordion-item.md",
+      "section": "Accordion item"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "69:93",
+      "componentKey": "a4e5b613eac408392e35f1632bb3d3e4486823c5"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Question#69:0",
+        "kind": "TEXT",
+        "default": "¿Por qué decimos que es 100 % natural?"
+      },
+      {
+        "name": "Answer#69:7",
+        "kind": "TEXT",
+        "default": "Respuesta de ejemplo: todos los ingredientes son de origen natural, sin aditivos ni conservantes. El texto definitivo lo valida GB Foods y va alineado con el envase."
+      },
+      {
+        "name": "Icon collapsed#69:14",
+        "kind": "INSTANCE_SWAP",
+        "default": "30:69",
+        "defaultComponent": "Icon / plus",
+        "preferredValues": []
+      },
+      {
+        "name": "Icon expanded#69:21",
+        "kind": "INSTANCE_SWAP",
+        "default": "30:72",
+        "defaultComponent": "Icon / minus",
+        "preferredValues": []
+      },
+      {
+        "name": "Expanded",
+        "kind": "VARIANT",
+        "default": "False",
+        "values": [
+          "False",
+          "True"
+        ]
+      },
+      {
+        "name": "State",
+        "kind": "VARIANT",
+        "default": "Default",
+        "values": [
+          "Default",
+          "Hover",
+          "Focus"
+        ]
+      }
+    ],
+    "variants": {
+      "Expanded": [
+        "False",
+        "True"
+      ],
+      "State": [
+        "Default",
+        "Hover",
+        "Focus"
+      ]
+    },
+    "states": [
+      "Default",
+      "Hover",
+      "Focus"
+    ],
+    "defaults": {
+      "Expanded": "False",
+      "State": "Default"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "Icon collapsed#69:14",
+        "Icon expanded#69:21"
+      ],
+      "defaultIcons": [
+        "Icon / plus",
+        "Icon / minus"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "accordion/bg",
+      "accordion/border",
+      "accordion/icon",
+      "accordion/question",
+      "border/width/thin",
+      "font/family/body",
+      "font/line-height/desktop/body-l",
+      "font/size/desktop/body-l",
+      "font/style/body",
+      "icon/size/md",
+      "radius/md",
+      "space/16",
+      "space/24"
+    ],
+    "variablesUsed": [
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: accordion/bg",
+      "strokes: accordion/border",
+      "color: accordion/bg",
+      "color: accordion/border",
+      "itemSpacing: space/16",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "fills: accordion/question",
+      "fontSize: font/size/desktop/body-l",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-l",
+      "color: accordion/question",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: accordion/icon",
+      "color: accordion/icon"
+    ],
+    "textStyles": [
+      "Desktop/body-l"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "accordion/bg",
+        "accordion/border",
+        "accordion/icon",
+        "accordion/question",
+        "font/family/body",
+        "font/line-height/desktop/body-l",
+        "font/size/desktop/body-l",
+        "font/style/body"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "icon-plus"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

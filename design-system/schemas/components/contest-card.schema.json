@@ -1,0 +1,309 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:contest-card",
+  "meta": {
+    "name": "Contest card",
+    "slug": "contest-card",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T14:34:50Z",
+    "description": "Card de concurso (Contest library, módulo de Home). Status=Active: Badge Natural «En curso» y Button Primary «Participar» (si el concurso es externo o iframe de agencia, activar Icon trailing con external-link y abrir en pestaña nueva avisándolo). Status=Closed: Badge Neutral «Finalizado» y Link «Ver ganadores». Las bases legales (Link inline) aparecen siempre: es obligatorio publicarlas. La card no es enlace en bloque: tiene dos acciones. Desktop 448 px; en móvil FILL.",
+    "figmaPage": "Contest card",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "730a690431d4"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/contest-card.md",
+      "section": "Contest card"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "68:95",
+      "componentKey": "7b5e6b2dfcb5031d66af607e1f0bc75e16b40931"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Title#68:0",
+        "kind": "TEXT",
+        "default": "Nombre del concurso"
+      },
+      {
+        "name": "Dates#68:3",
+        "kind": "TEXT",
+        "default": "Del 1 al 30 de noviembre de 2026"
+      },
+      {
+        "name": "Status",
+        "kind": "VARIANT",
+        "default": "Active",
+        "values": [
+          "Active",
+          "Closed"
+        ]
+      }
+    ],
+    "variants": {
+      "Status": [
+        "Active",
+        "Closed"
+      ]
+    },
+    "states": [],
+    "defaults": {
+      "Status": "Active"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "status",
+        "component": "Type=Natural",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "cta",
+        "component": "Hierarchy=Primary, Size=M, State=Default",
+        "componentSlug": "button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "toggledBy": "Icon leading#33:25",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "toggledBy": "Icon trailing#33:50",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "rules-link",
+        "component": "Type=Inline, Surface=Light, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "badge/natural/bg",
+      "badge/natural/text",
+      "border/width/thick",
+      "border/width/thin",
+      "button/primary/bg",
+      "button/primary/border",
+      "button/primary/text",
+      "color/effect/shadow-ink",
+      "contest-card/bg",
+      "contest-card/border",
+      "contest-card/media-bg",
+      "contest-card/meta",
+      "contest-card/title",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h3",
+      "font/line-height/desktop/label",
+      "font/line-height/mobile/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/body-s",
+      "font/size/desktop/caption",
+      "font/size/desktop/h3",
+      "font/size/desktop/label",
+      "font/size/mobile/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "link/default",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/4",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: contest-card/bg",
+      "strokes: contest-card/border",
+      "effects: color/effect/shadow-ink",
+      "color: contest-card/bg",
+      "color: contest-card/border",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "fills: contest-card/media-bg",
+      "color: contest-card/media-bg",
+      "paddingLeft: space/8",
+      "paddingTop: space/4",
+      "paddingRight: space/8",
+      "paddingBottom: space/4",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: badge/natural/bg",
+      "color: badge/natural/bg",
+      "fills: badge/natural/text",
+      "fontSize: font/size/mobile/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/mobile/label",
+      "color: badge/natural/text",
+      "fills: contest-card/meta",
+      "fontSize: font/size/desktop/caption",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: contest-card/meta",
+      "itemSpacing: space/16",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "fills: contest-card/title",
+      "fontSize: font/size/desktop/h3",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: contest-card/title",
+      "fontSize: font/size/desktop/body-s",
+      "lineHeight: font/line-height/desktop/body-s",
+      "itemSpacing: space/24",
+      "counterAxisSpacing: space/16",
+      "itemSpacing: space/8",
+      "strokeTopWeight: border/width/thick",
+      "strokeBottomWeight: border/width/thick",
+      "strokeLeftWeight: border/width/thick",
+      "strokeRightWeight: border/width/thick",
+      "fills: button/primary/bg",
+      "strokes: button/primary/border",
+      "color: button/primary/bg",
+      "color: button/primary/border",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: button/primary/text",
+      "color: button/primary/text",
+      "fills: button/primary/text",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label",
+      "fills: link/default",
+      "fontSize: font/size/desktop/body-m",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: link/default",
+      "strokes: link/default"
+    ],
+    "textStyles": [
+      "Mobile/label",
+      "Desktop/caption",
+      "Desktop/h3",
+      "Desktop/body-s",
+      "Desktop/label",
+      "Desktop/body-m"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "badge/natural/bg",
+        "badge/natural/text",
+        "button/primary/bg",
+        "button/primary/border",
+        "button/primary/text",
+        "color/effect/shadow-ink",
+        "contest-card/bg",
+        "contest-card/border",
+        "contest-card/media-bg",
+        "contest-card/meta",
+        "contest-card/title",
+        "font/family/body",
+        "font/family/display",
+        "font/line-height/desktop/body-m",
+        "font/line-height/desktop/body-s",
+        "font/line-height/desktop/caption",
+        "font/line-height/desktop/h3",
+        "font/line-height/desktop/label",
+        "font/line-height/mobile/label",
+        "font/size/desktop/body-m",
+        "font/size/desktop/body-s",
+        "font/size/desktop/caption",
+        "font/size/desktop/h3",
+        "font/size/desktop/label",
+        "font/size/mobile/label",
+        "font/style/body",
+        "font/style/display",
+        "link/default"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "badge",
+      "button",
+      "icon-arrow-right",
+      "link"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

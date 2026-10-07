@@ -2,14 +2,14 @@
 
 # GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
 
-> Última sync: **2026-10-07T13:55:09Z** · modo de adopción: `new` · 235 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-07T14:34:50Z** · modo de adopción: `new` · 278 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice
 
 - [Primitive](#primitive) · 21 tokens · modos: Value
 - [Semantic](#semantic) · 37 tokens · modos: Yatekomo, Saikebon, Aiki, Daisuki, DE
-- [Components](#components) · 98 tokens · modos: Value
+- [Components](#components) · 141 tokens · modos: Value
 - [Layer](#layer) · 7 tokens · modos: Value
 - [Spacing](#spacing) · 20 tokens · modos: Value
 - [Layout](#layout) · 6 tokens · modos: Desktop, Tablet, Mobile
@@ -201,6 +201,49 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 | `lang-switch/border` | `--lang-switch-border` | COLOR | → `--color-border-default` | STROKE_COLOR | lang-switch: Borde |
 | `chip/height/s` | `--chip-height-s` | FLOAT | `36px` | WIDTH_HEIGHT | chip: Altura mínima talla S (36px). Filtros densos y productos dentro de receta |
 | `chip/height/m` | `--chip-height-m` | FLOAT | `40px` | WIDTH_HEIGHT | chip: Altura mínima talla M (40px). Filtros principales y uso táctil preferente |
+| `product-card/bg` | `--product-card-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | product-card: Fondo |
+| `product-card/border` | `--product-card-border` | COLOR | → `--color-border-default` | STROKE_COLOR | product-card: Borde |
+| `product-card/title` | `--product-card-title` | COLOR | → `--color-text-default` | TEXT_FILL | product-card: Nombre del producto |
+| `product-card/meta` | `--product-card-meta` | COLOR | → `--color-text-secondary` | TEXT_FILL | product-card: Línea y texto secundario |
+| `product-card/media-bg` | `--product-card-media-bg` | COLOR | → `--color-surface-page` | FRAME_FILL, SHAPE_FILL | product-card: Fondo del hueco de imagen |
+| `product-card/focus-ring` | `--product-card-focus-ring` | COLOR | → `--color-border-default` | STROKE_COLOR | product-card: Anillo de foco |
+| `recipe-card/bg` | `--recipe-card-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | recipe-card: Fondo |
+| `recipe-card/border` | `--recipe-card-border` | COLOR | → `--color-border-default` | STROKE_COLOR | recipe-card: Borde |
+| `recipe-card/title` | `--recipe-card-title` | COLOR | → `--color-text-default` | TEXT_FILL | recipe-card: Título de la receta |
+| `recipe-card/meta` | `--recipe-card-meta` | COLOR | → `--color-text-secondary` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | recipe-card: Tiempo y metadatos (texto e icono) |
+| `recipe-card/media-bg` | `--recipe-card-media-bg` | COLOR | → `--color-surface-page` | FRAME_FILL, SHAPE_FILL | recipe-card: Fondo del hueco de imagen |
+| `recipe-card/focus-ring` | `--recipe-card-focus-ring` | COLOR | → `--color-border-default` | STROKE_COLOR | recipe-card: Anillo de foco |
+| `contest-card/bg` | `--contest-card-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | contest-card: Fondo |
+| `contest-card/border` | `--contest-card-border` | COLOR | → `--color-border-default` | STROKE_COLOR | contest-card: Borde |
+| `contest-card/title` | `--contest-card-title` | COLOR | → `--color-text-default` | TEXT_FILL | contest-card: Título del concurso |
+| `contest-card/meta` | `--contest-card-meta` | COLOR | → `--color-text-secondary` | TEXT_FILL | contest-card: Fechas y bases |
+| `contest-card/media-bg` | `--contest-card-media-bg` | COLOR | → `--color-surface-page` | FRAME_FILL, SHAPE_FILL | contest-card: Fondo del hueco de imagen |
+| `accordion/bg` | `--accordion-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | accordion: Fondo |
+| `accordion/bg-hover` | `--accordion-bg-hover` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL | accordion: Fondo en hover |
+| `accordion/border` | `--accordion-border` | COLOR | → `--color-border-default` | STROKE_COLOR | accordion: Borde |
+| `accordion/question` | `--accordion-question` | COLOR | → `--color-text-default` | TEXT_FILL | accordion: Pregunta |
+| `accordion/answer` | `--accordion-answer` | COLOR | → `--color-text-default` | TEXT_FILL | accordion: Respuesta |
+| `accordion/icon` | `--accordion-icon` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | accordion: Icono plus/minus |
+| `accordion/focus-ring` | `--accordion-focus-ring` | COLOR | → `--color-border-default` | STROKE_COLOR | accordion: Anillo de foco |
+| `ingredient/text` | `--ingredient-text` | COLOR | → `--color-text-default` | TEXT_FILL | ingredient: Nombre del ingrediente y texto corrido (alérgenos en negrita) |
+| `ingredient/percent-bg` | `--ingredient-percent-bg` | COLOR | → `--color-surface-natural` | FRAME_FILL, SHAPE_FILL | ingredient: Fondo del porcentaje |
+| `ingredient/percent-text` | `--ingredient-percent-text` | COLOR | → `--color-text-on-natural` | TEXT_FILL | ingredient: Texto del porcentaje |
+| `ingredient/divider` | `--ingredient-divider` | COLOR | → `--color-border-subtle` | STROKE_COLOR | ingredient: Filete entre ingredientes principales (decorativo) |
+| `nutrition/label` | `--nutrition-label` | COLOR | → `--color-text-default` | TEXT_FILL | nutrition: Nombre del nutriente |
+| `nutrition/value` | `--nutrition-value` | COLOR | → `--color-text-default` | TEXT_FILL | nutrition: Valor por 100 g |
+| `nutrition/meta` | `--nutrition-meta` | COLOR | → `--color-text-secondary` | TEXT_FILL | nutrition: % de ingesta de referencia y notas |
+| `nutrition/track` | `--nutrition-track` | COLOR | → `--color-border-subtle` | FRAME_FILL, SHAPE_FILL | nutrition: Pista de la barra (decorativa) |
+| `nutrition/fill` | `--nutrition-fill` | COLOR | → `--color-surface-inverse` | FRAME_FILL, SHAPE_FILL | nutrition: Relleno de la barra (≥3:1 sobre la pista) |
+| `nutrition/fill-highlight` | `--nutrition-fill-highlight` | COLOR | → `--color-surface-natural` | FRAME_FILL, SHAPE_FILL | nutrition: Relleno destacado para claims (≥3:1 sobre la pista) |
+| `nutrition/allergen` | `--nutrition-allergen` | COLOR | → `--color-text-default` | TEXT_FILL | nutrition: Línea de alérgenos (en negrita) |
+| `step/number-bg` | `--step-number-bg` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL | step: Fondo del número |
+| `step/number-text` | `--step-number-text` | COLOR | → `--color-text-default` | TEXT_FILL | step: Número del paso |
+| `step/text` | `--step-text` | COLOR | → `--color-text-default` | TEXT_FILL | step: Texto del paso |
+| `step/media-bg` | `--step-media-bg` | COLOR | → `--color-surface-page` | FRAME_FILL, SHAPE_FILL | step: Fondo del hueco de imagen o GIF |
+| `step/border` | `--step-border` | COLOR | → `--color-border-default` | STROKE_COLOR | step: Borde del número y del media |
+| `ingredient/meta` | `--ingredient-meta` | COLOR | → `--color-text-secondary` | TEXT_FILL | ingredient: Notas y texto secundario |
+| `nutrition/bg` | `--nutrition-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | nutrition: Fondo del panel |
+| `nutrition/border` | `--nutrition-border` | COLOR | → `--color-border-default` | STROKE_COLOR | nutrition: Borde del panel |
 
 ## Layer
 

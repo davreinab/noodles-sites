@@ -2089,6 +2089,1106 @@
       "read": 1
     },
     {
+      "name": "Product card",
+      "id": "66:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Product card",
+          "name": "Product card",
+          "type": "COMPONENT_SET",
+          "id": "66:99",
+          "key": "859162aeda0617a425f8053c4d7309fd593ed44c",
+          "description": "Card de producto (Product library, carruseles, productos relacionados). Anatomía: media (hueco de imagen 3D sobre product-card/media-bg; no se inventa fotografía) con Badge opcional (New/Natural) · línea (Original/Yakisoba/Rice) · nombre (h3) · Link «Ver producto». Toda la card es un único enlace al producto (el Link es la pista visual, no un segundo destino). Hover: elevation/2; Focus: anillo product-card/focus-ring. Desktop 320 px; en móvil ocupa la columna (FILL).",
+          "variantAxes": {
+            "State": [
+              "Default",
+              "Hover",
+              "Focus"
+            ]
+          },
+          "variantCount": 3,
+          "properties": [
+            {
+              "name": "Name#66:0",
+              "kind": "TEXT",
+              "default": "Nombre del producto"
+            },
+            {
+              "name": "Line#66:4",
+              "kind": "TEXT",
+              "default": "Original"
+            },
+            {
+              "name": "Badge#66:8",
+              "kind": "BOOLEAN",
+              "default": true
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "badge",
+              "component": "Type=New",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": "Badge#66:8",
+              "visibleByDefault": true
+            },
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: product-card/bg",
+              "strokes: product-card/border",
+              "effects: color/effect/shadow-ink",
+              "color: product-card/bg",
+              "color: product-card/border",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "fills: product-card/media-bg",
+              "color: product-card/media-bg",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: badge/new/bg",
+              "color: badge/new/bg",
+              "fills: badge/new/text",
+              "fontSize: font/size/mobile/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/new/text",
+              "fills: product-card/meta",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: product-card/meta",
+              "itemSpacing: space/8",
+              "paddingLeft: space/24",
+              "paddingTop: space/24",
+              "paddingRight: space/24",
+              "paddingBottom: space/24",
+              "fills: product-card/title",
+              "fontSize: font/size/desktop/h3",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: product-card/title",
+              "paddingTop: space/8",
+              "fills: link/default",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "color: link/default",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: link/default"
+            ],
+            "textStyles": [
+              "Mobile/label",
+              "Desktop/caption",
+              "Desktop/h3",
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Recipe card",
+      "id": "67:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Recipe card",
+          "name": "Recipe card",
+          "type": "COMPONENT_SET",
+          "id": "67:133",
+          "key": "ab4aa74b8fa80116dab895add61a6a81ffa67d8a",
+          "description": "Card de receta (Recipe library, Home, página de producto). Anatomía: media (imagen de marca; sin vídeo al principio) · título (h3) · tiempo (icono timer + texto, recipe-card/meta) · productos usados como Chip S (enlazan a la ficha de producto) · Link «Ver receta». La card enlaza a la receta; los Chip son enlaces propios y quedan fuera del área clicable principal. Hover: elevation/2; Focus: anillo recipe-card/focus-ring. Desktop 384 px; en móvil FILL.",
+          "variantAxes": {
+            "State": [
+              "Default",
+              "Hover",
+              "Focus"
+            ]
+          },
+          "variantCount": 3,
+          "properties": [
+            {
+              "name": "Title#67:0",
+              "kind": "TEXT",
+              "default": "Nombre de la receta"
+            },
+            {
+              "name": "Time#67:4",
+              "kind": "TEXT",
+              "default": "10 min"
+            },
+            {
+              "name": "Time icon#67:8",
+              "kind": "INSTANCE_SWAP",
+              "default": "30:84",
+              "defaultComponent": "Icon / timer",
+              "preferredValues": []
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon-time",
+              "component": "Icon / timer",
+              "componentSet": null,
+              "exposedAs": "Time icon#67:8",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "product-chip",
+              "component": "Size=S, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "product-chip",
+              "component": "Size=S, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: recipe-card/bg",
+              "strokes: recipe-card/border",
+              "effects: color/effect/shadow-ink",
+              "color: recipe-card/bg",
+              "color: recipe-card/border",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "fills: recipe-card/media-bg",
+              "color: recipe-card/media-bg",
+              "fills: recipe-card/meta",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: recipe-card/meta",
+              "itemSpacing: space/16",
+              "paddingLeft: space/24",
+              "paddingTop: space/24",
+              "paddingRight: space/24",
+              "paddingBottom: space/24",
+              "fills: recipe-card/title",
+              "fontSize: font/size/desktop/h3",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: recipe-card/title",
+              "itemSpacing: space/8",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: recipe-card/meta",
+              "fontSize: font/size/desktop/body-s",
+              "lineHeight: font/line-height/desktop/body-s",
+              "counterAxisSpacing: space/8",
+              "paddingTop: space/8",
+              "paddingBottom: space/8",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "minHeight: chip/height/s",
+              "fills: chip/bg",
+              "strokes: chip/border",
+              "color: chip/bg",
+              "color: chip/border",
+              "strokes: chip/text",
+              "color: chip/text",
+              "fills: chip/text",
+              "fills: link/default",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "color: link/default",
+              "strokes: link/default"
+            ],
+            "textStyles": [
+              "Desktop/caption",
+              "Desktop/h3",
+              "Desktop/body-s",
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Contest card",
+      "id": "68:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Contest card",
+          "name": "Contest card",
+          "type": "COMPONENT_SET",
+          "id": "68:95",
+          "key": "7b5e6b2dfcb5031d66af607e1f0bc75e16b40931",
+          "description": "Card de concurso (Contest library, módulo de Home). Status=Active: Badge Natural «En curso» y Button Primary «Participar» (si el concurso es externo o iframe de agencia, activar Icon trailing con external-link y abrir en pestaña nueva avisándolo). Status=Closed: Badge Neutral «Finalizado» y Link «Ver ganadores». Las bases legales (Link inline) aparecen siempre: es obligatorio publicarlas. La card no es enlace en bloque: tiene dos acciones. Desktop 448 px; en móvil FILL.",
+          "variantAxes": {
+            "Status": [
+              "Active",
+              "Closed"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Title#68:0",
+              "kind": "TEXT",
+              "default": "Nombre del concurso"
+            },
+            {
+              "name": "Dates#68:3",
+              "kind": "TEXT",
+              "default": "Del 1 al 30 de noviembre de 2026"
+            },
+            {
+              "name": "Status",
+              "kind": "VARIANT",
+              "default": "Active",
+              "values": [
+                "Active",
+                "Closed"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "status",
+              "component": "Type=Natural",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "cta",
+              "component": "Hierarchy=Primary, Size=M, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "rules-link",
+              "component": "Type=Inline, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: contest-card/bg",
+              "strokes: contest-card/border",
+              "effects: color/effect/shadow-ink",
+              "color: contest-card/bg",
+              "color: contest-card/border",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "fills: contest-card/media-bg",
+              "color: contest-card/media-bg",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: badge/natural/bg",
+              "color: badge/natural/bg",
+              "fills: badge/natural/text",
+              "fontSize: font/size/mobile/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/natural/text",
+              "fills: contest-card/meta",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: contest-card/meta",
+              "itemSpacing: space/16",
+              "paddingLeft: space/24",
+              "paddingTop: space/24",
+              "paddingRight: space/24",
+              "paddingBottom: space/24",
+              "fills: contest-card/title",
+              "fontSize: font/size/desktop/h3",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: contest-card/title",
+              "fontSize: font/size/desktop/body-s",
+              "lineHeight: font/line-height/desktop/body-s",
+              "itemSpacing: space/24",
+              "counterAxisSpacing: space/16",
+              "itemSpacing: space/8",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "fills: link/default",
+              "fontSize: font/size/desktop/body-m",
+              "lineHeight: font/line-height/desktop/body-m",
+              "color: link/default",
+              "strokes: link/default"
+            ],
+            "textStyles": [
+              "Mobile/label",
+              "Desktop/caption",
+              "Desktop/h3",
+              "Desktop/body-s",
+              "Desktop/label",
+              "Desktop/body-m"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Accordion item",
+      "id": "69:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Accordion item",
+          "name": "Accordion item",
+          "type": "COMPONENT_SET",
+          "id": "69:93",
+          "key": "a4e5b613eac408392e35f1632bb3d3e4486823c5",
+          "description": "Ítem de acordeón para FAQ (página FAQS indexada, Natural formula, Home). Cabecera = &lt;button aria-expanded aria-controls&gt; dentro de un encabezado (h3); la respuesta es una región ligada a la cabecera. Enter/Espacio abren y cierran; cada ítem es independiente (varios abiertos a la vez). Icono plus (cerrado) / minus (abierto), swaps Icon collapsed / Icon expanded. Para SEO/AEO la respuesta está en el HTML aunque esté cerrada (FAQPage schema). Hover: accordion/bg-hover; Focus: anillo accordion/focus-ring. Ancho FILL de la columna de lectura.",
+          "variantAxes": {
+            "Expanded": [
+              "False",
+              "True"
+            ],
+            "State": [
+              "Default",
+              "Hover",
+              "Focus"
+            ]
+          },
+          "variantCount": 6,
+          "properties": [
+            {
+              "name": "Question#69:0",
+              "kind": "TEXT",
+              "default": "¿Por qué decimos que es 100 % natural?"
+            },
+            {
+              "name": "Answer#69:7",
+              "kind": "TEXT",
+              "default": "Respuesta de ejemplo: todos los ingredientes son de origen natural, sin aditivos ni conservantes. El texto definitivo lo valida GB Foods y va alineado con el envase."
+            },
+            {
+              "name": "Icon collapsed#69:14",
+              "kind": "INSTANCE_SWAP",
+              "default": "30:69",
+              "defaultComponent": "Icon / plus",
+              "preferredValues": []
+            },
+            {
+              "name": "Icon expanded#69:21",
+              "kind": "INSTANCE_SWAP",
+              "default": "30:72",
+              "defaultComponent": "Icon / minus",
+              "preferredValues": []
+            },
+            {
+              "name": "Expanded",
+              "kind": "VARIANT",
+              "default": "False",
+              "values": [
+                "False",
+                "True"
+              ]
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon-collapsed",
+              "component": "Icon / plus",
+              "componentSet": null,
+              "exposedAs": "Icon collapsed#69:14",
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: accordion/bg",
+              "strokes: accordion/border",
+              "color: accordion/bg",
+              "color: accordion/border",
+              "itemSpacing: space/16",
+              "paddingLeft: space/24",
+              "paddingTop: space/24",
+              "paddingRight: space/24",
+              "paddingBottom: space/24",
+              "fills: accordion/question",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "color: accordion/question",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: accordion/icon",
+              "color: accordion/icon"
+            ],
+            "textStyles": [
+              "Desktop/body-l"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Ingredients",
+      "id": "70:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Ingredients",
+          "name": "Ingredient item",
+          "type": "COMPONENT_SET",
+          "id": "70:58",
+          "key": "e6b7175c2deb532c3692ed1530968aa69ae4379c",
+          "description": "Fila de ingrediente. Level=Main: ingrediente principal con porcentaje en pill (ingredient/percent-bg, verde natural) y filete inferior decorativo. Level=Secondary: el resto de ingredientes en texto corrido. Regla de negocio: los alérgenos van SIEMPRE en negrita (&lt;strong&gt;, Archivo Bold), también dentro del nombre. El texto no es propiedad para conservar la negrita: se edita en la instancia. Los datos salen del envase; los mostrados son de ejemplo.",
+          "variantAxes": {
+            "Level": [
+              "Main",
+              "Secondary"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Percent#70:0",
+              "kind": "TEXT",
+              "default": "52 %"
+            },
+            {
+              "name": "Level",
+              "kind": "VARIANT",
+              "default": "Main",
+              "values": [
+                "Main",
+                "Secondary"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/16",
+              "paddingTop: space/16",
+              "paddingBottom: space/16",
+              "strokeBottomWeight: border/width/thin",
+              "strokes: ingredient/divider",
+              "color: ingredient/divider",
+              "fills: ingredient/text",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "textRangeFills: ingredient/text",
+              "color: ingredient/text",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: ingredient/percent-bg",
+              "color: ingredient/percent-bg",
+              "fills: ingredient/percent-text",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "color: ingredient/percent-text"
+            ],
+            "textStyles": [
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Ingredients",
+          "name": "Ingredients",
+          "type": "COMPONENT",
+          "id": "70:59",
+          "key": "2007dbb93c35c3d73ca2d8519000e3785b5a8629",
+          "description": "Bloque de ingredientes de la página de producto y de receta: título (h3) · ingredientes principales (Ingredient item Main, con %) · resto (Ingredient item Secondary) · Link «Ver etiqueta del envase» que abre el modal con la foto de la etiqueta (fase 5). Lista semántica &lt;ul&gt;; alérgenos en &lt;strong&gt;. Sin variables propias de bloque: usa ingredient/*.",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [
+            {
+              "layer": "ingredient-main",
+              "component": "Level=Main",
+              "componentSet": "Ingredient item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "ingredient-main",
+              "component": "Level=Main",
+              "componentSet": "Ingredient item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "ingredient-main",
+              "component": "Level=Main",
+              "componentSet": "Ingredient item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "ingredient-secondary",
+              "component": "Level=Secondary",
+              "componentSet": "Ingredient item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "label-link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/16",
+              "fills: ingredient/text",
+              "fontSize: font/size/desktop/h3",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: ingredient/text",
+              "paddingTop: space/16",
+              "paddingBottom: space/16",
+              "strokeBottomWeight: border/width/thin",
+              "strokes: ingredient/divider",
+              "color: ingredient/divider",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "textRangeFills: ingredient/text",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: ingredient/percent-bg",
+              "color: ingredient/percent-bg",
+              "fills: ingredient/percent-text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "color: ingredient/percent-text",
+              "fontSize: font/size/desktop/body-m",
+              "lineHeight: font/line-height/desktop/body-m",
+              "fills: ingredient/meta",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: ingredient/meta",
+              "itemSpacing: space/8",
+              "fills: link/default",
+              "color: link/default",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: link/default"
+            ],
+            "textStyles": [
+              "Desktop/h3",
+              "Desktop/label",
+              "Desktop/caption"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 2,
+      "read": 2
+    },
+    {
+      "name": "Nutrition",
+      "id": "71:51",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Nutrition",
+          "name": "Nutrition bar",
+          "type": "COMPONENT_SET",
+          "id": "71:74",
+          "key": "ff606ae2d0525b1487a81643313c9e5841352795",
+          "description": "Barra de un nutriente: nombre · valor por 100 g (negrita) · % de ingesta de referencia (IR) y barra cuyo relleno mide ese % del ancho de la pista. Highlight=True: relleno verde natural y Badge Natural con el claim del envase (−20 % sal, −80 % grasas saturadas). La barra es decorativa (aria-hidden): el dato accesible es el texto, así que el valor y el % siempre se escriben. Relleno ≥3:1 sobre la pista. Los valores los valida el equipo de Nutrición de GB Foods. En Figma, el % se fija con el padding derecho de «track» (padding-right = ancho × (1 − %)); en código, width: &lt;%&gt; del relleno.",
+          "variantAxes": {
+            "Highlight": [
+              "False",
+              "True"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Nutrient#71:0",
+              "kind": "TEXT",
+              "default": "Proteínas"
+            },
+            {
+              "name": "Value#71:3",
+              "kind": "TEXT",
+              "default": "10 g"
+            },
+            {
+              "name": "Percent#71:6",
+              "kind": "TEXT",
+              "default": "20 % IR"
+            },
+            {
+              "name": "Highlight",
+              "kind": "VARIANT",
+              "default": "False",
+              "values": [
+                "False",
+                "True"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/8",
+              "itemSpacing: space/16",
+              "fills: nutrition/label",
+              "fontSize: font/size/desktop/body-m",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-m",
+              "color: nutrition/label",
+              "fills: nutrition/value",
+              "color: nutrition/value",
+              "fills: nutrition/meta",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: nutrition/meta",
+              "height: space/8",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: nutrition/track",
+              "color: nutrition/track",
+              "fills: nutrition/fill",
+              "color: nutrition/fill"
+            ],
+            "textStyles": [
+              "Desktop/body-m",
+              "Desktop/caption"
+            ]
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Nutrition",
+          "name": "Nutrition panel",
+          "type": "COMPONENT",
+          "id": "71:75",
+          "key": "e4ac3846bf2a2bbad26af80ef2406be1042e8eee",
+          "description": "Panel de nutrición de la página de producto y de receta: título (h3) · base (por 100 g, % IR) · 7 Nutrition bar (energía, grasas, saturadas, hidratos, azúcares, proteínas, sal; Highlight en los claims del pack) · alérgenos en negrita · nota de validación. Accesible como lista de pares nutriente/valor (o &lt;table&gt; con &lt;caption&gt;); las barras son aria-hidden. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods.",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [
+            {
+              "layer": "nutrition-bar",
+              "component": "Highlight=False",
+              "componentSet": "Nutrition bar",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nutrition-bar",
+              "component": "Highlight=True",
+              "componentSet": "Nutrition bar",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "claim",
+              "component": "Type=Natural",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/24",
+              "paddingLeft: space/32",
+              "paddingTop: space/32",
+              "paddingRight: space/32",
+              "paddingBottom: space/32",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: nutrition/bg",
+              "strokes: nutrition/border",
+              "color: nutrition/bg",
+              "color: nutrition/border",
+              "itemSpacing: space/8",
+              "fills: nutrition/label",
+              "fontSize: font/size/desktop/h3",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: nutrition/label",
+              "fills: nutrition/meta",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: nutrition/meta",
+              "itemSpacing: space/16",
+              "fontSize: font/size/desktop/body-m",
+              "lineHeight: font/line-height/desktop/body-m",
+              "fills: nutrition/value",
+              "color: nutrition/value",
+              "height: space/8",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: nutrition/track",
+              "color: nutrition/track",
+              "fills: nutrition/fill",
+              "color: nutrition/fill",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "fills: badge/natural/bg",
+              "color: badge/natural/bg",
+              "fills: badge/natural/text",
+              "fontSize: font/size/mobile/label",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/natural/text",
+              "fills: nutrition/fill-highlight",
+              "color: nutrition/fill-highlight",
+              "fills: nutrition/allergen",
+              "textRangeFills: nutrition/allergen",
+              "color: nutrition/allergen"
+            ],
+            "textStyles": [
+              "Desktop/h3",
+              "Desktop/caption",
+              "Desktop/body-m",
+              "Mobile/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 2,
+      "read": 2
+    },
+    {
+      "name": "Step",
+      "id": "71:149",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Step",
+          "name": "Step",
+          "type": "COMPONENT_SET",
+          "id": "71:164",
+          "key": "ad7934b2eb39eb7b3b1e43b38fdf0aaa23ece13e",
+          "description": "Paso numerado de preparación (página de producto, junto al temporizador de 3 minutos de la fase 5) o de receta. Anatomía: número en círculo (Anton, step/number-bg amarillo de marca, 56 px) · texto (body-l) · media opcional (Media=True: imagen o GIF 16:9; el GIF respeta prefers-reduced-motion y lleva pausa). Se usa dentro de &lt;ol&gt;: el número visual es decorativo (aria-hidden) porque la lista ya lo anuncia. Se apilan con space/32.",
+          "variantAxes": {
+            "Media": [
+              "False",
+              "True"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Number#71:9",
+              "kind": "TEXT",
+              "default": "1"
+            },
+            {
+              "name": "Text#71:12",
+              "kind": "TEXT",
+              "default": "Abre la tapa hasta la mitad y añade agua hirviendo hasta la línea interior."
+            },
+            {
+              "name": "Media",
+              "kind": "VARIANT",
+              "default": "False",
+              "values": [
+                "False",
+                "True"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/24",
+              "width: space/56",
+              "height: space/56",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: step/number-bg",
+              "strokes: step/border",
+              "color: step/number-bg",
+              "color: step/border",
+              "fills: step/number-text",
+              "fontSize: font/size/desktop/h3",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: step/number-text",
+              "itemSpacing: space/16",
+              "paddingTop: space/8",
+              "fills: step/text",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "color: step/text"
+            ],
+            "textStyles": [
+              "Desktop/h3",
+              "Desktop/body-l"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
       "name": "Pattern / Navbar",
       "id": "53:72",
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
@@ -3121,5 +4221,5 @@
     }
   ],
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
-  "readAt": "2026-10-07T13:54:45.015Z"
+  "readAt": "2026-10-07T14:34:04.686Z"
 }

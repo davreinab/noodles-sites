@@ -1,6 +1,6 @@
 /* ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO.
    Design system: GB Noodles · Microsites · fileKey: v4mnn154qUmiB35CCnRfgh
-   Última sync: 2026-10-07T13:55:09Z · modo de adopción: new
+   Última sync: 2026-10-07T14:34:50Z · modo de adopción: new
    Se regenera con el protocolo de sync de design.md. */
 
 :root {
@@ -163,6 +163,49 @@
   --lang-switch-border: var(--color-border-default); /* lang-switch: Borde */
   --chip-height-s: 36px; /* chip: Altura mínima talla S (36px). Filtros densos y productos dentro de receta */
   --chip-height-m: 40px; /* chip: Altura mínima talla M (40px). Filtros principales y uso táctil preferente */
+  --product-card-bg: var(--color-surface-card); /* product-card: Fondo */
+  --product-card-border: var(--color-border-default); /* product-card: Borde */
+  --product-card-title: var(--color-text-default); /* product-card: Nombre del producto */
+  --product-card-meta: var(--color-text-secondary); /* product-card: Línea y texto secundario */
+  --product-card-media-bg: var(--color-surface-page); /* product-card: Fondo del hueco de imagen */
+  --product-card-focus-ring: var(--color-border-default); /* product-card: Anillo de foco */
+  --recipe-card-bg: var(--color-surface-card); /* recipe-card: Fondo */
+  --recipe-card-border: var(--color-border-default); /* recipe-card: Borde */
+  --recipe-card-title: var(--color-text-default); /* recipe-card: Título de la receta */
+  --recipe-card-meta: var(--color-text-secondary); /* recipe-card: Tiempo y metadatos (texto e icono) */
+  --recipe-card-media-bg: var(--color-surface-page); /* recipe-card: Fondo del hueco de imagen */
+  --recipe-card-focus-ring: var(--color-border-default); /* recipe-card: Anillo de foco */
+  --contest-card-bg: var(--color-surface-card); /* contest-card: Fondo */
+  --contest-card-border: var(--color-border-default); /* contest-card: Borde */
+  --contest-card-title: var(--color-text-default); /* contest-card: Título del concurso */
+  --contest-card-meta: var(--color-text-secondary); /* contest-card: Fechas y bases */
+  --contest-card-media-bg: var(--color-surface-page); /* contest-card: Fondo del hueco de imagen */
+  --accordion-bg: var(--color-surface-card); /* accordion: Fondo */
+  --accordion-bg-hover: var(--color-surface-brand); /* accordion: Fondo en hover */
+  --accordion-border: var(--color-border-default); /* accordion: Borde */
+  --accordion-question: var(--color-text-default); /* accordion: Pregunta */
+  --accordion-answer: var(--color-text-default); /* accordion: Respuesta */
+  --accordion-icon: var(--color-text-default); /* accordion: Icono plus/minus */
+  --accordion-focus-ring: var(--color-border-default); /* accordion: Anillo de foco */
+  --ingredient-text: var(--color-text-default); /* ingredient: Nombre del ingrediente y texto corrido (alérgenos en negrita) */
+  --ingredient-percent-bg: var(--color-surface-natural); /* ingredient: Fondo del porcentaje */
+  --ingredient-percent-text: var(--color-text-on-natural); /* ingredient: Texto del porcentaje */
+  --ingredient-divider: var(--color-border-subtle); /* ingredient: Filete entre ingredientes principales (decorativo) */
+  --nutrition-label: var(--color-text-default); /* nutrition: Nombre del nutriente */
+  --nutrition-value: var(--color-text-default); /* nutrition: Valor por 100 g */
+  --nutrition-meta: var(--color-text-secondary); /* nutrition: % de ingesta de referencia y notas */
+  --nutrition-track: var(--color-border-subtle); /* nutrition: Pista de la barra (decorativa) */
+  --nutrition-fill: var(--color-surface-inverse); /* nutrition: Relleno de la barra (≥3:1 sobre la pista) */
+  --nutrition-fill-highlight: var(--color-surface-natural); /* nutrition: Relleno destacado para claims (≥3:1 sobre la pista) */
+  --nutrition-allergen: var(--color-text-default); /* nutrition: Línea de alérgenos (en negrita) */
+  --step-number-bg: var(--color-surface-brand); /* step: Fondo del número */
+  --step-number-text: var(--color-text-default); /* step: Número del paso */
+  --step-text: var(--color-text-default); /* step: Texto del paso */
+  --step-media-bg: var(--color-surface-page); /* step: Fondo del hueco de imagen o GIF */
+  --step-border: var(--color-border-default); /* step: Borde del número y del media */
+  --ingredient-meta: var(--color-text-secondary); /* ingredient: Notas y texto secundario */
+  --nutrition-bg: var(--color-surface-card); /* nutrition: Fondo del panel */
+  --nutrition-border: var(--color-border-default); /* nutrition: Borde del panel */
   /* ---- Layer ---- */
   --layer-base: 0; /* z-index 0. Contenido normal de la página */
   --layer-raised: 10; /* z-index 10. Contenido por encima de imágenes dentro de una sección (copy del hero, banderas) */

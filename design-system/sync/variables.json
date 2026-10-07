@@ -4077,6 +4077,885 @@
               "value": 40
             }
           }
+        },
+        {
+          "id": "VariableID:64:49",
+          "name": "product-card/bg",
+          "type": "COLOR",
+          "description": "product-card: Fondo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--product-card-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:26",
+              "name": "color/surface/card"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:50",
+          "name": "product-card/border",
+          "type": "COLOR",
+          "description": "product-card: Borde",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--product-card-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:51",
+          "name": "product-card/title",
+          "type": "COLOR",
+          "description": "product-card: Nombre del producto",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--product-card-title)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:52",
+          "name": "product-card/meta",
+          "type": "COLOR",
+          "description": "product-card: Línea y texto secundario",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--product-card-meta)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:32",
+              "name": "color/text/secondary"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:53",
+          "name": "product-card/media-bg",
+          "type": "COLOR",
+          "description": "product-card: Fondo del hueco de imagen",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--product-card-media-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:24",
+              "name": "color/surface/page"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:54",
+          "name": "product-card/focus-ring",
+          "type": "COLOR",
+          "description": "product-card: Anillo de foco",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--product-card-focus-ring)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:55",
+          "name": "recipe-card/bg",
+          "type": "COLOR",
+          "description": "recipe-card: Fondo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--recipe-card-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:26",
+              "name": "color/surface/card"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:56",
+          "name": "recipe-card/border",
+          "type": "COLOR",
+          "description": "recipe-card: Borde",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--recipe-card-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:57",
+          "name": "recipe-card/title",
+          "type": "COLOR",
+          "description": "recipe-card: Título de la receta",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--recipe-card-title)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:58",
+          "name": "recipe-card/meta",
+          "type": "COLOR",
+          "description": "recipe-card: Tiempo y metadatos (texto e icono)",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--recipe-card-meta)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:32",
+              "name": "color/text/secondary"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:59",
+          "name": "recipe-card/media-bg",
+          "type": "COLOR",
+          "description": "recipe-card: Fondo del hueco de imagen",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--recipe-card-media-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:24",
+              "name": "color/surface/page"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:60",
+          "name": "recipe-card/focus-ring",
+          "type": "COLOR",
+          "description": "recipe-card: Anillo de foco",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--recipe-card-focus-ring)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:61",
+          "name": "contest-card/bg",
+          "type": "COLOR",
+          "description": "contest-card: Fondo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--contest-card-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:26",
+              "name": "color/surface/card"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:62",
+          "name": "contest-card/border",
+          "type": "COLOR",
+          "description": "contest-card: Borde",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--contest-card-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:63",
+          "name": "contest-card/title",
+          "type": "COLOR",
+          "description": "contest-card: Título del concurso",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--contest-card-title)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:64",
+          "name": "contest-card/meta",
+          "type": "COLOR",
+          "description": "contest-card: Fechas y bases",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--contest-card-meta)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:32",
+              "name": "color/text/secondary"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:65",
+          "name": "contest-card/media-bg",
+          "type": "COLOR",
+          "description": "contest-card: Fondo del hueco de imagen",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--contest-card-media-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:24",
+              "name": "color/surface/page"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:66",
+          "name": "accordion/bg",
+          "type": "COLOR",
+          "description": "accordion: Fondo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--accordion-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:26",
+              "name": "color/surface/card"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:67",
+          "name": "accordion/bg-hover",
+          "type": "COLOR",
+          "description": "accordion: Fondo en hover",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--accordion-bg-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:25",
+              "name": "color/surface/brand"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:68",
+          "name": "accordion/border",
+          "type": "COLOR",
+          "description": "accordion: Borde",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--accordion-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:69",
+          "name": "accordion/question",
+          "type": "COLOR",
+          "description": "accordion: Pregunta",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--accordion-question)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:70",
+          "name": "accordion/answer",
+          "type": "COLOR",
+          "description": "accordion: Respuesta",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--accordion-answer)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:71",
+          "name": "accordion/icon",
+          "type": "COLOR",
+          "description": "accordion: Icono plus/minus",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--accordion-icon)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:72",
+          "name": "accordion/focus-ring",
+          "type": "COLOR",
+          "description": "accordion: Anillo de foco",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--accordion-focus-ring)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:73",
+          "name": "ingredient/text",
+          "type": "COLOR",
+          "description": "ingredient: Nombre del ingrediente y texto corrido (alérgenos en negrita)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--ingredient-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:74",
+          "name": "ingredient/percent-bg",
+          "type": "COLOR",
+          "description": "ingredient: Fondo del porcentaje",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--ingredient-percent-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:28",
+              "name": "color/surface/natural"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:75",
+          "name": "ingredient/percent-text",
+          "type": "COLOR",
+          "description": "ingredient: Texto del porcentaje",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--ingredient-percent-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:35",
+              "name": "color/text/on-natural"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:76",
+          "name": "ingredient/divider",
+          "type": "COLOR",
+          "description": "ingredient: Filete entre ingredientes principales (decorativo)",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--ingredient-divider)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:39",
+              "name": "color/border/subtle"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:77",
+          "name": "nutrition/label",
+          "type": "COLOR",
+          "description": "nutrition: Nombre del nutriente",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--nutrition-label)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:78",
+          "name": "nutrition/value",
+          "type": "COLOR",
+          "description": "nutrition: Valor por 100 g",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--nutrition-value)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:79",
+          "name": "nutrition/meta",
+          "type": "COLOR",
+          "description": "nutrition: % de ingesta de referencia y notas",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--nutrition-meta)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:32",
+              "name": "color/text/secondary"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:80",
+          "name": "nutrition/track",
+          "type": "COLOR",
+          "description": "nutrition: Pista de la barra (decorativa)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--nutrition-track)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:39",
+              "name": "color/border/subtle"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:81",
+          "name": "nutrition/fill",
+          "type": "COLOR",
+          "description": "nutrition: Relleno de la barra (≥3:1 sobre la pista)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--nutrition-fill)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:27",
+              "name": "color/surface/inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:82",
+          "name": "nutrition/fill-highlight",
+          "type": "COLOR",
+          "description": "nutrition: Relleno destacado para claims (≥3:1 sobre la pista)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--nutrition-fill-highlight)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:28",
+              "name": "color/surface/natural"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:83",
+          "name": "nutrition/allergen",
+          "type": "COLOR",
+          "description": "nutrition: Línea de alérgenos (en negrita)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--nutrition-allergen)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:84",
+          "name": "step/number-bg",
+          "type": "COLOR",
+          "description": "step: Fondo del número",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--step-number-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:25",
+              "name": "color/surface/brand"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:85",
+          "name": "step/number-text",
+          "type": "COLOR",
+          "description": "step: Número del paso",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--step-number-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:86",
+          "name": "step/text",
+          "type": "COLOR",
+          "description": "step: Texto del paso",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--step-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:87",
+          "name": "step/media-bg",
+          "type": "COLOR",
+          "description": "step: Fondo del hueco de imagen o GIF",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--step-media-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:24",
+              "name": "color/surface/page"
+            }
+          }
+        },
+        {
+          "id": "VariableID:64:88",
+          "name": "step/border",
+          "type": "COLOR",
+          "description": "step: Borde del número y del media",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--step-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:70:385",
+          "name": "ingredient/meta",
+          "type": "COLOR",
+          "description": "ingredient: Notas y texto secundario",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--ingredient-meta)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:32",
+              "name": "color/text/secondary"
+            }
+          }
+        },
+        {
+          "id": "VariableID:71:49",
+          "name": "nutrition/bg",
+          "type": "COLOR",
+          "description": "nutrition: Fondo del panel",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--nutrition-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:26",
+              "name": "color/surface/card"
+            }
+          }
+        },
+        {
+          "id": "VariableID:71:50",
+          "name": "nutrition/border",
+          "type": "COLOR",
+          "description": "nutrition: Borde del panel",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--nutrition-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
         }
       ]
     },

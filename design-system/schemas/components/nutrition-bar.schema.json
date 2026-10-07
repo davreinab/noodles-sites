@@ -1,0 +1,166 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:nutrition-bar",
+  "meta": {
+    "name": "Nutrition bar",
+    "slug": "nutrition-bar",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T14:34:50Z",
+    "description": "Barra de un nutriente: nombre · valor por 100 g (negrita) · % de ingesta de referencia (IR) y barra cuyo relleno mide ese % del ancho de la pista. Highlight=True: relleno verde natural y Badge Natural con el claim del envase (−20 % sal, −80 % grasas saturadas). La barra es decorativa (aria-hidden): el dato accesible es el texto, así que el valor y el % siempre se escriben. Relleno ≥3:1 sobre la pista. Los valores los valida el equipo de Nutrición de GB Foods. En Figma, el % se fija con el padding derecho de «track» (padding-right = ancho × (1 − %)); en código, width: &lt;%&gt; del relleno.",
+    "figmaPage": "Nutrition",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "9fa5370e2ef8"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/nutrition-bar.md",
+      "section": "Nutrition bar"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "71:74",
+      "componentKey": "ff606ae2d0525b1487a81643313c9e5841352795"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Nutrient#71:0",
+        "kind": "TEXT",
+        "default": "Proteínas"
+      },
+      {
+        "name": "Value#71:3",
+        "kind": "TEXT",
+        "default": "10 g"
+      },
+      {
+        "name": "Percent#71:6",
+        "kind": "TEXT",
+        "default": "20 % IR"
+      },
+      {
+        "name": "Highlight",
+        "kind": "VARIANT",
+        "default": "False",
+        "values": [
+          "False",
+          "True"
+        ]
+      }
+    ],
+    "variants": {
+      "Highlight": [
+        "False",
+        "True"
+      ]
+    },
+    "states": [],
+    "defaults": {
+      "Highlight": "False"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "font/family/body",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/style/body",
+      "nutrition/fill",
+      "nutrition/label",
+      "nutrition/meta",
+      "nutrition/track",
+      "nutrition/value",
+      "radius/pill",
+      "space/16",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "itemSpacing: space/8",
+      "itemSpacing: space/16",
+      "fills: nutrition/label",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: nutrition/label",
+      "fills: nutrition/value",
+      "color: nutrition/value",
+      "fills: nutrition/meta",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: nutrition/meta",
+      "height: space/8",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: nutrition/track",
+      "color: nutrition/track",
+      "fills: nutrition/fill",
+      "color: nutrition/fill"
+    ],
+    "textStyles": [
+      "Desktop/body-m",
+      "Desktop/caption"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "font/family/body",
+        "font/line-height/desktop/body-m",
+        "font/line-height/desktop/caption",
+        "font/size/desktop/body-m",
+        "font/size/desktop/caption",
+        "font/style/body",
+        "nutrition/fill",
+        "nutrition/label",
+        "nutrition/meta",
+        "nutrition/track",
+        "nutrition/value"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [
+      "nutrition-panel"
+    ],
+    "related": []
+  }
+}

@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-07T13:55:09Z",
+  "lastSync": "2026-10-07T14:34:50Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -854,6 +854,231 @@
       }
     },
     {
+      "id": "component:product-card",
+      "name": "Product card",
+      "slug": "product-card",
+      "kind": "component",
+      "contractPath": "./components/product-card.schema.json",
+      "keywords": [
+        "card",
+        "icon",
+        "product"
+      ],
+      "dependencies": [
+        "badge",
+        "icon-arrow-right",
+        "link"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "66:99",
+        "componentKey": "859162aeda0617a425f8053c4d7309fd593ed44c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:recipe-card",
+      "name": "Recipe card",
+      "slug": "recipe-card",
+      "kind": "component",
+      "contractPath": "./components/recipe-card.schema.json",
+      "keywords": [
+        "card",
+        "icon",
+        "recipe"
+      ],
+      "dependencies": [
+        "chip",
+        "icon-arrow-right",
+        "icon-check",
+        "icon-timer",
+        "link"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "67:133",
+        "componentKey": "ab4aa74b8fa80116dab895add61a6a81ffa67d8a"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:contest-card",
+      "name": "Contest card",
+      "slug": "contest-card",
+      "kind": "component",
+      "contractPath": "./components/contest-card.schema.json",
+      "keywords": [
+        "card",
+        "contest",
+        "icon"
+      ],
+      "dependencies": [
+        "badge",
+        "button",
+        "icon-arrow-right",
+        "link"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "68:95",
+        "componentKey": "7b5e6b2dfcb5031d66af607e1f0bc75e16b40931"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:accordion-item",
+      "name": "Accordion item",
+      "slug": "accordion-item",
+      "kind": "component",
+      "contractPath": "./components/accordion-item.schema.json",
+      "keywords": [
+        "accordion",
+        "icon",
+        "item"
+      ],
+      "dependencies": [
+        "icon-plus"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "69:93",
+        "componentKey": "a4e5b613eac408392e35f1632bb3d3e4486823c5"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:ingredient-item",
+      "name": "Ingredient item",
+      "slug": "ingredient-item",
+      "kind": "component",
+      "contractPath": "./components/ingredient-item.schema.json",
+      "keywords": [
+        "ingredient",
+        "item"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "70:58",
+        "componentKey": "e6b7175c2deb532c3692ed1530968aa69ae4379c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:ingredients",
+      "name": "Ingredients",
+      "slug": "ingredients",
+      "kind": "component",
+      "contractPath": "./components/ingredients.schema.json",
+      "keywords": [
+        "icon",
+        "ingredients"
+      ],
+      "dependencies": [
+        "icon-arrow-right",
+        "ingredient-item",
+        "link"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "70:59",
+        "componentKey": "2007dbb93c35c3d73ca2d8519000e3785b5a8629"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:nutrition-bar",
+      "name": "Nutrition bar",
+      "slug": "nutrition-bar",
+      "kind": "component",
+      "contractPath": "./components/nutrition-bar.schema.json",
+      "keywords": [
+        "bar",
+        "nutrition"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "71:74",
+        "componentKey": "ff606ae2d0525b1487a81643313c9e5841352795"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:nutrition-panel",
+      "name": "Nutrition panel",
+      "slug": "nutrition-panel",
+      "kind": "component",
+      "contractPath": "./components/nutrition-panel.schema.json",
+      "keywords": [
+        "nutrition",
+        "panel"
+      ],
+      "dependencies": [
+        "badge",
+        "nutrition-bar"
+      ],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "71:75",
+        "componentKey": "e4ac3846bf2a2bbad26af80ef2406be1042e8eee"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:step",
+      "name": "Step",
+      "slug": "step",
+      "kind": "component",
+      "contractPath": "./components/step.schema.json",
+      "keywords": [
+        "step"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "71:164",
+        "componentKey": "ad7934b2eb39eb7b3b1e43b38fdf0aaa23ece13e"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
       "id": "pattern:navbar",
       "name": "Navbar",
       "slug": "navbar",
@@ -975,7 +1200,7 @@
     }
   ],
   "counts": {
-    "atoms": 36,
+    "atoms": 45,
     "patterns": 4
   }
 }

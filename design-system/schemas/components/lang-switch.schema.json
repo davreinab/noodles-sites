@@ -6,20 +6,13 @@
     "slug": "lang-switch",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:30:51Z",
+    "lastSync": "2026-10-07T18:41:16Z",
     "description": "Selector de idioma de dos opciones (p. ej. NL | FR en Aiki). Solo en marcas multiidioma. La opción activa en tinta. En código: enlaces a la versión de idioma con hreflang y aria-current en la activa; cada opción con lang=&quot;nl&quot;/&quot;fr&quot;.",
     "figmaPage": "Lang switch",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "035734fd55f4",
-    "lifecycle": {
-      "status": "active",
-      "since": null,
-      "removeIn": null,
-      "replacement": null,
-      "reason": null
-    }
+    "anatomyHash": "035734fd55f4"
   },
   "source": {
     "docs": {

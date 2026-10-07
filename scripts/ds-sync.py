@@ -1358,6 +1358,8 @@ def main():
         findings.append(("info", "figma-vs-component-contracts", f"assets/icons/{f} sin entrada en sync/icons.json"))
     if raw_vars is not None or raw_comps is not None:
         icon_sizes = [t["cssVar"] for t in tokens.tokens if "icon" in t["path"].lower() and "size" in t["path"].lower()]
+        # sync/fonts.json (opcional): [{file, family, origin, token, notes}] — describe assets/fonts/ como icons.json describe los iconos
+        fonts_meta = {f.get("file"): f for f in read_json(os.path.join(ds, "sync", "fonts.json"), []) if isinstance(f, dict)}
         assets_md = ["<!-- ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO. -->", "",
                      f"# {meta['designSystem']} · Assets  ·  _(iconos y fuentes exportados de Figma)_", "",
                      f"> Última sync: {synced_at}. Los archivos viven en `../assets/icons/` y `../assets/fonts/`; las pantallas los referencian desde ahí. No existe ningún otro `img/` ni `fonts/` en el proyecto.", "",
@@ -1366,7 +1368,8 @@ def main():
                               [[f"`{r['file']}`", r["name"], f"`{r['nodeId']}`", ", ".join(f"`{v}`" for v in icon_sizes) or "⬜ sin tokens icon/size", r["usage"] or "—"] for r in assets_rows]) if assets_rows else "_(sin iconos exportados)_",
                      "", "## Fuentes (`../assets/fonts/`)",
                      md_table(["Archivo", "Familia · peso", "Origen (Figma / Google Fonts / licencia)", "Token `--family-*`", "Notas"],
-                              [[f"`{os.path.basename(p)}`", "unknown", "unknown", "unknown", ""] for p in sorted(glob.glob(os.path.join(ds, "assets", "fonts", "*")) ) if not p.endswith(".gitkeep")]) ]
+                              [[f"`{os.path.basename(p)}`"] + [fonts_meta.get(os.path.basename(p), {}).get(k, "unknown" if k != "notes" else "") for k in ("family", "origin", "token", "notes")]
+                               for p in sorted(glob.glob(os.path.join(ds, "assets", "fonts", "*"))) if not p.endswith(".gitkeep")]) ]
         write(os.path.join(ds, "docs", "assets.md"), "\n".join(assets_md) + "\n", args.dry, written)
 
     # ── showcase ──

@@ -6,20 +6,13 @@
     "slug": "logo-aiki",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:30:51Z",
+    "lastSync": "2026-10-07T18:41:16Z",
     "description": "Logo Aïki (marca belga; slug sin diéresis). Solo PNG pixelado, sin variante negativa: pedir vectorial al cliente. No se recolorea.",
     "figmaPage": "Brand",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "ff8b2f78ebab",
-    "lifecycle": {
-      "status": "active",
-      "since": null,
-      "removeIn": null,
-      "replacement": null,
-      "reason": null
-    }
+    "anatomyHash": "ff8b2f78ebab"
   },
   "source": {
     "docs": {

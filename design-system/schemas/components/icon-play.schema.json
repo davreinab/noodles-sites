@@ -6,20 +6,13 @@
     "slug": "icon-play",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:30:51Z",
+    "lastSync": "2026-10-07T18:41:16Z",
     "description": "Reproducir vídeo. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
     "figmaPage": "Icons",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "513ccc9e6650",
-    "lifecycle": {
-      "status": "active",
-      "since": null,
-      "removeIn": null,
-      "replacement": null,
-      "reason": null
-    }
+    "anatomyHash": "513ccc9e6650"
   },
   "source": {
     "docs": {

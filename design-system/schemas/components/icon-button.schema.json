@@ -6,20 +6,13 @@
     "slug": "icon-button",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:30:51Z",
+    "lastSync": "2026-10-07T18:41:16Z",
     "description": "Botón solo con icono: cerrar, menú, flechas del slider, play. Mismas jerarquías y colores que Button. M 56 px (icono 24 + padding 16), L 64 px (icono 32). Accesibilidad: requiere nombre accesible (aria-label) porque no tiene texto visible.",
     "figmaPage": "Icon button",
     "figmaType": "COMPONENT_SET",
     "variantCount": 24,
     "autoLayout": true,
-    "anatomyHash": "5757329153d2",
-    "lifecycle": {
-      "status": "active",
-      "since": null,
-      "removeIn": null,
-      "replacement": null,
-      "reason": null
-    }
+    "anatomyHash": "5757329153d2"
   },
   "source": {
     "docs": {

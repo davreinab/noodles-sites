@@ -1,7 +1,7 @@
-### Icon / rotate-ccw   ⚙️ synced: 2026-10-07T18:30:51Z
+### Icon / rotate-ccw   ⚙️ synced: 2026-10-07T18:41:16Z
 
 <!-- ⚙️ GENERATED:start:icon-rotate-ccw -->
-- **Figma:** `76:56` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T18:30:51Z
+- **Figma:** `76:56` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T18:41:16Z
 - **Descripción (Figma):** Reiniciar: temporizador. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

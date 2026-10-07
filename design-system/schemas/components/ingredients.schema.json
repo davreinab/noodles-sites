@@ -6,20 +6,13 @@
     "slug": "ingredients",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:30:51Z",
+    "lastSync": "2026-10-07T18:41:16Z",
     "description": "Bloque de ingredientes de la página de producto y de receta: título (h3) · ingredientes principales (Ingredient item Main, con %) · resto (Ingredient item Secondary) · Link «Ver etiqueta del envase» que abre el modal con la foto de la etiqueta (fase 5). Lista semántica &lt;ul&gt;; alérgenos en &lt;strong&gt;. Sin variables propias de bloque: usa ingredient/*.",
     "figmaPage": "Ingredients",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": true,
-    "anatomyHash": "265a791e9962",
-    "lifecycle": {
-      "status": "active",
-      "since": null,
-      "removeIn": null,
-      "replacement": null,
-      "reason": null
-    }
+    "anatomyHash": "265a791e9962"
   },
   "source": {
     "docs": {

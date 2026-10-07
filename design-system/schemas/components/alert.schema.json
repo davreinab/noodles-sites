@@ -6,20 +6,13 @@
     "slug": "alert",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:30:51Z",
+    "lastSync": "2026-10-07T18:41:16Z",
     "description": "Mensaje de estado. Type=Info · Success · Alert · Error, cada uno con su icono fijo (info, circle-check, triangle-alert, circle-alert) y su título: el tipo nunca se comunica solo por color. Layout=Inline: dentro del contenido (formulario, concurso cerrado), radius/sm. Layout=Toast: flotante y temporal en layer/toast, elevation/3, abajo centrado en móvil y abajo a la derecha en desktop; se cierra solo a los 6 s salvo Error, que espera al usuario (y la pausa al pasar el ratón o con el foco). Accesibilidad: Info/Success con role=&quot;status&quot; (aria-live polite); Alert/Error con role=&quot;alert&quot;. Cerrar es un &lt;button aria-label=&quot;Cerrar aviso&quot;&gt;. El título se edita en la instancia (no es propiedad para no perder el título de cada tipo).",
     "figmaPage": "Alert",
     "figmaType": "COMPONENT_SET",
     "variantCount": 8,
     "autoLayout": true,
-    "anatomyHash": "2f59c341f4b9",
-    "lifecycle": {
-      "status": "active",
-      "since": null,
-      "removeIn": null,
-      "replacement": null,
-      "reason": null
-    }
+    "anatomyHash": "2f59c341f4b9"
   },
   "source": {
     "docs": {

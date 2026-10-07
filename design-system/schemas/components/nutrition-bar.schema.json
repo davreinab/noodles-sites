@@ -6,20 +6,13 @@
     "slug": "nutrition-bar",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:30:51Z",
+    "lastSync": "2026-10-07T18:41:16Z",
     "description": "Barra de un nutriente: nombre · valor por 100 g (negrita) · % de ingesta de referencia (IR) y barra cuyo relleno mide ese % del ancho de la pista. Highlight=True: relleno verde natural y Badge Natural con el claim del envase (−20 % sal, −80 % grasas saturadas). La barra es decorativa (aria-hidden): el dato accesible es el texto, así que el valor y el % siempre se escriben. Relleno ≥3:1 sobre la pista. Los valores los valida el equipo de Nutrición de GB Foods. En Figma, el % se fija con el padding derecho de «track» (padding-right = ancho × (1 − %)); en código, width: &lt;%&gt; del relleno.",
     "figmaPage": "Nutrition",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "9fa5370e2ef8",
-    "lifecycle": {
-      "status": "active",
-      "since": null,
-      "removeIn": null,
-      "replacement": null,
-      "reason": null
-    }
+    "anatomyHash": "9fa5370e2ef8"
   },
   "source": {
     "docs": {
@@ -40,13 +33,14 @@
         "badge--natural",
         "nutrition-bar",
         "nutrition-bar--highlight",
+        "nutrition-bar__amount",
         "nutrition-bar__label",
         "nutrition-bar__meter",
         "nutrition-bar__percent",
         "nutrition-bar__row",
         "nutrition-bar__value"
       ],
-      "example": "<li class=\"nutrition-bar\">\n<div class=\"nutrition-bar__row\">\n<span class=\"nutrition-bar__label\">Proteínas</span>\n<span class=\"nutrition-bar__value\">10 g<span class=\"nutrition-bar__percent\">20 % IR</span></span>\n</div>\n<meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"20\" aria-hidden=\"true\"></meter>\n</li>\n<li class=\"nutrition-bar nutrition-bar--highlight\">\n<div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Sal <span class=\"badge badge--natural\">−20 %</span></span><span class=\"nutrition-bar__value\">1,9 g<span class=\"nutrition-bar__percent\">32 % IR</span></span></div>\n<meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"32\" aria-hidden=\"true\"></meter>\n</li>"
+      "example": "<li class=\"nutrition-bar\">\n<div class=\"nutrition-bar__row\">\n<span class=\"nutrition-bar__label\">Proteínas</span>\n<span class=\"nutrition-bar__amount\"><span class=\"nutrition-bar__value\">10 g</span><span class=\"nutrition-bar__percent\">20 % IR</span></span>\n</div>\n<meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"20\" aria-hidden=\"true\"></meter>\n</li>\n<li class=\"nutrition-bar nutrition-bar--highlight\">\n<div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Sal</span><span class=\"nutrition-bar__amount\"><span class=\"badge badge--natural\">−20 %</span><span class=\"nutrition-bar__value\">1,9 g</span><span class=\"nutrition-bar__percent\">32 % IR</span></span></div>\n<meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"32\" aria-hidden=\"true\"></meter>\n</li>"
     }
   },
   "api": {

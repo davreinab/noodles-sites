@@ -1,7 +1,7 @@
-### Step   ⚙️ synced: 2026-10-07T18:30:51Z
+### Step   ⚙️ synced: 2026-10-07T18:41:16Z
 
 <!-- ⚙️ GENERATED:start:step -->
-- **Figma:** `71:164` · página «Step» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:30:51Z
+- **Figma:** `71:164` · página «Step» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:41:16Z
 - **Descripción (Figma):** Paso numerado de preparación (página de producto, junto al temporizador de 3 minutos de la fase 5) o de receta. Anatomía: número en círculo (Anton, step/number-bg amarillo de marca, 56 px) · texto (body-l) · media opcional (Media=True: imagen o GIF 16:9; el GIF respeta prefers-reduced-motion y lleva pausa). Se usa dentro de &lt;ol&gt;: el número visual es decorativo (aria-hidden) porque la lista ya lo anuncia. Se apilan con space/32.
 - **Anatomía:** sin instancias anidadas
 - **Media:** False, True

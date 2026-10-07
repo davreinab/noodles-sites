@@ -1,7 +1,7 @@
-### Nutrition panel   ⚙️ synced: 2026-10-07T18:30:51Z
+### Nutrition panel   ⚙️ synced: 2026-10-07T18:41:16Z
 
 <!-- ⚙️ GENERATED:start:nutrition-panel -->
-- **Figma:** `71:75` · página «Nutrition» · COMPONENT · 1 variantes · última sync 2026-10-07T18:30:51Z
+- **Figma:** `71:75` · página «Nutrition» · COMPONENT · 1 variantes · última sync 2026-10-07T18:41:16Z
 - **Descripción (Figma):** Panel de nutrición de la página de producto y de receta: título (h3) · base (por 100 g, % IR) · 7 Nutrition bar (energía, grasas, saturadas, hidratos, azúcares, proteínas, sal; Highlight en los claims del pack) · alérgenos en negrita · nota de validación. Accesible como lista de pares nutriente/valor (o &lt;table&gt; con &lt;caption&gt;); las barras son aria-hidden. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods.
 - **Anatomía:** `nutrition-bar` → Highlight=False, `nutrition-bar` → Highlight=True, `claim` → Type=Natural
 - **Propiedades de componente:** ninguna
@@ -18,8 +18,8 @@
   <h3 class="nutrition-panel__title" id="nut-title">Nutrición</h3>
   <p class="nutrition-panel__base">Por 100 g · % de la ingesta de referencia de un adulto medio (8.400 kJ / 2.000 kcal).</p>
   <ul class="nutrition-panel__list">
-  <li class="nutrition-bar"><div class="nutrition-bar__row"><span class="nutrition-bar__label">Grasas</span><span class="nutrition-bar__value">16 g<span class="nutrition-bar__percent">23 % IR</span></span></div><meter class="nutrition-bar__meter" min="0" max="100" value="23" aria-hidden="true"></meter></li>
-  <li class="nutrition-bar nutrition-bar--highlight"><div class="nutrition-bar__row"><span class="nutrition-bar__label">Sal <span class="badge badge--natural">−20 %</span></span><span class="nutrition-bar__value">1,9 g<span class="nutrition-bar__percent">32 % IR</span></span></div><meter class="nutrition-bar__meter" min="0" max="100" value="32" aria-hidden="true"></meter></li>
+  <li class="nutrition-bar"><div class="nutrition-bar__row"><span class="nutrition-bar__label">Grasas</span><span class="nutrition-bar__amount"><span class="nutrition-bar__value">16 g</span><span class="nutrition-bar__percent">23 % IR</span></span></div><meter class="nutrition-bar__meter" min="0" max="100" value="23" aria-hidden="true"></meter></li>
+  <li class="nutrition-bar nutrition-bar--highlight"><div class="nutrition-bar__row"><span class="nutrition-bar__label">Sal</span><span class="nutrition-bar__amount"><span class="badge badge--natural">−20 %</span><span class="nutrition-bar__value">1,9 g</span><span class="nutrition-bar__percent">32 % IR</span></span></div><meter class="nutrition-bar__meter" min="0" max="100" value="32" aria-hidden="true"></meter></li>
   </ul>
   <p class="nutrition-panel__allergens"><strong>Alérgenos:</strong> contiene <strong>trigo</strong> y <strong>soja</strong>.</p>
   <p class="nutrition-panel__note">Valores validados por el equipo de Nutrición de GB Foods.</p>

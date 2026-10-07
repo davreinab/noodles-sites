@@ -12,6 +12,14 @@
       "fonts",
       "logos",
       "decoration"
+    ],
+    "design-system/sync": [
+      "README.md",
+      "variables.json",
+      "components.json",
+      "icons.json",
+      "fonts.json",
+      "parts"
     ]
   }
 }

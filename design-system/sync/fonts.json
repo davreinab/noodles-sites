@@ -1,0 +1,44 @@
+[
+  {
+    "file": "anton-latin.woff2",
+    "family": "Anton · 400",
+    "origin": "SIL OFL 1.1 (`OFL-anton.txt`) · Google Fonts",
+    "token": "`--font-family-display`",
+    "notes": "subconjunto latin"
+  },
+  {
+    "file": "anton-latin-ext.woff2",
+    "family": "Anton · 400",
+    "origin": "SIL OFL 1.1 (`OFL-anton.txt`) · Google Fonts",
+    "token": "`--font-family-display`",
+    "notes": "subconjunto latin-ext"
+  },
+  {
+    "file": "archivo-latin.woff2",
+    "family": "Archivo · variable 400–700",
+    "origin": "SIL OFL 1.1 (`OFL-archivo.txt`) · Google Fonts",
+    "token": "`--font-family-body`",
+    "notes": "subconjunto latin; 700 para alérgenos y valores"
+  },
+  {
+    "file": "archivo-latin-ext.woff2",
+    "family": "Archivo · variable 400–700",
+    "origin": "SIL OFL 1.1 (`OFL-archivo.txt`) · Google Fonts",
+    "token": "`--font-family-body`",
+    "notes": "subconjunto latin-ext"
+  },
+  {
+    "file": "OFL-anton.txt",
+    "family": "Licencia de Anton",
+    "origin": "github.com/google/fonts",
+    "token": "—",
+    "notes": "debe acompañar a las fuentes"
+  },
+  {
+    "file": "OFL-archivo.txt",
+    "family": "Licencia de Archivo",
+    "origin": "github.com/google/fonts",
+    "token": "—",
+    "notes": "debe acompañar a las fuentes"
+  }
+]

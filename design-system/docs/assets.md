@@ -2,7 +2,7 @@
 
 # GB Noodles · Microsites · Assets  ·  _(iconos y fuentes exportados de Figma)_
 
-> Última sync: 2026-10-07T18:30:51Z. Los archivos viven en `../assets/icons/` y `../assets/fonts/`; las pantallas los referencian desde ahí. No existe ningún otro `img/` ni `fonts/` en el proyecto.
+> Última sync: 2026-10-07T18:41:16Z. Los archivos viven en `../assets/icons/` y `../assets/fonts/`; las pantallas los referencian desde ahí. No existe ningún otro `img/` ni `fonts/` en el proyecto.
 
 ## Iconos (`../assets/icons/`)
 | Archivo | Componente Figma | Node ID | Tamaños (tokens `--icon-size-*`) | Uso |
@@ -34,3 +34,9 @@
 ## Fuentes (`../assets/fonts/`)
 | Archivo | Familia · peso | Origen (Figma / Google Fonts / licencia) | Token `--family-*` | Notas |
 |---|---|---|---|---|
+| `OFL-anton.txt` | Licencia de Anton | github.com/google/fonts | — | debe acompañar a las fuentes |
+| `OFL-archivo.txt` | Licencia de Archivo | github.com/google/fonts | — | debe acompañar a las fuentes |
+| `anton-latin-ext.woff2` | Anton · 400 | SIL OFL 1.1 (`OFL-anton.txt`) · Google Fonts | `--font-family-display` | subconjunto latin-ext |
+| `anton-latin.woff2` | Anton · 400 | SIL OFL 1.1 (`OFL-anton.txt`) · Google Fonts | `--font-family-display` | subconjunto latin |
+| `archivo-latin-ext.woff2` | Archivo · variable 400–700 | SIL OFL 1.1 (`OFL-archivo.txt`) · Google Fonts | `--font-family-body` | subconjunto latin-ext |
+| `archivo-latin.woff2` | Archivo · variable 400–700 | SIL OFL 1.1 (`OFL-archivo.txt`) · Google Fonts | `--font-family-body` | subconjunto latin; 700 para alérgenos y valores |

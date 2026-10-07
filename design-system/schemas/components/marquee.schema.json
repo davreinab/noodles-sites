@@ -6,20 +6,13 @@
     "slug": "marquee",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:30:51Z",
+    "lastSync": "2026-10-07T18:41:16Z",
     "description": "Franja de claim en movimiento horizontal continuo (heredada de las landings): «Welcome to the new noodles era» ✱ «The only 100% natural», en color/text/brand-on-inverse sobre color/surface/inverse (12:1). Se usa entre secciones de la Home, a sangre (sin margen lateral). Accesibilidad: es decorativa y repite el claim del hero, así que va con aria-hidden=&quot;true&quot; y un texto oculto no duplicado; con prefers-reduced-motion se para (texto estático) y tiene botón de pausa si dura más de 5 s (WCAG 2.2.2). Sin variables propias.",
     "figmaPage": "Pattern / Marquee",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "9ef807214d12",
-    "lifecycle": {
-      "status": "active",
-      "since": null,
-      "removeIn": null,
-      "replacement": null,
-      "reason": null
-    }
+    "anatomyHash": "9ef807214d12"
   },
   "source": {
     "docs": {

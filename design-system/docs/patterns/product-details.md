@@ -1,7 +1,7 @@
-### Product details   ⚙️ synced: 2026-10-07T18:30:51Z
+### Product details   ⚙️ synced: 2026-10-07T18:41:16Z
 
 <!-- ⚙️ GENERATED:start:product-details -->
-- **Figma:** `94:329` · página «Pattern / Product details» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:30:51Z
+- **Figma:** `94:329` · página «Pattern / Product details» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:41:16Z
 - **Descripción (Figma):** Sección de ingredientes y nutrición (página de producto; en la receta se usa con los valores de la receta): título (h2) · Ingredients (lista jerarquizada, alérgenos en negrita, Link «Ver etiqueta del envase» que abre Modal L con la imagen de la etiqueta) · Nutrition panel (barras proporcionales al % IR, alérgenos y nota de validación). Ancla destino de «Ver ingredientes» del Product hero. Desktop: dos columnas iguales; Mobile: ingredientes y después nutrición. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods. Sin variables propias.
 - **Anatomía:** `ingredients` → Ingredients, `ingredient-main` → Level=Main, `ingredient-secondary` → Level=Secondary, `label-link` → Type=Standalone, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right, `nutrition-panel` → Nutrition panel, `nutrition-bar` → Highlight=False, `nutrition-bar` → Highlight=True, `claim` → Type=Natural
 - **Breakpoint:** Desktop, Mobile
@@ -20,7 +20,7 @@
   <h2 class="section__title" id="pd-title">Ingredientes y nutrición</h2>
   <div class="product-details__grid">
   <section class="ingredients" aria-label="Ingredientes"><ul class="ingredients__list"><li class="ingredient-item">Fideos de <strong>trigo</strong><span class="ingredient-item__percent">52 %</span></li></ul></section>
-  <section class="nutrition-panel" aria-label="Nutrición"><ul class="nutrition-panel__list"><li class="nutrition-bar nutrition-bar--highlight"><div class="nutrition-bar__row"><span class="nutrition-bar__label">Sal <span class="badge badge--natural">−20 %</span></span><span class="nutrition-bar__value">1,9 g<span class="nutrition-bar__percent">32 % IR</span></span></div><meter class="nutrition-bar__meter" min="0" max="100" value="32" aria-hidden="true"></meter></li></ul></section>
+  <section class="nutrition-panel" aria-label="Nutrición"><ul class="nutrition-panel__list"><li class="nutrition-bar nutrition-bar--highlight"><div class="nutrition-bar__row"><span class="nutrition-bar__label">Sal</span><span class="nutrition-bar__amount"><span class="badge badge--natural">−20 %</span><span class="nutrition-bar__value">1,9 g</span><span class="nutrition-bar__percent">32 % IR</span></span></div><meter class="nutrition-bar__meter" min="0" max="100" value="32" aria-hidden="true"></meter></li></ul></section>
   </div>
   </div>
   </section>

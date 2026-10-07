@@ -6,20 +6,13 @@
     "slug": "product-details",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:30:51Z",
+    "lastSync": "2026-10-07T18:41:16Z",
     "description": "Sección de ingredientes y nutrición (página de producto; en la receta se usa con los valores de la receta): título (h2) · Ingredients (lista jerarquizada, alérgenos en negrita, Link «Ver etiqueta del envase» que abre Modal L con la imagen de la etiqueta) · Nutrition panel (barras proporcionales al % IR, alérgenos y nota de validación). Ancla destino de «Ver ingredientes» del Product hero. Desktop: dos columnas iguales; Mobile: ingredientes y después nutrición. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods. Sin variables propias.",
     "figmaPage": "Pattern / Product details",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "cd581b39827a",
-    "lifecycle": {
-      "status": "active",
-      "since": null,
-      "removeIn": null,
-      "replacement": null,
-      "reason": null
-    }
+    "anatomyHash": "cd581b39827a"
   },
   "source": {
     "docs": {
@@ -44,6 +37,7 @@
         "ingredients__list",
         "nutrition-bar",
         "nutrition-bar--highlight",
+        "nutrition-bar__amount",
         "nutrition-bar__label",
         "nutrition-bar__meter",
         "nutrition-bar__percent",
@@ -57,7 +51,7 @@
         "section__inner",
         "section__title"
       ],
-      "example": "<section class=\"section product-details\" id=\"ingredientes\" aria-labelledby=\"pd-title\">\n<div class=\"section__inner\">\n<h2 class=\"section__title\" id=\"pd-title\">Ingredientes y nutrición</h2>\n<div class=\"product-details__grid\">\n<section class=\"ingredients\" aria-label=\"Ingredientes\"><ul class=\"ingredients__list\"><li class=\"ingredient-item\">Fideos de <strong>trigo</strong><span class=\"ingredient-item__percent\">52 %</span></li></ul></section>\n<section class=\"nutrition-panel\" aria-label=\"Nutrición\"><ul class=\"nutrition-panel__list\"><li class=\"nutrition-bar nutrition-bar--highlight\"><div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Sal <span class=\"badge badge--natural\">−20 %</span></span><span class=\"nutrition-bar__value\">1,9 g<span class=\"nutrition-bar__percent\">32 % IR</span></span></div><meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"32\" aria-hidden=\"true\"></meter></li></ul></section>\n</div>\n</div>\n</section>"
+      "example": "<section class=\"section product-details\" id=\"ingredientes\" aria-labelledby=\"pd-title\">\n<div class=\"section__inner\">\n<h2 class=\"section__title\" id=\"pd-title\">Ingredientes y nutrición</h2>\n<div class=\"product-details__grid\">\n<section class=\"ingredients\" aria-label=\"Ingredientes\"><ul class=\"ingredients__list\"><li class=\"ingredient-item\">Fideos de <strong>trigo</strong><span class=\"ingredient-item__percent\">52 %</span></li></ul></section>\n<section class=\"nutrition-panel\" aria-label=\"Nutrición\"><ul class=\"nutrition-panel__list\"><li class=\"nutrition-bar nutrition-bar--highlight\"><div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Sal</span><span class=\"nutrition-bar__amount\"><span class=\"badge badge--natural\">−20 %</span><span class=\"nutrition-bar__value\">1,9 g</span><span class=\"nutrition-bar__percent\">32 % IR</span></span></div><meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"32\" aria-hidden=\"true\"></meter></li></ul></section>\n</div>\n</div>\n</section>"
     }
   },
   "api": {

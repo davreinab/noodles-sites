@@ -6,7 +6,7 @@
     "slug": "icon-rotate-ccw",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T17:42:38Z",
+    "lastSync": "2026-10-07T18:17:24Z",
     "description": "Reiniciar: temporizador. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
     "figmaPage": "Icons",
     "figmaType": "COMPONENT",
@@ -28,8 +28,11 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "icon",
+        "icon-rotate-ccw"
+      ],
+      "example": "<span class=\"icon icon-rotate-ccw\" aria-hidden=\"true\"></span>"
     }
   },
   "api": {

@@ -29,5 +29,13 @@
       "Typography"
     ],
     "attribute": "data-brand"
-  }
+  },
+  "unitlessNameHints": [
+    "weight",
+    "opacity",
+    "z-index",
+    "z/",
+    "layer/",
+    "columns"
+  ]
 }

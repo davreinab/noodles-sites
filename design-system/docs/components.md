@@ -9,46 +9,46 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 57 componentes sincronizados el 2026-10-07T17:42:38Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 57 componentes sincronizados el 2026-10-07T18:17:24Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
 ## Índice
 
-- [Icon / check](components/icon-check.md) · component · `icon-check` · ⬜ 5 pendientes
-- [Icon / chevron-down](components/icon-chevron-down.md) · component · `icon-chevron-down` · ⬜ 5 pendientes
-- [Icon / tiktok](components/icon-tiktok.md) · component · `icon-tiktok` · ⬜ 5 pendientes
-- [Icon / instagram](components/icon-instagram.md) · component · `icon-instagram` · ⬜ 5 pendientes
-- [Icon / x](components/icon-x.md) · component · `icon-x` · ⬜ 5 pendientes
-- [Icon / youtube](components/icon-youtube.md) · component · `icon-youtube` · ⬜ 5 pendientes
-- [Icon / arrow-right](components/icon-arrow-right.md) · component · `icon-arrow-right` · ⬜ 5 pendientes
-- [Icon / arrow-left](components/icon-arrow-left.md) · component · `icon-arrow-left` · ⬜ 5 pendientes
-- [Icon / close](components/icon-close.md) · component · `icon-close` · ⬜ 5 pendientes
-- [Icon / menu](components/icon-menu.md) · component · `icon-menu` · ⬜ 5 pendientes
-- [Icon / plus](components/icon-plus.md) · component · `icon-plus` · ⬜ 5 pendientes
-- [Icon / minus](components/icon-minus.md) · component · `icon-minus` · ⬜ 5 pendientes
-- [Icon / search](components/icon-search.md) · component · `icon-search` · ⬜ 5 pendientes
-- [Icon / play](components/icon-play.md) · component · `icon-play` · ⬜ 5 pendientes
-- [Icon / timer](components/icon-timer.md) · component · `icon-timer` · ⬜ 5 pendientes
-- [Icon / external-link](components/icon-external-link.md) · component · `icon-external-link` · ⬜ 5 pendientes
-- [Icon / circle-alert](components/icon-circle-alert.md) · component · `icon-circle-alert` · ⬜ 5 pendientes
-- [Icon / pause](components/icon-pause.md) · component · `icon-pause` · ⬜ 5 pendientes
-- [Icon / rotate-ccw](components/icon-rotate-ccw.md) · component · `icon-rotate-ccw` · ⬜ 5 pendientes
-- [Icon / info](components/icon-info.md) · component · `icon-info` · ⬜ 5 pendientes
-- [Icon / circle-check](components/icon-circle-check.md) · component · `icon-circle-check` · ⬜ 5 pendientes
-- [Icon / triangle-alert](components/icon-triangle-alert.md) · component · `icon-triangle-alert` · ⬜ 5 pendientes
-- [Icon / message-circle](components/icon-message-circle.md) · component · `icon-message-circle` · ⬜ 5 pendientes
-- [Decoration / Noodle](components/decoration-noodle.md) · component · `decoration-noodle` · ⬜ 5 pendientes
-- [Logo / GB Foods](components/logo-gb-foods.md) · component · `logo-gb-foods` · ⬜ 5 pendientes
-- [Logo / Aiki](components/logo-aiki.md) · component · `logo-aiki` · ⬜ 5 pendientes
-- [Logo / Yatekomo](components/logo-yatekomo.md) · component · `logo-yatekomo` · ⬜ 5 pendientes
-- [Logo / Saikebon](components/logo-saikebon.md) · component · `logo-saikebon` · ⬜ 5 pendientes
-- [Logo / Daisuki](components/logo-daisuki.md) · component · `logo-daisuki` · ⬜ 5 pendientes
-- [Button](components/button.md) · component · `button` · ⬜ 5 pendientes
-- [Icon button](components/icon-button.md) · component · `icon-button` · ⬜ 5 pendientes
-- [Link](components/link.md) · component · `link` · ⬜ 5 pendientes
-- [Badge](components/badge.md) · component · `badge` · ⬜ 5 pendientes
-- [Chip](components/chip.md) · component · `chip` · ⬜ 5 pendientes
+- [Icon / check](components/icon-check.md) · component · `icon-check` · ✅ criterio completo
+- [Icon / chevron-down](components/icon-chevron-down.md) · component · `icon-chevron-down` · ✅ criterio completo
+- [Icon / tiktok](components/icon-tiktok.md) · component · `icon-tiktok` · ✅ criterio completo
+- [Icon / instagram](components/icon-instagram.md) · component · `icon-instagram` · ✅ criterio completo
+- [Icon / x](components/icon-x.md) · component · `icon-x` · ✅ criterio completo
+- [Icon / youtube](components/icon-youtube.md) · component · `icon-youtube` · ✅ criterio completo
+- [Icon / arrow-right](components/icon-arrow-right.md) · component · `icon-arrow-right` · ✅ criterio completo
+- [Icon / arrow-left](components/icon-arrow-left.md) · component · `icon-arrow-left` · ✅ criterio completo
+- [Icon / close](components/icon-close.md) · component · `icon-close` · ✅ criterio completo
+- [Icon / menu](components/icon-menu.md) · component · `icon-menu` · ✅ criterio completo
+- [Icon / plus](components/icon-plus.md) · component · `icon-plus` · ✅ criterio completo
+- [Icon / minus](components/icon-minus.md) · component · `icon-minus` · ✅ criterio completo
+- [Icon / search](components/icon-search.md) · component · `icon-search` · ✅ criterio completo
+- [Icon / play](components/icon-play.md) · component · `icon-play` · ✅ criterio completo
+- [Icon / timer](components/icon-timer.md) · component · `icon-timer` · ✅ criterio completo
+- [Icon / external-link](components/icon-external-link.md) · component · `icon-external-link` · ✅ criterio completo
+- [Icon / circle-alert](components/icon-circle-alert.md) · component · `icon-circle-alert` · ✅ criterio completo
+- [Icon / pause](components/icon-pause.md) · component · `icon-pause` · ✅ criterio completo
+- [Icon / rotate-ccw](components/icon-rotate-ccw.md) · component · `icon-rotate-ccw` · ✅ criterio completo
+- [Icon / info](components/icon-info.md) · component · `icon-info` · ✅ criterio completo
+- [Icon / circle-check](components/icon-circle-check.md) · component · `icon-circle-check` · ✅ criterio completo
+- [Icon / triangle-alert](components/icon-triangle-alert.md) · component · `icon-triangle-alert` · ✅ criterio completo
+- [Icon / message-circle](components/icon-message-circle.md) · component · `icon-message-circle` · ✅ criterio completo
+- [Decoration / Noodle](components/decoration-noodle.md) · component · `decoration-noodle` · ✅ criterio completo
+- [Logo / GB Foods](components/logo-gb-foods.md) · component · `logo-gb-foods` · ✅ criterio completo
+- [Logo / Aiki](components/logo-aiki.md) · component · `logo-aiki` · ✅ criterio completo
+- [Logo / Yatekomo](components/logo-yatekomo.md) · component · `logo-yatekomo` · ✅ criterio completo
+- [Logo / Saikebon](components/logo-saikebon.md) · component · `logo-saikebon` · ✅ criterio completo
+- [Logo / Daisuki](components/logo-daisuki.md) · component · `logo-daisuki` · ✅ criterio completo
+- [Button](components/button.md) · component · `button` · ✅ criterio completo
+- [Icon button](components/icon-button.md) · component · `icon-button` · ✅ criterio completo
+- [Link](components/link.md) · component · `link` · ✅ criterio completo
+- [Badge](components/badge.md) · component · `badge` · ✅ criterio completo
+- [Chip](components/chip.md) · component · `chip` · ✅ criterio completo
 - [Input](components/input.md) · component · `input` · ⬜ 5 pendientes
 - [Textarea](components/textarea.md) · component · `textarea` · ⬜ 5 pendientes
 - [Checkbox](components/checkbox.md) · component · `checkbox` · ⬜ 5 pendientes

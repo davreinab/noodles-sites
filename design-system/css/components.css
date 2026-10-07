@@ -6,6 +6,292 @@
    Es el ÚNICO archivo CSS del DS: no se crea patterns.css, screens.css ni similares —
    patrones y capa de pantalla van aquí, en sus secciones. */
 
-/* ── Tokens dimensionales (espejo de la colección «Components» de Figma) ── */
+/* ── Tokens dimensionales (espejo de la colección «Components» de Figma) ──
+   Viven en tokens.css (generado por el sync): --chip-height-s/m, --icon-size-*.
+   Aquí no se redefine ninguno. */
 :root {
+}
+
+/* Foco común (patterns.md § Decisiones recurrentes, 2026-10-07): contorno de 2 px pegado,
+   sin hueco, que sigue la forma del componente. Cada componente aporta su color *-focus-ring. */
+
+/* ══════════════════════════════════════════════════════════════════════════
+   ICON · glifos UI (Lucide, trazo 2,5) y redes sociales
+   El glifo es una máscara del SVG de assets/icons; el color sale de `color`
+   (currentColor), así que hereda el del componente que lo contiene.
+   ══════════════════════════════════════════════════════════════════════════ */
+.icon {
+  display: inline-block;
+  flex: none;
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+  color: var(--icon-color-default);
+  background-color: currentColor;
+  -webkit-mask: var(--icon-src) center / contain no-repeat;
+  mask: var(--icon-src) center / contain no-repeat;
+}
+.icon--sm { width: var(--icon-size-sm); height: var(--icon-size-sm); }
+.icon--lg { width: var(--icon-size-lg); height: var(--icon-size-lg); }
+.icon--xl { width: var(--icon-size-xl); height: var(--icon-size-xl); }
+.icon--inverse { color: var(--icon-color-inverse); }
+/* dentro de un componente, el icono toma el color del texto del componente */
+.button .icon, .icon-button .icon, .link .icon, .chip .icon { color: inherit; }
+
+.icon-arrow-left      { --icon-src: url("../assets/icons/arrow-left.svg"); }
+.icon-arrow-right     { --icon-src: url("../assets/icons/arrow-right.svg"); }
+.icon-check           { --icon-src: url("../assets/icons/check.svg"); }
+.icon-chevron-down    { --icon-src: url("../assets/icons/chevron-down.svg"); }
+.icon-circle-alert    { --icon-src: url("../assets/icons/circle-alert.svg"); }
+.icon-circle-check    { --icon-src: url("../assets/icons/circle-check.svg"); }
+.icon-close           { --icon-src: url("../assets/icons/close.svg"); }
+.icon-external-link   { --icon-src: url("../assets/icons/external-link.svg"); }
+.icon-info            { --icon-src: url("../assets/icons/info.svg"); }
+.icon-menu            { --icon-src: url("../assets/icons/menu.svg"); }
+.icon-message-circle  { --icon-src: url("../assets/icons/message-circle.svg"); }
+.icon-minus           { --icon-src: url("../assets/icons/minus.svg"); }
+.icon-pause           { --icon-src: url("../assets/icons/pause.svg"); }
+.icon-play            { --icon-src: url("../assets/icons/play.svg"); }
+.icon-plus            { --icon-src: url("../assets/icons/plus.svg"); }
+.icon-rotate-ccw      { --icon-src: url("../assets/icons/rotate-ccw.svg"); }
+.icon-search          { --icon-src: url("../assets/icons/search.svg"); }
+.icon-timer           { --icon-src: url("../assets/icons/timer.svg"); }
+.icon-triangle-alert  { --icon-src: url("../assets/icons/triangle-alert.svg"); }
+.icon-instagram       { --icon-src: url("../assets/icons/instagram.svg"); }
+.icon-tiktok          { --icon-src: url("../assets/icons/tiktok.svg"); }
+.icon-x               { --icon-src: url("../assets/icons/x.svg"); }
+.icon-youtube         { --icon-src: url("../assets/icons/youtube.svg"); }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   LOGO · marcas y GB Foods (assets/logos, exportados del maestro tal cual)
+   ══════════════════════════════════════════════════════════════════════════ */
+.logo {
+  display: block;
+  width: auto;
+  height: var(--space-80);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   DECORATION / NOODLE · fideo decorativo (assets/decoration, máscara)
+   ══════════════════════════════════════════════════════════════════════════ */
+.decoration-noodle {
+  display: block;
+  height: 100%; /* alto lo da el contenedor; el ancho sale de la proporción de cada forma */
+  aspect-ratio: 60 / 481;
+  color: var(--decoration-noodle-brand);
+  background-color: currentColor;
+  -webkit-mask: var(--noodle-src, url("../assets/decoration/noodle-1.svg")) center / contain no-repeat;
+  mask: var(--noodle-src, url("../assets/decoration/noodle-1.svg")) center / contain no-repeat;
+  pointer-events: none;
+}
+.decoration-noodle--2 { --noodle-src: url("../assets/decoration/noodle-2.svg"); aspect-ratio: 72 / 481; }
+.decoration-noodle--3 { --noodle-src: url("../assets/decoration/noodle-3.svg"); aspect-ratio: 63 / 481; }
+.decoration-noodle--4 { --noodle-src: url("../assets/decoration/noodle-4.svg"); aspect-ratio: 82 / 481; }
+.decoration-noodle--5 { --noodle-src: url("../assets/decoration/noodle-5.svg"); aspect-ratio: 68 / 481; }
+.decoration-noodle--accent { color: var(--decoration-noodle-accent); }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   BUTTON · Hierarchy Primary (por defecto) · Secondary · Inverse · Size M (por defecto) · L
+   El borde de 4 px se dibuja dentro: el padding le descuenta su grosor para que M mida 48 y L 64.
+   ══════════════════════════════════════════════════════════════════════════ */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  padding: calc(var(--space-16) - var(--border-width-thick)) calc(var(--space-24) - var(--border-width-thick));
+  border: var(--border-width-thick) solid var(--button-primary-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-label);
+  line-height: var(--font-line-height-desktop-label);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard),
+              color var(--motion-duration-fast) var(--motion-easing-standard),
+              border-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.button .icon { width: var(--icon-size-sm); height: var(--icon-size-sm); }
+.button:hover {
+  background-color: var(--button-primary-bg-hover);
+  color: var(--button-primary-text-hover);
+  border-color: var(--button-primary-border-hover);
+}
+.button:focus-visible { outline: var(--border-width-thin) solid var(--button-primary-focus-ring); outline-offset: 0; }
+
+.button--secondary {
+  background-color: transparent;
+  color: var(--button-secondary-text);
+  border-color: var(--button-secondary-border);
+}
+.button--secondary:hover {
+  background-color: var(--button-secondary-bg-hover);
+  color: var(--button-secondary-text-hover);
+  border-color: var(--button-secondary-border-hover);
+}
+.button--secondary:focus-visible { outline-color: var(--button-secondary-focus-ring); }
+
+.button--inverse {
+  background-color: var(--button-inverse-bg);
+  color: var(--button-inverse-text);
+  border-color: var(--button-inverse-border);
+}
+.button--inverse:hover {
+  background-color: var(--button-inverse-bg-hover);
+  color: var(--button-inverse-text-hover);
+  border-color: var(--button-inverse-border-hover);
+}
+.button--inverse:focus-visible { outline-color: var(--button-inverse-focus-ring); }
+
+.button--l {
+  gap: var(--space-8);
+  padding: calc(var(--space-24) - var(--border-width-thick)) calc(var(--space-32) - var(--border-width-thick));
+}
+
+.button:disabled, .button[aria-disabled="true"],
+.button:disabled:hover, .button[aria-disabled="true"]:hover {
+  background-color: var(--button-disabled-bg);
+  color: var(--button-disabled-text);
+  border-color: var(--button-disabled-border);
+  cursor: not-allowed;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   ICON BUTTON · botón solo icono · mismas jerarquías que Button · M 56 · L 64
+   Siempre con nombre accesible (aria-label): el icono es decorativo.
+   ══════════════════════════════════════════════════════════════════════════ */
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--space-16) - var(--border-width-thick));
+  border: var(--border-width-thick) solid var(--button-primary-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  cursor: pointer;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard),
+              color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.icon-button .icon { width: var(--icon-size-md); height: var(--icon-size-md); }
+.icon-button:hover { background-color: var(--button-primary-bg-hover); color: var(--button-primary-text-hover); border-color: var(--button-primary-border-hover); }
+.icon-button:focus-visible { outline: var(--border-width-thin) solid var(--button-primary-focus-ring); outline-offset: 0; }
+.icon-button--secondary { background-color: transparent; color: var(--button-secondary-text); border-color: var(--button-secondary-border); }
+.icon-button--secondary:hover { background-color: var(--button-secondary-bg-hover); color: var(--button-secondary-text-hover); border-color: var(--button-secondary-border-hover); }
+.icon-button--secondary:focus-visible { outline-color: var(--button-secondary-focus-ring); }
+.icon-button--inverse { background-color: var(--button-inverse-bg); color: var(--button-inverse-text); border-color: var(--button-inverse-border); }
+.icon-button--inverse:hover { background-color: var(--button-inverse-bg-hover); color: var(--button-inverse-text-hover); border-color: var(--button-inverse-border-hover); }
+.icon-button--inverse:focus-visible { outline-color: var(--button-inverse-focus-ring); }
+.icon-button--l .icon { width: var(--icon-size-lg); height: var(--icon-size-lg); }
+.icon-button:disabled, .icon-button[aria-disabled="true"],
+.icon-button:disabled:hover, .icon-button[aria-disabled="true"]:hover {
+  background-color: var(--button-disabled-bg);
+  color: var(--button-disabled-text);
+  border-color: var(--button-disabled-border);
+  cursor: not-allowed;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   LINK · Type Inline (por defecto, subrayado dentro de texto) · Standalone (Anton + flecha)
+          Surface Light (por defecto) · Dark (sobre tinta)
+   ══════════════════════════════════════════════════════════════════════════ */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  border-radius: var(--radius-sm);
+  color: var(--link-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+  text-decoration: underline;
+  text-decoration-thickness: var(--border-width-thin);
+  text-underline-offset: var(--space-4);
+  transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.link:hover { color: var(--link-hover); }
+.link:focus-visible { outline: var(--border-width-thin) solid var(--link-focus-ring); outline-offset: 0; }
+.link .icon { width: var(--icon-size-sm); height: var(--icon-size-sm); }
+
+.link--standalone {
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-label);
+  line-height: var(--font-line-height-desktop-label);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.link--standalone:hover { text-decoration: underline; }
+
+.link--dark { color: var(--link-inverse); }
+.link--dark:hover { color: var(--link-inverse-hover); }
+.link--dark:focus-visible { outline-color: var(--link-inverse-focus-ring); }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   BADGE · etiqueta no interactiva · Type New (por defecto) · Natural · Neutral
+   ══════════════════════════════════════════════════════════════════════════ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-pill);
+  background-color: var(--badge-new-bg);
+  color: var(--badge-new-text);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-mobile-label);
+  line-height: var(--font-line-height-mobile-label);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.badge--natural { background-color: var(--badge-natural-bg); color: var(--badge-natural-text); }
+.badge--neutral { background-color: var(--badge-neutral-bg); color: var(--badge-neutral-text); }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CHIP · píldora de filtro o producto · Size S 36 (por defecto) · M 40
+          State Default · Hover · Selected (aria-pressed / aria-checked) · Disabled
+   ══════════════════════════════════════════════════════════════════════════ */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  min-height: var(--chip-height-s);
+  padding: calc(var(--space-8) - var(--border-width-thin)) calc(var(--space-16) - var(--border-width-thin));
+  border: var(--border-width-thin) solid var(--chip-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--chip-bg);
+  color: var(--chip-text);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-s);
+  line-height: var(--font-line-height-desktop-body-s);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.chip .icon { width: var(--icon-size-sm); height: var(--icon-size-sm); }
+.chip--m { min-height: var(--chip-height-m); }
+.chip:hover { background-color: var(--chip-bg-hover); }
+.chip:focus-visible { outline: var(--border-width-thin) solid var(--chip-border); outline-offset: 0; }
+.chip[aria-pressed="true"], .chip[aria-checked="true"], .chip--selected {
+  background-color: var(--chip-bg-selected);
+  color: var(--chip-text-selected);
+}
+.chip:disabled, .chip[aria-disabled="true"] {
+  background-color: var(--chip-bg-disabled);
+  color: var(--chip-text-disabled);
+  border-color: var(--chip-bg-disabled);
+  cursor: not-allowed;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   UTILIDADES · texto solo para lectores de pantalla
+   ══════════════════════════════════════════════════════════════════════════ */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }

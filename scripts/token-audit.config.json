@@ -5,5 +5,13 @@
   ],
   "allow": {
     "lines": []
+  },
+  "structure": {
+    "design-system/assets": [
+      "icons",
+      "fonts",
+      "logos",
+      "decoration"
+    ]
   }
 }

@@ -405,7 +405,9 @@ class Tokens:
         if tok["type"] == "BOOLEAN":
             return "1" if raw else "0"
         if isinstance(raw, str):
-            return raw if re.fullmatch(r"[\w\s,.'\"%-]+", raw) else json.dumps(raw)
+            if re.fullmatch(r"[\w\s,.'\"%-]+", raw) or re.fullmatch(r"[a-z-]+\([\d\s.,%-]*\)", raw):
+                return raw  # palabra suelta o función CSS (cubic-bezier, steps…): sin comillas
+            return json.dumps(raw)
         return str(raw)
 
     def default_mode(self, col):

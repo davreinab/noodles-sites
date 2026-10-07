@@ -1,7 +1,7 @@
-### Tab   ⚙️ synced: 2026-10-07T17:42:38Z
+### Tab   ⚙️ synced: 2026-10-07T18:17:24Z
 
 <!-- ⚙️ GENERATED:start:tab -->
-- **Figma:** `54:58` · página «Tab» · COMPONENT_SET · 4 variantes · última sync 2026-10-07T17:42:38Z
+- **Figma:** `54:58` · página «Tab» · COMPONENT_SET · 4 variantes · última sync 2026-10-07T18:17:24Z
 - **Descripción (Figma):** Pestaña del primer nivel del filtro de productos (Cups / Bags / Sauces). Selected en tinta con texto crema. En código: role=&quot;tablist&quot; / role=&quot;tab&quot; con aria-selected y flechas izquierda/derecha para moverse. Alto 48 (mínimo táctil).
 - **Anatomía:** sin instancias anidadas
 - **State:** Default, Hover, Selected, Focus

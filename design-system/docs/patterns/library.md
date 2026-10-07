@@ -1,7 +1,7 @@
-### Library   ⚙️ synced: 2026-10-07T17:42:38Z
+### Library   ⚙️ synced: 2026-10-07T18:17:24Z
 
 <!-- ⚙️ GENERATED:start:library -->
-- **Figma:** `96:1453` · página «Pattern / Library» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T17:42:38Z
+- **Figma:** `96:1453` · página «Pattern / Library» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:17:24Z
 - **Descripción (Figma):** Librería (Product library; también Recipe y Contest library cambiando la card y el filtro): cabecera de página (h1 + entradilla) · Product filter a sangre (tipo → línea → sabor; sin filtros que den resultados vacíos) · rejilla de cards (Desktop 4 columnas de 310 px con gutter layout/gutter y space/48 entre filas; Mobile 1 columna) · Button Secondary «Ver más» (carga más, no pagina; el foco va a la primera card nueva y se anuncia el número cargado). Recipe library: Recipe card en 3 columnas sin buscador por ingredientes. Contest library: Contest card en 2-3 columnas; la página agregadora es opcional. Al filtrar se anuncia «N productos» (aria-live). Sin variables propias.
 - **Anatomía:** `filter` → Breakpoint=Desktop, `tab` → State=Selected, `tab` → State=Default, `chip` → Size=S, State=Selected, `icon-leading` → Icon / check, `chip` → Size=S, State=Default, `icon-leading` → Icon / check, `product-card` → State=Default, `badge` → Type=New, `link` → Type=Standalone, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right, `badge` → Type=New, `load-more` → Hierarchy=Secondary, Size=M, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right
 - **Breakpoint:** Desktop, Mobile

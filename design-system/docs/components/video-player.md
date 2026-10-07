@@ -1,7 +1,7 @@
-### Video player   ⚙️ synced: 2026-10-07T17:42:38Z
+### Video player   ⚙️ synced: 2026-10-07T18:17:24Z
 
 <!-- ⚙️ GENERATED:start:video-player -->
-- **Figma:** `83:70` · página «Video player» · COMPONENT_SET · 4 variantes · última sync 2026-10-07T17:42:38Z
+- **Figma:** `83:70` · página «Video player» · COMPONENT_SET · 4 variantes · última sync 2026-10-07T18:17:24Z
 - **Descripción (Figma):** Reproductor de vídeo como fachada. State=Poster: póster de marca (sin imagen generada con IA), botón play de 80 px (video/play-bg, borde grueso) y duración. State=Playing: al pulsar se sustituye por el reproductor real (iframe de YouTube con youtube-nocookie o &lt;video&gt; MP4) con sus controles nativos; no se carga nada de terceros antes del clic (privacidad y rendimiento). Ratio=16:9 (preparación, promo de Home, concursos) y 9:16 (recetas en vídeo vertical). Accesibilidad: el play es un &lt;button&gt; con nombre «Reproducir vídeo: &lt;título&gt; (0:45)»; foco con anillo video/focus-ring amarillo sobre el póster oscuro; subtítulos obligatorios si el vídeo tiene voz; sin autoplay con sonido; el GIF de preparación usa este mismo componente en MP4 silencioso en bucle con botón de pausa.
 - **Anatomía:** `icon-play` → Icon / play
 - **Ratio:** 16:9, 9:16

@@ -6,7 +6,7 @@
     "slug": "recipe-hero",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T17:42:38Z",
+    "lastSync": "2026-10-07T18:17:24Z",
     "description": "Cabecera de la página de receta: kicker «Receta» · título (h1) · tiempo (timer) y dificultad · descripción · productos usados como Chip M (enlazan a la ficha de producto; lista &lt;ul&gt;) · imagen principal de marca (sin vídeo al principio, regla de negocio). Fondo color/surface/brand. Después van Product details (ingredientes y nutrición de la receta) y Preparation sin Timer con Step Media=True. Desktop: texto a la izquierda; Mobile: imagen arriba. Sin variables propias.",
     "figmaPage": "Pattern / Recipe hero",
     "figmaType": "COMPONENT_SET",

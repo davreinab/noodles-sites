@@ -6,13 +6,13 @@
     "slug": "contest-card",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T17:42:38Z",
+    "lastSync": "2026-10-07T18:17:24Z",
     "description": "Card de concurso (Contest library, módulo de Home). Status=Active: Badge Natural «En curso» y Button Primary «Participar» (si el concurso es externo o iframe de agencia, activar Icon trailing con external-link y abrir en pestaña nueva avisándolo). Status=Closed: Badge Neutral «Finalizado» y Link «Ver ganadores». Las bases legales (Link inline) aparecen siempre: es obligatorio publicarlas. La card no es enlace en bloque: tiene dos acciones. Desktop 448 px; en móvil FILL.",
     "figmaPage": "Contest card",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "730a690431d4"
+    "anatomyHash": "77f9f8040971"
   },
   "source": {
     "docs": {
@@ -156,6 +156,7 @@
       "icon/size/sm",
       "link/default",
       "radius/md",
+      "radius/none",
       "radius/pill",
       "space/16",
       "space/24",
@@ -237,7 +238,11 @@
       "fontSize: font/size/desktop/body-m",
       "lineHeight: font/line-height/desktop/body-m",
       "color: link/default",
-      "strokes: link/default"
+      "strokes: link/default",
+      "topLeftRadius: radius/none",
+      "topRightRadius: radius/none",
+      "bottomLeftRadius: radius/none",
+      "bottomRightRadius: radius/none"
     ],
     "textStyles": [
       "Mobile/label",

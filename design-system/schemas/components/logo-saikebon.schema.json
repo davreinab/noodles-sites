@@ -6,7 +6,7 @@
     "slug": "logo-saikebon",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T17:42:38Z",
+    "lastSync": "2026-10-07T18:17:24Z",
     "description": "Logo Saikebon. Solo PNG: pedir vectoriales originales. No se recolorea.",
     "figmaPage": "Brand",
     "figmaType": "COMPONENT_SET",
@@ -28,8 +28,10 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "logo"
+      ],
+      "example": "<img class=\"logo\" src=\"../assets/logos/logo-saikebon-positive.svg\" alt=\"Saikebon\">\n<img class=\"logo\" src=\"../assets/logos/logo-saikebon-negative.svg\" alt=\"Saikebon\">"
     }
   },
   "api": {

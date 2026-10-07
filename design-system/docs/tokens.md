@@ -2,7 +2,7 @@
 
 # GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
 
-> Última sync: **2026-10-07T17:42:38Z** · modo de adopción: `new` · 325 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-07T18:17:24Z** · modo de adopción: `new` · 325 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice
@@ -332,7 +332,7 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 
 | Token | CSS | Tipo | Desktop | Tablet | Mobile | Scopes | Descripción |
 |---|---|---|---|---|---|---|---|
-| `layout/columns` | `--layout-columns` | FLOAT | `12px` | `8px` | `4px` | — | Número de columnas del grid |
+| `layout/columns` | `--layout-columns` | FLOAT | `12` | `8` | `4` | — | Número de columnas del grid |
 | `layout/margin` | `--layout-margin` | FLOAT | `64px` | `40px` | `24px` | GAP | Margen lateral de página |
 | `layout/gutter` | `--layout-gutter` | FLOAT | `24px` | `24px` | `16px` | GAP | Separación entre columnas |
 | `layout/content-max` | `--layout-content-max` | FLOAT | `1280px` | `1280px` | `1280px` | WIDTH_HEIGHT | Ancho máximo del contenido |
@@ -393,8 +393,8 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 | `motion/duration/fast` | `--motion-duration-fast` | FLOAT | `150ms` | — | Microinteracciones: hover, foco |
 | `motion/duration/base` | `--motion-duration-base` | FLOAT | `250ms` | — | Transiciones por defecto |
 | `motion/duration/slow` | `--motion-duration-slow` | FLOAT | `400ms` | — | Entradas de modales y paneles |
-| `motion/easing/standard` | `--motion-easing-standard` | STRING | `"cubic-bezier(0.2, 0, 0, 1)"` | — | Easing por defecto |
-| `motion/easing/emphasized` | `--motion-easing-emphasized` | STRING | `"cubic-bezier(0.3, 1.3, 0.4, 1)"` | — | Con rebote: momentos de marca |
+| `motion/easing/standard` | `--motion-easing-standard` | STRING | `cubic-bezier(0.2, 0, 0, 1)` | — | Easing por defecto |
+| `motion/easing/emphasized` | `--motion-easing-emphasized` | STRING | `cubic-bezier(0.3, 1.3, 0.4, 1)` | — | Con rebote: momentos de marca |
 
 ## Foundations
 

@@ -2352,7 +2352,11 @@
               "color: link/default",
               "width: icon/size/sm",
               "height: icon/size/sm",
-              "strokes: link/default"
+              "strokes: link/default",
+              "topLeftRadius: radius/none",
+              "topRightRadius: radius/none",
+              "bottomLeftRadius: radius/none",
+              "bottomRightRadius: radius/none"
             ],
             "textStyles": [
               "Mobile/label",
@@ -2537,7 +2541,11 @@
               "fontSize: font/size/desktop/label",
               "lineHeight: font/line-height/desktop/label",
               "color: link/default",
-              "strokes: link/default"
+              "strokes: link/default",
+              "topLeftRadius: radius/none",
+              "topRightRadius: radius/none",
+              "bottomLeftRadius: radius/none",
+              "bottomRightRadius: radius/none"
             ],
             "textStyles": [
               "Desktop/caption",
@@ -2718,7 +2726,11 @@
               "fontSize: font/size/desktop/body-m",
               "lineHeight: font/line-height/desktop/body-m",
               "color: link/default",
-              "strokes: link/default"
+              "strokes: link/default",
+              "topLeftRadius: radius/none",
+              "topRightRadius: radius/none",
+              "bottomLeftRadius: radius/none",
+              "bottomRightRadius: radius/none"
             ],
             "textStyles": [
               "Mobile/label",

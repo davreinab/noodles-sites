@@ -1,7 +1,7 @@
-### Hero   ⚙️ synced: 2026-10-07T17:42:38Z
+### Hero   ⚙️ synced: 2026-10-07T18:17:24Z
 
 <!-- ⚙️ GENERATED:start:hero -->
-- **Figma:** `88:132` · página «Pattern / Hero» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T17:42:38Z
+- **Figma:** `88:132` · página «Pattern / Hero» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:17:24Z
 - **Descripción (Figma):** Patrón hero de la Home. Slider de máximo 3 slides (regla de negocio): cada slide = imagen de producto o campaña (de marca, sin IA) · sello Badge Natural «The only 100% natural» · claim «Welcome to the new noodles era» (display) · texto · CTA a la acción principal (campaña activa o, sin campaña, producto). Controles: puntos (el activo relleno; el estado no depende solo del color: forma rellena vs contorno) y flechas Icon button. Accesibilidad: carrusel con aria-roledescription=&quot;carrusel&quot;, cada slide «1 de 3», sin autoplay (o con pausa visible y parado con prefers-reduced-motion); flechas con nombre «Slide anterior/siguiente». Fondo color/surface/brand. Desktop: texto a la izquierda e imagen a la derecha; Mobile: imagen arriba. Sin variables propias.
 - **Anatomía:** `seal` → Type=Natural, `cta` → Hierarchy=Primary, Size=L, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right, `prev` → Hierarchy=Secondary, Size=M, State=Default, `icon` → Icon / arrow-left, `next` → Hierarchy=Secondary, Size=M, State=Default, `icon` → Icon / arrow-right
 - **Breakpoint:** Desktop, Mobile

@@ -1,7 +1,7 @@
-### Icon button   ⚙️ synced: 2026-10-07T17:42:38Z
+### Icon button   ⚙️ synced: 2026-10-07T18:17:24Z
 
 <!-- ⚙️ GENERATED:start:icon-button -->
-- **Figma:** `33:401` · página «Icon button» · COMPONENT_SET · 24 variantes · última sync 2026-10-07T17:42:38Z
+- **Figma:** `33:401` · página «Icon button» · COMPONENT_SET · 24 variantes · última sync 2026-10-07T18:17:24Z
 - **Descripción (Figma):** Botón solo con icono: cerrar, menú, flechas del slider, play. Mismas jerarquías y colores que Button. M 56 px (icono 24 + padding 16), L 64 px (icono 32). Accesibilidad: requiere nombre accesible (aria-label) porque no tiene texto visible.
 - **Anatomía:** `icon` → Icon / close
 - **Hierarchy:** Primary, Secondary, Inverse
@@ -13,10 +13,11 @@
 - **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `button/primary/bg`, `button/primary/border`, `button/primary/text`
 <!-- ⚙️ GENERATED:end:icon-button -->
 
-- **Propósito:** ⬜ TODO
-- **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; se copia a `source.code.example` del schema)_
+- **Propósito:** Botón solo con icono para acciones universales: cerrar, buscar, menú, anterior y siguiente. Mismas jerarquías y colores que Button; M 56 y L 64.
+- **Ejemplo de código:**
   ```html
-  <!-- ⬜ TODO -->
+  <button class="icon-button icon-button--secondary" type="button" aria-label="Buscar"><span class="icon icon-search" aria-hidden="true"></span></button>
+  <button class="icon-button icon-button--inverse" type="button" aria-label="Cerrar menú"><span class="icon icon-close" aria-hidden="true"></span></button>
   ```
-- **Accesibilidad (pares AA verificados):** ⬜ TODO
-- **Cuándo usar / qué NO hace:** ⬜ TODO
+- **Accesibilidad (pares AA verificados):** Icono (elemento gráfico, mínimo 3:1): crema sobre tinta 17,2:1 en Primary, tinta sobre crema 17,2:1 en Secondary, tinta sobre crema 17,2:1 en Inverse. Rol `<button>`; el nombre sale **siempre** de `aria-label` (no hay texto visible), y si abre algo se añade `aria-expanded`/`aria-controls` (menú). Teclado: Enter y Espacio. Foco: contorno de 2 px pegado, como Button. Área táctil 56 o 64 px.
+- **Cuándo usar / qué NO hace:** Solo para acciones cuyo icono se entiende sin texto (cerrar, buscar, menú, flechas de carrusel). Si la acción necesita explicación, Button con texto. No se usa como decoración ni para navegar a páginas.

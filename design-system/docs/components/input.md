@@ -1,7 +1,7 @@
-### Input   ⚙️ synced: 2026-10-07T17:42:38Z
+### Input   ⚙️ synced: 2026-10-07T18:17:24Z
 
 <!-- ⚙️ GENERATED:start:input -->
-- **Figma:** `47:122` · página «Input» · COMPONENT_SET · 6 variantes · última sync 2026-10-07T17:42:38Z
+- **Figma:** `47:122` · página «Input» · COMPONENT_SET · 6 variantes · última sync 2026-10-07T18:17:24Z
 - **Descripción (Figma):** Campo de texto de una línea (formularios de concursos con estructura propia). Etiqueta siempre visible (no se sustituye por el placeholder). Error: borde rojo + icono + mensaje (nunca solo color); el mensaje se asocia al campo con aria-describedby. Required muestra asterisco y requiere aria-required. El valor y el texto de ayuda se editan en la instancia.
 - **Anatomía:** `icon-error` → Icon / circle-alert
 - **State:** Default, Hover, Focus, Filled, Error, Disabled

@@ -6,7 +6,7 @@
     "slug": "button",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T17:42:38Z",
+    "lastSync": "2026-10-07T18:17:24Z",
     "description": "Botón de acción. Hierarchy: Primary (acción principal, 1 por vista), Secondary (alternativa), Inverse (sobre fondos oscuros). Size M (48) por defecto; L (64) para hero y CTA destacados. Label en Anton mayúsculas. Iconos opcionales delante/detrás (INSTANCE_SWAP). Focus: anillo exterior visible. Disabled sin opacidad (colores propios).",
     "figmaPage": "Button",
     "figmaType": "COMPONENT_SET",
@@ -28,8 +28,15 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "button",
+        "button--inverse",
+        "button--l",
+        "button--secondary",
+        "icon",
+        "icon-arrow-right"
+      ],
+      "example": "<button class=\"button\" type=\"button\">Dónde comprar</button>\n<a class=\"button button--secondary\" href=\"/recetas\">Ver recetas <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a>\n<button class=\"button button--inverse button--l\" type=\"button\">Participar</button>\n<button class=\"button\" type=\"button\" aria-disabled=\"true\">No disponible</button>"
     }
   },
   "api": {

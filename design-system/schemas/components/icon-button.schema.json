@@ -6,7 +6,7 @@
     "slug": "icon-button",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T17:42:38Z",
+    "lastSync": "2026-10-07T18:17:24Z",
     "description": "Botón solo con icono: cerrar, menú, flechas del slider, play. Mismas jerarquías y colores que Button. M 56 px (icono 24 + padding 16), L 64 px (icono 32). Accesibilidad: requiere nombre accesible (aria-label) porque no tiene texto visible.",
     "figmaPage": "Icon button",
     "figmaType": "COMPONENT_SET",
@@ -28,8 +28,15 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "icon",
+        "icon-button",
+        "icon-button--inverse",
+        "icon-button--secondary",
+        "icon-close",
+        "icon-search"
+      ],
+      "example": "<button class=\"icon-button icon-button--secondary\" type=\"button\" aria-label=\"Buscar\"><span class=\"icon icon-search\" aria-hidden=\"true\"></span></button>\n<button class=\"icon-button icon-button--inverse\" type=\"button\" aria-label=\"Cerrar menú\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span></button>"
     }
   },
   "api": {

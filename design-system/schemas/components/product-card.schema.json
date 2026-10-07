@@ -6,13 +6,13 @@
     "slug": "product-card",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T17:42:38Z",
+    "lastSync": "2026-10-07T18:17:24Z",
     "description": "Card de producto (Product library, carruseles, productos relacionados). Anatomía: media (hueco de imagen 3D sobre product-card/media-bg; no se inventa fotografía) con Badge opcional (New/Natural) · línea (Original/Yakisoba/Rice) · nombre (h3) · Link «Ver producto». Toda la card es un único enlace al producto (el Link es la pista visual, no un segundo destino). Hover: elevation/2; Focus: anillo product-card/focus-ring. Desktop 320 px; en móvil ocupa la columna (FILL).",
     "figmaPage": "Product card",
     "figmaType": "COMPONENT_SET",
     "variantCount": 3,
     "autoLayout": true,
-    "anatomyHash": "ff5b9c52204a"
+    "anatomyHash": "e385a225900a"
   },
   "source": {
     "docs": {
@@ -135,6 +135,7 @@
       "product-card/meta",
       "product-card/title",
       "radius/md",
+      "radius/none",
       "radius/pill",
       "space/16",
       "space/24",
@@ -199,7 +200,11 @@
       "color: link/default",
       "width: icon/size/sm",
       "height: icon/size/sm",
-      "strokes: link/default"
+      "strokes: link/default",
+      "topLeftRadius: radius/none",
+      "topRightRadius: radius/none",
+      "bottomLeftRadius: radius/none",
+      "bottomRightRadius: radius/none"
     ],
     "textStyles": [
       "Mobile/label",

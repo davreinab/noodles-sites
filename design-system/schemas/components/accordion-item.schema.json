@@ -6,7 +6,7 @@
     "slug": "accordion-item",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:19:35Z",
+    "lastSync": "2026-10-07T18:27:15Z",
     "description": "Ítem de acordeón para FAQ (página FAQS indexada, Natural formula, Home). Cabecera = &lt;button aria-expanded aria-controls&gt; dentro de un encabezado (h3); la respuesta es una región ligada a la cabecera. Enter/Espacio abren y cierran; cada ítem es independiente (varios abiertos a la vez). Icono plus (cerrado) / minus (abierto), swaps Icon collapsed / Icon expanded. Para SEO/AEO la respuesta está en el HTML aunque esté cerrada (FAQPage schema). Hover: accordion/bg-hover; Focus: anillo accordion/focus-ring. Ancho FILL de la columna de lectura.",
     "figmaPage": "Accordion item",
     "figmaType": "COMPONENT_SET",
@@ -28,8 +28,15 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "accordion-item",
+        "accordion-item__button",
+        "accordion-item__heading",
+        "accordion-item__panel",
+        "icon",
+        "icon-plus"
+      ],
+      "example": "<div class=\"accordion-item\">\n<h3 class=\"accordion-item__heading\">\n<button class=\"accordion-item__button\" type=\"button\" aria-expanded=\"true\" aria-controls=\"faq-1\">¿Por qué decimos que es 100 % natural?<span class=\"icon icon-plus\" aria-hidden=\"true\"></span></button>\n</h3>\n<div class=\"accordion-item__panel\" id=\"faq-1\" role=\"region\" aria-labelledby=\"faq-1-btn\">Todos los ingredientes son de origen natural, sin aditivos ni conservantes.</div>\n</div>"
     }
   },
   "api": {

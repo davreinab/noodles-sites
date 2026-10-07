@@ -6,7 +6,7 @@
     "slug": "product-filter",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:19:35Z",
+    "lastSync": "2026-10-07T18:27:15Z",
     "description": "Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias.",
     "figmaPage": "Pattern / Product filter",
     "figmaType": "COMPONENT_SET",

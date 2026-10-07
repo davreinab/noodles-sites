@@ -1,7 +1,7 @@
-### Recipes   ⚙️ synced: 2026-10-07T18:19:35Z
+### Recipes   ⚙️ synced: 2026-10-07T18:27:15Z
 
 <!-- ⚙️ GENERATED:start:recipes -->
-- **Figma:** `92:215` · página «Pattern / Recipes» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:19:35Z
+- **Figma:** `92:215` · página «Pattern / Recipes» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:27:15Z
 - **Descripción (Figma):** Sección de recetas (Home, página de producto con las recetas que lo usan): título (h2) + entradilla · 3 Recipe card · Link «Ver todas las recetas» a la Recipe library. Fondo color/surface/card para alternar con las secciones crema. Desktop: 3 columnas (421 px); Mobile: scroll horizontal con la siguiente card asomando y el enlace debajo. Sin buscador por ingredientes (regla de negocio). Sin variables propias.
 - **Anatomía:** `link` → Type=Standalone, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right, `recipe-card` → State=Default, `icon-time` → Icon / timer, `product-chip` → Size=S, State=Default, `icon-leading` → Icon / check
 - **Breakpoint:** Desktop, Mobile

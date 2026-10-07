@@ -6,7 +6,7 @@
     "slug": "contest-card",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:19:35Z",
+    "lastSync": "2026-10-07T18:27:15Z",
     "description": "Card de concurso (Contest library, módulo de Home). Status=Active: Badge Natural «En curso» y Button Primary «Participar» (si el concurso es externo o iframe de agencia, activar Icon trailing con external-link y abrir en pestaña nueva avisándolo). Status=Closed: Badge Neutral «Finalizado» y Link «Ver ganadores». Las bases legales (Link inline) aparecen siempre: es obligatorio publicarlas. La card no es enlace en bloque: tiene dos acciones. Desktop 448 px; en móvil FILL.",
     "figmaPage": "Contest card",
     "figmaType": "COMPONENT_SET",
@@ -28,8 +28,23 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "badge",
+        "badge--natural",
+        "button",
+        "contest-card",
+        "contest-card__actions",
+        "contest-card__body",
+        "contest-card__caption",
+        "contest-card__dates",
+        "contest-card__media",
+        "contest-card__title",
+        "icon",
+        "icon-external-link",
+        "link",
+        "visually-hidden"
+      ],
+      "example": "<article class=\"contest-card\">\n<div class=\"contest-card__media\">\n<span class=\"badge badge--natural\">En curso</span>\n<span class=\"contest-card__caption\">Imagen de la campaña</span>\n</div>\n<div class=\"contest-card__body\">\n<h3 class=\"contest-card__title\">Gana un viaje a Tokio</h3>\n<p class=\"contest-card__dates\">Del 1 al 30 de noviembre de 2026</p>\n<div class=\"contest-card__actions\">\n<a class=\"button\" href=\"https://concursos.example.org/tokio\" target=\"_blank\" rel=\"noopener\">Participar <span class=\"icon icon-external-link\" aria-hidden=\"true\"></span><span class=\"visually-hidden\"> (abre en una pestaña nueva)</span></a>\n<a class=\"link\" href=\"/concursos/tokio/bases\">Bases legales</a>\n</div>\n</div>\n</article>"
     }
   },
   "api": {

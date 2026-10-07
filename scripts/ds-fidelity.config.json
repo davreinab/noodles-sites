@@ -21,6 +21,41 @@
       "Version": {
         "Negative": ".logo"
       }
+    },
+    "contest-card": {
+      "Status": {
+        "Closed": ".contest-card"
+      }
+    },
+    "video-player": {
+      "Ratio": {
+        "9:16": ".video-player--vertical"
+      }
+    },
+    "modal": {
+      "Size": {
+        "Full": ".modal--full"
+      }
+    },
+    "suggestion-bubble": {
+      "Expanded": {
+        "False": ".suggestion-bubble--collapsed"
+      }
+    },
+    "step": {
+      "Media": {
+        "True": ".step--media"
+      }
+    },
+    "nutrition-bar": {
+      "Highlight": {
+        "True": ".nutrition-bar--highlight"
+      }
+    },
+    "ingredient-item": {
+      "Level": {
+        "Secondary": ".ingredient-item--secondary"
+      }
     }
   },
   "ignoreTokens": {
@@ -30,11 +65,15 @@
       "font/style/body-strong",
       "color/effect/shadow-ink",
       "shadow/soft"
+    ],
+    "recipe-card": [
+      "font/size/desktop/caption",
+      "font/line-height/desktop/caption"
     ]
   },
   "_notes": {
-    "modifiers": "Logo Version=Negative es otro archivo SVG (assets/logos/*-negative.svg) con la misma clase .logo: no hay modificador CSS.",
-    "ignoreTokens": "font/style/* son nombres de estilo de Figma («Regular», «Bold»): en CSS los realiza font-family + font-weight, no una variable. color/effect/shadow-ink y shadow/soft van dentro de --elevation-* (box-shadow compuesto), que es lo que consume el CSS.",
+    "modifiers": "Logo Version=Negative es otro archivo SVG (assets/logos/*-negative.svg) con la misma clase .logo: no hay modificador CSS. Contest card Status=Closed cambia el contenido (Badge Neutral y Link a ganadores), no el estilo. Video player Ratio=9:16 → .video-player--vertical.",
+    "ignoreTokens": "font/style/* son nombres de estilo de Figma («Regular», «Bold»): en CSS los realiza font-family + font-weight, no una variable. color/effect/shadow-ink y shadow/soft van dentro de --elevation-* (box-shadow compuesto), que es lo que consume el CSS. Recipe card: el caption del maestro es el texto de marcador del hueco de imagen («Imagen de la receta»), que en código es la foto.",
     "excludeAxes": "Además de los ejes por defecto: Checked, Selected y Expanded son estados y en código se expresan con ARIA (aria-checked, aria-pressed/aria-selected, aria-expanded), no con clases modificadoras."
   },
   "excludeAxes": [

@@ -1,7 +1,7 @@
-### Icon / tiktok   ⚙️ synced: 2026-10-07T18:19:35Z
+### Icon / tiktok   ⚙️ synced: 2026-10-07T18:27:15Z
 
 <!-- ⚙️ GENERATED:start:icon-tiktok -->
-- **Figma:** `21:62` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T18:19:35Z
+- **Figma:** `21:62` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T18:27:15Z
 - **Descripción (Figma):** Red social: TikTok. Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

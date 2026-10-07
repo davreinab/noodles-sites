@@ -1,6 +1,6 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": "2026-10-07T18:19:35Z",
+  "generatedAt": "2026-10-07T18:27:15Z",
   "adoptionMode": "new",
   "sourcesCompared": [
     "figma",
@@ -12,7 +12,7 @@
   ],
   "summary": {
     "critical": 0,
-    "warning": 38,
+    "warning": 23,
     "info": 11
   },
   "findings": [
@@ -73,88 +73,13 @@
     },
     {
       "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Product card: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Recipe card: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Contest card: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Accordion item: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Ingredient item: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Ingredients: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Nutrition bar: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Nutrition panel: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Step: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Modal / Slot: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Modal: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
       "check": "icon-not-exposed-as-swap",
       "detail": "Alert: capa «icon-status» (Icon / info) sin INSTANCE_SWAP"
     },
     {
       "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Alert: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
       "check": "icon-not-exposed-as-swap",
       "detail": "Suggestion bubble: capa «icon-external» (Icon / external-link) sin INSTANCE_SWAP"
-    },
-    {
-      "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Suggestion bubble: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Timer: sin «Ejemplo de código» (source.code.example)"
-    },
-    {
-      "severity": "warning",
-      "check": "code-example-missing-or-stale",
-      "detail": "Video player: sin «Ejemplo de código» (source.code.example)"
     },
     {
       "severity": "warning",

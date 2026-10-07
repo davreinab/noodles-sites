@@ -350,7 +350,7 @@ class Audit:
                              "solo válida para transiciones de aparición")
             except ValueError:
                 pass
-        if prop == "box-shadow" and stripped.strip():
+        if prop == "box-shadow" and re.sub(r"[()\s,]", "", stripped):  # quitar var() deja paréntesis sueltos: no cuentan
             fam = T.has_family(cfg["families"]["elevation"])
             self.add("error" if fam else "warn", file, line, prop, value,
                      "usa var(--elevation-*)" if fam else "no existen tokens de elevación: créalos en Figma (effect styles) y sincroniza")

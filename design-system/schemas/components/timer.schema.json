@@ -6,7 +6,7 @@
     "slug": "timer",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:19:35Z",
+    "lastSync": "2026-10-07T18:27:15Z",
     "description": "Temporizador de preparación (3 minutos) junto a los Step de la página de producto. State=Idle (3:00, «Empezar») · Running (anillo vaciándose, «Pausar» + reiniciar) · Paused («Seguir» + reiniciar) · Done (anillo verde natural, circle-check, «¡Listo!», «Otra vez»). El anillo es decorativo (aria-hidden) y no comunica nada por sí solo: el tiempo está en texto. Accesibilidad: el tiempo se expone con role=&quot;timer&quot; sin anunciar cada segundo; una región aria-live=&quot;polite&quot; anuncia solo «Quedan 1 minuto» y «¡Listo! Ya puedes comer»; el botón principal cambia su nombre (Empezar/Pausar/Seguir). Puede sonar o vibrar al terminar solo si el usuario lo activa. Respeta prefers-reduced-motion (el anillo salta en vez de animarse).",
     "figmaPage": "Timer",
     "figmaType": "COMPONENT_SET",
@@ -28,8 +28,26 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "button",
+        "button--secondary",
+        "icon",
+        "icon-button",
+        "icon-button--secondary",
+        "icon-pause",
+        "icon-rotate-ccw",
+        "timer",
+        "timer__controls",
+        "timer__dial",
+        "timer__label",
+        "timer__progress",
+        "timer__readout",
+        "timer__ring",
+        "timer__time",
+        "timer__track",
+        "visually-hidden"
+      ],
+      "example": "<section class=\"timer\" data-state=\"running\" aria-labelledby=\"timer-title\">\n<h3 class=\"visually-hidden\" id=\"timer-title\">Temporizador de preparación</h3>\n<div class=\"timer__dial\">\n<svg class=\"timer__ring\" viewBox=\"0 0 100 100\" aria-hidden=\"true\"><circle class=\"timer__track\" cx=\"50\" cy=\"50\" r=\"46\" stroke-width=\"8\" pathLength=\"100\"/><circle class=\"timer__progress\" cx=\"50\" cy=\"50\" r=\"46\" stroke-width=\"8\" pathLength=\"100\" stroke-dashoffset=\"40\"/></svg>\n<div class=\"timer__readout\"><span class=\"timer__time\" role=\"timer\">1:48</span><span class=\"timer__label\">Quedan</span></div>\n</div>\n<p class=\"visually-hidden\" aria-live=\"polite\"></p>\n<div class=\"timer__controls\">\n<button class=\"button button--secondary\" type=\"button\"><span class=\"icon icon-pause\" aria-hidden=\"true\"></span>Pausar</button>\n<button class=\"icon-button icon-button--secondary\" type=\"button\" aria-label=\"Reiniciar\"><span class=\"icon icon-rotate-ccw\" aria-hidden=\"true\"></span></button>\n</div>\n</section>"
     }
   },
   "api": {

@@ -2,14 +2,14 @@
 
 # GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
 
-> Última sync: **2026-10-07T18:19:35Z** · modo de adopción: `new` · 325 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-07T18:27:15Z** · modo de adopción: `new` · 327 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice
 
 - [Primitive](#primitive) · 22 tokens · modos: Value
 - [Semantic](#semantic) · 38 tokens · modos: Yatekomo, Saikebon, Aiki, Daisuki, DE
-- [Components](#components) · 185 tokens · modos: Value
+- [Components](#components) · 187 tokens · modos: Value
 - [Layer](#layer) · 7 tokens · modos: Value
 - [Spacing](#spacing) · 20 tokens · modos: Value
 - [Layout](#layout) · 7 tokens · modos: Desktop, Tablet, Mobile
@@ -290,6 +290,8 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 | `alert/error/icon` | `--alert-error-icon` | COLOR | → `--color-status-error-icon` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | alert: Icono (error) |
 | `alert/error/border` | `--alert-error-border` | COLOR | → `--color-status-error-border` | STROKE_COLOR | alert: Borde (error) |
 | `alert/close` | `--alert-close` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | alert: Icono cerrar |
+| `modal/width/m` | `--modal-width-m` | FLOAT | `560px` | WIDTH_HEIGHT | modal: Ancho del diálogo M (560px): alérgenos, resultado de concurso |
+| `modal/width/l` | `--modal-width-l` | FLOAT | `880px` | WIDTH_HEIGHT | modal: Ancho del diálogo L (880px): etiqueta del envase, resultados de búsqueda |
 
 ## Layer
 

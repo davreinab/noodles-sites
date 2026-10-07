@@ -5933,6 +5933,44 @@
               "name": "color/text/default"
             }
           }
+        },
+        {
+          "id": "VariableID:115:49",
+          "name": "modal/width/m",
+          "type": "FLOAT",
+          "description": "modal: Ancho del diálogo M (560px): alérgenos, resultado de concurso",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--modal-width-m)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "value",
+              "value": 560
+            }
+          }
+        },
+        {
+          "id": "VariableID:115:50",
+          "name": "modal/width/l",
+          "type": "FLOAT",
+          "description": "modal: Ancho del diálogo L (880px): etiqueta del envase, resultados de búsqueda",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--modal-width-l)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "value",
+              "value": 880
+            }
+          }
         }
       ]
     },

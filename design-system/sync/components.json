@@ -3534,7 +3534,8 @@
               "color: button/primary/text",
               "fills: button/primary/text",
               "fontSize: font/size/desktop/label",
-              "lineHeight: font/line-height/desktop/label"
+              "lineHeight: font/line-height/desktop/label",
+              "width: modal/width/m"
             ],
             "textStyles": [
               "Desktop/h3",

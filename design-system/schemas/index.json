@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-07T18:19:35Z",
+  "lastSync": "2026-10-07T18:27:15Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -1174,7 +1174,19 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "badge",
+          "icon",
+          "icon-arrow-right",
+          "link",
+          "link--standalone",
+          "product-card",
+          "product-card__body",
+          "product-card__cta",
+          "product-card__line",
+          "product-card__media",
+          "product-card__name"
+        ]
       }
     },
     {
@@ -1203,7 +1215,21 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "chip",
+          "icon",
+          "icon-arrow-right",
+          "icon-timer",
+          "link",
+          "link--standalone",
+          "recipe-card",
+          "recipe-card__body",
+          "recipe-card__link",
+          "recipe-card__media",
+          "recipe-card__meta",
+          "recipe-card__products",
+          "recipe-card__title"
+        ]
       }
     },
     {
@@ -1231,7 +1257,22 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "badge",
+          "badge--natural",
+          "button",
+          "contest-card",
+          "contest-card__actions",
+          "contest-card__body",
+          "contest-card__caption",
+          "contest-card__dates",
+          "contest-card__media",
+          "contest-card__title",
+          "icon",
+          "icon-external-link",
+          "link",
+          "visually-hidden"
+        ]
       }
     },
     {
@@ -1256,7 +1297,14 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "accordion-item",
+          "accordion-item__button",
+          "accordion-item__heading",
+          "accordion-item__panel",
+          "icon",
+          "icon-plus"
+        ]
       }
     },
     {
@@ -1278,7 +1326,11 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "ingredient-item",
+          "ingredient-item--secondary",
+          "ingredient-item__percent"
+        ]
       }
     },
     {
@@ -1304,7 +1356,19 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "icon",
+          "icon-arrow-right",
+          "ingredient-item",
+          "ingredient-item--secondary",
+          "ingredient-item__percent",
+          "ingredients",
+          "ingredients__list",
+          "ingredients__note",
+          "ingredients__title",
+          "link",
+          "link--standalone"
+        ]
       }
     },
     {
@@ -1326,7 +1390,17 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "badge",
+          "badge--natural",
+          "nutrition-bar",
+          "nutrition-bar--highlight",
+          "nutrition-bar__label",
+          "nutrition-bar__meter",
+          "nutrition-bar__percent",
+          "nutrition-bar__row",
+          "nutrition-bar__value"
+        ]
       }
     },
     {
@@ -1351,7 +1425,23 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "badge",
+          "badge--natural",
+          "nutrition-bar",
+          "nutrition-bar--highlight",
+          "nutrition-bar__label",
+          "nutrition-bar__meter",
+          "nutrition-bar__percent",
+          "nutrition-bar__row",
+          "nutrition-bar__value",
+          "nutrition-panel",
+          "nutrition-panel__allergens",
+          "nutrition-panel__base",
+          "nutrition-panel__list",
+          "nutrition-panel__note",
+          "nutrition-panel__title"
+        ]
       }
     },
     {
@@ -1372,7 +1462,15 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "step",
+          "step--media",
+          "step__content",
+          "step__media",
+          "step__number",
+          "step__text",
+          "steps"
+        ]
       }
     },
     {
@@ -1394,7 +1492,9 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "modal-slot"
+        ]
       }
     },
     {
@@ -1422,7 +1522,20 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "button",
+          "icon",
+          "icon-button",
+          "icon-button--secondary",
+          "icon-close",
+          "modal",
+          "modal--l",
+          "modal-slot",
+          "modal__body",
+          "modal__footer",
+          "modal__header",
+          "modal__title"
+        ]
       }
     },
     {
@@ -1447,7 +1560,19 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "alert",
+          "alert--error",
+          "alert--toast",
+          "alert__body",
+          "alert__close",
+          "alert__content",
+          "alert__title",
+          "icon",
+          "icon-circle-alert",
+          "icon-close",
+          "icon-info"
+        ]
       }
     },
     {
@@ -1473,7 +1598,13 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "icon",
+          "icon-external-link",
+          "icon-message-circle",
+          "suggestion-bubble",
+          "suggestion-bubble__label"
+        ]
       }
     },
     {
@@ -1499,7 +1630,25 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "button",
+          "button--secondary",
+          "icon",
+          "icon-button",
+          "icon-button--secondary",
+          "icon-pause",
+          "icon-rotate-ccw",
+          "timer",
+          "timer__controls",
+          "timer__dial",
+          "timer__label",
+          "timer__progress",
+          "timer__readout",
+          "timer__ring",
+          "timer__time",
+          "timer__track",
+          "visually-hidden"
+        ]
       }
     },
     {
@@ -1524,7 +1673,16 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "icon",
+          "icon-play",
+          "video-player",
+          "video-player--vertical",
+          "video-player__duration",
+          "video-player__play",
+          "video-player__poster",
+          "video-player__title"
+        ]
       }
     },
     {

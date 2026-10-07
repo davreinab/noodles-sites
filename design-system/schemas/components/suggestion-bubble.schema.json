@@ -6,7 +6,7 @@
     "slug": "suggestion-bubble",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:19:35Z",
+    "lastSync": "2026-10-07T18:27:15Z",
     "description": "Botón flotante (suggestion box / Babelbox) hacia el formulario externo de Calidad. Fijo abajo a la derecha (layout/margin desde los bordes), layer/floating; no tapa el CTA del Mobile menu ni el Toast (que sube por encima). Expanded=True al cargar: icono + «Sugerencias» + external-link; al hacer scroll pasa a Expanded=False (solo icono, 56 px) y respeta prefers-reduced-motion. Es un &lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; con nombre accesible «Sugerencias (abre en una pestaña nueva)» también en la versión plegada. Hover: fondo amarillo de marca y elevation/2; Focus: anillo suggestion/focus-ring.",
     "figmaPage": "Suggestion bubble",
     "figmaType": "COMPONENT_SET",
@@ -28,8 +28,14 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "icon",
+        "icon-external-link",
+        "icon-message-circle",
+        "suggestion-bubble",
+        "suggestion-bubble__label"
+      ],
+      "example": "<a class=\"suggestion-bubble\" href=\"https://calidad.example.org\" target=\"_blank\" rel=\"noopener\" aria-label=\"Sugerencias (abre en una pestaña nueva)\">\n<span class=\"icon icon-message-circle\" aria-hidden=\"true\"></span>\n<span class=\"suggestion-bubble__label\">Sugerencias</span>\n<span class=\"icon icon-external-link\" aria-hidden=\"true\"></span>\n</a>"
     }
   },
   "api": {

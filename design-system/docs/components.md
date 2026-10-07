@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 57 componentes sincronizados el 2026-10-07T18:19:35Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 57 componentes sincronizados el 2026-10-07T18:27:15Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -57,21 +57,21 @@
 - [Nav item](components/nav-item.md) · component · `nav-item` · ✅ criterio completo
 - [Tab](components/tab.md) · component · `tab` · ✅ criterio completo
 - [Lang switch](components/lang-switch.md) · component · `lang-switch` · ✅ criterio completo
-- [Product card](components/product-card.md) · component · `product-card` · ⬜ 5 pendientes
-- [Recipe card](components/recipe-card.md) · component · `recipe-card` · ⬜ 5 pendientes
-- [Contest card](components/contest-card.md) · component · `contest-card` · ⬜ 5 pendientes
-- [Accordion item](components/accordion-item.md) · component · `accordion-item` · ⬜ 5 pendientes
-- [Ingredient item](components/ingredient-item.md) · component · `ingredient-item` · ⬜ 5 pendientes
-- [Ingredients](components/ingredients.md) · component · `ingredients` · ⬜ 5 pendientes
-- [Nutrition bar](components/nutrition-bar.md) · component · `nutrition-bar` · ⬜ 5 pendientes
-- [Nutrition panel](components/nutrition-panel.md) · component · `nutrition-panel` · ⬜ 5 pendientes
-- [Step](components/step.md) · component · `step` · ⬜ 5 pendientes
-- [Modal / Slot](components/modal-slot.md) · component · `modal-slot` · ⬜ 5 pendientes
-- [Modal](components/modal.md) · component · `modal` · ⬜ 5 pendientes
-- [Alert](components/alert.md) · component · `alert` · ⬜ 5 pendientes
-- [Suggestion bubble](components/suggestion-bubble.md) · component · `suggestion-bubble` · ⬜ 5 pendientes
-- [Timer](components/timer.md) · component · `timer` · ⬜ 5 pendientes
-- [Video player](components/video-player.md) · component · `video-player` · ⬜ 5 pendientes
+- [Product card](components/product-card.md) · component · `product-card` · ✅ criterio completo
+- [Recipe card](components/recipe-card.md) · component · `recipe-card` · ✅ criterio completo
+- [Contest card](components/contest-card.md) · component · `contest-card` · ✅ criterio completo
+- [Accordion item](components/accordion-item.md) · component · `accordion-item` · ✅ criterio completo
+- [Ingredient item](components/ingredient-item.md) · component · `ingredient-item` · ✅ criterio completo
+- [Ingredients](components/ingredients.md) · component · `ingredients` · ✅ criterio completo
+- [Nutrition bar](components/nutrition-bar.md) · component · `nutrition-bar` · ✅ criterio completo
+- [Nutrition panel](components/nutrition-panel.md) · component · `nutrition-panel` · ✅ criterio completo
+- [Step](components/step.md) · component · `step` · ✅ criterio completo
+- [Modal / Slot](components/modal-slot.md) · component · `modal-slot` · ✅ criterio completo
+- [Modal](components/modal.md) · component · `modal` · ✅ criterio completo
+- [Alert](components/alert.md) · component · `alert` · ✅ criterio completo
+- [Suggestion bubble](components/suggestion-bubble.md) · component · `suggestion-bubble` · ✅ criterio completo
+- [Timer](components/timer.md) · component · `timer` · ✅ criterio completo
+- [Video player](components/video-player.md) · component · `video-player` · ✅ criterio completo
 
 ## Cómo rellenar una ficha
 

@@ -6,7 +6,7 @@
     "slug": "ingredients",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:19:35Z",
+    "lastSync": "2026-10-07T18:27:15Z",
     "description": "Bloque de ingredientes de la página de producto y de receta: título (h3) · ingredientes principales (Ingredient item Main, con %) · resto (Ingredient item Secondary) · Link «Ver etiqueta del envase» que abre el modal con la foto de la etiqueta (fase 5). Lista semántica &lt;ul&gt;; alérgenos en &lt;strong&gt;. Sin variables propias de bloque: usa ingredient/*.",
     "figmaPage": "Ingredients",
     "figmaType": "COMPONENT",
@@ -28,8 +28,20 @@
       "package": null,
       "import": null,
       "path": "design-system/css/components.css",
-      "classes": [],
-      "example": null
+      "classes": [
+        "icon",
+        "icon-arrow-right",
+        "ingredient-item",
+        "ingredient-item--secondary",
+        "ingredient-item__percent",
+        "ingredients",
+        "ingredients__list",
+        "ingredients__note",
+        "ingredients__title",
+        "link",
+        "link--standalone"
+      ],
+      "example": "<section class=\"ingredients\" aria-labelledby=\"ing-title\">\n<h3 class=\"ingredients__title\" id=\"ing-title\">Ingredientes</h3>\n<ul class=\"ingredients__list\">\n<li class=\"ingredient-item\">Fideos de <strong>trigo</strong><span class=\"ingredient-item__percent\">52 %</span></li>\n<li class=\"ingredient-item ingredient-item--secondary\">Otros: sal, especias, salsa de <strong>soja</strong>, ajo y cebolla.</li>\n</ul>\n<p class=\"ingredients__note\">Datos del envase.</p>\n<a class=\"link link--standalone\" href=\"#etiqueta\" aria-haspopup=\"dialog\">Ver etiqueta del envase <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a>\n</section>"
     }
   },
   "api": {

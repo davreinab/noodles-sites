@@ -1,7 +1,7 @@
-### Marquee   ⚙️ synced: 2026-10-07T18:19:35Z
+### Marquee   ⚙️ synced: 2026-10-07T18:27:15Z
 
 <!-- ⚙️ GENERATED:start:marquee -->
-- **Figma:** `89:78` · página «Pattern / Marquee» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:19:35Z
+- **Figma:** `89:78` · página «Pattern / Marquee» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:27:15Z
 - **Descripción (Figma):** Franja de claim en movimiento horizontal continuo (heredada de las landings): «Welcome to the new noodles era» ✱ «The only 100% natural», en color/text/brand-on-inverse sobre color/surface/inverse (12:1). Se usa entre secciones de la Home, a sangre (sin margen lateral). Accesibilidad: es decorativa y repite el claim del hero, así que va con aria-hidden=&quot;true&quot; y un texto oculto no duplicado; con prefers-reduced-motion se para (texto estático) y tiene botón de pausa si dura más de 5 s (WCAG 2.2.2). Sin variables propias.
 - **Anatomía:** sin instancias anidadas
 - **Breakpoint:** Desktop, Mobile

@@ -8,6 +8,7 @@
 - **DS - Noodles** — design-system: variables, estilos y componentes de los microsites (fuente de verdad del DS) · fileKey `v4mnn154qUmiB35CCnRfgh`
 - **GB Noodles · IA & page structure** — FigJam de sitemap y blueprints; no es fuente del DS · fileKey `cRgmGl36ELIUZNLUvC8KbW`
 - **Wireframes | Rediseño sites** — wireframes; sus componentes locales son solo de wireframe, no del DS · fileKey `1YhsCqdqYCHlK4Y82IY5G3`
+- **Noodles - sites** — pantallas (UI) de los microsites; consumen el DS, no son fuente del DS · fileKey `NfjwW15h6leh1MbJp0lYQO`
 
 **Modo de adopción:** `new`
 

@@ -1131,8 +1131,12 @@
           "type": "COMPONENT_SET",
           "id": "35:186",
           "key": "9e5bf92f006c4089c292176008506b8af258f943",
-          "description": "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP).",
+          "description": "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Size: S 36 px (filtros densos, productos en receta) · M 40 px (filtros principales, uso táctil preferente); altura mínima ligada a chip/height/*. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP).",
           "variantAxes": {
+            "Size": [
+              "S",
+              "M"
+            ],
             "State": [
               "Default",
               "Hover",
@@ -1140,7 +1144,7 @@
               "Disabled"
             ]
           },
-          "variantCount": 4,
+          "variantCount": 8,
           "properties": [
             {
               "name": "Label#35:17",
@@ -1170,6 +1174,15 @@
                   "type": "COMPONENT",
                   "key": "d3bd670f4a53fb5af9503f3797584ad997f049a8"
                 }
+              ]
+            },
+            {
+              "name": "Size",
+              "kind": "VARIANT",
+              "default": "S",
+              "values": [
+                "S",
+                "M"
               ]
             },
             {
@@ -1209,6 +1222,7 @@
               "strokeBottomWeight: border/width/thin",
               "strokeLeftWeight: border/width/thin",
               "strokeRightWeight: border/width/thin",
+              "minHeight: chip/height/s",
               "fills: chip/bg",
               "strokes: chip/border",
               "color: chip/bg",
@@ -3107,5 +3121,5 @@
     }
   ],
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
-  "readAt": "2026-10-07T13:46:38.513Z"
+  "readAt": "2026-10-07T13:54:45.015Z"
 }

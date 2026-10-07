@@ -10,6 +10,7 @@
 
 > Fuente: `noodles/context/traspaso-microsites.md` §7 (2026-10-07) y los prototipos UX de Aitor
 > Espasa en Figma (`1YhsCqdqYCHlK4Y82IY5G3`; blueprints en el FigJam `cRgmGl36ELIUZNLUvC8KbW`).
+> Las pantallas de UI se diseñan en «Noodles - sites» (`NfjwW15h6leh1MbJp0lYQO`, vacío a 2026-10-07).
 > **El cliente no ha dado feedback** sobre los wireframes. Previsión interna de cierre: noviembre.
 
 ## Modelo conceptual

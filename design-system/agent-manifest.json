@@ -5,7 +5,7 @@
   "versionedAt": null,
   "maturityStage": 1,
   "targetMaturityStage": 2,
-  "lastSync": "2026-10-07T13:48:12Z",
+  "lastSync": "2026-10-07T13:55:09Z",
   "adoptionMode": "new",
   "structuralStandardsEnforced": true,
   "figmaSources": [
@@ -26,6 +26,12 @@
       "role": "wireframes — sus componentes locales son solo de wireframe, no del DS (David Reina, 2026-10-07)",
       "fileKey": "1YhsCqdqYCHlK4Y82IY5G3",
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
+    },
+    {
+      "name": "Noodles - sites",
+      "role": "pantallas (UI) de los microsites — consumen el DS, no son fuente del DS (David Reina, 2026-10-07)",
+      "fileKey": "NfjwW15h6leh1MbJp0lYQO",
+      "url": "https://www.figma.com/design/NfjwW15h6leh1MbJp0lYQO/Noodles---sites"
     }
   ],
   "resources": {

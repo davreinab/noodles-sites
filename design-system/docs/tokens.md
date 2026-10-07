@@ -2,14 +2,14 @@
 
 # GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
 
-> Última sync: **2026-10-07T13:48:12Z** · modo de adopción: `new` · 233 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-07T13:55:09Z** · modo de adopción: `new` · 235 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice
 
 - [Primitive](#primitive) · 21 tokens · modos: Value
 - [Semantic](#semantic) · 37 tokens · modos: Yatekomo, Saikebon, Aiki, Daisuki, DE
-- [Components](#components) · 96 tokens · modos: Value
+- [Components](#components) · 98 tokens · modos: Value
 - [Layer](#layer) · 7 tokens · modos: Value
 - [Spacing](#spacing) · 20 tokens · modos: Value
 - [Layout](#layout) · 6 tokens · modos: Desktop, Tablet, Mobile
@@ -199,6 +199,8 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 | `lang-switch/text` | `--lang-switch-text` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | lang-switch: Texto |
 | `lang-switch/text-selected` | `--lang-switch-text-selected` | COLOR | → `--color-text-on-inverse` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | lang-switch: Texto de la opción seleccionada |
 | `lang-switch/border` | `--lang-switch-border` | COLOR | → `--color-border-default` | STROKE_COLOR | lang-switch: Borde |
+| `chip/height/s` | `--chip-height-s` | FLOAT | `36px` | WIDTH_HEIGHT | chip: Altura mínima talla S (36px). Filtros densos y productos dentro de receta |
+| `chip/height/m` | `--chip-height-m` | FLOAT | `40px` | WIDTH_HEIGHT | chip: Altura mínima talla M (40px). Filtros principales y uso táctil preferente |
 
 ## Layer
 

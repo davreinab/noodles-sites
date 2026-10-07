@@ -1,6 +1,6 @@
 /* ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO.
    Design system: GB Noodles · Microsites · fileKey: v4mnn154qUmiB35CCnRfgh
-   Última sync: 2026-10-07T13:48:12Z · modo de adopción: new
+   Última sync: 2026-10-07T13:55:09Z · modo de adopción: new
    Se regenera con el protocolo de sync de design.md. */
 
 :root {
@@ -161,6 +161,8 @@
   --lang-switch-text: var(--color-text-default); /* lang-switch: Texto */
   --lang-switch-text-selected: var(--color-text-on-inverse); /* lang-switch: Texto de la opción seleccionada */
   --lang-switch-border: var(--color-border-default); /* lang-switch: Borde */
+  --chip-height-s: 36px; /* chip: Altura mínima talla S (36px). Filtros densos y productos dentro de receta */
+  --chip-height-m: 40px; /* chip: Altura mínima talla M (40px). Filtros principales y uso táctil preferente */
   /* ---- Layer ---- */
   --layer-base: 0; /* z-index 0. Contenido normal de la página */
   --layer-raised: 10; /* z-index 10. Contenido por encima de imágenes dentro de una sección (copy del hero, banderas) */

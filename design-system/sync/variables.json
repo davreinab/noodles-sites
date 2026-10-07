@@ -4039,6 +4039,44 @@
               "name": "color/border/default"
             }
           }
+        },
+        {
+          "id": "VariableID:62:88",
+          "name": "chip/height/s",
+          "type": "FLOAT",
+          "description": "chip: Altura mínima talla S (36px). Filtros densos y productos dentro de receta",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--chip-height-s)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "value",
+              "value": 36
+            }
+          }
+        },
+        {
+          "id": "VariableID:62:89",
+          "name": "chip/height/m",
+          "type": "FLOAT",
+          "description": "chip: Altura mínima talla M (40px). Filtros principales y uso táctil preferente",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--chip-height-m)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "value",
+              "value": 40
+            }
+          }
         }
       ]
     },

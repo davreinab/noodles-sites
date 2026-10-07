@@ -6,13 +6,13 @@
     "slug": "chip",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T13:48:12Z",
-    "description": "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP).",
+    "lastSync": "2026-10-07T13:55:09Z",
+    "description": "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Size: S 36 px (filtros densos, productos en receta) · M 40 px (filtros principales, uso táctil preferente); altura mínima ligada a chip/height/*. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP).",
     "figmaPage": "Chip",
     "figmaType": "COMPONENT_SET",
-    "variantCount": 4,
+    "variantCount": 8,
     "autoLayout": true,
-    "anatomyHash": "e8f4c313b68f"
+    "anatomyHash": "3ec041f6de9e"
   },
   "source": {
     "docs": {
@@ -65,6 +65,15 @@
         ]
       },
       {
+        "name": "Size",
+        "kind": "VARIANT",
+        "default": "S",
+        "values": [
+          "S",
+          "M"
+        ]
+      },
+      {
         "name": "State",
         "kind": "VARIANT",
         "default": "Default",
@@ -77,6 +86,10 @@
       }
     ],
     "variants": {
+      "Size": [
+        "S",
+        "M"
+      ],
       "State": [
         "Default",
         "Hover",
@@ -91,6 +104,7 @@
       "Disabled"
     ],
     "defaults": {
+      "Size": "S",
       "State": "Default"
     },
     "invalidCombinations": [],
@@ -120,6 +134,7 @@
       "border/width/thin",
       "chip/bg",
       "chip/border",
+      "chip/height/s",
       "chip/text",
       "font/family/body",
       "font/line-height/desktop/body-s",
@@ -144,6 +159,7 @@
       "strokeBottomWeight: border/width/thin",
       "strokeLeftWeight: border/width/thin",
       "strokeRightWeight: border/width/thin",
+      "minHeight: chip/height/s",
       "fills: chip/bg",
       "strokes: chip/border",
       "color: chip/bg",

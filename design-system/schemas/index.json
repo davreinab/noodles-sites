@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-07T13:31:29Z",
+  "lastSync": "2026-10-07T13:48:12Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -787,10 +787,195 @@
         "path": "design-system/css/components.css",
         "classes": []
       }
+    },
+    {
+      "id": "component:nav-item",
+      "name": "Nav item",
+      "slug": "nav-item",
+      "kind": "component",
+      "contractPath": "./components/nav-item.schema.json",
+      "keywords": [
+        "item",
+        "nav"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "53:102",
+        "componentKey": "3f75ba3d4f9f1a9a27063a5271b43c040a8cf909"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:tab",
+      "name": "Tab",
+      "slug": "tab",
+      "kind": "component",
+      "contractPath": "./components/tab.schema.json",
+      "keywords": [
+        "tab"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "54:58",
+        "componentKey": "c5ace94961371155da8361436894be193e75847c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:lang-switch",
+      "name": "Lang switch",
+      "slug": "lang-switch",
+      "kind": "component",
+      "contractPath": "./components/lang-switch.schema.json",
+      "keywords": [
+        "lang",
+        "switch"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "54:71",
+        "componentKey": "6edfbbb312dd0b16359a2c22789d0cfe11c92952"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:navbar",
+      "name": "Navbar",
+      "slug": "navbar",
+      "kind": "pattern",
+      "contractPath": "./components/navbar.schema.json",
+      "keywords": [
+        "icon",
+        "navbar"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right",
+        "icon-button",
+        "icon-search",
+        "lang-switch",
+        "logo-yatekomo",
+        "nav-item"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "55:116",
+        "componentKey": "5c42eb9d9261bf9933740f4f293126121318d0bc"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:mobile-menu",
+      "name": "Mobile menu",
+      "slug": "mobile-menu",
+      "kind": "pattern",
+      "contractPath": "./components/mobile-menu.schema.json",
+      "keywords": [
+        "icon",
+        "menu",
+        "mobile"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right",
+        "icon-button",
+        "icon-close",
+        "lang-switch",
+        "logo-yatekomo",
+        "nav-item"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "55:119",
+        "componentKey": "0e73e5d01e03cfdd191b1f97e3a8c6ec4e210664"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:product-filter",
+      "name": "Product filter",
+      "slug": "product-filter",
+      "kind": "pattern",
+      "contractPath": "./components/product-filter.schema.json",
+      "keywords": [
+        "filter",
+        "icon",
+        "product"
+      ],
+      "dependencies": [
+        "chip",
+        "icon-check",
+        "tab"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "55:253",
+        "componentKey": "3b96938d2949d5b37f2f01a0b01056524046be55"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "pattern:footer",
+      "name": "Footer",
+      "slug": "footer",
+      "kind": "pattern",
+      "contractPath": "./components/footer.schema.json",
+      "keywords": [
+        "footer",
+        "icon"
+      ],
+      "dependencies": [
+        "icon-arrow-right",
+        "icon-external-link",
+        "icon-instagram",
+        "icon-tiktok",
+        "icon-x",
+        "icon-youtube",
+        "link",
+        "logo-gb-foods",
+        "logo-yatekomo"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "56:167",
+        "componentKey": "ec0129ea04aee71e644071a1697618d4350e07b4"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
     }
   ],
   "counts": {
-    "atoms": 33,
-    "patterns": 0
+    "atoms": 36,
+    "patterns": 4
   }
 }

@@ -2,14 +2,14 @@
 
 # GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
 
-> Última sync: **2026-10-07T13:31:29Z** · modo de adopción: `new` · 214 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-07T13:48:12Z** · modo de adopción: `new` · 233 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice
 
 - [Primitive](#primitive) · 21 tokens · modos: Value
 - [Semantic](#semantic) · 37 tokens · modos: Yatekomo, Saikebon, Aiki, Daisuki, DE
-- [Components](#components) · 77 tokens · modos: Value
+- [Components](#components) · 96 tokens · modos: Value
 - [Layer](#layer) · 7 tokens · modos: Value
 - [Spacing](#spacing) · 20 tokens · modos: Value
 - [Layout](#layout) · 6 tokens · modos: Desktop, Tablet, Mobile
@@ -109,7 +109,6 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 | `icon/size/xl` | `--icon-size-xl` | FLOAT | `40px` | WIDTH_HEIGHT | 40px. Iconos grandes de bloque |
 | `icon/color/default` | `--icon-color-default` | COLOR | → `--color-text-default` | FRAME_FILL, SHAPE_FILL, STROKE_COLOR | Color de icono por defecto (sobre page, brand, card) |
 | `icon/color/inverse` | `--icon-color-inverse` | COLOR | → `--color-text-on-inverse` | FRAME_FILL, SHAPE_FILL, STROKE_COLOR | Color de icono sobre surface/inverse |
-| `icon/color/illustration` | `--icon-color-illustration` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL, STROKE_COLOR | Relleno de iconos ilustrados a mano (cambia con la marca) |
 | `decoration/noodle/brand` | `--decoration-noodle-brand` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL | Fideo decorativo en color de marca |
 | `decoration/noodle/accent` | `--decoration-noodle-accent` | COLOR | → `--color-surface-accent` | FRAME_FILL, SHAPE_FILL | Fideo decorativo en color de acento |
 | `button/primary/bg` | `--button-primary-bg` | COLOR | → `--color-surface-inverse` | FRAME_FILL, SHAPE_FILL | button primary: Fondo |
@@ -180,6 +179,26 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 | `checkbox/bg-disabled` | `--checkbox-bg-disabled` | COLOR | → `--color-surface-disabled` | FRAME_FILL, SHAPE_FILL | checkbox: Fondo desactivado |
 | `checkbox/text-disabled` | `--checkbox-text-disabled` | COLOR | → `--color-text-disabled` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | checkbox: Etiqueta y check desactivados |
 | `checkbox/border-error` | `--checkbox-border-error` | COLOR | → `--color-status-error-border` | STROKE_COLOR | checkbox: Borde con error |
+| `nav-item/text` | `--nav-item-text` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | nav-item: Texto del enlace de navegación |
+| `nav-item/text-active` | `--nav-item-text-active` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | nav-item: Texto del enlace activo |
+| `nav-item/indicator` | `--nav-item-indicator` | COLOR | → `--color-border-default` | FRAME_FILL, SHAPE_FILL | nav-item: Subrayado de la sección activa |
+| `nav-item/hover-bg` | `--nav-item-hover-bg` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL | nav-item: Fondo en hover |
+| `nav-item/focus-ring` | `--nav-item-focus-ring` | COLOR | → `--color-border-default` | STROKE_COLOR | nav-item: Anillo de foco |
+| `nav-item/menu-text` | `--nav-item-menu-text` | COLOR | → `--color-text-on-inverse` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | nav-item: Texto en el menú móvil |
+| `nav-item/menu-text-active` | `--nav-item-menu-text-active` | COLOR | → `--color-text-brand-on-inverse` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | nav-item: Texto activo en el menú móvil |
+| `nav-item/menu-focus-ring` | `--nav-item-menu-focus-ring` | COLOR | → `--color-text-brand-on-inverse` | STROKE_COLOR | nav-item: Anillo de foco en el menú móvil |
+| `tab/bg` | `--tab-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | tab: Fondo |
+| `tab/bg-hover` | `--tab-bg-hover` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL | tab: Fondo en hover |
+| `tab/bg-selected` | `--tab-bg-selected` | COLOR | → `--color-surface-inverse` | FRAME_FILL, SHAPE_FILL | tab: Fondo seleccionado |
+| `tab/text` | `--tab-text` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | tab: Texto |
+| `tab/text-selected` | `--tab-text-selected` | COLOR | → `--color-text-on-inverse` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | tab: Texto seleccionado |
+| `tab/border` | `--tab-border` | COLOR | → `--color-border-default` | STROKE_COLOR | tab: Borde |
+| `tab/focus-ring` | `--tab-focus-ring` | COLOR | → `--color-border-default` | STROKE_COLOR | tab: Anillo de foco |
+| `lang-switch/bg` | `--lang-switch-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | lang-switch: Fondo |
+| `lang-switch/bg-selected` | `--lang-switch-bg-selected` | COLOR | → `--color-surface-inverse` | FRAME_FILL, SHAPE_FILL | lang-switch: Fondo de la opción seleccionada |
+| `lang-switch/text` | `--lang-switch-text` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | lang-switch: Texto |
+| `lang-switch/text-selected` | `--lang-switch-text-selected` | COLOR | → `--color-text-on-inverse` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | lang-switch: Texto de la opción seleccionada |
+| `lang-switch/border` | `--lang-switch-border` | COLOR | → `--color-border-default` | STROKE_COLOR | lang-switch: Borde |
 
 ## Layer
 

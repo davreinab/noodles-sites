@@ -9,13 +9,16 @@
 > Reglas duras: no se inventa un patrón que no esté aquí; los patrones se componen de átomos y consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 0 patrones sincronizados el 2026-10-07T13:31:29Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 4 patrones sincronizados el 2026-10-07T13:48:12Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
 ## Índice
 
-_(vacío — se genera con el sync)_
+- [Navbar](patterns/navbar.md) · pattern · `navbar` · ⬜ 5 pendientes
+- [Mobile menu](patterns/mobile-menu.md) · pattern · `mobile-menu` · ⬜ 5 pendientes
+- [Product filter](patterns/product-filter.md) · pattern · `product-filter` · ⬜ 5 pendientes
+- [Footer](patterns/footer.md) · pattern · `footer` · ⬜ 5 pendientes
 
 ## Cómo rellenar una ficha
 

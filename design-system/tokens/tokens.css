@@ -1,6 +1,6 @@
 /* ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO.
    Design system: GB Noodles · Microsites · fileKey: v4mnn154qUmiB35CCnRfgh
-   Última sync: 2026-10-07T13:31:29Z · modo de adopción: new
+   Última sync: 2026-10-07T13:48:12Z · modo de adopción: new
    Se regenera con el protocolo de sync de design.md. */
 
 :root {
@@ -71,7 +71,6 @@
   --icon-size-xl: 40px; /* 40px. Iconos grandes de bloque */
   --icon-color-default: var(--color-text-default); /* Color de icono por defecto (sobre page, brand, card) */
   --icon-color-inverse: var(--color-text-on-inverse); /* Color de icono sobre surface/inverse */
-  --icon-color-illustration: var(--color-surface-brand); /* Relleno de iconos ilustrados a mano (cambia con la marca) */
   --decoration-noodle-brand: var(--color-surface-brand); /* Fideo decorativo en color de marca */
   --decoration-noodle-accent: var(--color-surface-accent); /* Fideo decorativo en color de acento */
   --button-primary-bg: var(--color-surface-inverse); /* button primary: Fondo */
@@ -142,6 +141,26 @@
   --checkbox-bg-disabled: var(--color-surface-disabled); /* checkbox: Fondo desactivado */
   --checkbox-text-disabled: var(--color-text-disabled); /* checkbox: Etiqueta y check desactivados */
   --checkbox-border-error: var(--color-status-error-border); /* checkbox: Borde con error */
+  --nav-item-text: var(--color-text-default); /* nav-item: Texto del enlace de navegación */
+  --nav-item-text-active: var(--color-text-default); /* nav-item: Texto del enlace activo */
+  --nav-item-indicator: var(--color-border-default); /* nav-item: Subrayado de la sección activa */
+  --nav-item-hover-bg: var(--color-surface-brand); /* nav-item: Fondo en hover */
+  --nav-item-focus-ring: var(--color-border-default); /* nav-item: Anillo de foco */
+  --nav-item-menu-text: var(--color-text-on-inverse); /* nav-item: Texto en el menú móvil */
+  --nav-item-menu-text-active: var(--color-text-brand-on-inverse); /* nav-item: Texto activo en el menú móvil */
+  --nav-item-menu-focus-ring: var(--color-text-brand-on-inverse); /* nav-item: Anillo de foco en el menú móvil */
+  --tab-bg: var(--color-surface-card); /* tab: Fondo */
+  --tab-bg-hover: var(--color-surface-brand); /* tab: Fondo en hover */
+  --tab-bg-selected: var(--color-surface-inverse); /* tab: Fondo seleccionado */
+  --tab-text: var(--color-text-default); /* tab: Texto */
+  --tab-text-selected: var(--color-text-on-inverse); /* tab: Texto seleccionado */
+  --tab-border: var(--color-border-default); /* tab: Borde */
+  --tab-focus-ring: var(--color-border-default); /* tab: Anillo de foco */
+  --lang-switch-bg: var(--color-surface-card); /* lang-switch: Fondo */
+  --lang-switch-bg-selected: var(--color-surface-inverse); /* lang-switch: Fondo de la opción seleccionada */
+  --lang-switch-text: var(--color-text-default); /* lang-switch: Texto */
+  --lang-switch-text-selected: var(--color-text-on-inverse); /* lang-switch: Texto de la opción seleccionada */
+  --lang-switch-border: var(--color-border-default); /* lang-switch: Borde */
   /* ---- Layer ---- */
   --layer-base: 0; /* z-index 0. Contenido normal de la página */
   --layer-raised: 10; /* z-index 10. Contenido por encima de imágenes dentro de una sección (copy del hero, banderas) */

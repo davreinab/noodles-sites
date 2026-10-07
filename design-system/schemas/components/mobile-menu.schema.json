@@ -1,0 +1,329 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:mobile-menu",
+  "meta": {
+    "name": "Mobile menu",
+    "slug": "mobile-menu",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T13:48:12Z",
+    "description": "Patrón: menú móvil a pantalla completa (se abre desde el botón menú de la Navbar). Logo negativo · cerrar · 5 Nav item (Menu) · Lang switch (solo marcas multiidioma) · CTA. Accesibilidad: role=&quot;dialog&quot; con aria-modal, foco atrapado dentro, Esc cierra y el foco vuelve al botón menú; layer/modal. Sin variables propias.",
+    "figmaPage": "Pattern / Mobile menu",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": true,
+    "anatomyHash": "6a75484125af"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/patterns/mobile-menu.md",
+      "section": "Mobile menu"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "55:119",
+      "componentKey": "0e73e5d01e03cfdd191b1f97e3a8c6ec4e210664"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Logo#55:6",
+        "kind": "INSTANCE_SWAP",
+        "default": "21:168",
+        "defaultComponent": "Version=Negative",
+        "preferredValues": []
+      },
+      {
+        "name": "Lang switch#55:7",
+        "kind": "BOOLEAN",
+        "default": false
+      }
+    ],
+    "variants": {},
+    "states": [],
+    "defaults": {},
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "logo",
+        "component": "Version=Negative",
+        "componentSlug": "logo-yatekomo",
+        "exposedAs": "Logo#55:6",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "close",
+        "component": "Hierarchy=Inverse, Size=M, State=Default",
+        "componentSlug": "icon-button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": "Icon#33:125",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "nav-item",
+        "component": "Type=Menu, State=Active",
+        "componentSlug": "nav-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "nav-item",
+        "component": "Type=Menu, State=Default",
+        "componentSlug": "nav-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "nav-item",
+        "component": "Type=Menu, State=Default",
+        "componentSlug": "nav-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "nav-item",
+        "component": "Type=Menu, State=Default",
+        "componentSlug": "nav-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "nav-item",
+        "component": "Type=Menu, State=Default",
+        "componentSlug": "nav-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "lang-switch",
+        "component": "Selected=First",
+        "componentSlug": "lang-switch",
+        "exposedAs": null,
+        "toggledBy": "Lang switch#55:7",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "cta",
+        "component": "Hierarchy=Inverse, Size=L, State=Default",
+        "componentSlug": "button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "toggledBy": "Icon leading#33:25",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "toggledBy": "Icon trailing#33:50",
+        "visibleByDefault": false
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "Logo#55:6"
+      ],
+      "defaultIcons": [
+        "Version=Negative"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "border/width/thick",
+      "border/width/thin",
+      "button/inverse/bg",
+      "button/inverse/border",
+      "button/inverse/text",
+      "color/surface/inverse",
+      "font/family/display",
+      "font/line-height/desktop/label",
+      "font/line-height/mobile/h2",
+      "font/size/desktop/label",
+      "font/size/mobile/h2",
+      "font/style/display",
+      "icon/size/md",
+      "icon/size/sm",
+      "lang-switch/bg",
+      "lang-switch/bg-selected",
+      "lang-switch/border",
+      "lang-switch/text",
+      "lang-switch/text-selected",
+      "layout/frame",
+      "layout/margin",
+      "nav-item/menu-text",
+      "nav-item/menu-text-active",
+      "radius/pill",
+      "radius/sm",
+      "space/16",
+      "space/24",
+      "space/32",
+      "space/4",
+      "space/40",
+      "space/48",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "itemSpacing: space/40",
+      "paddingLeft: layout/margin",
+      "paddingTop: space/16",
+      "paddingRight: layout/margin",
+      "paddingBottom: space/48",
+      "width: layout/frame",
+      "fills: color/surface/inverse",
+      "color: color/surface/inverse",
+      "paddingLeft: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thick",
+      "strokeBottomWeight: border/width/thick",
+      "strokeLeftWeight: border/width/thick",
+      "strokeRightWeight: border/width/thick",
+      "fills: button/inverse/bg",
+      "strokes: button/inverse/border",
+      "color: button/inverse/bg",
+      "color: button/inverse/border",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: button/inverse/text",
+      "color: button/inverse/text",
+      "itemSpacing: space/16",
+      "itemSpacing: space/4",
+      "paddingLeft: space/8",
+      "paddingTop: space/8",
+      "paddingRight: space/8",
+      "paddingBottom: space/8",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "fills: nav-item/menu-text-active",
+      "fontSize: font/size/mobile/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/mobile/h2",
+      "color: nav-item/menu-text-active",
+      "height: border/width/thick",
+      "fills: nav-item/menu-text",
+      "color: nav-item/menu-text",
+      "paddingLeft: space/4",
+      "paddingTop: space/4",
+      "paddingRight: space/4",
+      "paddingBottom: space/4",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: lang-switch/bg",
+      "strokes: lang-switch/border",
+      "color: lang-switch/bg",
+      "color: lang-switch/border",
+      "fills: lang-switch/bg-selected",
+      "color: lang-switch/bg-selected",
+      "fills: lang-switch/text-selected",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label",
+      "color: lang-switch/text-selected",
+      "fills: lang-switch/text",
+      "color: lang-switch/text",
+      "itemSpacing: space/8",
+      "paddingLeft: space/32",
+      "paddingTop: space/24",
+      "paddingRight: space/32",
+      "paddingBottom: space/24",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "fills: button/inverse/text"
+    ],
+    "textStyles": [
+      "Mobile/h2",
+      "Desktop/label"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "button/inverse/bg",
+        "button/inverse/border",
+        "button/inverse/text",
+        "color/surface/inverse",
+        "font/family/display",
+        "font/line-height/desktop/label",
+        "font/line-height/mobile/h2",
+        "font/size/desktop/label",
+        "font/size/mobile/h2",
+        "font/style/display",
+        "lang-switch/bg",
+        "lang-switch/bg-selected",
+        "lang-switch/border",
+        "lang-switch/text",
+        "lang-switch/text-selected",
+        "nav-item/menu-text",
+        "nav-item/menu-text-active"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "button",
+      "icon-arrow-right",
+      "icon-button",
+      "icon-close",
+      "lang-switch",
+      "logo-yatekomo",
+      "nav-item"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

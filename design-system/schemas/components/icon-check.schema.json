@@ -6,7 +6,7 @@
     "slug": "icon-check",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T13:31:29Z",
+    "lastSync": "2026-10-07T13:48:12Z",
     "description": "Check de lista (landings, pcard). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
     "figmaPage": "Icons",
     "figmaType": "COMPONENT",
@@ -84,7 +84,8 @@
     "uses": [],
     "usedBy": [
       "checkbox",
-      "chip"
+      "chip",
+      "product-filter"
     ],
     "related": []
   }

@@ -1,0 +1,161 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:nav-item",
+  "meta": {
+    "name": "Nav item",
+    "slug": "nav-item",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T13:48:12Z",
+    "description": "Enlace de navegación principal. Bar: navbar de escritorio (Anton 16), fondo amarillo en hover y subrayado grueso en la sección activa. Menu: menú móvil a pantalla completa (Anton 32, crema sobre tinta; activo en amarillo con subrayado). La sección activa nunca se marca solo por color (subrayado) y lleva aria-current=&quot;page&quot;. El texto se edita en la instancia.",
+    "figmaPage": "Nav item",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 8,
+    "autoLayout": true,
+    "anatomyHash": "536b44cf1c53"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/nav-item.md",
+      "section": "Nav item"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "53:102",
+      "componentKey": "3f75ba3d4f9f1a9a27063a5271b43c040a8cf909"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Type",
+        "kind": "VARIANT",
+        "default": "Bar",
+        "values": [
+          "Bar",
+          "Menu"
+        ]
+      },
+      {
+        "name": "State",
+        "kind": "VARIANT",
+        "default": "Default",
+        "values": [
+          "Default",
+          "Hover",
+          "Active",
+          "Focus"
+        ]
+      }
+    ],
+    "variants": {
+      "Type": [
+        "Bar",
+        "Menu"
+      ],
+      "State": [
+        "Default",
+        "Hover",
+        "Active",
+        "Focus"
+      ]
+    },
+    "states": [
+      "Default",
+      "Hover",
+      "Active",
+      "Focus"
+    ],
+    "defaults": {
+      "Type": "Bar",
+      "State": "Default"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "border/width/thick",
+      "font/family/display",
+      "font/line-height/desktop/label",
+      "font/size/desktop/label",
+      "font/style/display",
+      "nav-item/indicator",
+      "nav-item/text",
+      "radius/sm",
+      "space/16",
+      "space/4",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "itemSpacing: space/4",
+      "paddingLeft: space/16",
+      "paddingTop: space/8",
+      "paddingRight: space/16",
+      "paddingBottom: space/8",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "fills: nav-item/text",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label",
+      "color: nav-item/text",
+      "height: border/width/thick",
+      "fills: nav-item/indicator",
+      "color: nav-item/indicator"
+    ],
+    "textStyles": [
+      "Desktop/label"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "font/family/display",
+        "font/line-height/desktop/label",
+        "font/size/desktop/label",
+        "font/style/display",
+        "nav-item/indicator",
+        "nav-item/text"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [
+      "mobile-menu",
+      "navbar"
+    ],
+    "related": []
+  }
+}

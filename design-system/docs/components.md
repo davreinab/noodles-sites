@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 33 componentes sincronizados el 2026-10-07T13:31:29Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 36 componentes sincronizados el 2026-10-07T13:48:12Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -48,6 +48,9 @@
 - [Checkbox](components/checkbox.md) · component · `checkbox` · ⬜ 5 pendientes
 - [Select](components/select.md) · component · `select` · ⬜ 5 pendientes
 - [Search field](components/search-field.md) · component · `search-field` · ⬜ 5 pendientes
+- [Nav item](components/nav-item.md) · component · `nav-item` · ⬜ 5 pendientes
+- [Tab](components/tab.md) · component · `tab` · ⬜ 5 pendientes
+- [Lang switch](components/lang-switch.md) · component · `lang-switch` · ⬜ 5 pendientes
 
 ## Cómo rellenar una ficha
 

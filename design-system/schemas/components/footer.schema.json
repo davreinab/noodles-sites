@@ -1,0 +1,467 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:footer",
+  "meta": {
+    "name": "Footer",
+    "slug": "footer",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T13:48:12Z",
+    "description": "Patrón de pie, en tinta: logo de marca (negativo) y GB Foods · navegación · contacto (formulario externo de GB Foods, icono external-link) · redes · franja legal por país (Privacy, Legal notice, Cookies, Lawful basis, Contest rules) y ©. Los textos legales cambian por país. Sin variables propias: compone Link, Icon y Logo con semánticos.",
+    "figmaPage": "Pattern / Footer",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "1bcc16d46dfd"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/patterns/footer.md",
+      "section": "Footer"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "56:167",
+      "componentKey": "ec0129ea04aee71e644071a1697618d4350e07b4"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Logo#56:0",
+        "kind": "INSTANCE_SWAP",
+        "default": "21:168",
+        "defaultComponent": "Version=Negative",
+        "preferredValues": []
+      },
+      {
+        "name": "Social 1#57:0",
+        "kind": "INSTANCE_SWAP",
+        "default": "21:62",
+        "defaultComponent": "Icon / tiktok",
+        "preferredValues": []
+      },
+      {
+        "name": "Social 2#57:3",
+        "kind": "INSTANCE_SWAP",
+        "default": "21:65",
+        "defaultComponent": "Icon / instagram",
+        "preferredValues": []
+      },
+      {
+        "name": "Social 3#57:6",
+        "kind": "INSTANCE_SWAP",
+        "default": "21:68",
+        "defaultComponent": "Icon / x",
+        "preferredValues": []
+      },
+      {
+        "name": "Social 4#57:9",
+        "kind": "INSTANCE_SWAP",
+        "default": "21:71",
+        "defaultComponent": "Icon / youtube",
+        "preferredValues": []
+      },
+      {
+        "name": "Breakpoint",
+        "kind": "VARIANT",
+        "default": "Desktop",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ]
+      }
+    ],
+    "variants": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "states": [],
+    "defaults": {
+      "Breakpoint": "Desktop"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "logo",
+        "component": "Version=Negative",
+        "componentSlug": "logo-yatekomo",
+        "exposedAs": "Logo#56:0",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "logo-gb-foods",
+        "component": "Logo / GB Foods",
+        "componentSlug": "logo-gb-foods",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "nav-link",
+        "component": "Type=Inline, Surface=Dark, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "nav-link",
+        "component": "Type=Inline, Surface=Dark, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "nav-link",
+        "component": "Type=Inline, Surface=Dark, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "nav-link",
+        "component": "Type=Inline, Surface=Dark, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "nav-link",
+        "component": "Type=Inline, Surface=Dark, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "contact-link",
+        "component": "Type=Standalone, Surface=Dark, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / external-link",
+        "componentSlug": "icon-external-link",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "social",
+        "component": "Icon / tiktok",
+        "componentSlug": "icon-tiktok",
+        "exposedAs": "Social 1#57:0",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "social",
+        "component": "Icon / instagram",
+        "componentSlug": "icon-instagram",
+        "exposedAs": "Social 2#57:3",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "social",
+        "component": "Icon / x",
+        "componentSlug": "icon-x",
+        "exposedAs": "Social 3#57:6",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "social",
+        "component": "Icon / youtube",
+        "componentSlug": "icon-youtube",
+        "exposedAs": "Social 4#57:9",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "legal-link",
+        "component": "Type=Inline, Surface=Dark, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "legal-link",
+        "component": "Type=Inline, Surface=Dark, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "legal-link",
+        "component": "Type=Inline, Surface=Dark, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "legal-link",
+        "component": "Type=Inline, Surface=Dark, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "legal-link",
+        "component": "Type=Inline, Surface=Dark, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "Logo#56:0",
+        "Social 1#57:0",
+        "Social 2#57:3",
+        "Social 3#57:6",
+        "Social 4#57:9"
+      ],
+      "defaultIcons": [
+        "Version=Negative",
+        "Icon / tiktok",
+        "Icon / instagram",
+        "Icon / x",
+        "Icon / youtube"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "border/width/thin",
+      "color/border/subtle",
+      "color/surface/inverse",
+      "color/text/on-inverse",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/color/default",
+      "icon/color/inverse",
+      "icon/size/md",
+      "icon/size/sm",
+      "layout/frame",
+      "layout/margin",
+      "link/inverse",
+      "space/16",
+      "space/24",
+      "space/32",
+      "space/48",
+      "space/64",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "itemSpacing: space/48",
+      "paddingLeft: layout/margin",
+      "paddingTop: space/64",
+      "paddingRight: layout/margin",
+      "paddingBottom: space/32",
+      "width: layout/frame",
+      "fills: color/surface/inverse",
+      "color: color/surface/inverse",
+      "itemSpacing: space/64",
+      "itemSpacing: space/24",
+      "itemSpacing: space/16",
+      "itemSpacing: space/8",
+      "fills: link/inverse",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: link/inverse",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: link/inverse",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label",
+      "strokes: icon/color/default",
+      "color: icon/color/default",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "fills: icon/color/inverse",
+      "color: icon/color/inverse",
+      "paddingTop: space/24",
+      "strokeTopWeight: border/width/thin",
+      "counterAxisSpacing: space/8",
+      "strokes: color/border/subtle",
+      "color: color/border/subtle",
+      "fills: color/text/on-inverse",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: color/text/on-inverse"
+    ],
+    "textStyles": [
+      "Desktop/body-m",
+      "Desktop/label",
+      "Desktop/caption"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "color/border/subtle",
+        "color/surface/inverse",
+        "color/text/on-inverse",
+        "font/family/body",
+        "font/family/display",
+        "font/line-height/desktop/body-m",
+        "font/line-height/desktop/caption",
+        "font/line-height/desktop/label",
+        "font/size/desktop/body-m",
+        "font/size/desktop/caption",
+        "font/size/desktop/label",
+        "font/style/body",
+        "font/style/display",
+        "icon/color/default",
+        "icon/color/inverse",
+        "link/inverse"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "icon-arrow-right",
+      "icon-external-link",
+      "icon-instagram",
+      "icon-tiktok",
+      "icon-x",
+      "icon-youtube",
+      "link",
+      "logo-gb-foods",
+      "logo-yatekomo"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

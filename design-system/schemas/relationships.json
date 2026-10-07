@@ -61,7 +61,137 @@
       "from": "search-field",
       "to": "icon-search",
       "type": "uses"
+    },
+    {
+      "from": "navbar",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "navbar",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "navbar",
+      "to": "icon-button",
+      "type": "uses"
+    },
+    {
+      "from": "navbar",
+      "to": "icon-search",
+      "type": "uses"
+    },
+    {
+      "from": "navbar",
+      "to": "lang-switch",
+      "type": "uses"
+    },
+    {
+      "from": "navbar",
+      "to": "logo-yatekomo",
+      "type": "uses"
+    },
+    {
+      "from": "navbar",
+      "to": "nav-item",
+      "type": "uses"
+    },
+    {
+      "from": "mobile-menu",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "mobile-menu",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "mobile-menu",
+      "to": "icon-button",
+      "type": "uses"
+    },
+    {
+      "from": "mobile-menu",
+      "to": "icon-close",
+      "type": "uses"
+    },
+    {
+      "from": "mobile-menu",
+      "to": "lang-switch",
+      "type": "uses"
+    },
+    {
+      "from": "mobile-menu",
+      "to": "logo-yatekomo",
+      "type": "uses"
+    },
+    {
+      "from": "mobile-menu",
+      "to": "nav-item",
+      "type": "uses"
+    },
+    {
+      "from": "product-filter",
+      "to": "chip",
+      "type": "uses"
+    },
+    {
+      "from": "product-filter",
+      "to": "icon-check",
+      "type": "uses"
+    },
+    {
+      "from": "product-filter",
+      "to": "tab",
+      "type": "uses"
+    },
+    {
+      "from": "footer",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "footer",
+      "to": "icon-external-link",
+      "type": "uses"
+    },
+    {
+      "from": "footer",
+      "to": "icon-instagram",
+      "type": "uses"
+    },
+    {
+      "from": "footer",
+      "to": "icon-tiktok",
+      "type": "uses"
+    },
+    {
+      "from": "footer",
+      "to": "icon-x",
+      "type": "uses"
+    },
+    {
+      "from": "footer",
+      "to": "icon-youtube",
+      "type": "uses"
+    },
+    {
+      "from": "footer",
+      "to": "link",
+      "type": "uses"
+    },
+    {
+      "from": "footer",
+      "to": "logo-gb-foods",
+      "type": "uses"
+    },
+    {
+      "from": "footer",
+      "to": "logo-yatekomo",
+      "type": "uses"
     }
   ],
-  "lastSync": "2026-10-07T13:31:29Z"
+  "lastSync": "2026-10-07T13:48:12Z"
 }

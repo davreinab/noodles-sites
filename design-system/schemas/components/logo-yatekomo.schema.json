@@ -6,7 +6,7 @@
     "slug": "logo-yatekomo",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T13:31:29Z",
+    "lastSync": "2026-10-07T13:48:12Z",
     "description": "Logo Yatekomo. Positivo vectorial; negativo en PNG (pedir vectorial). No se recolorea.",
     "figmaPage": "Brand",
     "figmaType": "COMPONENT_SET",
@@ -89,7 +89,11 @@
   "compatibility": {},
   "relations": {
     "uses": [],
-    "usedBy": [],
+    "usedBy": [
+      "footer",
+      "mobile-menu",
+      "navbar"
+    ],
     "related": []
   }
 }

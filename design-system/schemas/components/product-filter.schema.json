@@ -1,0 +1,353 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:product-filter",
+  "meta": {
+    "name": "Product filter",
+    "slug": "product-filter",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T13:48:12Z",
+    "description": "Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias.",
+    "figmaPage": "Pattern / Product filter",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "830668440321"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/patterns/product-filter.md",
+      "section": "Product filter"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "55:253",
+      "componentKey": "3b96938d2949d5b37f2f01a0b01056524046be55"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Breakpoint",
+        "kind": "VARIANT",
+        "default": "Desktop",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ]
+      }
+    ],
+    "variants": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "states": [],
+    "defaults": {
+      "Breakpoint": "Desktop"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "tab",
+        "component": "State=Selected",
+        "componentSlug": "tab",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "tab",
+        "component": "State=Default",
+        "componentSlug": "tab",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "tab",
+        "component": "State=Default",
+        "componentSlug": "tab",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "chip",
+        "component": "State=Selected",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "chip",
+        "component": "State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "chip",
+        "component": "State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "chip",
+        "component": "State=Selected",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "chip",
+        "component": "State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "chip",
+        "component": "State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "chip",
+        "component": "State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "border/width/thin",
+      "chip/bg",
+      "chip/bg-selected",
+      "chip/border",
+      "chip/text",
+      "chip/text-selected",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-s",
+      "font/size/desktop/caption",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "layout/frame",
+      "layout/margin",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/8",
+      "tab/bg",
+      "tab/bg-selected",
+      "tab/border",
+      "tab/text",
+      "tab/text-selected"
+    ],
+    "variablesUsed": [
+      "itemSpacing: space/24",
+      "paddingLeft: layout/margin",
+      "paddingTop: space/24",
+      "paddingRight: layout/margin",
+      "paddingBottom: space/24",
+      "width: layout/frame",
+      "itemSpacing: space/8",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/caption",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: color/text/secondary",
+      "counterAxisSpacing: space/8",
+      "paddingLeft: space/24",
+      "paddingTop: space/16",
+      "paddingRight: space/24",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: tab/bg-selected",
+      "strokes: tab/border",
+      "color: tab/bg-selected",
+      "color: tab/border",
+      "fills: tab/text-selected",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label",
+      "color: tab/text-selected",
+      "fills: tab/bg",
+      "color: tab/bg",
+      "fills: tab/text",
+      "color: tab/text",
+      "paddingLeft: space/16",
+      "paddingTop: space/8",
+      "paddingRight: space/16",
+      "paddingBottom: space/8",
+      "fills: chip/bg-selected",
+      "strokes: chip/border",
+      "color: chip/bg-selected",
+      "color: chip/border",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: chip/text-selected",
+      "color: chip/text-selected",
+      "fills: chip/text-selected",
+      "fontSize: font/size/desktop/body-s",
+      "lineHeight: font/line-height/desktop/body-s",
+      "fills: chip/bg",
+      "color: chip/bg",
+      "strokes: chip/text",
+      "color: chip/text",
+      "fills: chip/text"
+    ],
+    "textStyles": [
+      "Desktop/caption",
+      "Desktop/label",
+      "Desktop/body-s"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "chip/bg",
+        "chip/bg-selected",
+        "chip/border",
+        "chip/text",
+        "chip/text-selected",
+        "color/text/secondary",
+        "font/family/body",
+        "font/family/display",
+        "font/line-height/desktop/body-s",
+        "font/line-height/desktop/caption",
+        "font/line-height/desktop/label",
+        "font/size/desktop/body-s",
+        "font/size/desktop/caption",
+        "font/size/desktop/label",
+        "font/style/body",
+        "font/style/display",
+        "tab/bg",
+        "tab/bg-selected",
+        "tab/border",
+        "tab/text",
+        "tab/text-selected"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "chip",
+      "icon-check",
+      "tab"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

@@ -1834,8 +1834,1278 @@
       ],
       "total": 1,
       "read": 1
+    },
+    {
+      "name": "Nav item",
+      "id": "53:69",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Nav item",
+          "name": "Nav item",
+          "type": "COMPONENT_SET",
+          "id": "53:102",
+          "key": "3f75ba3d4f9f1a9a27063a5271b43c040a8cf909",
+          "description": "Enlace de navegación principal. Bar: navbar de escritorio (Anton 16), fondo amarillo en hover y subrayado grueso en la sección activa. Menu: menú móvil a pantalla completa (Anton 32, crema sobre tinta; activo en amarillo con subrayado). La sección activa nunca se marca solo por color (subrayado) y lleva aria-current=&quot;page&quot;. El texto se edita en la instancia.",
+          "variantAxes": {
+            "Type": [
+              "Bar",
+              "Menu"
+            ],
+            "State": [
+              "Default",
+              "Hover",
+              "Active",
+              "Focus"
+            ]
+          },
+          "variantCount": 8,
+          "properties": [
+            {
+              "name": "Type",
+              "kind": "VARIANT",
+              "default": "Bar",
+              "values": [
+                "Bar",
+                "Menu"
+              ]
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Active",
+                "Focus"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/4",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "fills: nav-item/text",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "color: nav-item/text",
+              "height: border/width/thick",
+              "fills: nav-item/indicator",
+              "color: nav-item/indicator"
+            ],
+            "textStyles": [
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Tab",
+      "id": "53:70",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Tab",
+          "name": "Tab",
+          "type": "COMPONENT_SET",
+          "id": "54:58",
+          "key": "c5ace94961371155da8361436894be193e75847c",
+          "description": "Pestaña del primer nivel del filtro de productos (Cups / Bags / Sauces). Selected en tinta con texto crema. En código: role=&quot;tablist&quot; / role=&quot;tab&quot; con aria-selected y flechas izquierda/derecha para moverse. Alto 48 (mínimo táctil).",
+          "variantAxes": {
+            "State": [
+              "Default",
+              "Hover",
+              "Selected",
+              "Focus"
+            ]
+          },
+          "variantCount": 4,
+          "properties": [
+            {
+              "name": "Label#54:0",
+              "kind": "TEXT",
+              "default": "Cups"
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Selected",
+                "Focus"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "paddingLeft: space/24",
+              "paddingTop: space/16",
+              "paddingRight: space/24",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: tab/bg",
+              "strokes: tab/border",
+              "color: tab/bg",
+              "color: tab/border",
+              "fills: tab/text",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "color: tab/text"
+            ],
+            "textStyles": [
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Lang switch",
+      "id": "53:71",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Lang switch",
+          "name": "Lang switch",
+          "type": "COMPONENT_SET",
+          "id": "54:71",
+          "key": "6edfbbb312dd0b16359a2c22789d0cfe11c92952",
+          "description": "Selector de idioma de dos opciones (p. ej. NL | FR en Aiki). Solo en marcas multiidioma. La opción activa en tinta. En código: enlaces a la versión de idioma con hreflang y aria-current en la activa; cada opción con lang=&quot;nl&quot;/&quot;fr&quot;.",
+          "variantAxes": {
+            "Selected": [
+              "First",
+              "Second"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "First label#54:5",
+              "kind": "TEXT",
+              "default": "NL"
+            },
+            {
+              "name": "Second label#54:8",
+              "kind": "TEXT",
+              "default": "FR"
+            },
+            {
+              "name": "Selected",
+              "kind": "VARIANT",
+              "default": "First",
+              "values": [
+                "First",
+                "Second"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/4",
+              "paddingLeft: space/4",
+              "paddingTop: space/4",
+              "paddingRight: space/4",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: lang-switch/bg",
+              "strokes: lang-switch/border",
+              "color: lang-switch/bg",
+              "color: lang-switch/border",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "fills: lang-switch/bg-selected",
+              "color: lang-switch/bg-selected",
+              "fills: lang-switch/text-selected",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "color: lang-switch/text-selected",
+              "fills: lang-switch/text",
+              "color: lang-switch/text"
+            ],
+            "textStyles": [
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Navbar",
+      "id": "53:72",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Navbar",
+          "name": "Navbar",
+          "type": "COMPONENT_SET",
+          "id": "55:116",
+          "key": "5c42eb9d9261bf9933740f4f293126121318d0bc",
+          "description": "Patrón de cabecera. Desktop: logo · 5 Nav item (Bar) · Lang switch (solo marcas multiidioma) · buscar · CTA «Dónde comprar». Mobile: logo · buscar · menú (abre Mobile menu). Comportamiento: sticky (layer/sticky); se oculta al hacer scroll hacia abajo y reaparece al subir; respeta prefers-reduced-motion. Ancho ligado a layout/frame con modo fijado por variante. Sin variables propias: compone componentes y semánticos.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Logo#55:0",
+              "kind": "INSTANCE_SWAP",
+              "default": "21:167",
+              "defaultComponent": "Version=Positive",
+              "preferredValues": []
+            },
+            {
+              "name": "Lang switch#55:3",
+              "kind": "BOOLEAN",
+              "default": false
+            },
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "logo",
+              "component": "Version=Positive",
+              "componentSet": "Logo / Yatekomo",
+              "exposedAs": "Logo#55:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nav-item",
+              "component": "Type=Bar, State=Active",
+              "componentSet": "Nav item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nav-item",
+              "component": "Type=Bar, State=Default",
+              "componentSet": "Nav item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nav-item",
+              "component": "Type=Bar, State=Default",
+              "componentSet": "Nav item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nav-item",
+              "component": "Type=Bar, State=Default",
+              "componentSet": "Nav item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nav-item",
+              "component": "Type=Bar, State=Default",
+              "componentSet": "Nav item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "lang-switch",
+              "component": "Selected=First",
+              "componentSet": "Lang switch",
+              "exposedAs": null,
+              "toggledBy": "Lang switch#55:3",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "search",
+              "component": "Hierarchy=Secondary, Size=M, State=Default",
+              "componentSet": "Icon button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / search",
+              "componentSet": null,
+              "exposedAs": "Icon#33:125",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "cta",
+              "component": "Hierarchy=Primary, Size=M, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/24",
+              "paddingLeft: layout/margin",
+              "paddingTop: space/16",
+              "paddingRight: layout/margin",
+              "paddingBottom: space/16",
+              "width: layout/frame",
+              "strokeBottomWeight: border/width/thin",
+              "fills: color/surface/page",
+              "strokes: color/border/default",
+              "color: color/surface/page",
+              "color: color/border/default",
+              "itemSpacing: space/8",
+              "itemSpacing: space/4",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "fills: nav-item/text-active",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "color: nav-item/text-active",
+              "height: border/width/thick",
+              "fills: nav-item/indicator",
+              "color: nav-item/indicator",
+              "fills: nav-item/text",
+              "color: nav-item/text",
+              "itemSpacing: space/16",
+              "paddingLeft: space/4",
+              "paddingTop: space/4",
+              "paddingRight: space/4",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: lang-switch/bg",
+              "strokes: lang-switch/border",
+              "color: lang-switch/bg",
+              "color: lang-switch/border",
+              "fills: lang-switch/bg-selected",
+              "color: lang-switch/bg-selected",
+              "fills: lang-switch/text-selected",
+              "color: lang-switch/text-selected",
+              "fills: lang-switch/text",
+              "color: lang-switch/text",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "strokes: button/secondary/border",
+              "color: button/secondary/border",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: button/secondary/text",
+              "color: button/secondary/text",
+              "paddingLeft: space/24",
+              "paddingRight: space/24",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text"
+            ],
+            "textStyles": [
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Mobile menu",
+      "id": "53:73",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Mobile menu",
+          "name": "Mobile menu",
+          "type": "COMPONENT",
+          "id": "55:119",
+          "key": "0e73e5d01e03cfdd191b1f97e3a8c6ec4e210664",
+          "description": "Patrón: menú móvil a pantalla completa (se abre desde el botón menú de la Navbar). Logo negativo · cerrar · 5 Nav item (Menu) · Lang switch (solo marcas multiidioma) · CTA. Accesibilidad: role=&quot;dialog&quot; con aria-modal, foco atrapado dentro, Esc cierra y el foco vuelve al botón menú; layer/modal. Sin variables propias.",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [
+            {
+              "name": "Logo#55:6",
+              "kind": "INSTANCE_SWAP",
+              "default": "21:168",
+              "defaultComponent": "Version=Negative",
+              "preferredValues": []
+            },
+            {
+              "name": "Lang switch#55:7",
+              "kind": "BOOLEAN",
+              "default": false
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "logo",
+              "component": "Version=Negative",
+              "componentSet": "Logo / Yatekomo",
+              "exposedAs": "Logo#55:6",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "close",
+              "component": "Hierarchy=Inverse, Size=M, State=Default",
+              "componentSet": "Icon button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": "Icon#33:125",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nav-item",
+              "component": "Type=Menu, State=Active",
+              "componentSet": "Nav item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nav-item",
+              "component": "Type=Menu, State=Default",
+              "componentSet": "Nav item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nav-item",
+              "component": "Type=Menu, State=Default",
+              "componentSet": "Nav item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nav-item",
+              "component": "Type=Menu, State=Default",
+              "componentSet": "Nav item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nav-item",
+              "component": "Type=Menu, State=Default",
+              "componentSet": "Nav item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "lang-switch",
+              "component": "Selected=First",
+              "componentSet": "Lang switch",
+              "exposedAs": null,
+              "toggledBy": "Lang switch#55:7",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "cta",
+              "component": "Hierarchy=Inverse, Size=L, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/40",
+              "paddingLeft: layout/margin",
+              "paddingTop: space/16",
+              "paddingRight: layout/margin",
+              "paddingBottom: space/48",
+              "width: layout/frame",
+              "fills: color/surface/inverse",
+              "color: color/surface/inverse",
+              "paddingLeft: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: button/inverse/bg",
+              "strokes: button/inverse/border",
+              "color: button/inverse/bg",
+              "color: button/inverse/border",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: button/inverse/text",
+              "color: button/inverse/text",
+              "itemSpacing: space/16",
+              "itemSpacing: space/4",
+              "paddingLeft: space/8",
+              "paddingTop: space/8",
+              "paddingRight: space/8",
+              "paddingBottom: space/8",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "fills: nav-item/menu-text-active",
+              "fontSize: font/size/mobile/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/mobile/h2",
+              "color: nav-item/menu-text-active",
+              "height: border/width/thick",
+              "fills: nav-item/menu-text",
+              "color: nav-item/menu-text",
+              "paddingLeft: space/4",
+              "paddingTop: space/4",
+              "paddingRight: space/4",
+              "paddingBottom: space/4",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: lang-switch/bg",
+              "strokes: lang-switch/border",
+              "color: lang-switch/bg",
+              "color: lang-switch/border",
+              "fills: lang-switch/bg-selected",
+              "color: lang-switch/bg-selected",
+              "fills: lang-switch/text-selected",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "color: lang-switch/text-selected",
+              "fills: lang-switch/text",
+              "color: lang-switch/text",
+              "itemSpacing: space/8",
+              "paddingLeft: space/32",
+              "paddingTop: space/24",
+              "paddingRight: space/32",
+              "paddingBottom: space/24",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "fills: button/inverse/text"
+            ],
+            "textStyles": [
+              "Mobile/h2",
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Product filter",
+      "id": "53:74",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Product filter",
+          "name": "Product filter",
+          "type": "COMPONENT_SET",
+          "id": "55:253",
+          "key": "3b96938d2949d5b37f2f01a0b01056524046be55",
+          "description": "Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "tab",
+              "component": "State=Selected",
+              "componentSet": "Tab",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "tab",
+              "component": "State=Default",
+              "componentSet": "Tab",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "tab",
+              "component": "State=Default",
+              "componentSet": "Tab",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "chip",
+              "component": "State=Selected",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "chip",
+              "component": "State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "chip",
+              "component": "State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "chip",
+              "component": "State=Selected",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "chip",
+              "component": "State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "chip",
+              "component": "State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "chip",
+              "component": "State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/24",
+              "paddingLeft: layout/margin",
+              "paddingTop: space/24",
+              "paddingRight: layout/margin",
+              "paddingBottom: space/24",
+              "width: layout/frame",
+              "itemSpacing: space/8",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: color/text/secondary",
+              "counterAxisSpacing: space/8",
+              "paddingLeft: space/24",
+              "paddingTop: space/16",
+              "paddingRight: space/24",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: tab/bg-selected",
+              "strokes: tab/border",
+              "color: tab/bg-selected",
+              "color: tab/border",
+              "fills: tab/text-selected",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "color: tab/text-selected",
+              "fills: tab/bg",
+              "color: tab/bg",
+              "fills: tab/text",
+              "color: tab/text",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "fills: chip/bg-selected",
+              "strokes: chip/border",
+              "color: chip/bg-selected",
+              "color: chip/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: chip/text-selected",
+              "color: chip/text-selected",
+              "fills: chip/text-selected",
+              "fontSize: font/size/desktop/body-s",
+              "lineHeight: font/line-height/desktop/body-s",
+              "fills: chip/bg",
+              "color: chip/bg",
+              "strokes: chip/text",
+              "color: chip/text",
+              "fills: chip/text"
+            ],
+            "textStyles": [
+              "Desktop/caption",
+              "Desktop/label",
+              "Desktop/body-s"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Pattern / Footer",
+      "id": "53:75",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Footer",
+          "name": "Footer",
+          "type": "COMPONENT_SET",
+          "id": "56:167",
+          "key": "ec0129ea04aee71e644071a1697618d4350e07b4",
+          "description": "Patrón de pie, en tinta: logo de marca (negativo) y GB Foods · navegación · contacto (formulario externo de GB Foods, icono external-link) · redes · franja legal por país (Privacy, Legal notice, Cookies, Lawful basis, Contest rules) y ©. Los textos legales cambian por país. Sin variables propias: compone Link, Icon y Logo con semánticos.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Logo#56:0",
+              "kind": "INSTANCE_SWAP",
+              "default": "21:168",
+              "defaultComponent": "Version=Negative",
+              "preferredValues": []
+            },
+            {
+              "name": "Social 1#57:0",
+              "kind": "INSTANCE_SWAP",
+              "default": "21:62",
+              "defaultComponent": "Icon / tiktok",
+              "preferredValues": []
+            },
+            {
+              "name": "Social 2#57:3",
+              "kind": "INSTANCE_SWAP",
+              "default": "21:65",
+              "defaultComponent": "Icon / instagram",
+              "preferredValues": []
+            },
+            {
+              "name": "Social 3#57:6",
+              "kind": "INSTANCE_SWAP",
+              "default": "21:68",
+              "defaultComponent": "Icon / x",
+              "preferredValues": []
+            },
+            {
+              "name": "Social 4#57:9",
+              "kind": "INSTANCE_SWAP",
+              "default": "21:71",
+              "defaultComponent": "Icon / youtube",
+              "preferredValues": []
+            },
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "logo",
+              "component": "Version=Negative",
+              "componentSet": "Logo / Yatekomo",
+              "exposedAs": "Logo#56:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "logo-gb-foods",
+              "component": "Logo / GB Foods",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nav-link",
+              "component": "Type=Inline, Surface=Dark, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            },
+            {
+              "layer": "nav-link",
+              "component": "Type=Inline, Surface=Dark, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            },
+            {
+              "layer": "nav-link",
+              "component": "Type=Inline, Surface=Dark, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            },
+            {
+              "layer": "nav-link",
+              "component": "Type=Inline, Surface=Dark, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            },
+            {
+              "layer": "nav-link",
+              "component": "Type=Inline, Surface=Dark, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            },
+            {
+              "layer": "contact-link",
+              "component": "Type=Standalone, Surface=Dark, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / external-link",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "social",
+              "component": "Icon / tiktok",
+              "componentSet": null,
+              "exposedAs": "Social 1#57:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "social",
+              "component": "Icon / instagram",
+              "componentSet": null,
+              "exposedAs": "Social 2#57:3",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "social",
+              "component": "Icon / x",
+              "componentSet": null,
+              "exposedAs": "Social 3#57:6",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "social",
+              "component": "Icon / youtube",
+              "componentSet": null,
+              "exposedAs": "Social 4#57:9",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "legal-link",
+              "component": "Type=Inline, Surface=Dark, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            },
+            {
+              "layer": "legal-link",
+              "component": "Type=Inline, Surface=Dark, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            },
+            {
+              "layer": "legal-link",
+              "component": "Type=Inline, Surface=Dark, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            },
+            {
+              "layer": "legal-link",
+              "component": "Type=Inline, Surface=Dark, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            },
+            {
+              "layer": "legal-link",
+              "component": "Type=Inline, Surface=Dark, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/48",
+              "paddingLeft: layout/margin",
+              "paddingTop: space/64",
+              "paddingRight: layout/margin",
+              "paddingBottom: space/32",
+              "width: layout/frame",
+              "fills: color/surface/inverse",
+              "color: color/surface/inverse",
+              "itemSpacing: space/64",
+              "itemSpacing: space/24",
+              "itemSpacing: space/16",
+              "itemSpacing: space/8",
+              "fills: link/inverse",
+              "fontSize: font/size/desktop/body-m",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-m",
+              "color: link/inverse",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: link/inverse",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "strokes: icon/color/default",
+              "color: icon/color/default",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "fills: icon/color/inverse",
+              "color: icon/color/inverse",
+              "paddingTop: space/24",
+              "strokeTopWeight: border/width/thin",
+              "counterAxisSpacing: space/8",
+              "strokes: color/border/subtle",
+              "color: color/border/subtle",
+              "fills: color/text/on-inverse",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: color/text/on-inverse"
+            ],
+            "textStyles": [
+              "Desktop/body-m",
+              "Desktop/label",
+              "Desktop/caption"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
     }
   ],
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
-  "readAt": "2026-10-07T12:43:12.953Z"
+  "readAt": "2026-10-07T13:46:38.513Z"
 }

@@ -1,0 +1,156 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:tab",
+  "meta": {
+    "name": "Tab",
+    "slug": "tab",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T13:48:12Z",
+    "description": "Pestaña del primer nivel del filtro de productos (Cups / Bags / Sauces). Selected en tinta con texto crema. En código: role=&quot;tablist&quot; / role=&quot;tab&quot; con aria-selected y flechas izquierda/derecha para moverse. Alto 48 (mínimo táctil).",
+    "figmaPage": "Tab",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 4,
+    "autoLayout": true,
+    "anatomyHash": "05b4c7a60a71"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/tab.md",
+      "section": "Tab"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "54:58",
+      "componentKey": "c5ace94961371155da8361436894be193e75847c"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Label#54:0",
+        "kind": "TEXT",
+        "default": "Cups"
+      },
+      {
+        "name": "State",
+        "kind": "VARIANT",
+        "default": "Default",
+        "values": [
+          "Default",
+          "Hover",
+          "Selected",
+          "Focus"
+        ]
+      }
+    ],
+    "variants": {
+      "State": [
+        "Default",
+        "Hover",
+        "Selected",
+        "Focus"
+      ]
+    },
+    "states": [
+      "Default",
+      "Hover",
+      "Selected",
+      "Focus"
+    ],
+    "defaults": {
+      "State": "Default"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "border/width/thin",
+      "font/family/display",
+      "font/line-height/desktop/label",
+      "font/size/desktop/label",
+      "font/style/display",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "tab/bg",
+      "tab/border",
+      "tab/text"
+    ],
+    "variablesUsed": [
+      "paddingLeft: space/24",
+      "paddingTop: space/16",
+      "paddingRight: space/24",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: tab/bg",
+      "strokes: tab/border",
+      "color: tab/bg",
+      "color: tab/border",
+      "fills: tab/text",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label",
+      "color: tab/text"
+    ],
+    "textStyles": [
+      "Desktop/label"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "font/family/display",
+        "font/line-height/desktop/label",
+        "font/size/desktop/label",
+        "font/style/display",
+        "tab/bg",
+        "tab/border",
+        "tab/text"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [
+      "product-filter"
+    ],
+    "related": []
+  }
+}

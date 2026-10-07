@@ -1,0 +1,178 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:chip",
+  "meta": {
+    "name": "Chip",
+    "slug": "chip",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T12:44:49Z",
+    "description": "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP).",
+    "figmaPage": "Chip",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 4,
+    "autoLayout": true,
+    "anatomyHash": "e8f4c313b68f"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/chip.md",
+      "section": "Chip"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "35:186",
+      "componentKey": "9e5bf92f006c4089c292176008506b8af258f943"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Label#35:17",
+        "kind": "TEXT",
+        "default": "Yatekomo Original"
+      },
+      {
+        "name": "Icon leading#35:22",
+        "kind": "BOOLEAN",
+        "default": false
+      },
+      {
+        "name": "Icon leading swap#35:27",
+        "kind": "INSTANCE_SWAP",
+        "default": "21:56",
+        "defaultComponent": "Icon / check",
+        "preferredValues": [
+          {
+            "type": "COMPONENT",
+            "key": "8d3736b0f10db93283ac616c1842079d386cfa8c"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "c21a991431daab7928e8b4c745539c0105c26172"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "d3bd670f4a53fb5af9503f3797584ad997f049a8"
+          }
+        ]
+      },
+      {
+        "name": "State",
+        "kind": "VARIANT",
+        "default": "Default",
+        "values": [
+          "Default",
+          "Hover",
+          "Selected",
+          "Disabled"
+        ]
+      }
+    ],
+    "variants": {
+      "State": [
+        "Default",
+        "Hover",
+        "Selected",
+        "Disabled"
+      ]
+    },
+    "states": [
+      "Default",
+      "Hover",
+      "Selected",
+      "Disabled"
+    ],
+    "defaults": {
+      "State": "Default"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "Icon leading swap#35:27"
+      ],
+      "defaultIcons": [
+        "Icon / check"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "border/width/thin",
+      "chip/bg",
+      "chip/border",
+      "chip/text",
+      "font/family/body",
+      "font/line-height/desktop/body-s",
+      "font/size/desktop/body-s",
+      "font/style/body",
+      "icon/size/sm",
+      "radius/pill",
+      "space/16",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "itemSpacing: space/8",
+      "paddingLeft: space/16",
+      "paddingTop: space/8",
+      "paddingRight: space/16",
+      "paddingBottom: space/8",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: chip/bg",
+      "strokes: chip/border",
+      "color: chip/bg",
+      "color: chip/border",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: chip/text",
+      "color: chip/text",
+      "fills: chip/text",
+      "fontSize: font/size/desktop/body-s",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-s"
+    ],
+    "textStyles": [
+      "Desktop/body-s"
+    ]
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "icon-check"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

@@ -1,7 +1,7 @@
-### Icon / chevron-down   ⚙️ synced: 2026-10-07T11:30:18Z
+### Icon / chevron-down   ⚙️ synced: 2026-10-07T12:44:49Z
 
 <!-- ⚙️ GENERATED:start:icon-chevron-down -->
-- **Figma:** `21:59` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T11:30:18Z
+- **Figma:** `21:59` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T12:44:49Z
 - **Descripción (Figma):** Chevron del selector de idioma (landings), escalado a 24. Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

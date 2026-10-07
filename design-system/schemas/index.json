@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-07T11:30:18Z",
+  "lastSync": "2026-10-07T12:44:49Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -524,10 +524,127 @@
         "path": "design-system/css/components.css",
         "classes": []
       }
+    },
+    {
+      "id": "component:button",
+      "name": "Button",
+      "slug": "button",
+      "kind": "component",
+      "contractPath": "./components/button.schema.json",
+      "keywords": [
+        "button",
+        "icon"
+      ],
+      "dependencies": [
+        "icon-arrow-right"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "33:295",
+        "componentKey": "012371b0017ccbcb3ebc14b5b04bfcb7f2fb5e5c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-button",
+      "name": "Icon button",
+      "slug": "icon-button",
+      "kind": "component",
+      "contractPath": "./components/icon-button.schema.json",
+      "keywords": [
+        "button",
+        "icon"
+      ],
+      "dependencies": [
+        "icon-close"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "33:401",
+        "componentKey": "399cf919ff05fe3ad6c01a042bed7b73299c082c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:link",
+      "name": "Link",
+      "slug": "link",
+      "kind": "component",
+      "contractPath": "./components/link.schema.json",
+      "keywords": [
+        "icon",
+        "link"
+      ],
+      "dependencies": [
+        "icon-arrow-right"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "35:107",
+        "componentKey": "910a6a9f2e6b0dcd45977370b34543405b25221f"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:badge",
+      "name": "Badge",
+      "slug": "badge",
+      "kind": "component",
+      "contractPath": "./components/badge.schema.json",
+      "keywords": [
+        "badge"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "35:167",
+        "componentKey": "eebdab1901e53a08ad4395e2546b9459e90433e1"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:chip",
+      "name": "Chip",
+      "slug": "chip",
+      "kind": "component",
+      "contractPath": "./components/chip.schema.json",
+      "keywords": [
+        "chip",
+        "icon"
+      ],
+      "dependencies": [
+        "icon-check"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "35:186",
+        "componentKey": "9e5bf92f006c4089c292176008506b8af258f943"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
     }
   ],
   "counts": {
-    "atoms": 22,
+    "atoms": 27,
     "patterns": 0
   }
 }

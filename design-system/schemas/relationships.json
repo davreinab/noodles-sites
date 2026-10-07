@@ -6,6 +6,27 @@
     "composes",
     "related"
   ],
-  "relationships": [],
-  "lastSync": "2026-10-07T11:30:18Z"
+  "relationships": [
+    {
+      "from": "button",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "icon-button",
+      "to": "icon-close",
+      "type": "uses"
+    },
+    {
+      "from": "link",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "chip",
+      "to": "icon-check",
+      "type": "uses"
+    }
+  ],
+  "lastSync": "2026-10-07T12:44:49Z"
 }

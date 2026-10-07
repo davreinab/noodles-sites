@@ -1,6 +1,6 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": "2026-10-07T11:30:18Z",
+  "generatedAt": "2026-10-07T12:44:49Z",
   "adoptionMode": "new",
   "sourcesCompared": [
     "figma",
@@ -12,7 +12,7 @@
   ],
   "summary": {
     "critical": 0,
-    "warning": 22,
+    "warning": 27,
     "info": 11
   },
   "findings": [
@@ -180,6 +180,31 @@
       "severity": "warning",
       "check": "code-example-missing-or-stale",
       "detail": "Logo / Daisuki: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Button: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon button: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Link: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Badge: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Chip: sin «Ejemplo de código» (source.code.example)"
     }
   ],
   "acceptedStructuralDifferences": [],

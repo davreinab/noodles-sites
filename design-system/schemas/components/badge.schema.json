@@ -1,0 +1,118 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:badge",
+  "meta": {
+    "name": "Badge",
+    "slug": "badge",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T12:44:49Z",
+    "description": "Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). No es interactivo; no usar como botón.",
+    "figmaPage": "Badge",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 3,
+    "autoLayout": true,
+    "anatomyHash": "91ef4cf862ea"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/badge.md",
+      "section": "Badge"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "35:167",
+      "componentKey": "eebdab1901e53a08ad4395e2546b9459e90433e1"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Label#35:13",
+        "kind": "TEXT",
+        "default": "Nuevo"
+      },
+      {
+        "name": "Type",
+        "kind": "VARIANT",
+        "default": "New",
+        "values": [
+          "New",
+          "Natural",
+          "Neutral"
+        ]
+      }
+    ],
+    "variants": {
+      "Type": [
+        "New",
+        "Natural",
+        "Neutral"
+      ]
+    },
+    "states": [],
+    "defaults": {
+      "Type": "New"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "badge/new/bg",
+      "badge/new/text",
+      "font/family/display",
+      "font/line-height/mobile/label",
+      "font/size/mobile/label",
+      "font/style/display",
+      "radius/pill",
+      "space/4",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "paddingLeft: space/8",
+      "paddingTop: space/4",
+      "paddingRight: space/8",
+      "paddingBottom: space/4",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: badge/new/bg",
+      "color: badge/new/bg",
+      "fills: badge/new/text",
+      "fontSize: font/size/mobile/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/mobile/label",
+      "color: badge/new/text"
+    ],
+    "textStyles": [
+      "Mobile/label"
+    ]
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [],
+    "related": []
+  }
+}

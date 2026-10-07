@@ -1920,6 +1920,90 @@
               "name": "shadow/ink-20"
             }
           }
+        },
+        {
+          "id": "VariableID:33:49",
+          "name": "color/surface/disabled",
+          "type": "COLOR",
+          "description": "Fondo de control desactivado",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-surface-disabled)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:9",
+              "name": "color/neutral/sand-200"
+            },
+            "13:0": {
+              "type": "alias",
+              "id": "VariableID:5:9",
+              "name": "color/neutral/sand-200"
+            },
+            "13:1": {
+              "type": "alias",
+              "id": "VariableID:5:9",
+              "name": "color/neutral/sand-200"
+            },
+            "13:2": {
+              "type": "alias",
+              "id": "VariableID:5:9",
+              "name": "color/neutral/sand-200"
+            },
+            "13:3": {
+              "type": "alias",
+              "id": "VariableID:5:9",
+              "name": "color/neutral/sand-200"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:50",
+          "name": "color/text/disabled",
+          "type": "COLOR",
+          "description": "Texto o icono de control desactivado (4.3:1 sobre surface/disabled)",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-text-disabled)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:5:8",
+              "name": "color/neutral/ink-600"
+            },
+            "13:0": {
+              "type": "alias",
+              "id": "VariableID:5:8",
+              "name": "color/neutral/ink-600"
+            },
+            "13:1": {
+              "type": "alias",
+              "id": "VariableID:5:8",
+              "name": "color/neutral/ink-600"
+            },
+            "13:2": {
+              "type": "alias",
+              "id": "VariableID:5:8",
+              "name": "color/neutral/ink-600"
+            },
+            "13:3": {
+              "type": "alias",
+              "id": "VariableID:5:8",
+              "name": "color/neutral/ink-600"
+            }
+          }
         }
       ]
     },
@@ -2009,6 +2093,1021 @@
             "9:0": {
               "type": "value",
               "value": 40
+            }
+          }
+        },
+        {
+          "id": "VariableID:21:49",
+          "name": "icon/color/default",
+          "type": "COLOR",
+          "description": "Color de icono por defecto (sobre page, brand, card)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--icon-color-default)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:21:50",
+          "name": "icon/color/inverse",
+          "type": "COLOR",
+          "description": "Color de icono sobre surface/inverse",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--icon-color-inverse)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:33",
+              "name": "color/text/on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:21:51",
+          "name": "icon/color/illustration",
+          "type": "COLOR",
+          "description": "Relleno de iconos ilustrados a mano (cambia con la marca)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--icon-color-illustration)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:25",
+              "name": "color/surface/brand"
+            }
+          }
+        },
+        {
+          "id": "VariableID:21:52",
+          "name": "decoration/noodle/brand",
+          "type": "COLOR",
+          "description": "Fideo decorativo en color de marca",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--decoration-noodle-brand)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:25",
+              "name": "color/surface/brand"
+            }
+          }
+        },
+        {
+          "id": "VariableID:21:53",
+          "name": "decoration/noodle/accent",
+          "type": "COLOR",
+          "description": "Fideo decorativo en color de acento",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--decoration-noodle-accent)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:29",
+              "name": "color/surface/accent"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:51",
+          "name": "button/primary/bg",
+          "type": "COLOR",
+          "description": "button primary: Fondo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-primary-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:27",
+              "name": "color/surface/inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:52",
+          "name": "button/primary/text",
+          "type": "COLOR",
+          "description": "button primary: Texto e icono",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-primary-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:33",
+              "name": "color/text/on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:53",
+          "name": "button/primary/border",
+          "type": "COLOR",
+          "description": "button primary: Borde",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-primary-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:54",
+          "name": "button/primary/bg-hover",
+          "type": "COLOR",
+          "description": "button primary: Fondo en hover",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-primary-bg-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:29",
+              "name": "color/surface/accent"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:55",
+          "name": "button/primary/text-hover",
+          "type": "COLOR",
+          "description": "button primary: Texto e icono en hover",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-primary-text-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:56",
+          "name": "button/primary/border-hover",
+          "type": "COLOR",
+          "description": "button primary: Borde en hover",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-primary-border-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:57",
+          "name": "button/primary/focus-ring",
+          "type": "COLOR",
+          "description": "button primary: Anillo de foco",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-primary-focus-ring)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:58",
+          "name": "button/secondary/text",
+          "type": "COLOR",
+          "description": "button secondary: Texto e icono",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-secondary-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:59",
+          "name": "button/secondary/border",
+          "type": "COLOR",
+          "description": "button secondary: Borde",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-secondary-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:60",
+          "name": "button/secondary/bg-hover",
+          "type": "COLOR",
+          "description": "button secondary: Fondo en hover",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-secondary-bg-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:27",
+              "name": "color/surface/inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:61",
+          "name": "button/secondary/text-hover",
+          "type": "COLOR",
+          "description": "button secondary: Texto e icono en hover",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-secondary-text-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:33",
+              "name": "color/text/on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:62",
+          "name": "button/secondary/border-hover",
+          "type": "COLOR",
+          "description": "button secondary: Borde en hover",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-secondary-border-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:63",
+          "name": "button/secondary/focus-ring",
+          "type": "COLOR",
+          "description": "button secondary: Anillo de foco",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-secondary-focus-ring)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:64",
+          "name": "button/inverse/bg",
+          "type": "COLOR",
+          "description": "button inverse: Fondo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-inverse-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:33",
+              "name": "color/text/on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:65",
+          "name": "button/inverse/text",
+          "type": "COLOR",
+          "description": "button inverse: Texto e icono",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-inverse-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:66",
+          "name": "button/inverse/border",
+          "type": "COLOR",
+          "description": "button inverse: Borde",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-inverse-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:33",
+              "name": "color/text/on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:67",
+          "name": "button/inverse/bg-hover",
+          "type": "COLOR",
+          "description": "button inverse: Fondo en hover",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-inverse-bg-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:25",
+              "name": "color/surface/brand"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:68",
+          "name": "button/inverse/text-hover",
+          "type": "COLOR",
+          "description": "button inverse: Texto e icono en hover",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-inverse-text-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:69",
+          "name": "button/inverse/border-hover",
+          "type": "COLOR",
+          "description": "button inverse: Borde en hover",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-inverse-border-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:25",
+              "name": "color/surface/brand"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:70",
+          "name": "button/inverse/focus-ring",
+          "type": "COLOR",
+          "description": "button inverse: Anillo de foco",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-inverse-focus-ring)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:34",
+              "name": "color/text/brand-on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:71",
+          "name": "button/disabled/bg",
+          "type": "COLOR",
+          "description": "button disabled: Fondo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-disabled-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:33:49",
+              "name": "color/surface/disabled"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:72",
+          "name": "button/disabled/text",
+          "type": "COLOR",
+          "description": "button disabled: Texto e icono",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-disabled-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:33:50",
+              "name": "color/text/disabled"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:73",
+          "name": "button/disabled/border",
+          "type": "COLOR",
+          "description": "button disabled: Borde",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--button-disabled-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:33:49",
+              "name": "color/surface/disabled"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:74",
+          "name": "link/default",
+          "type": "COLOR",
+          "description": "link: Color en reposo",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--link-default)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:75",
+          "name": "link/hover",
+          "type": "COLOR",
+          "description": "link: Color en hover",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--link-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:36",
+              "name": "color/text/natural"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:76",
+          "name": "link/inverse",
+          "type": "COLOR",
+          "description": "link: Sobre fondo oscuro",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--link-inverse)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:33",
+              "name": "color/text/on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:77",
+          "name": "link/inverse-hover",
+          "type": "COLOR",
+          "description": "link: Hover sobre fondo oscuro",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--link-inverse-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:34",
+              "name": "color/text/brand-on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:78",
+          "name": "badge/new/bg",
+          "type": "COLOR",
+          "description": "badge new: Fondo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--badge-new-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:30",
+              "name": "color/surface/badge-new"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:79",
+          "name": "badge/new/text",
+          "type": "COLOR",
+          "description": "badge new: Texto e icono",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--badge-new-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:37",
+              "name": "color/text/on-badge"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:80",
+          "name": "badge/natural/bg",
+          "type": "COLOR",
+          "description": "badge natural: Fondo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--badge-natural-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:28",
+              "name": "color/surface/natural"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:81",
+          "name": "badge/natural/text",
+          "type": "COLOR",
+          "description": "badge natural: Texto e icono",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--badge-natural-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:35",
+              "name": "color/text/on-natural"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:82",
+          "name": "badge/neutral/bg",
+          "type": "COLOR",
+          "description": "badge neutral: Fondo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--badge-neutral-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:27",
+              "name": "color/surface/inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:83",
+          "name": "badge/neutral/text",
+          "type": "COLOR",
+          "description": "badge neutral: Texto e icono",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--badge-neutral-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:33",
+              "name": "color/text/on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:84",
+          "name": "chip/bg",
+          "type": "COLOR",
+          "description": "chip: Fondo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--chip-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:26",
+              "name": "color/surface/card"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:85",
+          "name": "chip/text",
+          "type": "COLOR",
+          "description": "chip: Texto e icono",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--chip-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:86",
+          "name": "chip/border",
+          "type": "COLOR",
+          "description": "chip: Borde",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--chip-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:87",
+          "name": "chip/bg-hover",
+          "type": "COLOR",
+          "description": "chip: Fondo en hover",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--chip-bg-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:25",
+              "name": "color/surface/brand"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:88",
+          "name": "chip/bg-selected",
+          "type": "COLOR",
+          "description": "chip: Fondo seleccionado",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--chip-bg-selected)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:27",
+              "name": "color/surface/inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:89",
+          "name": "chip/text-selected",
+          "type": "COLOR",
+          "description": "chip: Texto seleccionado",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--chip-text-selected)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:33",
+              "name": "color/text/on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:90",
+          "name": "chip/bg-disabled",
+          "type": "COLOR",
+          "description": "chip: Fondo desactivado",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--chip-bg-disabled)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:33:49",
+              "name": "color/surface/disabled"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:91",
+          "name": "chip/text-disabled",
+          "type": "COLOR",
+          "description": "chip: Texto desactivado",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--chip-text-disabled)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:33:50",
+              "name": "color/text/disabled"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:406",
+          "name": "link/focus-ring",
+          "type": "COLOR",
+          "description": "link: Anillo de foco",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--link-focus-ring)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:33:407",
+          "name": "link/inverse-focus-ring",
+          "type": "COLOR",
+          "description": "link: Anillo de foco sobre fondo oscuro",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--link-inverse-focus-ring)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:34",
+              "name": "color/text/brand-on-inverse"
             }
           }
         }
@@ -5008,12 +6107,12 @@
   ],
   "readProgress": {
     "v4mnn154qUmiB35CCnRfgh": {
-      "total": 161,
-      "read": 161
+      "total": 211,
+      "read": 211
     }
   },
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
   "fileName": "Document",
   "version": null,
-  "readAt": "2026-10-07T09:25:36.413Z"
+  "readAt": "2026-10-07T12:41:21.504Z"
 }

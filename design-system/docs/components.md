@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 22 componentes sincronizados el 2026-10-07T11:30:18Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 27 componentes sincronizados el 2026-10-07T12:44:49Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -37,6 +37,11 @@
 - [Logo / Yatekomo](components/logo-yatekomo.md) · component · `logo-yatekomo` · ⬜ 5 pendientes
 - [Logo / Saikebon](components/logo-saikebon.md) · component · `logo-saikebon` · ⬜ 5 pendientes
 - [Logo / Daisuki](components/logo-daisuki.md) · component · `logo-daisuki` · ⬜ 5 pendientes
+- [Button](components/button.md) · component · `button` · ⬜ 5 pendientes
+- [Icon button](components/icon-button.md) · component · `icon-button` · ⬜ 5 pendientes
+- [Link](components/link.md) · component · `link` · ⬜ 5 pendientes
+- [Badge](components/badge.md) · component · `badge` · ⬜ 5 pendientes
+- [Chip](components/chip.md) · component · `chip` · ⬜ 5 pendientes
 
 ## Cómo rellenar una ficha
 

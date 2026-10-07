@@ -292,6 +292,8 @@ Antes de dar por buena una sesión de canvas, repasa que no hayas hecho ninguna 
 - Crear un componente que ya existía en el sistema.
 - Importar por clave un componente que ya estaba en el archivo, o importar un conjunto de variantes con la llamada de componente suelto.
 - Rellenar un slot con `setProperties()`, nombrar una propiedad `SLOT` sin el prefijo `slot-`, o borrar en la misma pasada las variantes que un slot sustituye.
+- Ligar a una misma propiedad `TEXT` textos de variantes con formato distinto (estilo, subrayado). Al ligarla, Figma unifica caracteres y pisa el formato de cada variante; y cualquier retoque posterior se propaga. Si las variantes difieren en formato, no se usa propiedad de texto; si comparten formato, el texto inicial debe coincidir con el valor por defecto de la propiedad *antes* de ligarla (aprendido en el Link, 2026-10-07).
+- Pintar con variable un vector dentro de una instancia oculta sin pasar color base: puede renderizar el color base (negro) al mostrarse. Se resuelve el valor con `variable.resolveForConsumer(node)`, se usa como color base del paint ligado y se pinta con la instancia visible un momento (aprendido en Button y Chip, 2026-10-07).
 
 ## 6. Reenlazar instancias cuyo maestro desapareció
 

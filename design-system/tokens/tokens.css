@@ -1,6 +1,6 @@
 /* ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO.
    Design system: GB Noodles · Microsites · fileKey: v4mnn154qUmiB35CCnRfgh
-   Última sync: 2026-10-07T11:30:18Z · modo de adopción: new
+   Última sync: 2026-10-07T12:44:49Z · modo de adopción: new
    Se regenera con el protocolo de sync de design.md. */
 
 :root {
@@ -62,11 +62,61 @@
   --color-status-info-icon: var(--color-status-info-700); /* Icono de info (≥4.7:1 sobre bg y page) */
   --color-status-info-border: var(--color-status-info-700); /* Borde de info (≥4.7:1) */
   --shadow-soft: var(--shadow-ink-20); /* Color de la sombra suave (elevation/3) */
+  --color-surface-disabled: var(--color-neutral-sand-200); /* Fondo de control desactivado */
+  --color-text-disabled: var(--color-neutral-ink-600); /* Texto o icono de control desactivado (4.3:1 sobre surface/disabled) */
   /* ---- Components ---- */
   --icon-size-sm: 16px; /* 16px. Iconos inline en texto y etiquetas */
   --icon-size-md: 24px; /* 24px. Tamaño por defecto de icono */
   --icon-size-lg: 32px; /* 32px. Iconos destacados (checks de producto, sociales) */
   --icon-size-xl: 40px; /* 40px. Iconos grandes de bloque */
+  --icon-color-default: var(--color-text-default); /* Color de icono por defecto (sobre page, brand, card) */
+  --icon-color-inverse: var(--color-text-on-inverse); /* Color de icono sobre surface/inverse */
+  --icon-color-illustration: var(--color-surface-brand); /* Relleno de iconos ilustrados a mano (cambia con la marca) */
+  --decoration-noodle-brand: var(--color-surface-brand); /* Fideo decorativo en color de marca */
+  --decoration-noodle-accent: var(--color-surface-accent); /* Fideo decorativo en color de acento */
+  --button-primary-bg: var(--color-surface-inverse); /* button primary: Fondo */
+  --button-primary-text: var(--color-text-on-inverse); /* button primary: Texto e icono */
+  --button-primary-border: var(--color-border-default); /* button primary: Borde */
+  --button-primary-bg-hover: var(--color-surface-accent); /* button primary: Fondo en hover */
+  --button-primary-text-hover: var(--color-text-default); /* button primary: Texto e icono en hover */
+  --button-primary-border-hover: var(--color-border-default); /* button primary: Borde en hover */
+  --button-primary-focus-ring: var(--color-border-default); /* button primary: Anillo de foco */
+  --button-secondary-text: var(--color-text-default); /* button secondary: Texto e icono */
+  --button-secondary-border: var(--color-border-default); /* button secondary: Borde */
+  --button-secondary-bg-hover: var(--color-surface-inverse); /* button secondary: Fondo en hover */
+  --button-secondary-text-hover: var(--color-text-on-inverse); /* button secondary: Texto e icono en hover */
+  --button-secondary-border-hover: var(--color-border-default); /* button secondary: Borde en hover */
+  --button-secondary-focus-ring: var(--color-border-default); /* button secondary: Anillo de foco */
+  --button-inverse-bg: var(--color-text-on-inverse); /* button inverse: Fondo */
+  --button-inverse-text: var(--color-text-default); /* button inverse: Texto e icono */
+  --button-inverse-border: var(--color-text-on-inverse); /* button inverse: Borde */
+  --button-inverse-bg-hover: var(--color-surface-brand); /* button inverse: Fondo en hover */
+  --button-inverse-text-hover: var(--color-text-default); /* button inverse: Texto e icono en hover */
+  --button-inverse-border-hover: var(--color-surface-brand); /* button inverse: Borde en hover */
+  --button-inverse-focus-ring: var(--color-text-brand-on-inverse); /* button inverse: Anillo de foco */
+  --button-disabled-bg: var(--color-surface-disabled); /* button disabled: Fondo */
+  --button-disabled-text: var(--color-text-disabled); /* button disabled: Texto e icono */
+  --button-disabled-border: var(--color-surface-disabled); /* button disabled: Borde */
+  --link-default: var(--color-text-default); /* link: Color en reposo */
+  --link-hover: var(--color-text-natural); /* link: Color en hover */
+  --link-inverse: var(--color-text-on-inverse); /* link: Sobre fondo oscuro */
+  --link-inverse-hover: var(--color-text-brand-on-inverse); /* link: Hover sobre fondo oscuro */
+  --badge-new-bg: var(--color-surface-badge-new); /* badge new: Fondo */
+  --badge-new-text: var(--color-text-on-badge); /* badge new: Texto e icono */
+  --badge-natural-bg: var(--color-surface-natural); /* badge natural: Fondo */
+  --badge-natural-text: var(--color-text-on-natural); /* badge natural: Texto e icono */
+  --badge-neutral-bg: var(--color-surface-inverse); /* badge neutral: Fondo */
+  --badge-neutral-text: var(--color-text-on-inverse); /* badge neutral: Texto e icono */
+  --chip-bg: var(--color-surface-card); /* chip: Fondo */
+  --chip-text: var(--color-text-default); /* chip: Texto e icono */
+  --chip-border: var(--color-border-default); /* chip: Borde */
+  --chip-bg-hover: var(--color-surface-brand); /* chip: Fondo en hover */
+  --chip-bg-selected: var(--color-surface-inverse); /* chip: Fondo seleccionado */
+  --chip-text-selected: var(--color-text-on-inverse); /* chip: Texto seleccionado */
+  --chip-bg-disabled: var(--color-surface-disabled); /* chip: Fondo desactivado */
+  --chip-text-disabled: var(--color-text-disabled); /* chip: Texto desactivado */
+  --link-focus-ring: var(--color-border-default); /* link: Anillo de foco */
+  --link-inverse-focus-ring: var(--color-text-brand-on-inverse); /* link: Anillo de foco sobre fondo oscuro */
   /* ---- Layer ---- */
   --layer-base: 0; /* z-index 0. Contenido normal de la página */
   --layer-raised: 10; /* z-index 10. Contenido por encima de imágenes dentro de una sección (copy del hero, banderas) */

@@ -562,8 +562,656 @@
       ],
       "total": 5,
       "read": 5
+    },
+    {
+      "name": "Button",
+      "id": "33:92",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Button",
+          "name": "Button",
+          "type": "COMPONENT_SET",
+          "id": "33:295",
+          "key": "012371b0017ccbcb3ebc14b5b04bfcb7f2fb5e5c",
+          "description": "Botón de acción. Hierarchy: Primary (acción principal, 1 por vista), Secondary (alternativa), Inverse (sobre fondos oscuros). Size M (48) por defecto; L (64) para hero y CTA destacados. Label en Anton mayúsculas. Iconos opcionales delante/detrás (INSTANCE_SWAP). Focus: anillo exterior visible. Disabled sin opacidad (colores propios).",
+          "variantAxes": {
+            "Hierarchy": [
+              "Primary",
+              "Secondary",
+              "Inverse"
+            ],
+            "Size": [
+              "M",
+              "L"
+            ],
+            "State": [
+              "Default",
+              "Hover",
+              "Focus",
+              "Disabled"
+            ]
+          },
+          "variantCount": 24,
+          "properties": [
+            {
+              "name": "Label#33:0",
+              "kind": "TEXT",
+              "default": "Botón"
+            },
+            {
+              "name": "Icon leading#33:25",
+              "kind": "BOOLEAN",
+              "default": false
+            },
+            {
+              "name": "Icon trailing#33:50",
+              "kind": "BOOLEAN",
+              "default": false
+            },
+            {
+              "name": "Icon leading swap#33:75",
+              "kind": "INSTANCE_SWAP",
+              "default": "30:52",
+              "defaultComponent": "Icon / arrow-right",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "02167ffb071b0168ec8a06dbf817787c64c13318"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "9499612a0f06b2d6a895206d41273567c78d5b59"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "e2009c34315efc931be8bdf585dbe9f67039fef2"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "8d3736b0f10db93283ac616c1842079d386cfa8c"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "c21a991431daab7928e8b4c745539c0105c26172"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "88aa7e37c8c53092ba0ac890a40ce12c3c7bef6e"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "50a0d5b6dcef2f3eb7d1e4bc9aa4c65e713b7d52"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "c77b85be20a1147b5f7d128f48a8dc25bfe43f83"
+                }
+              ]
+            },
+            {
+              "name": "Icon trailing swap#33:100",
+              "kind": "INSTANCE_SWAP",
+              "default": "30:52",
+              "defaultComponent": "Icon / arrow-right",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "02167ffb071b0168ec8a06dbf817787c64c13318"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "9499612a0f06b2d6a895206d41273567c78d5b59"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "e2009c34315efc931be8bdf585dbe9f67039fef2"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "8d3736b0f10db93283ac616c1842079d386cfa8c"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "c21a991431daab7928e8b4c745539c0105c26172"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "88aa7e37c8c53092ba0ac890a40ce12c3c7bef6e"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "50a0d5b6dcef2f3eb7d1e4bc9aa4c65e713b7d52"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "c77b85be20a1147b5f7d128f48a8dc25bfe43f83"
+                }
+              ]
+            },
+            {
+              "name": "Hierarchy",
+              "kind": "VARIANT",
+              "default": "Primary",
+              "values": [
+                "Primary",
+                "Secondary",
+                "Inverse"
+              ]
+            },
+            {
+              "name": "Size",
+              "kind": "VARIANT",
+              "default": "M",
+              "values": [
+                "M",
+                "L"
+              ]
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus",
+                "Disabled"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/8",
+              "paddingLeft: space/24",
+              "paddingTop: space/16",
+              "paddingRight: space/24",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label"
+            ],
+            "textStyles": [
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Icon button",
+      "id": "33:93",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Icon button",
+          "name": "Icon button",
+          "type": "COMPONENT_SET",
+          "id": "33:401",
+          "key": "399cf919ff05fe3ad6c01a042bed7b73299c082c",
+          "description": "Botón solo con icono: cerrar, menú, flechas del slider, play. Mismas jerarquías y colores que Button. M 56 px (icono 24 + padding 16), L 64 px (icono 32). Accesibilidad: requiere nombre accesible (aria-label) porque no tiene texto visible.",
+          "variantAxes": {
+            "Hierarchy": [
+              "Primary",
+              "Secondary",
+              "Inverse"
+            ],
+            "Size": [
+              "M",
+              "L"
+            ],
+            "State": [
+              "Default",
+              "Hover",
+              "Focus",
+              "Disabled"
+            ]
+          },
+          "variantCount": 24,
+          "properties": [
+            {
+              "name": "Icon#33:125",
+              "kind": "INSTANCE_SWAP",
+              "default": "30:60",
+              "defaultComponent": "Icon / close",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "d3bd670f4a53fb5af9503f3797584ad997f049a8"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "ab0ad6fb1319940494366b5310576ede5f7f6d82"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "02167ffb071b0168ec8a06dbf817787c64c13318"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "9499612a0f06b2d6a895206d41273567c78d5b59"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "50a0d5b6dcef2f3eb7d1e4bc9aa4c65e713b7d52"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "c77b85be20a1147b5f7d128f48a8dc25bfe43f83"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "c21a991431daab7928e8b4c745539c0105c26172"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "7b0a8d21bb43ff027cb883c53aaea1da88fb144d"
+                }
+              ]
+            },
+            {
+              "name": "Hierarchy",
+              "kind": "VARIANT",
+              "default": "Primary",
+              "values": [
+                "Primary",
+                "Secondary",
+                "Inverse"
+              ]
+            },
+            {
+              "name": "Size",
+              "kind": "VARIANT",
+              "default": "M",
+              "values": [
+                "M",
+                "L"
+              ]
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus",
+                "Disabled"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": "Icon#33:125",
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: button/primary/text",
+              "color: button/primary/text"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Link",
+      "id": "33:94",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Link",
+          "name": "Link",
+          "type": "COMPONENT_SET",
+          "id": "35:107",
+          "key": "910a6a9f2e6b0dcd45977370b34543405b25221f",
+          "description": "Enlace. Inline: dentro de un párrafo, siempre subrayado (no se distingue solo por color). Standalone: enlace suelto en Anton con flecha (p. ej. «Ver todas las recetas»), subrayado en hover. Surface Dark para fondos surface/inverse. Enlaces externos: icono external-link y aviso de que abre fuera. El texto se edita directamente en la instancia (sin propiedad de texto, para conservar el formato por variante).",
+          "variantAxes": {
+            "Type": [
+              "Inline",
+              "Standalone"
+            ],
+            "Surface": [
+              "Light",
+              "Dark"
+            ],
+            "State": [
+              "Default",
+              "Hover",
+              "Focus"
+            ]
+          },
+          "variantCount": 12,
+          "properties": [
+            {
+              "name": "Icon#35:0",
+              "kind": "INSTANCE_SWAP",
+              "default": "30:52",
+              "defaultComponent": "Icon / arrow-right",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "02167ffb071b0168ec8a06dbf817787c64c13318"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "88aa7e37c8c53092ba0ac890a40ce12c3c7bef6e"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "e2009c34315efc931be8bdf585dbe9f67039fef2"
+                }
+              ]
+            },
+            {
+              "name": "Type",
+              "kind": "VARIANT",
+              "default": "Inline",
+              "values": [
+                "Inline",
+                "Standalone"
+              ]
+            },
+            {
+              "name": "Surface",
+              "kind": "VARIANT",
+              "default": "Light",
+              "values": [
+                "Light",
+                "Dark"
+              ]
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/8",
+              "fills: link/default",
+              "fontSize: font/size/desktop/body-m",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-m",
+              "color: link/default",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: link/default"
+            ],
+            "textStyles": [
+              "Desktop/body-m"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Badge",
+      "id": "33:95",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Badge",
+          "name": "Badge",
+          "type": "COMPONENT_SET",
+          "id": "35:167",
+          "key": "eebdab1901e53a08ad4395e2546b9459e90433e1",
+          "description": "Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). No es interactivo; no usar como botón.",
+          "variantAxes": {
+            "Type": [
+              "New",
+              "Natural",
+              "Neutral"
+            ]
+          },
+          "variantCount": 3,
+          "properties": [
+            {
+              "name": "Label#35:13",
+              "kind": "TEXT",
+              "default": "Nuevo"
+            },
+            {
+              "name": "Type",
+              "kind": "VARIANT",
+              "default": "New",
+              "values": [
+                "New",
+                "Natural",
+                "Neutral"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: badge/new/bg",
+              "color: badge/new/bg",
+              "fills: badge/new/text",
+              "fontSize: font/size/mobile/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/new/text"
+            ],
+            "textStyles": [
+              "Mobile/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Chip",
+      "id": "33:96",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Chip",
+          "name": "Chip",
+          "type": "COMPONENT_SET",
+          "id": "35:186",
+          "key": "9e5bf92f006c4089c292176008506b8af258f943",
+          "description": "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP).",
+          "variantAxes": {
+            "State": [
+              "Default",
+              "Hover",
+              "Selected",
+              "Disabled"
+            ]
+          },
+          "variantCount": 4,
+          "properties": [
+            {
+              "name": "Label#35:17",
+              "kind": "TEXT",
+              "default": "Yatekomo Original"
+            },
+            {
+              "name": "Icon leading#35:22",
+              "kind": "BOOLEAN",
+              "default": false
+            },
+            {
+              "name": "Icon leading swap#35:27",
+              "kind": "INSTANCE_SWAP",
+              "default": "21:56",
+              "defaultComponent": "Icon / check",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "8d3736b0f10db93283ac616c1842079d386cfa8c"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "c21a991431daab7928e8b4c745539c0105c26172"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "d3bd670f4a53fb5af9503f3797584ad997f049a8"
+                }
+              ]
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Selected",
+                "Disabled"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/8",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: chip/bg",
+              "strokes: chip/border",
+              "color: chip/bg",
+              "color: chip/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: chip/text",
+              "color: chip/text",
+              "fills: chip/text",
+              "fontSize: font/size/desktop/body-s",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-s"
+            ],
+            "textStyles": [
+              "Desktop/body-s"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
     }
   ],
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
-  "readAt": "2026-10-07T11:29:39.574Z"
+  "readAt": "2026-10-07T12:43:12.953Z"
 }

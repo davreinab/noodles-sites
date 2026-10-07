@@ -2,14 +2,14 @@
 
 # GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
 
-> Última sync: **2026-10-07T11:30:18Z** · modo de adopción: `new` · 139 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-07T12:44:49Z** · modo de adopción: `new` · 189 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice
 
 - [Primitive](#primitive) · 21 tokens · modos: Value
-- [Semantic](#semantic) · 35 tokens · modos: Yatekomo, Saikebon, Aïki, Daisuki, DE
-- [Components](#components) · 4 tokens · modos: Value
+- [Semantic](#semantic) · 37 tokens · modos: Yatekomo, Saikebon, Aïki, Daisuki, DE
+- [Components](#components) · 52 tokens · modos: Value
 - [Layer](#layer) · 7 tokens · modos: Value
 - [Spacing](#spacing) · 20 tokens · modos: Value
 - [Layout](#layout) · 6 tokens · modos: Desktop, Tablet, Mobile
@@ -83,6 +83,8 @@
 | `color/status/info/icon` | `--color-status-info-icon` | COLOR | → `--color-status-info-700` | → `--color-status-info-700` | → `--color-status-info-700` | → `--color-status-info-700` | → `--color-status-info-700` | FRAME_FILL, SHAPE_FILL | Icono de info (≥4.7:1 sobre bg y page) |
 | `color/status/info/border` | `--color-status-info-border` | COLOR | → `--color-status-info-700` | → `--color-status-info-700` | → `--color-status-info-700` | → `--color-status-info-700` | → `--color-status-info-700` | STROKE_COLOR | Borde de info (≥4.7:1) |
 | `shadow/soft` | `--shadow-soft` | COLOR | → `--shadow-ink-20` | → `--shadow-ink-20` | → `--shadow-ink-20` | → `--shadow-ink-20` | → `--shadow-ink-20` | EFFECT_COLOR | Color de la sombra suave (elevation/3) |
+| `color/surface/disabled` | `--color-surface-disabled` | COLOR | → `--color-neutral-sand-200` | → `--color-neutral-sand-200` | → `--color-neutral-sand-200` | → `--color-neutral-sand-200` | → `--color-neutral-sand-200` | FRAME_FILL, SHAPE_FILL, STROKE_COLOR | Fondo de control desactivado |
+| `color/text/disabled` | `--color-text-disabled` | COLOR | → `--color-neutral-ink-600` | → `--color-neutral-ink-600` | → `--color-neutral-ink-600` | → `--color-neutral-ink-600` | → `--color-neutral-ink-600` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | Texto o icono de control desactivado (4.3:1 sobre surface/disabled) |
 
 ## Components
 
@@ -92,6 +94,54 @@
 | `icon/size/md` | `--icon-size-md` | FLOAT | `24px` | WIDTH_HEIGHT | 24px. Tamaño por defecto de icono |
 | `icon/size/lg` | `--icon-size-lg` | FLOAT | `32px` | WIDTH_HEIGHT | 32px. Iconos destacados (checks de producto, sociales) |
 | `icon/size/xl` | `--icon-size-xl` | FLOAT | `40px` | WIDTH_HEIGHT | 40px. Iconos grandes de bloque |
+| `icon/color/default` | `--icon-color-default` | COLOR | → `--color-text-default` | FRAME_FILL, SHAPE_FILL, STROKE_COLOR | Color de icono por defecto (sobre page, brand, card) |
+| `icon/color/inverse` | `--icon-color-inverse` | COLOR | → `--color-text-on-inverse` | FRAME_FILL, SHAPE_FILL, STROKE_COLOR | Color de icono sobre surface/inverse |
+| `icon/color/illustration` | `--icon-color-illustration` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL, STROKE_COLOR | Relleno de iconos ilustrados a mano (cambia con la marca) |
+| `decoration/noodle/brand` | `--decoration-noodle-brand` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL | Fideo decorativo en color de marca |
+| `decoration/noodle/accent` | `--decoration-noodle-accent` | COLOR | → `--color-surface-accent` | FRAME_FILL, SHAPE_FILL | Fideo decorativo en color de acento |
+| `button/primary/bg` | `--button-primary-bg` | COLOR | → `--color-surface-inverse` | FRAME_FILL, SHAPE_FILL | button primary: Fondo |
+| `button/primary/text` | `--button-primary-text` | COLOR | → `--color-text-on-inverse` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | button primary: Texto e icono |
+| `button/primary/border` | `--button-primary-border` | COLOR | → `--color-border-default` | STROKE_COLOR | button primary: Borde |
+| `button/primary/bg-hover` | `--button-primary-bg-hover` | COLOR | → `--color-surface-accent` | FRAME_FILL, SHAPE_FILL | button primary: Fondo en hover |
+| `button/primary/text-hover` | `--button-primary-text-hover` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | button primary: Texto e icono en hover |
+| `button/primary/border-hover` | `--button-primary-border-hover` | COLOR | → `--color-border-default` | STROKE_COLOR | button primary: Borde en hover |
+| `button/primary/focus-ring` | `--button-primary-focus-ring` | COLOR | → `--color-border-default` | STROKE_COLOR | button primary: Anillo de foco |
+| `button/secondary/text` | `--button-secondary-text` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | button secondary: Texto e icono |
+| `button/secondary/border` | `--button-secondary-border` | COLOR | → `--color-border-default` | STROKE_COLOR | button secondary: Borde |
+| `button/secondary/bg-hover` | `--button-secondary-bg-hover` | COLOR | → `--color-surface-inverse` | FRAME_FILL, SHAPE_FILL | button secondary: Fondo en hover |
+| `button/secondary/text-hover` | `--button-secondary-text-hover` | COLOR | → `--color-text-on-inverse` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | button secondary: Texto e icono en hover |
+| `button/secondary/border-hover` | `--button-secondary-border-hover` | COLOR | → `--color-border-default` | STROKE_COLOR | button secondary: Borde en hover |
+| `button/secondary/focus-ring` | `--button-secondary-focus-ring` | COLOR | → `--color-border-default` | STROKE_COLOR | button secondary: Anillo de foco |
+| `button/inverse/bg` | `--button-inverse-bg` | COLOR | → `--color-text-on-inverse` | FRAME_FILL, SHAPE_FILL | button inverse: Fondo |
+| `button/inverse/text` | `--button-inverse-text` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | button inverse: Texto e icono |
+| `button/inverse/border` | `--button-inverse-border` | COLOR | → `--color-text-on-inverse` | STROKE_COLOR | button inverse: Borde |
+| `button/inverse/bg-hover` | `--button-inverse-bg-hover` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL | button inverse: Fondo en hover |
+| `button/inverse/text-hover` | `--button-inverse-text-hover` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | button inverse: Texto e icono en hover |
+| `button/inverse/border-hover` | `--button-inverse-border-hover` | COLOR | → `--color-surface-brand` | STROKE_COLOR | button inverse: Borde en hover |
+| `button/inverse/focus-ring` | `--button-inverse-focus-ring` | COLOR | → `--color-text-brand-on-inverse` | STROKE_COLOR | button inverse: Anillo de foco |
+| `button/disabled/bg` | `--button-disabled-bg` | COLOR | → `--color-surface-disabled` | FRAME_FILL, SHAPE_FILL | button disabled: Fondo |
+| `button/disabled/text` | `--button-disabled-text` | COLOR | → `--color-text-disabled` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | button disabled: Texto e icono |
+| `button/disabled/border` | `--button-disabled-border` | COLOR | → `--color-surface-disabled` | STROKE_COLOR | button disabled: Borde |
+| `link/default` | `--link-default` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | link: Color en reposo |
+| `link/hover` | `--link-hover` | COLOR | → `--color-text-natural` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | link: Color en hover |
+| `link/inverse` | `--link-inverse` | COLOR | → `--color-text-on-inverse` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | link: Sobre fondo oscuro |
+| `link/inverse-hover` | `--link-inverse-hover` | COLOR | → `--color-text-brand-on-inverse` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | link: Hover sobre fondo oscuro |
+| `badge/new/bg` | `--badge-new-bg` | COLOR | → `--color-surface-badge-new` | FRAME_FILL, SHAPE_FILL | badge new: Fondo |
+| `badge/new/text` | `--badge-new-text` | COLOR | → `--color-text-on-badge` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | badge new: Texto e icono |
+| `badge/natural/bg` | `--badge-natural-bg` | COLOR | → `--color-surface-natural` | FRAME_FILL, SHAPE_FILL | badge natural: Fondo |
+| `badge/natural/text` | `--badge-natural-text` | COLOR | → `--color-text-on-natural` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | badge natural: Texto e icono |
+| `badge/neutral/bg` | `--badge-neutral-bg` | COLOR | → `--color-surface-inverse` | FRAME_FILL, SHAPE_FILL | badge neutral: Fondo |
+| `badge/neutral/text` | `--badge-neutral-text` | COLOR | → `--color-text-on-inverse` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | badge neutral: Texto e icono |
+| `chip/bg` | `--chip-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | chip: Fondo |
+| `chip/text` | `--chip-text` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | chip: Texto e icono |
+| `chip/border` | `--chip-border` | COLOR | → `--color-border-default` | STROKE_COLOR | chip: Borde |
+| `chip/bg-hover` | `--chip-bg-hover` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL | chip: Fondo en hover |
+| `chip/bg-selected` | `--chip-bg-selected` | COLOR | → `--color-surface-inverse` | FRAME_FILL, SHAPE_FILL | chip: Fondo seleccionado |
+| `chip/text-selected` | `--chip-text-selected` | COLOR | → `--color-text-on-inverse` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | chip: Texto seleccionado |
+| `chip/bg-disabled` | `--chip-bg-disabled` | COLOR | → `--color-surface-disabled` | FRAME_FILL, SHAPE_FILL | chip: Fondo desactivado |
+| `chip/text-disabled` | `--chip-text-disabled` | COLOR | → `--color-text-disabled` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | chip: Texto desactivado |
+| `link/focus-ring` | `--link-focus-ring` | COLOR | → `--color-border-default` | STROKE_COLOR | link: Anillo de foco |
+| `link/inverse-focus-ring` | `--link-inverse-focus-ring` | COLOR | → `--color-text-brand-on-inverse` | STROKE_COLOR | link: Anillo de foco sobre fondo oscuro |
 
 ## Layer
 

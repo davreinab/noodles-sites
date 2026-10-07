@@ -1,0 +1,205 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:icon-button",
+  "meta": {
+    "name": "Icon button",
+    "slug": "icon-button",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T12:44:49Z",
+    "description": "Botón solo con icono: cerrar, menú, flechas del slider, play. Mismas jerarquías y colores que Button. M 56 px (icono 24 + padding 16), L 64 px (icono 32). Accesibilidad: requiere nombre accesible (aria-label) porque no tiene texto visible.",
+    "figmaPage": "Icon button",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 24,
+    "autoLayout": true,
+    "anatomyHash": "5757329153d2"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/icon-button.md",
+      "section": "Icon button"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "33:401",
+      "componentKey": "399cf919ff05fe3ad6c01a042bed7b73299c082c"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Icon#33:125",
+        "kind": "INSTANCE_SWAP",
+        "default": "30:60",
+        "defaultComponent": "Icon / close",
+        "preferredValues": [
+          {
+            "type": "COMPONENT",
+            "key": "d3bd670f4a53fb5af9503f3797584ad997f049a8"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "ab0ad6fb1319940494366b5310576ede5f7f6d82"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "02167ffb071b0168ec8a06dbf817787c64c13318"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "9499612a0f06b2d6a895206d41273567c78d5b59"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "50a0d5b6dcef2f3eb7d1e4bc9aa4c65e713b7d52"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "c77b85be20a1147b5f7d128f48a8dc25bfe43f83"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "c21a991431daab7928e8b4c745539c0105c26172"
+          },
+          {
+            "type": "COMPONENT",
+            "key": "7b0a8d21bb43ff027cb883c53aaea1da88fb144d"
+          }
+        ]
+      },
+      {
+        "name": "Hierarchy",
+        "kind": "VARIANT",
+        "default": "Primary",
+        "values": [
+          "Primary",
+          "Secondary",
+          "Inverse"
+        ]
+      },
+      {
+        "name": "Size",
+        "kind": "VARIANT",
+        "default": "M",
+        "values": [
+          "M",
+          "L"
+        ]
+      },
+      {
+        "name": "State",
+        "kind": "VARIANT",
+        "default": "Default",
+        "values": [
+          "Default",
+          "Hover",
+          "Focus",
+          "Disabled"
+        ]
+      }
+    ],
+    "variants": {
+      "Hierarchy": [
+        "Primary",
+        "Secondary",
+        "Inverse"
+      ],
+      "Size": [
+        "M",
+        "L"
+      ],
+      "State": [
+        "Default",
+        "Hover",
+        "Focus",
+        "Disabled"
+      ]
+    },
+    "states": [
+      "Default",
+      "Hover",
+      "Focus",
+      "Disabled"
+    ],
+    "defaults": {
+      "Hierarchy": "Primary",
+      "Size": "M",
+      "State": "Default"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "icon",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": "Icon#33:125",
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "Icon#33:125"
+      ],
+      "defaultIcons": [
+        "Icon / close"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "border/width/thick",
+      "button/primary/bg",
+      "button/primary/border",
+      "button/primary/text",
+      "icon/size/md",
+      "radius/pill",
+      "space/16"
+    ],
+    "variablesUsed": [
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thick",
+      "strokeBottomWeight: border/width/thick",
+      "strokeLeftWeight: border/width/thick",
+      "strokeRightWeight: border/width/thick",
+      "fills: button/primary/bg",
+      "strokes: button/primary/border",
+      "color: button/primary/bg",
+      "color: button/primary/border",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: button/primary/text",
+      "color: button/primary/text"
+    ],
+    "textStyles": []
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "icon-close"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

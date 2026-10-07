@@ -1022,7 +1022,8 @@ def showcase_sections(tokens, schemas, assets_rows, patterns_md):
             if sch["meta"]["kind"] != kind:
                 continue
             ex = sch["source"]["code"]["example"]
-            demo = f'<div class="sc-demo">{ex}</div><pre class="sc-code">{esc(ex)}</pre>' if ex else '<div class="sc-demo"><span class="sc-tag">sin «Ejemplo de código» en el contrato</span></div>'
+            demo_cls = "sc-demo sc-demo--block" if kind == "pattern" else "sc-demo"  # los patrones ocupan todo el ancho
+            demo = f'<div class="{demo_cls}">{ex}</div><pre class="sc-code">{esc(ex)}</pre>' if ex else '<div class="sc-demo"><span class="sc-tag">sin «Ejemplo de código» en el contrato</span></div>'
             tag = f"{sch['meta'].get('variantCount', 1)} variantes · {sch['source']['figma']['nodeId'] or 'unknown'}" + (" · icono" if sch["api"]["icons"]["hasIcon"] else "")
             cards.append(f'<div class="sc-card" id="sc-{sch["meta"]["slug"]}"><div class="sc-card__head"><h3>{esc(sch["meta"]["name"])}</h3><span class="sc-tag">{esc(tag)}</span></div>{demo}</div>')
         out[key] = ('<div class="sc-grid">' + "\n".join(cards) + "</div>") if cards else f'<div class="sc-empty">Sin {"componentes" if kind == "component" else "patrones"} todavía: se generan con el sync.</div>'

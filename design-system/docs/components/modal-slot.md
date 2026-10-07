@@ -1,7 +1,7 @@
-### Modal / Slot   ⚙️ synced: 2026-10-07T18:41:16Z
+### Modal / Slot   ⚙️ synced: 2026-10-07T18:43:11Z
 
 <!-- ⚙️ GENERATED:start:modal-slot -->
-- **Figma:** `79:52` · página «Modal» · COMPONENT · 1 variantes · última sync 2026-10-07T18:41:16Z
+- **Figma:** `79:52` · página «Modal» · COMPONENT · 1 variantes · última sync 2026-10-07T18:43:11Z
 - **Descripción (Figma):** Hueco de contenido del Modal. Se sustituye con la propiedad «Content» por la instancia real (imagen de la etiqueta, texto de alérgenos, resultado de concurso, lista de resultados). No se usa fuera del Modal.
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

@@ -6,7 +6,7 @@
     "slug": "product-hero",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:41:16Z",
+    "lastSync": "2026-10-07T18:43:11Z",
     "description": "Cabecera de la página de producto: galería (imagen 3D principal —la «girosu» en Cups— e interior; miniaturas como botones, la seleccionada con borde grueso y aria-current) · Badge New/Natural · tipo y línea · nombre (h1) · descripción · highlights con check en color/text/natural (lista &lt;ul&gt;) · Button «Dónde comprar» (lleva a Where to buy) y Link «Ver ingredientes» (ancla a Product details). Las imágenes son las de marca, nunca generadas con IA. Desktop: galería a la izquierda; Mobile: galería arriba. Sin variables propias.",
     "figmaPage": "Pattern / Product hero",
     "figmaType": "COMPONENT_SET",

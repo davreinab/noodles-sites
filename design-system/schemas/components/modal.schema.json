@@ -6,7 +6,7 @@
     "slug": "modal",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:41:16Z",
+    "lastSync": "2026-10-07T18:43:11Z",
     "description": "Diálogo modal. Size=M (560): alérgenos, resultado de concurso. Size=L (880): etiqueta del envase (imagen ampliable), resultados de búsqueda. Size=Full (móvil, pantalla completa). Anatomía: cabecera (título h3 + Icon button cerrar) · contenido (swap «Content», por defecto Modal / Slot) · pie opcional con acción. Se muestra sobre el velo modal/overlay (layer/overlay) y el diálogo en layer/modal. Accesibilidad: &lt;dialog&gt; o role=&quot;dialog&quot; + aria-modal=&quot;true&quot; + aria-labelledby al título; el foco entra en el primer elemento (o el título), queda atrapado dentro, Esc y el botón cerrar lo cierran y el foco vuelve al disparador; el fondo queda inerte (inert) y sin scroll.",
     "figmaPage": "Modal",
     "figmaType": "COMPONENT_SET",
@@ -42,7 +42,7 @@
         "modal__header",
         "modal__title"
       ],
-      "example": "<dialog class=\"modal modal--l\" aria-labelledby=\"modal-title\">\n<div class=\"modal__header\">\n<h2 class=\"modal__title\" id=\"modal-title\">Etiqueta del envase</h2>\n<button class=\"icon-button icon-button--secondary\" type=\"button\" aria-label=\"Cerrar\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span></button>\n</div>\n<div class=\"modal__body\"><div class=\"modal-slot\">Contenido</div></div>\n<div class=\"modal__footer\"><button class=\"button\" type=\"button\">Entendido</button></div>\n</dialog>"
+      "example": "<dialog class=\"modal modal--l\" aria-labelledby=\"modal-title\" open>\n<div class=\"modal__header\">\n<h2 class=\"modal__title\" id=\"modal-title\">Etiqueta del envase</h2>\n<button class=\"icon-button icon-button--secondary\" type=\"button\" aria-label=\"Cerrar\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span></button>\n</div>\n<div class=\"modal__body\"><div class=\"modal-slot\">Contenido</div></div>\n<div class=\"modal__footer\"><button class=\"button\" type=\"button\">Entendido</button></div>\n</dialog>"
     }
   },
   "api": {

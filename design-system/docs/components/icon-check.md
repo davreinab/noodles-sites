@@ -1,7 +1,7 @@
-### Icon / check   ⚙️ synced: 2026-10-07T18:41:16Z
+### Icon / check   ⚙️ synced: 2026-10-07T18:43:11Z
 
 <!-- ⚙️ GENERATED:start:icon-check -->
-- **Figma:** `21:56` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T18:41:16Z
+- **Figma:** `21:56` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T18:43:11Z
 - **Descripción (Figma):** Check de lista (landings, pcard). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

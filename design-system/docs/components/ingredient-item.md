@@ -1,7 +1,7 @@
-### Ingredient item   ⚙️ synced: 2026-10-07T18:41:16Z
+### Ingredient item   ⚙️ synced: 2026-10-07T18:43:11Z
 
 <!-- ⚙️ GENERATED:start:ingredient-item -->
-- **Figma:** `70:58` · página «Ingredients» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:41:16Z
+- **Figma:** `70:58` · página «Ingredients» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:43:11Z
 - **Descripción (Figma):** Fila de ingrediente. Level=Main: ingrediente principal con porcentaje en pill (ingredient/percent-bg, verde natural) y filete inferior decorativo. Level=Secondary: el resto de ingredientes en texto corrido. Regla de negocio: los alérgenos van SIEMPRE en negrita (&lt;strong&gt;, Archivo Bold), también dentro del nombre. El texto no es propiedad para conservar la negrita: se edita en la instancia. Los datos salen del envase; los mostrados son de ejemplo.
 - **Anatomía:** sin instancias anidadas
 - **Level:** Main, Secondary

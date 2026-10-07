@@ -6,7 +6,7 @@
     "slug": "decoration-noodle",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:41:16Z",
+    "lastSync": "2026-10-07T18:43:11Z",
     "description": "Fideo decorativo de marca (5 trazos). Tone=Brand usa decoration/noodle/brand y Tone=Accent decoration/noodle/accent; ambos cambian con el modo de marca. Escalable; solo decorativo (aria-hidden).",
     "figmaPage": "Decoration",
     "figmaType": "COMPONENT_SET",

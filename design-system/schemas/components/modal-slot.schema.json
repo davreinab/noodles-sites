@@ -6,7 +6,7 @@
     "slug": "modal-slot",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:41:16Z",
+    "lastSync": "2026-10-07T18:43:11Z",
     "description": "Hueco de contenido del Modal. Se sustituye con la propiedad «Content» por la instancia real (imagen de la etiqueta, texto de alérgenos, resultado de concurso, lista de resultados). No se usa fuera del Modal.",
     "figmaPage": "Modal",
     "figmaType": "COMPONENT",

@@ -1,7 +1,7 @@
-### Icon button   ⚙️ synced: 2026-10-07T18:41:16Z
+### Icon button   ⚙️ synced: 2026-10-07T18:43:11Z
 
 <!-- ⚙️ GENERATED:start:icon-button -->
-- **Figma:** `33:401` · página «Icon button» · COMPONENT_SET · 24 variantes · última sync 2026-10-07T18:41:16Z
+- **Figma:** `33:401` · página «Icon button» · COMPONENT_SET · 24 variantes · última sync 2026-10-07T18:43:11Z
 - **Descripción (Figma):** Botón solo con icono: cerrar, menú, flechas del slider, play. Mismas jerarquías y colores que Button. M 56 px (icono 24 + padding 16), L 64 px (icono 32). Accesibilidad: requiere nombre accesible (aria-label) porque no tiene texto visible.
 - **Anatomía:** `icon` → Icon / close
 - **Hierarchy:** Primary, Secondary, Inverse

@@ -1,7 +1,7 @@
-### Mobile menu   ⚙️ synced: 2026-10-07T18:41:16Z
+### Mobile menu   ⚙️ synced: 2026-10-07T18:43:11Z
 
 <!-- ⚙️ GENERATED:start:mobile-menu -->
-- **Figma:** `55:119` · página «Pattern / Mobile menu» · COMPONENT · 1 variantes · última sync 2026-10-07T18:41:16Z
+- **Figma:** `55:119` · página «Pattern / Mobile menu» · COMPONENT · 1 variantes · última sync 2026-10-07T18:43:11Z
 - **Descripción (Figma):** Patrón: menú móvil a pantalla completa (se abre desde el botón menú de la Navbar). Logo negativo · cerrar · 5 Nav item (Menu) · Lang switch (solo marcas multiidioma) · CTA. Accesibilidad: role=&quot;dialog&quot; con aria-modal, foco atrapado dentro, Esc cierra y el foco vuelve al botón menú; layer/modal. Sin variables propias.
 - **Anatomía:** `logo` → Version=Negative, `close` → Hierarchy=Inverse, Size=M, State=Default, `icon` → Icon / close, `nav-item` → Type=Menu, State=Active, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `lang-switch` → Selected=First, `cta` → Hierarchy=Inverse, Size=L, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right
 - **Propiedades de componente:** `Logo#55:6` (INSTANCE_SWAP, por defecto Version=Negative), `Lang switch#55:7` (BOOLEAN, por defecto False)
@@ -14,7 +14,7 @@
 - **Propósito:** Menú móvil a pantalla completa sobre tinta: logo negativo, cerrar, las cinco secciones, idioma y «Dónde comprar».
 - **Ejemplo de código:**
   ```html
-  <dialog class="mobile-menu" id="menu" aria-label="Menú">
+  <dialog class="mobile-menu" id="menu" aria-label="Menú" open>
   <div class="mobile-menu__inner">
   <div class="mobile-menu__top">
   <img class="logo" src="../assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
@@ -28,5 +28,5 @@
   </div>
   </dialog>
   ```
-- **Accesibilidad (pares AA verificados):** Crema sobre tinta 17,2:1; activo y foco en amarillo 12,3:1. Rol: `<dialog>` modal (foco atrapado, fondo inerte), abierto desde el botón de menú de la Navbar; Esc y «Cerrar menú» lo cierran y el foco vuelve al botón de menú. Enlaces grandes (Mobile/h2), muy por encima de 44 px de área táctil.
+- **Accesibilidad (pares AA verificados):** Crema sobre tinta 17,2:1; activo y foco en amarillo 12,3:1. Rol: `<dialog>` modal abierto con `showModal()` (foco atrapado, fondo inerte; el ejemplo lleva `open` solo para mostrarlo), abierto desde el botón de menú de la Navbar; Esc y «Cerrar menú» lo cierran y el foco vuelve al botón de menú. Enlaces grandes (Mobile/h2), muy por encima de 44 px de área táctil.
 - **Cuándo usar / qué NO hace:** Solo en móvil y tablet. No es un menú lateral parcial ni contiene búsqueda (la búsqueda sigue en la Navbar).

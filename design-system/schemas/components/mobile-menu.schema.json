@@ -6,7 +6,7 @@
     "slug": "mobile-menu",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:41:16Z",
+    "lastSync": "2026-10-07T18:43:11Z",
     "description": "Patrón: menú móvil a pantalla completa (se abre desde el botón menú de la Navbar). Logo negativo · cerrar · 5 Nav item (Menu) · Lang switch (solo marcas multiidioma) · CTA. Accesibilidad: role=&quot;dialog&quot; con aria-modal, foco atrapado dentro, Esc cierra y el foco vuelve al botón menú; layer/modal. Sin variables propias.",
     "figmaPage": "Pattern / Mobile menu",
     "figmaType": "COMPONENT",
@@ -44,7 +44,7 @@
         "nav-item",
         "nav-item--menu"
       ],
-      "example": "<dialog class=\"mobile-menu\" id=\"menu\" aria-label=\"Menú\">\n<div class=\"mobile-menu__inner\">\n<div class=\"mobile-menu__top\">\n<img class=\"logo\" src=\"../assets/logos/logo-yatekomo-negative.svg\" alt=\"Yatekomo\">\n<button class=\"icon-button icon-button--inverse\" type=\"button\" aria-label=\"Cerrar menú\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span></button>\n</div>\n<nav class=\"mobile-menu__nav\" aria-label=\"Principal\">\n<a class=\"nav-item nav-item--menu\" href=\"/productos\" aria-current=\"page\">Productos</a>\n<a class=\"nav-item nav-item--menu\" href=\"/recetas\">Recetas</a>\n</nav>\n<a class=\"button button--inverse button--l\" href=\"#donde-comprar\">Dónde comprar</a>\n</div>\n</dialog>"
+      "example": "<dialog class=\"mobile-menu\" id=\"menu\" aria-label=\"Menú\" open>\n<div class=\"mobile-menu__inner\">\n<div class=\"mobile-menu__top\">\n<img class=\"logo\" src=\"../assets/logos/logo-yatekomo-negative.svg\" alt=\"Yatekomo\">\n<button class=\"icon-button icon-button--inverse\" type=\"button\" aria-label=\"Cerrar menú\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span></button>\n</div>\n<nav class=\"mobile-menu__nav\" aria-label=\"Principal\">\n<a class=\"nav-item nav-item--menu\" href=\"/productos\" aria-current=\"page\">Productos</a>\n<a class=\"nav-item nav-item--menu\" href=\"/recetas\">Recetas</a>\n</nav>\n<a class=\"button button--inverse button--l\" href=\"#donde-comprar\">Dónde comprar</a>\n</div>\n</dialog>"
     }
   },
   "api": {

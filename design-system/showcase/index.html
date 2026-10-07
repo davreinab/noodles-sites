@@ -28,20 +28,23 @@
     .sc-btn { font: inherit; padding: 6px 12px; border: 1px solid var(--sc-line); border-radius: 999px; background: var(--sc-panel);
               color: var(--sc-ink); cursor: pointer; }
     .sc-btn:hover { border-color: var(--sc-accent); }
-    .sc-layout { display: grid; grid-template-columns: 220px 1fr; gap: var(--sc-gap); padding: var(--sc-gap); max-width: 1400px; margin: 0 auto; }
+    .sc-layout { display: grid; grid-template-columns: 220px 1fr; gap: var(--sc-gap); padding: var(--sc-gap); max-width: 1680px; margin: 0 auto; }
     .sc-nav { position: sticky; top: 64px; align-self: start; display: flex; flex-direction: column; gap: 4px; }
     .sc-nav a { color: var(--sc-muted); text-decoration: none; padding: 6px 10px; border-radius: 6px; }
     .sc-nav a:hover, .sc-nav a[aria-current="true"] { color: var(--sc-ink); background: var(--sc-panel); }
     .sc-main { display: flex; flex-direction: column; gap: 40px; min-width: 0; }
     .sc-section > h2 { margin: 0 0 4px; font-size: 22px; }
     .sc-section__lead { margin: 0 0 16px; color: var(--sc-muted); }
-    .sc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .sc-grid { display: flex; flex-direction: column; gap: 24px; } /* una fila por componente: cada demo tiene todo el ancho */
     .sc-card { background: var(--sc-panel); border: 1px solid var(--sc-line); border-radius: var(--sc-radius); overflow: hidden; }
     .sc-card__head { display: flex; align-items: baseline; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--sc-line); }
     .sc-card__head h3 { margin: 0; font-size: 15px; }
     .sc-tag { font-size: 11px; color: var(--sc-muted); border: 1px solid var(--sc-line); border-radius: 999px; padding: 1px 8px; }
-    .sc-demo { padding: 24px 16px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .sc-demo { padding: 32px 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; overflow-x: auto; }
     .sc-demo--block { display: block; }
+    /* demos: los <dialog> del ejemplo van abiertos y en el flujo; lo fijo (Suggestion bubble) vuelve a su fila */
+    .sc-demo dialog[open] { position: static; margin: 0; }
+    .sc-demo > a { position: static; }
     .sc-code { margin: 0; padding: 12px 16px; border-top: 1px solid var(--sc-line); font: 12px/1.5 var(--sc-mono); color: var(--sc-muted);
                white-space: pre-wrap; word-break: break-word; }
     .sc-swatch { display: grid; grid-template-columns: 40px 1fr; gap: 10px; align-items: center; padding: 8px 12px; }
@@ -59,7 +62,7 @@
 <div class="sc-root">
   <header class="sc-header">
     <h1 class="sc-header__title">GB Noodles · Microsites · Design System</h1>
-    <span class="sc-header__meta" data-sc-last-sync>última sync 2026-10-07T18:41:16Z</span>
+    <span class="sc-header__meta" data-sc-last-sync>última sync 2026-10-07T18:43:11Z</span>
     <span class="sc-header__spacer"></span>
     <button class="sc-btn" type="button" data-sc-theme-toggle aria-pressed="false">Tema oscuro</button>
   </header>
@@ -421,14 +424,14 @@
 &lt;/li&gt;
 &lt;/ol&gt;</pre></div>
 <div class="sc-card" id="sc-modal-slot"><div class="sc-card__head"><h3>Modal / Slot</h3><span class="sc-tag">1 variantes · 79:52</span></div><div class="sc-demo"><div class="modal-slot">Contenido del modal</div></div><pre class="sc-code">&lt;div class=&quot;modal-slot&quot;&gt;Contenido del modal&lt;/div&gt;</pre></div>
-<div class="sc-card" id="sc-modal"><div class="sc-card__head"><h3>Modal</h3><span class="sc-tag">3 variantes · 79:123 · icono</span></div><div class="sc-demo"><dialog class="modal modal--l" aria-labelledby="modal-title">
+<div class="sc-card" id="sc-modal"><div class="sc-card__head"><h3>Modal</h3><span class="sc-tag">3 variantes · 79:123 · icono</span></div><div class="sc-demo"><dialog class="modal modal--l" aria-labelledby="modal-title" open>
 <div class="modal__header">
 <h2 class="modal__title" id="modal-title">Etiqueta del envase</h2>
 <button class="icon-button icon-button--secondary" type="button" aria-label="Cerrar"><span class="icon icon-close" aria-hidden="true"></span></button>
 </div>
 <div class="modal__body"><div class="modal-slot">Contenido</div></div>
 <div class="modal__footer"><button class="button" type="button">Entendido</button></div>
-</dialog></div><pre class="sc-code">&lt;dialog class=&quot;modal modal--l&quot; aria-labelledby=&quot;modal-title&quot;&gt;
+</dialog></div><pre class="sc-code">&lt;dialog class=&quot;modal modal--l&quot; aria-labelledby=&quot;modal-title&quot; open&gt;
 &lt;div class=&quot;modal__header&quot;&gt;
 &lt;h2 class=&quot;modal__title&quot; id=&quot;modal-title&quot;&gt;Etiqueta del envase&lt;/h2&gt;
 &lt;button class=&quot;icon-button icon-button--secondary&quot; type=&quot;button&quot; aria-label=&quot;Cerrar&quot;&gt;&lt;span class=&quot;icon icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;
@@ -503,7 +506,7 @@
         <h2>Patrones</h2>
         <p class="sc-section__lead">Compuestos de <code>docs/patterns/&lt;slug&gt;.md</code>, renderizados con los átomos del DS.</p>
         <!-- ⚙️ GENERATED:start:patterns -->
-<div class="sc-grid"><div class="sc-card" id="sc-navbar"><div class="sc-card__head"><h3>Navbar</h3><span class="sc-tag">2 variantes · 55:116 · icono</span></div><div class="sc-demo"><header class="navbar">
+<div class="sc-grid"><div class="sc-card" id="sc-navbar"><div class="sc-card__head"><h3>Navbar</h3><span class="sc-tag">2 variantes · 55:116 · icono</span></div><div class="sc-demo sc-demo--block"><header class="navbar">
 <div class="navbar__inner">
 <a href="/" aria-label="Yatekomo, inicio"><img class="logo" src="../assets/logos/logo-yatekomo-positive.svg" alt="Yatekomo"></a>
 <nav class="navbar__nav" aria-label="Principal">
@@ -532,7 +535,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/header&gt;</pre></div>
-<div class="sc-card" id="sc-mobile-menu"><div class="sc-card__head"><h3>Mobile menu</h3><span class="sc-tag">1 variantes · 55:119 · icono</span></div><div class="sc-demo"><dialog class="mobile-menu" id="menu" aria-label="Menú">
+<div class="sc-card" id="sc-mobile-menu"><div class="sc-card__head"><h3>Mobile menu</h3><span class="sc-tag">1 variantes · 55:119 · icono</span></div><div class="sc-demo sc-demo--block"><dialog class="mobile-menu" id="menu" aria-label="Menú" open>
 <div class="mobile-menu__inner">
 <div class="mobile-menu__top">
 <img class="logo" src="../assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
@@ -544,7 +547,7 @@
 </nav>
 <a class="button button--inverse button--l" href="#donde-comprar">Dónde comprar</a>
 </div>
-</dialog></div><pre class="sc-code">&lt;dialog class=&quot;mobile-menu&quot; id=&quot;menu&quot; aria-label=&quot;Menú&quot;&gt;
+</dialog></div><pre class="sc-code">&lt;dialog class=&quot;mobile-menu&quot; id=&quot;menu&quot; aria-label=&quot;Menú&quot; open&gt;
 &lt;div class=&quot;mobile-menu__inner&quot;&gt;
 &lt;div class=&quot;mobile-menu__top&quot;&gt;
 &lt;img class=&quot;logo&quot; src=&quot;../assets/logos/logo-yatekomo-negative.svg&quot; alt=&quot;Yatekomo&quot;&gt;
@@ -557,7 +560,7 @@
 &lt;a class=&quot;button button--inverse button--l&quot; href=&quot;#donde-comprar&quot;&gt;Dónde comprar&lt;/a&gt;
 &lt;/div&gt;
 &lt;/dialog&gt;</pre></div>
-<div class="sc-card" id="sc-product-filter"><div class="sc-card__head"><h3>Product filter</h3><span class="sc-tag">2 variantes · 55:253 · icono</span></div><div class="sc-demo"><div class="product-filter">
+<div class="sc-card" id="sc-product-filter"><div class="sc-card__head"><h3>Product filter</h3><span class="sc-tag">2 variantes · 55:253 · icono</span></div><div class="sc-demo sc-demo--block"><div class="product-filter">
 <div class="product-filter__group">
 <span class="product-filter__label" id="f-tipo">Tipo</span>
 <div class="product-filter__options" role="tablist" aria-labelledby="f-tipo"><button class="tab" role="tab" aria-selected="true">Cups</button><button class="tab" role="tab" aria-selected="false" tabindex="-1">Bags</button></div>
@@ -576,7 +579,7 @@
 &lt;div class=&quot;product-filter__options&quot;&gt;&lt;button class=&quot;chip&quot; type=&quot;button&quot; aria-pressed=&quot;true&quot;&gt;&lt;span class=&quot;icon icon-check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Original&lt;/button&gt;&lt;button class=&quot;chip&quot; type=&quot;button&quot; aria-pressed=&quot;false&quot;&gt;Yakisoba&lt;/button&gt;&lt;/div&gt;
 &lt;/fieldset&gt;
 &lt;/div&gt;</pre></div>
-<div class="sc-card" id="sc-footer"><div class="sc-card__head"><h3>Footer</h3><span class="sc-tag">2 variantes · 56:167 · icono</span></div><div class="sc-demo"><footer class="footer">
+<div class="sc-card" id="sc-footer"><div class="sc-card__head"><h3>Footer</h3><span class="sc-tag">2 variantes · 56:167 · icono</span></div><div class="sc-demo sc-demo--block"><footer class="footer">
 <div class="footer__main">
 <div class="footer__brand"><img class="logo" src="../assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo"><img class="logo logo--gb-foods" src="../assets/logos/logo-gb-foods.svg" alt="GB Foods"></div>
 <nav class="footer__column" aria-label="Pie">
@@ -603,7 +606,7 @@
 &lt;/div&gt;
 &lt;div class=&quot;footer__legal&quot;&gt;&lt;a class=&quot;link link--dark&quot; href=&quot;/privacidad&quot;&gt;Privacy&lt;/a&gt;&lt;a class=&quot;link link--dark&quot; href=&quot;/cookies&quot;&gt;Cookies&lt;/a&gt;&lt;span&gt;© 2026 GB Foods&lt;/span&gt;&lt;/div&gt;
 &lt;/footer&gt;</pre></div>
-<div class="sc-card" id="sc-hero"><div class="sc-card__head"><h3>Hero</h3><span class="sc-tag">2 variantes · 88:132 · icono</span></div><div class="sc-demo"><section class="section hero" aria-roledescription="carrusel" aria-label="Destacados">
+<div class="sc-card" id="sc-hero"><div class="sc-card__head"><h3>Hero</h3><span class="sc-tag">2 variantes · 88:132 · icono</span></div><div class="sc-demo sc-demo--block"><section class="section hero" aria-roledescription="carrusel" aria-label="Destacados">
 <div class="section__inner">
 <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="1 de 3">
 <div class="hero__content">
@@ -636,7 +639,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-marquee"><div class="sc-card__head"><h3>Marquee</h3><span class="sc-tag">2 variantes · 89:78</span></div><div class="sc-demo"><div class="marquee" aria-hidden="true">
+<div class="sc-card" id="sc-marquee"><div class="sc-card__head"><h3>Marquee</h3><span class="sc-tag">2 variantes · 89:78</span></div><div class="sc-demo sc-demo--block"><div class="marquee" aria-hidden="true">
 <ul class="marquee__track">
 <li class="marquee__item">Welcome to the new noodles era</li><li class="marquee__item marquee__sep">✱</li><li class="marquee__item">The only 100% natural</li>
 </ul>
@@ -645,7 +648,7 @@
 &lt;li class=&quot;marquee__item&quot;&gt;Welcome to the new noodles era&lt;/li&gt;&lt;li class=&quot;marquee__item marquee__sep&quot;&gt;✱&lt;/li&gt;&lt;li class=&quot;marquee__item&quot;&gt;The only 100% natural&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;</pre></div>
-<div class="sc-card" id="sc-promo"><div class="sc-card__head"><h3>Promo</h3><span class="sc-tag">2 variantes · 91:113 · icono</span></div><div class="sc-demo"><section class="section promo" aria-labelledby="promo-title">
+<div class="sc-card" id="sc-promo"><div class="sc-card__head"><h3>Promo</h3><span class="sc-tag">2 variantes · 91:113 · icono</span></div><div class="sc-demo sc-demo--block"><section class="section promo" aria-labelledby="promo-title">
 <div class="section__inner">
 <div class="promo__grid">
 <div class="video-player"><button class="video-player__play" type="button" aria-label="Reproducir vídeo de la campaña (0:45)"><span class="icon icon-play" aria-hidden="true"></span></button></div>
@@ -670,7 +673,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-natural-formula"><div class="sc-card__head"><h3>Natural formula</h3><span class="sc-tag">2 variantes · 91:704 · icono</span></div><div class="sc-demo"><section class="section natural-formula" aria-labelledby="nf-title">
+<div class="sc-card" id="sc-natural-formula"><div class="sc-card__head"><h3>Natural formula</h3><span class="sc-tag">2 variantes · 91:704 · icono</span></div><div class="sc-demo sc-demo--block"><section class="section natural-formula" aria-labelledby="nf-title">
 <div class="section__inner">
 <div class="section__header"><h2 class="section__title" id="nf-title">La fórmula natural</h2><p class="section__lead">Texto alineado con el envase.</p></div>
 <ul class="natural-formula__claims">
@@ -689,7 +692,7 @@
 &lt;a class=&quot;link link--standalone link--dark&quot; href=&quot;/formula-natural&quot;&gt;Conoce la fórmula natural &lt;span class=&quot;icon icon-arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-product-carousel"><div class="sc-card__head"><h3>Product carousel</h3><span class="sc-tag">2 variantes · 91:837 · icono</span></div><div class="sc-demo"><section class="section product-carousel" aria-labelledby="pc-title">
+<div class="sc-card" id="sc-product-carousel"><div class="sc-card__head"><h3>Product carousel</h3><span class="sc-tag">2 variantes · 91:837 · icono</span></div><div class="sc-demo sc-demo--block"><section class="section product-carousel" aria-labelledby="pc-title">
 <div class="section__inner">
 <div class="section__bar"><h2 class="section__title" id="pc-title">Nuestros noodles</h2><button class="icon-button icon-button--secondary" type="button" aria-label="Anteriores"><span class="icon icon-arrow-left" aria-hidden="true"></span></button></div>
 <div class="product-carousel__tabs" role="tablist" aria-label="Tipo"><button class="tab" role="tab" aria-selected="true">Cups</button><button class="tab" role="tab" aria-selected="false" tabindex="-1">Bags</button></div>
@@ -708,7 +711,7 @@
 &lt;a class=&quot;link link--standalone&quot; href=&quot;/productos&quot;&gt;Ver todos los productos &lt;span class=&quot;icon icon-arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-recipes"><div class="sc-card__head"><h3>Recipes</h3><span class="sc-tag">2 variantes · 92:215 · icono</span></div><div class="sc-demo"><section class="section recipes" aria-labelledby="rc-title">
+<div class="sc-card" id="sc-recipes"><div class="sc-card__head"><h3>Recipes</h3><span class="sc-tag">2 variantes · 92:215 · icono</span></div><div class="sc-demo sc-demo--block"><section class="section recipes" aria-labelledby="rc-title">
 <div class="section__inner">
 <div class="section__bar"><div class="section__header"><h2 class="section__title" id="rc-title">Hackea tu noodle</h2><p class="section__lead">Recetas rápidas con nuestros productos.</p></div><a class="link link--standalone" href="/recetas">Ver todas las recetas <span class="icon icon-arrow-right" aria-hidden="true"></span></a></div>
 <ul class="carousel carousel--3">
@@ -723,7 +726,7 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-banner"><div class="sc-card__head"><h3>Banner</h3><span class="sc-tag">2 variantes · 92:884 · icono</span></div><div class="sc-demo"><section class="section banner" aria-labelledby="bn-title">
+<div class="sc-card" id="sc-banner"><div class="sc-card__head"><h3>Banner</h3><span class="sc-tag">2 variantes · 92:884 · icono</span></div><div class="sc-demo sc-demo--block"><section class="section banner" aria-labelledby="bn-title">
 <div class="section__inner">
 <div class="banner__box">
 <div class="banner__content"><h2 class="banner__title" id="bn-title">Nuevo sabor</h2><p class="banner__body">Texto del lanzamiento.</p><a class="button button--l" href="/productos/nuevo">Saber más</a></div>
@@ -738,7 +741,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-faq"><div class="sc-card__head"><h3>FAQ</h3><span class="sc-tag">2 variantes · 92:960 · icono</span></div><div class="sc-demo"><section class="section faq" aria-labelledby="faq-title">
+<div class="sc-card" id="sc-faq"><div class="sc-card__head"><h3>FAQ</h3><span class="sc-tag">2 variantes · 92:960 · icono</span></div><div class="sc-demo sc-demo--block"><section class="section faq" aria-labelledby="faq-title">
 <div class="section__inner">
 <div class="faq__grid">
 <div class="section__header"><h2 class="section__title" id="faq-title">Preguntas frecuentes</h2><p class="section__lead">Lo que más nos preguntáis.</p><a class="link link--standalone" href="/faqs">Ver todas las preguntas <span class="icon icon-arrow-right" aria-hidden="true"></span></a></div>
@@ -753,7 +756,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-where-to-buy"><div class="sc-card__head"><h3>Where to buy</h3><span class="sc-tag">2 variantes · 92:990</span></div><div class="sc-demo"><section class="section where-to-buy" id="donde-comprar" aria-labelledby="wtb-title">
+<div class="sc-card" id="sc-where-to-buy"><div class="sc-card__head"><h3>Where to buy</h3><span class="sc-tag">2 variantes · 92:990</span></div><div class="sc-demo sc-demo--block"><section class="section where-to-buy" id="donde-comprar" aria-labelledby="wtb-title">
 <div class="section__inner">
 <div class="section__header"><h2 class="section__title" id="wtb-title">Dónde comprar</h2><p class="section__lead">Encuentra nuestros noodles en estos distribuidores.</p></div>
 <ul class="where-to-buy__list"><li><a class="where-to-buy__retailer" href="https://tienda.example.org" target="_blank" rel="noopener"><img src="/media/distribuidor.svg" alt="Distribuidor (abre en una pestaña nueva)"></a></li></ul>
@@ -764,7 +767,7 @@
 &lt;ul class=&quot;where-to-buy__list&quot;&gt;&lt;li&gt;&lt;a class=&quot;where-to-buy__retailer&quot; href=&quot;https://tienda.example.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;/media/distribuidor.svg&quot; alt=&quot;Distribuidor (abre en una pestaña nueva)&quot;&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-product-hero"><div class="sc-card__head"><h3>Product hero</h3><span class="sc-tag">2 variantes · 93:154 · icono</span></div><div class="sc-demo"><section class="section product-hero" aria-labelledby="ph-title">
+<div class="sc-card" id="sc-product-hero"><div class="sc-card__head"><h3>Product hero</h3><span class="sc-tag">2 variantes · 93:154 · icono</span></div><div class="sc-demo sc-demo--block"><section class="section product-hero" aria-labelledby="ph-title">
 <div class="section__inner">
 <div class="product-hero__grid">
 <div class="product-hero__gallery">
@@ -799,7 +802,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-product-details"><div class="sc-card__head"><h3>Product details</h3><span class="sc-tag">2 variantes · 94:329 · icono</span></div><div class="sc-demo"><section class="section product-details" id="ingredientes" aria-labelledby="pd-title">
+<div class="sc-card" id="sc-product-details"><div class="sc-card__head"><h3>Product details</h3><span class="sc-tag">2 variantes · 94:329 · icono</span></div><div class="sc-demo sc-demo--block"><section class="section product-details" id="ingredientes" aria-labelledby="pd-title">
 <div class="section__inner">
 <h2 class="section__title" id="pd-title">Ingredientes y nutrición</h2>
 <div class="product-details__grid">
@@ -816,7 +819,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-preparation"><div class="sc-card__head"><h3>Preparation</h3><span class="sc-tag">2 variantes · 95:1158 · icono</span></div><div class="sc-demo"><section class="section preparation" aria-labelledby="prep-title">
+<div class="sc-card" id="sc-preparation"><div class="sc-card__head"><h3>Preparation</h3><span class="sc-tag">2 variantes · 95:1158 · icono</span></div><div class="sc-demo sc-demo--block"><section class="section preparation" aria-labelledby="prep-title">
 <div class="section__inner">
 <h2 class="section__title" id="prep-title">Preparación</h2>
 <div class="preparation__grid">
@@ -839,7 +842,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-recipe-hero"><div class="sc-card__head"><h3>Recipe hero</h3><span class="sc-tag">2 variantes · 96:113 · icono</span></div><div class="sc-demo"><section class="section recipe-hero" aria-labelledby="rh-title">
+<div class="sc-card" id="sc-recipe-hero"><div class="sc-card__head"><h3>Recipe hero</h3><span class="sc-tag">2 variantes · 96:113 · icono</span></div><div class="sc-demo sc-demo--block"><section class="section recipe-hero" aria-labelledby="rh-title">
 <div class="section__inner">
 <div class="recipe-hero__grid">
 <div class="recipe-hero__info">
@@ -868,7 +871,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-library"><div class="sc-card__head"><h3>Library</h3><span class="sc-tag">2 variantes · 96:1453 · icono</span></div><div class="sc-demo"><section class="library" aria-labelledby="lib-title">
+<div class="sc-card" id="sc-library"><div class="sc-card__head"><h3>Library</h3><span class="sc-tag">2 variantes · 96:1453 · icono</span></div><div class="sc-demo sc-demo--block"><section class="library" aria-labelledby="lib-title">
 <div class="library__header"><h1 class="page-title" id="lib-title">Productos</h1><p class="section__lead">Introducción de la librería.</p></div>
 <div class="product-filter"><div class="product-filter__group"><span class="product-filter__label">Tipo</span><div class="product-filter__options" role="tablist"><button class="tab" role="tab" aria-selected="true">Cups</button></div></div></div>
 <ul class="library__grid"><li><a class="product-card" href="/productos/yatekomo-pollo"><div class="product-card__body"><h3 class="product-card__name">Yatekomo Pollo</h3></div></a></li></ul>

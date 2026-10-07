@@ -6,7 +6,7 @@
     "slug": "badge",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T13:07:30Z",
+    "lastSync": "2026-10-07T13:31:29Z",
     "description": "Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). No es interactivo; no usar como botón.",
     "figmaPage": "Badge",
     "figmaType": "COMPONENT_SET",

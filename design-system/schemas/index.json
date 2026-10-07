@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-07T13:07:30Z",
+  "lastSync": "2026-10-07T13:31:29Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -393,6 +393,29 @@
       }
     },
     {
+      "id": "component:icon-circle-alert",
+      "name": "Icon / circle-alert",
+      "slug": "icon-circle-alert",
+      "kind": "component",
+      "contractPath": "./components/icon-circle-alert.schema.json",
+      "keywords": [
+        "alert",
+        "circle",
+        "icon"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "46:78",
+        "componentKey": "5fc781720e6d66268b7ee207c390ad7140f4efe0"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
       "id": "component:decoration-noodle",
       "name": "Decoration / Noodle",
       "slug": "decoration-noodle",
@@ -641,10 +664,133 @@
         "path": "design-system/css/components.css",
         "classes": []
       }
+    },
+    {
+      "id": "component:input",
+      "name": "Input",
+      "slug": "input",
+      "kind": "component",
+      "contractPath": "./components/input.schema.json",
+      "keywords": [
+        "icon",
+        "input"
+      ],
+      "dependencies": [
+        "icon-circle-alert"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "47:122",
+        "componentKey": "4caacf54a1a2596158676b9e05fe80a3a9270c0d"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:textarea",
+      "name": "Textarea",
+      "slug": "textarea",
+      "kind": "component",
+      "contractPath": "./components/textarea.schema.json",
+      "keywords": [
+        "icon",
+        "textarea"
+      ],
+      "dependencies": [
+        "icon-circle-alert"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "47:247",
+        "componentKey": "8cff3c483306a361a731640fbe517d514b09b85f"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:checkbox",
+      "name": "Checkbox",
+      "slug": "checkbox",
+      "kind": "component",
+      "contractPath": "./components/checkbox.schema.json",
+      "keywords": [
+        "checkbox",
+        "icon"
+      ],
+      "dependencies": [
+        "icon-check"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "47:302",
+        "componentKey": "019d976f87c48e719a6babc92907a38292bd0706"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:select",
+      "name": "Select",
+      "slug": "select",
+      "kind": "component",
+      "contractPath": "./components/select.schema.json",
+      "keywords": [
+        "icon",
+        "select"
+      ],
+      "dependencies": [
+        "icon-chevron-down",
+        "icon-circle-alert"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "48:141",
+        "componentKey": "b9c1e64d9a63408cd0ff96e3898c30fd50f74f23"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:search-field",
+      "name": "Search field",
+      "slug": "search-field",
+      "kind": "component",
+      "contractPath": "./components/search-field.schema.json",
+      "keywords": [
+        "field",
+        "icon",
+        "search"
+      ],
+      "dependencies": [
+        "icon-close",
+        "icon-search"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "48:177",
+        "componentKey": "c01b161ae311de0b659632a1ab7ea759d3218267"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
     }
   ],
   "counts": {
-    "atoms": 27,
+    "atoms": 33,
     "patterns": 0
   }
 }

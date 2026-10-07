@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 27 componentes sincronizados el 2026-10-07T13:07:30Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 33 componentes sincronizados el 2026-10-07T13:31:29Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -31,6 +31,7 @@
 - [Icon / play](components/icon-play.md) · component · `icon-play` · ⬜ 5 pendientes
 - [Icon / timer](components/icon-timer.md) · component · `icon-timer` · ⬜ 5 pendientes
 - [Icon / external-link](components/icon-external-link.md) · component · `icon-external-link` · ⬜ 5 pendientes
+- [Icon / circle-alert](components/icon-circle-alert.md) · component · `icon-circle-alert` · ⬜ 5 pendientes
 - [Decoration / Noodle](components/decoration-noodle.md) · component · `decoration-noodle` · ⬜ 5 pendientes
 - [Logo / GB Foods](components/logo-gb-foods.md) · component · `logo-gb-foods` · ⬜ 5 pendientes
 - [Logo / Aiki](components/logo-aiki.md) · component · `logo-aiki` · ⬜ 5 pendientes
@@ -42,6 +43,11 @@
 - [Link](components/link.md) · component · `link` · ⬜ 5 pendientes
 - [Badge](components/badge.md) · component · `badge` · ⬜ 5 pendientes
 - [Chip](components/chip.md) · component · `chip` · ⬜ 5 pendientes
+- [Input](components/input.md) · component · `input` · ⬜ 5 pendientes
+- [Textarea](components/textarea.md) · component · `textarea` · ⬜ 5 pendientes
+- [Checkbox](components/checkbox.md) · component · `checkbox` · ⬜ 5 pendientes
+- [Select](components/select.md) · component · `select` · ⬜ 5 pendientes
+- [Search field](components/search-field.md) · component · `search-field` · ⬜ 5 pendientes
 
 ## Cómo rellenar una ficha
 

@@ -3,11 +3,11 @@
   "errors": 0,
   "warnings": 0,
   "byCheck": {},
-  "contracts": 27,
+  "contracts": 33,
   "contractsWithCss": 0,
   "verification": {
     "verified": 0,
-    "unverified": 27,
+    "unverified": 33,
     "stale": 0
   },
   "findings": []

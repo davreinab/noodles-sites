@@ -1,0 +1,233 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:textarea",
+  "meta": {
+    "name": "Textarea",
+    "slug": "textarea",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T13:31:29Z",
+    "description": "Campo de texto multilínea (comentarios, respuestas de concurso). Etiqueta siempre visible (no se sustituye por el placeholder). Error: borde rojo + icono + mensaje (nunca solo color); el mensaje se asocia con aria-describedby. Required muestra asterisco y requiere aria-required. El valor y el texto de ayuda se editan en la instancia.",
+    "figmaPage": "Textarea",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 6,
+    "autoLayout": true,
+    "anatomyHash": "77dd6f137b65"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/textarea.md",
+      "section": "Textarea"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "47:247",
+      "componentKey": "8cff3c483306a361a731640fbe517d514b09b85f"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Label#47:21",
+        "kind": "TEXT",
+        "default": "Mensaje"
+      },
+      {
+        "name": "Required#47:28",
+        "kind": "BOOLEAN",
+        "default": false
+      },
+      {
+        "name": "Helper#47:35",
+        "kind": "BOOLEAN",
+        "default": true
+      },
+      {
+        "name": "Error icon#50:0",
+        "kind": "INSTANCE_SWAP",
+        "default": "46:78",
+        "defaultComponent": "Icon / circle-alert",
+        "preferredValues": []
+      },
+      {
+        "name": "State",
+        "kind": "VARIANT",
+        "default": "Default",
+        "values": [
+          "Default",
+          "Hover",
+          "Focus",
+          "Filled",
+          "Error",
+          "Disabled"
+        ]
+      }
+    ],
+    "variants": {
+      "State": [
+        "Default",
+        "Hover",
+        "Focus",
+        "Filled",
+        "Error",
+        "Disabled"
+      ]
+    },
+    "states": [
+      "Default",
+      "Hover",
+      "Focus",
+      "Filled",
+      "Error",
+      "Disabled"
+    ],
+    "defaults": {
+      "State": "Default"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#50:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "Error icon#50:0"
+      ],
+      "defaultIcons": [
+        "Icon / circle-alert"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "border/width/thin",
+      "field/bg",
+      "field/border",
+      "field/error-text",
+      "field/helper",
+      "field/label",
+      "field/placeholder",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "radius/sm",
+      "space/128",
+      "space/16",
+      "space/4",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "itemSpacing: space/8",
+      "itemSpacing: space/4",
+      "fills: field/label",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label",
+      "color: field/label",
+      "fills: field/error-text",
+      "color: field/error-text",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "height: space/128",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: field/bg",
+      "strokes: field/border",
+      "color: field/bg",
+      "color: field/border",
+      "fills: field/placeholder",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: field/placeholder",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: field/error-text",
+      "fills: field/helper",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: field/helper"
+    ],
+    "textStyles": [
+      "Desktop/label",
+      "Desktop/body-m",
+      "Desktop/caption"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "field/bg",
+        "field/border",
+        "field/error-text",
+        "field/helper",
+        "field/label",
+        "field/placeholder",
+        "font/family/body",
+        "font/family/display",
+        "font/line-height/desktop/body-m",
+        "font/line-height/desktop/caption",
+        "font/line-height/desktop/label",
+        "font/size/desktop/body-m",
+        "font/size/desktop/caption",
+        "font/size/desktop/label",
+        "font/style/body",
+        "font/style/display"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "icon-circle-alert"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

@@ -1,14 +1,14 @@
-### Icon / timer   ⚙️ synced: 2026-10-07T13:31:29Z
+### Icon / circle-alert   ⚙️ synced: 2026-10-07T13:31:29Z
 
-<!-- ⚙️ GENERATED:start:icon-timer -->
-- **Figma:** `30:84` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T13:31:29Z
-- **Descripción (Figma):** Temporizador de preparación (3 minutos). Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
+<!-- ⚙️ GENERATED:start:icon-circle-alert -->
+- **Figma:** `46:78` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T13:31:29Z
+- **Descripción (Figma):** Aviso o error: mensajes de error de formulario, alertas. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna
 - **Iconos / instancias anidadas:** ninguno
 - **Tokens que consume:** `icon/color/default`, `icon/size/md`
 - **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `icon/color/default`
-<!-- ⚙️ GENERATED:end:icon-timer -->
+<!-- ⚙️ GENERATED:end:icon-circle-alert -->
 
 - **Propósito:** ⬜ TODO
 - **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; se copia a `source.code.example` del schema)_

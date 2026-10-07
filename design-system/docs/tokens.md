@@ -2,14 +2,14 @@
 
 # GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
 
-> Última sync: **2026-10-07T13:07:30Z** · modo de adopción: `new` · 189 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-07T13:31:29Z** · modo de adopción: `new` · 214 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice
 
 - [Primitive](#primitive) · 21 tokens · modos: Value
 - [Semantic](#semantic) · 37 tokens · modos: Yatekomo, Saikebon, Aiki, Daisuki, DE
-- [Components](#components) · 52 tokens · modos: Value
+- [Components](#components) · 77 tokens · modos: Value
 - [Layer](#layer) · 7 tokens · modos: Value
 - [Spacing](#spacing) · 20 tokens · modos: Value
 - [Layout](#layout) · 6 tokens · modos: Desktop, Tablet, Mobile
@@ -155,6 +155,31 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 | `chip/text-disabled` | `--chip-text-disabled` | COLOR | → `--color-text-disabled` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | chip: Texto desactivado |
 | `link/focus-ring` | `--link-focus-ring` | COLOR | → `--color-border-default` | STROKE_COLOR | link: Anillo de foco |
 | `link/inverse-focus-ring` | `--link-inverse-focus-ring` | COLOR | → `--color-text-brand-on-inverse` | STROKE_COLOR | link: Anillo de foco sobre fondo oscuro |
+| `field/bg` | `--field-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | field: Fondo del campo |
+| `field/bg-disabled` | `--field-bg-disabled` | COLOR | → `--color-surface-disabled` | FRAME_FILL, SHAPE_FILL | field: Fondo del campo desactivado |
+| `field/border` | `--field-border` | COLOR | → `--color-border-default` | STROKE_COLOR | field: Borde del campo |
+| `field/border-error` | `--field-border-error` | COLOR | → `--color-status-error-border` | STROKE_COLOR | field: Borde del campo con error |
+| `field/border-disabled` | `--field-border-disabled` | COLOR | → `--color-surface-disabled` | STROKE_COLOR | field: Borde del campo desactivado |
+| `field/focus-ring` | `--field-focus-ring` | COLOR | → `--color-border-default` | STROKE_COLOR | field: Anillo de foco del campo |
+| `field/text` | `--field-text` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | field: Valor escrito |
+| `field/placeholder` | `--field-placeholder` | COLOR | → `--color-text-secondary` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | field: Placeholder |
+| `field/label` | `--field-label` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | field: Etiqueta del campo |
+| `field/helper` | `--field-helper` | COLOR | → `--color-text-secondary` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | field: Texto de ayuda |
+| `field/error-text` | `--field-error-text` | COLOR | → `--color-status-error-text` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | field: Mensaje e icono de error |
+| `field/text-disabled` | `--field-text-disabled` | COLOR | → `--color-text-disabled` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | field: Texto desactivado |
+| `field/icon` | `--field-icon` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | field: Iconos del campo (lupa, chevron, borrar) |
+| `field/menu-bg` | `--field-menu-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | field: Fondo del menú desplegable |
+| `field/option-hover-bg` | `--field-option-hover-bg` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL | field: Fondo de la opción en hover |
+| `checkbox/box-bg` | `--checkbox-box-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | checkbox: Fondo de la caja |
+| `checkbox/box-bg-hover` | `--checkbox-box-bg-hover` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL | checkbox: Fondo de la caja en hover |
+| `checkbox/box-border` | `--checkbox-box-border` | COLOR | → `--color-border-default` | STROKE_COLOR | checkbox: Borde de la caja |
+| `checkbox/box-bg-checked` | `--checkbox-box-bg-checked` | COLOR | → `--color-surface-inverse` | FRAME_FILL, SHAPE_FILL | checkbox: Fondo de la caja marcada |
+| `checkbox/check` | `--checkbox-check` | COLOR | → `--color-text-on-inverse` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | checkbox: Check sobre la caja marcada |
+| `checkbox/label` | `--checkbox-label` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | checkbox: Etiqueta |
+| `checkbox/focus-ring` | `--checkbox-focus-ring` | COLOR | → `--color-border-default` | STROKE_COLOR | checkbox: Anillo de foco |
+| `checkbox/bg-disabled` | `--checkbox-bg-disabled` | COLOR | → `--color-surface-disabled` | FRAME_FILL, SHAPE_FILL | checkbox: Fondo desactivado |
+| `checkbox/text-disabled` | `--checkbox-text-disabled` | COLOR | → `--color-text-disabled` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | checkbox: Etiqueta y check desactivados |
+| `checkbox/border-error` | `--checkbox-border-error` | COLOR | → `--color-status-error-border` | STROKE_COLOR | checkbox: Borde con error |
 
 ## Layer
 

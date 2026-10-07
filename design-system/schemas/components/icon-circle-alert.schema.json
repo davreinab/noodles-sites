@@ -1,28 +1,28 @@
 {
   "$schema": "../_component.schema.json",
-  "id": "component:icon-minus",
+  "id": "component:icon-circle-alert",
   "meta": {
-    "name": "Icon / minus",
-    "slug": "icon-minus",
+    "name": "Icon / circle-alert",
+    "slug": "icon-circle-alert",
     "kind": "component",
     "version": "1.0.0",
     "lastSync": "2026-10-07T13:31:29Z",
-    "description": "Menos: cerrar acordeón FAQ. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+    "description": "Aviso o error: mensajes de error de formulario, alertas. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
     "figmaPage": "Icons",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "d05c9c92f515"
+    "anatomyHash": "026d3815c3cb"
   },
   "source": {
     "docs": {
-      "file": "design-system/docs/components/icon-minus.md",
-      "section": "Icon / minus"
+      "file": "design-system/docs/components/icon-circle-alert.md",
+      "section": "Icon / circle-alert"
     },
     "figma": {
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "30:72",
-      "componentKey": "7b0a8d21bb43ff027cb883c53aaea1da88fb144d"
+      "nodeId": "46:78",
+      "componentKey": "5fc781720e6d66268b7ee207c390ad7140f4efe0"
     },
     "code": {
       "package": null,
@@ -82,7 +82,11 @@
   "compatibility": {},
   "relations": {
     "uses": [],
-    "usedBy": [],
+    "usedBy": [
+      "input",
+      "select",
+      "textarea"
+    ],
     "related": []
   }
 }

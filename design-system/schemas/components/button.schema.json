@@ -6,7 +6,7 @@
     "slug": "button",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T13:07:30Z",
+    "lastSync": "2026-10-07T13:31:29Z",
     "description": "Botón de acción. Hierarchy: Primary (acción principal, 1 por vista), Secondary (alternativa), Inverse (sobre fondos oscuros). Size M (48) por defecto; L (64) para hero y CTA destacados. Label en Anton mayúsculas. Iconos opcionales delante/detrás (INSTANCE_SWAP). Focus: anillo exterior visible. Disabled sin opacidad (colores propios).",
     "figmaPage": "Button",
     "figmaType": "COMPONENT_SET",

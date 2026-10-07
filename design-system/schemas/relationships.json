@@ -26,7 +26,42 @@
       "from": "chip",
       "to": "icon-check",
       "type": "uses"
+    },
+    {
+      "from": "input",
+      "to": "icon-circle-alert",
+      "type": "uses"
+    },
+    {
+      "from": "textarea",
+      "to": "icon-circle-alert",
+      "type": "uses"
+    },
+    {
+      "from": "checkbox",
+      "to": "icon-check",
+      "type": "uses"
+    },
+    {
+      "from": "select",
+      "to": "icon-chevron-down",
+      "type": "uses"
+    },
+    {
+      "from": "select",
+      "to": "icon-circle-alert",
+      "type": "uses"
+    },
+    {
+      "from": "search-field",
+      "to": "icon-close",
+      "type": "uses"
+    },
+    {
+      "from": "search-field",
+      "to": "icon-search",
+      "type": "uses"
     }
   ],
-  "lastSync": "2026-10-07T13:07:30Z"
+  "lastSync": "2026-10-07T13:31:29Z"
 }

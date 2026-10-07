@@ -3110,6 +3110,534 @@
               "name": "color/text/brand-on-inverse"
             }
           }
+        },
+        {
+          "id": "VariableID:46:49",
+          "name": "field/bg",
+          "type": "COLOR",
+          "description": "field: Fondo del campo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:26",
+              "name": "color/surface/card"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:50",
+          "name": "field/bg-disabled",
+          "type": "COLOR",
+          "description": "field: Fondo del campo desactivado",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-bg-disabled)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:33:49",
+              "name": "color/surface/disabled"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:51",
+          "name": "field/border",
+          "type": "COLOR",
+          "description": "field: Borde del campo",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:52",
+          "name": "field/border-error",
+          "type": "COLOR",
+          "description": "field: Borde del campo con error",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-border-error)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:45",
+              "name": "color/status/error/border"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:53",
+          "name": "field/border-disabled",
+          "type": "COLOR",
+          "description": "field: Borde del campo desactivado",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-border-disabled)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:33:49",
+              "name": "color/surface/disabled"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:54",
+          "name": "field/focus-ring",
+          "type": "COLOR",
+          "description": "field: Anillo de foco del campo",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-focus-ring)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:55",
+          "name": "field/text",
+          "type": "COLOR",
+          "description": "field: Valor escrito",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:56",
+          "name": "field/placeholder",
+          "type": "COLOR",
+          "description": "field: Placeholder",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-placeholder)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:32",
+              "name": "color/text/secondary"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:57",
+          "name": "field/label",
+          "type": "COLOR",
+          "description": "field: Etiqueta del campo",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-label)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:58",
+          "name": "field/helper",
+          "type": "COLOR",
+          "description": "field: Texto de ayuda",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-helper)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:32",
+              "name": "color/text/secondary"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:59",
+          "name": "field/error-text",
+          "type": "COLOR",
+          "description": "field: Mensaje e icono de error",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-error-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:43",
+              "name": "color/status/error/text"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:60",
+          "name": "field/text-disabled",
+          "type": "COLOR",
+          "description": "field: Texto desactivado",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-text-disabled)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:33:50",
+              "name": "color/text/disabled"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:61",
+          "name": "field/icon",
+          "type": "COLOR",
+          "description": "field: Iconos del campo (lupa, chevron, borrar)",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-icon)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:62",
+          "name": "field/menu-bg",
+          "type": "COLOR",
+          "description": "field: Fondo del menú desplegable",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-menu-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:26",
+              "name": "color/surface/card"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:63",
+          "name": "field/option-hover-bg",
+          "type": "COLOR",
+          "description": "field: Fondo de la opción en hover",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--field-option-hover-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:25",
+              "name": "color/surface/brand"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:64",
+          "name": "checkbox/box-bg",
+          "type": "COLOR",
+          "description": "checkbox: Fondo de la caja",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--checkbox-box-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:26",
+              "name": "color/surface/card"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:65",
+          "name": "checkbox/box-bg-hover",
+          "type": "COLOR",
+          "description": "checkbox: Fondo de la caja en hover",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--checkbox-box-bg-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:25",
+              "name": "color/surface/brand"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:66",
+          "name": "checkbox/box-border",
+          "type": "COLOR",
+          "description": "checkbox: Borde de la caja",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--checkbox-box-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:67",
+          "name": "checkbox/box-bg-checked",
+          "type": "COLOR",
+          "description": "checkbox: Fondo de la caja marcada",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--checkbox-box-bg-checked)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:27",
+              "name": "color/surface/inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:68",
+          "name": "checkbox/check",
+          "type": "COLOR",
+          "description": "checkbox: Check sobre la caja marcada",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--checkbox-check)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:33",
+              "name": "color/text/on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:69",
+          "name": "checkbox/label",
+          "type": "COLOR",
+          "description": "checkbox: Etiqueta",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--checkbox-label)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:70",
+          "name": "checkbox/focus-ring",
+          "type": "COLOR",
+          "description": "checkbox: Anillo de foco",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--checkbox-focus-ring)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:71",
+          "name": "checkbox/bg-disabled",
+          "type": "COLOR",
+          "description": "checkbox: Fondo desactivado",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--checkbox-bg-disabled)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:33:49",
+              "name": "color/surface/disabled"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:72",
+          "name": "checkbox/text-disabled",
+          "type": "COLOR",
+          "description": "checkbox: Etiqueta y check desactivados",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--checkbox-text-disabled)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:33:50",
+              "name": "color/text/disabled"
+            }
+          }
+        },
+        {
+          "id": "VariableID:46:73",
+          "name": "checkbox/border-error",
+          "type": "COLOR",
+          "description": "checkbox: Borde con error",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--checkbox-border-error)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:45",
+              "name": "color/status/error/border"
+            }
+          }
         }
       ]
     },

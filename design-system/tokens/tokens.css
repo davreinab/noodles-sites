@@ -1,6 +1,6 @@
 /* ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO.
    Design system: GB Noodles · Microsites · fileKey: v4mnn154qUmiB35CCnRfgh
-   Última sync: 2026-10-07T13:07:30Z · modo de adopción: new
+   Última sync: 2026-10-07T13:31:29Z · modo de adopción: new
    Se regenera con el protocolo de sync de design.md. */
 
 :root {
@@ -117,6 +117,31 @@
   --chip-text-disabled: var(--color-text-disabled); /* chip: Texto desactivado */
   --link-focus-ring: var(--color-border-default); /* link: Anillo de foco */
   --link-inverse-focus-ring: var(--color-text-brand-on-inverse); /* link: Anillo de foco sobre fondo oscuro */
+  --field-bg: var(--color-surface-card); /* field: Fondo del campo */
+  --field-bg-disabled: var(--color-surface-disabled); /* field: Fondo del campo desactivado */
+  --field-border: var(--color-border-default); /* field: Borde del campo */
+  --field-border-error: var(--color-status-error-border); /* field: Borde del campo con error */
+  --field-border-disabled: var(--color-surface-disabled); /* field: Borde del campo desactivado */
+  --field-focus-ring: var(--color-border-default); /* field: Anillo de foco del campo */
+  --field-text: var(--color-text-default); /* field: Valor escrito */
+  --field-placeholder: var(--color-text-secondary); /* field: Placeholder */
+  --field-label: var(--color-text-default); /* field: Etiqueta del campo */
+  --field-helper: var(--color-text-secondary); /* field: Texto de ayuda */
+  --field-error-text: var(--color-status-error-text); /* field: Mensaje e icono de error */
+  --field-text-disabled: var(--color-text-disabled); /* field: Texto desactivado */
+  --field-icon: var(--color-text-default); /* field: Iconos del campo (lupa, chevron, borrar) */
+  --field-menu-bg: var(--color-surface-card); /* field: Fondo del menú desplegable */
+  --field-option-hover-bg: var(--color-surface-brand); /* field: Fondo de la opción en hover */
+  --checkbox-box-bg: var(--color-surface-card); /* checkbox: Fondo de la caja */
+  --checkbox-box-bg-hover: var(--color-surface-brand); /* checkbox: Fondo de la caja en hover */
+  --checkbox-box-border: var(--color-border-default); /* checkbox: Borde de la caja */
+  --checkbox-box-bg-checked: var(--color-surface-inverse); /* checkbox: Fondo de la caja marcada */
+  --checkbox-check: var(--color-text-on-inverse); /* checkbox: Check sobre la caja marcada */
+  --checkbox-label: var(--color-text-default); /* checkbox: Etiqueta */
+  --checkbox-focus-ring: var(--color-border-default); /* checkbox: Anillo de foco */
+  --checkbox-bg-disabled: var(--color-surface-disabled); /* checkbox: Fondo desactivado */
+  --checkbox-text-disabled: var(--color-text-disabled); /* checkbox: Etiqueta y check desactivados */
+  --checkbox-border-error: var(--color-status-error-border); /* checkbox: Borde con error */
   /* ---- Layer ---- */
   --layer-base: 0; /* z-index 0. Contenido normal de la página */
   --layer-raised: 10; /* z-index 10. Contenido por encima de imágenes dentro de una sección (copy del hero, banderas) */

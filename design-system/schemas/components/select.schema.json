@@ -1,0 +1,251 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:select",
+  "meta": {
+    "name": "Select",
+    "slug": "select",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T13:31:29Z",
+    "description": "Selector de una opción: país o idioma (Aiki NL/FR), filtros. Open muestra el menú (elevation/3) con la opción activa en amarillo de marca. En código se recomienda &lt;select&gt; nativo o un listbox accesible (teclado: flechas, Enter, Esc). Error con borde, icono y mensaje. Valor y opciones se editan en la instancia.",
+    "figmaPage": "Select",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 6,
+    "autoLayout": true,
+    "anatomyHash": "cd5ef9a2da26"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/select.md",
+      "section": "Select"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "48:141",
+      "componentKey": "b9c1e64d9a63408cd0ff96e3898c30fd50f74f23"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Label#48:0",
+        "kind": "TEXT",
+        "default": "País"
+      },
+      {
+        "name": "Required#48:7",
+        "kind": "BOOLEAN",
+        "default": false
+      },
+      {
+        "name": "Icon#50:18",
+        "kind": "INSTANCE_SWAP",
+        "default": "21:59",
+        "defaultComponent": "Icon / chevron-down",
+        "preferredValues": []
+      },
+      {
+        "name": "Error icon#50:25",
+        "kind": "INSTANCE_SWAP",
+        "default": "46:78",
+        "defaultComponent": "Icon / circle-alert",
+        "preferredValues": []
+      },
+      {
+        "name": "State",
+        "kind": "VARIANT",
+        "default": "Default",
+        "values": [
+          "Default",
+          "Hover",
+          "Focus",
+          "Open",
+          "Error",
+          "Disabled"
+        ]
+      }
+    ],
+    "variants": {
+      "State": [
+        "Default",
+        "Hover",
+        "Focus",
+        "Open",
+        "Error",
+        "Disabled"
+      ]
+    },
+    "states": [
+      "Default",
+      "Hover",
+      "Focus",
+      "Open",
+      "Error",
+      "Disabled"
+    ],
+    "defaults": {
+      "State": "Default"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "icon-chevron",
+        "component": "Icon / chevron-down",
+        "componentSlug": "icon-chevron-down",
+        "exposedAs": "Icon#50:18",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#50:25",
+        "toggledBy": null,
+        "visibleByDefault": false
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "Icon#50:18",
+        "Error icon#50:25"
+      ],
+      "defaultIcons": [
+        "Icon / chevron-down",
+        "Icon / circle-alert"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "border/width/thin",
+      "field/bg",
+      "field/border",
+      "field/error-text",
+      "field/helper",
+      "field/icon",
+      "field/label",
+      "field/placeholder",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/md",
+      "icon/size/sm",
+      "radius/sm",
+      "space/16",
+      "space/4",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "itemSpacing: space/8",
+      "itemSpacing: space/4",
+      "fills: field/label",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label",
+      "color: field/label",
+      "fills: field/error-text",
+      "color: field/error-text",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: field/bg",
+      "strokes: field/border",
+      "color: field/bg",
+      "color: field/border",
+      "fills: field/placeholder",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: field/placeholder",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: field/icon",
+      "color: field/icon",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: field/error-text",
+      "fills: field/helper",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: field/helper"
+    ],
+    "textStyles": [
+      "Desktop/label",
+      "Desktop/body-m",
+      "Desktop/caption"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "field/bg",
+        "field/border",
+        "field/error-text",
+        "field/helper",
+        "field/icon",
+        "field/label",
+        "field/placeholder",
+        "font/family/body",
+        "font/family/display",
+        "font/line-height/desktop/body-m",
+        "font/line-height/desktop/caption",
+        "font/line-height/desktop/label",
+        "font/size/desktop/body-m",
+        "font/size/desktop/caption",
+        "font/size/desktop/label",
+        "font/style/body",
+        "font/style/display"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "icon-chevron-down",
+      "icon-circle-alert"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

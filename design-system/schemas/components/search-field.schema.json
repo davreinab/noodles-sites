@@ -1,28 +1,28 @@
 {
   "$schema": "../_component.schema.json",
-  "id": "component:chip",
+  "id": "component:search-field",
   "meta": {
-    "name": "Chip",
-    "slug": "chip",
+    "name": "Search field",
+    "slug": "search-field",
     "kind": "component",
     "version": "1.0.0",
     "lastSync": "2026-10-07T13:31:29Z",
-    "description": "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP).",
-    "figmaPage": "Chip",
+    "description": "Campo de búsqueda (resultados en modal). Sin etiqueta visible: requiere aria-label («Buscar») y role=&quot;search&quot; en el formulario. Lupa delante; con texto aparece el botón borrar (aria-label «Borrar búsqueda»). Forma pill para distinguirlo de los campos de formulario. El valor se edita en la instancia.",
+    "figmaPage": "Search field",
     "figmaType": "COMPONENT_SET",
     "variantCount": 4,
     "autoLayout": true,
-    "anatomyHash": "e8f4c313b68f"
+    "anatomyHash": "19c5719a95a1"
   },
   "source": {
     "docs": {
-      "file": "design-system/docs/components/chip.md",
-      "section": "Chip"
+      "file": "design-system/docs/components/search-field.md",
+      "section": "Search field"
     },
     "figma": {
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "35:186",
-      "componentKey": "9e5bf92f006c4089c292176008506b8af258f943"
+      "nodeId": "48:177",
+      "componentKey": "c01b161ae311de0b659632a1ab7ea759d3218267"
     },
     "code": {
       "package": null,
@@ -35,34 +35,18 @@
   "api": {
     "properties": [
       {
-        "name": "Label#35:17",
-        "kind": "TEXT",
-        "default": "Yatekomo Original"
-      },
-      {
-        "name": "Icon leading#35:22",
-        "kind": "BOOLEAN",
-        "default": false
-      },
-      {
-        "name": "Icon leading swap#35:27",
+        "name": "Icon leading#51:0",
         "kind": "INSTANCE_SWAP",
-        "default": "21:56",
-        "defaultComponent": "Icon / check",
-        "preferredValues": [
-          {
-            "type": "COMPONENT",
-            "key": "8d3736b0f10db93283ac616c1842079d386cfa8c"
-          },
-          {
-            "type": "COMPONENT",
-            "key": "c21a991431daab7928e8b4c745539c0105c26172"
-          },
-          {
-            "type": "COMPONENT",
-            "key": "d3bd670f4a53fb5af9503f3797584ad997f049a8"
-          }
-        ]
+        "default": "30:76",
+        "defaultComponent": "Icon / search",
+        "preferredValues": []
+      },
+      {
+        "name": "Clear icon#51:5",
+        "kind": "INSTANCE_SWAP",
+        "default": "30:60",
+        "defaultComponent": "Icon / close",
+        "preferredValues": []
       },
       {
         "name": "State",
@@ -71,8 +55,8 @@
         "values": [
           "Default",
           "Hover",
-          "Selected",
-          "Disabled"
+          "Focus",
+          "Filled"
         ]
       }
     ],
@@ -80,15 +64,15 @@
       "State": [
         "Default",
         "Hover",
-        "Selected",
-        "Disabled"
+        "Focus",
+        "Filled"
       ]
     },
     "states": [
       "Default",
       "Hover",
-      "Selected",
-      "Disabled"
+      "Focus",
+      "Filled"
     ],
     "defaults": {
       "State": "Default"
@@ -96,21 +80,31 @@
     "invalidCombinations": [],
     "nestedInstances": [
       {
-        "layer": "icon-leading",
-        "component": "Icon / check",
-        "componentSlug": "icon-check",
-        "exposedAs": "Icon leading swap#35:27",
-        "toggledBy": "Icon leading#35:22",
+        "layer": "icon-search",
+        "component": "Icon / search",
+        "componentSlug": "icon-search",
+        "exposedAs": "Icon leading#51:0",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-clear",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": "Clear icon#51:5",
+        "toggledBy": null,
         "visibleByDefault": false
       }
     ],
     "icons": {
       "hasIcon": true,
       "swapProperties": [
-        "Icon leading swap#35:27"
+        "Icon leading#51:0",
+        "Clear icon#51:5"
       ],
       "defaultIcons": [
-        "Icon / check"
+        "Icon / search",
+        "Icon / close"
       ],
       "compatible": "any Icon / * via INSTANCE_SWAP",
       "unexposedIconLayers": []
@@ -118,14 +112,15 @@
     "slots": [],
     "tokensUsed": [
       "border/width/thin",
-      "chip/bg",
-      "chip/border",
-      "chip/text",
+      "field/bg",
+      "field/border",
+      "field/icon",
+      "field/placeholder",
       "font/family/body",
-      "font/line-height/desktop/body-s",
-      "font/size/desktop/body-s",
+      "font/line-height/desktop/body-m",
+      "font/size/desktop/body-m",
       "font/style/body",
-      "icon/size/sm",
+      "icon/size/md",
       "radius/pill",
       "space/16",
       "space/8"
@@ -133,9 +128,9 @@
     "variablesUsed": [
       "itemSpacing: space/8",
       "paddingLeft: space/16",
-      "paddingTop: space/8",
+      "paddingTop: space/16",
       "paddingRight: space/16",
-      "paddingBottom: space/8",
+      "paddingBottom: space/16",
       "topLeftRadius: radius/pill",
       "topRightRadius: radius/pill",
       "bottomLeftRadius: radius/pill",
@@ -144,22 +139,23 @@
       "strokeBottomWeight: border/width/thin",
       "strokeLeftWeight: border/width/thin",
       "strokeRightWeight: border/width/thin",
-      "fills: chip/bg",
-      "strokes: chip/border",
-      "color: chip/bg",
-      "color: chip/border",
-      "width: icon/size/sm",
-      "height: icon/size/sm",
-      "strokes: chip/text",
-      "color: chip/text",
-      "fills: chip/text",
-      "fontSize: font/size/desktop/body-s",
+      "fills: field/bg",
+      "strokes: field/border",
+      "color: field/bg",
+      "color: field/border",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: field/icon",
+      "color: field/icon",
+      "fills: field/placeholder",
+      "fontSize: font/size/desktop/body-m",
       "fontStyle: font/style/body",
       "fontFamily: font/family/body",
-      "lineHeight: font/line-height/desktop/body-s"
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: field/placeholder"
     ],
     "textStyles": [
-      "Desktop/body-s"
+      "Desktop/body-m"
     ],
     "theming": {
       "brandAware": true,
@@ -173,12 +169,13 @@
       ],
       "defaultBrand": "yatekomo",
       "brandTokens": [
-        "chip/bg",
-        "chip/border",
-        "chip/text",
+        "field/bg",
+        "field/border",
+        "field/icon",
+        "field/placeholder",
         "font/family/body",
-        "font/line-height/desktop/body-s",
-        "font/size/desktop/body-s",
+        "font/line-height/desktop/body-m",
+        "font/size/desktop/body-m",
         "font/style/body"
       ]
     }
@@ -191,7 +188,8 @@
   "compatibility": {},
   "relations": {
     "uses": [
-      "icon-check"
+      "icon-close",
+      "icon-search"
     ],
     "usedBy": [],
     "related": []

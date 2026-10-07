@@ -1,7 +1,7 @@
-### Chip   ⚙️ synced: 2026-10-07T13:07:30Z
+### Chip   ⚙️ synced: 2026-10-07T13:31:29Z
 
 <!-- ⚙️ GENERATED:start:chip -->
-- **Figma:** `35:186` · página «Chip» · COMPONENT_SET · 4 variantes · última sync 2026-10-07T13:07:30Z
+- **Figma:** `35:186` · página «Chip» · COMPONENT_SET · 4 variantes · última sync 2026-10-07T13:31:29Z
 - **Descripción (Figma):** Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP).
 - **Anatomía:** `icon-leading` → Icon / check
 - **State:** Default, Hover, Selected, Disabled

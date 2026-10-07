@@ -1,6 +1,6 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": "2026-10-07T13:07:30Z",
+  "generatedAt": "2026-10-07T13:31:29Z",
   "adoptionMode": "new",
   "sourcesCompared": [
     "figma",
@@ -12,7 +12,7 @@
   ],
   "summary": {
     "critical": 0,
-    "warning": 27,
+    "warning": 33,
     "info": 11
   },
   "findings": [
@@ -154,6 +154,11 @@
     {
       "severity": "warning",
       "check": "code-example-missing-or-stale",
+      "detail": "Icon / circle-alert: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
       "detail": "Decoration / Noodle: sin «Ejemplo de código» (source.code.example)"
     },
     {
@@ -205,6 +210,31 @@
       "severity": "warning",
       "check": "code-example-missing-or-stale",
       "detail": "Chip: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Input: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Textarea: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Checkbox: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Select: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Search field: sin «Ejemplo de código» (source.code.example)"
     }
   ],
   "acceptedStructuralDifferences": [],

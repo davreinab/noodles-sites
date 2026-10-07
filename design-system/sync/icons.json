@@ -24,6 +24,12 @@
     "usage": "glifo UI"
   },
   {
+    "name": "Icon / circle-alert",
+    "nodeId": "46:78",
+    "file": "circle-alert.svg",
+    "usage": "glifo UI · Lucide (ISC)"
+  },
+  {
     "name": "Icon / close",
     "nodeId": "30:60",
     "file": "close.svg",

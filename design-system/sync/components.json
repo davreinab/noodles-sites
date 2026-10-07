@@ -356,10 +356,32 @@
             "textStyles": []
           },
           "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / circle-alert",
+          "type": "COMPONENT",
+          "id": "46:78",
+          "key": "5fc781720e6d66268b7ee207c390ad7140f4efe0",
+          "description": "Aviso o error: mensajes de error de formulario, alertas. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
         }
       ],
-      "total": 16,
-      "read": 16
+      "total": 17,
+      "read": 17
     },
     {
       "name": "Decoration",
@@ -1203,6 +1225,608 @@
             ],
             "textStyles": [
               "Desktop/body-s"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Input",
+      "id": "46:79",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Input",
+          "name": "Input",
+          "type": "COMPONENT_SET",
+          "id": "47:122",
+          "key": "4caacf54a1a2596158676b9e05fe80a3a9270c0d",
+          "description": "Campo de texto de una línea (formularios de concursos con estructura propia). Etiqueta siempre visible (no se sustituye por el placeholder). Error: borde rojo + icono + mensaje (nunca solo color); el mensaje se asocia al campo con aria-describedby. Required muestra asterisco y requiere aria-required. El valor y el texto de ayuda se editan en la instancia.",
+          "variantAxes": {
+            "State": [
+              "Default",
+              "Hover",
+              "Focus",
+              "Filled",
+              "Error",
+              "Disabled"
+            ]
+          },
+          "variantCount": 6,
+          "properties": [
+            {
+              "name": "Label#47:0",
+              "kind": "TEXT",
+              "default": "Nombre"
+            },
+            {
+              "name": "Required#47:7",
+              "kind": "BOOLEAN",
+              "default": false
+            },
+            {
+              "name": "Helper#47:14",
+              "kind": "BOOLEAN",
+              "default": true
+            },
+            {
+              "name": "Error icon#49:0",
+              "kind": "INSTANCE_SWAP",
+              "default": "46:78",
+              "defaultComponent": "Icon / circle-alert",
+              "preferredValues": []
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus",
+                "Filled",
+                "Error",
+                "Disabled"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon-error",
+              "component": "Icon / circle-alert",
+              "componentSet": null,
+              "exposedAs": "Error icon#49:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/8",
+              "itemSpacing: space/4",
+              "fills: field/label",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "color: field/label",
+              "fills: field/error-text",
+              "color: field/error-text",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: field/bg",
+              "strokes: field/border",
+              "color: field/bg",
+              "color: field/border",
+              "fills: field/placeholder",
+              "fontSize: font/size/desktop/body-m",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-m",
+              "color: field/placeholder",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: field/error-text",
+              "fills: field/helper",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: field/helper"
+            ],
+            "textStyles": [
+              "Desktop/label",
+              "Desktop/body-m",
+              "Desktop/caption"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Textarea",
+      "id": "46:80",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Textarea",
+          "name": "Textarea",
+          "type": "COMPONENT_SET",
+          "id": "47:247",
+          "key": "8cff3c483306a361a731640fbe517d514b09b85f",
+          "description": "Campo de texto multilínea (comentarios, respuestas de concurso). Etiqueta siempre visible (no se sustituye por el placeholder). Error: borde rojo + icono + mensaje (nunca solo color); el mensaje se asocia con aria-describedby. Required muestra asterisco y requiere aria-required. El valor y el texto de ayuda se editan en la instancia.",
+          "variantAxes": {
+            "State": [
+              "Default",
+              "Hover",
+              "Focus",
+              "Filled",
+              "Error",
+              "Disabled"
+            ]
+          },
+          "variantCount": 6,
+          "properties": [
+            {
+              "name": "Label#47:21",
+              "kind": "TEXT",
+              "default": "Mensaje"
+            },
+            {
+              "name": "Required#47:28",
+              "kind": "BOOLEAN",
+              "default": false
+            },
+            {
+              "name": "Helper#47:35",
+              "kind": "BOOLEAN",
+              "default": true
+            },
+            {
+              "name": "Error icon#50:0",
+              "kind": "INSTANCE_SWAP",
+              "default": "46:78",
+              "defaultComponent": "Icon / circle-alert",
+              "preferredValues": []
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus",
+                "Filled",
+                "Error",
+                "Disabled"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon-error",
+              "component": "Icon / circle-alert",
+              "componentSet": null,
+              "exposedAs": "Error icon#50:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/8",
+              "itemSpacing: space/4",
+              "fills: field/label",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "color: field/label",
+              "fills: field/error-text",
+              "color: field/error-text",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "height: space/128",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: field/bg",
+              "strokes: field/border",
+              "color: field/bg",
+              "color: field/border",
+              "fills: field/placeholder",
+              "fontSize: font/size/desktop/body-m",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-m",
+              "color: field/placeholder",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: field/error-text",
+              "fills: field/helper",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: field/helper"
+            ],
+            "textStyles": [
+              "Desktop/label",
+              "Desktop/body-m",
+              "Desktop/caption"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Checkbox",
+      "id": "46:81",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Checkbox",
+          "name": "Checkbox",
+          "type": "COMPONENT_SET",
+          "id": "47:302",
+          "key": "019d976f87c48e719a6babc92907a38292bd0706",
+          "description": "Casilla de verificación: consentimiento GDPR y aceptación de bases legales de concursos. Toda la fila (caja + etiqueta) es clicable; área táctil mínima 44 px en código. Marcada: tinta con check crema (el estado se ve por la forma, no solo por color). Error: borde rojo; el mensaje va en el formulario con aria-describedby. Nunca premarcada en consentimientos.",
+          "variantAxes": {
+            "Checked": [
+              "False",
+              "True"
+            ],
+            "State": [
+              "Default",
+              "Hover",
+              "Focus",
+              "Error",
+              "Disabled"
+            ]
+          },
+          "variantCount": 10,
+          "properties": [
+            {
+              "name": "Label#47:42",
+              "kind": "TEXT",
+              "default": "Acepto las bases legales"
+            },
+            {
+              "name": "Check icon#50:7",
+              "kind": "INSTANCE_SWAP",
+              "default": "21:56",
+              "defaultComponent": "Icon / check",
+              "preferredValues": []
+            },
+            {
+              "name": "Checked",
+              "kind": "VARIANT",
+              "default": "False",
+              "values": [
+                "False",
+                "True"
+              ]
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus",
+                "Error",
+                "Disabled"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "check",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Check icon#50:7",
+              "toggledBy": null,
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/16",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: checkbox/box-bg",
+              "strokes: checkbox/box-border",
+              "color: checkbox/box-bg",
+              "color: checkbox/box-border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: checkbox/check",
+              "color: checkbox/check",
+              "fills: checkbox/label",
+              "fontSize: font/size/desktop/body-m",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-m",
+              "color: checkbox/label"
+            ],
+            "textStyles": [
+              "Desktop/body-m"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Select",
+      "id": "46:82",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Select",
+          "name": "Select",
+          "type": "COMPONENT_SET",
+          "id": "48:141",
+          "key": "b9c1e64d9a63408cd0ff96e3898c30fd50f74f23",
+          "description": "Selector de una opción: país o idioma (Aiki NL/FR), filtros. Open muestra el menú (elevation/3) con la opción activa en amarillo de marca. En código se recomienda &lt;select&gt; nativo o un listbox accesible (teclado: flechas, Enter, Esc). Error con borde, icono y mensaje. Valor y opciones se editan en la instancia.",
+          "variantAxes": {
+            "State": [
+              "Default",
+              "Hover",
+              "Focus",
+              "Open",
+              "Error",
+              "Disabled"
+            ]
+          },
+          "variantCount": 6,
+          "properties": [
+            {
+              "name": "Label#48:0",
+              "kind": "TEXT",
+              "default": "País"
+            },
+            {
+              "name": "Required#48:7",
+              "kind": "BOOLEAN",
+              "default": false
+            },
+            {
+              "name": "Icon#50:18",
+              "kind": "INSTANCE_SWAP",
+              "default": "21:59",
+              "defaultComponent": "Icon / chevron-down",
+              "preferredValues": []
+            },
+            {
+              "name": "Error icon#50:25",
+              "kind": "INSTANCE_SWAP",
+              "default": "46:78",
+              "defaultComponent": "Icon / circle-alert",
+              "preferredValues": []
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus",
+                "Open",
+                "Error",
+                "Disabled"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon-chevron",
+              "component": "Icon / chevron-down",
+              "componentSet": null,
+              "exposedAs": "Icon#50:18",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-error",
+              "component": "Icon / circle-alert",
+              "componentSet": null,
+              "exposedAs": "Error icon#50:25",
+              "toggledBy": null,
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/8",
+              "itemSpacing: space/4",
+              "fills: field/label",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "color: field/label",
+              "fills: field/error-text",
+              "color: field/error-text",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: field/bg",
+              "strokes: field/border",
+              "color: field/bg",
+              "color: field/border",
+              "fills: field/placeholder",
+              "fontSize: font/size/desktop/body-m",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-m",
+              "color: field/placeholder",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: field/icon",
+              "color: field/icon",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: field/error-text",
+              "fills: field/helper",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: field/helper"
+            ],
+            "textStyles": [
+              "Desktop/label",
+              "Desktop/body-m",
+              "Desktop/caption"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Search field",
+      "id": "46:83",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Search field",
+          "name": "Search field",
+          "type": "COMPONENT_SET",
+          "id": "48:177",
+          "key": "c01b161ae311de0b659632a1ab7ea759d3218267",
+          "description": "Campo de búsqueda (resultados en modal). Sin etiqueta visible: requiere aria-label («Buscar») y role=&quot;search&quot; en el formulario. Lupa delante; con texto aparece el botón borrar (aria-label «Borrar búsqueda»). Forma pill para distinguirlo de los campos de formulario. El valor se edita en la instancia.",
+          "variantAxes": {
+            "State": [
+              "Default",
+              "Hover",
+              "Focus",
+              "Filled"
+            ]
+          },
+          "variantCount": 4,
+          "properties": [
+            {
+              "name": "Icon leading#51:0",
+              "kind": "INSTANCE_SWAP",
+              "default": "30:76",
+              "defaultComponent": "Icon / search",
+              "preferredValues": []
+            },
+            {
+              "name": "Clear icon#51:5",
+              "kind": "INSTANCE_SWAP",
+              "default": "30:60",
+              "defaultComponent": "Icon / close",
+              "preferredValues": []
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus",
+                "Filled"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon-search",
+              "component": "Icon / search",
+              "componentSet": null,
+              "exposedAs": "Icon leading#51:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-clear",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": "Clear icon#51:5",
+              "toggledBy": null,
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/8",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: field/bg",
+              "strokes: field/border",
+              "color: field/bg",
+              "color: field/border",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: field/icon",
+              "color: field/icon",
+              "fills: field/placeholder",
+              "fontSize: font/size/desktop/body-m",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-m",
+              "color: field/placeholder"
+            ],
+            "textStyles": [
+              "Desktop/body-m"
             ]
           },
           "autoLayout": true

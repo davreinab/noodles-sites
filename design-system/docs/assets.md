@@ -2,7 +2,7 @@
 
 # GB Noodles · Microsites · Assets  ·  _(iconos y fuentes exportados de Figma)_
 
-> Última sync: 2026-10-07T13:07:30Z. Los archivos viven en `../assets/icons/` y `../assets/fonts/`; las pantallas los referencian desde ahí. No existe ningún otro `img/` ni `fonts/` en el proyecto.
+> Última sync: 2026-10-07T13:31:29Z. Los archivos viven en `../assets/icons/` y `../assets/fonts/`; las pantallas los referencian desde ahí. No existe ningún otro `img/` ni `fonts/` en el proyecto.
 
 ## Iconos (`../assets/icons/`)
 | Archivo | Componente Figma | Node ID | Tamaños (tokens `--icon-size-*`) | Uso |
@@ -11,6 +11,7 @@
 | `arrow-right.svg` | Icon / arrow-right | `30:52` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI · Lucide (ISC) |
 | `check.svg` | Icon / check | `21:56` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI |
 | `chevron-down.svg` | Icon / chevron-down | `21:59` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI |
+| `circle-alert.svg` | Icon / circle-alert | `46:78` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI · Lucide (ISC) |
 | `close.svg` | Icon / close | `30:60` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI · Lucide (ISC) |
 | `external-link.svg` | Icon / external-link | `30:89` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI · Lucide (ISC) |
 | `instagram.svg` | Icon / instagram | `21:65` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI (red social) |

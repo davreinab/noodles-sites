@@ -6,7 +6,7 @@
     "slug": "chip",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T12:44:49Z",
+    "lastSync": "2026-10-07T13:07:30Z",
     "description": "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP).",
     "figmaPage": "Chip",
     "figmaType": "COMPONENT_SET",
@@ -160,7 +160,28 @@
     ],
     "textStyles": [
       "Desktop/body-s"
-    ]
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "chip/bg",
+        "chip/border",
+        "chip/text",
+        "font/family/body",
+        "font/line-height/desktop/body-s",
+        "font/size/desktop/body-s",
+        "font/style/body"
+      ]
+    }
   },
   "behavior": {
     "responsive": [],

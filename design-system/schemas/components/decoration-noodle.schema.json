@@ -6,7 +6,7 @@
     "slug": "decoration-noodle",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T12:44:49Z",
+    "lastSync": "2026-10-07T13:07:30Z",
     "description": "Fideo decorativo de marca (5 trazos). Tone=Brand usa decoration/noodle/brand y Tone=Accent decoration/noodle/accent; ambos cambian con el modo de marca. Escalable; solo decorativo (aria-hidden).",
     "figmaPage": "Decoration",
     "figmaType": "COMPONENT_SET",
@@ -91,7 +91,22 @@
       "fills: decoration/noodle/brand",
       "color: decoration/noodle/brand"
     ],
-    "textStyles": []
+    "textStyles": [],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "decoration/noodle/brand"
+      ]
+    }
   },
   "behavior": {
     "responsive": [],

@@ -2,21 +2,34 @@
 
 # GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
 
-> Última sync: **2026-10-07T12:44:49Z** · modo de adopción: `new` · 189 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-07T13:07:30Z** · modo de adopción: `new` · 189 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice
 
 - [Primitive](#primitive) · 21 tokens · modos: Value
-- [Semantic](#semantic) · 37 tokens · modos: Yatekomo, Saikebon, Aïki, Daisuki, DE
+- [Semantic](#semantic) · 37 tokens · modos: Yatekomo, Saikebon, Aiki, Daisuki, DE
 - [Components](#components) · 52 tokens · modos: Value
 - [Layer](#layer) · 7 tokens · modos: Value
 - [Spacing](#spacing) · 20 tokens · modos: Value
 - [Layout](#layout) · 6 tokens · modos: Desktop, Tablet, Mobile
-- [Typography](#typography) · 41 tokens · modos: Yatekomo, Saikebon, Aïki, Daisuki, DE
+- [Typography](#typography) · 41 tokens · modos: Yatekomo, Saikebon, Aiki, Daisuki, DE
 - [Motion](#motion) · 5 tokens · modos: Value
+- [Marcas](#marcas)
 - [Foundations](#foundations)
 - [Text styles](#text-styles)
+
+## Marcas
+
+Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto vive en `:root`; cada otra marca se activa con `[data-brand="<slug>"]` **en `<html>`** y solo redefine lo que cambia. Tiene que ir en `<html>`: las variables de componente se declaran en `:root` apuntando a las semánticas, y una variable CSS resuelve su `var()` donde se declara; en un contenedor interior los componentes no heredarían la marca.
+
+| Marca | Slug | Selector CSS | Por defecto |
+|---|---|---|---|
+| Yatekomo | `yatekomo` | `[data-brand="yatekomo"]` | sí |
+| Saikebon | `saikebon` | `[data-brand="saikebon"]` | — |
+| Aiki | `aiki` | `[data-brand="aiki"]` | — |
+| Daisuki | `daisuki` | `[data-brand="daisuki"]` | — |
+| DE | `de` | `[data-brand="de"]` | — |
 
 ## Primitive
 
@@ -46,7 +59,7 @@
 
 ## Semantic
 
-| Token | CSS | Tipo | Yatekomo | Saikebon | Aïki | Daisuki | DE | Scopes | Descripción |
+| Token | CSS | Tipo | Yatekomo | Saikebon | Aiki | Daisuki | DE | Scopes | Descripción |
 |---|---|---|---|---|---|---|---|---|---|
 | `color/surface/page` | `--color-surface-page` | COLOR | → `--color-yatekomo-yellow-soft` | → `--color-yatekomo-yellow-soft` | → `--color-yatekomo-yellow-soft` | → `--color-yatekomo-yellow-soft` | → `--color-yatekomo-yellow-soft` | FRAME_FILL, SHAPE_FILL | Fondo base de página |
 | `color/surface/brand` | `--color-surface-brand` | COLOR | → `--color-yatekomo-yellow` | → `--color-yatekomo-yellow` | → `--color-yatekomo-yellow` | → `--color-yatekomo-yellow` | → `--color-yatekomo-yellow` | FRAME_FILL, SHAPE_FILL | Fondo de marca (amarillo común a todas las marcas) |
@@ -193,7 +206,7 @@
 
 ## Typography
 
-| Token | CSS | Tipo | Yatekomo | Saikebon | Aïki | Daisuki | DE | Scopes | Descripción |
+| Token | CSS | Tipo | Yatekomo | Saikebon | Aiki | Daisuki | DE | Scopes | Descripción |
 |---|---|---|---|---|---|---|---|---|---|
 | `font/family/display` | `--font-family-display` | STRING | `Anton` | `Anton` | `Anton` | `Anton` | `Anton` | FONT_FAMILY | Display: titulares, labels de botón. Siempre mayúsculas. Provisional hasta resolver licencia/fuente con acentos |
 | `font/family/body` | `--font-family-body` | STRING | `Archivo` | `Archivo` | `Archivo` | `Archivo` | `Archivo` | FONT_FAMILY | Texto corrido, formularios, navegación |

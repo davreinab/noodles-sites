@@ -1,12 +1,13 @@
-### Icon / timer   ⚙️ synced: 2026-10-07T12:44:49Z
+### Icon / timer   ⚙️ synced: 2026-10-07T13:07:30Z
 
 <!-- ⚙️ GENERATED:start:icon-timer -->
-- **Figma:** `30:84` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T12:44:49Z
+- **Figma:** `30:84` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T13:07:30Z
 - **Descripción (Figma):** Temporizador de preparación (3 minutos). Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna
 - **Iconos / instancias anidadas:** ninguno
 - **Tokens que consume:** `icon/color/default`, `icon/size/md`
+- **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `icon/color/default`
 <!-- ⚙️ GENERATED:end:icon-timer -->
 
 - **Propósito:** ⬜ TODO

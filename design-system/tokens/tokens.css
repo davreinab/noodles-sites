@@ -1,6 +1,6 @@
 /* ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO.
    Design system: GB Noodles · Microsites · fileKey: v4mnn154qUmiB35CCnRfgh
-   Última sync: 2026-10-07T12:44:49Z · modo de adopción: new
+   Última sync: 2026-10-07T13:07:30Z · modo de adopción: new
    Se regenera con el protocolo de sync de design.md. */
 
 :root {
@@ -338,4 +338,20 @@
     --layout-frame: 375px;
     --layout-section-y: 64px;
   }
+}
+
+[data-brand="saikebon"] { /* marca Saikebon · solo lo que difiere de Yatekomo · el atributo va en <html> */
+  /* sin diferencias con Yatekomo en Figma todavía */
+}
+
+[data-brand="aiki"] { /* marca Aiki · solo lo que difiere de Yatekomo · el atributo va en <html> */
+  /* sin diferencias con Yatekomo en Figma todavía */
+}
+
+[data-brand="daisuki"] { /* marca Daisuki · solo lo que difiere de Yatekomo · el atributo va en <html> */
+  /* sin diferencias con Yatekomo en Figma todavía */
+}
+
+[data-brand="de"] { /* marca DE · solo lo que difiere de Yatekomo · el atributo va en <html> */
+  /* sin diferencias con Yatekomo en Figma todavía */
 }

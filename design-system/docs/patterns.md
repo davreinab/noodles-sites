@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un patrón que no esté aquí; los patrones se componen de átomos y consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 0 patrones sincronizados el 2026-10-07T12:44:49Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 0 patrones sincronizados el 2026-10-07T13:07:30Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -99,3 +99,4 @@ lleva su **Ejemplo de código** con el markup de la página, igual que los compo
 | Fecha | Regla (una frase, en imperativo) | Origen (dónde se corrigió, dos veces como mínimo) | Aplica a | Estado |
 |---|---|---|---|---|
 | _YYYY-MM-DD_ | _Ej.: «Las acciones primarias de un panel van siempre en el pie, alineadas a la derecha.»_ | _UI/<pantalla>.html (sesión 2026-…) · UI/<otra-pantalla>.html (revisión PR #12)_ | _paneles y drawers_ | _vigente · promovida a token `--…` · promovida al contrato «…»_ |
+| 2026-10-07 | Ningún nombre técnico lleva diéresis, tildes ni otros diacríticos: modos, variables, estilos, componentes, capas, slugs y selectores van en ASCII («Aiki», no «Aïki»). La grafía de marca se conserva solo en textos visibles y descripciones. | David Reina: slug `logo-aïki` → `logo-aiki` (sesión 2026-10-07) · modo de marca «Aïki» → «Aiki» y regla general (misma sesión) | Figma (variables, modos, estilos, componentes, capas) y repo (slugs, `[data-brand]`) | vigente · aplicada en Figma y en el sync |

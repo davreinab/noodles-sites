@@ -1,9 +1,33 @@
 {
-  "iconFamilyPrefix": ["Icon /", "Icon/", "icon/"],
-  "themeModes": { "dark": ["Dark", "dark", "Oscuro"] },
-  "mediaModes": { "Mobile": "(max-width: 768px)" },
-  "patternKeywords": ["pattern", "patron", "patrón", "compuesto"],
+  "iconFamilyPrefix": [
+    "Icon /",
+    "Icon/",
+    "icon/"
+  ],
+  "themeModes": {
+    "dark": [
+      "Dark",
+      "dark",
+      "Oscuro"
+    ]
+  },
+  "mediaModes": {
+    "Mobile": "(max-width: 768px)"
+  },
+  "patternKeywords": [
+    "pattern",
+    "patron",
+    "patrón",
+    "compuesto"
+  ],
   "cssPrefixByCollection": {},
   "primitiveCollections": [],
-  "fontFamilyMap": {}
+  "fontFamilyMap": {},
+  "brandModes": {
+    "collections": [
+      "Semantic",
+      "Typography"
+    ],
+    "attribute": "data-brand"
+  }
 }

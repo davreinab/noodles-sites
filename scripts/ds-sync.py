@@ -44,7 +44,10 @@ volcado, escribe "unknown"; nunca inventa.
 Config opcional en scripts/ds-sync.config.json (todo tiene valor por defecto):
     iconFamilyPrefix, themeModes, mediaModes, patternKeywords, unitlessScopes, cssPrefixByCollection,
     primitiveCollections (colecciones de primitivos: sus variables llevan scopes vacíos a propósito),
-    fontFamilyMap (nombre de familia de Figma → familia CSS, y peso si el estilo no lo dice)
+    fontFamilyMap (nombre de familia de Figma → familia CSS, y peso si el estilo no lo dice),
+    brandModes ({"collections": [...], "attribute": "data-brand"}: colecciones cuyos modos son marcas;
+    cada modo que no es el por defecto sale en tokens.css como [data-brand="<slug>"] y los contratos
+    declaran en api.theming si el componente cambia con la marca)
 """
 import argparse
 import glob
@@ -67,6 +70,7 @@ DEFAULT_CFG = {
     "cssPrefixByCollection": {},
     "primitiveCollections": [],
     "fontFamilyMap": {},
+    "brandModes": {"collections": [], "attribute": "data-brand"},
     "foundations": {
         "icon-size": ["icon/size", "icon-size"],
         "layer": ["layer/", "z/", "z-index"],
@@ -312,6 +316,39 @@ class Tokens:
                                       f"colisión de nombre CSS {t['cssVar']}: {seen[t['cssVar']]} y {t['collection']}/{t['path']}"))
             seen[t["cssVar"]] = f"{t['collection']}/{t['path']}"
 
+    # ── marcas (modos de marca) ──
+    def brand_collections(self):
+        names = set((self.cfg.get("brandModes") or {}).get("collections") or [])
+        return [c for c in self.collections if c["name"] in names]
+
+    def brand_info(self):
+        """Marcas declaradas en Figma: los modos de las colecciones de marca (el primero es el por defecto)."""
+        attr = (self.cfg.get("brandModes") or {}).get("attribute") or "data-brand"
+        cols = self.brand_collections()
+        brands, seen = [], set()
+        for col in cols:
+            for i, m in enumerate(col["modes"]):
+                s = slug(m["name"])
+                if s not in seen:
+                    seen.add(s)
+                    brands.append({"name": m["name"], "slug": s, "default": i == 0})
+        return {"attribute": attr, "collections": [c["name"] for c in cols], "brands": brands}
+
+    def brand_dependent(self, path, depth=0):
+        """True si el token (por path) es de una colección de marca o apunta, vía alias, a uno que lo es."""
+        names = {c["name"] for c in self.brand_collections()}
+        tok = next((t for t in self.tokens if t["path"] == path), None)
+        if tok is None or depth > 12:
+            return False
+        if tok["collection"] in names:
+            return True
+        for val in tok["valuesByMode"].values():
+            if isinstance(val, dict) and val.get("type") == "alias":
+                target = self.by_id.get(val.get("id"))
+                if target is not None and self.brand_dependent(target["path"], depth + 1):
+                    return True
+        return False
+
     def _es_primitivo(self, tok):
         """Un primitivo lleva `scopes: []` a propósito (design.md § Arquitectura de variables de
         color): no se usa directamente. Se reconoce por cualquiera de estas señales: está oculto
@@ -540,6 +577,25 @@ class Tokens:
         L += ["", ':root[data-theme="dark"] {'] + (dark_lines or ["  /* sin modo Dark en Figma */"]) + ["}"]
         for (mname, query), rows in media_blocks.items():
             L += ["", f"@media {query} {{ /* modo {mname} */", "  :root {"] + rows + ["  }", "}"]
+        info = self.brand_info()
+        for b in info["brands"]:
+            if b["default"]:
+                continue
+            rows = []
+            for col in self.brand_collections():
+                mode = next((m for m in col["modes"] if slug(m["name"]) == b["slug"]), None)
+                if mode is None:
+                    continue
+                dm = self.default_mode(col)
+                for tk in col["tokens"]:
+                    base, _, _ = self.mode_value(tk, dm)
+                    val, _, _ = self.mode_value(tk, mode["modeId"])
+                    if val != base:
+                        rows.append(f"  {tk['cssVar']}: {val};")
+            default_name = next((x["name"] for x in info["brands"] if x["default"]), "por defecto")
+            L += ["", f'[{info["attribute"]}="{b["slug"]}"] {{ /* marca {b["name"]} · solo lo que difiere de {default_name} · el atributo va en <html> */']
+            L += rows or [f"  /* sin diferencias con {default_name} en Figma todavía */"]
+            L += ["}"]
         return "\n".join(L) + "\n"
 
     def tokens_md(self, meta):
@@ -551,7 +607,15 @@ class Tokens:
         for col in self.collections:
             L.append(f"- [{col['name']}](#{slug(col['name'])}) · {len(col['tokens'])} tokens · modos: {', '.join(m['name'] for m in col['modes'])}")
         fs = self.foundations_status()
-        L += ["- [Foundations](#foundations)", "- [Text styles](#text-styles)", ""]
+        info = self.brand_info()
+        L += (["- [Marcas](#marcas)"] if info["brands"] else []) + ["- [Foundations](#foundations)", "- [Text styles](#text-styles)", ""]
+        if info["brands"]:
+            L += ["## Marcas", "",
+                  f"Modos de marca de las colecciones {', '.join(f'`{c}`' for c in info['collections'])}. La marca por defecto vive en `:root`; "
+                  f"cada otra marca se activa con `[{info['attribute']}=\"<slug>\"]` **en `<html>`** y solo redefine lo que cambia. "
+                  f"Tiene que ir en `<html>`: las variables de componente se declaran en `:root` apuntando a las semánticas, y una variable CSS resuelve su `var()` donde se declara; en un contenedor interior los componentes no heredarían la marca.", "",
+                  md_table(["Marca", "Slug", "Selector CSS", "Por defecto"],
+                           [[b["name"], f"`{b['slug']}`", f"`[{info['attribute']}=\"{b['slug']}\"]`", "sí" if b["default"] else "—"] for b in info["brands"]]), ""]
         for col in self.collections:
             L += [f"## {col['name']}", ""]
             headers = ["Token", "CSS", "Tipo"] + [m["name"] for m in col["modes"]] + ["Scopes", "Descripción"]
@@ -598,6 +662,7 @@ class Components:
             self.slug_count[slug(c["name"])] = self.slug_count.get(slug(c["name"]), 0) + 1
         self.md_examples = {}
         self.keep_existing = set()
+        self.tokens_ref = None  # Tokens, para saber qué tokens cambian con la marca
         for fname in ("components.md", "patterns.md"):
             # antes de la migración las fichas aún viven aquí; después el archivo ya no tiene secciones de ficha
             self.md_examples.update(code_examples_from_md(read(os.path.join(ds_root, "docs", fname), "")))
@@ -693,6 +758,7 @@ class Components:
                 "slots": (existing.get("api") or {}).get("slots", []),
                 "tokensUsed": tokens_used, "variablesUsed": bindings.get("variables", []) or [],
                 "textStyles": bindings.get("textStyles", []) or [],
+                "theming": self.theming(tokens_used),
             },
             "behavior": existing.get("behavior") or {"responsive": [], "content": [], "interactions": []},
             "compatibility": existing.get("compatibility") or {},
@@ -737,6 +803,19 @@ class Components:
             self.findings.append(("warning", "code-example-missing-or-stale", f"{c['name']}: sin «Ejemplo de código» (source.code.example)"))
         return sch
 
+    def theming(self, tokens_used):
+        tk = self.tokens_ref
+        if tk is None:
+            return {"brandAware": "unknown"}
+        info = tk.brand_info()
+        if not info["brands"]:
+            return {"brandAware": False, "brands": []}
+        dep = sorted(t for t in tokens_used if tk.brand_dependent(t))
+        return {"brandAware": bool(dep), "attribute": info["attribute"],
+                "brands": [b["slug"] for b in info["brands"]],
+                "defaultBrand": next((b["slug"] for b in info["brands"] if b["default"]), None),
+                "brandTokens": dep}
+
     def live_block(self, sch):
         a = sch["api"]
         L = [f"- **Figma:** `{sch['source']['figma']['nodeId'] or 'unknown'}` · página «{sch['meta'].get('figmaPage')}» · {sch['meta'].get('figmaType')} · {sch['meta'].get('variantCount')} variantes · última sync {sch['meta']['lastSync']}",
@@ -757,6 +836,12 @@ class Components:
         L.append("- **Tokens que consume:** " + (", ".join(f"`{t}`" for t in a["tokensUsed"]) or "unknown"))
         if a["textStyles"]:
             L.append("- **Text styles:** " + ", ".join(f"`{t}`" for t in a["textStyles"]))
+        th = a.get("theming") or {}
+        if th.get("brandAware") is True:
+            L.append(f"- **Marcas:** cambia con la marca ({', '.join(th['brands'])}; por defecto `{th['defaultBrand']}`) vía `[{th['attribute']}]` · tokens de marca: "
+                     + ", ".join(f"`{t}`" for t in th["brandTokens"]))
+        elif th.get("brandAware") is False and th.get("brands"):
+            L.append("- **Marcas:** igual en todas las marcas (no consume tokens de marca)")
         return "\n".join(L)
 
 
@@ -1173,6 +1258,7 @@ def main():
     # ── componentes ──
     schemas = []
     comps = Components(raw_comps, cfg, synced_at, ds)
+    comps.tokens_ref = tokens
     if raw_comps is not None:
         comp_dir = os.path.join(ds, "schemas", "components")
         existing_files = {os.path.basename(p): p for p in glob.glob(os.path.join(comp_dir, "*.schema.json"))}

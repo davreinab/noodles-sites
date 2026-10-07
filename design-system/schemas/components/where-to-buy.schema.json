@@ -6,7 +6,7 @@
     "slug": "where-to-buy",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:44:44Z",
+    "lastSync": "2026-10-07T18:49:29Z",
     "description": "Dónde comprar (Home, página de producto; destino del CTA «Dónde comprar» de la Navbar): título (h2) · texto · rejilla de distribuidores del país. Cada distribuidor es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; tarjeta color/surface/card con borde de tinta sobre color/surface/brand. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: 5 por fila; Mobile: 2 por fila. Sin variables propias.",
     "figmaPage": "Pattern / Where to buy",
     "figmaType": "COMPONENT_SET",

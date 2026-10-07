@@ -6,13 +6,13 @@
     "slug": "hero",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:44:44Z",
+    "lastSync": "2026-10-07T18:49:29Z",
     "description": "Patrón hero de la Home. Slider de máximo 3 slides (regla de negocio): cada slide = imagen de producto o campaña (de marca, sin IA) · sello Badge Natural «The only 100% natural» · claim «Welcome to the new noodles era» (display) · texto · CTA a la acción principal (campaña activa o, sin campaña, producto). Controles: puntos (el activo relleno; el estado no depende solo del color: forma rellena vs contorno) y flechas Icon button. Accesibilidad: carrusel con aria-roledescription=&quot;carrusel&quot;, cada slide «1 de 3», sin autoplay (o con pausa visible y parado con prefers-reduced-motion); flechas con nombre «Slide anterior/siguiente». Fondo color/surface/brand. Desktop: texto a la izquierda e imagen a la derecha; Mobile: imagen arriba. Sin variables propias.",
     "figmaPage": "Pattern / Hero",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "172cbf44b957"
+    "anatomyHash": "e9c489dce664"
   },
   "source": {
     "docs": {
@@ -181,6 +181,7 @@
       "font/size/mobile/label",
       "font/style/body",
       "font/style/display",
+      "icon-button/size/m",
       "icon/size/md",
       "icon/size/sm",
       "layout/frame",
@@ -271,6 +272,8 @@
       "strokes: color/border/default",
       "color: color/border/default",
       "itemSpacing: space/16",
+      "width: icon-button/size/m",
+      "height: icon-button/size/m",
       "strokes: button/secondary/border",
       "color: button/secondary/border",
       "width: icon/size/md",

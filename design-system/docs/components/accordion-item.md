@@ -1,8 +1,8 @@
-### Accordion item   ⚙️ synced: 2026-10-07T18:44:44Z
+### Accordion item   ⚙️ synced: 2026-10-07T18:49:29Z
 
 <!-- ⚙️ GENERATED:start:accordion-item -->
-- **Figma:** `69:93` · página «Accordion item» · COMPONENT_SET · 6 variantes · última sync 2026-10-07T18:44:44Z
-- **Descripción (Figma):** Ítem de acordeón para FAQ (página FAQS indexada, Natural formula, Home). Cabecera = &lt;button aria-expanded aria-controls&gt; dentro de un encabezado (h3); la respuesta es una región ligada a la cabecera. Enter/Espacio abren y cierran; cada ítem es independiente (varios abiertos a la vez). Icono plus (cerrado) / minus (abierto), swaps Icon collapsed / Icon expanded. Para SEO/AEO la respuesta está en el HTML aunque esté cerrada (FAQPage schema). Hover: accordion/bg-hover; Focus: anillo accordion/focus-ring. Ancho FILL de la columna de lectura.
+- **Figma:** `69:93` · página «Accordion item» · COMPONENT_SET · 6 variantes · última sync 2026-10-07T18:49:29Z
+- **Descripción (Figma):** Ítem de acordeón para FAQ (página FAQS indexada, Natural formula, Home). Cabecera = &lt;button aria-expanded aria-controls&gt; dentro de un encabezado (h3); la respuesta es una región ligada a la cabecera. Enter/Espacio abren y cierran; los items no son independientes (solo uno abierto a la vez). Icono plus (cerrado) / minus (abierto), swaps Icon collapsed / Icon expanded. Para SEO/AEO la respuesta está en el HTML aunque esté cerrada (FAQPage schema). Hover: accordion/bg-hover; Focus: anillo accordion/focus-ring. Ancho FILL de la columna de lectura.
 - **Anatomía:** `icon-collapsed` → Icon / plus
 - **Expanded:** False, True
 - **State:** Default, Hover, Focus
@@ -13,7 +13,7 @@
 - **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `accordion/bg`, `accordion/border`, `accordion/icon`, `accordion/question`, `font/family/body`, `font/line-height/desktop/body-l`, `font/size/desktop/body-l`, `font/style/body`
 <!-- ⚙️ GENERATED:end:accordion-item -->
 
-- **Propósito:** Pregunta y respuesta del FAQ. La pregunta es un botón que abre y cierra la respuesta; varios ítems pueden estar abiertos a la vez.
+- **Propósito:** Pregunta y respuesta del FAQ. La pregunta es un botón que abre y cierra la respuesta; los ítems de una lista no son independientes: solo uno abierto a la vez (al abrir uno se cierra el anterior).
 - **Ejemplo de código:**
   ```html
   <div class="accordion-item">
@@ -23,5 +23,5 @@
   <div class="accordion-item__panel" id="faq-1" role="region" aria-labelledby="faq-1-btn">Todos los ingredientes son de origen natural, sin aditivos ni conservantes.</div>
   </div>
   ```
-- **Accesibilidad (pares AA verificados):** Pregunta y respuesta en tinta sobre blanco 18,7:1; hover tinta sobre amarillo 12,3:1; icono más/menos en tinta (≥ 3:1). Rol: patrón accordion de WAI-ARIA: `<button aria-expanded aria-controls>` dentro de un encabezado y panel `role="region"`. El icono cambia de más a menos con `aria-expanded`, que es lo que se anuncia. Teclado: Tab entre preguntas, Enter o Espacio para abrir. Foco: el contorno de 2 px rodea el ítem entero. Para SEO/AEO la respuesta está en el HTML aunque esté cerrada (con `hidden` cuando se cierra) y la página lleva FAQPage.
+- **Accesibilidad (pares AA verificados):** Pregunta y respuesta en tinta sobre blanco 18,7:1; hover tinta sobre amarillo 12,3:1; icono más/menos en tinta (≥ 3:1). Rol: patrón accordion de WAI-ARIA: `<button aria-expanded aria-controls>` dentro de un encabezado y panel `role="region"`. El icono cambia de más a menos con `aria-expanded`, que es lo que se anuncia. Teclado: Tab entre preguntas, Enter o Espacio para abrir; abrir una pregunta cierra la que estuviera abierta y actualiza su `aria-expanded`. Foco: el contorno de 2 px rodea el ítem entero. Para SEO/AEO la respuesta está en el HTML aunque esté cerrada (con `hidden` cuando se cierra) y la página lleva FAQPage.
 - **Cuándo usar / qué NO hace:** Para preguntas frecuentes (FAQ de Home, Natural formula y página FAQS). No esconde contenido esencial de una página de producto ni sustituye a las pestañas.

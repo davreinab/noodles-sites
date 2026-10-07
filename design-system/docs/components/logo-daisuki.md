@@ -1,7 +1,7 @@
-### Logo / Daisuki   ⚙️ synced: 2026-10-07T18:44:44Z
+### Logo / Daisuki   ⚙️ synced: 2026-10-07T18:49:29Z
 
 <!-- ⚙️ GENERATED:start:logo-daisuki -->
-- **Figma:** `21:177` · página «Brand» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:44:44Z
+- **Figma:** `21:177` · página «Brand» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:49:29Z
 - **Descripción (Figma):** Logo Daisuki. Positivo vectorial; negativo en PNG. No se recolorea.
 - **Anatomía:** sin instancias anidadas
 - **Version:** Positive, Negative

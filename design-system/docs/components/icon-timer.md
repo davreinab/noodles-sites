@@ -1,7 +1,7 @@
-### Icon / timer   ⚙️ synced: 2026-10-07T18:44:44Z
+### Icon / timer   ⚙️ synced: 2026-10-07T18:49:29Z
 
 <!-- ⚙️ GENERATED:start:icon-timer -->
-- **Figma:** `30:84` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T18:44:44Z
+- **Figma:** `30:84` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T18:49:29Z
 - **Descripción (Figma):** Temporizador de preparación (3 minutos). Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

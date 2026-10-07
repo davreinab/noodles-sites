@@ -6,7 +6,7 @@
     "slug": "icon-button",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:44:44Z",
+    "lastSync": "2026-10-07T18:49:29Z",
     "description": "Botón solo con icono: cerrar, menú, flechas del slider, play. Mismas jerarquías y colores que Button. M 48 px (icono 24), L 64 px (icono 32). Accesibilidad: requiere nombre accesible (aria-label) porque no tiene texto visible. Tamaño fijo con icon-button/size/m (48) y /l (64), icono centrado. Norma de botones (2026-10-07): misma altura en la misma talla para Button e Icon button (M 48, L 64); en Button, el texto siempre en una sola línea.",
     "figmaPage": "Icon button",
     "figmaType": "COMPONENT_SET",

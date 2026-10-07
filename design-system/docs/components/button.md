@@ -1,7 +1,7 @@
-### Button   ⚙️ synced: 2026-10-07T18:44:44Z
+### Button   ⚙️ synced: 2026-10-07T18:49:29Z
 
 <!-- ⚙️ GENERATED:start:button -->
-- **Figma:** `33:295` · página «Button» · COMPONENT_SET · 24 variantes · última sync 2026-10-07T18:44:44Z
+- **Figma:** `33:295` · página «Button» · COMPONENT_SET · 24 variantes · última sync 2026-10-07T18:49:29Z
 - **Descripción (Figma):** Botón de acción. Hierarchy: Primary (acción principal, 1 por vista), Secondary (alternativa), Inverse (sobre fondos oscuros). Size M (48) por defecto; L (64) para hero y CTA destacados. Label en Anton mayúsculas. Iconos opcionales delante/detrás (INSTANCE_SWAP). Focus: anillo exterior visible. Disabled sin opacidad (colores propios). Norma de botones (2026-10-07): misma altura en la misma talla para Button e Icon button (M 48, L 64) y el texto siempre en una sola línea: no se parte; si no cabe, se acorta el texto, nunca se pasa a dos líneas.
 - **Anatomía:** `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right
 - **Hierarchy:** Primary, Secondary, Inverse

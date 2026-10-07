@@ -1,7 +1,7 @@
-### Promo   ⚙️ synced: 2026-10-07T18:44:44Z
+### Promo   ⚙️ synced: 2026-10-07T18:49:29Z
 
 <!-- ⚙️ GENERATED:start:promo -->
-- **Figma:** `91:113` · página «Pattern / Promo» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:44:44Z
+- **Figma:** `91:113` · página «Pattern / Promo» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:49:29Z
 - **Descripción (Figma):** Módulo de promoción o concurso de la Home: Video player 16:9 (fachada) · Badge «Concurso» · título (h2) · texto · Button Primary «Participar» · Link de bases legales (obligatorio). Fondo color/surface/page (crema) para que el póster oscuro del vídeo se distinga; texto color/text/default. Se oculta entero si no hay promoción activa (regla de negocio); si el concurso es iframe de agencia, el CTA lleva external-link y el iframe necesita revisión de protección de datos antes de publicarse. Desktop: vídeo a la izquierda; Mobile: vídeo arriba. Sin variables propias.
 - **Anatomía:** `video` → Ratio=16:9, State=Poster, `icon-play` → Icon / play, `badge` → Type=New, `cta` → Hierarchy=Primary, Size=L, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right, `rules-link` → Type=Inline, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right
 - **Breakpoint:** Desktop, Mobile

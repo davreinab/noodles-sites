@@ -6,13 +6,13 @@
     "slug": "library",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:44:44Z",
+    "lastSync": "2026-10-07T18:49:29Z",
     "description": "Librería (Product library; también Recipe y Contest library cambiando la card y el filtro): cabecera de página (h1 + entradilla) · Product filter a sangre (tipo → línea → sabor; sin filtros que den resultados vacíos) · rejilla de cards (Desktop 4 columnas de 310 px con gutter layout/gutter y space/48 entre filas; Mobile 1 columna) · Button Secondary «Ver más» (carga más, no pagina; el foco va a la primera card nueva y se anuncia el número cargado). Recipe library: Recipe card en 3 columnas sin buscador por ingredientes. Contest library: Contest card en 2-3 columnas; la página agregadora es opcional. Al filtrar se anuncia «N productos» (aria-live). Sin variables propias.",
     "figmaPage": "Pattern / Library",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "1ed7b387c97e"
+    "anatomyHash": "e641caa78440"
   },
   "source": {
     "docs": {
@@ -249,6 +249,7 @@
       "product-card/meta",
       "product-card/title",
       "radius/md",
+      "radius/none",
       "radius/pill",
       "space/16",
       "space/24",
@@ -376,7 +377,11 @@
       "color: button/secondary/border",
       "strokes: button/secondary/text",
       "color: button/secondary/text",
-      "fills: button/secondary/text"
+      "fills: button/secondary/text",
+      "topLeftRadius: radius/none",
+      "topRightRadius: radius/none",
+      "bottomLeftRadius: radius/none",
+      "bottomRightRadius: radius/none"
     ],
     "textStyles": [
       "Desktop/h1",

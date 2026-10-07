@@ -6,13 +6,13 @@
     "slug": "modal",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:44:44Z",
+    "lastSync": "2026-10-07T18:49:29Z",
     "description": "Diálogo modal. Size=M (560): alérgenos, resultado de concurso. Size=L (880): etiqueta del envase (imagen ampliable), resultados de búsqueda. Size=Full (móvil, pantalla completa). Anatomía: cabecera (título h3 + Icon button cerrar) · contenido (swap «Content», por defecto Modal / Slot) · pie opcional con acción. Se muestra sobre el velo modal/overlay (layer/overlay) y el diálogo en layer/modal. Accesibilidad: &lt;dialog&gt; o role=&quot;dialog&quot; + aria-modal=&quot;true&quot; + aria-labelledby al título; el foco entra en el primer elemento (o el título), queda atrapado dentro, Esc y el botón cerrar lo cierran y el foco vuelve al disparador; el fondo queda inerte (inert) y sin scroll.",
     "figmaPage": "Modal",
     "figmaType": "COMPONENT_SET",
     "variantCount": 3,
     "autoLayout": true,
-    "anatomyHash": "f28340dccecd"
+    "anatomyHash": "16777e536514"
   },
   "source": {
     "docs": {
@@ -166,6 +166,7 @@
       "font/size/desktop/label",
       "font/style/body",
       "font/style/display",
+      "icon-button/size/m",
       "icon/color/default",
       "icon/size/md",
       "icon/size/sm",
@@ -184,6 +185,7 @@
       "space/8"
     ],
     "variablesUsed": [
+      "width: modal/width/m",
       "topLeftRadius: radius/md",
       "topRightRadius: radius/md",
       "bottomLeftRadius: radius/md",
@@ -208,10 +210,8 @@
       "fontFamily: font/family/display",
       "lineHeight: font/line-height/desktop/h3",
       "color: modal/title",
-      "paddingLeft: space/16",
-      "paddingTop: space/16",
-      "paddingRight: space/16",
-      "paddingBottom: space/16",
+      "width: icon-button/size/m",
+      "height: icon-button/size/m",
       "topLeftRadius: radius/pill",
       "topRightRadius: radius/pill",
       "bottomLeftRadius: radius/pill",
@@ -239,6 +239,8 @@
       "lineHeight: font/line-height/desktop/caption",
       "color: modal/text",
       "itemSpacing: space/8",
+      "paddingTop: space/16",
+      "paddingBottom: space/16",
       "fills: button/primary/bg",
       "strokes: button/primary/border",
       "color: button/primary/bg",
@@ -249,8 +251,7 @@
       "color: button/primary/text",
       "fills: button/primary/text",
       "fontSize: font/size/desktop/label",
-      "lineHeight: font/line-height/desktop/label",
-      "width: modal/width/m"
+      "lineHeight: font/line-height/desktop/label"
     ],
     "textStyles": [
       "Desktop/h3",

@@ -1,7 +1,7 @@
-### Preparation   ⚙️ synced: 2026-10-07T18:17:24Z
+### Preparation   ⚙️ synced: 2026-10-07T18:19:35Z
 
 <!-- ⚙️ GENERATED:start:preparation -->
-- **Figma:** `95:1158` · página «Pattern / Preparation» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:17:24Z
+- **Figma:** `95:1158` · página «Pattern / Preparation» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:19:35Z
 - **Descripción (Figma):** Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en &lt;ol&gt; · Timer de 3 minutos. El texto de los pasos sale del envase. Desktop: pasos a la izquierda; vídeo y temporizador a la derecha (560 px). Mobile: vídeo arriba, pasos y temporizador al final (al alcance mientras se cocina). En la Recipe page se reutiliza sin el Timer y con Step Media=True. Sin variables propias.
 - **Anatomía:** `step` → Media=False, `video` → Ratio=16:9, State=Poster, `icon-play` → Icon / play, `timer` → State=Idle, `action` → Hierarchy=Primary, Size=M, State=Default, `icon-leading` → Icon / play, `icon-trailing` → Icon / arrow-right
 - **Breakpoint:** Desktop, Mobile

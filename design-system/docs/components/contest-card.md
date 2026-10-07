@@ -1,7 +1,7 @@
-### Contest card   ⚙️ synced: 2026-10-07T18:17:24Z
+### Contest card   ⚙️ synced: 2026-10-07T18:19:35Z
 
 <!-- ⚙️ GENERATED:start:contest-card -->
-- **Figma:** `68:95` · página «Contest card» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:17:24Z
+- **Figma:** `68:95` · página «Contest card» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:19:35Z
 - **Descripción (Figma):** Card de concurso (Contest library, módulo de Home). Status=Active: Badge Natural «En curso» y Button Primary «Participar» (si el concurso es externo o iframe de agencia, activar Icon trailing con external-link y abrir en pestaña nueva avisándolo). Status=Closed: Badge Neutral «Finalizado» y Link «Ver ganadores». Las bases legales (Link inline) aparecen siempre: es obligatorio publicarlas. La card no es enlace en bloque: tiene dos acciones. Desktop 448 px; en móvil FILL.
 - **Anatomía:** `status` → Type=Natural, `cta` → Hierarchy=Primary, Size=M, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right, `rules-link` → Type=Inline, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right
 - **Status:** Active, Closed

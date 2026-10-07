@@ -1,7 +1,7 @@
-### Product card   ⚙️ synced: 2026-10-07T18:17:24Z
+### Product card   ⚙️ synced: 2026-10-07T18:19:35Z
 
 <!-- ⚙️ GENERATED:start:product-card -->
-- **Figma:** `66:99` · página «Product card» · COMPONENT_SET · 3 variantes · última sync 2026-10-07T18:17:24Z
+- **Figma:** `66:99` · página «Product card» · COMPONENT_SET · 3 variantes · última sync 2026-10-07T18:19:35Z
 - **Descripción (Figma):** Card de producto (Product library, carruseles, productos relacionados). Anatomía: media (hueco de imagen 3D sobre product-card/media-bg; no se inventa fotografía) con Badge opcional (New/Natural) · línea (Original/Yakisoba/Rice) · nombre (h3) · Link «Ver producto». Toda la card es un único enlace al producto (el Link es la pista visual, no un segundo destino). Hover: elevation/2; Focus: anillo product-card/focus-ring. Desktop 320 px; en móvil ocupa la columna (FILL).
 - **Anatomía:** `badge` → Type=New, `link` → Type=Standalone, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right
 - **State:** Default, Hover, Focus

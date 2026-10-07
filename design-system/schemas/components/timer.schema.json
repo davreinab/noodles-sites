@@ -6,7 +6,7 @@
     "slug": "timer",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:17:24Z",
+    "lastSync": "2026-10-07T18:19:35Z",
     "description": "Temporizador de preparación (3 minutos) junto a los Step de la página de producto. State=Idle (3:00, «Empezar») · Running (anillo vaciándose, «Pausar» + reiniciar) · Paused («Seguir» + reiniciar) · Done (anillo verde natural, circle-check, «¡Listo!», «Otra vez»). El anillo es decorativo (aria-hidden) y no comunica nada por sí solo: el tiempo está en texto. Accesibilidad: el tiempo se expone con role=&quot;timer&quot; sin anunciar cada segundo; una región aria-live=&quot;polite&quot; anuncia solo «Quedan 1 minuto» y «¡Listo! Ya puedes comer»; el botón principal cambia su nombre (Empezar/Pausar/Seguir). Puede sonar o vibrar al terminar solo si el usuario lo activa. Respeta prefers-reduced-motion (el anillo salta en vez de animarse).",
     "figmaPage": "Timer",
     "figmaType": "COMPONENT_SET",

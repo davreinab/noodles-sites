@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-07T18:17:24Z",
+  "lastSync": "2026-10-07T18:19:35Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -936,7 +936,16 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "field",
+          "field__control",
+          "field__error",
+          "field__helper",
+          "field__label",
+          "field__required",
+          "icon",
+          "icon-circle-alert"
+        ]
       }
     },
     {
@@ -960,7 +969,16 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "field",
+          "field__control",
+          "field__control--textarea",
+          "field__error",
+          "field__helper",
+          "field__label",
+          "icon",
+          "icon-circle-alert"
+        ]
       }
     },
     {
@@ -984,7 +1002,12 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "checkbox",
+          "checkbox__input",
+          "checkbox__label",
+          "link"
+        ]
       }
     },
     {
@@ -1009,7 +1032,15 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "field",
+          "field__control",
+          "field__error",
+          "field__label",
+          "field__select",
+          "icon",
+          "icon-circle-alert"
+        ]
       }
     },
     {
@@ -1035,7 +1066,15 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "icon",
+          "icon-close",
+          "icon-search",
+          "search-field",
+          "search-field__clear",
+          "search-field__input",
+          "visually-hidden"
+        ]
       }
     },
     {
@@ -1057,7 +1096,10 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "nav-item",
+          "nav-item--menu"
+        ]
       }
     },
     {
@@ -1078,7 +1120,9 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "tab"
+        ]
       }
     },
     {
@@ -1100,7 +1144,10 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "lang-switch",
+          "lang-switch__option"
+        ]
       }
     },
     {

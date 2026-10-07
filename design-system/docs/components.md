@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 57 componentes sincronizados el 2026-10-07T18:17:24Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 57 componentes sincronizados el 2026-10-07T18:19:35Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -49,14 +49,14 @@
 - [Link](components/link.md) · component · `link` · ✅ criterio completo
 - [Badge](components/badge.md) · component · `badge` · ✅ criterio completo
 - [Chip](components/chip.md) · component · `chip` · ✅ criterio completo
-- [Input](components/input.md) · component · `input` · ⬜ 5 pendientes
-- [Textarea](components/textarea.md) · component · `textarea` · ⬜ 5 pendientes
-- [Checkbox](components/checkbox.md) · component · `checkbox` · ⬜ 5 pendientes
-- [Select](components/select.md) · component · `select` · ⬜ 5 pendientes
-- [Search field](components/search-field.md) · component · `search-field` · ⬜ 5 pendientes
-- [Nav item](components/nav-item.md) · component · `nav-item` · ⬜ 5 pendientes
-- [Tab](components/tab.md) · component · `tab` · ⬜ 5 pendientes
-- [Lang switch](components/lang-switch.md) · component · `lang-switch` · ⬜ 5 pendientes
+- [Input](components/input.md) · component · `input` · ✅ criterio completo
+- [Textarea](components/textarea.md) · component · `textarea` · ✅ criterio completo
+- [Checkbox](components/checkbox.md) · component · `checkbox` · ✅ criterio completo
+- [Select](components/select.md) · component · `select` · ✅ criterio completo
+- [Search field](components/search-field.md) · component · `search-field` · ✅ criterio completo
+- [Nav item](components/nav-item.md) · component · `nav-item` · ✅ criterio completo
+- [Tab](components/tab.md) · component · `tab` · ✅ criterio completo
+- [Lang switch](components/lang-switch.md) · component · `lang-switch` · ✅ criterio completo
 - [Product card](components/product-card.md) · component · `product-card` · ⬜ 5 pendientes
 - [Recipe card](components/recipe-card.md) · component · `recipe-card` · ⬜ 5 pendientes
 - [Contest card](components/contest-card.md) · component · `contest-card` · ⬜ 5 pendientes

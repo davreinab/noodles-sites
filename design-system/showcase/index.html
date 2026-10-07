@@ -59,7 +59,7 @@
 <div class="sc-root">
   <header class="sc-header">
     <h1 class="sc-header__title">GB Noodles · Microsites · Design System</h1>
-    <span class="sc-header__meta" data-sc-last-sync>última sync 2026-10-07T18:17:24Z</span>
+    <span class="sc-header__meta" data-sc-last-sync>última sync 2026-10-07T18:19:35Z</span>
     <span class="sc-header__spacer"></span>
     <button class="sc-btn" type="button" data-sc-theme-toggle aria-pressed="false">Tema oscuro</button>
   </header>
@@ -155,14 +155,106 @@
 <a class="chip chip--m" href="/productos/yatekomo-original">Yatekomo Original</a></div><pre class="sc-code">&lt;button class=&quot;chip&quot; type=&quot;button&quot; aria-pressed=&quot;false&quot;&gt;Yakisoba&lt;/button&gt;
 &lt;button class=&quot;chip&quot; type=&quot;button&quot; aria-pressed=&quot;true&quot;&gt;&lt;span class=&quot;icon icon-check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Original&lt;/button&gt;
 &lt;a class=&quot;chip chip--m&quot; href=&quot;/productos/yatekomo-original&quot;&gt;Yatekomo Original&lt;/a&gt;</pre></div>
-<div class="sc-card" id="sc-input"><div class="sc-card__head"><h3>Input</h3><span class="sc-tag">6 variantes · 47:122 · icono</span></div><div class="sc-demo"><span class="sc-tag">sin «Ejemplo de código» en el contrato</span></div></div>
-<div class="sc-card" id="sc-textarea"><div class="sc-card__head"><h3>Textarea</h3><span class="sc-tag">6 variantes · 47:247 · icono</span></div><div class="sc-demo"><span class="sc-tag">sin «Ejemplo de código» en el contrato</span></div></div>
-<div class="sc-card" id="sc-checkbox"><div class="sc-card__head"><h3>Checkbox</h3><span class="sc-tag">10 variantes · 47:302 · icono</span></div><div class="sc-demo"><span class="sc-tag">sin «Ejemplo de código» en el contrato</span></div></div>
-<div class="sc-card" id="sc-select"><div class="sc-card__head"><h3>Select</h3><span class="sc-tag">6 variantes · 48:141 · icono</span></div><div class="sc-demo"><span class="sc-tag">sin «Ejemplo de código» en el contrato</span></div></div>
-<div class="sc-card" id="sc-search-field"><div class="sc-card__head"><h3>Search field</h3><span class="sc-tag">4 variantes · 48:177 · icono</span></div><div class="sc-demo"><span class="sc-tag">sin «Ejemplo de código» en el contrato</span></div></div>
-<div class="sc-card" id="sc-nav-item"><div class="sc-card__head"><h3>Nav item</h3><span class="sc-tag">8 variantes · 53:102</span></div><div class="sc-demo"><span class="sc-tag">sin «Ejemplo de código» en el contrato</span></div></div>
-<div class="sc-card" id="sc-tab"><div class="sc-card__head"><h3>Tab</h3><span class="sc-tag">4 variantes · 54:58</span></div><div class="sc-demo"><span class="sc-tag">sin «Ejemplo de código» en el contrato</span></div></div>
-<div class="sc-card" id="sc-lang-switch"><div class="sc-card__head"><h3>Lang switch</h3><span class="sc-tag">2 variantes · 54:71</span></div><div class="sc-demo"><span class="sc-tag">sin «Ejemplo de código» en el contrato</span></div></div>
+<div class="sc-card" id="sc-input"><div class="sc-card__head"><h3>Input</h3><span class="sc-tag">6 variantes · 47:122 · icono</span></div><div class="sc-demo"><div class="field">
+<label class="field__label" for="nombre">Nombre<span class="field__required" aria-hidden="true">*</span></label>
+<input class="field__control" id="nombre" name="nombre" type="text" placeholder="Escribe aquí" required aria-describedby="nombre-ayuda">
+<p class="field__helper" id="nombre-ayuda">Texto de ayuda</p>
+</div>
+<div class="field">
+<label class="field__label" for="email">Email</label>
+<input class="field__control" id="email" type="email" aria-invalid="true" aria-describedby="email-error">
+<p class="field__error" id="email-error"><span class="icon icon-circle-alert" aria-hidden="true"></span>Este campo es obligatorio</p>
+</div></div><pre class="sc-code">&lt;div class=&quot;field&quot;&gt;
+&lt;label class=&quot;field__label&quot; for=&quot;nombre&quot;&gt;Nombre&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+&lt;input class=&quot;field__control&quot; id=&quot;nombre&quot; name=&quot;nombre&quot; type=&quot;text&quot; placeholder=&quot;Escribe aquí&quot; required aria-describedby=&quot;nombre-ayuda&quot;&gt;
+&lt;p class=&quot;field__helper&quot; id=&quot;nombre-ayuda&quot;&gt;Texto de ayuda&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;
+&lt;label class=&quot;field__label&quot; for=&quot;email&quot;&gt;Email&lt;/label&gt;
+&lt;input class=&quot;field__control&quot; id=&quot;email&quot; type=&quot;email&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;email-error&quot;&gt;
+&lt;p class=&quot;field__error&quot; id=&quot;email-error&quot;&gt;&lt;span class=&quot;icon icon-circle-alert&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Este campo es obligatorio&lt;/p&gt;
+&lt;/div&gt;</pre></div>
+<div class="sc-card" id="sc-textarea"><div class="sc-card__head"><h3>Textarea</h3><span class="sc-tag">6 variantes · 47:247 · icono</span></div><div class="sc-demo"><div class="field">
+<label class="field__label" for="mensaje">Mensaje</label>
+<textarea class="field__control field__control--textarea" id="mensaje" name="mensaje" placeholder="Escribe aquí" aria-describedby="mensaje-ayuda"></textarea>
+<p class="field__helper" id="mensaje-ayuda">Máximo 500 caracteres</p>
+</div>
+<div class="field">
+<label class="field__label" for="respuesta">Respuesta</label>
+<textarea class="field__control field__control--textarea" id="respuesta" aria-invalid="true" aria-describedby="respuesta-error"></textarea>
+<p class="field__error" id="respuesta-error"><span class="icon icon-circle-alert" aria-hidden="true"></span>Este campo es obligatorio</p>
+</div></div><pre class="sc-code">&lt;div class=&quot;field&quot;&gt;
+&lt;label class=&quot;field__label&quot; for=&quot;mensaje&quot;&gt;Mensaje&lt;/label&gt;
+&lt;textarea class=&quot;field__control field__control--textarea&quot; id=&quot;mensaje&quot; name=&quot;mensaje&quot; placeholder=&quot;Escribe aquí&quot; aria-describedby=&quot;mensaje-ayuda&quot;&gt;&lt;/textarea&gt;
+&lt;p class=&quot;field__helper&quot; id=&quot;mensaje-ayuda&quot;&gt;Máximo 500 caracteres&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;
+&lt;label class=&quot;field__label&quot; for=&quot;respuesta&quot;&gt;Respuesta&lt;/label&gt;
+&lt;textarea class=&quot;field__control field__control--textarea&quot; id=&quot;respuesta&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;respuesta-error&quot;&gt;&lt;/textarea&gt;
+&lt;p class=&quot;field__error&quot; id=&quot;respuesta-error&quot;&gt;&lt;span class=&quot;icon icon-circle-alert&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Este campo es obligatorio&lt;/p&gt;
+&lt;/div&gt;</pre></div>
+<div class="sc-card" id="sc-checkbox"><div class="sc-card__head"><h3>Checkbox</h3><span class="sc-tag">10 variantes · 47:302 · icono</span></div><div class="sc-demo"><label class="checkbox">
+<input class="checkbox__input" type="checkbox" name="bases" required>
+<span class="checkbox__label">Acepto las <a class="link" href="/bases">bases legales</a></span>
+</label></div><pre class="sc-code">&lt;label class=&quot;checkbox&quot;&gt;
+&lt;input class=&quot;checkbox__input&quot; type=&quot;checkbox&quot; name=&quot;bases&quot; required&gt;
+&lt;span class=&quot;checkbox__label&quot;&gt;Acepto las &lt;a class=&quot;link&quot; href=&quot;/bases&quot;&gt;bases legales&lt;/a&gt;&lt;/span&gt;
+&lt;/label&gt;</pre></div>
+<div class="sc-card" id="sc-select"><div class="sc-card__head"><h3>Select</h3><span class="sc-tag">6 variantes · 48:141 · icono</span></div><div class="sc-demo"><div class="field">
+<label class="field__label" for="pais">País</label>
+<div class="field__select">
+<select class="field__control" id="pais" name="pais" aria-invalid="true" aria-describedby="pais-error">
+<option value="">Elige una opción</option>
+<option value="es">España</option>
+<option value="fr">Francia</option>
+</select>
+</div>
+<p class="field__error" id="pais-error"><span class="icon icon-circle-alert" aria-hidden="true"></span>Elige un país</p>
+</div></div><pre class="sc-code">&lt;div class=&quot;field&quot;&gt;
+&lt;label class=&quot;field__label&quot; for=&quot;pais&quot;&gt;País&lt;/label&gt;
+&lt;div class=&quot;field__select&quot;&gt;
+&lt;select class=&quot;field__control&quot; id=&quot;pais&quot; name=&quot;pais&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;pais-error&quot;&gt;
+&lt;option value=&quot;&quot;&gt;Elige una opción&lt;/option&gt;
+&lt;option value=&quot;es&quot;&gt;España&lt;/option&gt;
+&lt;option value=&quot;fr&quot;&gt;Francia&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;
+&lt;p class=&quot;field__error&quot; id=&quot;pais-error&quot;&gt;&lt;span class=&quot;icon icon-circle-alert&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Elige un país&lt;/p&gt;
+&lt;/div&gt;</pre></div>
+<div class="sc-card" id="sc-search-field"><div class="sc-card__head"><h3>Search field</h3><span class="sc-tag">4 variantes · 48:177 · icono</span></div><div class="sc-demo"><form class="search-field" role="search" action="/buscar">
+<span class="icon icon-search" aria-hidden="true"></span>
+<label class="visually-hidden" for="q">Buscar recetas y productos</label>
+<input class="search-field__input" id="q" name="q" type="search" placeholder="Buscar recetas y productos">
+<button class="search-field__clear" type="button" aria-label="Borrar búsqueda"><span class="icon icon-close" aria-hidden="true"></span></button>
+</form></div><pre class="sc-code">&lt;form class=&quot;search-field&quot; role=&quot;search&quot; action=&quot;/buscar&quot;&gt;
+&lt;span class=&quot;icon icon-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+&lt;label class=&quot;visually-hidden&quot; for=&quot;q&quot;&gt;Buscar recetas y productos&lt;/label&gt;
+&lt;input class=&quot;search-field__input&quot; id=&quot;q&quot; name=&quot;q&quot; type=&quot;search&quot; placeholder=&quot;Buscar recetas y productos&quot;&gt;
+&lt;button class=&quot;search-field__clear&quot; type=&quot;button&quot; aria-label=&quot;Borrar búsqueda&quot;&gt;&lt;span class=&quot;icon icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/form&gt;</pre></div>
+<div class="sc-card" id="sc-nav-item"><div class="sc-card__head"><h3>Nav item</h3><span class="sc-tag">8 variantes · 53:102</span></div><div class="sc-demo"><nav aria-label="Principal">
+<a class="nav-item" href="/productos" aria-current="page">Productos</a>
+<a class="nav-item" href="/recetas">Recetas</a>
+</nav>
+<a class="nav-item nav-item--menu" href="/recetas">Recetas</a></div><pre class="sc-code">&lt;nav aria-label=&quot;Principal&quot;&gt;
+&lt;a class=&quot;nav-item&quot; href=&quot;/productos&quot; aria-current=&quot;page&quot;&gt;Productos&lt;/a&gt;
+&lt;a class=&quot;nav-item&quot; href=&quot;/recetas&quot;&gt;Recetas&lt;/a&gt;
+&lt;/nav&gt;
+&lt;a class=&quot;nav-item nav-item--menu&quot; href=&quot;/recetas&quot;&gt;Recetas&lt;/a&gt;</pre></div>
+<div class="sc-card" id="sc-tab"><div class="sc-card__head"><h3>Tab</h3><span class="sc-tag">4 variantes · 54:58</span></div><div class="sc-demo"><div role="tablist" aria-label="Tipo de producto">
+<button class="tab" role="tab" aria-selected="true" aria-controls="panel-cups" id="tab-cups">Cups</button>
+<button class="tab" role="tab" aria-selected="false" aria-controls="panel-bags" id="tab-bags" tabindex="-1">Bags</button>
+</div></div><pre class="sc-code">&lt;div role=&quot;tablist&quot; aria-label=&quot;Tipo de producto&quot;&gt;
+&lt;button class=&quot;tab&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot; aria-controls=&quot;panel-cups&quot; id=&quot;tab-cups&quot;&gt;Cups&lt;/button&gt;
+&lt;button class=&quot;tab&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;panel-bags&quot; id=&quot;tab-bags&quot; tabindex=&quot;-1&quot;&gt;Bags&lt;/button&gt;
+&lt;/div&gt;</pre></div>
+<div class="sc-card" id="sc-lang-switch"><div class="sc-card__head"><h3>Lang switch</h3><span class="sc-tag">2 variantes · 54:71</span></div><div class="sc-demo"><nav class="lang-switch" aria-label="Idioma">
+<a class="lang-switch__option" href="/nl/" hreflang="nl" lang="nl" aria-current="true">NL</a>
+<a class="lang-switch__option" href="/fr/" hreflang="fr" lang="fr">FR</a>
+</nav></div><pre class="sc-code">&lt;nav class=&quot;lang-switch&quot; aria-label=&quot;Idioma&quot;&gt;
+&lt;a class=&quot;lang-switch__option&quot; href=&quot;/nl/&quot; hreflang=&quot;nl&quot; lang=&quot;nl&quot; aria-current=&quot;true&quot;&gt;NL&lt;/a&gt;
+&lt;a class=&quot;lang-switch__option&quot; href=&quot;/fr/&quot; hreflang=&quot;fr&quot; lang=&quot;fr&quot;&gt;FR&lt;/a&gt;
+&lt;/nav&gt;</pre></div>
 <div class="sc-card" id="sc-product-card"><div class="sc-card__head"><h3>Product card</h3><span class="sc-tag">3 variantes · 66:99 · icono</span></div><div class="sc-demo"><span class="sc-tag">sin «Ejemplo de código» en el contrato</span></div></div>
 <div class="sc-card" id="sc-recipe-card"><div class="sc-card__head"><h3>Recipe card</h3><span class="sc-tag">3 variantes · 67:133 · icono</span></div><div class="sc-demo"><span class="sc-tag">sin «Ejemplo de código» en el contrato</span></div></div>
 <div class="sc-card" id="sc-contest-card"><div class="sc-card__head"><h3>Contest card</h3><span class="sc-tag">2 variantes · 68:95 · icono</span></div><div class="sc-demo"><span class="sc-tag">sin «Ejemplo de código» en el contrato</span></div></div>

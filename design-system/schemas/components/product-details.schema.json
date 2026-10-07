@@ -6,7 +6,7 @@
     "slug": "product-details",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:17:24Z",
+    "lastSync": "2026-10-07T18:19:35Z",
     "description": "Sección de ingredientes y nutrición (página de producto; en la receta se usa con los valores de la receta): título (h2) · Ingredients (lista jerarquizada, alérgenos en negrita, Link «Ver etiqueta del envase» que abre Modal L con la imagen de la etiqueta) · Nutrition panel (barras proporcionales al % IR, alérgenos y nota de validación). Ancla destino de «Ver ingredientes» del Product hero. Desktop: dos columnas iguales; Mobile: ingredientes y después nutrición. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods. Sin variables propias.",
     "figmaPage": "Pattern / Product details",
     "figmaType": "COMPONENT_SET",

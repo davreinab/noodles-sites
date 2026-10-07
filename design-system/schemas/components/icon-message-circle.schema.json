@@ -1,0 +1,90 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:icon-message-circle",
+  "meta": {
+    "name": "Icon / message-circle",
+    "slug": "icon-message-circle",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T15:16:17Z",
+    "description": "Sugerencias: Suggestion bubble (formulario de Calidad). Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+    "figmaPage": "Icons",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": false,
+    "anatomyHash": "ff4191a23639"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/icon-message-circle.md",
+      "section": "Icon / message-circle"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "76:73",
+      "componentKey": "e1924284346ad07acf29f78801202c7cec3584bb"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [],
+    "variants": {},
+    "states": [],
+    "defaults": {},
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "icon/color/default",
+      "icon/size/md"
+    ],
+    "variablesUsed": [
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: icon/color/default",
+      "color: icon/color/default"
+    ],
+    "textStyles": [],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "icon/color/default"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [
+      "suggestion-bubble"
+    ],
+    "related": []
+  }
+}

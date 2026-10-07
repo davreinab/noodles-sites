@@ -1,0 +1,115 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:modal-slot",
+  "meta": {
+    "name": "Modal / Slot",
+    "slug": "modal-slot",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T15:16:17Z",
+    "description": "Hueco de contenido del Modal. Se sustituye con la propiedad «Content» por la instancia real (imagen de la etiqueta, texto de alérgenos, resultado de concurso, lista de resultados). No se usa fuera del Modal.",
+    "figmaPage": "Modal",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": true,
+    "anatomyHash": "c273f052836c"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/modal-slot.md",
+      "section": "Modal / Slot"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "79:52",
+      "componentKey": "f47417a77caa39a23ba74420490dbbbe84c4213d"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [],
+    "variants": {},
+    "states": [],
+    "defaults": {},
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "font/family/body",
+      "font/line-height/desktop/caption",
+      "font/size/desktop/caption",
+      "font/style/body",
+      "modal/slot-bg",
+      "modal/text",
+      "radius/sm",
+      "space/24"
+    ],
+    "variablesUsed": [
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "fills: modal/slot-bg",
+      "color: modal/slot-bg",
+      "fills: modal/text",
+      "fontSize: font/size/desktop/caption",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: modal/text"
+    ],
+    "textStyles": [
+      "Desktop/caption"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "font/family/body",
+        "font/line-height/desktop/caption",
+        "font/size/desktop/caption",
+        "font/style/body",
+        "modal/slot-bg",
+        "modal/text"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [
+      "modal"
+    ],
+    "related": []
+  }
+}

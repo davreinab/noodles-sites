@@ -378,10 +378,142 @@
             "textStyles": []
           },
           "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / pause",
+          "type": "COMPONENT",
+          "id": "76:52",
+          "key": "fcaa740e652f3376885a091af8099c4ed12a6073",
+          "description": "Pausa: temporizador y vídeo. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / rotate-ccw",
+          "type": "COMPONENT",
+          "id": "76:56",
+          "key": "aa0e90640445eb91b22611a6fd991ee2af837595",
+          "description": "Reiniciar: temporizador. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / info",
+          "type": "COMPONENT",
+          "id": "76:61",
+          "key": "d5f00aeafa6cc9069dc5c625b166a22b7f37a02e",
+          "description": "Información: Alert y Toast de tipo Info. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / circle-check",
+          "type": "COMPONENT",
+          "id": "76:65",
+          "key": "3186db050c52a72d40bf276b23bad7a28fdaa984",
+          "description": "Éxito: Alert y Toast de tipo Success, temporizador terminado. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / triangle-alert",
+          "type": "COMPONENT",
+          "id": "76:70",
+          "key": "1c8eb3b4f8aee5e87cf959fa23fe3f7f8e5af231",
+          "description": "Advertencia: Alert y Toast de tipo Alert. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / message-circle",
+          "type": "COMPONENT",
+          "id": "76:73",
+          "key": "e1924284346ad07acf29f78801202c7cec3584bb",
+          "description": "Sugerencias: Suggestion bubble (formulario de Calidad). Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
         }
       ],
-      "total": 17,
-      "read": 17
+      "total": 23,
+      "read": 23
     },
     {
       "name": "Decoration",
@@ -3189,6 +3321,726 @@
       "read": 1
     },
     {
+      "name": "Modal",
+      "id": "79:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Modal",
+          "name": "Modal / Slot",
+          "type": "COMPONENT",
+          "id": "79:52",
+          "key": "f47417a77caa39a23ba74420490dbbbe84c4213d",
+          "description": "Hueco de contenido del Modal. Se sustituye con la propiedad «Content» por la instancia real (imagen de la etiqueta, texto de alérgenos, resultado de concurso, lista de resultados). No se usa fuera del Modal.",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "paddingLeft: space/24",
+              "paddingTop: space/24",
+              "paddingRight: space/24",
+              "paddingBottom: space/24",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "fills: modal/slot-bg",
+              "color: modal/slot-bg",
+              "fills: modal/text",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: modal/text"
+            ],
+            "textStyles": [
+              "Desktop/caption"
+            ]
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Modal",
+          "name": "Modal",
+          "type": "COMPONENT_SET",
+          "id": "79:123",
+          "key": "e774e95fa65487ecca2a2070bbcbb18d2ddd3e07",
+          "description": "Diálogo modal. Size=M (560): alérgenos, resultado de concurso. Size=L (880): etiqueta del envase (imagen ampliable), resultados de búsqueda. Size=Full (móvil, pantalla completa). Anatomía: cabecera (título h3 + Icon button cerrar) · contenido (swap «Content», por defecto Modal / Slot) · pie opcional con acción. Se muestra sobre el velo modal/overlay (layer/overlay) y el diálogo en layer/modal. Accesibilidad: &lt;dialog&gt; o role=&quot;dialog&quot; + aria-modal=&quot;true&quot; + aria-labelledby al título; el foco entra en el primer elemento (o el título), queda atrapado dentro, Esc y el botón cerrar lo cierran y el foco vuelve al disparador; el fondo queda inerte (inert) y sin scroll.",
+          "variantAxes": {
+            "Size": [
+              "M",
+              "L",
+              "Full"
+            ]
+          },
+          "variantCount": 3,
+          "properties": [
+            {
+              "name": "Title#79:0",
+              "kind": "TEXT",
+              "default": "Título del modal"
+            },
+            {
+              "name": "Content#79:4",
+              "kind": "INSTANCE_SWAP",
+              "default": "79:52",
+              "defaultComponent": "Modal / Slot",
+              "preferredValues": []
+            },
+            {
+              "name": "Footer#79:8",
+              "kind": "BOOLEAN",
+              "default": true
+            },
+            {
+              "name": "Size",
+              "kind": "VARIANT",
+              "default": "M",
+              "values": [
+                "M",
+                "L",
+                "Full"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "close",
+              "component": "Hierarchy=Secondary, Size=M, State=Default",
+              "componentSet": "Icon button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "Icon / close",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": "Icon#33:125",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "content",
+              "component": "Modal / Slot",
+              "componentSet": null,
+              "exposedAs": "Content#79:4",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "action",
+              "component": "Hierarchy=Primary, Size=M, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: modal/bg",
+              "strokes: modal/border",
+              "effects: shadow/soft",
+              "color: modal/bg",
+              "color: modal/border",
+              "itemSpacing: space/16",
+              "paddingLeft: space/24",
+              "paddingTop: space/24",
+              "paddingRight: space/24",
+              "paddingBottom: space/24",
+              "fills: modal/title",
+              "fontSize: font/size/desktop/h3",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: modal/title",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "strokes: button/secondary/border",
+              "color: button/secondary/border",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "fills: modal/slot-bg",
+              "color: modal/slot-bg",
+              "fills: modal/text",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: modal/text",
+              "itemSpacing: space/8",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label"
+            ],
+            "textStyles": [
+              "Desktop/h3",
+              "Desktop/caption",
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 2,
+      "read": 2
+    },
+    {
+      "name": "Alert",
+      "id": "80:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Alert",
+          "name": "Alert",
+          "type": "COMPONENT_SET",
+          "id": "80:138",
+          "key": "b856e1a34892ef622f087a595ef6261b03a43b04",
+          "description": "Mensaje de estado. Type=Info · Success · Alert · Error, cada uno con su icono fijo (info, circle-check, triangle-alert, circle-alert) y su título: el tipo nunca se comunica solo por color. Layout=Inline: dentro del contenido (formulario, concurso cerrado), radius/sm. Layout=Toast: flotante y temporal en layer/toast, elevation/3, abajo centrado en móvil y abajo a la derecha en desktop; se cierra solo a los 6 s salvo Error, que espera al usuario (y la pausa al pasar el ratón o con el foco). Accesibilidad: Info/Success con role=&quot;status&quot; (aria-live polite); Alert/Error con role=&quot;alert&quot;. Cerrar es un &lt;button aria-label=&quot;Cerrar aviso&quot;&gt;. El título se edita en la instancia (no es propiedad para no perder el título de cada tipo).",
+          "variantAxes": {
+            "Type": [
+              "Info",
+              "Success",
+              "Alert",
+              "Error"
+            ],
+            "Layout": [
+              "Inline",
+              "Toast"
+            ]
+          },
+          "variantCount": 8,
+          "properties": [
+            {
+              "name": "Body#80:9",
+              "kind": "TEXT",
+              "default": "Texto de ejemplo con el detalle del mensaje."
+            },
+            {
+              "name": "Dismissible#80:18",
+              "kind": "BOOLEAN",
+              "default": true
+            },
+            {
+              "name": "Close icon#80:36",
+              "kind": "INSTANCE_SWAP",
+              "default": "30:60",
+              "defaultComponent": "Icon / close",
+              "preferredValues": []
+            },
+            {
+              "name": "Type",
+              "kind": "VARIANT",
+              "default": "Info",
+              "values": [
+                "Info",
+                "Success",
+                "Alert",
+                "Error"
+              ]
+            },
+            {
+              "name": "Layout",
+              "kind": "VARIANT",
+              "default": "Inline",
+              "values": [
+                "Inline",
+                "Toast"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon-status",
+              "component": "Icon / info",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-close",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": "Close icon#80:36",
+              "toggledBy": "Dismissible#80:18",
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/16",
+              "paddingLeft: space/24",
+              "paddingTop: space/16",
+              "paddingRight: space/24",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: alert/info/bg",
+              "strokes: alert/info/border",
+              "color: alert/info/bg",
+              "color: alert/info/border",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: alert/info/icon",
+              "color: alert/info/icon",
+              "itemSpacing: space/4",
+              "fills: alert/info/text",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "color: alert/info/text",
+              "fontSize: font/size/desktop/body-s",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-s",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: alert/close",
+              "color: alert/close"
+            ],
+            "textStyles": [
+              "Desktop/label",
+              "Desktop/body-s"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Suggestion bubble",
+      "id": "81:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Suggestion bubble",
+          "name": "Suggestion bubble",
+          "type": "COMPONENT_SET",
+          "id": "81:87",
+          "key": "8af0be536c04b3ab802eee8e4fff4b6931fb9001",
+          "description": "Botón flotante (suggestion box / Babelbox) hacia el formulario externo de Calidad. Fijo abajo a la derecha (layout/margin desde los bordes), layer/floating; no tapa el CTA del Mobile menu ni el Toast (que sube por encima). Expanded=True al cargar: icono + «Sugerencias» + external-link; al hacer scroll pasa a Expanded=False (solo icono, 56 px) y respeta prefers-reduced-motion. Es un &lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; con nombre accesible «Sugerencias (abre en una pestaña nueva)» también en la versión plegada. Hover: fondo amarillo de marca y elevation/2; Focus: anillo suggestion/focus-ring.",
+          "variantAxes": {
+            "Expanded": [
+              "True",
+              "False"
+            ],
+            "State": [
+              "Default",
+              "Hover",
+              "Focus"
+            ]
+          },
+          "variantCount": 6,
+          "properties": [
+            {
+              "name": "Label#81:0",
+              "kind": "TEXT",
+              "default": "Sugerencias"
+            },
+            {
+              "name": "Icon#81:7",
+              "kind": "INSTANCE_SWAP",
+              "default": "76:73",
+              "defaultComponent": "Icon / message-circle",
+              "preferredValues": []
+            },
+            {
+              "name": "Expanded",
+              "kind": "VARIANT",
+              "default": "True",
+              "values": [
+                "True",
+                "False"
+              ]
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon",
+              "component": "Icon / message-circle",
+              "componentSet": null,
+              "exposedAs": "Icon#81:7",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-external",
+              "component": "Icon / external-link",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/8",
+              "paddingLeft: space/24",
+              "paddingTop: space/16",
+              "paddingRight: space/24",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: suggestion/bg",
+              "strokes: suggestion/border",
+              "effects: color/effect/shadow-ink",
+              "color: suggestion/bg",
+              "color: suggestion/border",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: suggestion/text",
+              "color: suggestion/text",
+              "fills: suggestion/text",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "width: icon/size/sm",
+              "height: icon/size/sm"
+            ],
+            "textStyles": [
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Timer",
+      "id": "82:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Timer",
+          "name": "Timer",
+          "type": "COMPONENT_SET",
+          "id": "82:143",
+          "key": "31467016a91c15fbdab58af7c00290565c85a826",
+          "description": "Temporizador de preparación (3 minutos) junto a los Step de la página de producto. State=Idle (3:00, «Empezar») · Running (anillo vaciándose, «Pausar» + reiniciar) · Paused («Seguir» + reiniciar) · Done (anillo verde natural, circle-check, «¡Listo!», «Otra vez»). El anillo es decorativo (aria-hidden) y no comunica nada por sí solo: el tiempo está en texto. Accesibilidad: el tiempo se expone con role=&quot;timer&quot; sin anunciar cada segundo; una región aria-live=&quot;polite&quot; anuncia solo «Quedan 1 minuto» y «¡Listo! Ya puedes comer»; el botón principal cambia su nombre (Empezar/Pausar/Seguir). Puede sonar o vibrar al terminar solo si el usuario lo activa. Respeta prefers-reduced-motion (el anillo salta en vez de animarse).",
+          "variantAxes": {
+            "State": [
+              "Idle",
+              "Running",
+              "Paused",
+              "Done"
+            ]
+          },
+          "variantCount": 4,
+          "properties": [
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Idle",
+              "values": [
+                "Idle",
+                "Running",
+                "Paused",
+                "Done"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "action",
+              "component": "Hierarchy=Primary, Size=M, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / play",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/24",
+              "paddingLeft: space/32",
+              "paddingTop: space/32",
+              "paddingRight: space/32",
+              "paddingBottom: space/32",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: timer/bg",
+              "strokes: timer/border",
+              "color: timer/bg",
+              "color: timer/border",
+              "itemSpacing: space/4",
+              "fills: timer/track",
+              "color: timer/track",
+              "fills: timer/progress",
+              "color: timer/progress",
+              "fills: timer/time",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: timer/time",
+              "fills: timer/label",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: timer/label",
+              "itemSpacing: space/16",
+              "itemSpacing: space/8",
+              "paddingLeft: space/24",
+              "paddingTop: space/16",
+              "paddingRight: space/24",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/caption",
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Video player",
+      "id": "83:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Video player",
+          "name": "Video player",
+          "type": "COMPONENT_SET",
+          "id": "83:70",
+          "key": "7b062bb96aa6895c0502782396d3415a40d08445",
+          "description": "Reproductor de vídeo como fachada. State=Poster: póster de marca (sin imagen generada con IA), botón play de 80 px (video/play-bg, borde grueso) y duración. State=Playing: al pulsar se sustituye por el reproductor real (iframe de YouTube con youtube-nocookie o &lt;video&gt; MP4) con sus controles nativos; no se carga nada de terceros antes del clic (privacidad y rendimiento). Ratio=16:9 (preparación, promo de Home, concursos) y 9:16 (recetas en vídeo vertical). Accesibilidad: el play es un &lt;button&gt; con nombre «Reproducir vídeo: &lt;título&gt; (0:45)»; foco con anillo video/focus-ring amarillo sobre el póster oscuro; subtítulos obligatorios si el vídeo tiene voz; sin autoplay con sonido; el GIF de preparación usa este mismo componente en MP4 silencioso en bucle con botón de pausa.",
+          "variantAxes": {
+            "Ratio": [
+              "16:9",
+              "9:16"
+            ],
+            "State": [
+              "Poster",
+              "Playing"
+            ]
+          },
+          "variantCount": 4,
+          "properties": [
+            {
+              "name": "Duration#83:0",
+              "kind": "TEXT",
+              "default": "0:45"
+            },
+            {
+              "name": "Play icon#83:5",
+              "kind": "INSTANCE_SWAP",
+              "default": "30:79",
+              "defaultComponent": "Icon / play",
+              "preferredValues": []
+            },
+            {
+              "name": "Ratio",
+              "kind": "VARIANT",
+              "default": "16:9",
+              "values": [
+                "16:9",
+                "9:16"
+              ]
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Poster",
+              "values": [
+                "Poster",
+                "Playing"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon-play",
+              "component": "Icon / play",
+              "componentSet": null,
+              "exposedAs": "Play icon#83:5",
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: video/poster-bg",
+              "strokes: video/border",
+              "color: video/poster-bg",
+              "color: video/border",
+              "fills: video/meta-text",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: video/meta-text",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: video/play-bg",
+              "color: video/play-bg",
+              "width: icon/size/lg",
+              "height: icon/size/lg",
+              "strokes: video/play-icon",
+              "color: video/play-icon",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "fills: video/meta-bg",
+              "color: video/meta-bg",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label"
+            ],
+            "textStyles": [
+              "Desktop/caption",
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": false
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
       "name": "Pattern / Navbar",
       "id": "53:72",
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
@@ -4221,5 +5073,5 @@
     }
   ],
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
-  "readAt": "2026-10-07T14:34:04.686Z"
+  "readAt": "2026-10-07T15:14:56.155Z"
 }

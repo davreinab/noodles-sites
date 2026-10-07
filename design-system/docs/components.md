@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 45 componentes sincronizados el 2026-10-07T14:34:50Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 57 componentes sincronizados el 2026-10-07T15:16:17Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -32,6 +32,12 @@
 - [Icon / timer](components/icon-timer.md) · component · `icon-timer` · ⬜ 5 pendientes
 - [Icon / external-link](components/icon-external-link.md) · component · `icon-external-link` · ⬜ 5 pendientes
 - [Icon / circle-alert](components/icon-circle-alert.md) · component · `icon-circle-alert` · ⬜ 5 pendientes
+- [Icon / pause](components/icon-pause.md) · component · `icon-pause` · ⬜ 5 pendientes
+- [Icon / rotate-ccw](components/icon-rotate-ccw.md) · component · `icon-rotate-ccw` · ⬜ 5 pendientes
+- [Icon / info](components/icon-info.md) · component · `icon-info` · ⬜ 5 pendientes
+- [Icon / circle-check](components/icon-circle-check.md) · component · `icon-circle-check` · ⬜ 5 pendientes
+- [Icon / triangle-alert](components/icon-triangle-alert.md) · component · `icon-triangle-alert` · ⬜ 5 pendientes
+- [Icon / message-circle](components/icon-message-circle.md) · component · `icon-message-circle` · ⬜ 5 pendientes
 - [Decoration / Noodle](components/decoration-noodle.md) · component · `decoration-noodle` · ⬜ 5 pendientes
 - [Logo / GB Foods](components/logo-gb-foods.md) · component · `logo-gb-foods` · ⬜ 5 pendientes
 - [Logo / Aiki](components/logo-aiki.md) · component · `logo-aiki` · ⬜ 5 pendientes
@@ -60,6 +66,12 @@
 - [Nutrition bar](components/nutrition-bar.md) · component · `nutrition-bar` · ⬜ 5 pendientes
 - [Nutrition panel](components/nutrition-panel.md) · component · `nutrition-panel` · ⬜ 5 pendientes
 - [Step](components/step.md) · component · `step` · ⬜ 5 pendientes
+- [Modal / Slot](components/modal-slot.md) · component · `modal-slot` · ⬜ 5 pendientes
+- [Modal](components/modal.md) · component · `modal` · ⬜ 5 pendientes
+- [Alert](components/alert.md) · component · `alert` · ⬜ 5 pendientes
+- [Suggestion bubble](components/suggestion-bubble.md) · component · `suggestion-bubble` · ⬜ 5 pendientes
+- [Timer](components/timer.md) · component · `timer` · ⬜ 5 pendientes
+- [Video player](components/video-player.md) · component · `video-player` · ⬜ 5 pendientes
 
 ## Cómo rellenar una ficha
 

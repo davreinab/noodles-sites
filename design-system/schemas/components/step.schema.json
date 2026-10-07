@@ -6,7 +6,7 @@
     "slug": "step",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T14:34:50Z",
+    "lastSync": "2026-10-07T15:16:17Z",
     "description": "Paso numerado de preparación (página de producto, junto al temporizador de 3 minutos de la fase 5) o de receta. Anatomía: número en círculo (Anton, step/number-bg amarillo de marca, 56 px) · texto (body-l) · media opcional (Media=True: imagen o GIF 16:9; el GIF respeta prefers-reduced-motion y lleva pausa). Se usa dentro de &lt;ol&gt;: el número visual es decorativo (aria-hidden) porque la lista ya lo anuncia. Se apilan con space/32.",
     "figmaPage": "Step",
     "figmaType": "COMPONENT_SET",

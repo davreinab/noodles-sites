@@ -2,7 +2,7 @@
 
 # GB Noodles · Microsites · Assets  ·  _(iconos y fuentes exportados de Figma)_
 
-> Última sync: 2026-10-07T14:34:50Z. Los archivos viven en `../assets/icons/` y `../assets/fonts/`; las pantallas los referencian desde ahí. No existe ningún otro `img/` ni `fonts/` en el proyecto.
+> Última sync: 2026-10-07T15:16:17Z. Los archivos viven en `../assets/icons/` y `../assets/fonts/`; las pantallas los referencian desde ahí. No existe ningún otro `img/` ni `fonts/` en el proyecto.
 
 ## Iconos (`../assets/icons/`)
 | Archivo | Componente Figma | Node ID | Tamaños (tokens `--icon-size-*`) | Uso |
@@ -24,6 +24,12 @@
 | `timer.svg` | Icon / timer | `30:84` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI · Lucide (ISC) |
 | `x.svg` | Icon / x | `21:68` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI (red social) |
 | `youtube.svg` | Icon / youtube | `21:71` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI (red social) |
+| `pause.svg` | Icon / pause | `76:52` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI (temporizador, vídeo) |
+| `rotate-ccw.svg` | Icon / rotate-ccw | `76:56` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI (temporizador) |
+| `info.svg` | Icon / info | `76:61` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI (Alert Info) |
+| `circle-check.svg` | Icon / circle-check | `76:65` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI (Alert Success, temporizador) |
+| `triangle-alert.svg` | Icon / triangle-alert | `76:70` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI (Alert de advertencia) |
+| `message-circle.svg` | Icon / message-circle | `76:73` | `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI (Suggestion bubble) |
 
 ## Fuentes (`../assets/fonts/`)
 | Archivo | Familia · peso | Origen (Figma / Google Fonts / licencia) | Token `--family-*` | Notas |

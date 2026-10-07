@@ -100,5 +100,41 @@
     "nodeId": "21:71",
     "file": "youtube.svg",
     "usage": "glifo UI (red social)"
+  },
+  {
+    "name": "Icon / pause",
+    "nodeId": "76:52",
+    "file": "pause.svg",
+    "usage": "glifo UI (temporizador, vídeo)"
+  },
+  {
+    "name": "Icon / rotate-ccw",
+    "nodeId": "76:56",
+    "file": "rotate-ccw.svg",
+    "usage": "glifo UI (temporizador)"
+  },
+  {
+    "name": "Icon / info",
+    "nodeId": "76:61",
+    "file": "info.svg",
+    "usage": "glifo UI (Alert Info)"
+  },
+  {
+    "name": "Icon / circle-check",
+    "nodeId": "76:65",
+    "file": "circle-check.svg",
+    "usage": "glifo UI (Alert Success, temporizador)"
+  },
+  {
+    "name": "Icon / triangle-alert",
+    "nodeId": "76:70",
+    "file": "triangle-alert.svg",
+    "usage": "glifo UI (Alert de advertencia)"
+  },
+  {
+    "name": "Icon / message-circle",
+    "nodeId": "76:73",
+    "file": "message-circle.svg",
+    "usage": "glifo UI (Suggestion bubble)"
   }
 ]

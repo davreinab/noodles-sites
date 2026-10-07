@@ -2,14 +2,14 @@
 
 # GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
 
-> Última sync: **2026-10-07T14:34:50Z** · modo de adopción: `new` · 278 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-07T15:16:17Z** · modo de adopción: `new` · 324 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice
 
-- [Primitive](#primitive) · 21 tokens · modos: Value
-- [Semantic](#semantic) · 37 tokens · modos: Yatekomo, Saikebon, Aiki, Daisuki, DE
-- [Components](#components) · 141 tokens · modos: Value
+- [Primitive](#primitive) · 22 tokens · modos: Value
+- [Semantic](#semantic) · 38 tokens · modos: Yatekomo, Saikebon, Aiki, Daisuki, DE
+- [Components](#components) · 185 tokens · modos: Value
 - [Layer](#layer) · 7 tokens · modos: Value
 - [Spacing](#spacing) · 20 tokens · modos: Value
 - [Layout](#layout) · 6 tokens · modos: Desktop, Tablet, Mobile
@@ -56,6 +56,7 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 | `color/status/info-700` | `--color-status-info-700` | COLOR | `#1f63b5` | — | Icono y borde de información. Primitivo: no se consume en componentes. |
 | `color/status/info-900` | `--color-status-info-900` | COLOR | `#0b4482` | — | Texto de información. Primitivo: no se consume en componentes. |
 | `shadow/ink-20` | `--shadow-ink-20` | COLOR | `rgba(18, 18, 18, 0.2)` | — | Tinta al 20%. Translúcido permitido solo en sombras de elevación |
+| `overlay/ink-70` | `--overlay-ink-70` | COLOR | `rgba(18, 18, 18, 0.7)` | — | Tinta al 70 %. Translúcido permitido solo en velos (overlay) de modales y paneles. Primitivo: no se consume en componentes. |
 
 ## Semantic
 
@@ -98,6 +99,7 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 | `shadow/soft` | `--shadow-soft` | COLOR | → `--shadow-ink-20` | → `--shadow-ink-20` | → `--shadow-ink-20` | → `--shadow-ink-20` | → `--shadow-ink-20` | EFFECT_COLOR | Color de la sombra suave (elevation/3) |
 | `color/surface/disabled` | `--color-surface-disabled` | COLOR | → `--color-neutral-sand-200` | → `--color-neutral-sand-200` | → `--color-neutral-sand-200` | → `--color-neutral-sand-200` | → `--color-neutral-sand-200` | FRAME_FILL, SHAPE_FILL, STROKE_COLOR | Fondo de control desactivado |
 | `color/text/disabled` | `--color-text-disabled` | COLOR | → `--color-neutral-ink-600` | → `--color-neutral-ink-600` | → `--color-neutral-ink-600` | → `--color-neutral-ink-600` | → `--color-neutral-ink-600` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | Texto o icono de control desactivado (4.3:1 sobre surface/disabled) |
+| `color/surface/overlay` | `--color-surface-overlay` | COLOR | → `--overlay-ink-70` | → `--overlay-ink-70` | → `--overlay-ink-70` | → `--overlay-ink-70` | → `--overlay-ink-70` | FRAME_FILL, SHAPE_FILL | Velo detrás de modales y del menú móvil (layer/overlay). Única superficie translúcida; nunca lleva texto encima. |
 
 ## Components
 
@@ -244,6 +246,50 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 | `ingredient/meta` | `--ingredient-meta` | COLOR | → `--color-text-secondary` | TEXT_FILL | ingredient: Notas y texto secundario |
 | `nutrition/bg` | `--nutrition-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | nutrition: Fondo del panel |
 | `nutrition/border` | `--nutrition-border` | COLOR | → `--color-border-default` | STROKE_COLOR | nutrition: Borde del panel |
+| `modal/bg` | `--modal-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | modal: Fondo del diálogo |
+| `modal/border` | `--modal-border` | COLOR | → `--color-border-default` | STROKE_COLOR | modal: Borde del diálogo |
+| `modal/title` | `--modal-title` | COLOR | → `--color-text-default` | TEXT_FILL | modal: Título |
+| `modal/text` | `--modal-text` | COLOR | → `--color-text-default` | TEXT_FILL | modal: Texto del cuerpo |
+| `modal/overlay` | `--modal-overlay` | COLOR | → `--color-surface-overlay` | FRAME_FILL, SHAPE_FILL | modal: Velo detrás del diálogo (translúcido) |
+| `modal/slot-bg` | `--modal-slot-bg` | COLOR | → `--color-surface-page` | FRAME_FILL, SHAPE_FILL | modal: Fondo del hueco de contenido (imagen de etiqueta, resultados) |
+| `suggestion/bg` | `--suggestion-bg` | COLOR | → `--color-surface-inverse` | FRAME_FILL, SHAPE_FILL | suggestion: Fondo |
+| `suggestion/bg-hover` | `--suggestion-bg-hover` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL | suggestion: Fondo en hover |
+| `suggestion/text` | `--suggestion-text` | COLOR | → `--color-text-on-inverse` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | suggestion: Texto e icono |
+| `suggestion/text-hover` | `--suggestion-text-hover` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | suggestion: Texto e icono en hover |
+| `suggestion/border` | `--suggestion-border` | COLOR | → `--color-border-default` | STROKE_COLOR | suggestion: Borde |
+| `suggestion/focus-ring` | `--suggestion-focus-ring` | COLOR | → `--color-border-default` | STROKE_COLOR | suggestion: Anillo de foco |
+| `timer/bg` | `--timer-bg` | COLOR | → `--color-surface-card` | FRAME_FILL, SHAPE_FILL | timer: Fondo |
+| `timer/border` | `--timer-border` | COLOR | → `--color-border-default` | STROKE_COLOR | timer: Borde |
+| `timer/track` | `--timer-track` | COLOR | → `--color-border-subtle` | SHAPE_FILL, STROKE_COLOR | timer: Pista del anillo (decorativa) |
+| `timer/progress` | `--timer-progress` | COLOR | → `--color-surface-inverse` | SHAPE_FILL, STROKE_COLOR | timer: Progreso del anillo (≥3:1 sobre la pista) |
+| `timer/progress-done` | `--timer-progress-done` | COLOR | → `--color-surface-natural` | SHAPE_FILL, STROKE_COLOR | timer: Anillo completo al terminar |
+| `timer/time` | `--timer-time` | COLOR | → `--color-text-default` | TEXT_FILL | timer: Tiempo restante |
+| `timer/label` | `--timer-label` | COLOR | → `--color-text-secondary` | TEXT_FILL | timer: Etiqueta y ayuda |
+| `timer/done-text` | `--timer-done-text` | COLOR | → `--color-text-natural` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | timer: Mensaje e icono de terminado |
+| `video/poster-bg` | `--video-poster-bg` | COLOR | → `--color-surface-inverse` | FRAME_FILL, SHAPE_FILL | video: Fondo del póster hasta tener imagen |
+| `video/border` | `--video-border` | COLOR | → `--color-border-default` | STROKE_COLOR | video: Borde |
+| `video/play-bg` | `--video-play-bg` | COLOR | → `--color-surface-brand` | FRAME_FILL, SHAPE_FILL | video: Fondo del botón play |
+| `video/play-icon` | `--video-play-icon` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | video: Icono play |
+| `video/meta-bg` | `--video-meta-bg` | COLOR | → `--color-surface-inverse` | FRAME_FILL, SHAPE_FILL | video: Fondo de la duración |
+| `video/meta-text` | `--video-meta-text` | COLOR | → `--color-text-on-inverse` | TEXT_FILL | video: Texto de la duración y del póster |
+| `video/focus-ring` | `--video-focus-ring` | COLOR | → `--color-text-brand-on-inverse` | STROKE_COLOR | video: Anillo de foco del play (amarillo sobre póster oscuro) |
+| `alert/info/bg` | `--alert-info-bg` | COLOR | → `--color-status-info-bg` | FRAME_FILL, SHAPE_FILL | alert: Fondo (info) |
+| `alert/info/text` | `--alert-info-text` | COLOR | → `--color-status-info-text` | TEXT_FILL | alert: Texto (info) |
+| `alert/info/icon` | `--alert-info-icon` | COLOR | → `--color-status-info-icon` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | alert: Icono (info) |
+| `alert/info/border` | `--alert-info-border` | COLOR | → `--color-status-info-border` | STROKE_COLOR | alert: Borde (info) |
+| `alert/success/bg` | `--alert-success-bg` | COLOR | → `--color-status-success-bg` | FRAME_FILL, SHAPE_FILL | alert: Fondo (success) |
+| `alert/success/text` | `--alert-success-text` | COLOR | → `--color-status-success-text` | TEXT_FILL | alert: Texto (success) |
+| `alert/success/icon` | `--alert-success-icon` | COLOR | → `--color-status-success-icon` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | alert: Icono (success) |
+| `alert/success/border` | `--alert-success-border` | COLOR | → `--color-status-success-border` | STROKE_COLOR | alert: Borde (success) |
+| `alert/alert/bg` | `--alert-alert-bg` | COLOR | → `--color-status-alert-bg` | FRAME_FILL, SHAPE_FILL | alert: Fondo (alert) |
+| `alert/alert/text` | `--alert-alert-text` | COLOR | → `--color-status-alert-text` | TEXT_FILL | alert: Texto (alert) |
+| `alert/alert/icon` | `--alert-alert-icon` | COLOR | → `--color-status-alert-icon` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | alert: Icono (alert) |
+| `alert/alert/border` | `--alert-alert-border` | COLOR | → `--color-status-alert-border` | STROKE_COLOR | alert: Borde (alert) |
+| `alert/error/bg` | `--alert-error-bg` | COLOR | → `--color-status-error-bg` | FRAME_FILL, SHAPE_FILL | alert: Fondo (error) |
+| `alert/error/text` | `--alert-error-text` | COLOR | → `--color-status-error-text` | TEXT_FILL | alert: Texto (error) |
+| `alert/error/icon` | `--alert-error-icon` | COLOR | → `--color-status-error-icon` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | alert: Icono (error) |
+| `alert/error/border` | `--alert-error-border` | COLOR | → `--color-status-error-border` | STROKE_COLOR | alert: Borde (error) |
+| `alert/close` | `--alert-close` | COLOR | → `--color-text-default` | SHAPE_FILL, TEXT_FILL, STROKE_COLOR | alert: Icono cerrar |
 
 ## Layer
 

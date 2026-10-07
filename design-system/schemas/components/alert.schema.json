@@ -1,0 +1,231 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:alert",
+  "meta": {
+    "name": "Alert",
+    "slug": "alert",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T15:16:17Z",
+    "description": "Mensaje de estado. Type=Info · Success · Alert · Error, cada uno con su icono fijo (info, circle-check, triangle-alert, circle-alert) y su título: el tipo nunca se comunica solo por color. Layout=Inline: dentro del contenido (formulario, concurso cerrado), radius/sm. Layout=Toast: flotante y temporal en layer/toast, elevation/3, abajo centrado en móvil y abajo a la derecha en desktop; se cierra solo a los 6 s salvo Error, que espera al usuario (y la pausa al pasar el ratón o con el foco). Accesibilidad: Info/Success con role=&quot;status&quot; (aria-live polite); Alert/Error con role=&quot;alert&quot;. Cerrar es un &lt;button aria-label=&quot;Cerrar aviso&quot;&gt;. El título se edita en la instancia (no es propiedad para no perder el título de cada tipo).",
+    "figmaPage": "Alert",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 8,
+    "autoLayout": true,
+    "anatomyHash": "2f59c341f4b9"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/alert.md",
+      "section": "Alert"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "80:138",
+      "componentKey": "b856e1a34892ef622f087a595ef6261b03a43b04"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Body#80:9",
+        "kind": "TEXT",
+        "default": "Texto de ejemplo con el detalle del mensaje."
+      },
+      {
+        "name": "Dismissible#80:18",
+        "kind": "BOOLEAN",
+        "default": true
+      },
+      {
+        "name": "Close icon#80:36",
+        "kind": "INSTANCE_SWAP",
+        "default": "30:60",
+        "defaultComponent": "Icon / close",
+        "preferredValues": []
+      },
+      {
+        "name": "Type",
+        "kind": "VARIANT",
+        "default": "Info",
+        "values": [
+          "Info",
+          "Success",
+          "Alert",
+          "Error"
+        ]
+      },
+      {
+        "name": "Layout",
+        "kind": "VARIANT",
+        "default": "Inline",
+        "values": [
+          "Inline",
+          "Toast"
+        ]
+      }
+    ],
+    "variants": {
+      "Type": [
+        "Info",
+        "Success",
+        "Alert",
+        "Error"
+      ],
+      "Layout": [
+        "Inline",
+        "Toast"
+      ]
+    },
+    "states": [],
+    "defaults": {
+      "Type": "Info",
+      "Layout": "Inline"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "icon-status",
+        "component": "Icon / info",
+        "componentSlug": "icon-info",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-close",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": "Close icon#80:36",
+        "toggledBy": "Dismissible#80:18",
+        "visibleByDefault": true
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "Close icon#80:36"
+      ],
+      "defaultIcons": [
+        "Icon / close"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": [
+        "icon-status"
+      ]
+    },
+    "slots": [],
+    "tokensUsed": [
+      "alert/close",
+      "alert/info/bg",
+      "alert/info/border",
+      "alert/info/icon",
+      "alert/info/text",
+      "border/width/thin",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-s",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/md",
+      "icon/size/sm",
+      "radius/sm",
+      "space/16",
+      "space/24",
+      "space/4"
+    ],
+    "variablesUsed": [
+      "itemSpacing: space/16",
+      "paddingLeft: space/24",
+      "paddingTop: space/16",
+      "paddingRight: space/24",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: alert/info/bg",
+      "strokes: alert/info/border",
+      "color: alert/info/bg",
+      "color: alert/info/border",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: alert/info/icon",
+      "color: alert/info/icon",
+      "itemSpacing: space/4",
+      "fills: alert/info/text",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label",
+      "color: alert/info/text",
+      "fontSize: font/size/desktop/body-s",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-s",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: alert/close",
+      "color: alert/close"
+    ],
+    "textStyles": [
+      "Desktop/label",
+      "Desktop/body-s"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "alert/close",
+        "alert/info/bg",
+        "alert/info/border",
+        "alert/info/icon",
+        "alert/info/text",
+        "font/family/body",
+        "font/family/display",
+        "font/line-height/desktop/body-s",
+        "font/line-height/desktop/label",
+        "font/size/desktop/body-s",
+        "font/size/desktop/label",
+        "font/style/body",
+        "font/style/display"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "icon-close",
+      "icon-info"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

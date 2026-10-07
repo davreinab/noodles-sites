@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-07T14:34:50Z",
+  "lastSync": "2026-10-07T15:16:17Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -409,6 +409,142 @@
         "fileKey": "v4mnn154qUmiB35CCnRfgh",
         "nodeId": "46:78",
         "componentKey": "5fc781720e6d66268b7ee207c390ad7140f4efe0"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-pause",
+      "name": "Icon / pause",
+      "slug": "icon-pause",
+      "kind": "component",
+      "contractPath": "./components/icon-pause.schema.json",
+      "keywords": [
+        "icon",
+        "pause"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "76:52",
+        "componentKey": "fcaa740e652f3376885a091af8099c4ed12a6073"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-rotate-ccw",
+      "name": "Icon / rotate-ccw",
+      "slug": "icon-rotate-ccw",
+      "kind": "component",
+      "contractPath": "./components/icon-rotate-ccw.schema.json",
+      "keywords": [
+        "ccw",
+        "icon",
+        "rotate"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "76:56",
+        "componentKey": "aa0e90640445eb91b22611a6fd991ee2af837595"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-info",
+      "name": "Icon / info",
+      "slug": "icon-info",
+      "kind": "component",
+      "contractPath": "./components/icon-info.schema.json",
+      "keywords": [
+        "icon",
+        "info"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "76:61",
+        "componentKey": "d5f00aeafa6cc9069dc5c625b166a22b7f37a02e"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-circle-check",
+      "name": "Icon / circle-check",
+      "slug": "icon-circle-check",
+      "kind": "component",
+      "contractPath": "./components/icon-circle-check.schema.json",
+      "keywords": [
+        "check",
+        "circle",
+        "icon"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "76:65",
+        "componentKey": "3186db050c52a72d40bf276b23bad7a28fdaa984"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-triangle-alert",
+      "name": "Icon / triangle-alert",
+      "slug": "icon-triangle-alert",
+      "kind": "component",
+      "contractPath": "./components/icon-triangle-alert.schema.json",
+      "keywords": [
+        "alert",
+        "icon",
+        "triangle"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "76:70",
+        "componentKey": "1c8eb3b4f8aee5e87cf959fa23fe3f7f8e5af231"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-message-circle",
+      "name": "Icon / message-circle",
+      "slug": "icon-message-circle",
+      "kind": "component",
+      "contractPath": "./components/icon-message-circle.schema.json",
+      "keywords": [
+        "circle",
+        "icon",
+        "message"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "76:73",
+        "componentKey": "e1924284346ad07acf29f78801202c7cec3584bb"
       },
       "codeSource": {
         "path": "design-system/css/components.css",
@@ -1079,6 +1215,158 @@
       }
     },
     {
+      "id": "component:modal-slot",
+      "name": "Modal / Slot",
+      "slug": "modal-slot",
+      "kind": "component",
+      "contractPath": "./components/modal-slot.schema.json",
+      "keywords": [
+        "modal",
+        "slot"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "79:52",
+        "componentKey": "f47417a77caa39a23ba74420490dbbbe84c4213d"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:modal",
+      "name": "Modal",
+      "slug": "modal",
+      "kind": "component",
+      "contractPath": "./components/modal.schema.json",
+      "keywords": [
+        "icon",
+        "modal"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right",
+        "icon-button",
+        "icon-close",
+        "modal-slot"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "79:123",
+        "componentKey": "e774e95fa65487ecca2a2070bbcbb18d2ddd3e07"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:alert",
+      "name": "Alert",
+      "slug": "alert",
+      "kind": "component",
+      "contractPath": "./components/alert.schema.json",
+      "keywords": [
+        "alert",
+        "icon"
+      ],
+      "dependencies": [
+        "icon-close",
+        "icon-info"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "80:138",
+        "componentKey": "b856e1a34892ef622f087a595ef6261b03a43b04"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:suggestion-bubble",
+      "name": "Suggestion bubble",
+      "slug": "suggestion-bubble",
+      "kind": "component",
+      "contractPath": "./components/suggestion-bubble.schema.json",
+      "keywords": [
+        "bubble",
+        "icon",
+        "suggestion"
+      ],
+      "dependencies": [
+        "icon-external-link",
+        "icon-message-circle"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "81:87",
+        "componentKey": "8af0be536c04b3ab802eee8e4fff4b6931fb9001"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:timer",
+      "name": "Timer",
+      "slug": "timer",
+      "kind": "component",
+      "contractPath": "./components/timer.schema.json",
+      "keywords": [
+        "icon",
+        "timer"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right",
+        "icon-play"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "82:143",
+        "componentKey": "31467016a91c15fbdab58af7c00290565c85a826"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:video-player",
+      "name": "Video player",
+      "slug": "video-player",
+      "kind": "component",
+      "contractPath": "./components/video-player.schema.json",
+      "keywords": [
+        "icon",
+        "player",
+        "video"
+      ],
+      "dependencies": [
+        "icon-play"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "83:70",
+        "componentKey": "7b062bb96aa6895c0502782396d3415a40d08445"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
       "id": "pattern:navbar",
       "name": "Navbar",
       "slug": "navbar",
@@ -1200,7 +1488,7 @@
     }
   ],
   "counts": {
-    "atoms": 45,
+    "atoms": 57,
     "patterns": 4
   }
 }

@@ -1,0 +1,88 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:icon-circle-check",
+  "meta": {
+    "name": "Icon / circle-check",
+    "slug": "icon-circle-check",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T15:16:17Z",
+    "description": "Éxito: Alert y Toast de tipo Success, temporizador terminado. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+    "figmaPage": "Icons",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": false,
+    "anatomyHash": "4ea2018c5e77"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/icon-circle-check.md",
+      "section": "Icon / circle-check"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "76:65",
+      "componentKey": "3186db050c52a72d40bf276b23bad7a28fdaa984"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [],
+    "variants": {},
+    "states": [],
+    "defaults": {},
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "icon/color/default",
+      "icon/size/md"
+    ],
+    "variablesUsed": [
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: icon/color/default",
+      "color: icon/color/default"
+    ],
+    "textStyles": [],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "icon/color/default"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [],
+    "related": []
+  }
+}

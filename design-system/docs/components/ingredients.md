@@ -1,7 +1,7 @@
-### Ingredients   ⚙️ synced: 2026-10-07T14:34:50Z
+### Ingredients   ⚙️ synced: 2026-10-07T15:16:17Z
 
 <!-- ⚙️ GENERATED:start:ingredients -->
-- **Figma:** `70:59` · página «Ingredients» · COMPONENT · 1 variantes · última sync 2026-10-07T14:34:50Z
+- **Figma:** `70:59` · página «Ingredients» · COMPONENT · 1 variantes · última sync 2026-10-07T15:16:17Z
 - **Descripción (Figma):** Bloque de ingredientes de la página de producto y de receta: título (h3) · ingredientes principales (Ingredient item Main, con %) · resto (Ingredient item Secondary) · Link «Ver etiqueta del envase» que abre el modal con la foto de la etiqueta (fase 5). Lista semántica &lt;ul&gt;; alérgenos en &lt;strong&gt;. Sin variables propias de bloque: usa ingredient/*.
 - **Anatomía:** `ingredient-main` → Level=Main, `ingredient-main` → Level=Main, `ingredient-main` → Level=Main, `ingredient-secondary` → Level=Secondary, `label-link` → Type=Standalone, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right
 - **Propiedades de componente:** ninguna

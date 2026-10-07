@@ -1,6 +1,6 @@
 /* ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO.
    Design system: GB Noodles · Microsites · fileKey: v4mnn154qUmiB35CCnRfgh
-   Última sync: 2026-10-07T14:34:50Z · modo de adopción: new
+   Última sync: 2026-10-07T15:16:17Z · modo de adopción: new
    Se regenera con el protocolo de sync de design.md. */
 
 :root {
@@ -26,6 +26,7 @@
   --color-status-info-700: #1f63b5; /* Icono y borde de información. Primitivo: no se consume en componentes. */
   --color-status-info-900: #0b4482; /* Texto de información. Primitivo: no se consume en componentes. */
   --shadow-ink-20: rgba(18, 18, 18, 0.2); /* Tinta al 20%. Translúcido permitido solo en sombras de elevación */
+  --overlay-ink-70: rgba(18, 18, 18, 0.7); /* Tinta al 70 %. Translúcido permitido solo en velos (overlay) de modales y paneles. Primitivo: no se consume en componentes. */
   /* ---- Semantic ---- */
   --color-surface-page: var(--color-yatekomo-yellow-soft); /* Fondo base de página */
   --color-surface-brand: var(--color-yatekomo-yellow); /* Fondo de marca (amarillo común a todas las marcas) */
@@ -64,6 +65,7 @@
   --shadow-soft: var(--shadow-ink-20); /* Color de la sombra suave (elevation/3) */
   --color-surface-disabled: var(--color-neutral-sand-200); /* Fondo de control desactivado */
   --color-text-disabled: var(--color-neutral-ink-600); /* Texto o icono de control desactivado (4.3:1 sobre surface/disabled) */
+  --color-surface-overlay: var(--overlay-ink-70); /* Velo detrás de modales y del menú móvil (layer/overlay). Única superficie translúcida; nunca lleva texto encima. */
   /* ---- Components ---- */
   --icon-size-sm: 16px; /* 16px. Iconos inline en texto y etiquetas */
   --icon-size-md: 24px; /* 24px. Tamaño por defecto de icono */
@@ -206,6 +208,50 @@
   --ingredient-meta: var(--color-text-secondary); /* ingredient: Notas y texto secundario */
   --nutrition-bg: var(--color-surface-card); /* nutrition: Fondo del panel */
   --nutrition-border: var(--color-border-default); /* nutrition: Borde del panel */
+  --modal-bg: var(--color-surface-card); /* modal: Fondo del diálogo */
+  --modal-border: var(--color-border-default); /* modal: Borde del diálogo */
+  --modal-title: var(--color-text-default); /* modal: Título */
+  --modal-text: var(--color-text-default); /* modal: Texto del cuerpo */
+  --modal-overlay: var(--color-surface-overlay); /* modal: Velo detrás del diálogo (translúcido) */
+  --modal-slot-bg: var(--color-surface-page); /* modal: Fondo del hueco de contenido (imagen de etiqueta, resultados) */
+  --suggestion-bg: var(--color-surface-inverse); /* suggestion: Fondo */
+  --suggestion-bg-hover: var(--color-surface-brand); /* suggestion: Fondo en hover */
+  --suggestion-text: var(--color-text-on-inverse); /* suggestion: Texto e icono */
+  --suggestion-text-hover: var(--color-text-default); /* suggestion: Texto e icono en hover */
+  --suggestion-border: var(--color-border-default); /* suggestion: Borde */
+  --suggestion-focus-ring: var(--color-border-default); /* suggestion: Anillo de foco */
+  --timer-bg: var(--color-surface-card); /* timer: Fondo */
+  --timer-border: var(--color-border-default); /* timer: Borde */
+  --timer-track: var(--color-border-subtle); /* timer: Pista del anillo (decorativa) */
+  --timer-progress: var(--color-surface-inverse); /* timer: Progreso del anillo (≥3:1 sobre la pista) */
+  --timer-progress-done: var(--color-surface-natural); /* timer: Anillo completo al terminar */
+  --timer-time: var(--color-text-default); /* timer: Tiempo restante */
+  --timer-label: var(--color-text-secondary); /* timer: Etiqueta y ayuda */
+  --timer-done-text: var(--color-text-natural); /* timer: Mensaje e icono de terminado */
+  --video-poster-bg: var(--color-surface-inverse); /* video: Fondo del póster hasta tener imagen */
+  --video-border: var(--color-border-default); /* video: Borde */
+  --video-play-bg: var(--color-surface-brand); /* video: Fondo del botón play */
+  --video-play-icon: var(--color-text-default); /* video: Icono play */
+  --video-meta-bg: var(--color-surface-inverse); /* video: Fondo de la duración */
+  --video-meta-text: var(--color-text-on-inverse); /* video: Texto de la duración y del póster */
+  --video-focus-ring: var(--color-text-brand-on-inverse); /* video: Anillo de foco del play (amarillo sobre póster oscuro) */
+  --alert-info-bg: var(--color-status-info-bg); /* alert: Fondo (info) */
+  --alert-info-text: var(--color-status-info-text); /* alert: Texto (info) */
+  --alert-info-icon: var(--color-status-info-icon); /* alert: Icono (info) */
+  --alert-info-border: var(--color-status-info-border); /* alert: Borde (info) */
+  --alert-success-bg: var(--color-status-success-bg); /* alert: Fondo (success) */
+  --alert-success-text: var(--color-status-success-text); /* alert: Texto (success) */
+  --alert-success-icon: var(--color-status-success-icon); /* alert: Icono (success) */
+  --alert-success-border: var(--color-status-success-border); /* alert: Borde (success) */
+  --alert-alert-bg: var(--color-status-alert-bg); /* alert: Fondo (alert) */
+  --alert-alert-text: var(--color-status-alert-text); /* alert: Texto (alert) */
+  --alert-alert-icon: var(--color-status-alert-icon); /* alert: Icono (alert) */
+  --alert-alert-border: var(--color-status-alert-border); /* alert: Borde (alert) */
+  --alert-error-bg: var(--color-status-error-bg); /* alert: Fondo (error) */
+  --alert-error-text: var(--color-status-error-text); /* alert: Texto (error) */
+  --alert-error-icon: var(--color-status-error-icon); /* alert: Icono (error) */
+  --alert-error-border: var(--color-status-error-border); /* alert: Borde (error) */
+  --alert-close: var(--color-text-default); /* alert: Icono cerrar */
   /* ---- Layer ---- */
   --layer-base: 0; /* z-index 0. Contenido normal de la página */
   --layer-raised: 10; /* z-index 10. Contenido por encima de imágenes dentro de una sección (copy del hero, banderas) */

@@ -153,6 +153,71 @@
       "type": "uses"
     },
     {
+      "from": "modal",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "modal",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "modal",
+      "to": "icon-button",
+      "type": "uses"
+    },
+    {
+      "from": "modal",
+      "to": "icon-close",
+      "type": "uses"
+    },
+    {
+      "from": "modal",
+      "to": "modal-slot",
+      "type": "uses"
+    },
+    {
+      "from": "alert",
+      "to": "icon-close",
+      "type": "uses"
+    },
+    {
+      "from": "alert",
+      "to": "icon-info",
+      "type": "uses"
+    },
+    {
+      "from": "suggestion-bubble",
+      "to": "icon-external-link",
+      "type": "uses"
+    },
+    {
+      "from": "suggestion-bubble",
+      "to": "icon-message-circle",
+      "type": "uses"
+    },
+    {
+      "from": "timer",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "timer",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "timer",
+      "to": "icon-play",
+      "type": "uses"
+    },
+    {
+      "from": "video-player",
+      "to": "icon-play",
+      "type": "uses"
+    },
+    {
       "from": "navbar",
       "to": "button",
       "type": "uses"
@@ -283,5 +348,5 @@
       "type": "uses"
     }
   ],
-  "lastSync": "2026-10-07T14:34:50Z"
+  "lastSync": "2026-10-07T15:16:17Z"
 }

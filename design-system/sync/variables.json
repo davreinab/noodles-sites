@@ -474,6 +474,28 @@
               }
             }
           }
+        },
+        {
+          "id": "VariableID:78:49",
+          "name": "overlay/ink-70",
+          "type": "COLOR",
+          "description": "Tinta al 70 %. Translúcido permitido solo en velos (overlay) de modales y paneles. Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--overlay-ink-70)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.0706,
+                "g": 0.0706,
+                "b": 0.0706,
+                "a": 0.7
+              }
+            }
+          }
         }
       ]
     },
@@ -2002,6 +2024,47 @@
               "type": "alias",
               "id": "VariableID:5:8",
               "name": "color/neutral/ink-600"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:50",
+          "name": "color/surface/overlay",
+          "type": "COLOR",
+          "description": "Velo detrás de modales y del menú móvil (layer/overlay). Única superficie translúcida; nunca lleva texto encima.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--color-surface-overlay)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "5:1": {
+              "type": "alias",
+              "id": "VariableID:78:49",
+              "name": "overlay/ink-70"
+            },
+            "13:0": {
+              "type": "alias",
+              "id": "VariableID:78:49",
+              "name": "overlay/ink-70"
+            },
+            "13:1": {
+              "type": "alias",
+              "id": "VariableID:78:49",
+              "name": "overlay/ink-70"
+            },
+            "13:2": {
+              "type": "alias",
+              "id": "VariableID:78:49",
+              "name": "overlay/ink-70"
+            },
+            "13:3": {
+              "type": "alias",
+              "id": "VariableID:78:49",
+              "name": "overlay/ink-70"
             }
           }
         }
@@ -4954,6 +5017,920 @@
               "type": "alias",
               "id": "VariableID:5:38",
               "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:51",
+          "name": "modal/bg",
+          "type": "COLOR",
+          "description": "modal: Fondo del diálogo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--modal-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:26",
+              "name": "color/surface/card"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:52",
+          "name": "modal/border",
+          "type": "COLOR",
+          "description": "modal: Borde del diálogo",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--modal-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:53",
+          "name": "modal/title",
+          "type": "COLOR",
+          "description": "modal: Título",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--modal-title)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:54",
+          "name": "modal/text",
+          "type": "COLOR",
+          "description": "modal: Texto del cuerpo",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--modal-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:55",
+          "name": "modal/overlay",
+          "type": "COLOR",
+          "description": "modal: Velo detrás del diálogo (translúcido)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--modal-overlay)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:78:50",
+              "name": "color/surface/overlay"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:56",
+          "name": "modal/slot-bg",
+          "type": "COLOR",
+          "description": "modal: Fondo del hueco de contenido (imagen de etiqueta, resultados)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--modal-slot-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:24",
+              "name": "color/surface/page"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:57",
+          "name": "suggestion/bg",
+          "type": "COLOR",
+          "description": "suggestion: Fondo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--suggestion-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:27",
+              "name": "color/surface/inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:58",
+          "name": "suggestion/bg-hover",
+          "type": "COLOR",
+          "description": "suggestion: Fondo en hover",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--suggestion-bg-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:25",
+              "name": "color/surface/brand"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:59",
+          "name": "suggestion/text",
+          "type": "COLOR",
+          "description": "suggestion: Texto e icono",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--suggestion-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:33",
+              "name": "color/text/on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:60",
+          "name": "suggestion/text-hover",
+          "type": "COLOR",
+          "description": "suggestion: Texto e icono en hover",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--suggestion-text-hover)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:61",
+          "name": "suggestion/border",
+          "type": "COLOR",
+          "description": "suggestion: Borde",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--suggestion-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:62",
+          "name": "suggestion/focus-ring",
+          "type": "COLOR",
+          "description": "suggestion: Anillo de foco",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--suggestion-focus-ring)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:63",
+          "name": "timer/bg",
+          "type": "COLOR",
+          "description": "timer: Fondo",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--timer-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:26",
+              "name": "color/surface/card"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:64",
+          "name": "timer/border",
+          "type": "COLOR",
+          "description": "timer: Borde",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--timer-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:65",
+          "name": "timer/track",
+          "type": "COLOR",
+          "description": "timer: Pista del anillo (decorativa)",
+          "scopes": [
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--timer-track)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:39",
+              "name": "color/border/subtle"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:66",
+          "name": "timer/progress",
+          "type": "COLOR",
+          "description": "timer: Progreso del anillo (≥3:1 sobre la pista)",
+          "scopes": [
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--timer-progress)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:27",
+              "name": "color/surface/inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:67",
+          "name": "timer/progress-done",
+          "type": "COLOR",
+          "description": "timer: Anillo completo al terminar",
+          "scopes": [
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--timer-progress-done)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:28",
+              "name": "color/surface/natural"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:68",
+          "name": "timer/time",
+          "type": "COLOR",
+          "description": "timer: Tiempo restante",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--timer-time)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:69",
+          "name": "timer/label",
+          "type": "COLOR",
+          "description": "timer: Etiqueta y ayuda",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--timer-label)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:32",
+              "name": "color/text/secondary"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:70",
+          "name": "timer/done-text",
+          "type": "COLOR",
+          "description": "timer: Mensaje e icono de terminado",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--timer-done-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:36",
+              "name": "color/text/natural"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:71",
+          "name": "video/poster-bg",
+          "type": "COLOR",
+          "description": "video: Fondo del póster hasta tener imagen",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--video-poster-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:27",
+              "name": "color/surface/inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:72",
+          "name": "video/border",
+          "type": "COLOR",
+          "description": "video: Borde",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--video-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:38",
+              "name": "color/border/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:73",
+          "name": "video/play-bg",
+          "type": "COLOR",
+          "description": "video: Fondo del botón play",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--video-play-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:25",
+              "name": "color/surface/brand"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:74",
+          "name": "video/play-icon",
+          "type": "COLOR",
+          "description": "video: Icono play",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--video-play-icon)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:75",
+          "name": "video/meta-bg",
+          "type": "COLOR",
+          "description": "video: Fondo de la duración",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--video-meta-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:27",
+              "name": "color/surface/inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:76",
+          "name": "video/meta-text",
+          "type": "COLOR",
+          "description": "video: Texto de la duración y del póster",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--video-meta-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:33",
+              "name": "color/text/on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:77",
+          "name": "video/focus-ring",
+          "type": "COLOR",
+          "description": "video: Anillo de foco del play (amarillo sobre póster oscuro)",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--video-focus-ring)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:34",
+              "name": "color/text/brand-on-inverse"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:78",
+          "name": "alert/info/bg",
+          "type": "COLOR",
+          "description": "alert: Fondo (info)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-info-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:54",
+              "name": "color/status/info/bg"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:79",
+          "name": "alert/info/text",
+          "type": "COLOR",
+          "description": "alert: Texto (info)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-info-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:55",
+              "name": "color/status/info/text"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:80",
+          "name": "alert/info/icon",
+          "type": "COLOR",
+          "description": "alert: Icono (info)",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-info-icon)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:56",
+              "name": "color/status/info/icon"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:81",
+          "name": "alert/info/border",
+          "type": "COLOR",
+          "description": "alert: Borde (info)",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-info-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:57",
+              "name": "color/status/info/border"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:82",
+          "name": "alert/success/bg",
+          "type": "COLOR",
+          "description": "alert: Fondo (success)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-success-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:46",
+              "name": "color/status/success/bg"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:83",
+          "name": "alert/success/text",
+          "type": "COLOR",
+          "description": "alert: Texto (success)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-success-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:47",
+              "name": "color/status/success/text"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:84",
+          "name": "alert/success/icon",
+          "type": "COLOR",
+          "description": "alert: Icono (success)",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-success-icon)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:48",
+              "name": "color/status/success/icon"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:85",
+          "name": "alert/success/border",
+          "type": "COLOR",
+          "description": "alert: Borde (success)",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-success-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:49",
+              "name": "color/status/success/border"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:86",
+          "name": "alert/alert/bg",
+          "type": "COLOR",
+          "description": "alert: Fondo (alert)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-alert-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:50",
+              "name": "color/status/alert/bg"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:87",
+          "name": "alert/alert/text",
+          "type": "COLOR",
+          "description": "alert: Texto (alert)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-alert-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:51",
+              "name": "color/status/alert/text"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:88",
+          "name": "alert/alert/icon",
+          "type": "COLOR",
+          "description": "alert: Icono (alert)",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-alert-icon)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:52",
+              "name": "color/status/alert/icon"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:89",
+          "name": "alert/alert/border",
+          "type": "COLOR",
+          "description": "alert: Borde (alert)",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-alert-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:53",
+              "name": "color/status/alert/border"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:90",
+          "name": "alert/error/bg",
+          "type": "COLOR",
+          "description": "alert: Fondo (error)",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-error-bg)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:42",
+              "name": "color/status/error/bg"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:91",
+          "name": "alert/error/text",
+          "type": "COLOR",
+          "description": "alert: Texto (error)",
+          "scopes": [
+            "TEXT_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-error-text)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:43",
+              "name": "color/status/error/text"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:92",
+          "name": "alert/error/icon",
+          "type": "COLOR",
+          "description": "alert: Icono (error)",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-error-icon)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:44",
+              "name": "color/status/error/icon"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:93",
+          "name": "alert/error/border",
+          "type": "COLOR",
+          "description": "alert: Borde (error)",
+          "scopes": [
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-error-border)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:45",
+              "name": "color/status/error/border"
+            }
+          }
+        },
+        {
+          "id": "VariableID:78:94",
+          "name": "alert/close",
+          "type": "COLOR",
+          "description": "alert: Icono cerrar",
+          "scopes": [
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--alert-close)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:5:31",
+              "name": "color/text/default"
             }
           }
         }

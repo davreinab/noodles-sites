@@ -1,0 +1,222 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:video-player",
+  "meta": {
+    "name": "Video player",
+    "slug": "video-player",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T15:16:17Z",
+    "description": "Reproductor de vídeo como fachada. State=Poster: póster de marca (sin imagen generada con IA), botón play de 80 px (video/play-bg, borde grueso) y duración. State=Playing: al pulsar se sustituye por el reproductor real (iframe de YouTube con youtube-nocookie o &lt;video&gt; MP4) con sus controles nativos; no se carga nada de terceros antes del clic (privacidad y rendimiento). Ratio=16:9 (preparación, promo de Home, concursos) y 9:16 (recetas en vídeo vertical). Accesibilidad: el play es un &lt;button&gt; con nombre «Reproducir vídeo: &lt;título&gt; (0:45)»; foco con anillo video/focus-ring amarillo sobre el póster oscuro; subtítulos obligatorios si el vídeo tiene voz; sin autoplay con sonido; el GIF de preparación usa este mismo componente en MP4 silencioso en bucle con botón de pausa.",
+    "figmaPage": "Video player",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 4,
+    "autoLayout": false,
+    "anatomyHash": "7663dd7eebf5"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/video-player.md",
+      "section": "Video player"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "83:70",
+      "componentKey": "7b062bb96aa6895c0502782396d3415a40d08445"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Duration#83:0",
+        "kind": "TEXT",
+        "default": "0:45"
+      },
+      {
+        "name": "Play icon#83:5",
+        "kind": "INSTANCE_SWAP",
+        "default": "30:79",
+        "defaultComponent": "Icon / play",
+        "preferredValues": []
+      },
+      {
+        "name": "Ratio",
+        "kind": "VARIANT",
+        "default": "16:9",
+        "values": [
+          "16:9",
+          "9:16"
+        ]
+      },
+      {
+        "name": "State",
+        "kind": "VARIANT",
+        "default": "Poster",
+        "values": [
+          "Poster",
+          "Playing"
+        ]
+      }
+    ],
+    "variants": {
+      "Ratio": [
+        "16:9",
+        "9:16"
+      ],
+      "State": [
+        "Poster",
+        "Playing"
+      ]
+    },
+    "states": [
+      "Poster",
+      "Playing"
+    ],
+    "defaults": {
+      "Ratio": "16:9",
+      "State": "Poster"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "icon-play",
+        "component": "Icon / play",
+        "componentSlug": "icon-play",
+        "exposedAs": "Play icon#83:5",
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "Play icon#83:5"
+      ],
+      "defaultIcons": [
+        "Icon / play"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "border/width/thick",
+      "border/width/thin",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/label",
+      "font/size/desktop/caption",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/lg",
+      "radius/md",
+      "radius/pill",
+      "space/4",
+      "space/8",
+      "video/border",
+      "video/meta-bg",
+      "video/meta-text",
+      "video/play-bg",
+      "video/play-icon",
+      "video/poster-bg"
+    ],
+    "variablesUsed": [
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: video/poster-bg",
+      "strokes: video/border",
+      "color: video/poster-bg",
+      "color: video/border",
+      "fills: video/meta-text",
+      "fontSize: font/size/desktop/caption",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: video/meta-text",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thick",
+      "strokeBottomWeight: border/width/thick",
+      "strokeLeftWeight: border/width/thick",
+      "strokeRightWeight: border/width/thick",
+      "fills: video/play-bg",
+      "color: video/play-bg",
+      "width: icon/size/lg",
+      "height: icon/size/lg",
+      "strokes: video/play-icon",
+      "color: video/play-icon",
+      "paddingLeft: space/8",
+      "paddingTop: space/4",
+      "paddingRight: space/8",
+      "paddingBottom: space/4",
+      "fills: video/meta-bg",
+      "color: video/meta-bg",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label"
+    ],
+    "textStyles": [
+      "Desktop/caption",
+      "Desktop/label"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "font/family/body",
+        "font/family/display",
+        "font/line-height/desktop/caption",
+        "font/line-height/desktop/label",
+        "font/size/desktop/caption",
+        "font/size/desktop/label",
+        "font/style/body",
+        "font/style/display",
+        "video/border",
+        "video/meta-bg",
+        "video/meta-text",
+        "video/play-bg",
+        "video/play-icon",
+        "video/poster-bg"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "icon-play"
+    ],
+    "usedBy": [],
+    "related": []
+  }
+}

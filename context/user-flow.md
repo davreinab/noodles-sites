@@ -45,18 +45,16 @@ Noodle Site
 ├── Contest Library ── 🏆 Contest page ── Contest rules
 ├── GBfoods Contact page (external link)
 ├── FAQS
-├── 💼 Legal information landing pages
-│   ├── Privacy policies
-│   ├── Legal notice
-│   ├── Cookie policies
-│   └── Lawful basis
-├── ⭐ New product landing pages
-└── 🔥 Campaign landing pages
+└── 💼 Legal information landing pages
+    ├── Privacy policies
+    ├── Legal notice
+    ├── Cookie policies
+    └── Lawful basis
 ```
 
 En el tablero, Bags y Sauces no se despliegan en líneas; solo Cups llega a Original, Yakisoba y Rice, y las tres
-desembocan en la misma Product page. Las landings de producto nuevo y de campaña comparten la plantilla
-«Landing Pages» (ver § 12).
+desembocan en la misma Product page. El tablero incluye además «New product landing pages» y «Campaign
+landing pages» con su plantilla: **no son de este proyecto** (David Reina, 2026-10-07) y no se recogen aquí.
 
 **Transversales (todas las páginas):**
 - Navbar que se oculta al bajar y reaparece al subir.
@@ -156,25 +154,9 @@ Detalle: ⬜ TODO.
 ### 11. Contacto
 Enlace externo.
 
-### 12. Landing pages (producto nuevo y campaña)
-Plantilla «Landing Pages» del FigJam, compartida por las landings de producto nuevo y de campaña.
-
-**Estructura en el FigJam** (de arriba abajo; Navbar, Suggestion bubble, Footer y Bottom footer en todas):
-- **Hero section:** render o imagen clara del producto, nombre (Yatekomo), claim «The Only 100% Natural», CTA «Discover how» (lleva a Natural formula details) y sello verde natural.
-- **Brand moodboard** (extensión del hero, se puede saltar con el CTA principal): imágenes y claims de marca; ejemplos del tablero: «We call out the bullshit», «We make food we'd feed our families proudly».
-- **Natural formula details:** ventajas de la nueva fórmula: 1) 100 % ingredientes naturales («de 30 % a 100 %», con tachado) y lista de ingredientes con imagen; 2) mejor perfil nutricional: −20 % sal y −80 % grasas saturadas; 3) «Big on flavour, short on ingredients»: sin aditivos, conservantes, aceite de palma ni glutamato. Cierre: «Better formula, same flavour: Don't believe it? Go try it by yourself and tell us» (lleva a la suggestion box).
-- **Products and flavours:** «Find the flavour that fits you the most». Original («Stick to the basics…») y Yakisoba («Twist it with a more authentic Asian flavour…»), una al lado de otra con un render de cada una y sin navegación; sabores disponibles (no packs: nombre, color o ingrediente) y ventaja de la Cup: lista en 3 minutos.
-- **Brand purpose:** el mismo bloque «Taste you can trust» de la Natural formula page (4 bloques).
-- **Suggestion box:** «Any feedback, suggestion or idea for us? Share it here!», con formulario (email y texto libre).
-- **Footer:** logo, contacto y sellos de salud y certificados alimentarios.
-
-Las secciones de referencia del tablero (hero, moodboard, propósito de marca, productos y sabores,
-fórmula natural) y el bloque «To keep in mind» contienen solo imágenes de referencia, sin texto.
-
 ### Pendiente de decidir (FigJam frente al resto del contexto)
 Lo que el FigJam propone y choca o va más allá de lo ya acordado. No se resuelve aquí: se lleva a
 `synthesis.md` como decisión cuando el cliente o el equipo lo confirmen.
-- **Suggestion box:** en la landing es un formulario propio (email y texto); en [`business-rules.md § Contacto`](./business-rules.md) es un enlace al formulario externo de Calidad.
 - **Recipe library:** el tablero pide filtro, búsqueda y orden; la regla vigente descarta el buscador por ingredientes (los filtros por etiqueta o producto no están decididos).
 - **Contest page:** el tablero dibuja formulario de participación propio y testimonios; el traspaso admite tres modelos (estructura propia, iframe, enlace externo).
 - **Product page:** badges «hot!» y «vegan!» y moodboard del sabor, que no existen todavía en el design system; también la navegación cruzada y los packs.

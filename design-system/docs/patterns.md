@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un patrón que no esté aquí; los patrones se componen de átomos y consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 18 patrones sincronizados el 2026-10-07T17:09:12Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 18 patrones sincronizados el 2026-10-07T17:39:59Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -76,7 +76,7 @@ Cada ficha nace con el bloque generado y cuatro campos de criterio en `⬜ TODO`
 | Contenedor | Token `--layout-*` | Dónde se usa |
 |---|---|---|
 | página (max-width) | `--layout-frame` con `--layout-margin` a cada lado; contenido hasta `--layout-content-max` | Todas las secciones. Las franjas a sangre (Marquee, Product filter) ignoran el margen. |
-| columna de lectura / prosa | ⬜ TODO — falta token de columna de lectura (propuesta: 720 px, `layout/reading`) | Legales, respuestas del FAQ, textos largos de Natural formula. Hasta tenerlo, 8 de 12 columnas. |
+| columna de lectura / prosa | `--layout-reading` (720 px, máximo) | Legales, respuestas del FAQ y textos largos de Natural formula y FAQS. En móvil manda el ancho de la columna. |
 | panel lateral / drawer | no se usa en microsites | El menú móvil es a pantalla completa (Mobile menu). |
 | modal | anchos del componente Modal: M 560 · L 880 · Full (móvil) | M: alérgenos y resultado de concurso; L: etiqueta del envase y búsqueda. |
 

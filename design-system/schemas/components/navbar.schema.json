@@ -6,7 +6,7 @@
     "slug": "navbar",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T17:09:12Z",
+    "lastSync": "2026-10-07T17:39:59Z",
     "description": "Patrón de cabecera. Desktop: logo · 5 Nav item (Bar) · Lang switch (solo marcas multiidioma) · buscar · CTA «Dónde comprar». Mobile: logo · buscar · menú (abre Mobile menu). Comportamiento: sticky (layer/sticky); se oculta al hacer scroll hacia abajo y reaparece al subir; respeta prefers-reduced-motion. Ancho ligado a layout/frame con modo fijado por variante. Sin variables propias: compone componentes y semánticos.",
     "figmaPage": "Pattern / Navbar",
     "figmaType": "COMPONENT_SET",

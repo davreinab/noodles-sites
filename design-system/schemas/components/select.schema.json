@@ -6,7 +6,7 @@
     "slug": "select",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T17:09:12Z",
+    "lastSync": "2026-10-07T17:39:59Z",
     "description": "Selector de una opción: país o idioma (Aiki NL/FR), filtros. Open muestra el menú (elevation/3) con la opción activa en amarillo de marca. En código se recomienda &lt;select&gt; nativo o un listbox accesible (teclado: flechas, Enter, Esc). Error con borde, icono y mensaje. Valor y opciones se editan en la instancia.",
     "figmaPage": "Select",
     "figmaType": "COMPONENT_SET",

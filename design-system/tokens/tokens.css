@@ -1,6 +1,6 @@
 /* ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO.
    Design system: GB Noodles · Microsites · fileKey: v4mnn154qUmiB35CCnRfgh
-   Última sync: 2026-10-07T17:09:12Z · modo de adopción: new
+   Última sync: 2026-10-07T17:39:59Z · modo de adopción: new
    Se regenera con el protocolo de sync de design.md. */
 
 :root {
@@ -288,6 +288,7 @@
   --layout-content-max: 1280px; /* Ancho máximo del contenido */
   --layout-frame: 1440px; /* Ancho del frame de diseño de referencia */
   --layout-section-y: 96px; /* Padding vertical entre secciones */
+  --layout-reading: 720px; /* Ancho máximo de la columna de lectura (720 px): legales, respuestas del FAQ, textos largos de Natural formula. Es un máximo: en móvil manda el ancho de la columna. */
   /* ---- Typography ---- */
   --font-family-display: Anton; /* Display: titulares, labels de botón. Siempre mayúsculas. Provisional hasta resolver licencia/fuente con acentos */
   --font-family-body: Archivo; /* Texto corrido, formularios, navegación */

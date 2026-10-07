@@ -1,7 +1,7 @@
-### Recipe hero   ⚙️ synced: 2026-10-07T17:09:12Z
+### Recipe hero   ⚙️ synced: 2026-10-07T17:39:59Z
 
 <!-- ⚙️ GENERATED:start:recipe-hero -->
-- **Figma:** `96:113` · página «Pattern / Recipe hero» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T17:09:12Z
+- **Figma:** `96:113` · página «Pattern / Recipe hero» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T17:39:59Z
 - **Descripción (Figma):** Cabecera de la página de receta: kicker «Receta» · título (h1) · tiempo (timer) y dificultad · descripción · productos usados como Chip M (enlazan a la ficha de producto; lista &lt;ul&gt;) · imagen principal de marca (sin vídeo al principio, regla de negocio). Fondo color/surface/brand. Después van Product details (ingredientes y nutrición de la receta) y Preparation sin Timer con Step Media=True. Desktop: texto a la izquierda; Mobile: imagen arriba. Sin variables propias.
 - **Anatomía:** `icon` → Icon / timer, `icon` → Icon / circle-check, `product-chip` → Size=M, State=Default, `icon-leading` → Icon / check
 - **Breakpoint:** Desktop, Mobile

@@ -6645,6 +6645,33 @@
               "value": 64
             }
           }
+        },
+        {
+          "id": "VariableID:102:49",
+          "name": "layout/reading",
+          "type": "FLOAT",
+          "description": "Ancho máximo de la columna de lectura (720 px): legales, respuestas del FAQ, textos largos de Natural formula. Es un máximo: en móvil manda el ancho de la columna.",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--layout-reading)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "13:5": {
+              "type": "value",
+              "value": 720
+            },
+            "13:6": {
+              "type": "value",
+              "value": 720
+            },
+            "13:7": {
+              "type": "value",
+              "value": 720
+            }
+          }
         }
       ]
     },

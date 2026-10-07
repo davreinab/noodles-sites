@@ -1,7 +1,7 @@
-### Accordion item   ⚙️ synced: 2026-10-07T17:09:12Z
+### Accordion item   ⚙️ synced: 2026-10-07T17:39:59Z
 
 <!-- ⚙️ GENERATED:start:accordion-item -->
-- **Figma:** `69:93` · página «Accordion item» · COMPONENT_SET · 6 variantes · última sync 2026-10-07T17:09:12Z
+- **Figma:** `69:93` · página «Accordion item» · COMPONENT_SET · 6 variantes · última sync 2026-10-07T17:39:59Z
 - **Descripción (Figma):** Ítem de acordeón para FAQ (página FAQS indexada, Natural formula, Home). Cabecera = &lt;button aria-expanded aria-controls&gt; dentro de un encabezado (h3); la respuesta es una región ligada a la cabecera. Enter/Espacio abren y cierran; cada ítem es independiente (varios abiertos a la vez). Icono plus (cerrado) / minus (abierto), swaps Icon collapsed / Icon expanded. Para SEO/AEO la respuesta está en el HTML aunque esté cerrada (FAQPage schema). Hover: accordion/bg-hover; Focus: anillo accordion/focus-ring. Ancho FILL de la columna de lectura.
 - **Anatomía:** `icon-collapsed` → Icon / plus
 - **Expanded:** False, True

@@ -2,7 +2,7 @@
 
 # GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
 
-> Última sync: **2026-10-07T17:09:12Z** · modo de adopción: `new` · 324 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-07T17:39:59Z** · modo de adopción: `new` · 325 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice
@@ -12,7 +12,7 @@
 - [Components](#components) · 185 tokens · modos: Value
 - [Layer](#layer) · 7 tokens · modos: Value
 - [Spacing](#spacing) · 20 tokens · modos: Value
-- [Layout](#layout) · 6 tokens · modos: Desktop, Tablet, Mobile
+- [Layout](#layout) · 7 tokens · modos: Desktop, Tablet, Mobile
 - [Typography](#typography) · 41 tokens · modos: Yatekomo, Saikebon, Aiki, Daisuki, DE
 - [Motion](#motion) · 5 tokens · modos: Value
 - [Marcas](#marcas)
@@ -338,6 +338,7 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 | `layout/content-max` | `--layout-content-max` | FLOAT | `1280px` | `1280px` | `1280px` | WIDTH_HEIGHT | Ancho máximo del contenido |
 | `layout/frame` | `--layout-frame` | FLOAT | `1440px` | `768px` | `375px` | WIDTH_HEIGHT | Ancho del frame de diseño de referencia |
 | `layout/section-y` | `--layout-section-y` | FLOAT | `96px` | `80px` | `64px` | GAP | Padding vertical entre secciones |
+| `layout/reading` | `--layout-reading` | FLOAT | `720px` | `720px` | `720px` | WIDTH_HEIGHT | Ancho máximo de la columna de lectura (720 px): legales, respuestas del FAQ, textos largos de Natural formula. Es un máximo: en móvil manda el ancho de la columna. |
 
 ## Typography
 

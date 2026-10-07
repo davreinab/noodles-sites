@@ -1,0 +1,17 @@
+{
+  "designSystem": "GB Noodles · Microsites",
+  "note": "Registro de retiradas del DS. Se mantiene A MANO (o desde una propuesta aprobada), no lo genera el sync. Es la única fuente sobre qué está obsoleto: los contratos y los informes lo leen de aquí.",
+  "policy": {
+    "minNoticeDays": 180,
+    "warnFromDay": 0,
+    "blockNewUsageFromDay": 120,
+    "removeIn": "siguiente versión mayor tras cumplirse el plazo",
+    "note": "El plazo corre desde 'since'. Antes de 'blockNewUsageFromDay' el uso existente solo avisa; a partir de ahí, un uso nuevo es error."
+  },
+  "entryContract": {
+    "requiredFields": ["id", "kind", "since", "removeIn", "reason", "replacement"],
+    "kind": ["component", "pattern", "token", "class"],
+    "replacement": "id del sustituto, o null si se retira sin sustituto (hay que explicarlo en reason)"
+  },
+  "deprecations": []
+}

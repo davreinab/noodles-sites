@@ -1,0 +1,10 @@
+{
+  "designSystem": "GB Noodles · Microsites",
+  "generatedAt": null,
+  "note": "Informe de scripts/ds-lifecycle.py. No editar a mano. ⬜ Pendiente de la primera ejecución.",
+  "summary": { "deprecations": 0, "errors": 0, "warnings": 0, "stillUsed": 0 },
+  "errors": [],
+  "warnings": [],
+  "usage": {},
+  "contractsStamped": []
+}

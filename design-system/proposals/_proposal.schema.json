@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./_proposal.schema.json",
+  "title": "GB Noodles · Microsites design-system proposal",
+  "type": "object",
+  "required": ["id", "status", "summary", "evidence", "impact", "requiredApprover"],
+  "properties": {
+    "id": { "type": "string" },
+    "status": { "enum": ["draft", "approved", "rejected", "applied"] },
+    "summary": { "type": "string" },
+    "evidence": { "type": "array", "items": { "type": "object" } },
+    "affectedResources": { "type": "array", "items": { "type": "string" } },
+    "proposedChange": { "type": "object" },
+    "impact": { "type": "object" },
+    "accessibility": { "type": "object" },
+    "migration": { "type": ["object", "null"] },
+    "requiredApprover": { "type": "string" },
+    "decision": { "type": ["object", "null"] }
+  },
+  "additionalProperties": false
+}

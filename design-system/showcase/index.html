@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GB Noodles · Microsites · Design System</title>
+  <!-- Tokens y componentes REALES del DS: el showcase los consume, nunca los redefine. -->
+  <link rel="stylesheet" href="../tokens/tokens.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <!-- Chrome del showcase: agnóstico del cliente, aislado por namespace.
+       Reglas (las vigila scripts/token-audit.py):
+         · todo selector incluye `.sc-*` o `[data-sc-*]`; nunca :root, html, body ni clases del DS
+         · solo declara custom properties `--sc-*`; nunca toca tokens del DS
+         · sus valores son libres (es el único CSS del proyecto donde se admiten crudos) -->
+  <style data-showcase-chrome>
+    .sc-root { --sc-bg: #f6f7f9; --sc-panel: #ffffff; --sc-ink: #1c1f24; --sc-muted: #5b6270; --sc-line: #d9dde3;
+               --sc-accent: #3557d6; --sc-radius: 10px; --sc-gap: 24px; --sc-font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+               --sc-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+               min-height: 100vh; background: var(--sc-bg); color: var(--sc-ink); font: 14px/1.5 var(--sc-font); }
+    html[data-theme="dark"] .sc-root { --sc-bg: #14161a; --sc-panel: #1c1f25; --sc-ink: #e8eaee; --sc-muted: #9aa2ad; --sc-line: #2c313a; --sc-accent: #7c9cff; }
+    .sc-root *, .sc-root *::before, .sc-root *::after { box-sizing: border-box; }
+    .sc-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 16px; padding: 12px var(--sc-gap);
+                 background: var(--sc-panel); border-bottom: 1px solid var(--sc-line); }
+    .sc-header__title { margin: 0; font-size: 16px; font-weight: 600; }
+    .sc-header__meta { color: var(--sc-muted); font-size: 12px; }
+    .sc-header__spacer { flex: 1; }
+    .sc-btn { font: inherit; padding: 6px 12px; border: 1px solid var(--sc-line); border-radius: 999px; background: var(--sc-panel);
+              color: var(--sc-ink); cursor: pointer; }
+    .sc-btn:hover { border-color: var(--sc-accent); }
+    .sc-layout { display: grid; grid-template-columns: 220px 1fr; gap: var(--sc-gap); padding: var(--sc-gap); max-width: 1400px; margin: 0 auto; }
+    .sc-nav { position: sticky; top: 64px; align-self: start; display: flex; flex-direction: column; gap: 4px; }
+    .sc-nav a { color: var(--sc-muted); text-decoration: none; padding: 6px 10px; border-radius: 6px; }
+    .sc-nav a:hover, .sc-nav a[aria-current="true"] { color: var(--sc-ink); background: var(--sc-panel); }
+    .sc-main { display: flex; flex-direction: column; gap: 40px; min-width: 0; }
+    .sc-section > h2 { margin: 0 0 4px; font-size: 22px; }
+    .sc-section__lead { margin: 0 0 16px; color: var(--sc-muted); }
+    .sc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .sc-card { background: var(--sc-panel); border: 1px solid var(--sc-line); border-radius: var(--sc-radius); overflow: hidden; }
+    .sc-card__head { display: flex; align-items: baseline; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--sc-line); }
+    .sc-card__head h3 { margin: 0; font-size: 15px; }
+    .sc-tag { font-size: 11px; color: var(--sc-muted); border: 1px solid var(--sc-line); border-radius: 999px; padding: 1px 8px; }
+    .sc-demo { padding: 24px 16px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .sc-demo--block { display: block; }
+    .sc-code { margin: 0; padding: 12px 16px; border-top: 1px solid var(--sc-line); font: 12px/1.5 var(--sc-mono); color: var(--sc-muted);
+               white-space: pre-wrap; word-break: break-word; }
+    .sc-swatch { display: grid; grid-template-columns: 40px 1fr; gap: 10px; align-items: center; padding: 8px 12px; }
+    .sc-swatch__chip { width: 40px; height: 40px; border-radius: 8px; border: 1px solid var(--sc-line); background: var(--sc-swatch); }
+    .sc-swatch__name { font: 12px/1.4 var(--sc-mono); }
+    .sc-swatch__value { color: var(--sc-muted); font-size: 12px; }
+    .sc-table { width: 100%; border-collapse: collapse; background: var(--sc-panel); border: 1px solid var(--sc-line); border-radius: var(--sc-radius); overflow: hidden; }
+    .sc-table th, .sc-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--sc-line); vertical-align: top; }
+    .sc-table th { color: var(--sc-muted); font-weight: 500; font-size: 12px; }
+    .sc-empty { padding: 24px; border: 1px dashed var(--sc-line); border-radius: var(--sc-radius); color: var(--sc-muted); text-align: center; }
+    @media (max-width: 860px) { .sc-layout { grid-template-columns: 1fr; } .sc-nav { position: static; flex-direction: row; flex-wrap: wrap; } }
+  </style>
+</head>
+<body>
+<div class="sc-root">
+  <header class="sc-header">
+    <h1 class="sc-header__title">GB Noodles · Microsites · Design System</h1>
+    <span class="sc-header__meta" data-sc-last-sync>⬜ pendiente del primer sync</span>
+    <span class="sc-header__spacer"></span>
+    <button class="sc-btn" type="button" data-sc-theme-toggle aria-pressed="false">Tema oscuro</button>
+  </header>
+
+  <div class="sc-layout">
+    <nav class="sc-nav" aria-label="Secciones">
+      <a href="#sc-tokens">Tokens</a>
+      <a href="#sc-components">Componentes</a>
+      <a href="#sc-patterns">Patrones</a>
+      <a href="#sc-composition">Composición</a>
+      <a href="#sc-assets">Assets</a>
+    </nav>
+
+    <main class="sc-main">
+      <section class="sc-section" id="sc-tokens">
+        <h2>Tokens</h2>
+        <p class="sc-section__lead">Espejo de <code>tokens/tokens.css</code>. Cada chip pinta el token real; el valor se lee del propio CSS.</p>
+        <!-- ⚙️ GENERATED:start:tokens -->
+        <div class="sc-empty">Sin tokens todavía: pendiente del primer sync desde Figma.</div>
+        <!-- ⚙️ GENERATED:end:tokens -->
+      </section>
+
+      <section class="sc-section" id="sc-components">
+        <h2>Componentes</h2>
+        <p class="sc-section__lead">Una tarjeta por ficha de <code>docs/components/&lt;slug&gt;.md</code>: el «Ejemplo de código» renderizado con las clases reales y su snippet.</p>
+        <!-- ⚙️ GENERATED:start:components -->
+        <div class="sc-empty">Sin componentes todavía: se generan con el sync.</div>
+        <!-- ⚙️ GENERATED:end:components -->
+      </section>
+
+      <section class="sc-section" id="sc-patterns">
+        <h2>Patrones</h2>
+        <p class="sc-section__lead">Compuestos de <code>docs/patterns/&lt;slug&gt;.md</code>, renderizados con los átomos del DS.</p>
+        <!-- ⚙️ GENERATED:start:patterns -->
+        <div class="sc-empty">Sin patrones todavía.</div>
+        <!-- ⚙️ GENERATED:end:patterns -->
+      </section>
+
+      <section class="sc-section" id="sc-composition">
+        <h2>Composición de pantalla</h2>
+        <p class="sc-section__lead">Reglas de <code>docs/patterns.md § Composición de pantalla</code>: ritmo, contenedores, grid y breakpoints, paneles y capas.</p>
+        <!-- ⚙️ GENERATED:start:composition -->
+        <div class="sc-empty">Reglas de composición pendientes.</div>
+        <!-- ⚙️ GENERATED:end:composition -->
+      </section>
+
+      <section class="sc-section" id="sc-assets">
+        <h2>Assets</h2>
+        <p class="sc-section__lead">Iconos y fuentes exportados de Figma a <code>assets/</code>, documentados en <code>docs/assets.md</code>.</p>
+        <!-- ⚙️ GENERATED:start:assets -->
+        <div class="sc-empty">Sin assets exportados todavía.</div>
+        <!-- ⚙️ GENERATED:end:assets -->
+      </section>
+    </main>
+  </div>
+</div>
+
+<script>
+  // Tema: conmuta data-theme en <html> — activa los semánticos Dark del DS y el chrome oscuro del showcase.
+  (function () {
+    var btn = document.querySelector('[data-sc-theme-toggle]');
+    var root = document.documentElement;
+    function apply(theme) {
+      root.setAttribute('data-theme', theme);
+      btn.setAttribute('aria-pressed', String(theme === 'dark'));
+      btn.textContent = theme === 'dark' ? 'Tema claro' : 'Tema oscuro';
+      try { localStorage.setItem('sc-theme', theme); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('sc-theme'); } catch (e) {}
+    apply(saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+    btn.addEventListener('click', function () { apply(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); });
+    // Navegación: marca la sección visible.
+    var links = document.querySelectorAll('.sc-nav a');
+    var sections = Array.prototype.map.call(links, function (a) { return document.querySelector(a.getAttribute('href')); });
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) links.forEach(function (a, i) { a.setAttribute('aria-current', String(sections[i] === e.target)); });
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+      sections.forEach(function (s) { if (s) io.observe(s); });
+    }
+  })();
+</script>
+</body>
+</html>

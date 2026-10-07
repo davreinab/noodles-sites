@@ -1,0 +1,301 @@
+{
+  "designSystem": "GB Noodles · Microsites",
+  "note": "Qué puede hacer el agente, en todo el proyecto y no solo en el design system. `level` es el nivel natural de la capacidad; `steps` son los tipos de paso que contiene (ver governance/autonomy.json). El permiso efectivo es el menor entre `level` y el techo.",
+  "contract": {
+    "requiredFields": [
+      "action",
+      "approval",
+      "level",
+      "steps",
+      "domain",
+      "why"
+    ],
+    "steps": [
+      "D",
+      "C",
+      "H"
+    ],
+    "domain": [
+      "design-system",
+      "context"
+    ]
+  },
+  "capabilities": [
+    {
+      "action": "read",
+      "approval": "automatic",
+      "level": 0,
+      "steps": [
+        "D"
+      ],
+      "domain": "design-system",
+      "why": "Leer un archivo del proyecto."
+    },
+    {
+      "action": "retrieve-scoped-context",
+      "approval": "automatic",
+      "level": 0,
+      "steps": [
+        "D"
+      ],
+      "domain": "design-system",
+      "why": "Cargar solo el recurso pedido y sus dependencias declaradas."
+    },
+    {
+      "action": "read-figma-via-official-mcp",
+      "approval": "automatic-when-connected",
+      "level": 0,
+      "steps": [
+        "D"
+      ],
+      "domain": "design-system",
+      "why": "Lectura por el MCP oficial. No escribe."
+    },
+    {
+      "action": "analyze-existing-design-system",
+      "approval": "automatic-read-only",
+      "level": 0,
+      "steps": [
+        "D",
+        "C"
+      ],
+      "domain": "design-system",
+      "why": "Inventariar un DS en Figma en solo lectura; el juicio sobre lo que ve es cognitivo, pero no escribe."
+    },
+    {
+      "action": "audit-drift",
+      "approval": "automatic",
+      "level": 1,
+      "steps": [
+        "D"
+      ],
+      "domain": "design-system",
+      "why": "Comparar Figma contra los artefactos y reportar. Determinista de punta a punta."
+    },
+    {
+      "action": "audit-figma-design-system",
+      "approval": "automatic-read-only",
+      "level": 1,
+      "steps": [
+        "D",
+        "C"
+      ],
+      "domain": "design-system",
+      "why": "Auditar el DS y clasificar hallazgos; la clasificación es cognitiva, el reporte no cambia nada."
+    },
+    {
+      "action": "draft-proposal",
+      "approval": "automatic",
+      "level": 2,
+      "steps": [
+        "C"
+      ],
+      "domain": "design-system",
+      "why": "Redactar una propuesta. Queda sin aplicar por definición."
+    },
+    {
+      "action": "apply-deterministic-generated-artifact",
+      "approval": "policy-dependent",
+      "level": 4,
+      "steps": [
+        "D"
+      ],
+      "domain": "design-system",
+      "why": "Regenerar un artefacto desde la fuente de verdad. Misma entrada, misma salida: verificable sin juicio."
+    },
+    {
+      "action": "write-figma-via-official-mcp",
+      "approval": "policy-dependent",
+      "level": 3,
+      "steps": [
+        "C",
+        "H"
+      ],
+      "domain": "design-system",
+      "why": "Escritura en Figma. Siempre tras aprobación del cambio concreto."
+    },
+    {
+      "action": "create-component-in-figma-on-user-request",
+      "approval": "explicit-user-request-official-mcp-only",
+      "level": 3,
+      "steps": [
+        "C",
+        "H"
+      ],
+      "domain": "design-system",
+      "why": "Solo a petición explícita, por el MCP oficial y con las mismas aprobaciones."
+    },
+    {
+      "action": "sync-local-ds-artifacts-from-figma",
+      "approval": "automatic-when-connected",
+      "level": 4,
+      "steps": [
+        "C",
+        "D"
+      ],
+      "domain": "design-system",
+      "why": "Mismo caso que el anterior; nombre heredado."
+    },
+    {
+      "action": "apply-variable-scopes-and-descriptions",
+      "approval": "human-review-per-batch",
+      "level": 3,
+      "steps": [
+        "C",
+        "H"
+      ],
+      "domain": "design-system",
+      "why": "El scope más estrecho y la descripción los propone un modelo; se aplican por lotes revisados."
+    },
+    {
+      "action": "apply-audit-mechanical-fixes",
+      "approval": "human-review-per-batch",
+      "level": 3,
+      "steps": [
+        "C",
+        "H"
+      ],
+      "domain": "design-system",
+      "why": "Correcciones mecánicas propuestas y aprobadas por lote."
+    },
+    {
+      "action": "restructure-existing-design-system",
+      "approval": "explicit-approved-migration-plan",
+      "level": 3,
+      "steps": [
+        "C",
+        "H"
+      ],
+      "domain": "design-system",
+      "why": "Exige plan de migración aprobado antes de escribir."
+    },
+    {
+      "action": "change-token",
+      "approval": "human-review",
+      "level": 3,
+      "steps": [
+        "C",
+        "H"
+      ],
+      "domain": "design-system",
+      "why": "Contiene juicio: qué valor, qué nombre, qué alias. No sube de 3 aunque el techo lo permita."
+    },
+    {
+      "action": "change-component",
+      "approval": "human-review",
+      "level": 3,
+      "steps": [
+        "C",
+        "H"
+      ],
+      "domain": "design-system",
+      "why": "Contiene juicio sobre la API del componente."
+    },
+    {
+      "action": "change-primitive-or-semantic",
+      "approval": "human-review",
+      "level": 3,
+      "steps": [
+        "C",
+        "H"
+      ],
+      "domain": "design-system",
+      "why": "Toca la base del sistema: juicio y revisión humana."
+    },
+    {
+      "action": "publish-figma-library",
+      "approval": "explicit-human-approval",
+      "level": 3,
+      "steps": [
+        "H"
+      ],
+      "domain": "design-system",
+      "why": "Efecto irreversible hacia fuera: siempre un sí explícito."
+    },
+    {
+      "action": "read-context",
+      "approval": "automatic",
+      "level": 0,
+      "steps": [
+        "D"
+      ],
+      "domain": "context",
+      "why": "Leer los documentos de context/."
+    },
+    {
+      "action": "report-missing-context",
+      "approval": "automatic",
+      "level": 1,
+      "steps": [
+        "C"
+      ],
+      "domain": "context",
+      "why": "Decir qué falta y dónde debería estar. No rellena."
+    },
+    {
+      "action": "place-new-context-datum",
+      "approval": "human-review",
+      "level": 3,
+      "steps": [
+        "C",
+        "H"
+      ],
+      "domain": "context",
+      "why": "Colocar un dato nuevo en el documento que le toca por la tabla de distribución. Hay juicio en el destino."
+    },
+    {
+      "action": "create-context-document",
+      "approval": "explicit-user-request",
+      "level": 3,
+      "steps": [
+        "H"
+      ],
+      "domain": "context",
+      "why": "Crear un .md nuevo en context/. Nunca automático."
+    },
+    {
+      "action": "write-research-note",
+      "approval": "human-review",
+      "level": 3,
+      "steps": [
+        "C",
+        "H"
+      ],
+      "domain": "context",
+      "why": "Escribir una nota de research o analytics y regenerar el índice."
+    },
+    {
+      "action": "rewrite-synthesis",
+      "approval": "human-review",
+      "level": 3,
+      "steps": [
+        "C",
+        "H"
+      ],
+      "domain": "context",
+      "why": "Reescribir hallazgos, touchpoints, features o user stories: toca la trazabilidad."
+    },
+    {
+      "action": "change-requirement",
+      "approval": "human-review",
+      "level": 3,
+      "steps": [
+        "C",
+        "H"
+      ],
+      "domain": "context",
+      "why": "Cambiar un requisito y su Origen: toca la trazabilidad."
+    },
+    {
+      "action": "change-business-rule",
+      "approval": "human-review",
+      "level": 3,
+      "steps": [
+        "C",
+        "H"
+      ],
+      "domain": "context",
+      "why": "Lo más delicado del contexto: una regla mal escrita contamina todo lo que venga después."
+    }
+  ]
+}

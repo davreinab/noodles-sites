@@ -1,0 +1,103 @@
+{
+  "project": "GB Noodles · Microsites",
+  "note": "De qué está hecho este proyecto. No todos los proyectos tienen todo: hay encargos de solo investigación y estrategia, de solo estrategia y design system, y de los tres. Y un módulo puede activarse semanas después. Lo que no está activo no se crea, no se audita y no se exige. Cada comprobación consulta este archivo antes de pedir nada.",
+  "core": {
+    "note": "El núcleo existe siempre: las instrucciones para agentes, qué es el producto, el gobierno y la verificación mínima. Sin esto no hay proyecto.",
+    "paths": [
+      "AGENTS.md",
+      "CLAUDE.md",
+      "GEMINI.md",
+      "README.md",
+      "context/AGENTS.md",
+      "context/CLAUDE.md",
+      "context/GEMINI.md",
+      "context/project-context.md",
+      "context/reports/",
+      "governance/",
+      "scripts/ds-module.py",
+      "scripts/ds-phase.py",
+      "scripts/ds-autonomy.py",
+      "scripts/activity.py",
+      "scripts/context-audit.py",
+      "scripts/context-audit.config.json",
+      ".githooks/",
+      "ci/"
+    ]
+  },
+  "modules": {
+    "investigacion": {
+      "title": "Investigación: la evidencia sobre la que se decide",
+      "active": false,
+      "decidedAt": "2026-10-07",
+      "decidedBy": "David Reina",
+      "activatedAt": null,
+      "activatedBy": null,
+      "paths": [
+        "research/",
+        "analytics/",
+        "scripts/research-index.py"
+      ],
+      "enables": [
+        "Notas por fuente con unidades citables, índice consultable y trazabilidad hasta los requisitos"
+      ],
+      "withoutIt": "El proyecto se diseña sobre lo que el cliente afirme. Es una decisión legítima, pero se declara."
+    },
+    "estrategia": {
+      "title": "Estrategia: qué se construye y por qué",
+      "active": true,
+      "decidedAt": "2026-10-07",
+      "decidedBy": "David Reina",
+      "activatedAt": "2026-10-07",
+      "activatedBy": "David Reina",
+      "paths": [
+        "context/objectives.md",
+        "context/users.md",
+        "context/business-rules.md",
+        "context/data-model.md",
+        "context/user-flow.md",
+        "context/glossary.md",
+        "context/proposal-agreements.md",
+        "context/synthesis.md",
+        "context/specs.md",
+        "UX/direction/",
+        "UX/mobile-environment.md",
+        "UX/wireframes/"
+      ],
+      "enables": [
+        "Objetivos con métrica, reglas de negocio, flujos, síntesis trazada y requisitos con origen"
+      ],
+      "withoutIt": "Solo cabe ejecutar lo que ya esté decidido en otra parte."
+    },
+    "design-system": {
+      "title": "Design system: cómo se ve y con qué se construye",
+      "active": true,
+      "decidedAt": "2026-10-07",
+      "decidedBy": "David Reina",
+      "activatedAt": "2026-10-07",
+      "activatedBy": "David Reina",
+      "paths": [
+        "design-system/",
+        "UI/",
+        "scripts/ds-sync.py",
+        "scripts/ds-sync.config.json",
+        "scripts/token-audit.py",
+        "scripts/token-audit.config.json",
+        "scripts/agent-readiness.py",
+        "scripts/ds-lifecycle.py",
+        "scripts/ds-release.py",
+        "scripts/ds-coverage.py",
+        "scripts/tokens-dtcg.py"
+      ],
+      "enables": [
+        "Tokens y componentes sincronizados desde Figma, contratos, catálogo visual, auditorías y pantallas"
+      ],
+      "withoutIt": "No hay nada que auditar ni que sincronizar. Un proyecto de investigación y estrategia no lo necesita."
+    }
+  },
+  "rules": [
+    "Un módulo sin decidir (`active: null`) se pregunta en el brief. No se presupone. La decisión, sea sí o no, se registra en `decidedAt` y `decidedBy`; `activatedAt` y `activatedBy` solo se rellenan si el módulo está activo.",
+    "Lo que no está activo no se crea. Crear su carpeta vacía es ruido y hace que las auditorías exijan lo que nadie va a usar.",
+    "Activar un módulo más tarde es normal y está previsto: `scripts/ds-module.py --activate <id>` crea sus rutas y lo registra con fecha y quién.",
+    "Desactivar un módulo que ya tiene contenido NO borra nada: solo deja de exigirlo. El borrado es decisión de una persona, nunca del agente."
+  ]
+}

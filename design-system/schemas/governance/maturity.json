@@ -1,0 +1,20 @@
+{
+  "designSystem": "GB Noodles · Microsites",
+  "stage": 1,
+  "targetStage": 2,
+  "status": {
+    "documented": true,
+    "machineReadable": false,
+    "localScopedContextAvailable": false,
+    "figmaMcpConnected": true,
+    "customDesignSystemMcpRequired": false,
+    "controlledFigmaWriteBackAvailable": false
+  },
+  "checks": {
+    "resolvedTokenLookup": false,
+    "structuredComponentContract": false,
+    "scopedContextRetrieval": false,
+    "reviewableChangeProposal": true
+  },
+  "note": "Los checks pasan a true cuando los artefactos reales se generan y verifican."
+}

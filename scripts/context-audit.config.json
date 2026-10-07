@@ -1,0 +1,10 @@
+{
+  "docs": {},
+  "vigencia": {
+    "mesesPlazo": 6,
+    "nota": "Plazo de reconfirmación de los documentos de context/. Pasarse es aviso, nunca error. Los exentos son normativa (reglas de propiedad): no caducan.",
+    "exentos": [
+      "AGENTS.md"
+    ]
+  }
+}

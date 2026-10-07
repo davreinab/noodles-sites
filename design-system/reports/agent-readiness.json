@@ -1,0 +1,11 @@
+{
+  "designSystem": "GB Noodles · Microsites",
+  "rubricVersion": null,
+  "note": "Informe de scripts/agent-readiness.py. Se regenera con cada auditoría; no editar a mano. ⬜ Pendiente de la primera puntuación.",
+  "score": null,
+  "scale": "0-5",
+  "passThreshold": 4,
+  "passes": false,
+  "counts": { "cumple": 0, "aplicables": 0, "noAplica": 0 },
+  "criteria": []
+}

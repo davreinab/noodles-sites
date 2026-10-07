@@ -1,0 +1,9 @@
+{
+  "root": null,
+  "errors": 0,
+  "warnings": 0,
+  "errorsByProperty": {},
+  "docsChecked": 0,
+  "findings": [],
+  "note": "Informe de scripts/context-audit.py (--out context/reports/context-audit.json). No editar a mano. ⬜ Pendiente de la primera ejecución."
+}

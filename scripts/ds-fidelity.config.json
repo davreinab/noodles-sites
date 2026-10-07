@@ -1,0 +1,13 @@
+{
+  "severity": {
+    "token-not-used": "warn",
+    "variant-without-css": "warn",
+    "example-class-missing": "warn",
+    "example-external-image": "warn",
+    "screen-uses-unverified": "warn"
+  },
+  "modifiers": {},
+  "ignoreTokens": {
+    "_all": []
+  }
+}

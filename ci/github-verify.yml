@@ -1,0 +1,23 @@
+# Plantilla de la skill init-proyecto — para activarla, mover a .github/workflows/verify.yml
+name: verify
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.x" }
+      - name: Auditoría de valores crudos, estructura y showcase (DS)
+        run: python3 scripts/token-audit.py --out design-system/reports/token-audit.json
+      - name: Fidelidad de los contratos a su maestro de Figma (DS)
+        run: python3 scripts/ds-fidelity.py --out design-system/reports/fidelity.json
+      - name: Secciones obligatorias de context/
+        run: python3 scripts/context-audit.py --out context/reports/context-audit.json
+      - name: Índice de research al día
+        run: python3 scripts/research-index.py --check
+      - name: Índice de analítica al día
+        run: python3 scripts/research-index.py --dir analytics --check

@@ -1,0 +1,6 @@
+{
+  "version": "0.0.0",
+  "releasedAt": null,
+  "note": "Línea base de la última publicación del DS. La escribe scripts/ds-release.py --apply; no editar a mano. ⬜ Sin publicaciones todavía.",
+  "state": { "tokens": {}, "components": {} }
+}

@@ -1,0 +1,27 @@
+{
+  "designSystem": "GB Noodles · Microsites",
+  "adoptionMode": "new",
+  "structuralStandardsEnforced": true,
+  "constraints": {
+    "targetTokenHierarchy": ["Primitive", "Semantic", "Components"],
+    "existingMethodology": "DS nuevo (`new`): todavía no existe librería de variables ni de componentes en Figma. Se construirá según el estándar de la skill, sembrado con los valores probados en las landings de la Fase 1 (traspaso-microsites §9). Cada marca redefine sus colores de marca con los mismos nombres de token; los componentes no cambian.",
+    "componentVariablesAllowedFor": ["component"],
+    "componentVariablesForbiddenFor": ["pattern"],
+    "requiredFeedbackFamilies": ["alert", "success", "error", "info"],
+    "spacing": { "base": 8, "exceptions": [2, 4] },
+    "primitiveColorScopes": [],
+    "forbiddenVariableScope": "ALL_SCOPES",
+    "fluidDimensionException": true,
+    "wcagLevel": "AA",
+    "requiredFoundations": {
+      "iconSize": { "figma": "Components → icon/size/*", "css": "--icon-size-*", "status": "pending" },
+      "layer": { "figma": "Layer → layer/*", "css": "--z-*", "status": "pending" },
+      "motion": { "figma": "Motion → motion/duration/* · motion/easing/*", "css": "--motion-duration-* · --motion-easing-*", "status": "pending" },
+      "elevation": { "figma": "effect styles elevation/*", "css": "--elevation-*", "status": "pending", "mayBeDeclaredNotApplicable": true }
+    },
+    "rawValues": { "allowedInCode": false, "enforcedBy": "scripts/token-audit.py", "hairlineMaxPx": 2 },
+    "breakpoints": { "documentedIn": "patterns.md § Composición de pantalla", "mirroredIn": "scripts/token-audit.config.json", "values": [] },
+    "compositionRulesRequired": ["ritmo-vertical", "contenedores", "grid-breakpoints", "paneles-capas", "flujo-contenido"],
+    "codeExampleRequiredPerContract": true
+  }
+}

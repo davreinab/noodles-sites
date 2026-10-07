@@ -1,0 +1,22 @@
+# Plantilla de la skill init-proyecto — para activarla, mover a la raíz como bitbucket-pipelines.yml
+image: python:3-slim
+pipelines:
+  default:
+    - step:
+        name: Verificar DS, contexto, research y analítica
+        script:
+          - python3 scripts/token-audit.py --out design-system/reports/token-audit.json
+          - python3 scripts/ds-fidelity.py --out design-system/reports/fidelity.json
+          - python3 scripts/context-audit.py --out context/reports/context-audit.json
+          - python3 scripts/research-index.py --check
+          - python3 scripts/research-index.py --dir analytics --check
+  pull-requests:
+    '**':
+      - step:
+          name: Verificar DS, contexto, research y analítica
+          script:
+            - python3 scripts/token-audit.py --out design-system/reports/token-audit.json
+            - python3 scripts/ds-fidelity.py --out design-system/reports/fidelity.json
+            - python3 scripts/context-audit.py --out context/reports/context-audit.json
+            - python3 scripts/research-index.py --check
+            - python3 scripts/research-index.py --dir analytics --check

@@ -1,0 +1,54 @@
+#!/bin/sh
+# Hook de git del proyecto GB Noodles · Microsites — instalado por la skill init-proyecto.
+# Activo tras `git config core.hooksPath .githooks` (lo hace la skill en el Paso 4).
+# Ejecuta las verificaciones mecánicas del repo y rechaza el commit si alguna falla.
+# Si falla, se corrige el valor crudo, el archivo mal colocado o el índice; nunca el hook
+# ni los scripts. Saltarlo con `--no-verify` exige anotar el motivo en el mensaje de commit.
+#
+# Las verificaciones de los módulos activos se ejecutan TODAS, aunque una falle: el commit se
+# rechaza al final con el recuento. Son cinco: token-audit y ds-fidelity (design-system),
+# context-audit (siempre), y los índices de research y de analítica (investigacion). Así se ve todo lo que hay que arreglar en una sola pasada, en vez
+# de descubrirlo de uno en uno (cada script audita una materia distinta y son independientes).
+set -u
+cd "$(git rev-parse --show-toplevel)"
+PY="${PYTHON:-python3}"
+
+# Solo hay control cuando el proyecto está conectado a un repositorio remoto. Un diseñador
+# puede trabajar en local y conectarlo después: mientras no haya remoto, el commit pasa sin
+# comprobar nada. En cuanto se añade (`git remote add …`), las comprobaciones se activan solas
+# en el siguiente commit. A mano se pueden ejecutar siempre (ver AGENTS.md).
+if [ -z "$(git remote)" ]; then
+  echo "pre-commit · sin repositorio remoto: comprobaciones desactivadas hasta conectar uno"
+  exit 0
+fi
+failed=""
+
+# Solo se audita lo que este proyecto tiene. Un encargo de investigación y estrategia no
+# arrastra la auditoría del design system: ver governance/modules.json.
+if "$PY" scripts/ds-module.py --is-active design-system >/dev/null 2>&1; then
+  echo "pre-commit · auditoría de valores crudos, estructura y showcase (DS)"
+  "$PY" scripts/token-audit.py || failed="$failed token-audit"
+  echo "pre-commit · fidelidad de los contratos a su maestro de Figma (DS)"
+  "$PY" scripts/ds-fidelity.py || failed="$failed ds-fidelity"
+fi
+
+echo "pre-commit · secciones obligatorias de context/"
+"$PY" scripts/context-audit.py || failed="$failed context-audit"
+
+if "$PY" scripts/ds-module.py --is-active investigacion >/dev/null 2>&1; then
+  echo "pre-commit · índice de research"
+  "$PY" scripts/research-index.py --check || failed="$failed research-index"
+fi
+
+if "$PY" scripts/ds-module.py --is-active investigacion >/dev/null 2>&1; then
+  echo "pre-commit · índice de analítica"
+  "$PY" scripts/research-index.py --dir analytics --check || failed="$failed analytics-index"
+fi
+
+if [ -n "$failed" ]; then
+  echo ""
+  echo "pre-commit · commit rechazado — falla:$failed"
+  exit 1
+fi
+
+echo "pre-commit · todo en verde"

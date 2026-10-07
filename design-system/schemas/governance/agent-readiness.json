@@ -1,0 +1,79 @@
+{
+  "designSystem": "GB Noodles · Microsites",
+  "rubricVersion": "1.0.0",
+  "note": "Rúbrica propia de preparación del DS para consumo por agentes. Los criterios se verifican contra los artefactos que genera esta skill, no contra definiciones externas. Se puntúa con scripts/agent-readiness.py; el informe vive en reports/agent-readiness.json.",
+  "scoring": {
+    "scale": "0-5",
+    "rule": "nota = 5 × (criterios cumplidos ÷ criterios aplicables). Un criterio marcado 'no-aplica' sale del denominador y se lista aparte: una decisión tomada del proyecto no infla ni penaliza la nota.",
+    "passThreshold": 4
+  },
+  "criteria": [
+    {
+      "id": "entry-point",
+      "title": "Punto de entrada único para agentes",
+      "asks": "¿Puede un agente encontrar el DS sin recorrer el repo?",
+      "verifies": "design-system/agent-manifest.json existe, parsea y todas las rutas de resources apuntan a archivos reales.",
+      "applies": "always"
+    },
+    {
+      "id": "machine-readable-tokens",
+      "title": "Tokens legibles por máquina",
+      "asks": "¿Se puede resolver el valor de un token sin leer documentación?",
+      "verifies": "tokens/tokens.json existe y cada token cumple tokenContract.requiredFields, con alias y valor resuelto por modo.",
+      "applies": "always"
+    },
+    {
+      "id": "component-registry",
+      "title": "Registro de componentes enumerable",
+      "asks": "¿Puede un agente listar los componentes y encontrar el contrato de cada uno?",
+      "verifies": "schemas/index.json existe y hay correspondencia 1:1 con schemas/components/<slug>.schema.json en ambos sentidos.",
+      "applies": "always"
+    },
+    {
+      "id": "typed-contracts",
+      "title": "Contratos con valores cerrados",
+      "asks": "¿Están acotados los valores válidos, o hay texto libre que invita a inventar?",
+      "verifies": "Cada schema valida contra _component.schema.json y declara variantes, estados y tamaños como listas cerradas, no como prosa.",
+      "applies": "always"
+    },
+    {
+      "id": "runnable-patterns",
+      "title": "Ejemplos ejecutables, no capturas",
+      "asks": "¿Hay código que se pueda copiar y que funcione?",
+      "verifies": "Cada contrato lleva ejemplo de código y sus clases existen en css/components.css (política code-example-present).",
+      "applies": "always"
+    },
+    {
+      "id": "scoped-retrieval",
+      "title": "Recuperación parcial",
+      "asks": "¿Se puede cargar un componente sin cargar el sistema entero?",
+      "verifies": "agent-manifest.retrieval.fullSystemLoad es false y componentContract da la ruta por componente.",
+      "applies": "always"
+    },
+    {
+      "id": "semantic-naming",
+      "title": "Nombres por intención",
+      "asks": "¿Los nombres dicen para qué sirve el token o cómo se ve?",
+      "verifies": "Existe capa semántica y ningún componente o pantalla consume primitivos directos (política no-primitive-consumption, medida por token-audit.py).",
+      "applies": "always"
+    },
+    {
+      "id": "external-token-format",
+      "title": "Exportación en formato de terceros",
+      "asks": "¿Puede una herramienta de fuera leer los tokens sin conocer este formato?",
+      "verifies": "exports.dtcg.enabled es true y tokens/w3c/ está al día (scripts/tokens-dtcg.py --check devuelve 0).",
+      "applies": "when-enabled",
+      "enabledBy": "agent-manifest.exports.dtcg.enabled",
+      "whenDisabled": "no-aplica: exportación no solicitada por el proyecto"
+    },
+    {
+      "id": "context-protocol",
+      "title": "Consultable por protocolo de contexto",
+      "asks": "¿Se puede preguntar al DS en vivo durante una sesión?",
+      "verifies": "Existe un servidor de contexto propio del DS y agent-manifest lo declara.",
+      "applies": "when-enabled",
+      "enabledBy": "agent-manifest.integrations.customDesignSystemMcp.required",
+      "whenDisabled": "no-aplica: esta skill no configura un servidor propio; la ruta por archivos cubre el mismo caso"
+    }
+  ]
+}

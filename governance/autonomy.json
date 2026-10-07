@@ -1,0 +1,58 @@
+{
+  "designSystem": "GB Noodles · Microsites",
+  "scaleVersion": "1.0.0",
+  "note": "Hasta dónde puede llegar el agente en este proyecto. Escala propia: no se deduce de ninguna fuente externa. El permiso efectivo de cada capacidad es el MENOR entre su nivel natural y el techo.",
+  "scale": [
+    {
+      "level": 0,
+      "name": "Observa",
+      "means": "Lee y muestra. No escribe en ningún sitio."
+    },
+    {
+      "level": 1,
+      "name": "Señala",
+      "means": "Detecta problemas y los reporta. No prepara el cambio."
+    },
+    {
+      "level": 2,
+      "name": "Prepara",
+      "means": "Deja el cambio listo y sin aplicar: propuesta, borrador, informe."
+    },
+    {
+      "level": 3,
+      "name": "Ejecuta tras confirmación",
+      "means": "Escribe solo tras un sí explícito para ese cambio concreto."
+    },
+    {
+      "level": 4,
+      "name": "Ejecuta dentro de límites",
+      "means": "Escribe sin preguntar mientras no salga de un límite declarado. Caso típico: regenerar un artefacto determinista desde la fuente de verdad."
+    },
+    {
+      "level": 5,
+      "name": "Gestiona el proceso",
+      "means": "Encadena pasos y solo escala ante excepciones."
+    }
+  ],
+  "ceiling": {
+    "maxLevel": 3,
+    "decidedBy": "David Reina",
+    "decidedAt": "2026-10-07",
+    "raisingRequiresProposal": true,
+    "note": "Bajarlo es inmediato. Subirlo es una decisión de producto y pasa por design-system/proposals/. Sin decisión registrada, el techo por defecto es 3."
+  },
+  "executionTypes": {
+    "D": "determinista — código puro; misma entrada, misma salida",
+    "C": "cognitivo — decide un modelo; salida acotada y validada por un paso D antes de seguir",
+    "H": "humano — un punto de aprobación declarado en el diseño, no improvisado"
+  },
+  "twoDimensions": "La autonomía se declara POR CAPACIDAD; el tipo de ejecución, POR PASO. Una capacidad puede combinar pasos D, C y H. El nivel no sale de si la capacidad escribe o no, sino de qué pasos contiene, qué decisiones puede tomar y qué controles hay antes del efecto. Consecuencia: una operación determinista y verificable puede ir por encima de una que requiera juicio, aunque ambas modifiquen archivos.",
+  "limits": {
+    "enforcedAt": [
+      "el gancho de pre-commit",
+      "la integración continua",
+      "los scripts que se niegan a ejecutarse"
+    ],
+    "honestNote": "Esto no impide físicamente que un modelo actúe: la skill es Markdown y scripts. El techo muerde donde el mecanismo es real."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "designSystem": "GB Noodles · Microsites",
+  "generatedAt": null,
+  "adoptionMode": "new",
+  "sourcesCompared": ["figma", "markdown", "tokens-json", "tokens-css", "component-contracts", "code"],
+  "summary": { "critical": 0, "warning": 0, "info": 0 },
+  "findings": [],
+  "acceptedStructuralDifferences": [],
+  "checks": [
+    "figma-vs-tokens-json",
+    "tokens-json-vs-css",
+    "figma-vs-component-contracts",
+    "markdown-vs-schemas",
+    "missing-variable-description-or-scope",
+    "unbound-local-values",
+    "unnamed-or-generic-layers",
+    "missing-auto-layout",
+    "component-without-schema",
+    "schema-without-component",
+    "schema-missing-swap-property",
+    "schema-missing-nested-instance",
+    "schema-icon-undeclared",
+    "icon-not-exposed-as-swap",
+    "foundation-missing",
+    "token-audit-errors",
+    "code-example-missing-or-stale",
+    "composition-rule-missing"
+  ]
+}

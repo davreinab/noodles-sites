@@ -1,0 +1,211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./_component.schema.json",
+  "title": "GB Noodles · Microsites component contract",
+  "type": "object",
+  "required": ["id", "meta", "source", "api", "behavior", "compatibility", "relations"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "meta": {
+      "type": "object",
+      "required": ["name", "slug", "kind", "version", "lastSync"],
+      "properties": {
+        "name": { "type": "string" },
+        "slug": { "type": "string" },
+        "kind": { "enum": ["component", "pattern"] },
+        "version": { "type": "string" },
+        "lastSync": { "type": ["string", "null"] },
+            "anatomyHash": { "type": "string", "description": "Fingerprint (12 hex) of the master's anatomy as read from Figma: component key, variant axes, properties, bound tokens and nested children. Written by ds-sync; no dates, so the same master yields the same hash. The verification protocol copies it into verification.figmaVersion." },
+            "verification": {
+              "type": "object",
+              "description": "Whether this contract (CSS + .md) has been checked against its Figma master, variant by variant, following design.md § Verificación contra el maestro. Written by the person or agent who verifies; ds-sync keeps it and flips it to 'stale' when anatomyHash changes or the master disappears. Missing block = unverified.",
+              "required": ["status"],
+              "properties": {
+                "status": { "type": "string", "enum": ["verified", "unverified", "stale"] },
+                "date": { "type": "string", "description": "YYYY-MM-DD of the last verification." },
+                "figmaVersion": { "type": "string", "description": "meta.anatomyHash at the time of verification." },
+                "variantsChecked": { "type": "array", "items": { "type": "string" }, "description": "e.g. 'type=negative, state=default'." },
+                "by": { "type": "string", "description": "Person or agent." },
+                "staleSince": { "type": "string" },
+                "reason": { "type": "string" }
+              },
+              "additionalProperties": true
+            },
+        "description": { "type": "string" },
+        "lifecycle": {
+          "description": "Estado de vida del componente. Se rellena desde schemas/governance/lifecycle.json; 'active' si no hay entrada.",
+          "type": "object",
+          "required": ["status"],
+          "properties": {
+            "status": { "enum": ["active", "deprecated", "removed"] },
+            "since": { "type": ["string", "null"], "description": "Fecha ISO en que se marcó obsoleto." },
+            "removeIn": { "type": ["string", "null"], "description": "Versión del DS en la que desaparece." },
+            "replacement": { "type": ["string", "null"], "description": "Slug del sustituto, o null si no lo hay." },
+            "reason": { "type": ["string", "null"] }
+          },
+          "if": { "properties": { "status": { "const": "deprecated" } } },
+          "then": { "required": ["status", "since", "removeIn", "reason"] },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": true
+    },
+    "source": {
+      "type": "object",
+      "required": ["figma", "docs"],
+      "properties": {
+        "docs": {
+          "description": "Where the hand-written criteria of this contract live: purpose, accessibility, when to use and what it does not do. They live only there; the schema points, it does not copy.",
+          "type": "object",
+          "required": ["file", "section"],
+          "properties": {
+            "file": { "type": "string", "description": "Path from the project root to the contract's own file: design-system/docs/components/<slug>.md or design-system/docs/patterns/<slug>.md." },
+            "section": { "type": "string", "description": "Exact text of the '### <Nombre>' heading, without the sync date that follows it." }
+          },
+          "additionalProperties": false
+        },
+        "figma": {
+          "type": "object",
+          "properties": {
+            "fileKey": { "type": ["string", "null"] },
+            "nodeId": { "type": ["string", "null"] },
+            "componentKey": { "type": ["string", "null"] }
+          },
+          "additionalProperties": true
+        },
+        "code": {
+          "type": "object",
+          "properties": {
+            "package": { "type": ["string", "null"] },
+            "import": { "type": ["string", "null"] },
+            "path": { "type": ["string", "null"] },
+            "classes": { "type": "array", "items": { "type": "string" }, "description": "CSS classes that realize this component in components.css (block, elements, modifiers)." },
+            "example": { "type": ["string", "null"], "description": "Minimal HTML snippet using the real classes, mirrored from the 'Ejemplo de código' of the .md contract. null only if the component has no HTML realization yet." }
+          },
+          "required": ["classes", "example"],
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "api": {
+      "type": "object",
+      "required": ["properties", "variants", "states", "defaults", "nestedInstances", "icons"],
+      "properties": {
+        "properties": {
+          "description": "Figma component properties, read from componentPropertyDefinitions. One entry per property, never only the names.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "kind"],
+            "properties": {
+              "name": { "type": "string" },
+              "kind": { "enum": ["TEXT", "BOOLEAN", "VARIANT", "INSTANCE_SWAP"] },
+              "default": {},
+              "values": { "type": "array", "items": { "type": "string" } },
+              "defaultComponent": { "type": ["string", "null"], "description": "INSTANCE_SWAP only: resolved name of the default component (e.g. 'Icon / arrow right')." },
+              "preferredValues": { "type": "array", "items": { "type": "object" } },
+              "controlsLayer": { "type": ["string", "null"] },
+              "description": { "type": "string" }
+            },
+            "if": { "properties": { "kind": { "const": "INSTANCE_SWAP" } } },
+            "then": { "required": ["defaultComponent"] },
+            "additionalProperties": true
+          }
+        },
+        "variants": {
+          "description": "Variant axes: { axis: [values] } as read from variantGroupProperties.",
+          "type": "object",
+          "additionalProperties": { "type": "array", "items": { "type": "string" } }
+        },
+        "states": { "type": "array", "items": { "type": "string" } },
+        "defaults": { "type": "object" },
+        "invalidCombinations": { "type": "array", "items": { "type": "object" } },
+        "nestedInstances": {
+          "description": "Every INSTANCE inside the default variant, visible or not. Empty array only if the component contains no instances.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["layer", "component", "exposedAs", "toggledBy", "visibleByDefault"],
+            "properties": {
+              "layer": { "type": "string" },
+              "component": { "type": "string" },
+              "componentSlug": { "type": ["string", "null"] },
+              "exposedAs": { "type": ["string", "null"], "description": "Name of the INSTANCE_SWAP property that controls it, or null if not exposed." },
+              "toggledBy": { "type": ["string", "null"], "description": "Name of the BOOLEAN property that shows/hides it, or null." },
+              "visibleByDefault": { "type": "boolean" }
+            },
+            "additionalProperties": true
+          }
+        },
+        "icons": {
+          "description": "Explicit icon summary so an agent never misses that a component carries an icon.",
+          "type": "object",
+          "required": ["hasIcon", "swapProperties", "defaultIcons"],
+          "properties": {
+            "hasIcon": { "type": "boolean" },
+            "swapProperties": { "type": "array", "items": { "type": "string" } },
+            "defaultIcons": { "type": "array", "items": { "type": "string" } },
+            "compatible": { "type": "string", "description": "e.g. 'any Icon / * via INSTANCE_SWAP' or 'unknown'." },
+            "unexposedIconLayers": { "type": "array", "items": { "type": "string" }, "description": "Icon instances without an INSTANCE_SWAP property — audit finding." }
+          },
+          "additionalProperties": true
+        },
+        "slots": { "type": "array", "items": { "type": "string" } },
+        "tokensUsed": { "type": "array", "items": { "type": "string" } },
+        "variablesUsed": { "type": "array", "items": { "type": "string" } },
+        "textStyles": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "accessibility": {
+      "description": "Cómo percibe y opera este componente quien no lo ve. El contraste AA es condición necesaria y no suficiente: un lector de pantalla no navega por color. Opcional en el schema para no invalidar contratos anteriores, obligatorio en la práctica (política screen-reader-spec).",
+      "type": "object",
+      "properties": {
+        "role": { "type": ["string", "null"], "description": "Rol semántico: button, textbox, checkbox, dialog, alert, navigation… 'none' si es decorativo." },
+        "name": { "type": ["string", "null"], "description": "De dónde sale el nombre accesible: del texto visible, de una etiqueta asociada o de un atributo explícito. Un icono sin texto SIEMPRE necesita nombre explícito." },
+        "announcedStates": { "type": "array", "items": { "type": "string" }, "description": "Qué se anuncia al cambiar de estado: seleccionado, expandido, inválido, ocupado, deshabilitado. Un estado que solo se ve por color no existe para quien no ve." },
+        "keyboard": { "type": "array", "items": { "type": "string" }, "description": "Qué teclas lo operan y qué hace cada una. Si no se puede usar sin ratón, no está terminado." },
+        "focus": { "type": ["string", "null"], "description": "Dónde entra el foco, dónde sale y si queda atrapado a propósito (modales)." },
+        "readingOrder": { "type": ["string", "null"], "description": "Orden en que se leen sus partes, si no coincide con el visual." },
+        "hidden": { "type": "array", "items": { "type": "string" }, "description": "Partes que deben ocultarse al lector por ser decorativas o redundantes." },
+        "platforms": {
+          "description": "Equivalencia por plataforma cuando el producto no es solo web.",
+          "type": "object",
+          "properties": {
+            "web": { "type": ["string", "null"] },
+            "ios": { "type": ["string", "null"] },
+            "android": { "type": ["string", "null"] }
+          },
+          "additionalProperties": true
+        },
+        "contrastPairs": { "type": "array", "items": { "type": "string" }, "description": "Pares texto/fondo verificados AA, en los dos modos. Lo que ya se exigía." }
+      },
+      "additionalProperties": true
+    },
+    "behavior": {
+      "type": "object",
+      "required": ["responsive", "content"],
+      "properties": {
+        "responsive": { "type": "array", "items": { "type": "object" } },
+        "content": { "type": "array", "items": { "type": "object" } },
+        "interactions": { "type": "array", "items": { "type": "object" } }
+      },
+      "additionalProperties": true
+    },
+    "compatibility": { "type": "object" },
+    "relations": {
+      "type": "object",
+      "required": ["uses"],
+      "properties": {
+        "uses": { "type": "array", "items": { "type": "string" }, "description": "Slugs of every component instantiated inside (one per nestedInstances entry, deduplicated). Icons included." },
+        "usedBy": { "type": "array", "items": { "type": "string" } },
+        "related": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    }
+  },
+  "if": { "properties": { "api": { "properties": { "icons": { "properties": { "hasIcon": { "const": true } } } } } } },
+  "then": { "properties": { "relations": { "properties": { "uses": { "minItems": 1 } } } } },
+  "additionalProperties": false
+}

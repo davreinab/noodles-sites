@@ -1,0 +1,10 @@
+{
+  "designSystem": "GB Noodles · Microsites",
+  "note": "Informe de scripts/ds-coverage.py. No editar a mano. ⬜ Pendiente: sin pantallas en UI/ todavía.",
+  "definition": "cobertura = elementos con al menos una clase de components.css ÷ elementos con alguna clase",
+  "dsClasses": 0,
+  "screens": 0,
+  "summary": { "withClass": 0, "covered": 0, "coverage": null },
+  "byScreen": [],
+  "foreignClasses": {}
+}

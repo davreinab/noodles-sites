@@ -1,0 +1,20 @@
+/* ⚙️ ARCHIVO GENERADO — NO EDITAR A MANO.
+   Fuentes de verdad: consultar design.md; pueden ser varios archivos de Figma.
+   Regenerar con el protocolo de sync de design.md.
+   ⬜ Pendiente del primer sync. */
+
+:root {
+  /* ---- Primitives ---- */
+  /* ---- Semantic (Light) ---- */
+  /* ---- Spacing / Radius / Layout ---- */
+  /* ---- Typography ---- */
+  /* ---- Icon size (--icon-size-*) ---- */
+  /* ---- Layer / z-index (--z-*) ---- */
+  /* ---- Motion (--motion-duration-*, --motion-easing-*) ---- */
+  /* ---- Elevation (--elevation-*) ---- */
+}
+
+:root[data-theme="dark"] {
+  /* ---- Semantic (Dark) ---- */
+  /* ---- Elevation (Dark), si los colores de sombra cambian por modo ---- */
+}

@@ -1,0 +1,296 @@
+{
+  "project": "noodles-microsites",
+  "generatedAt": null,
+  "note": "Informe de scripts/ds-autonomy.py. No editar a mano.",
+  "ceiling": {
+    "maxLevel": 3,
+    "decidedBy": "David Reina",
+    "decidedAt": "2026-10-07",
+    "raisingRequiresProposal": true,
+    "note": "Bajarlo es inmediato. Subirlo es una decisión de producto y pasa por design-system/proposals/. Sin decisión registrada, el techo por defecto es 3."
+  },
+  "summary": {
+    "capabilities": 26,
+    "aboveCeiling": 2,
+    "errors": 0
+  },
+  "effective": [
+    {
+      "action": "apply-deterministic-generated-artifact",
+      "domain": "design-system",
+      "steps": [
+        "D"
+      ],
+      "natural": 4,
+      "effective": 3,
+      "capped": true
+    },
+    {
+      "action": "sync-local-ds-artifacts-from-figma",
+      "domain": "design-system",
+      "steps": [
+        "C",
+        "D"
+      ],
+      "natural": 4,
+      "effective": 3,
+      "capped": true
+    },
+    {
+      "action": "apply-audit-mechanical-fixes",
+      "domain": "design-system",
+      "steps": [
+        "C",
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "apply-variable-scopes-and-descriptions",
+      "domain": "design-system",
+      "steps": [
+        "C",
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "change-business-rule",
+      "domain": "context",
+      "steps": [
+        "C",
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "change-component",
+      "domain": "design-system",
+      "steps": [
+        "C",
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "change-primitive-or-semantic",
+      "domain": "design-system",
+      "steps": [
+        "C",
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "change-requirement",
+      "domain": "context",
+      "steps": [
+        "C",
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "change-token",
+      "domain": "design-system",
+      "steps": [
+        "C",
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "create-component-in-figma-on-user-request",
+      "domain": "design-system",
+      "steps": [
+        "C",
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "create-context-document",
+      "domain": "context",
+      "steps": [
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "place-new-context-datum",
+      "domain": "context",
+      "steps": [
+        "C",
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "publish-figma-library",
+      "domain": "design-system",
+      "steps": [
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "restructure-existing-design-system",
+      "domain": "design-system",
+      "steps": [
+        "C",
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "rewrite-synthesis",
+      "domain": "context",
+      "steps": [
+        "C",
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "write-figma-via-official-mcp",
+      "domain": "design-system",
+      "steps": [
+        "C",
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "write-research-note",
+      "domain": "context",
+      "steps": [
+        "C",
+        "H"
+      ],
+      "natural": 3,
+      "effective": 3,
+      "capped": false
+    },
+    {
+      "action": "draft-proposal",
+      "domain": "design-system",
+      "steps": [
+        "C"
+      ],
+      "natural": 2,
+      "effective": 2,
+      "capped": false
+    },
+    {
+      "action": "audit-drift",
+      "domain": "design-system",
+      "steps": [
+        "D"
+      ],
+      "natural": 1,
+      "effective": 1,
+      "capped": false
+    },
+    {
+      "action": "audit-figma-design-system",
+      "domain": "design-system",
+      "steps": [
+        "D",
+        "C"
+      ],
+      "natural": 1,
+      "effective": 1,
+      "capped": false
+    },
+    {
+      "action": "report-missing-context",
+      "domain": "context",
+      "steps": [
+        "C"
+      ],
+      "natural": 1,
+      "effective": 1,
+      "capped": false
+    },
+    {
+      "action": "analyze-existing-design-system",
+      "domain": "design-system",
+      "steps": [
+        "D",
+        "C"
+      ],
+      "natural": 0,
+      "effective": 0,
+      "capped": false
+    },
+    {
+      "action": "read",
+      "domain": "design-system",
+      "steps": [
+        "D"
+      ],
+      "natural": 0,
+      "effective": 0,
+      "capped": false
+    },
+    {
+      "action": "read-context",
+      "domain": "context",
+      "steps": [
+        "D"
+      ],
+      "natural": 0,
+      "effective": 0,
+      "capped": false
+    },
+    {
+      "action": "read-figma-via-official-mcp",
+      "domain": "design-system",
+      "steps": [
+        "D"
+      ],
+      "natural": 0,
+      "effective": 0,
+      "capped": false
+    },
+    {
+      "action": "retrieve-scoped-context",
+      "domain": "design-system",
+      "steps": [
+        "D"
+      ],
+      "natural": 0,
+      "effective": 0,
+      "capped": false
+    }
+  ],
+  "errors": []
+}

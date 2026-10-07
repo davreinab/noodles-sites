@@ -1,0 +1,11 @@
+/* ⚙️ Capa de COMPONENTES del Design System GB Noodles · Microsites — átomos + patrones en HTML/CSS.
+   Fuente única de la realización HTML de los componentes.
+   Consume SOLO tokens semánticos de ../tokens/tokens.css. Enlázalo SIEMPRE después de él.
+   No edites valores crudos aquí: colores/tipografía vienen de tokens.css; medidas en
+   grid de 8, con 2 y 4 reservados para hairlines y microajustes documentados.
+   Es el ÚNICO archivo CSS del DS: no se crea patterns.css, screens.css ni similares —
+   patrones y capa de pantalla van aquí, en sus secciones. */
+
+/* ── Tokens dimensionales (espejo de la colección «Components» de Figma) ── */
+:root {
+}

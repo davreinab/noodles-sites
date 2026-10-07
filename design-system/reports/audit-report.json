@@ -1,0 +1,26 @@
+{
+  "designSystem": "GB Noodles · Microsites",
+  "generatedAt": null,
+  "adoptionMode": "new",
+  "note": "Auditoría de calidad del DS en Figma. Se regenera con cada auditoría; no editar a mano.",
+  "figmaSources": [{"name": "GB Noodles · IA & page structure", "role": "ia-sitemap (FigJam: sitemap y blueprints por página)", "fileKey": "cRgmGl36ELIUZNLUvC8KbW", "url": "https://www.figma.com/board/cRgmGl36ELIUZNLUvC8KbW"}, {"name": "Wireframes | Rediseño sites", "role": "wireframes (home mobile alta fidelidad + blueprints desktop; home desktop en 87:642)", "fileKey": "1YhsCqdqYCHlK4Y82IY5G3", "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"}],
+  "sourceContract": {
+    "requiredFields": ["fileKey", "name", "declaredRole", "observedRole", "audited"]
+  },
+  "coverage": {
+    "tokens": "unknown",
+    "typography": "unknown",
+    "components": "unknown",
+    "patterns": "unknown",
+    "icons": "unknown"
+  },
+  "summary": { "critical": 0, "warning": 0, "info": 0, "autoFixable": 0 },
+  "findingContract": {
+    "requiredFields": ["id", "ruleId", "origin", "severity", "fileKey", "target", "description", "recommendation", "fixability", "status"],
+    "origin": ["skill", "general"],
+    "severity": ["critical", "warning", "info"],
+    "fixability": ["auto", "assisted", "manual"],
+    "status": ["open", "fixed", "accepted"]
+  },
+  "findings": []
+}

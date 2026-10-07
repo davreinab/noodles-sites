@@ -1,0 +1,8 @@
+{
+  "designSystem": "GB Noodles · Microsites",
+  "generatedAt": null,
+  "note": "Informe de scripts/token-audit.py. Se regenera con `--out design-system/reports/token-audit.json`; no editar a mano.",
+  "summary": { "errors": 0, "warnings": 0 },
+  "errors": [],
+  "warnings": []
+}

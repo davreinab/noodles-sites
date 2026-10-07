@@ -1,0 +1,6 @@
+{
+  "designSystem": "GB Noodles · Microsites",
+  "note": "Relaciones componente-componente. Se regenera con el sync; no editar a mano.",
+  "edgeTypes": ["uses", "composes", "related"],
+  "relationships": []
+}

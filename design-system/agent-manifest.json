@@ -1,0 +1,73 @@
+{
+  "formatVersion": "1.0.0",
+  "designSystem": "GB Noodles · Microsites",
+  "version": "0.0.0",
+  "versionedAt": null,
+  "maturityStage": 1,
+  "targetMaturityStage": 2,
+  "lastSync": null,
+  "adoptionMode": "new",
+  "structuralStandardsEnforced": true,
+  "figmaSources": [{"name": "GB Noodles · IA & page structure", "role": "ia-sitemap (FigJam: sitemap y blueprints por página)", "fileKey": "cRgmGl36ELIUZNLUvC8KbW", "url": "https://www.figma.com/board/cRgmGl36ELIUZNLUvC8KbW"}, {"name": "Wireframes | Rediseño sites", "role": "wireframes (home mobile alta fidelidad + blueprints desktop; home desktop en 87:642)", "fileKey": "1YhsCqdqYCHlK4Y82IY5G3", "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"}],
+  "resources": {
+    "tokens": "./tokens/tokens.json",
+    "tokensCss": "./tokens/tokens.css",
+    "docs": "./docs/",
+    "figmaProcedure": "./figma.md",
+    "componentsCss": "./css/components.css",
+    "assets": "./assets/",
+    "showcase": "./showcase/index.html",
+    "components": "./schemas/index.json",
+    "relationships": "./schemas/relationships.json",
+    "policies": "./schemas/governance/policies.json",
+    "constraints": "./schemas/governance/constraints.json",
+    "capabilities": "../governance/capabilities.json",
+    "autonomy": "../governance/autonomy.json",
+    "phases": "../governance/phases.json",
+    "autonomyReport": "../governance/reports/autonomy.json",
+    "maturity": "./schemas/governance/maturity.json",
+    "lifecycle": "./schemas/governance/lifecycle.json",
+    "changelog": "./CHANGELOG.md",
+    "coverage": "./reports/coverage.json",
+    "releaseBaseline": "./reports/release-baseline.json",
+    "drift": "./reports/drift-report.json",
+    "audit": "./reports/audit-report.json",
+    "proposalSchema": "./proposals/_proposal.schema.json",
+    "syncInputs": "./sync/",
+    "dsSync": "../scripts/ds-sync.py",
+    "tokenAudit": "../scripts/token-audit.py",
+    "agentReadiness": "./reports/agent-readiness.json",
+    "agentReadinessRubric": "./schemas/governance/agent-readiness.json",
+    "tokenAuditReport": "./reports/token-audit.json",
+    "dsFidelity": "../scripts/ds-fidelity.py",
+    "fidelityReport": "./reports/fidelity.json"
+  },
+  "retrieval": {
+    "rule": "Load only the requested resource and its declared dependencies.",
+    "componentContract": "./schemas/components/<component-slug>.schema.json",
+    "componentCriteria": "Purpose, accessibility, when to use and what it does not do live only in the .md section named by the contract's source.docs (file + section). The schema does not duplicate them.",
+    "tokenLookup": "Use the exact token path in tokens.json",
+    "fullSystemLoad": false,
+    "requiresCustomMcp": false
+  },
+  "exports": {
+    "dtcg": {
+      "enabled": false,
+      "decidedAt": null,
+      "path": "./tokens/w3c/",
+      "generator": "../scripts/tokens-dtcg.py",
+      "note": "Exportación opcional a un formato de terceros. No se genera sin decisión explícita del usuario. Activarla más adelante requiere avisar y obtener consentimiento; el generador se niega a escribir mientras enabled sea false."
+    }
+  },
+  "integrations": {
+    "figmaMcp": {
+      "role": "Primary read/write integration with the Figma source of truth",
+      "requiredForScaffolding": false,
+      "requiredForFigmaSync": true
+    },
+    "customDesignSystemMcp": {
+      "required": false,
+      "configuredByThisSkill": false
+    }
+  }
+}

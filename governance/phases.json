@@ -1,0 +1,62 @@
+{
+  "project": "GB Noodles · Microsites",
+  "note": "Las fases del proyecto y la condición que hay que cumplir para empezar cada una. Una condición puede declarar a qué módulo pertenece ({\"id\": …, \"module\": …}): si ese módulo está apagado, no aplica y no bloquea. No es un motor: no ejecuta nada ni guarda estado entre sesiones. Solo responde a «¿puedo empezar esta fase?» comprobándolo contra los archivos, en vez de contra la memoria de quien lo pregunte. Las condiciones no son nuevas: son las puertas que SKILL.md y design.md ya declaran en prosa.",
+  "phases": [
+    {
+      "id": "scaffolding",
+      "module": null,
+      "title": "Crear la estructura del proyecto",
+      "requires": [],
+      "why": "Es el principio. No depende de nada."
+    },
+    {
+      "id": "contexto",
+      "module": "estrategia",
+      "title": "Rellenar el contexto funcional",
+      "requires": ["scaffolding-completo"],
+      "why": "No hay dónde colocar un dato hasta que existen los documentos."
+    },
+    {
+      "id": "direccion-visual",
+      "module": "estrategia",
+      "title": "Escribir la dirección visual",
+      "requires": ["scaffolding-completo"],
+      "why": "Puede ir en paralelo al contexto. Lo que no puede es ir después del primer estilo."
+    },
+    {
+      "id": "ds-extraccion",
+      "module": "design-system",
+      "title": "Primer sync del design system desde Figma",
+      "requires": ["scaffolding-completo", "fuentes-figma-registradas"],
+      "why": "Sin fuentes registradas no hay de dónde leer. SKILL.md Paso 5."
+    },
+    {
+      "id": "ds-componentes",
+      "module": "design-system",
+      "title": "Construir componentes en Figma",
+      "requires": ["tipografia-aprobada", {"id": "direccion-visual-escrita", "module": "estrategia"}],
+      "why": "Regla de design.md: la tipografía es puerta previa a componentes. Y no se propone estilo sin dirección visual escrita."
+    },
+    {
+      "id": "wireframes",
+      "module": "estrategia",
+      "title": "Montar los wireframes",
+      "requires": ["flujos-definidos"],
+      "why": "Un wireframe sin flujo definido es una suposición dibujada."
+    },
+    {
+      "id": "ui",
+      "module": "design-system",
+      "title": "Montar las pantallas con el design system",
+      "requires": ["tokens-sincronizados", "algun-contrato-de-componente", "composicion-documentada"],
+      "why": "Regla de design.md: las pantallas consumen, no definen. Sin tokens, sin contratos y sin reglas de composición, la pantalla acaba inventando."
+    },
+    {
+      "id": "publicacion",
+      "module": "design-system",
+      "title": "Publicar una versión del design system",
+      "requires": ["tokens-sincronizados", "algun-contrato-de-componente", "auditorias-en-cero"],
+      "why": "No se publica algo que no existe ni algo que no pasa sus propias comprobaciones. Sobre un proyecto vacío las auditorías salen en cero porque no hay nada que auditar, y eso no es estar listo para publicar."
+    }
+  ]
+}

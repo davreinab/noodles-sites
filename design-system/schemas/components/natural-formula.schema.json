@@ -6,7 +6,7 @@
     "slug": "natural-formula",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:43:11Z",
+    "lastSync": "2026-10-07T18:44:44Z",
     "description": "Sección de la fórmula natural (Home): título (h2) · texto · 4 claims del pack en display (100 % natural · −20 % sal · −80 % grasas saturadas · 0 aditivos ni conservantes) · Link Standalone Dark a la Natural formula page. Fondo color/surface/natural con texto color/text/on-natural (5,5:1, también en display). Los claims deben coincidir con el envase (restricción regulatoria): no se añaden claims nuevos sin validación de GB Foods. Los claims son una lista (&lt;ul&gt;), no encabezados. Desktop: 4 columnas; Mobile: 2×2. Sin variables propias.",
     "figmaPage": "Pattern / Natural formula",
     "figmaType": "COMPONENT_SET",

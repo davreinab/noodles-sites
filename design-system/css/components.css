@@ -145,6 +145,7 @@
   line-height: var(--font-line-height-desktop-label);
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap; /* norma de botones: el texto nunca pasa a dos líneas */
   cursor: pointer;
   transition: background-color var(--motion-duration-fast) var(--motion-easing-standard),
               color var(--motion-duration-fast) var(--motion-easing-standard),
@@ -196,14 +197,17 @@
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
-   ICON BUTTON · botón solo icono · mismas jerarquías que Button · M 56 · L 64
+   ICON BUTTON · botón solo icono · mismas jerarquías que Button · M 48 · L 64 (misma altura que Button)
    Siempre con nombre accesible (aria-label): el icono es decorativo.
    ══════════════════════════════════════════════════════════════════════════ */
 .icon-button {
   display: inline-flex;
+  flex: none;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--space-16) - var(--border-width-thick));
+  width: var(--icon-button-size-m);
+  height: var(--icon-button-size-m);
+  padding: 0;
   border: var(--border-width-thick) solid var(--button-primary-border);
   border-radius: var(--radius-pill);
   background-color: var(--button-primary-bg);
@@ -221,6 +225,7 @@
 .icon-button--inverse { background-color: var(--button-inverse-bg); color: var(--button-inverse-text); border-color: var(--button-inverse-border); }
 .icon-button--inverse:hover { background-color: var(--button-inverse-bg-hover); color: var(--button-inverse-text-hover); border-color: var(--button-inverse-border-hover); }
 .icon-button--inverse:focus-visible { outline-color: var(--button-inverse-focus-ring); }
+.icon-button--l { width: var(--icon-button-size-l); height: var(--icon-button-size-l); }
 .icon-button--l .icon { width: var(--icon-size-lg); height: var(--icon-size-lg); }
 .icon-button:disabled, .icon-button[aria-disabled="true"],
 .icon-button:disabled:hover, .icon-button[aria-disabled="true"]:hover {

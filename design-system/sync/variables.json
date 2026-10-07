@@ -5971,6 +5971,44 @@
               "value": 880
             }
           }
+        },
+        {
+          "id": "VariableID:118:49",
+          "name": "icon-button/size/m",
+          "type": "FLOAT",
+          "description": "icon-button: Lado de la talla M (48px), igual que la altura de Button M",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--icon-button-size-m)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "value",
+              "value": 48
+            }
+          }
+        },
+        {
+          "id": "VariableID:118:50",
+          "name": "icon-button/size/l",
+          "type": "FLOAT",
+          "description": "icon-button: Lado de la talla L (64px), igual que la altura de Button L",
+          "scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--icon-button-size-l)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "value",
+              "value": 64
+            }
+          }
         }
       ]
     },

@@ -1,7 +1,7 @@
-### Natural formula   ⚙️ synced: 2026-10-07T18:43:11Z
+### Natural formula   ⚙️ synced: 2026-10-07T18:44:44Z
 
 <!-- ⚙️ GENERATED:start:natural-formula -->
-- **Figma:** `91:704` · página «Pattern / Natural formula» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:43:11Z
+- **Figma:** `91:704` · página «Pattern / Natural formula» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:44:44Z
 - **Descripción (Figma):** Sección de la fórmula natural (Home): título (h2) · texto · 4 claims del pack en display (100 % natural · −20 % sal · −80 % grasas saturadas · 0 aditivos ni conservantes) · Link Standalone Dark a la Natural formula page. Fondo color/surface/natural con texto color/text/on-natural (5,5:1, también en display). Los claims deben coincidir con el envase (restricción regulatoria): no se añaden claims nuevos sin validación de GB Foods. Los claims son una lista (&lt;ul&gt;), no encabezados. Desktop: 4 columnas; Mobile: 2×2. Sin variables propias.
 - **Anatomía:** `link` → Type=Standalone, Surface=Dark, State=Default, `icon-trailing` → Icon / arrow-right
 - **Breakpoint:** Desktop, Mobile

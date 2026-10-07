@@ -1,8 +1,8 @@
-### Button   ⚙️ synced: 2026-10-07T18:43:11Z
+### Button   ⚙️ synced: 2026-10-07T18:44:44Z
 
 <!-- ⚙️ GENERATED:start:button -->
-- **Figma:** `33:295` · página «Button» · COMPONENT_SET · 24 variantes · última sync 2026-10-07T18:43:11Z
-- **Descripción (Figma):** Botón de acción. Hierarchy: Primary (acción principal, 1 por vista), Secondary (alternativa), Inverse (sobre fondos oscuros). Size M (48) por defecto; L (64) para hero y CTA destacados. Label en Anton mayúsculas. Iconos opcionales delante/detrás (INSTANCE_SWAP). Focus: anillo exterior visible. Disabled sin opacidad (colores propios).
+- **Figma:** `33:295` · página «Button» · COMPONENT_SET · 24 variantes · última sync 2026-10-07T18:44:44Z
+- **Descripción (Figma):** Botón de acción. Hierarchy: Primary (acción principal, 1 por vista), Secondary (alternativa), Inverse (sobre fondos oscuros). Size M (48) por defecto; L (64) para hero y CTA destacados. Label en Anton mayúsculas. Iconos opcionales delante/detrás (INSTANCE_SWAP). Focus: anillo exterior visible. Disabled sin opacidad (colores propios). Norma de botones (2026-10-07): misma altura en la misma talla para Button e Icon button (M 48, L 64) y el texto siempre en una sola línea: no se parte; si no cabe, se acorta el texto, nunca se pasa a dos líneas.
 - **Anatomía:** `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right
 - **Hierarchy:** Primary, Secondary, Inverse
 - **Size:** M, L
@@ -23,4 +23,4 @@
   <button class="button" type="button" aria-disabled="true">No disponible</button>
   ```
 - **Accesibilidad (pares AA verificados):** Primary: crema sobre tinta 17,2:1; hover tinta sobre naranja 7,1:1. Secondary: tinta sobre crema 17,2:1 o blanco 18,7:1; hover crema sobre tinta 17,2:1. Inverse: tinta sobre crema 17,2:1; hover tinta sobre amarillo 12,3:1. Disabled: gris cálido sobre arena 4,3:1 (exento de AA, pero legible). Rol: `<button>` para acciones y `<a>` para navegar, con la misma apariencia. Nombre: el texto visible; el icono va `aria-hidden`. Teclado: Enter y Espacio (botón) o Enter (enlace). Foco: contorno de 2 px pegado en `--button-*-focus-ring` (tinta; amarillo en Inverse, 12,3:1 sobre tinta). Desactivado: preferir `aria-disabled="true"` para que siga enfocable y se pueda explicar el motivo. Altura M 48 y L 64 (≥ 44 de área táctil).
-- **Cuándo usar / qué NO hace:** Para disparar una acción o ir a un destino principal (Dónde comprar, Participar, Descubre los productos). No se usa dentro de un párrafo (eso es Link), ni solo con icono (eso es Icon button), ni como filtro (eso es Chip). No hay más de un Primary visible por vista.
+- **Cuándo usar / qué NO hace:** **Norma de botones:** Button e Icon button tienen la misma altura en la misma talla (M 48 px, L 64 px), así que se pueden poner juntos sin desalinearse. El texto de Button va siempre en una sola línea (`white-space: nowrap`): si no cabe, se acorta el texto; nunca se parte en dos líneas. Para disparar una acción o ir a un destino principal (Dónde comprar, Participar, Descubre los productos). No se usa dentro de un párrafo (eso es Link), ni solo con icono (eso es Icon button), ni como filtro (eso es Chip). No hay más de un Primary visible por vista.

@@ -1,6 +1,6 @@
 /* ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO.
    Design system: GB Noodles · Microsites · fileKey: v4mnn154qUmiB35CCnRfgh
-   Última sync: 2026-10-07T18:43:11Z · modo de adopción: new
+   Última sync: 2026-10-07T18:44:44Z · modo de adopción: new
    Se regenera con el protocolo de sync de design.md. */
 
 :root {
@@ -254,6 +254,8 @@
   --alert-close: var(--color-text-default); /* alert: Icono cerrar */
   --modal-width-m: 560px; /* modal: Ancho del diálogo M (560px): alérgenos, resultado de concurso */
   --modal-width-l: 880px; /* modal: Ancho del diálogo L (880px): etiqueta del envase, resultados de búsqueda */
+  --icon-button-size-m: 48px; /* icon-button: Lado de la talla M (48px), igual que la altura de Button M */
+  --icon-button-size-l: 64px; /* icon-button: Lado de la talla L (64px), igual que la altura de Button L */
   /* ---- Layer ---- */
   --layer-base: 0; /* z-index 0. Contenido normal de la página */
   --layer-raised: 10; /* z-index 10. Contenido por encima de imágenes dentro de una sección (copy del hero, banderas) */

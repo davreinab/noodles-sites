@@ -1,7 +1,7 @@
-### Product carousel   ⚙️ synced: 2026-10-07T18:43:11Z
+### Product carousel   ⚙️ synced: 2026-10-07T18:44:44Z
 
 <!-- ⚙️ GENERATED:start:product-carousel -->
-- **Figma:** `91:837` · página «Pattern / Product carousel» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:43:11Z
+- **Figma:** `91:837` · página «Pattern / Product carousel» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:44:44Z
 - **Descripción (Figma):** Productos de la Home: título (h2) · flechas Icon button (desktop) · Tabs de tipo (Cups / Bags / Sauces; tablist que filtra el carrusel, solo tipos con productos) · carrusel de Product card · Link «Ver todos los productos» a la Product library. Desktop: 4 cards visibles (310 px, gutter layout/gutter). Mobile: scroll horizontal con la siguiente card asomando (pista que comunica que hay más); sin flechas. Accesibilidad: el carrusel es una lista (&lt;ul&gt;) desplazable con teclado; las flechas son &lt;button&gt; con nombre y se desactivan al llegar al final. Sin variables propias.
 - **Anatomía:** `prev` → Hierarchy=Secondary, Size=M, State=Default, `icon` → Icon / arrow-left, `next` → Hierarchy=Secondary, Size=M, State=Default, `icon` → Icon / arrow-right, `tab` → State=Selected, `tab` → State=Default, `product-card` → State=Default, `badge` → Type=New, `link` → Type=Standalone, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right, `badge` → Type=New
 - **Breakpoint:** Desktop, Mobile

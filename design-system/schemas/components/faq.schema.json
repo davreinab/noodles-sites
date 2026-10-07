@@ -6,7 +6,7 @@
     "slug": "faq",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:43:11Z",
+    "lastSync": "2026-10-07T18:44:44Z",
     "description": "Bloque de FAQ (Home, Natural formula con su FAQ propio, página FAQS indexada): título (h2) + entradilla + Link «Ver todas las preguntas» · lista de Accordion item (space/16 entre ítems; el primero puede ir abierto). En la página FAQS se repite por categorías sin el enlace. SEO/AEO: las respuestas están en el HTML y la página lleva datos estructurados FAQPage. Desktop: cabecera a la izquierda (400 px) y lista a la derecha; Mobile: apilado. Sin variables propias.",
     "figmaPage": "Pattern / FAQ",
     "figmaType": "COMPONENT_SET",

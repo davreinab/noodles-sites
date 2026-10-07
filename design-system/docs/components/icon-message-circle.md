@@ -1,7 +1,7 @@
-### Icon / message-circle   ⚙️ synced: 2026-10-07T18:43:11Z
+### Icon / message-circle   ⚙️ synced: 2026-10-07T18:44:44Z
 
 <!-- ⚙️ GENERATED:start:icon-message-circle -->
-- **Figma:** `76:73` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T18:43:11Z
+- **Figma:** `76:73` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T18:44:44Z
 - **Descripción (Figma):** Sugerencias: Suggestion bubble (formulario de Calidad). Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

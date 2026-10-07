@@ -6,13 +6,13 @@
     "slug": "icon-button",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:43:11Z",
-    "description": "Botón solo con icono: cerrar, menú, flechas del slider, play. Mismas jerarquías y colores que Button. M 56 px (icono 24 + padding 16), L 64 px (icono 32). Accesibilidad: requiere nombre accesible (aria-label) porque no tiene texto visible.",
+    "lastSync": "2026-10-07T18:44:44Z",
+    "description": "Botón solo con icono: cerrar, menú, flechas del slider, play. Mismas jerarquías y colores que Button. M 48 px (icono 24), L 64 px (icono 32). Accesibilidad: requiere nombre accesible (aria-label) porque no tiene texto visible. Tamaño fijo con icon-button/size/m (48) y /l (64), icono centrado. Norma de botones (2026-10-07): misma altura en la misma talla para Button e Icon button (M 48, L 64); en Button, el texto siempre en una sola línea.",
     "figmaPage": "Icon button",
     "figmaType": "COMPONENT_SET",
     "variantCount": 24,
     "autoLayout": true,
-    "anatomyHash": "5757329153d2"
+    "anatomyHash": "58c753c2150a"
   },
   "source": {
     "docs": {
@@ -168,15 +168,11 @@
       "button/primary/bg",
       "button/primary/border",
       "button/primary/text",
+      "icon-button/size/m",
       "icon/size/md",
-      "radius/pill",
-      "space/16"
+      "radius/pill"
     ],
     "variablesUsed": [
-      "paddingLeft: space/16",
-      "paddingTop: space/16",
-      "paddingRight: space/16",
-      "paddingBottom: space/16",
       "topLeftRadius: radius/pill",
       "topRightRadius: radius/pill",
       "bottomLeftRadius: radius/pill",
@@ -192,7 +188,9 @@
       "width: icon/size/md",
       "height: icon/size/md",
       "strokes: button/primary/text",
-      "color: button/primary/text"
+      "color: button/primary/text",
+      "width: icon-button/size/m",
+      "height: icon-button/size/m"
     ],
     "textStyles": [],
     "theming": {

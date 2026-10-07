@@ -1,7 +1,7 @@
-### Where to buy   ⚙️ synced: 2026-10-07T18:43:11Z
+### Where to buy   ⚙️ synced: 2026-10-07T18:44:44Z
 
 <!-- ⚙️ GENERATED:start:where-to-buy -->
-- **Figma:** `92:990` · página «Pattern / Where to buy» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:43:11Z
+- **Figma:** `92:990` · página «Pattern / Where to buy» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:44:44Z
 - **Descripción (Figma):** Dónde comprar (Home, página de producto; destino del CTA «Dónde comprar» de la Navbar): título (h2) · texto · rejilla de distribuidores del país. Cada distribuidor es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; tarjeta color/surface/card con borde de tinta sobre color/surface/brand. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: 5 por fila; Mobile: 2 por fila. Sin variables propias.
 - **Anatomía:** sin instancias anidadas
 - **Breakpoint:** Desktop, Mobile

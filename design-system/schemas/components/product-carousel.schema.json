@@ -6,7 +6,7 @@
     "slug": "product-carousel",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:43:11Z",
+    "lastSync": "2026-10-07T18:44:44Z",
     "description": "Productos de la Home: título (h2) · flechas Icon button (desktop) · Tabs de tipo (Cups / Bags / Sauces; tablist que filtra el carrusel, solo tipos con productos) · carrusel de Product card · Link «Ver todos los productos» a la Product library. Desktop: 4 cards visibles (310 px, gutter layout/gutter). Mobile: scroll horizontal con la siguiente card asomando (pista que comunica que hay más); sin flechas. Accesibilidad: el carrusel es una lista (&lt;ul&gt;) desplazable con teclado; las flechas son &lt;button&gt; con nombre y se desactivan al llegar al final. Sin variables propias.",
     "figmaPage": "Pattern / Product carousel",
     "figmaType": "COMPONENT_SET",

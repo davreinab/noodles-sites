@@ -1,7 +1,7 @@
-### Product hero   ⚙️ synced: 2026-10-07T18:43:11Z
+### Product hero   ⚙️ synced: 2026-10-07T18:44:44Z
 
 <!-- ⚙️ GENERATED:start:product-hero -->
-- **Figma:** `93:154` · página «Pattern / Product hero» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:43:11Z
+- **Figma:** `93:154` · página «Pattern / Product hero» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:44:44Z
 - **Descripción (Figma):** Cabecera de la página de producto: galería (imagen 3D principal —la «girosu» en Cups— e interior; miniaturas como botones, la seleccionada con borde grueso y aria-current) · Badge New/Natural · tipo y línea · nombre (h1) · descripción · highlights con check en color/text/natural (lista &lt;ul&gt;) · Button «Dónde comprar» (lleva a Where to buy) y Link «Ver ingredientes» (ancla a Product details). Las imágenes son las de marca, nunca generadas con IA. Desktop: galería a la izquierda; Mobile: galería arriba. Sin variables propias.
 - **Anatomía:** `badge-new` → Type=New, `badge-natural` → Type=Natural, `icon-check` → Icon / check, `cta` → Hierarchy=Primary, Size=L, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right, `link` → Type=Standalone, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right
 - **Breakpoint:** Desktop, Mobile

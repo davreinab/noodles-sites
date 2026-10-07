@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 16 componentes sincronizados el 2026-10-07T10:17:28Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 22 componentes sincronizados el 2026-10-07T11:30:18Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -21,10 +21,16 @@
 - [Icon / instagram](components/icon-instagram.md) · component · `icon-instagram` · ⬜ 5 pendientes
 - [Icon / x](components/icon-x.md) · component · `icon-x` · ⬜ 5 pendientes
 - [Icon / youtube](components/icon-youtube.md) · component · `icon-youtube` · ⬜ 5 pendientes
-- [Icon / natural](components/icon-natural.md) · component · `icon-natural` · ⬜ 5 pendientes
-- [Icon / noodles](components/icon-noodles.md) · component · `icon-noodles` · ⬜ 5 pendientes
-- [Icon / progress](components/icon-progress.md) · component · `icon-progress` · ⬜ 5 pendientes
-- [Icon / check-hand](components/icon-check-hand.md) · component · `icon-check-hand` · ⬜ 5 pendientes
+- [Icon / arrow-right](components/icon-arrow-right.md) · component · `icon-arrow-right` · ⬜ 5 pendientes
+- [Icon / arrow-left](components/icon-arrow-left.md) · component · `icon-arrow-left` · ⬜ 5 pendientes
+- [Icon / close](components/icon-close.md) · component · `icon-close` · ⬜ 5 pendientes
+- [Icon / menu](components/icon-menu.md) · component · `icon-menu` · ⬜ 5 pendientes
+- [Icon / plus](components/icon-plus.md) · component · `icon-plus` · ⬜ 5 pendientes
+- [Icon / minus](components/icon-minus.md) · component · `icon-minus` · ⬜ 5 pendientes
+- [Icon / search](components/icon-search.md) · component · `icon-search` · ⬜ 5 pendientes
+- [Icon / play](components/icon-play.md) · component · `icon-play` · ⬜ 5 pendientes
+- [Icon / timer](components/icon-timer.md) · component · `icon-timer` · ⬜ 5 pendientes
+- [Icon / external-link](components/icon-external-link.md) · component · `icon-external-link` · ⬜ 5 pendientes
 - [Decoration / Noodle](components/decoration-noodle.md) · component · `decoration-noodle` · ⬜ 5 pendientes
 - [Logo / GB Foods](components/logo-gb-foods.md) · component · `logo-gb-foods` · ⬜ 5 pendientes
 - [Logo / Aiki](components/logo-aiki.md) · component · `logo-aiki` · ⬜ 5 pendientes

@@ -1,7 +1,7 @@
-### Logo / Saikebon   ⚙️ synced: 2026-10-07T10:17:28Z
+### Logo / Saikebon   ⚙️ synced: 2026-10-07T11:30:18Z
 
 <!-- ⚙️ GENERATED:start:logo-saikebon -->
-- **Figma:** `21:173` · página «Brand» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T10:17:28Z
+- **Figma:** `21:173` · página «Brand» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T11:30:18Z
 - **Descripción (Figma):** Logo Saikebon. Solo PNG: pedir vectoriales originales. No se recolorea.
 - **Anatomía:** sin instancias anidadas
 - **Version:** Positive, Negative

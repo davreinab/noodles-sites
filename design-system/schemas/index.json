@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-07T10:17:28Z",
+  "lastSync": "2026-10-07T11:30:18Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -170,21 +170,22 @@
       }
     },
     {
-      "id": "component:icon-natural",
-      "name": "Icon / natural",
-      "slug": "icon-natural",
+      "id": "component:icon-arrow-right",
+      "name": "Icon / arrow-right",
+      "slug": "icon-arrow-right",
       "kind": "component",
-      "contractPath": "./components/icon-natural.schema.json",
+      "contractPath": "./components/icon-arrow-right.schema.json",
       "keywords": [
+        "arrow",
         "icon",
-        "natural"
+        "right"
       ],
       "dependencies": [],
       "hasIcon": false,
       "figmaSource": {
         "fileKey": "v4mnn154qUmiB35CCnRfgh",
-        "nodeId": "21:132",
-        "componentKey": "bf359cee5872b6cf243f6f85985b5500df56108c"
+        "nodeId": "30:52",
+        "componentKey": "02167ffb071b0168ec8a06dbf817787c64c13318"
       },
       "codeSource": {
         "path": "design-system/css/components.css",
@@ -192,21 +193,22 @@
       }
     },
     {
-      "id": "component:icon-noodles",
-      "name": "Icon / noodles",
-      "slug": "icon-noodles",
+      "id": "component:icon-arrow-left",
+      "name": "Icon / arrow-left",
+      "slug": "icon-arrow-left",
       "kind": "component",
-      "contractPath": "./components/icon-noodles.schema.json",
+      "contractPath": "./components/icon-arrow-left.schema.json",
       "keywords": [
+        "arrow",
         "icon",
-        "noodles"
+        "left"
       ],
       "dependencies": [],
       "hasIcon": false,
       "figmaSource": {
         "fileKey": "v4mnn154qUmiB35CCnRfgh",
-        "nodeId": "21:133",
-        "componentKey": "2c5cb5ae7e7884cb3e9acb419afc21915586ed11"
+        "nodeId": "30:56",
+        "componentKey": "9499612a0f06b2d6a895206d41273567c78d5b59"
       },
       "codeSource": {
         "path": "design-system/css/components.css",
@@ -214,44 +216,176 @@
       }
     },
     {
-      "id": "component:icon-progress",
-      "name": "Icon / progress",
-      "slug": "icon-progress",
+      "id": "component:icon-close",
+      "name": "Icon / close",
+      "slug": "icon-close",
       "kind": "component",
-      "contractPath": "./components/icon-progress.schema.json",
+      "contractPath": "./components/icon-close.schema.json",
       "keywords": [
-        "icon",
-        "progress"
-      ],
-      "dependencies": [],
-      "hasIcon": false,
-      "figmaSource": {
-        "fileKey": "v4mnn154qUmiB35CCnRfgh",
-        "nodeId": "21:134",
-        "componentKey": "7164f89683d2061500fd38bea5c02a28b62aaf5a"
-      },
-      "codeSource": {
-        "path": "design-system/css/components.css",
-        "classes": []
-      }
-    },
-    {
-      "id": "component:icon-check-hand",
-      "name": "Icon / check-hand",
-      "slug": "icon-check-hand",
-      "kind": "component",
-      "contractPath": "./components/icon-check-hand.schema.json",
-      "keywords": [
-        "check",
-        "hand",
+        "close",
         "icon"
       ],
       "dependencies": [],
       "hasIcon": false,
       "figmaSource": {
         "fileKey": "v4mnn154qUmiB35CCnRfgh",
-        "nodeId": "21:135",
-        "componentKey": "32e1b6595c707a6c26ff3ab384f8d7fd61a58efa"
+        "nodeId": "30:60",
+        "componentKey": "d3bd670f4a53fb5af9503f3797584ad997f049a8"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-menu",
+      "name": "Icon / menu",
+      "slug": "icon-menu",
+      "kind": "component",
+      "contractPath": "./components/icon-menu.schema.json",
+      "keywords": [
+        "icon",
+        "menu"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "30:65",
+        "componentKey": "ab0ad6fb1319940494366b5310576ede5f7f6d82"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-plus",
+      "name": "Icon / plus",
+      "slug": "icon-plus",
+      "kind": "component",
+      "contractPath": "./components/icon-plus.schema.json",
+      "keywords": [
+        "icon",
+        "plus"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "30:69",
+        "componentKey": "c21a991431daab7928e8b4c745539c0105c26172"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-minus",
+      "name": "Icon / minus",
+      "slug": "icon-minus",
+      "kind": "component",
+      "contractPath": "./components/icon-minus.schema.json",
+      "keywords": [
+        "icon",
+        "minus"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "30:72",
+        "componentKey": "7b0a8d21bb43ff027cb883c53aaea1da88fb144d"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-search",
+      "name": "Icon / search",
+      "slug": "icon-search",
+      "kind": "component",
+      "contractPath": "./components/icon-search.schema.json",
+      "keywords": [
+        "icon",
+        "search"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "30:76",
+        "componentKey": "c77b85be20a1147b5f7d128f48a8dc25bfe43f83"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-play",
+      "name": "Icon / play",
+      "slug": "icon-play",
+      "kind": "component",
+      "contractPath": "./components/icon-play.schema.json",
+      "keywords": [
+        "icon",
+        "play"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "30:79",
+        "componentKey": "50a0d5b6dcef2f3eb7d1e4bc9aa4c65e713b7d52"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-timer",
+      "name": "Icon / timer",
+      "slug": "icon-timer",
+      "kind": "component",
+      "contractPath": "./components/icon-timer.schema.json",
+      "keywords": [
+        "icon",
+        "timer"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "30:84",
+        "componentKey": "903c6345c1a3c901e79fbc349234470431c33fb6"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-external-link",
+      "name": "Icon / external-link",
+      "slug": "icon-external-link",
+      "kind": "component",
+      "contractPath": "./components/icon-external-link.schema.json",
+      "keywords": [
+        "external",
+        "icon",
+        "link"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "30:89",
+        "componentKey": "88aa7e37c8c53092ba0ac890a40ce12c3c7bef6e"
       },
       "codeSource": {
         "path": "design-system/css/components.css",
@@ -393,7 +527,7 @@
     }
   ],
   "counts": {
-    "atoms": 16,
+    "atoms": 22,
     "patterns": 0
   }
 }

@@ -1,5 +1,17 @@
 [
   {
+    "name": "Icon / arrow-left",
+    "nodeId": "30:56",
+    "file": "arrow-left.svg",
+    "usage": "glifo UI · Lucide (ISC)"
+  },
+  {
+    "name": "Icon / arrow-right",
+    "nodeId": "30:52",
+    "file": "arrow-right.svg",
+    "usage": "glifo UI · Lucide (ISC)"
+  },
+  {
     "name": "Icon / check",
     "nodeId": "21:56",
     "file": "check.svg",
@@ -12,16 +24,64 @@
     "usage": "glifo UI"
   },
   {
-    "name": "Icon / tiktok",
-    "nodeId": "21:62",
-    "file": "tiktok.svg",
-    "usage": "glifo UI (red social)"
+    "name": "Icon / close",
+    "nodeId": "30:60",
+    "file": "close.svg",
+    "usage": "glifo UI · Lucide (ISC)"
+  },
+  {
+    "name": "Icon / external-link",
+    "nodeId": "30:89",
+    "file": "external-link.svg",
+    "usage": "glifo UI · Lucide (ISC)"
   },
   {
     "name": "Icon / instagram",
     "nodeId": "21:65",
     "file": "instagram.svg",
     "usage": "glifo UI (red social)"
+  },
+  {
+    "name": "Icon / menu",
+    "nodeId": "30:65",
+    "file": "menu.svg",
+    "usage": "glifo UI · Lucide (ISC)"
+  },
+  {
+    "name": "Icon / minus",
+    "nodeId": "30:72",
+    "file": "minus.svg",
+    "usage": "glifo UI · Lucide (ISC)"
+  },
+  {
+    "name": "Icon / play",
+    "nodeId": "30:79",
+    "file": "play.svg",
+    "usage": "glifo UI · Lucide (ISC)"
+  },
+  {
+    "name": "Icon / plus",
+    "nodeId": "30:69",
+    "file": "plus.svg",
+    "usage": "glifo UI · Lucide (ISC)"
+  },
+  {
+    "name": "Icon / search",
+    "nodeId": "30:76",
+    "file": "search.svg",
+    "usage": "glifo UI · Lucide (ISC)"
+  },
+  {
+    "name": "Icon / tiktok",
+    "nodeId": "21:62",
+    "file": "tiktok.svg",
+    "usage": "glifo UI (red social)"
+  },
+  {
+    "name": "Icon / timer",
+    "nodeId": "30:84",
+    "file": "timer.svg",
+    "usage": "glifo UI · Lucide (ISC)"
   },
   {
     "name": "Icon / x",
@@ -34,29 +94,5 @@
     "nodeId": "21:71",
     "file": "youtube.svg",
     "usage": "glifo UI (red social)"
-  },
-  {
-    "name": "Icon / natural",
-    "nodeId": "21:132",
-    "file": "natural.svg",
-    "usage": "ilustrado a mano; SVG original de origen (el export del MCP supera el límite de 20 KB por respuesta)"
-  },
-  {
-    "name": "Icon / noodles",
-    "nodeId": "21:133",
-    "file": "noodles.svg",
-    "usage": "ilustrado a mano; SVG original de origen (el export del MCP supera el límite de 20 KB por respuesta)"
-  },
-  {
-    "name": "Icon / progress",
-    "nodeId": "21:134",
-    "file": "progress.svg",
-    "usage": "ilustrado a mano; SVG original de origen (el export del MCP supera el límite de 20 KB por respuesta)"
-  },
-  {
-    "name": "Icon / check-hand",
-    "nodeId": "21:135",
-    "file": "check-hand.svg",
-    "usage": "ilustrado a mano; SVG original de origen (el export del MCP supera el límite de 20 KB por respuesta)"
   }
 ]

@@ -1,7 +1,7 @@
-### Icon / youtube   ⚙️ synced: 2026-10-07T10:17:28Z
+### Icon / youtube   ⚙️ synced: 2026-10-07T11:30:18Z
 
 <!-- ⚙️ GENERATED:start:icon-youtube -->
-- **Figma:** `21:71` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T10:17:28Z
+- **Figma:** `21:71` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T11:30:18Z
 - **Descripción (Figma):** Red social: YouTube. Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

@@ -11,7 +11,7 @@
           "type": "COMPONENT",
           "id": "21:56",
           "key": "8d3736b0f10db93283ac616c1842079d386cfa8c",
-          "description": "Check de lista (landings, pcard). Color: icon/color/*. Tamaño: icon/size/*",
+          "description": "Check de lista (landings, pcard). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
           "variantAxes": {},
           "variantCount": 1,
           "properties": [],
@@ -33,7 +33,7 @@
           "type": "COMPONENT",
           "id": "21:59",
           "key": "e2009c34315efc931be8bdf585dbe9f67039fef2",
-          "description": "Chevron del selector de idioma (landings), escalado a 24. Color: icon/color/*. Tamaño: icon/size/*",
+          "description": "Chevron del selector de idioma (landings), escalado a 24. Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
           "variantAxes": {},
           "variantCount": 1,
           "properties": [],
@@ -139,21 +139,21 @@
         },
         {
           "page": "Icons",
-          "name": "Icon / natural",
+          "name": "Icon / arrow-right",
           "type": "COMPONENT",
-          "id": "21:132",
-          "key": "bf359cee5872b6cf243f6f85985b5500df56108c",
-          "description": "Ilustrado a mano: naturalidad (hoja/ball). Color: icon/color/illustration. Tamaño por defecto icon/size/xl; escalable",
+          "id": "30:52",
+          "key": "02167ffb071b0168ec8a06dbf817787c64c13318",
+          "description": "Flecha derecha: avanzar, CTA con dirección, slider. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
           "variantAxes": {},
           "variantCount": 1,
           "properties": [],
           "nestedInstances": [],
           "bindings": {
             "variables": [
-              "width: icon/size/xl",
-              "height: icon/size/xl",
-              "fills: icon/color/illustration",
-              "color: icon/color/illustration"
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
             ],
             "textStyles": []
           },
@@ -161,21 +161,21 @@
         },
         {
           "page": "Icons",
-          "name": "Icon / noodles",
+          "name": "Icon / arrow-left",
           "type": "COMPONENT",
-          "id": "21:133",
-          "key": "2c5cb5ae7e7884cb3e9acb419afc21915586ed11",
-          "description": "Ilustrado a mano: fideos. Color: icon/color/illustration. Tamaño por defecto icon/size/xl; escalable",
+          "id": "30:56",
+          "key": "9499612a0f06b2d6a895206d41273567c78d5b59",
+          "description": "Flecha izquierda: retroceder, slider. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
           "variantAxes": {},
           "variantCount": 1,
           "properties": [],
           "nestedInstances": [],
           "bindings": {
             "variables": [
-              "width: icon/size/xl",
-              "height: icon/size/xl",
-              "fills: icon/color/illustration",
-              "color: icon/color/illustration"
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
             ],
             "textStyles": []
           },
@@ -183,21 +183,21 @@
         },
         {
           "page": "Icons",
-          "name": "Icon / progress",
+          "name": "Icon / close",
           "type": "COMPONENT",
-          "id": "21:134",
-          "key": "7164f89683d2061500fd38bea5c02a28b62aaf5a",
-          "description": "Ilustrado a mano: progreso/innovación. Color: icon/color/illustration. Tamaño por defecto icon/size/xl; escalable",
+          "id": "30:60",
+          "key": "d3bd670f4a53fb5af9503f3797584ad997f049a8",
+          "description": "Cerrar: modales, menú móvil. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
           "variantAxes": {},
           "variantCount": 1,
           "properties": [],
           "nestedInstances": [],
           "bindings": {
             "variables": [
-              "width: icon/size/xl",
-              "height: icon/size/xl",
-              "fills: icon/color/illustration",
-              "color: icon/color/illustration"
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
             ],
             "textStyles": []
           },
@@ -205,29 +205,161 @@
         },
         {
           "page": "Icons",
-          "name": "Icon / check-hand",
+          "name": "Icon / menu",
           "type": "COMPONENT",
-          "id": "21:135",
-          "key": "32e1b6595c707a6c26ff3ab384f8d7fd61a58efa",
-          "description": "Check ilustrado a mano, para fondos oscuros o de color. Color: icon/color/inverse. Tamaño por defecto icon/size/xl; escalable",
+          "id": "30:65",
+          "key": "ab0ad6fb1319940494366b5310576ede5f7f6d82",
+          "description": "Menú (hamburguesa) de la navbar móvil. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
           "variantAxes": {},
           "variantCount": 1,
           "properties": [],
           "nestedInstances": [],
           "bindings": {
             "variables": [
-              "width: icon/size/xl",
-              "height: icon/size/xl",
-              "fills: icon/color/inverse",
-              "color: icon/color/inverse"
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / plus",
+          "type": "COMPONENT",
+          "id": "30:69",
+          "key": "c21a991431daab7928e8b4c745539c0105c26172",
+          "description": "Más: abrir acordeón FAQ. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / minus",
+          "type": "COMPONENT",
+          "id": "30:72",
+          "key": "7b0a8d21bb43ff027cb883c53aaea1da88fb144d",
+          "description": "Menos: cerrar acordeón FAQ. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / search",
+          "type": "COMPONENT",
+          "id": "30:76",
+          "key": "c77b85be20a1147b5f7d128f48a8dc25bfe43f83",
+          "description": "Buscar. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / play",
+          "type": "COMPONENT",
+          "id": "30:79",
+          "key": "50a0d5b6dcef2f3eb7d1e4bc9aa4c65e713b7d52",
+          "description": "Reproducir vídeo. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / timer",
+          "type": "COMPONENT",
+          "id": "30:84",
+          "key": "903c6345c1a3c901e79fbc349234470431c33fb6",
+          "description": "Temporizador de preparación (3 minutos). Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / external-link",
+          "type": "COMPONENT",
+          "id": "30:89",
+          "key": "88aa7e37c8c53092ba0ac890a40ce12c3c7bef6e",
+          "description": "Enlace externo: contacto, concursos externos, formulario de Calidad. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
             ],
             "textStyles": []
           },
           "autoLayout": false
         }
       ],
-      "total": 10,
-      "read": 10
+      "total": 16,
+      "read": 16
     },
     {
       "name": "Decoration",
@@ -433,5 +565,5 @@
     }
   ],
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
-  "readAt": "2026-10-07T10:17:00.488Z"
+  "readAt": "2026-10-07T11:29:39.574Z"
 }

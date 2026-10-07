@@ -1,28 +1,28 @@
 {
   "$schema": "../_component.schema.json",
-  "id": "component:icon-noodles",
+  "id": "component:icon-search",
   "meta": {
-    "name": "Icon / noodles",
-    "slug": "icon-noodles",
+    "name": "Icon / search",
+    "slug": "icon-search",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T10:17:28Z",
-    "description": "Ilustrado a mano: fideos. Color: icon/color/illustration. Tamaño por defecto icon/size/xl; escalable",
+    "lastSync": "2026-10-07T11:30:18Z",
+    "description": "Buscar. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
     "figmaPage": "Icons",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "85dd92864608"
+    "anatomyHash": "cbf8f00a6616"
   },
   "source": {
     "docs": {
-      "file": "design-system/docs/components/icon-noodles.md",
-      "section": "Icon / noodles"
+      "file": "design-system/docs/components/icon-search.md",
+      "section": "Icon / search"
     },
     "figma": {
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "21:133",
-      "componentKey": "2c5cb5ae7e7884cb3e9acb419afc21915586ed11"
+      "nodeId": "30:76",
+      "componentKey": "c77b85be20a1147b5f7d128f48a8dc25bfe43f83"
     },
     "code": {
       "package": null,
@@ -48,14 +48,14 @@
     },
     "slots": [],
     "tokensUsed": [
-      "icon/color/illustration",
-      "icon/size/xl"
+      "icon/color/default",
+      "icon/size/md"
     ],
     "variablesUsed": [
-      "width: icon/size/xl",
-      "height: icon/size/xl",
-      "fills: icon/color/illustration",
-      "color: icon/color/illustration"
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: icon/color/default",
+      "color: icon/color/default"
     ],
     "textStyles": []
   },

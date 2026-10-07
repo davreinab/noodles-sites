@@ -2,7 +2,7 @@
 
 # GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
 
-> Última sync: **2026-10-07T09:26:01Z** · modo de adopción: `new` · 139 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-07T09:35:51Z** · modo de adopción: `new` · 139 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice

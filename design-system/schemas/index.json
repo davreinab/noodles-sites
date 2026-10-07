@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": null,
+  "lastSync": "2026-10-07T09:35:51Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -35,9 +35,365 @@
       "codeSource"
     ]
   },
-  "components": [],
+  "components": [
+    {
+      "id": "component:icon-check",
+      "name": "Icon / check",
+      "slug": "icon-check",
+      "kind": "component",
+      "contractPath": "./components/icon-check.schema.json",
+      "keywords": [
+        "check",
+        "icon"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:56",
+        "componentKey": "8d3736b0f10db93283ac616c1842079d386cfa8c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-chevron-down",
+      "name": "Icon / chevron-down",
+      "slug": "icon-chevron-down",
+      "kind": "component",
+      "contractPath": "./components/icon-chevron-down.schema.json",
+      "keywords": [
+        "chevron",
+        "down",
+        "icon"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:59",
+        "componentKey": "e2009c34315efc931be8bdf585dbe9f67039fef2"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-tiktok",
+      "name": "Icon / tiktok",
+      "slug": "icon-tiktok",
+      "kind": "component",
+      "contractPath": "./components/icon-tiktok.schema.json",
+      "keywords": [
+        "icon",
+        "tiktok"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:62",
+        "componentKey": "2a5d0ae200c6c597ad4393ed689e6ccae9875f79"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-instagram",
+      "name": "Icon / instagram",
+      "slug": "icon-instagram",
+      "kind": "component",
+      "contractPath": "./components/icon-instagram.schema.json",
+      "keywords": [
+        "icon",
+        "instagram"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:65",
+        "componentKey": "f3ce3affb43188de81cf62cd9b0c44fb28a86d1a"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-x",
+      "name": "Icon / x",
+      "slug": "icon-x",
+      "kind": "component",
+      "contractPath": "./components/icon-x.schema.json",
+      "keywords": [
+        "icon",
+        "x"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:68",
+        "componentKey": "fde608eea1d5512ceeff13f83e8eeb81906a4934"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-youtube",
+      "name": "Icon / youtube",
+      "slug": "icon-youtube",
+      "kind": "component",
+      "contractPath": "./components/icon-youtube.schema.json",
+      "keywords": [
+        "icon",
+        "youtube"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:71",
+        "componentKey": "29c902bd7d314a56afb42b3e7acb9dd6e3ce7393"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-natural",
+      "name": "Icon / natural",
+      "slug": "icon-natural",
+      "kind": "component",
+      "contractPath": "./components/icon-natural.schema.json",
+      "keywords": [
+        "icon",
+        "natural"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:132",
+        "componentKey": "bf359cee5872b6cf243f6f85985b5500df56108c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-noodles",
+      "name": "Icon / noodles",
+      "slug": "icon-noodles",
+      "kind": "component",
+      "contractPath": "./components/icon-noodles.schema.json",
+      "keywords": [
+        "icon",
+        "noodles"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:133",
+        "componentKey": "2c5cb5ae7e7884cb3e9acb419afc21915586ed11"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-progress",
+      "name": "Icon / progress",
+      "slug": "icon-progress",
+      "kind": "component",
+      "contractPath": "./components/icon-progress.schema.json",
+      "keywords": [
+        "icon",
+        "progress"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:134",
+        "componentKey": "7164f89683d2061500fd38bea5c02a28b62aaf5a"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-check-hand",
+      "name": "Icon / check-hand",
+      "slug": "icon-check-hand",
+      "kind": "component",
+      "contractPath": "./components/icon-check-hand.schema.json",
+      "keywords": [
+        "check",
+        "hand",
+        "icon"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:135",
+        "componentKey": "32e1b6595c707a6c26ff3ab384f8d7fd61a58efa"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:decoration-noodle",
+      "name": "Decoration / Noodle",
+      "slug": "decoration-noodle",
+      "kind": "component",
+      "contractPath": "./components/decoration-noodle.schema.json",
+      "keywords": [
+        "decoration",
+        "noodle"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:165",
+        "componentKey": "de6e1d33e0f5e285098cd62c42a915e478445c5c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:logo-gb-foods",
+      "name": "Logo / GB Foods",
+      "slug": "logo-gb-foods",
+      "kind": "component",
+      "contractPath": "./components/logo-gb-foods.schema.json",
+      "keywords": [
+        "foods",
+        "gb",
+        "logo"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:180",
+        "componentKey": "3b2cee9843d931eddae85dc3407d20544871c1b3"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:logo-aïki",
+      "name": "Logo / Aïki",
+      "slug": "logo-aïki",
+      "kind": "component",
+      "contractPath": "./components/logo-aïki.schema.json",
+      "keywords": [
+        "aïki",
+        "logo"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:179",
+        "componentKey": "b4db27048620915b80e36d193cbbf666511c07fc"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:logo-yatekomo",
+      "name": "Logo / Yatekomo",
+      "slug": "logo-yatekomo",
+      "kind": "component",
+      "contractPath": "./components/logo-yatekomo.schema.json",
+      "keywords": [
+        "logo",
+        "yatekomo"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:169",
+        "componentKey": "febcd601ded66ee4035d032e28faf4a114ea8e0a"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:logo-saikebon",
+      "name": "Logo / Saikebon",
+      "slug": "logo-saikebon",
+      "kind": "component",
+      "contractPath": "./components/logo-saikebon.schema.json",
+      "keywords": [
+        "logo",
+        "saikebon"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:173",
+        "componentKey": "66508fbf0a0578766e1291488caf8c8686e269a9"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:logo-daisuki",
+      "name": "Logo / Daisuki",
+      "slug": "logo-daisuki",
+      "kind": "component",
+      "contractPath": "./components/logo-daisuki.schema.json",
+      "keywords": [
+        "daisuki",
+        "logo"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:177",
+        "componentKey": "30803ac1ce186c84e08da72754a3e71cecb64a13"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    }
+  ],
   "counts": {
-    "atoms": 0,
+    "atoms": 16,
     "patterns": 0
   }
 }

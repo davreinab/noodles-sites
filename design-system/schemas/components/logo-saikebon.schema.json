@@ -1,0 +1,82 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:logo-saikebon",
+  "meta": {
+    "name": "Logo / Saikebon",
+    "slug": "logo-saikebon",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T09:35:51Z",
+    "description": "Logo Saikebon. Solo PNG: pedir vectoriales originales. No se recolorea.",
+    "figmaPage": "Brand",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": false,
+    "anatomyHash": "1a237fae7aa8"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/logo-saikebon.md",
+      "section": "Logo / Saikebon"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "21:173",
+      "componentKey": "66508fbf0a0578766e1291488caf8c8686e269a9"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Version",
+        "kind": "VARIANT",
+        "default": "Positive",
+        "values": [
+          "Positive",
+          "Negative"
+        ]
+      }
+    ],
+    "variants": {
+      "Version": [
+        "Positive",
+        "Negative"
+      ]
+    },
+    "states": [],
+    "defaults": {
+      "Version": "Positive"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [],
+    "variablesUsed": [],
+    "textStyles": []
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [],
+    "related": []
+  }
+}

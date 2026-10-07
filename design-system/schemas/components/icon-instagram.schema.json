@@ -1,0 +1,73 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:icon-instagram",
+  "meta": {
+    "name": "Icon / instagram",
+    "slug": "icon-instagram",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T09:35:51Z",
+    "description": "Red social: Instagram. Color: icon/color/*. Tamaño: icon/size/*",
+    "figmaPage": "Icons",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": false,
+    "anatomyHash": "f3cd0a23b61e"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/icon-instagram.md",
+      "section": "Icon / instagram"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "21:65",
+      "componentKey": "f3ce3affb43188de81cf62cd9b0c44fb28a86d1a"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [],
+    "variants": {},
+    "states": [],
+    "defaults": {},
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "icon/color/default",
+      "icon/size/md"
+    ],
+    "variablesUsed": [
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "fills: icon/color/default",
+      "color: icon/color/default"
+    ],
+    "textStyles": []
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [],
+    "related": []
+  }
+}

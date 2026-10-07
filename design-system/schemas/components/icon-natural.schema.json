@@ -1,0 +1,73 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:icon-natural",
+  "meta": {
+    "name": "Icon / natural",
+    "slug": "icon-natural",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T09:35:51Z",
+    "description": "Ilustrado a mano: naturalidad (hoja/ball). Color: icon/color/illustration. Tamaño por defecto icon/size/xl; escalable",
+    "figmaPage": "Icons",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": false,
+    "anatomyHash": "2c873c364c6f"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/icon-natural.md",
+      "section": "Icon / natural"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "21:132",
+      "componentKey": "bf359cee5872b6cf243f6f85985b5500df56108c"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [],
+    "variants": {},
+    "states": [],
+    "defaults": {},
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "icon/color/illustration",
+      "icon/size/xl"
+    ],
+    "variablesUsed": [
+      "width: icon/size/xl",
+      "height: icon/size/xl",
+      "fills: icon/color/illustration",
+      "color: icon/color/illustration"
+    ],
+    "textStyles": []
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [],
+    "related": []
+  }
+}

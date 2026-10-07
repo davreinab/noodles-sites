@@ -1,0 +1,82 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:logo-daisuki",
+  "meta": {
+    "name": "Logo / Daisuki",
+    "slug": "logo-daisuki",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T09:35:51Z",
+    "description": "Logo Daisuki. Positivo vectorial; negativo en PNG. No se recolorea.",
+    "figmaPage": "Brand",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": false,
+    "anatomyHash": "ba1c2f6d9620"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/logo-daisuki.md",
+      "section": "Logo / Daisuki"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "21:177",
+      "componentKey": "30803ac1ce186c84e08da72754a3e71cecb64a13"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Version",
+        "kind": "VARIANT",
+        "default": "Positive",
+        "values": [
+          "Positive",
+          "Negative"
+        ]
+      }
+    ],
+    "variants": {
+      "Version": [
+        "Positive",
+        "Negative"
+      ]
+    },
+    "states": [],
+    "defaults": {
+      "Version": "Positive"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [],
+    "variablesUsed": [],
+    "textStyles": []
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [],
+    "related": []
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Icon / check",
+    "nodeId": "21:56",
+    "file": "check.svg",
+    "usage": "glifo UI"
+  },
+  {
+    "name": "Icon / chevron-down",
+    "nodeId": "21:59",
+    "file": "chevron-down.svg",
+    "usage": "glifo UI"
+  },
+  {
+    "name": "Icon / tiktok",
+    "nodeId": "21:62",
+    "file": "tiktok.svg",
+    "usage": "glifo UI (red social)"
+  },
+  {
+    "name": "Icon / instagram",
+    "nodeId": "21:65",
+    "file": "instagram.svg",
+    "usage": "glifo UI (red social)"
+  },
+  {
+    "name": "Icon / x",
+    "nodeId": "21:68",
+    "file": "x.svg",
+    "usage": "glifo UI (red social)"
+  },
+  {
+    "name": "Icon / youtube",
+    "nodeId": "21:71",
+    "file": "youtube.svg",
+    "usage": "glifo UI (red social)"
+  },
+  {
+    "name": "Icon / natural",
+    "nodeId": "21:132",
+    "file": "natural.svg",
+    "usage": "ilustrado a mano; SVG original de origen (el export del MCP supera el límite de 20 KB por respuesta)"
+  },
+  {
+    "name": "Icon / noodles",
+    "nodeId": "21:133",
+    "file": "noodles.svg",
+    "usage": "ilustrado a mano; SVG original de origen (el export del MCP supera el límite de 20 KB por respuesta)"
+  },
+  {
+    "name": "Icon / progress",
+    "nodeId": "21:134",
+    "file": "progress.svg",
+    "usage": "ilustrado a mano; SVG original de origen (el export del MCP supera el límite de 20 KB por respuesta)"
+  },
+  {
+    "name": "Icon / check-hand",
+    "nodeId": "21:135",
+    "file": "check-hand.svg",
+    "usage": "ilustrado a mano; SVG original de origen (el export del MCP supera el límite de 20 KB por respuesta)"
+  }
+]

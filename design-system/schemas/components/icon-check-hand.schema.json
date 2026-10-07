@@ -1,0 +1,73 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:icon-check-hand",
+  "meta": {
+    "name": "Icon / check-hand",
+    "slug": "icon-check-hand",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T09:35:51Z",
+    "description": "Check ilustrado a mano, para fondos oscuros o de color. Color: icon/color/inverse. Tamaño por defecto icon/size/xl; escalable",
+    "figmaPage": "Icons",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": false,
+    "anatomyHash": "687fddd760ed"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/icon-check-hand.md",
+      "section": "Icon / check-hand"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "21:135",
+      "componentKey": "32e1b6595c707a6c26ff3ab384f8d7fd61a58efa"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [],
+    "variants": {},
+    "states": [],
+    "defaults": {},
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "icon/color/inverse",
+      "icon/size/xl"
+    ],
+    "variablesUsed": [
+      "width: icon/size/xl",
+      "height: icon/size/xl",
+      "fills: icon/color/inverse",
+      "color: icon/color/inverse"
+    ],
+    "textStyles": []
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [],
+    "related": []
+  }
+}

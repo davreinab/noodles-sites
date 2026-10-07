@@ -1,0 +1,65 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:logo-gb-foods",
+  "meta": {
+    "name": "Logo / GB Foods",
+    "slug": "logo-gb-foods",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T09:35:51Z",
+    "description": "Logo GB Foods. Marca corporativa (Days you can trust). Solo negativo vectorial. No se recolorea.",
+    "figmaPage": "Brand",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": false,
+    "anatomyHash": "179c4d8008e8"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/logo-gb-foods.md",
+      "section": "Logo / GB Foods"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "21:180",
+      "componentKey": "3b2cee9843d931eddae85dc3407d20544871c1b3"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [],
+    "variants": {},
+    "states": [],
+    "defaults": {},
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [],
+    "variablesUsed": [],
+    "textStyles": []
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [],
+    "related": []
+  }
+}

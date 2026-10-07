@@ -1,0 +1,18 @@
+### Icon / progress   ⚙️ synced: 2026-10-07T09:35:51Z
+
+<!-- ⚙️ GENERATED:start:icon-progress -->
+- **Figma:** `21:134` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T09:35:51Z
+- **Descripción (Figma):** Ilustrado a mano: progreso/innovación. Color: icon/color/illustration. Tamaño por defecto icon/size/xl; escalable
+- **Anatomía:** sin instancias anidadas
+- **Propiedades de componente:** ninguna
+- **Iconos / instancias anidadas:** ninguno
+- **Tokens que consume:** `icon/color/illustration`, `icon/size/xl`
+<!-- ⚙️ GENERATED:end:icon-progress -->
+
+- **Propósito:** ⬜ TODO
+- **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; se copia a `source.code.example` del schema)_
+  ```html
+  <!-- ⬜ TODO -->
+  ```
+- **Accesibilidad (pares AA verificados):** ⬜ TODO
+- **Cuándo usar / qué NO hace:** ⬜ TODO

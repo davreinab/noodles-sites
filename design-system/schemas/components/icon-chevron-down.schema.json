@@ -1,0 +1,73 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:icon-chevron-down",
+  "meta": {
+    "name": "Icon / chevron-down",
+    "slug": "icon-chevron-down",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T09:35:51Z",
+    "description": "Chevron del selector de idioma (landings), escalado a 24. Color: icon/color/*. Tamaño: icon/size/*",
+    "figmaPage": "Icons",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": false,
+    "anatomyHash": "09f11d52202f"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/icon-chevron-down.md",
+      "section": "Icon / chevron-down"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "21:59",
+      "componentKey": "e2009c34315efc931be8bdf585dbe9f67039fef2"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [],
+    "variants": {},
+    "states": [],
+    "defaults": {},
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "icon/color/default",
+      "icon/size/md"
+    ],
+    "variablesUsed": [
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: icon/color/default",
+      "color: icon/color/default"
+    ],
+    "textStyles": []
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [],
+    "related": []
+  }
+}

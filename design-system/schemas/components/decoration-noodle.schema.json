@@ -1,0 +1,107 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:decoration-noodle",
+  "meta": {
+    "name": "Decoration / Noodle",
+    "slug": "decoration-noodle",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T09:35:51Z",
+    "description": "Fideo decorativo de marca (5 trazos). Tone=Brand usa decoration/noodle/brand y Tone=Accent decoration/noodle/accent; ambos cambian con el modo de marca. Escalable; solo decorativo (aria-hidden).",
+    "figmaPage": "Decoration",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 10,
+    "autoLayout": false,
+    "anatomyHash": "c10edbc5ec7b"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/decoration-noodle.md",
+      "section": "Decoration / Noodle"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "21:165",
+      "componentKey": "de6e1d33e0f5e285098cd62c42a915e478445c5c"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Shape",
+        "kind": "VARIANT",
+        "default": "1",
+        "values": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "1"
+        ]
+      },
+      {
+        "name": "Tone",
+        "kind": "VARIANT",
+        "default": "Brand",
+        "values": [
+          "Brand",
+          "Accent"
+        ]
+      }
+    ],
+    "variants": {
+      "Shape": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "1"
+      ],
+      "Tone": [
+        "Brand",
+        "Accent"
+      ]
+    },
+    "states": [],
+    "defaults": {
+      "Shape": "1",
+      "Tone": "Brand"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "decoration/noodle/brand"
+    ],
+    "variablesUsed": [
+      "fills: decoration/noodle/brand",
+      "color: decoration/noodle/brand"
+    ],
+    "textStyles": []
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [],
+    "related": []
+  }
+}

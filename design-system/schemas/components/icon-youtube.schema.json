@@ -1,0 +1,73 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:icon-youtube",
+  "meta": {
+    "name": "Icon / youtube",
+    "slug": "icon-youtube",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-07T09:35:51Z",
+    "description": "Red social: YouTube. Color: icon/color/*. Tamaño: icon/size/*",
+    "figmaPage": "Icons",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": false,
+    "anatomyHash": "12f1c7621db9"
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/icon-youtube.md",
+      "section": "Icon / youtube"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "21:71",
+      "componentKey": "29c902bd7d314a56afb42b3e7acb9dd6e3ce7393"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [],
+      "example": null
+    }
+  },
+  "api": {
+    "properties": [],
+    "variants": {},
+    "states": [],
+    "defaults": {},
+    "invalidCombinations": [],
+    "nestedInstances": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "icon/color/default",
+      "icon/size/md"
+    ],
+    "variablesUsed": [
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "fills: icon/color/default",
+      "color: icon/color/default"
+    ],
+    "textStyles": []
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [],
+    "usedBy": [],
+    "related": []
+  }
+}

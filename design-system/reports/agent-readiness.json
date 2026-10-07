@@ -2,12 +2,12 @@
   "designSystem": "GB Noodles · Microsites",
   "rubricVersion": "1.0.0",
   "note": "Informe generado por scripts/agent-readiness.py. No editar a mano.",
-  "score": 2.9,
+  "score": 4.3,
   "scale": "0-5",
   "passThreshold": 4,
-  "passes": false,
+  "passes": true,
   "counts": {
-    "cumple": 4,
+    "cumple": 6,
     "aplicables": 7,
     "noAplica": 2
   },
@@ -27,20 +27,20 @@
     {
       "id": "component-registry",
       "title": "Registro de componentes enumerable",
-      "status": "pendiente",
-      "detail": "sin componentes sincronizados todavía"
+      "status": "cumple",
+      "detail": "16 componentes con correspondencia 1:1 entre índice y contratos"
     },
     {
       "id": "typed-contracts",
       "title": "Contratos con valores cerrados",
-      "status": "pendiente",
-      "detail": "sin contratos de componente todavía"
+      "status": "cumple",
+      "detail": "16 contratos con claves obligatorias y valores cerrados"
     },
     {
       "id": "runnable-patterns",
       "title": "Ejemplos ejecutables, no capturas",
-      "status": "pendiente",
-      "detail": "sin contratos de componente todavía"
+      "status": "no-cumple",
+      "detail": "16 contratos sin ejemplo ejecutable (p. ej. decoration-noodle: sin ejemplo de código)"
     },
     {
       "id": "scoped-retrieval",

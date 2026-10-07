@@ -9,13 +9,28 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** ⬜ sin componentes aún.
+**Estado:** 16 componentes sincronizados el 2026-10-07T09:35:51Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
 ## Índice
 
-_(vacío — se genera con el sync: una línea por ficha con su archivo, kind, slug y estado del criterio)_
+- [Icon / check](components/icon-check.md) · component · `icon-check` · ⬜ 5 pendientes
+- [Icon / chevron-down](components/icon-chevron-down.md) · component · `icon-chevron-down` · ⬜ 5 pendientes
+- [Icon / tiktok](components/icon-tiktok.md) · component · `icon-tiktok` · ⬜ 5 pendientes
+- [Icon / instagram](components/icon-instagram.md) · component · `icon-instagram` · ⬜ 5 pendientes
+- [Icon / x](components/icon-x.md) · component · `icon-x` · ⬜ 5 pendientes
+- [Icon / youtube](components/icon-youtube.md) · component · `icon-youtube` · ⬜ 5 pendientes
+- [Icon / natural](components/icon-natural.md) · component · `icon-natural` · ⬜ 5 pendientes
+- [Icon / noodles](components/icon-noodles.md) · component · `icon-noodles` · ⬜ 5 pendientes
+- [Icon / progress](components/icon-progress.md) · component · `icon-progress` · ⬜ 5 pendientes
+- [Icon / check-hand](components/icon-check-hand.md) · component · `icon-check-hand` · ⬜ 5 pendientes
+- [Decoration / Noodle](components/decoration-noodle.md) · component · `decoration-noodle` · ⬜ 5 pendientes
+- [Logo / GB Foods](components/logo-gb-foods.md) · component · `logo-gb-foods` · ⬜ 5 pendientes
+- [Logo / Aïki](components/logo-aïki.md) · component · `logo-aïki` · ⬜ 5 pendientes
+- [Logo / Yatekomo](components/logo-yatekomo.md) · component · `logo-yatekomo` · ⬜ 5 pendientes
+- [Logo / Saikebon](components/logo-saikebon.md) · component · `logo-saikebon` · ⬜ 5 pendientes
+- [Logo / Daisuki](components/logo-daisuki.md) · component · `logo-daisuki` · ⬜ 5 pendientes
 
 ## Cómo rellenar una ficha
 

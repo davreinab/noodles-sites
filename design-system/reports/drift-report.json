@@ -1,6 +1,6 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": "2026-10-07T09:26:01Z",
+  "generatedAt": "2026-10-07T09:35:51Z",
   "adoptionMode": "new",
   "sourcesCompared": [
     "figma",
@@ -12,7 +12,7 @@
   ],
   "summary": {
     "critical": 0,
-    "warning": 0,
+    "warning": 16,
     "info": 11
   },
   "findings": [
@@ -70,6 +70,86 @@
       "severity": "info",
       "check": "missing-variable-description-or-scope",
       "detail": "Motion / motion/duration/slow: sin scopes"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / check: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / chevron-down: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / tiktok: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / instagram: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / x: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / youtube: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / natural: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / noodles: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / progress: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / check-hand: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Decoration / Noodle: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Logo / GB Foods: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Logo / Aïki: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Logo / Yatekomo: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Logo / Saikebon: sin «Ejemplo de código» (source.code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Logo / Daisuki: sin «Ejemplo de código» (source.code.example)"
     }
   ],
   "acceptedStructuralDifferences": [],
@@ -95,8 +175,8 @@
   ],
   "inputs": {
     "variables": true,
-    "components": false,
-    "icons": false
+    "components": true,
+    "icons": true
   },
   "generatedBy": "scripts/ds-sync.py"
 }

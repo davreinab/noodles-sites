@@ -1,0 +1,437 @@
+{
+  "pages": [
+    {
+      "name": "Icons",
+      "id": "20:49",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Icons",
+          "name": "Icon / check",
+          "type": "COMPONENT",
+          "id": "21:56",
+          "key": "8d3736b0f10db93283ac616c1842079d386cfa8c",
+          "description": "Check de lista (landings, pcard). Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / chevron-down",
+          "type": "COMPONENT",
+          "id": "21:59",
+          "key": "e2009c34315efc931be8bdf585dbe9f67039fef2",
+          "description": "Chevron del selector de idioma (landings), escalado a 24. Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / tiktok",
+          "type": "COMPONENT",
+          "id": "21:62",
+          "key": "2a5d0ae200c6c597ad4393ed689e6ccae9875f79",
+          "description": "Red social: TikTok. Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "fills: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / instagram",
+          "type": "COMPONENT",
+          "id": "21:65",
+          "key": "f3ce3affb43188de81cf62cd9b0c44fb28a86d1a",
+          "description": "Red social: Instagram. Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "fills: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / x",
+          "type": "COMPONENT",
+          "id": "21:68",
+          "key": "fde608eea1d5512ceeff13f83e8eeb81906a4934",
+          "description": "Red social: X. Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "fills: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / youtube",
+          "type": "COMPONENT",
+          "id": "21:71",
+          "key": "29c902bd7d314a56afb42b3e7acb9dd6e3ce7393",
+          "description": "Red social: YouTube. Color: icon/color/*. Tamaño: icon/size/*",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "fills: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / natural",
+          "type": "COMPONENT",
+          "id": "21:132",
+          "key": "bf359cee5872b6cf243f6f85985b5500df56108c",
+          "description": "Ilustrado a mano: naturalidad (hoja/ball). Color: icon/color/illustration. Tamaño por defecto icon/size/xl; escalable",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/xl",
+              "height: icon/size/xl",
+              "fills: icon/color/illustration",
+              "color: icon/color/illustration"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / noodles",
+          "type": "COMPONENT",
+          "id": "21:133",
+          "key": "2c5cb5ae7e7884cb3e9acb419afc21915586ed11",
+          "description": "Ilustrado a mano: fideos. Color: icon/color/illustration. Tamaño por defecto icon/size/xl; escalable",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/xl",
+              "height: icon/size/xl",
+              "fills: icon/color/illustration",
+              "color: icon/color/illustration"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / progress",
+          "type": "COMPONENT",
+          "id": "21:134",
+          "key": "7164f89683d2061500fd38bea5c02a28b62aaf5a",
+          "description": "Ilustrado a mano: progreso/innovación. Color: icon/color/illustration. Tamaño por defecto icon/size/xl; escalable",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/xl",
+              "height: icon/size/xl",
+              "fills: icon/color/illustration",
+              "color: icon/color/illustration"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Icons",
+          "name": "Icon / check-hand",
+          "type": "COMPONENT",
+          "id": "21:135",
+          "key": "32e1b6595c707a6c26ff3ab384f8d7fd61a58efa",
+          "description": "Check ilustrado a mano, para fondos oscuros o de color. Color: icon/color/inverse. Tamaño por defecto icon/size/xl; escalable",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "width: icon/size/xl",
+              "height: icon/size/xl",
+              "fills: icon/color/inverse",
+              "color: icon/color/inverse"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        }
+      ],
+      "total": 10,
+      "read": 10
+    },
+    {
+      "name": "Decoration",
+      "id": "20:50",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Decoration",
+          "name": "Decoration / Noodle",
+          "type": "COMPONENT_SET",
+          "id": "21:165",
+          "key": "de6e1d33e0f5e285098cd62c42a915e478445c5c",
+          "description": "Fideo decorativo de marca (5 trazos). Tone=Brand usa decoration/noodle/brand y Tone=Accent decoration/noodle/accent; ambos cambian con el modo de marca. Escalable; solo decorativo (aria-hidden).",
+          "variantAxes": {
+            "Shape": [
+              "2",
+              "3",
+              "4",
+              "5",
+              "1"
+            ],
+            "Tone": [
+              "Brand",
+              "Accent"
+            ]
+          },
+          "variantCount": 10,
+          "properties": [
+            {
+              "name": "Shape",
+              "kind": "VARIANT",
+              "default": "1",
+              "values": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "1"
+              ]
+            },
+            {
+              "name": "Tone",
+              "kind": "VARIANT",
+              "default": "Brand",
+              "values": [
+                "Brand",
+                "Accent"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "fills: decoration/noodle/brand",
+              "color: decoration/noodle/brand"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": false
+        }
+      ],
+      "total": 1,
+      "read": 1
+    },
+    {
+      "name": "Brand",
+      "id": "20:51",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Brand",
+          "name": "Logo / GB Foods",
+          "type": "COMPONENT",
+          "id": "21:180",
+          "key": "3b2cee9843d931eddae85dc3407d20544871c1b3",
+          "description": "Logo GB Foods. Marca corporativa (Days you can trust). Solo negativo vectorial. No se recolorea.",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Brand",
+          "name": "Logo / Aïki",
+          "type": "COMPONENT",
+          "id": "21:179",
+          "key": "b4db27048620915b80e36d193cbbf666511c07fc",
+          "description": "Logo Aïki. Solo PNG pixelado, sin variante negativa: pedir vectorial al cliente. No se recolorea.",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Brand",
+          "name": "Logo / Yatekomo",
+          "type": "COMPONENT_SET",
+          "id": "21:169",
+          "key": "febcd601ded66ee4035d032e28faf4a114ea8e0a",
+          "description": "Logo Yatekomo. Positivo vectorial; negativo en PNG (pedir vectorial). No se recolorea.",
+          "variantAxes": {
+            "Version": [
+              "Positive",
+              "Negative"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Version",
+              "kind": "VARIANT",
+              "default": "Positive",
+              "values": [
+                "Positive",
+                "Negative"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Brand",
+          "name": "Logo / Saikebon",
+          "type": "COMPONENT_SET",
+          "id": "21:173",
+          "key": "66508fbf0a0578766e1291488caf8c8686e269a9",
+          "description": "Logo Saikebon. Solo PNG: pedir vectoriales originales. No se recolorea.",
+          "variantAxes": {
+            "Version": [
+              "Positive",
+              "Negative"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Version",
+              "kind": "VARIANT",
+              "default": "Positive",
+              "values": [
+                "Positive",
+                "Negative"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Brand",
+          "name": "Logo / Daisuki",
+          "type": "COMPONENT_SET",
+          "id": "21:177",
+          "key": "30803ac1ce186c84e08da72754a3e71cecb64a13",
+          "description": "Logo Daisuki. Positivo vectorial; negativo en PNG. No se recolorea.",
+          "variantAxes": {
+            "Version": [
+              "Positive",
+              "Negative"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Version",
+              "kind": "VARIANT",
+              "default": "Positive",
+              "values": [
+                "Positive",
+                "Negative"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [],
+            "textStyles": []
+          },
+          "autoLayout": false
+        }
+      ],
+      "total": 5,
+      "read": 5
+    }
+  ],
+  "fileKey": "v4mnn154qUmiB35CCnRfgh",
+  "readAt": "2026-10-07T09:34:05.442Z"
+}

@@ -1,7 +1,7 @@
-### Icon / minus   ⚙️ synced: 2026-10-08T06:16:03Z
+### Icon / minus   ⚙️ synced: 2026-10-08T07:04:34Z
 
 <!-- ⚙️ GENERATED:start:icon-minus -->
-- **Figma:** `30:72` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-08T06:16:03Z
+- **Figma:** `30:72` · página «Iconography» · COMPONENT · 1 variantes · última sync 2026-10-08T07:04:34Z
 - **Descripción (Figma):** Menos: cerrar acordeón FAQ. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

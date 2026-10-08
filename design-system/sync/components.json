@@ -1,12 +1,12 @@
 {
   "pages": [
     {
-      "name": "Icons",
+      "name": "Iconography",
       "id": "20:49",
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "components": [
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / check",
           "type": "COMPONENT",
           "id": "21:56",
@@ -28,7 +28,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / chevron-down",
           "type": "COMPONENT",
           "id": "21:59",
@@ -50,7 +50,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / tiktok",
           "type": "COMPONENT",
           "id": "21:62",
@@ -72,7 +72,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / instagram",
           "type": "COMPONENT",
           "id": "21:65",
@@ -94,7 +94,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / x",
           "type": "COMPONENT",
           "id": "21:68",
@@ -116,7 +116,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / youtube",
           "type": "COMPONENT",
           "id": "21:71",
@@ -138,7 +138,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / arrow-right",
           "type": "COMPONENT",
           "id": "30:52",
@@ -160,7 +160,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / arrow-left",
           "type": "COMPONENT",
           "id": "30:56",
@@ -182,7 +182,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / close",
           "type": "COMPONENT",
           "id": "30:60",
@@ -204,7 +204,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / menu",
           "type": "COMPONENT",
           "id": "30:65",
@@ -226,7 +226,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / plus",
           "type": "COMPONENT",
           "id": "30:69",
@@ -248,7 +248,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / minus",
           "type": "COMPONENT",
           "id": "30:72",
@@ -270,7 +270,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / search",
           "type": "COMPONENT",
           "id": "30:76",
@@ -292,7 +292,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / play",
           "type": "COMPONENT",
           "id": "30:79",
@@ -314,7 +314,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / timer",
           "type": "COMPONENT",
           "id": "30:84",
@@ -336,7 +336,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / external-link",
           "type": "COMPONENT",
           "id": "30:89",
@@ -358,7 +358,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / circle-alert",
           "type": "COMPONENT",
           "id": "46:78",
@@ -380,7 +380,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / pause",
           "type": "COMPONENT",
           "id": "76:52",
@@ -402,7 +402,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / rotate-ccw",
           "type": "COMPONENT",
           "id": "76:56",
@@ -424,7 +424,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / info",
           "type": "COMPONENT",
           "id": "76:61",
@@ -446,7 +446,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / circle-check",
           "type": "COMPONENT",
           "id": "76:65",
@@ -468,7 +468,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / triangle-alert",
           "type": "COMPONENT",
           "id": "76:70",
@@ -490,7 +490,7 @@
           "autoLayout": false
         },
         {
-          "page": "Icons",
+          "page": "Iconography",
           "name": "Icon / message-circle",
           "type": "COMPONENT",
           "id": "76:73",
@@ -516,12 +516,142 @@
       "read": 23
     },
     {
-      "name": "Decoration",
-      "id": "20:50",
+      "name": "Brand assets",
+      "id": "20:51",
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "components": [
         {
-          "page": "Decoration",
+          "page": "Brand assets",
+          "name": "Logo / GB Foods",
+          "type": "COMPONENT",
+          "id": "21:180",
+          "key": "3b2cee9843d931eddae85dc3407d20544871c1b3",
+          "description": "Logo GB Foods. Marca corporativa (Days you can trust). Solo negativo vectorial. No se recolorea.",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Brand assets",
+          "name": "Logo / Aiki",
+          "type": "COMPONENT",
+          "id": "21:179",
+          "key": "b4db27048620915b80e36d193cbbf666511c07fc",
+          "description": "Logo Aïki (marca belga; slug sin diéresis). Solo PNG pixelado, sin variante negativa: pedir vectorial al cliente. No se recolorea.",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Brand assets",
+          "name": "Logo / Yatekomo",
+          "type": "COMPONENT_SET",
+          "id": "21:169",
+          "key": "febcd601ded66ee4035d032e28faf4a114ea8e0a",
+          "description": "Logo Yatekomo. Positivo vectorial; negativo en PNG (pedir vectorial). No se recolorea.",
+          "variantAxes": {
+            "Version": [
+              "Positive",
+              "Negative"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Version",
+              "kind": "VARIANT",
+              "default": "Positive",
+              "values": [
+                "Positive",
+                "Negative"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Brand assets",
+          "name": "Logo / Saikebon",
+          "type": "COMPONENT_SET",
+          "id": "21:173",
+          "key": "66508fbf0a0578766e1291488caf8c8686e269a9",
+          "description": "Logo Saikebon. Solo PNG: pedir vectoriales originales. No se recolorea.",
+          "variantAxes": {
+            "Version": [
+              "Positive",
+              "Negative"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Version",
+              "kind": "VARIANT",
+              "default": "Positive",
+              "values": [
+                "Positive",
+                "Negative"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Brand assets",
+          "name": "Logo / Daisuki",
+          "type": "COMPONENT_SET",
+          "id": "21:177",
+          "key": "30803ac1ce186c84e08da72754a3e71cecb64a13",
+          "description": "Logo Daisuki. Positivo vectorial; negativo en PNG. No se recolorea.",
+          "variantAxes": {
+            "Version": [
+              "Positive",
+              "Negative"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Version",
+              "kind": "VARIANT",
+              "default": "Positive",
+              "values": [
+                "Positive",
+                "Negative"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [],
+            "textStyles": []
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Brand assets",
           "name": "Decoration / Noodle",
           "type": "COMPONENT_SET",
           "id": "21:165",
@@ -575,155 +705,16 @@
           "autoLayout": false
         }
       ],
-      "total": 1,
-      "read": 1
+      "total": 6,
+      "read": 6
     },
     {
-      "name": "Brand",
-      "id": "20:51",
+      "name": "Buttons & links",
+      "id": "125:49",
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "components": [
         {
-          "page": "Brand",
-          "name": "Logo / GB Foods",
-          "type": "COMPONENT",
-          "id": "21:180",
-          "key": "3b2cee9843d931eddae85dc3407d20544871c1b3",
-          "description": "Logo GB Foods. Marca corporativa (Days you can trust). Solo negativo vectorial. No se recolorea.",
-          "variantAxes": {},
-          "variantCount": 1,
-          "properties": [],
-          "nestedInstances": [],
-          "bindings": {
-            "variables": [],
-            "textStyles": []
-          },
-          "autoLayout": false
-        },
-        {
-          "page": "Brand",
-          "name": "Logo / Aiki",
-          "type": "COMPONENT",
-          "id": "21:179",
-          "key": "b4db27048620915b80e36d193cbbf666511c07fc",
-          "description": "Logo Aïki (marca belga; slug sin diéresis). Solo PNG pixelado, sin variante negativa: pedir vectorial al cliente. No se recolorea.",
-          "variantAxes": {},
-          "variantCount": 1,
-          "properties": [],
-          "nestedInstances": [],
-          "bindings": {
-            "variables": [],
-            "textStyles": []
-          },
-          "autoLayout": false
-        },
-        {
-          "page": "Brand",
-          "name": "Logo / Yatekomo",
-          "type": "COMPONENT_SET",
-          "id": "21:169",
-          "key": "febcd601ded66ee4035d032e28faf4a114ea8e0a",
-          "description": "Logo Yatekomo. Positivo vectorial; negativo en PNG (pedir vectorial). No se recolorea.",
-          "variantAxes": {
-            "Version": [
-              "Positive",
-              "Negative"
-            ]
-          },
-          "variantCount": 2,
-          "properties": [
-            {
-              "name": "Version",
-              "kind": "VARIANT",
-              "default": "Positive",
-              "values": [
-                "Positive",
-                "Negative"
-              ]
-            }
-          ],
-          "nestedInstances": [],
-          "bindings": {
-            "variables": [],
-            "textStyles": []
-          },
-          "autoLayout": false
-        },
-        {
-          "page": "Brand",
-          "name": "Logo / Saikebon",
-          "type": "COMPONENT_SET",
-          "id": "21:173",
-          "key": "66508fbf0a0578766e1291488caf8c8686e269a9",
-          "description": "Logo Saikebon. Solo PNG: pedir vectoriales originales. No se recolorea.",
-          "variantAxes": {
-            "Version": [
-              "Positive",
-              "Negative"
-            ]
-          },
-          "variantCount": 2,
-          "properties": [
-            {
-              "name": "Version",
-              "kind": "VARIANT",
-              "default": "Positive",
-              "values": [
-                "Positive",
-                "Negative"
-              ]
-            }
-          ],
-          "nestedInstances": [],
-          "bindings": {
-            "variables": [],
-            "textStyles": []
-          },
-          "autoLayout": false
-        },
-        {
-          "page": "Brand",
-          "name": "Logo / Daisuki",
-          "type": "COMPONENT_SET",
-          "id": "21:177",
-          "key": "30803ac1ce186c84e08da72754a3e71cecb64a13",
-          "description": "Logo Daisuki. Positivo vectorial; negativo en PNG. No se recolorea.",
-          "variantAxes": {
-            "Version": [
-              "Positive",
-              "Negative"
-            ]
-          },
-          "variantCount": 2,
-          "properties": [
-            {
-              "name": "Version",
-              "kind": "VARIANT",
-              "default": "Positive",
-              "values": [
-                "Positive",
-                "Negative"
-              ]
-            }
-          ],
-          "nestedInstances": [],
-          "bindings": {
-            "variables": [],
-            "textStyles": []
-          },
-          "autoLayout": false
-        }
-      ],
-      "total": 5,
-      "read": 5
-    },
-    {
-      "name": "Button",
-      "id": "33:92",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
-        {
-          "page": "Button",
+          "page": "Buttons & links",
           "name": "Button",
           "type": "COMPONENT_SET",
           "id": "33:295",
@@ -926,18 +917,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Icon button",
-      "id": "33:93",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Icon button",
+          "page": "Buttons & links",
           "name": "Icon button",
           "type": "COMPONENT_SET",
           "id": "33:401",
@@ -1067,18 +1049,9 @@
             "textStyles": []
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Link",
-      "id": "33:94",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Link",
+          "page": "Buttons & links",
           "name": "Link",
           "type": "COMPONENT_SET",
           "id": "35:107",
@@ -1180,210 +1153,16 @@
           "autoLayout": true
         }
       ],
-      "total": 1,
-      "read": 1
+      "total": 3,
+      "read": 3
     },
     {
-      "name": "Badge",
-      "id": "33:95",
+      "name": "Forms",
+      "id": "126:49",
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "components": [
         {
-          "page": "Badge",
-          "name": "Badge",
-          "type": "COMPONENT_SET",
-          "id": "35:167",
-          "key": "eebdab1901e53a08ad4395e2546b9459e90433e1",
-          "description": "Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). No es interactivo; no usar como botón.",
-          "variantAxes": {
-            "Type": [
-              "New",
-              "Natural",
-              "Neutral"
-            ]
-          },
-          "variantCount": 3,
-          "properties": [
-            {
-              "name": "Label#35:13",
-              "kind": "TEXT",
-              "default": "Nuevo"
-            },
-            {
-              "name": "Type",
-              "kind": "VARIANT",
-              "default": "New",
-              "values": [
-                "New",
-                "Natural",
-                "Neutral"
-              ]
-            }
-          ],
-          "nestedInstances": [],
-          "bindings": {
-            "variables": [
-              "paddingLeft: space/8",
-              "paddingTop: space/4",
-              "paddingRight: space/8",
-              "paddingBottom: space/4",
-              "topLeftRadius: radius/pill",
-              "topRightRadius: radius/pill",
-              "bottomLeftRadius: radius/pill",
-              "bottomRightRadius: radius/pill",
-              "fills: badge/new/bg",
-              "color: badge/new/bg",
-              "fills: badge/new/text",
-              "fontSize: font/size/mobile/label",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
-              "lineHeight: font/line-height/mobile/label",
-              "color: badge/new/text"
-            ],
-            "textStyles": [
-              "Mobile/label"
-            ]
-          },
-          "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Chip",
-      "id": "33:96",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
-        {
-          "page": "Chip",
-          "name": "Chip",
-          "type": "COMPONENT_SET",
-          "id": "35:186",
-          "key": "9e5bf92f006c4089c292176008506b8af258f943",
-          "description": "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Size: S 36 px (filtros densos, productos en receta) · M 40 px (filtros principales, uso táctil preferente); altura mínima ligada a chip/height/*. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP).",
-          "variantAxes": {
-            "Size": [
-              "S",
-              "M"
-            ],
-            "State": [
-              "Default",
-              "Hover",
-              "Selected",
-              "Disabled"
-            ]
-          },
-          "variantCount": 8,
-          "properties": [
-            {
-              "name": "Label#35:17",
-              "kind": "TEXT",
-              "default": "Yatekomo Original"
-            },
-            {
-              "name": "Icon leading#35:22",
-              "kind": "BOOLEAN",
-              "default": false
-            },
-            {
-              "name": "Icon leading swap#35:27",
-              "kind": "INSTANCE_SWAP",
-              "default": "21:56",
-              "defaultComponent": "Icon / check",
-              "preferredValues": [
-                {
-                  "type": "COMPONENT",
-                  "key": "8d3736b0f10db93283ac616c1842079d386cfa8c"
-                },
-                {
-                  "type": "COMPONENT",
-                  "key": "c21a991431daab7928e8b4c745539c0105c26172"
-                },
-                {
-                  "type": "COMPONENT",
-                  "key": "d3bd670f4a53fb5af9503f3797584ad997f049a8"
-                }
-              ]
-            },
-            {
-              "name": "Size",
-              "kind": "VARIANT",
-              "default": "S",
-              "values": [
-                "S",
-                "M"
-              ]
-            },
-            {
-              "name": "State",
-              "kind": "VARIANT",
-              "default": "Default",
-              "values": [
-                "Default",
-                "Hover",
-                "Selected",
-                "Disabled"
-              ]
-            }
-          ],
-          "nestedInstances": [
-            {
-              "layer": "icon-leading",
-              "component": "Icon / check",
-              "componentSet": null,
-              "exposedAs": "Icon leading swap#35:27",
-              "toggledBy": "Icon leading#35:22",
-              "visibleByDefault": false
-            }
-          ],
-          "bindings": {
-            "variables": [
-              "itemSpacing: space/8",
-              "paddingLeft: space/16",
-              "paddingTop: space/8",
-              "paddingRight: space/16",
-              "paddingBottom: space/8",
-              "topLeftRadius: radius/pill",
-              "topRightRadius: radius/pill",
-              "bottomLeftRadius: radius/pill",
-              "bottomRightRadius: radius/pill",
-              "strokeTopWeight: border/width/thin",
-              "strokeBottomWeight: border/width/thin",
-              "strokeLeftWeight: border/width/thin",
-              "strokeRightWeight: border/width/thin",
-              "minHeight: chip/height/s",
-              "fills: chip/bg",
-              "strokes: chip/border",
-              "color: chip/bg",
-              "color: chip/border",
-              "width: icon/size/sm",
-              "height: icon/size/sm",
-              "strokes: chip/text",
-              "color: chip/text",
-              "fills: chip/text",
-              "fontSize: font/size/desktop/body-s",
-              "fontStyle: font/style/body",
-              "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/body-s"
-            ],
-            "textStyles": [
-              "Desktop/body-s"
-            ]
-          },
-          "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Input",
-      "id": "46:79",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
-        {
-          "page": "Input",
+          "page": "Forms",
           "name": "Input",
           "type": "COMPONENT_SET",
           "id": "47:122",
@@ -1496,18 +1275,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Textarea",
-      "id": "46:80",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Textarea",
+          "page": "Forms",
           "name": "Textarea",
           "type": "COMPONENT_SET",
           "id": "47:247",
@@ -1621,127 +1391,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Checkbox",
-      "id": "46:81",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Checkbox",
-          "name": "Checkbox",
-          "type": "COMPONENT_SET",
-          "id": "47:302",
-          "key": "019d976f87c48e719a6babc92907a38292bd0706",
-          "description": "Casilla de verificación: consentimiento GDPR y aceptación de bases legales de concursos. Toda la fila (caja + etiqueta) es clicable; área táctil mínima 44 px en código. Marcada: tinta con check crema (el estado se ve por la forma, no solo por color). Error: borde rojo; el mensaje va en el formulario con aria-describedby. Nunca premarcada en consentimientos.",
-          "variantAxes": {
-            "Checked": [
-              "False",
-              "True"
-            ],
-            "State": [
-              "Default",
-              "Hover",
-              "Focus",
-              "Error",
-              "Disabled"
-            ]
-          },
-          "variantCount": 10,
-          "properties": [
-            {
-              "name": "Label#47:42",
-              "kind": "TEXT",
-              "default": "Acepto las bases legales"
-            },
-            {
-              "name": "Check icon#50:7",
-              "kind": "INSTANCE_SWAP",
-              "default": "21:56",
-              "defaultComponent": "Icon / check",
-              "preferredValues": []
-            },
-            {
-              "name": "Checked",
-              "kind": "VARIANT",
-              "default": "False",
-              "values": [
-                "False",
-                "True"
-              ]
-            },
-            {
-              "name": "State",
-              "kind": "VARIANT",
-              "default": "Default",
-              "values": [
-                "Default",
-                "Hover",
-                "Focus",
-                "Error",
-                "Disabled"
-              ]
-            }
-          ],
-          "nestedInstances": [
-            {
-              "layer": "check",
-              "component": "Icon / check",
-              "componentSet": null,
-              "exposedAs": "Check icon#50:7",
-              "toggledBy": null,
-              "visibleByDefault": false
-            }
-          ],
-          "bindings": {
-            "variables": [
-              "itemSpacing: space/16",
-              "width: icon/size/md",
-              "height: icon/size/md",
-              "topLeftRadius: radius/sm",
-              "topRightRadius: radius/sm",
-              "bottomLeftRadius: radius/sm",
-              "bottomRightRadius: radius/sm",
-              "strokeTopWeight: border/width/thin",
-              "strokeBottomWeight: border/width/thin",
-              "strokeLeftWeight: border/width/thin",
-              "strokeRightWeight: border/width/thin",
-              "fills: checkbox/box-bg",
-              "strokes: checkbox/box-border",
-              "color: checkbox/box-bg",
-              "color: checkbox/box-border",
-              "width: icon/size/sm",
-              "height: icon/size/sm",
-              "strokes: checkbox/check",
-              "color: checkbox/check",
-              "fills: checkbox/label",
-              "fontSize: font/size/desktop/body-m",
-              "fontStyle: font/style/body",
-              "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/body-m",
-              "color: checkbox/label"
-            ],
-            "textStyles": [
-              "Desktop/body-m"
-            ]
-          },
-          "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Select",
-      "id": "46:82",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
-        {
-          "page": "Select",
+          "page": "Forms",
           "name": "Select",
           "type": "COMPONENT_SET",
           "id": "48:141",
@@ -1868,18 +1520,109 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Search field",
-      "id": "46:83",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Search field",
+          "page": "Forms",
+          "name": "Checkbox",
+          "type": "COMPONENT_SET",
+          "id": "47:302",
+          "key": "019d976f87c48e719a6babc92907a38292bd0706",
+          "description": "Casilla de verificación: consentimiento GDPR y aceptación de bases legales de concursos. Toda la fila (caja + etiqueta) es clicable; área táctil mínima 44 px en código. Marcada: tinta con check crema (el estado se ve por la forma, no solo por color). Error: borde rojo; el mensaje va en el formulario con aria-describedby. Nunca premarcada en consentimientos.",
+          "variantAxes": {
+            "Checked": [
+              "False",
+              "True"
+            ],
+            "State": [
+              "Default",
+              "Hover",
+              "Focus",
+              "Error",
+              "Disabled"
+            ]
+          },
+          "variantCount": 10,
+          "properties": [
+            {
+              "name": "Label#47:42",
+              "kind": "TEXT",
+              "default": "Acepto las bases legales"
+            },
+            {
+              "name": "Check icon#50:7",
+              "kind": "INSTANCE_SWAP",
+              "default": "21:56",
+              "defaultComponent": "Icon / check",
+              "preferredValues": []
+            },
+            {
+              "name": "Checked",
+              "kind": "VARIANT",
+              "default": "False",
+              "values": [
+                "False",
+                "True"
+              ]
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus",
+                "Error",
+                "Disabled"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "check",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Check icon#50:7",
+              "toggledBy": null,
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/16",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: checkbox/box-bg",
+              "strokes: checkbox/box-border",
+              "color: checkbox/box-bg",
+              "color: checkbox/box-border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: checkbox/check",
+              "color: checkbox/check",
+              "fills: checkbox/label",
+              "fontSize: font/size/desktop/body-m",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-m",
+              "color: checkbox/label"
+            ],
+            "textStyles": [
+              "Desktop/body-m"
+            ]
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Forms",
           "name": "Search field",
           "type": "COMPONENT_SET",
           "id": "48:177",
@@ -1976,16 +1719,16 @@
           "autoLayout": true
         }
       ],
-      "total": 1,
-      "read": 1
+      "total": 5,
+      "read": 5
     },
     {
-      "name": "Nav item",
-      "id": "53:69",
+      "name": "Navigation",
+      "id": "126:1365",
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "components": [
         {
-          "page": "Nav item",
+          "page": "Navigation",
           "name": "Nav item",
           "type": "COMPONENT_SET",
           "id": "53:102",
@@ -2053,18 +1796,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Tab",
-      "id": "53:70",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Tab",
+          "page": "Navigation",
           "name": "Tab",
           "type": "COMPONENT_SET",
           "id": "54:58",
@@ -2128,18 +1862,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Lang switch",
-      "id": "53:71",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Lang switch",
+          "page": "Navigation",
           "name": "Lang switch",
           "type": "COMPONENT_SET",
           "id": "54:71",
@@ -2215,16 +1940,201 @@
           "autoLayout": true
         }
       ],
-      "total": 1,
-      "read": 1
+      "total": 3,
+      "read": 3
     },
     {
-      "name": "Product card",
-      "id": "66:49",
+      "name": "Tags & chips",
+      "id": "126:1369",
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "components": [
         {
-          "page": "Product card",
+          "page": "Tags & chips",
+          "name": "Badge",
+          "type": "COMPONENT_SET",
+          "id": "35:167",
+          "key": "eebdab1901e53a08ad4395e2546b9459e90433e1",
+          "description": "Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). No es interactivo; no usar como botón.",
+          "variantAxes": {
+            "Type": [
+              "New",
+              "Natural",
+              "Neutral"
+            ]
+          },
+          "variantCount": 3,
+          "properties": [
+            {
+              "name": "Label#35:13",
+              "kind": "TEXT",
+              "default": "Nuevo"
+            },
+            {
+              "name": "Type",
+              "kind": "VARIANT",
+              "default": "New",
+              "values": [
+                "New",
+                "Natural",
+                "Neutral"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: badge/new/bg",
+              "color: badge/new/bg",
+              "fills: badge/new/text",
+              "fontSize: font/size/mobile/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/new/text"
+            ],
+            "textStyles": [
+              "Mobile/label"
+            ]
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Tags & chips",
+          "name": "Chip",
+          "type": "COMPONENT_SET",
+          "id": "35:186",
+          "key": "9e5bf92f006c4089c292176008506b8af258f943",
+          "description": "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Size: S 36 px (filtros densos, productos en receta) · M 40 px (filtros principales, uso táctil preferente); altura mínima ligada a chip/height/*. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP).",
+          "variantAxes": {
+            "Size": [
+              "S",
+              "M"
+            ],
+            "State": [
+              "Default",
+              "Hover",
+              "Selected",
+              "Disabled"
+            ]
+          },
+          "variantCount": 8,
+          "properties": [
+            {
+              "name": "Label#35:17",
+              "kind": "TEXT",
+              "default": "Yatekomo Original"
+            },
+            {
+              "name": "Icon leading#35:22",
+              "kind": "BOOLEAN",
+              "default": false
+            },
+            {
+              "name": "Icon leading swap#35:27",
+              "kind": "INSTANCE_SWAP",
+              "default": "21:56",
+              "defaultComponent": "Icon / check",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "8d3736b0f10db93283ac616c1842079d386cfa8c"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "c21a991431daab7928e8b4c745539c0105c26172"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "d3bd670f4a53fb5af9503f3797584ad997f049a8"
+                }
+              ]
+            },
+            {
+              "name": "Size",
+              "kind": "VARIANT",
+              "default": "S",
+              "values": [
+                "S",
+                "M"
+              ]
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Selected",
+                "Disabled"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/8",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "minHeight: chip/height/s",
+              "fills: chip/bg",
+              "strokes: chip/border",
+              "color: chip/bg",
+              "color: chip/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: chip/text",
+              "color: chip/text",
+              "fills: chip/text",
+              "fontSize: font/size/desktop/body-s",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-s"
+            ],
+            "textStyles": [
+              "Desktop/body-s"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 2,
+      "read": 2
+    },
+    {
+      "name": "Cards",
+      "id": "126:1372",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Cards",
           "name": "Product card",
           "type": "COMPONENT_SET",
           "id": "66:99",
@@ -2364,18 +2274,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Recipe card",
-      "id": "67:49",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Recipe card",
+          "page": "Cards",
           "name": "Recipe card",
           "type": "COMPONENT_SET",
           "id": "67:133",
@@ -2553,18 +2454,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Contest card",
-      "id": "68:49",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Contest card",
+          "page": "Cards",
           "name": "Contest card",
           "type": "COMPONENT_SET",
           "id": "68:95",
@@ -2742,16 +2634,16 @@
           "autoLayout": true
         }
       ],
-      "total": 1,
-      "read": 1
+      "total": 3,
+      "read": 3
     },
     {
-      "name": "Accordion item",
-      "id": "69:49",
+      "name": "Content",
+      "id": "126:1376",
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "components": [
         {
-          "page": "Accordion item",
+          "page": "Content",
           "name": "Accordion item",
           "type": "COMPONENT_SET",
           "id": "69:93",
@@ -2859,18 +2751,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Ingredients",
-      "id": "70:49",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Ingredients",
+          "page": "Content",
           "name": "Ingredient item",
           "type": "COMPONENT_SET",
           "id": "70:58",
@@ -2939,7 +2822,7 @@
           "autoLayout": true
         },
         {
-          "page": "Ingredients",
+          "page": "Content",
           "name": "Ingredients",
           "type": "COMPONENT",
           "id": "70:59",
@@ -3051,18 +2934,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 2,
-      "read": 2
-    },
-    {
-      "name": "Nutrition",
-      "id": "71:51",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Nutrition",
+          "page": "Content",
           "name": "Nutrition bar",
           "type": "COMPONENT_SET",
           "id": "71:74",
@@ -3137,7 +3011,7 @@
           "autoLayout": true
         },
         {
-          "page": "Nutrition",
+          "page": "Content",
           "name": "Nutrition panel",
           "type": "COMPONENT",
           "id": "71:75",
@@ -3243,18 +3117,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 2,
-      "read": 2
-    },
-    {
-      "name": "Step",
-      "id": "71:149",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Step",
+          "page": "Content",
           "name": "Step",
           "type": "COMPONENT_SET",
           "id": "71:164",
@@ -3327,18 +3192,255 @@
             ]
           },
           "autoLayout": true
+        },
+        {
+          "page": "Content",
+          "name": "Timer",
+          "type": "COMPONENT_SET",
+          "id": "82:143",
+          "key": "31467016a91c15fbdab58af7c00290565c85a826",
+          "description": "Temporizador de preparación (3 minutos) junto a los Step de la página de producto. State=Idle (3:00, «Empezar») · Running (anillo vaciándose, «Pausar» + reiniciar) · Paused («Seguir» + reiniciar) · Done (anillo verde natural, circle-check, «¡Listo!», «Otra vez»). El anillo es decorativo (aria-hidden) y no comunica nada por sí solo: el tiempo está en texto. Accesibilidad: el tiempo se expone con role=&quot;timer&quot; sin anunciar cada segundo; una región aria-live=&quot;polite&quot; anuncia solo «Quedan 1 minuto» y «¡Listo! Ya puedes comer»; el botón principal cambia su nombre (Empezar/Pausar/Seguir). Puede sonar o vibrar al terminar solo si el usuario lo activa. Respeta prefers-reduced-motion (el anillo salta en vez de animarse).",
+          "variantAxes": {
+            "State": [
+              "Idle",
+              "Running",
+              "Paused",
+              "Done"
+            ]
+          },
+          "variantCount": 4,
+          "properties": [
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Idle",
+              "values": [
+                "Idle",
+                "Running",
+                "Paused",
+                "Done"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "action",
+              "component": "Hierarchy=Primary, Size=M, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / play",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/24",
+              "paddingLeft: space/32",
+              "paddingTop: space/32",
+              "paddingRight: space/32",
+              "paddingBottom: space/32",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: timer/bg",
+              "strokes: timer/border",
+              "color: timer/bg",
+              "color: timer/border",
+              "itemSpacing: space/4",
+              "fills: timer/track",
+              "color: timer/track",
+              "fills: timer/progress",
+              "color: timer/progress",
+              "fills: timer/time",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: timer/time",
+              "fills: timer/label",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: timer/label",
+              "itemSpacing: space/16",
+              "itemSpacing: space/8",
+              "paddingLeft: space/24",
+              "paddingTop: space/16",
+              "paddingRight: space/24",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/caption",
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Content",
+          "name": "Video player",
+          "type": "COMPONENT_SET",
+          "id": "83:70",
+          "key": "7b062bb96aa6895c0502782396d3415a40d08445",
+          "description": "Reproductor de vídeo como fachada. State=Poster: póster de marca (sin imagen generada con IA), botón play de 80 px (video/play-bg, borde grueso) y duración. State=Playing: al pulsar se sustituye por el reproductor real (iframe de YouTube con youtube-nocookie o &lt;video&gt; MP4) con sus controles nativos; no se carga nada de terceros antes del clic (privacidad y rendimiento). Ratio=16:9 (preparación, promo de Home, concursos) y 9:16 (recetas en vídeo vertical). Accesibilidad: el play es un &lt;button&gt; con nombre «Reproducir vídeo: &lt;título&gt; (0:45)»; foco con anillo video/focus-ring amarillo sobre el póster oscuro; subtítulos obligatorios si el vídeo tiene voz; sin autoplay con sonido; el GIF de preparación usa este mismo componente en MP4 silencioso en bucle con botón de pausa.",
+          "variantAxes": {
+            "Ratio": [
+              "16:9",
+              "9:16"
+            ],
+            "State": [
+              "Poster",
+              "Playing"
+            ]
+          },
+          "variantCount": 4,
+          "properties": [
+            {
+              "name": "Duration#83:0",
+              "kind": "TEXT",
+              "default": "0:45"
+            },
+            {
+              "name": "Play icon#83:5",
+              "kind": "INSTANCE_SWAP",
+              "default": "30:79",
+              "defaultComponent": "Icon / play",
+              "preferredValues": []
+            },
+            {
+              "name": "Ratio",
+              "kind": "VARIANT",
+              "default": "16:9",
+              "values": [
+                "16:9",
+                "9:16"
+              ]
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Poster",
+              "values": [
+                "Poster",
+                "Playing"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon-play",
+              "component": "Icon / play",
+              "componentSet": null,
+              "exposedAs": "Play icon#83:5",
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: video/poster-bg",
+              "strokes: video/border",
+              "color: video/poster-bg",
+              "color: video/border",
+              "fills: video/meta-text",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: video/meta-text",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: video/play-bg",
+              "color: video/play-bg",
+              "width: icon/size/lg",
+              "height: icon/size/lg",
+              "strokes: video/play-icon",
+              "color: video/play-icon",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "fills: video/meta-bg",
+              "color: video/meta-bg",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label"
+            ],
+            "textStyles": [
+              "Desktop/caption",
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": false
         }
       ],
-      "total": 1,
-      "read": 1
+      "total": 8,
+      "read": 8
     },
     {
-      "name": "Modal",
-      "id": "79:49",
+      "name": "Feedback & overlays",
+      "id": "126:1383",
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "components": [
         {
-          "page": "Modal",
+          "page": "Feedback & overlays",
           "name": "Modal / Slot",
           "type": "COMPONENT",
           "id": "79:52",
@@ -3374,7 +3476,7 @@
           "autoLayout": true
         },
         {
-          "page": "Modal",
+          "page": "Feedback & overlays",
           "name": "Modal",
           "type": "COMPONENT_SET",
           "id": "79:123",
@@ -3544,18 +3646,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 2,
-      "read": 2
-    },
-    {
-      "name": "Alert",
-      "id": "80:49",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Alert",
+          "page": "Feedback & overlays",
           "name": "Alert",
           "type": "COMPONENT_SET",
           "id": "80:138",
@@ -3676,18 +3769,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Suggestion bubble",
-      "id": "81:49",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Suggestion bubble",
+          "page": "Feedback & overlays",
           "name": "Suggestion bubble",
           "type": "COMPONENT_SET",
           "id": "81:87",
@@ -3795,271 +3879,16 @@
           "autoLayout": true
         }
       ],
-      "total": 1,
-      "read": 1
+      "total": 4,
+      "read": 4
     },
     {
-      "name": "Timer",
-      "id": "82:49",
+      "name": "Pattern / Global",
+      "id": "126:1387",
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "components": [
         {
-          "page": "Timer",
-          "name": "Timer",
-          "type": "COMPONENT_SET",
-          "id": "82:143",
-          "key": "31467016a91c15fbdab58af7c00290565c85a826",
-          "description": "Temporizador de preparación (3 minutos) junto a los Step de la página de producto. State=Idle (3:00, «Empezar») · Running (anillo vaciándose, «Pausar» + reiniciar) · Paused («Seguir» + reiniciar) · Done (anillo verde natural, circle-check, «¡Listo!», «Otra vez»). El anillo es decorativo (aria-hidden) y no comunica nada por sí solo: el tiempo está en texto. Accesibilidad: el tiempo se expone con role=&quot;timer&quot; sin anunciar cada segundo; una región aria-live=&quot;polite&quot; anuncia solo «Quedan 1 minuto» y «¡Listo! Ya puedes comer»; el botón principal cambia su nombre (Empezar/Pausar/Seguir). Puede sonar o vibrar al terminar solo si el usuario lo activa. Respeta prefers-reduced-motion (el anillo salta en vez de animarse).",
-          "variantAxes": {
-            "State": [
-              "Idle",
-              "Running",
-              "Paused",
-              "Done"
-            ]
-          },
-          "variantCount": 4,
-          "properties": [
-            {
-              "name": "State",
-              "kind": "VARIANT",
-              "default": "Idle",
-              "values": [
-                "Idle",
-                "Running",
-                "Paused",
-                "Done"
-              ]
-            }
-          ],
-          "nestedInstances": [
-            {
-              "layer": "action",
-              "component": "Hierarchy=Primary, Size=M, State=Default",
-              "componentSet": "Button",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-leading",
-              "component": "Icon / play",
-              "componentSet": null,
-              "exposedAs": "Icon leading swap#33:75",
-              "toggledBy": "Icon leading#33:25",
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon trailing swap#33:100",
-              "toggledBy": "Icon trailing#33:50",
-              "visibleByDefault": false
-            }
-          ],
-          "bindings": {
-            "variables": [
-              "itemSpacing: space/24",
-              "paddingLeft: space/32",
-              "paddingTop: space/32",
-              "paddingRight: space/32",
-              "paddingBottom: space/32",
-              "topLeftRadius: radius/md",
-              "topRightRadius: radius/md",
-              "bottomLeftRadius: radius/md",
-              "bottomRightRadius: radius/md",
-              "strokeTopWeight: border/width/thin",
-              "strokeBottomWeight: border/width/thin",
-              "strokeLeftWeight: border/width/thin",
-              "strokeRightWeight: border/width/thin",
-              "fills: timer/bg",
-              "strokes: timer/border",
-              "color: timer/bg",
-              "color: timer/border",
-              "itemSpacing: space/4",
-              "fills: timer/track",
-              "color: timer/track",
-              "fills: timer/progress",
-              "color: timer/progress",
-              "fills: timer/time",
-              "fontSize: font/size/desktop/h2",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
-              "lineHeight: font/line-height/desktop/h2",
-              "color: timer/time",
-              "fills: timer/label",
-              "fontSize: font/size/desktop/caption",
-              "fontStyle: font/style/body",
-              "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/caption",
-              "color: timer/label",
-              "itemSpacing: space/16",
-              "itemSpacing: space/8",
-              "paddingLeft: space/24",
-              "paddingTop: space/16",
-              "paddingRight: space/24",
-              "paddingBottom: space/16",
-              "topLeftRadius: radius/pill",
-              "topRightRadius: radius/pill",
-              "bottomLeftRadius: radius/pill",
-              "bottomRightRadius: radius/pill",
-              "strokeTopWeight: border/width/thick",
-              "strokeBottomWeight: border/width/thick",
-              "strokeLeftWeight: border/width/thick",
-              "strokeRightWeight: border/width/thick",
-              "fills: button/primary/bg",
-              "strokes: button/primary/border",
-              "color: button/primary/bg",
-              "color: button/primary/border",
-              "width: icon/size/sm",
-              "height: icon/size/sm",
-              "strokes: button/primary/text",
-              "color: button/primary/text",
-              "fills: button/primary/text",
-              "fontSize: font/size/desktop/label",
-              "lineHeight: font/line-height/desktop/label"
-            ],
-            "textStyles": [
-              "Desktop/h2",
-              "Desktop/caption",
-              "Desktop/label"
-            ]
-          },
-          "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Video player",
-      "id": "83:49",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
-        {
-          "page": "Video player",
-          "name": "Video player",
-          "type": "COMPONENT_SET",
-          "id": "83:70",
-          "key": "7b062bb96aa6895c0502782396d3415a40d08445",
-          "description": "Reproductor de vídeo como fachada. State=Poster: póster de marca (sin imagen generada con IA), botón play de 80 px (video/play-bg, borde grueso) y duración. State=Playing: al pulsar se sustituye por el reproductor real (iframe de YouTube con youtube-nocookie o &lt;video&gt; MP4) con sus controles nativos; no se carga nada de terceros antes del clic (privacidad y rendimiento). Ratio=16:9 (preparación, promo de Home, concursos) y 9:16 (recetas en vídeo vertical). Accesibilidad: el play es un &lt;button&gt; con nombre «Reproducir vídeo: &lt;título&gt; (0:45)»; foco con anillo video/focus-ring amarillo sobre el póster oscuro; subtítulos obligatorios si el vídeo tiene voz; sin autoplay con sonido; el GIF de preparación usa este mismo componente en MP4 silencioso en bucle con botón de pausa.",
-          "variantAxes": {
-            "Ratio": [
-              "16:9",
-              "9:16"
-            ],
-            "State": [
-              "Poster",
-              "Playing"
-            ]
-          },
-          "variantCount": 4,
-          "properties": [
-            {
-              "name": "Duration#83:0",
-              "kind": "TEXT",
-              "default": "0:45"
-            },
-            {
-              "name": "Play icon#83:5",
-              "kind": "INSTANCE_SWAP",
-              "default": "30:79",
-              "defaultComponent": "Icon / play",
-              "preferredValues": []
-            },
-            {
-              "name": "Ratio",
-              "kind": "VARIANT",
-              "default": "16:9",
-              "values": [
-                "16:9",
-                "9:16"
-              ]
-            },
-            {
-              "name": "State",
-              "kind": "VARIANT",
-              "default": "Poster",
-              "values": [
-                "Poster",
-                "Playing"
-              ]
-            }
-          ],
-          "nestedInstances": [
-            {
-              "layer": "icon-play",
-              "component": "Icon / play",
-              "componentSet": null,
-              "exposedAs": "Play icon#83:5",
-              "toggledBy": null,
-              "visibleByDefault": true
-            }
-          ],
-          "bindings": {
-            "variables": [
-              "topLeftRadius: radius/md",
-              "topRightRadius: radius/md",
-              "bottomLeftRadius: radius/md",
-              "bottomRightRadius: radius/md",
-              "strokeTopWeight: border/width/thin",
-              "strokeBottomWeight: border/width/thin",
-              "strokeLeftWeight: border/width/thin",
-              "strokeRightWeight: border/width/thin",
-              "fills: video/poster-bg",
-              "strokes: video/border",
-              "color: video/poster-bg",
-              "color: video/border",
-              "fills: video/meta-text",
-              "fontSize: font/size/desktop/caption",
-              "fontStyle: font/style/body",
-              "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/caption",
-              "color: video/meta-text",
-              "topLeftRadius: radius/pill",
-              "topRightRadius: radius/pill",
-              "bottomLeftRadius: radius/pill",
-              "bottomRightRadius: radius/pill",
-              "strokeTopWeight: border/width/thick",
-              "strokeBottomWeight: border/width/thick",
-              "strokeLeftWeight: border/width/thick",
-              "strokeRightWeight: border/width/thick",
-              "fills: video/play-bg",
-              "color: video/play-bg",
-              "width: icon/size/lg",
-              "height: icon/size/lg",
-              "strokes: video/play-icon",
-              "color: video/play-icon",
-              "paddingLeft: space/8",
-              "paddingTop: space/4",
-              "paddingRight: space/8",
-              "paddingBottom: space/4",
-              "fills: video/meta-bg",
-              "color: video/meta-bg",
-              "fontSize: font/size/desktop/label",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
-              "lineHeight: font/line-height/desktop/label"
-            ],
-            "textStyles": [
-              "Desktop/caption",
-              "Desktop/label"
-            ]
-          },
-          "autoLayout": false
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Navbar",
-      "id": "53:72",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
-        {
-          "page": "Pattern / Navbar",
+          "page": "Pattern / Global",
           "name": "Navbar",
           "type": "COMPONENT_SET",
           "id": "55:116",
@@ -4278,18 +4107,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Mobile menu",
-      "id": "53:73",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Pattern / Mobile menu",
+          "page": "Pattern / Global",
           "name": "Mobile menu",
           "type": "COMPONENT",
           "id": "55:119",
@@ -4493,262 +4313,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Product filter",
-      "id": "53:74",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Pattern / Product filter",
-          "name": "Product filter",
-          "type": "COMPONENT_SET",
-          "id": "55:253",
-          "key": "3b96938d2949d5b37f2f01a0b01056524046be55",
-          "description": "Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias.",
-          "variantAxes": {
-            "Breakpoint": [
-              "Desktop",
-              "Mobile"
-            ]
-          },
-          "variantCount": 2,
-          "properties": [
-            {
-              "name": "Breakpoint",
-              "kind": "VARIANT",
-              "default": "Desktop",
-              "values": [
-                "Desktop",
-                "Mobile"
-              ]
-            }
-          ],
-          "nestedInstances": [
-            {
-              "layer": "tab",
-              "component": "State=Selected",
-              "componentSet": "Tab",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "tab",
-              "component": "State=Default",
-              "componentSet": "Tab",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "tab",
-              "component": "State=Default",
-              "componentSet": "Tab",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "chip",
-              "component": "State=Selected",
-              "componentSet": "Chip",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-leading",
-              "component": "Icon / check",
-              "componentSet": null,
-              "exposedAs": "Icon leading swap#35:27",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "chip",
-              "component": "State=Default",
-              "componentSet": "Chip",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-leading",
-              "component": "Icon / check",
-              "componentSet": null,
-              "exposedAs": "Icon leading swap#35:27",
-              "toggledBy": "Icon leading#35:22",
-              "visibleByDefault": false
-            },
-            {
-              "layer": "chip",
-              "component": "State=Default",
-              "componentSet": "Chip",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-leading",
-              "component": "Icon / check",
-              "componentSet": null,
-              "exposedAs": "Icon leading swap#35:27",
-              "toggledBy": "Icon leading#35:22",
-              "visibleByDefault": false
-            },
-            {
-              "layer": "chip",
-              "component": "State=Selected",
-              "componentSet": "Chip",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-leading",
-              "component": "Icon / check",
-              "componentSet": null,
-              "exposedAs": "Icon leading swap#35:27",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "chip",
-              "component": "State=Default",
-              "componentSet": "Chip",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-leading",
-              "component": "Icon / check",
-              "componentSet": null,
-              "exposedAs": "Icon leading swap#35:27",
-              "toggledBy": "Icon leading#35:22",
-              "visibleByDefault": false
-            },
-            {
-              "layer": "chip",
-              "component": "State=Default",
-              "componentSet": "Chip",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-leading",
-              "component": "Icon / check",
-              "componentSet": null,
-              "exposedAs": "Icon leading swap#35:27",
-              "toggledBy": "Icon leading#35:22",
-              "visibleByDefault": false
-            },
-            {
-              "layer": "chip",
-              "component": "State=Default",
-              "componentSet": "Chip",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-leading",
-              "component": "Icon / check",
-              "componentSet": null,
-              "exposedAs": "Icon leading swap#35:27",
-              "toggledBy": "Icon leading#35:22",
-              "visibleByDefault": false
-            }
-          ],
-          "bindings": {
-            "variables": [
-              "itemSpacing: space/24",
-              "paddingLeft: layout/margin",
-              "paddingTop: space/24",
-              "paddingRight: layout/margin",
-              "paddingBottom: space/24",
-              "width: layout/frame",
-              "itemSpacing: space/8",
-              "fills: color/text/secondary",
-              "fontSize: font/size/desktop/caption",
-              "fontStyle: font/style/body",
-              "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/caption",
-              "color: color/text/secondary",
-              "counterAxisSpacing: space/8",
-              "paddingLeft: space/24",
-              "paddingTop: space/16",
-              "paddingRight: space/24",
-              "paddingBottom: space/16",
-              "topLeftRadius: radius/pill",
-              "topRightRadius: radius/pill",
-              "bottomLeftRadius: radius/pill",
-              "bottomRightRadius: radius/pill",
-              "strokeTopWeight: border/width/thin",
-              "strokeBottomWeight: border/width/thin",
-              "strokeLeftWeight: border/width/thin",
-              "strokeRightWeight: border/width/thin",
-              "fills: tab/bg-selected",
-              "strokes: tab/border",
-              "color: tab/bg-selected",
-              "color: tab/border",
-              "fills: tab/text-selected",
-              "fontSize: font/size/desktop/label",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
-              "lineHeight: font/line-height/desktop/label",
-              "color: tab/text-selected",
-              "fills: tab/bg",
-              "color: tab/bg",
-              "fills: tab/text",
-              "color: tab/text",
-              "paddingLeft: space/16",
-              "paddingTop: space/8",
-              "paddingRight: space/16",
-              "paddingBottom: space/8",
-              "minHeight: chip/height/s",
-              "fills: chip/bg-selected",
-              "strokes: chip/border",
-              "color: chip/bg-selected",
-              "color: chip/border",
-              "width: icon/size/sm",
-              "height: icon/size/sm",
-              "strokes: chip/text-selected",
-              "color: chip/text-selected",
-              "fills: chip/text-selected",
-              "fontSize: font/size/desktop/body-s",
-              "lineHeight: font/line-height/desktop/body-s",
-              "fills: chip/bg",
-              "color: chip/bg",
-              "strokes: chip/text",
-              "color: chip/text",
-              "fills: chip/text"
-            ],
-            "textStyles": [
-              "Desktop/caption",
-              "Desktop/label",
-              "Desktop/body-s"
-            ]
-          },
-          "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Footer",
-      "id": "53:75",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
-        {
-          "page": "Pattern / Footer",
+          "page": "Pattern / Global",
           "name": "Footer",
           "type": "COMPONENT_SET",
           "id": "56:167",
@@ -5085,16 +4652,16 @@
           "autoLayout": true
         }
       ],
-      "total": 1,
-      "read": 1
+      "total": 3,
+      "read": 3
     },
     {
-      "name": "Pattern / Hero",
-      "id": "88:49",
+      "name": "Pattern / Home",
+      "id": "126:1391",
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "components": [
         {
-          "page": "Pattern / Hero",
+          "page": "Pattern / Home",
           "name": "Hero",
           "type": "COMPONENT_SET",
           "id": "88:132",
@@ -5278,18 +4845,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Marquee",
-      "id": "89:49",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Pattern / Marquee",
+          "page": "Pattern / Home",
           "name": "Marquee",
           "type": "COMPONENT_SET",
           "id": "89:78",
@@ -5336,18 +4894,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Promo",
-      "id": "91:49",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Pattern / Promo",
+          "page": "Pattern / Home",
           "name": "Promo",
           "type": "COMPONENT_SET",
           "id": "91:113",
@@ -5533,18 +5082,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Natural formula",
-      "id": "91:657",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Pattern / Natural formula",
+          "page": "Pattern / Home",
           "name": "Natural formula",
           "type": "COMPONENT_SET",
           "id": "91:704",
@@ -5628,18 +5168,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Product carousel",
-      "id": "91:705",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Pattern / Product carousel",
+          "page": "Pattern / Home",
           "name": "Product carousel",
           "type": "COMPONENT_SET",
           "id": "91:837",
@@ -5863,18 +5394,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Recipes",
-      "id": "92:49",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Pattern / Recipes",
+          "page": "Pattern / Home",
           "name": "Recipes",
           "type": "COMPONENT_SET",
           "id": "92:215",
@@ -6044,18 +5566,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Banner",
-      "id": "92:843",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Pattern / Banner",
+          "page": "Pattern / Home",
           "name": "Banner",
           "type": "COMPONENT_SET",
           "id": "92:884",
@@ -6188,18 +5701,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / FAQ",
-      "id": "92:885",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Pattern / FAQ",
+          "page": "Pattern / Home",
           "name": "FAQ",
           "type": "COMPONENT_SET",
           "id": "92:960",
@@ -6339,18 +5843,9 @@
             ]
           },
           "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Where to buy",
-      "id": "92:961",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
+        },
         {
-          "page": "Pattern / Where to buy",
+          "page": "Pattern / Home",
           "name": "Where to buy",
           "type": "COMPONENT_SET",
           "id": "92:990",
@@ -6423,790 +5918,16 @@
           "autoLayout": true
         }
       ],
-      "total": 1,
-      "read": 1
+      "total": 9,
+      "read": 9
     },
     {
-      "name": "Pattern / Product hero",
-      "id": "93:49",
+      "name": "Pattern / Libraries",
+      "id": "126:1401",
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "components": [
         {
-          "page": "Pattern / Product hero",
-          "name": "Product hero",
-          "type": "COMPONENT_SET",
-          "id": "93:154",
-          "key": "92ba52b192b524722c008504e30c3430a127489a",
-          "description": "Cabecera de la página de producto: galería (imagen 3D principal —la «girosu» en Cups— e interior; miniaturas como botones, la seleccionada con borde grueso y aria-current) · Badge New/Natural · tipo y línea · nombre (h1) · descripción · highlights con check en color/text/natural (lista &lt;ul&gt;) · Button «Dónde comprar» (lleva a Where to buy) y Link «Ver ingredientes» (ancla a Product details). Las imágenes son las de marca, nunca generadas con IA. Desktop: galería a la izquierda; Mobile: galería arriba. Sin variables propias.",
-          "variantAxes": {
-            "Breakpoint": [
-              "Desktop",
-              "Mobile"
-            ]
-          },
-          "variantCount": 2,
-          "properties": [
-            {
-              "name": "Breakpoint",
-              "kind": "VARIANT",
-              "default": "Desktop",
-              "values": [
-                "Desktop",
-                "Mobile"
-              ]
-            }
-          ],
-          "nestedInstances": [
-            {
-              "layer": "badge-new",
-              "component": "Type=New",
-              "componentSet": "Badge",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "badge-natural",
-              "component": "Type=Natural",
-              "componentSet": "Badge",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-check",
-              "component": "Icon / check",
-              "componentSet": null,
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "cta",
-              "component": "Hierarchy=Primary, Size=L, State=Default",
-              "componentSet": "Button",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-leading",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon leading swap#33:75",
-              "toggledBy": "Icon leading#33:25",
-              "visibleByDefault": false
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon trailing swap#33:100",
-              "toggledBy": "Icon trailing#33:50",
-              "visibleByDefault": false
-            },
-            {
-              "layer": "link",
-              "component": "Type=Standalone, Surface=Light, State=Default",
-              "componentSet": "Link",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon#35:0",
-              "toggledBy": null,
-              "visibleByDefault": true
-            }
-          ],
-          "bindings": {
-            "variables": [
-              "paddingLeft: layout/margin",
-              "paddingTop: layout/section-y",
-              "paddingRight: layout/margin",
-              "paddingBottom: layout/section-y",
-              "width: layout/frame",
-              "fills: color/surface/page",
-              "color: color/surface/page",
-              "itemSpacing: space/64",
-              "itemSpacing: space/16",
-              "paddingLeft: space/16",
-              "paddingTop: space/16",
-              "paddingRight: space/16",
-              "paddingBottom: space/16",
-              "topLeftRadius: radius/md",
-              "topRightRadius: radius/md",
-              "bottomLeftRadius: radius/md",
-              "bottomRightRadius: radius/md",
-              "strokeTopWeight: border/width/thin",
-              "strokeBottomWeight: border/width/thin",
-              "strokeLeftWeight: border/width/thin",
-              "strokeRightWeight: border/width/thin",
-              "fills: color/surface/card",
-              "strokes: color/border/default",
-              "color: color/surface/card",
-              "color: color/border/default",
-              "fills: color/text/secondary",
-              "fontSize: font/size/desktop/caption",
-              "fontStyle: font/style/body",
-              "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/caption",
-              "color: color/text/secondary",
-              "topLeftRadius: radius/sm",
-              "topRightRadius: radius/sm",
-              "bottomLeftRadius: radius/sm",
-              "bottomRightRadius: radius/sm",
-              "strokeTopWeight: border/width/thick",
-              "strokeBottomWeight: border/width/thick",
-              "strokeLeftWeight: border/width/thick",
-              "strokeRightWeight: border/width/thick",
-              "itemSpacing: space/24",
-              "itemSpacing: space/8",
-              "paddingLeft: space/8",
-              "paddingTop: space/4",
-              "paddingRight: space/8",
-              "paddingBottom: space/4",
-              "topLeftRadius: radius/pill",
-              "topRightRadius: radius/pill",
-              "bottomLeftRadius: radius/pill",
-              "bottomRightRadius: radius/pill",
-              "fills: badge/new/bg",
-              "color: badge/new/bg",
-              "fills: badge/new/text",
-              "fontSize: font/size/mobile/label",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
-              "lineHeight: font/line-height/mobile/label",
-              "color: badge/new/text",
-              "fills: badge/natural/bg",
-              "color: badge/natural/bg",
-              "fills: badge/natural/text",
-              "color: badge/natural/text",
-              "fills: color/text/default",
-              "fontSize: font/size/desktop/h1",
-              "lineHeight: font/line-height/desktop/h1",
-              "color: color/text/default",
-              "fontSize: font/size/desktop/body-l",
-              "lineHeight: font/line-height/desktop/body-l",
-              "width: icon/size/md",
-              "height: icon/size/md",
-              "strokes: color/text/natural",
-              "color: color/text/natural",
-              "counterAxisSpacing: space/16",
-              "paddingLeft: space/32",
-              "paddingTop: space/24",
-              "paddingRight: space/32",
-              "paddingBottom: space/24",
-              "fills: button/primary/bg",
-              "strokes: button/primary/border",
-              "color: button/primary/bg",
-              "color: button/primary/border",
-              "width: icon/size/sm",
-              "height: icon/size/sm",
-              "strokes: button/primary/text",
-              "color: button/primary/text",
-              "fills: button/primary/text",
-              "fontSize: font/size/desktop/label",
-              "lineHeight: font/line-height/desktop/label",
-              "fills: link/default",
-              "color: link/default",
-              "strokes: link/default"
-            ],
-            "textStyles": [
-              "Desktop/caption",
-              "Mobile/label",
-              "Desktop/h1",
-              "Desktop/body-l",
-              "Desktop/label"
-            ]
-          },
-          "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Product details",
-      "id": "94:49",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
-        {
-          "page": "Pattern / Product details",
-          "name": "Product details",
-          "type": "COMPONENT_SET",
-          "id": "94:329",
-          "key": "cd2e86ee82d6c917a9fae7407ee52cd96b557eed",
-          "description": "Sección de ingredientes y nutrición (página de producto; en la receta se usa con los valores de la receta): título (h2) · Ingredients (lista jerarquizada, alérgenos en negrita, Link «Ver etiqueta del envase» que abre Modal L con la imagen de la etiqueta) · Nutrition panel (barras proporcionales al % IR, alérgenos y nota de validación). Ancla destino de «Ver ingredientes» del Product hero. Desktop: dos columnas iguales; Mobile: ingredientes y después nutrición. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods. Sin variables propias.",
-          "variantAxes": {
-            "Breakpoint": [
-              "Desktop",
-              "Mobile"
-            ]
-          },
-          "variantCount": 2,
-          "properties": [
-            {
-              "name": "Breakpoint",
-              "kind": "VARIANT",
-              "default": "Desktop",
-              "values": [
-                "Desktop",
-                "Mobile"
-              ]
-            }
-          ],
-          "nestedInstances": [
-            {
-              "layer": "ingredients",
-              "component": "Ingredients",
-              "componentSet": null,
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "ingredient-main",
-              "component": "Level=Main",
-              "componentSet": "Ingredient item",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "ingredient-secondary",
-              "component": "Level=Secondary",
-              "componentSet": "Ingredient item",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "label-link",
-              "component": "Type=Standalone, Surface=Light, State=Default",
-              "componentSet": "Link",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon#35:0",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "nutrition-panel",
-              "component": "Nutrition panel",
-              "componentSet": null,
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "nutrition-bar",
-              "component": "Highlight=False",
-              "componentSet": "Nutrition bar",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "nutrition-bar",
-              "component": "Highlight=True",
-              "componentSet": "Nutrition bar",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "claim",
-              "component": "Type=Natural",
-              "componentSet": "Badge",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            }
-          ],
-          "bindings": {
-            "variables": [
-              "itemSpacing: space/48",
-              "paddingLeft: layout/margin",
-              "paddingTop: layout/section-y",
-              "paddingRight: layout/margin",
-              "paddingBottom: layout/section-y",
-              "width: layout/frame",
-              "fills: color/surface/card",
-              "color: color/surface/card",
-              "fills: color/text/default",
-              "fontSize: font/size/desktop/h2",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
-              "lineHeight: font/line-height/desktop/h2",
-              "color: color/text/default",
-              "itemSpacing: space/64",
-              "itemSpacing: space/16",
-              "fills: ingredient/text",
-              "fontSize: font/size/desktop/h3",
-              "lineHeight: font/line-height/desktop/h3",
-              "color: ingredient/text",
-              "paddingTop: space/16",
-              "paddingBottom: space/16",
-              "strokeBottomWeight: border/width/thin",
-              "strokes: ingredient/divider",
-              "color: ingredient/divider",
-              "fontSize: font/size/desktop/body-l",
-              "fontStyle: font/style/body",
-              "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/body-l",
-              "textRangeFills: ingredient/text",
-              "paddingLeft: space/8",
-              "paddingTop: space/4",
-              "paddingRight: space/8",
-              "paddingBottom: space/4",
-              "topLeftRadius: radius/pill",
-              "topRightRadius: radius/pill",
-              "bottomLeftRadius: radius/pill",
-              "bottomRightRadius: radius/pill",
-              "fills: ingredient/percent-bg",
-              "color: ingredient/percent-bg",
-              "fills: ingredient/percent-text",
-              "fontSize: font/size/desktop/label",
-              "lineHeight: font/line-height/desktop/label",
-              "color: ingredient/percent-text",
-              "fontSize: font/size/desktop/body-m",
-              "lineHeight: font/line-height/desktop/body-m",
-              "fills: ingredient/meta",
-              "fontSize: font/size/desktop/caption",
-              "lineHeight: font/line-height/desktop/caption",
-              "color: ingredient/meta",
-              "itemSpacing: space/8",
-              "fills: link/default",
-              "color: link/default",
-              "width: icon/size/sm",
-              "height: icon/size/sm",
-              "strokes: link/default",
-              "itemSpacing: space/24",
-              "paddingLeft: space/32",
-              "paddingTop: space/32",
-              "paddingRight: space/32",
-              "paddingBottom: space/32",
-              "topLeftRadius: radius/md",
-              "topRightRadius: radius/md",
-              "bottomLeftRadius: radius/md",
-              "bottomRightRadius: radius/md",
-              "strokeTopWeight: border/width/thin",
-              "strokeLeftWeight: border/width/thin",
-              "strokeRightWeight: border/width/thin",
-              "fills: nutrition/bg",
-              "strokes: nutrition/border",
-              "color: nutrition/bg",
-              "color: nutrition/border",
-              "fills: nutrition/label",
-              "color: nutrition/label",
-              "fills: nutrition/meta",
-              "color: nutrition/meta",
-              "counterAxisSpacing: space/4",
-              "fills: nutrition/value",
-              "color: nutrition/value",
-              "height: space/8",
-              "fills: nutrition/track",
-              "color: nutrition/track",
-              "fills: nutrition/fill",
-              "color: nutrition/fill",
-              "fills: badge/natural/bg",
-              "color: badge/natural/bg",
-              "fills: badge/natural/text",
-              "fontSize: font/size/mobile/label",
-              "lineHeight: font/line-height/mobile/label",
-              "color: badge/natural/text",
-              "fills: nutrition/fill-highlight",
-              "color: nutrition/fill-highlight",
-              "fills: nutrition/allergen",
-              "textRangeFills: nutrition/allergen",
-              "color: nutrition/allergen"
-            ],
-            "textStyles": [
-              "Desktop/h2",
-              "Desktop/h3",
-              "Desktop/label",
-              "Desktop/caption",
-              "Desktop/body-m",
-              "Mobile/label"
-            ]
-          },
-          "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Preparation",
-      "id": "95:1077",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
-        {
-          "page": "Pattern / Preparation",
-          "name": "Preparation",
-          "type": "COMPONENT_SET",
-          "id": "95:1158",
-          "key": "61aca79da0059db4a6979d5a5b6cacc96282cf8c",
-          "description": "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en &lt;ol&gt; · Timer de 3 minutos. El texto de los pasos sale del envase. Desktop: pasos a la izquierda; vídeo y temporizador a la derecha (560 px). Mobile: vídeo arriba, pasos y temporizador al final (al alcance mientras se cocina). En la Recipe page se reutiliza sin el Timer y con Step Media=True. Sin variables propias.",
-          "variantAxes": {
-            "Breakpoint": [
-              "Desktop",
-              "Mobile"
-            ]
-          },
-          "variantCount": 2,
-          "properties": [
-            {
-              "name": "Breakpoint",
-              "kind": "VARIANT",
-              "default": "Desktop",
-              "values": [
-                "Desktop",
-                "Mobile"
-              ]
-            }
-          ],
-          "nestedInstances": [
-            {
-              "layer": "step",
-              "component": "Media=False",
-              "componentSet": "Step",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "video",
-              "component": "Ratio=16:9, State=Poster",
-              "componentSet": "Video player",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-play",
-              "component": "Icon / play",
-              "componentSet": null,
-              "exposedAs": "Play icon#83:5",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "timer",
-              "component": "State=Idle",
-              "componentSet": "Timer",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "action",
-              "component": "Hierarchy=Primary, Size=M, State=Default",
-              "componentSet": "Button",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-leading",
-              "component": "Icon / play",
-              "componentSet": null,
-              "exposedAs": "Icon leading swap#33:75",
-              "toggledBy": "Icon leading#33:25",
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon trailing swap#33:100",
-              "toggledBy": "Icon trailing#33:50",
-              "visibleByDefault": false
-            }
-          ],
-          "bindings": {
-            "variables": [
-              "itemSpacing: space/48",
-              "paddingLeft: layout/margin",
-              "paddingTop: layout/section-y",
-              "paddingRight: layout/margin",
-              "paddingBottom: layout/section-y",
-              "width: layout/frame",
-              "fills: color/surface/page",
-              "color: color/surface/page",
-              "fills: color/text/default",
-              "fontSize: font/size/desktop/h2",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
-              "lineHeight: font/line-height/desktop/h2",
-              "color: color/text/default",
-              "itemSpacing: space/64",
-              "itemSpacing: space/32",
-              "itemSpacing: space/24",
-              "width: space/56",
-              "height: space/56",
-              "topLeftRadius: radius/pill",
-              "topRightRadius: radius/pill",
-              "bottomLeftRadius: radius/pill",
-              "bottomRightRadius: radius/pill",
-              "strokeTopWeight: border/width/thin",
-              "strokeBottomWeight: border/width/thin",
-              "strokeLeftWeight: border/width/thin",
-              "strokeRightWeight: border/width/thin",
-              "fills: step/number-bg",
-              "strokes: step/border",
-              "color: step/number-bg",
-              "color: step/border",
-              "fills: step/number-text",
-              "fontSize: font/size/desktop/h3",
-              "lineHeight: font/line-height/desktop/h3",
-              "color: step/number-text",
-              "itemSpacing: space/16",
-              "paddingTop: space/8",
-              "fills: step/text",
-              "fontSize: font/size/desktop/body-l",
-              "fontStyle: font/style/body",
-              "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/body-l",
-              "color: step/text",
-              "topLeftRadius: radius/md",
-              "topRightRadius: radius/md",
-              "bottomLeftRadius: radius/md",
-              "bottomRightRadius: radius/md",
-              "fills: video/poster-bg",
-              "strokes: video/border",
-              "color: video/poster-bg",
-              "color: video/border",
-              "fills: video/meta-text",
-              "fontSize: font/size/desktop/caption",
-              "lineHeight: font/line-height/desktop/caption",
-              "color: video/meta-text",
-              "strokeTopWeight: border/width/thick",
-              "strokeBottomWeight: border/width/thick",
-              "strokeLeftWeight: border/width/thick",
-              "strokeRightWeight: border/width/thick",
-              "fills: video/play-bg",
-              "color: video/play-bg",
-              "width: icon/size/lg",
-              "height: icon/size/lg",
-              "strokes: video/play-icon",
-              "color: video/play-icon",
-              "paddingLeft: space/8",
-              "paddingTop: space/4",
-              "paddingRight: space/8",
-              "paddingBottom: space/4",
-              "fills: video/meta-bg",
-              "color: video/meta-bg",
-              "fontSize: font/size/desktop/label",
-              "lineHeight: font/line-height/desktop/label",
-              "paddingLeft: space/32",
-              "paddingTop: space/32",
-              "paddingRight: space/32",
-              "paddingBottom: space/32",
-              "fills: timer/bg",
-              "strokes: timer/border",
-              "color: timer/bg",
-              "color: timer/border",
-              "itemSpacing: space/4",
-              "fills: timer/track",
-              "color: timer/track",
-              "fills: timer/progress",
-              "color: timer/progress",
-              "fills: timer/time",
-              "color: timer/time",
-              "fills: timer/label",
-              "color: timer/label",
-              "itemSpacing: space/8",
-              "paddingLeft: space/24",
-              "paddingTop: space/16",
-              "paddingRight: space/24",
-              "paddingBottom: space/16",
-              "fills: button/primary/bg",
-              "strokes: button/primary/border",
-              "color: button/primary/bg",
-              "color: button/primary/border",
-              "width: icon/size/sm",
-              "height: icon/size/sm",
-              "strokes: button/primary/text",
-              "color: button/primary/text",
-              "fills: button/primary/text"
-            ],
-            "textStyles": [
-              "Desktop/h2",
-              "Desktop/h3",
-              "Desktop/body-l",
-              "Desktop/caption",
-              "Desktop/label"
-            ]
-          },
-          "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Recipe hero",
-      "id": "96:49",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
-        {
-          "page": "Pattern / Recipe hero",
-          "name": "Recipe hero",
-          "type": "COMPONENT_SET",
-          "id": "96:113",
-          "key": "3a0e1db0e31dd19939513d4571be367b9c29a29f",
-          "description": "Cabecera de la página de receta: kicker «Receta» · título (h1) · tiempo (timer) y dificultad · descripción · productos usados como Chip M (enlazan a la ficha de producto; lista &lt;ul&gt;) · imagen principal de marca (sin vídeo al principio, regla de negocio). Fondo color/surface/brand. Después van Product details (ingredientes y nutrición de la receta) y Preparation sin Timer con Step Media=True. Desktop: texto a la izquierda; Mobile: imagen arriba. Sin variables propias.",
-          "variantAxes": {
-            "Breakpoint": [
-              "Desktop",
-              "Mobile"
-            ]
-          },
-          "variantCount": 2,
-          "properties": [
-            {
-              "name": "Breakpoint",
-              "kind": "VARIANT",
-              "default": "Desktop",
-              "values": [
-                "Desktop",
-                "Mobile"
-              ]
-            }
-          ],
-          "nestedInstances": [
-            {
-              "layer": "icon",
-              "component": "Icon / timer",
-              "componentSet": null,
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon",
-              "component": "Icon / circle-check",
-              "componentSet": null,
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "product-chip",
-              "component": "Size=M, State=Default",
-              "componentSet": "Chip",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-leading",
-              "component": "Icon / check",
-              "componentSet": null,
-              "exposedAs": "Icon leading swap#35:27",
-              "toggledBy": "Icon leading#35:22",
-              "visibleByDefault": false
-            }
-          ],
-          "bindings": {
-            "variables": [
-              "paddingLeft: layout/margin",
-              "paddingTop: layout/section-y",
-              "paddingRight: layout/margin",
-              "paddingBottom: layout/section-y",
-              "width: layout/frame",
-              "fills: color/surface/brand",
-              "color: color/surface/brand",
-              "itemSpacing: space/64",
-              "itemSpacing: space/24",
-              "fills: color/text/default",
-              "fontSize: font/size/desktop/caption",
-              "fontStyle: font/style/body",
-              "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/caption",
-              "color: color/text/default",
-              "fontSize: font/size/desktop/h1",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
-              "lineHeight: font/line-height/desktop/h1",
-              "itemSpacing: space/8",
-              "width: icon/size/md",
-              "height: icon/size/md",
-              "strokes: color/text/default",
-              "fontSize: font/size/desktop/body-l",
-              "lineHeight: font/line-height/desktop/body-l",
-              "fontSize: font/size/desktop/label",
-              "lineHeight: font/line-height/desktop/label",
-              "counterAxisSpacing: space/8",
-              "paddingLeft: space/16",
-              "paddingTop: space/8",
-              "paddingRight: space/16",
-              "paddingBottom: space/8",
-              "topLeftRadius: radius/pill",
-              "topRightRadius: radius/pill",
-              "bottomLeftRadius: radius/pill",
-              "bottomRightRadius: radius/pill",
-              "strokeTopWeight: border/width/thin",
-              "strokeBottomWeight: border/width/thin",
-              "strokeLeftWeight: border/width/thin",
-              "strokeRightWeight: border/width/thin",
-              "minHeight: chip/height/m",
-              "fills: chip/bg",
-              "strokes: chip/border",
-              "color: chip/bg",
-              "color: chip/border",
-              "width: icon/size/sm",
-              "height: icon/size/sm",
-              "strokes: chip/text",
-              "color: chip/text",
-              "fills: chip/text",
-              "fontSize: font/size/desktop/body-s",
-              "lineHeight: font/line-height/desktop/body-s",
-              "paddingTop: space/16",
-              "paddingBottom: space/16",
-              "topLeftRadius: radius/md",
-              "topRightRadius: radius/md",
-              "bottomLeftRadius: radius/md",
-              "bottomRightRadius: radius/md",
-              "fills: color/surface/page",
-              "strokes: color/border/default",
-              "color: color/surface/page",
-              "color: color/border/default",
-              "fills: color/text/secondary",
-              "color: color/text/secondary"
-            ],
-            "textStyles": [
-              "Desktop/caption",
-              "Desktop/h1",
-              "Desktop/body-l",
-              "Desktop/label",
-              "Desktop/body-s"
-            ]
-          },
-          "autoLayout": true
-        }
-      ],
-      "total": 1,
-      "read": 1
-    },
-    {
-      "name": "Pattern / Library",
-      "id": "96:1200",
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "components": [
-        {
-          "page": "Pattern / Library",
+          "page": "Pattern / Libraries",
           "name": "Library",
           "type": "COMPONENT_SET",
           "id": "96:1453",
@@ -7484,12 +6205,994 @@
             ]
           },
           "autoLayout": true
+        },
+        {
+          "page": "Pattern / Libraries",
+          "name": "Product filter",
+          "type": "COMPONENT_SET",
+          "id": "55:253",
+          "key": "3b96938d2949d5b37f2f01a0b01056524046be55",
+          "description": "Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "tab",
+              "component": "State=Selected",
+              "componentSet": "Tab",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "tab",
+              "component": "State=Default",
+              "componentSet": "Tab",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "tab",
+              "component": "State=Default",
+              "componentSet": "Tab",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "chip",
+              "component": "State=Selected",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "chip",
+              "component": "State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "chip",
+              "component": "State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "chip",
+              "component": "State=Selected",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "chip",
+              "component": "State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "chip",
+              "component": "State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "chip",
+              "component": "State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/24",
+              "paddingLeft: layout/margin",
+              "paddingTop: space/24",
+              "paddingRight: layout/margin",
+              "paddingBottom: space/24",
+              "width: layout/frame",
+              "itemSpacing: space/8",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: color/text/secondary",
+              "counterAxisSpacing: space/8",
+              "paddingLeft: space/24",
+              "paddingTop: space/16",
+              "paddingRight: space/24",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: tab/bg-selected",
+              "strokes: tab/border",
+              "color: tab/bg-selected",
+              "color: tab/border",
+              "fills: tab/text-selected",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "color: tab/text-selected",
+              "fills: tab/bg",
+              "color: tab/bg",
+              "fills: tab/text",
+              "color: tab/text",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "minHeight: chip/height/s",
+              "fills: chip/bg-selected",
+              "strokes: chip/border",
+              "color: chip/bg-selected",
+              "color: chip/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: chip/text-selected",
+              "color: chip/text-selected",
+              "fills: chip/text-selected",
+              "fontSize: font/size/desktop/body-s",
+              "lineHeight: font/line-height/desktop/body-s",
+              "fills: chip/bg",
+              "color: chip/bg",
+              "strokes: chip/text",
+              "color: chip/text",
+              "fills: chip/text"
+            ],
+            "textStyles": [
+              "Desktop/caption",
+              "Desktop/label",
+              "Desktop/body-s"
+            ]
+          },
+          "autoLayout": true
         }
       ],
-      "total": 1,
-      "read": 1
+      "total": 2,
+      "read": 2
+    },
+    {
+      "name": "Pattern / Detail pages",
+      "id": "126:1404",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "components": [
+        {
+          "page": "Pattern / Detail pages",
+          "name": "Product hero",
+          "type": "COMPONENT_SET",
+          "id": "93:154",
+          "key": "92ba52b192b524722c008504e30c3430a127489a",
+          "description": "Cabecera de la página de producto: galería (imagen 3D principal —la «girosu» en Cups— e interior; miniaturas como botones, la seleccionada con borde grueso y aria-current) · Badge New/Natural · tipo y línea · nombre (h1) · descripción · highlights con check en color/text/natural (lista &lt;ul&gt;) · Button «Dónde comprar» (lleva a Where to buy) y Link «Ver ingredientes» (ancla a Product details). Las imágenes son las de marca, nunca generadas con IA. Desktop: galería a la izquierda; Mobile: galería arriba. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "badge-new",
+              "component": "Type=New",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "badge-natural",
+              "component": "Type=Natural",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-check",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "cta",
+              "component": "Hierarchy=Primary, Size=L, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/page",
+              "color: color/surface/page",
+              "itemSpacing: space/64",
+              "itemSpacing: space/16",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: color/surface/card",
+              "strokes: color/border/default",
+              "color: color/surface/card",
+              "color: color/border/default",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: color/text/secondary",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "itemSpacing: space/24",
+              "itemSpacing: space/8",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: badge/new/bg",
+              "color: badge/new/bg",
+              "fills: badge/new/text",
+              "fontSize: font/size/mobile/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/new/text",
+              "fills: badge/natural/bg",
+              "color: badge/natural/bg",
+              "fills: badge/natural/text",
+              "color: badge/natural/text",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h1",
+              "lineHeight: font/line-height/desktop/h1",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/body-l",
+              "lineHeight: font/line-height/desktop/body-l",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: color/text/natural",
+              "color: color/text/natural",
+              "counterAxisSpacing: space/16",
+              "paddingLeft: space/32",
+              "paddingTop: space/24",
+              "paddingRight: space/32",
+              "paddingBottom: space/24",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "fills: link/default",
+              "color: link/default",
+              "strokes: link/default"
+            ],
+            "textStyles": [
+              "Desktop/caption",
+              "Mobile/label",
+              "Desktop/h1",
+              "Desktop/body-l",
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Pattern / Detail pages",
+          "name": "Product details",
+          "type": "COMPONENT_SET",
+          "id": "94:329",
+          "key": "cd2e86ee82d6c917a9fae7407ee52cd96b557eed",
+          "description": "Sección de ingredientes y nutrición (página de producto; en la receta se usa con los valores de la receta): título (h2) · Ingredients (lista jerarquizada, alérgenos en negrita, Link «Ver etiqueta del envase» que abre Modal L con la imagen de la etiqueta) · Nutrition panel (barras proporcionales al % IR, alérgenos y nota de validación). Ancla destino de «Ver ingredientes» del Product hero. Desktop: dos columnas iguales; Mobile: ingredientes y después nutrición. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "ingredients",
+              "component": "Ingredients",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "ingredient-main",
+              "component": "Level=Main",
+              "componentSet": "Ingredient item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "ingredient-secondary",
+              "component": "Level=Secondary",
+              "componentSet": "Ingredient item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "label-link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nutrition-panel",
+              "component": "Nutrition panel",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nutrition-bar",
+              "component": "Highlight=False",
+              "componentSet": "Nutrition bar",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "nutrition-bar",
+              "component": "Highlight=True",
+              "componentSet": "Nutrition bar",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "claim",
+              "component": "Type=Natural",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/48",
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/card",
+              "color: color/surface/card",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/default",
+              "itemSpacing: space/64",
+              "itemSpacing: space/16",
+              "fills: ingredient/text",
+              "fontSize: font/size/desktop/h3",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: ingredient/text",
+              "paddingTop: space/16",
+              "paddingBottom: space/16",
+              "strokeBottomWeight: border/width/thin",
+              "strokes: ingredient/divider",
+              "color: ingredient/divider",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "textRangeFills: ingredient/text",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: ingredient/percent-bg",
+              "color: ingredient/percent-bg",
+              "fills: ingredient/percent-text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "color: ingredient/percent-text",
+              "fontSize: font/size/desktop/body-m",
+              "lineHeight: font/line-height/desktop/body-m",
+              "fills: ingredient/meta",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: ingredient/meta",
+              "itemSpacing: space/8",
+              "fills: link/default",
+              "color: link/default",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: link/default",
+              "itemSpacing: space/24",
+              "paddingLeft: space/32",
+              "paddingTop: space/32",
+              "paddingRight: space/32",
+              "paddingBottom: space/32",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: nutrition/bg",
+              "strokes: nutrition/border",
+              "color: nutrition/bg",
+              "color: nutrition/border",
+              "fills: nutrition/label",
+              "color: nutrition/label",
+              "fills: nutrition/meta",
+              "color: nutrition/meta",
+              "counterAxisSpacing: space/4",
+              "fills: nutrition/value",
+              "color: nutrition/value",
+              "height: space/8",
+              "fills: nutrition/track",
+              "color: nutrition/track",
+              "fills: nutrition/fill",
+              "color: nutrition/fill",
+              "fills: badge/natural/bg",
+              "color: badge/natural/bg",
+              "fills: badge/natural/text",
+              "fontSize: font/size/mobile/label",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/natural/text",
+              "fills: nutrition/fill-highlight",
+              "color: nutrition/fill-highlight",
+              "fills: nutrition/allergen",
+              "textRangeFills: nutrition/allergen",
+              "color: nutrition/allergen"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/h3",
+              "Desktop/label",
+              "Desktop/caption",
+              "Desktop/body-m",
+              "Mobile/label"
+            ]
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Pattern / Detail pages",
+          "name": "Preparation",
+          "type": "COMPONENT_SET",
+          "id": "95:1158",
+          "key": "61aca79da0059db4a6979d5a5b6cacc96282cf8c",
+          "description": "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en &lt;ol&gt; · Timer de 3 minutos. El texto de los pasos sale del envase. Desktop: pasos a la izquierda; vídeo y temporizador a la derecha (560 px). Mobile: vídeo arriba, pasos y temporizador al final (al alcance mientras se cocina). En la Recipe page se reutiliza sin el Timer y con Step Media=True. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "step",
+              "component": "Media=False",
+              "componentSet": "Step",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "video",
+              "component": "Ratio=16:9, State=Poster",
+              "componentSet": "Video player",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-play",
+              "component": "Icon / play",
+              "componentSet": null,
+              "exposedAs": "Play icon#83:5",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "timer",
+              "component": "State=Idle",
+              "componentSet": "Timer",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "action",
+              "component": "Hierarchy=Primary, Size=M, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / play",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/48",
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/page",
+              "color: color/surface/page",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/default",
+              "itemSpacing: space/64",
+              "itemSpacing: space/32",
+              "itemSpacing: space/24",
+              "width: space/56",
+              "height: space/56",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: step/number-bg",
+              "strokes: step/border",
+              "color: step/number-bg",
+              "color: step/border",
+              "fills: step/number-text",
+              "fontSize: font/size/desktop/h3",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: step/number-text",
+              "itemSpacing: space/16",
+              "paddingTop: space/8",
+              "fills: step/text",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "color: step/text",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "fills: video/poster-bg",
+              "strokes: video/border",
+              "color: video/poster-bg",
+              "color: video/border",
+              "fills: video/meta-text",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: video/meta-text",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: video/play-bg",
+              "color: video/play-bg",
+              "width: icon/size/lg",
+              "height: icon/size/lg",
+              "strokes: video/play-icon",
+              "color: video/play-icon",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "fills: video/meta-bg",
+              "color: video/meta-bg",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "paddingLeft: space/32",
+              "paddingTop: space/32",
+              "paddingRight: space/32",
+              "paddingBottom: space/32",
+              "fills: timer/bg",
+              "strokes: timer/border",
+              "color: timer/bg",
+              "color: timer/border",
+              "itemSpacing: space/4",
+              "fills: timer/track",
+              "color: timer/track",
+              "fills: timer/progress",
+              "color: timer/progress",
+              "fills: timer/time",
+              "color: timer/time",
+              "fills: timer/label",
+              "color: timer/label",
+              "itemSpacing: space/8",
+              "paddingLeft: space/24",
+              "paddingTop: space/16",
+              "paddingRight: space/24",
+              "paddingBottom: space/16",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/h3",
+              "Desktop/body-l",
+              "Desktop/caption",
+              "Desktop/label"
+            ]
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Pattern / Detail pages",
+          "name": "Recipe hero",
+          "type": "COMPONENT_SET",
+          "id": "96:113",
+          "key": "3a0e1db0e31dd19939513d4571be367b9c29a29f",
+          "description": "Cabecera de la página de receta: kicker «Receta» · título (h1) · tiempo (timer) y dificultad · descripción · productos usados como Chip M (enlazan a la ficha de producto; lista &lt;ul&gt;) · imagen principal de marca (sin vídeo al principio, regla de negocio). Fondo color/surface/brand. Después van Product details (ingredientes y nutrición de la receta) y Preparation sin Timer con Step Media=True. Desktop: texto a la izquierda; Mobile: imagen arriba. Sin variables propias.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon",
+              "component": "Icon / timer",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / circle-check",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "product-chip",
+              "component": "Size=M, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "paddingLeft: layout/margin",
+              "paddingTop: layout/section-y",
+              "paddingRight: layout/margin",
+              "paddingBottom: layout/section-y",
+              "width: layout/frame",
+              "fills: color/surface/brand",
+              "color: color/surface/brand",
+              "itemSpacing: space/64",
+              "itemSpacing: space/24",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/h1",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h1",
+              "itemSpacing: space/8",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "strokes: color/text/default",
+              "fontSize: font/size/desktop/body-l",
+              "lineHeight: font/line-height/desktop/body-l",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "counterAxisSpacing: space/8",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "minHeight: chip/height/m",
+              "fills: chip/bg",
+              "strokes: chip/border",
+              "color: chip/bg",
+              "color: chip/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: chip/text",
+              "color: chip/text",
+              "fills: chip/text",
+              "fontSize: font/size/desktop/body-s",
+              "lineHeight: font/line-height/desktop/body-s",
+              "paddingTop: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "fills: color/surface/page",
+              "strokes: color/border/default",
+              "color: color/surface/page",
+              "color: color/border/default",
+              "fills: color/text/secondary",
+              "color: color/text/secondary"
+            ],
+            "textStyles": [
+              "Desktop/caption",
+              "Desktop/h1",
+              "Desktop/body-l",
+              "Desktop/label",
+              "Desktop/body-s"
+            ]
+          },
+          "autoLayout": true
+        }
+      ],
+      "total": 4,
+      "read": 4
     }
   ],
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
-  "readAt": "2026-10-07T17:08:14.189Z"
+  "readAt": "2026-10-08T07:04:34Z"
 }

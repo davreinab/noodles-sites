@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-08T06:16:03Z",
+  "lastSync": "2026-10-08T07:04:34Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -621,32 +621,6 @@
       }
     },
     {
-      "id": "component:decoration-noodle",
-      "name": "Decoration / Noodle",
-      "slug": "decoration-noodle",
-      "kind": "component",
-      "contractPath": "./components/decoration-noodle.schema.json",
-      "keywords": [
-        "decoration",
-        "noodle"
-      ],
-      "dependencies": [],
-      "hasIcon": false,
-      "figmaSource": {
-        "fileKey": "v4mnn154qUmiB35CCnRfgh",
-        "nodeId": "21:165",
-        "componentKey": "de6e1d33e0f5e285098cd62c42a915e478445c5c"
-      },
-      "codeSource": {
-        "path": "design-system/css/components.css",
-        "classes": [
-          "decoration-noodle",
-          "decoration-noodle--3",
-          "decoration-noodle--accent"
-        ]
-      }
-    },
-    {
       "id": "component:logo-gb-foods",
       "name": "Logo / GB Foods",
       "slug": "logo-gb-foods",
@@ -768,6 +742,32 @@
       }
     },
     {
+      "id": "component:decoration-noodle",
+      "name": "Decoration / Noodle",
+      "slug": "decoration-noodle",
+      "kind": "component",
+      "contractPath": "./components/decoration-noodle.schema.json",
+      "keywords": [
+        "decoration",
+        "noodle"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "21:165",
+        "componentKey": "de6e1d33e0f5e285098cd62c42a915e478445c5c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "decoration-noodle",
+          "decoration-noodle--3",
+          "decoration-noodle--accent"
+        ]
+      }
+    },
+    {
       "id": "component:button",
       "name": "Button",
       "slug": "button",
@@ -862,60 +862,6 @@
       }
     },
     {
-      "id": "component:badge",
-      "name": "Badge",
-      "slug": "badge",
-      "kind": "component",
-      "contractPath": "./components/badge.schema.json",
-      "keywords": [
-        "badge"
-      ],
-      "dependencies": [],
-      "hasIcon": false,
-      "figmaSource": {
-        "fileKey": "v4mnn154qUmiB35CCnRfgh",
-        "nodeId": "35:167",
-        "componentKey": "eebdab1901e53a08ad4395e2546b9459e90433e1"
-      },
-      "codeSource": {
-        "path": "design-system/css/components.css",
-        "classes": [
-          "badge",
-          "badge--natural",
-          "badge--neutral"
-        ]
-      }
-    },
-    {
-      "id": "component:chip",
-      "name": "Chip",
-      "slug": "chip",
-      "kind": "component",
-      "contractPath": "./components/chip.schema.json",
-      "keywords": [
-        "chip",
-        "icon"
-      ],
-      "dependencies": [
-        "icon-check"
-      ],
-      "hasIcon": true,
-      "figmaSource": {
-        "fileKey": "v4mnn154qUmiB35CCnRfgh",
-        "nodeId": "35:186",
-        "componentKey": "9e5bf92f006c4089c292176008506b8af258f943"
-      },
-      "codeSource": {
-        "path": "design-system/css/components.css",
-        "classes": [
-          "chip",
-          "chip--m",
-          "icon",
-          "icon-check"
-        ]
-      }
-    },
-    {
       "id": "component:input",
       "name": "Input",
       "slug": "input",
@@ -982,35 +928,6 @@
       }
     },
     {
-      "id": "component:checkbox",
-      "name": "Checkbox",
-      "slug": "checkbox",
-      "kind": "component",
-      "contractPath": "./components/checkbox.schema.json",
-      "keywords": [
-        "checkbox",
-        "icon"
-      ],
-      "dependencies": [
-        "icon-check"
-      ],
-      "hasIcon": true,
-      "figmaSource": {
-        "fileKey": "v4mnn154qUmiB35CCnRfgh",
-        "nodeId": "47:302",
-        "componentKey": "019d976f87c48e719a6babc92907a38292bd0706"
-      },
-      "codeSource": {
-        "path": "design-system/css/components.css",
-        "classes": [
-          "checkbox",
-          "checkbox__input",
-          "checkbox__label",
-          "link"
-        ]
-      }
-    },
-    {
       "id": "component:select",
       "name": "Select",
       "slug": "select",
@@ -1040,6 +957,35 @@
           "field__select",
           "icon",
           "icon-circle-alert"
+        ]
+      }
+    },
+    {
+      "id": "component:checkbox",
+      "name": "Checkbox",
+      "slug": "checkbox",
+      "kind": "component",
+      "contractPath": "./components/checkbox.schema.json",
+      "keywords": [
+        "checkbox",
+        "icon"
+      ],
+      "dependencies": [
+        "icon-check"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "47:302",
+        "componentKey": "019d976f87c48e719a6babc92907a38292bd0706"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "checkbox",
+          "checkbox__input",
+          "checkbox__label",
+          "link"
         ]
       }
     },
@@ -1147,6 +1093,60 @@
         "classes": [
           "lang-switch",
           "lang-switch__option"
+        ]
+      }
+    },
+    {
+      "id": "component:badge",
+      "name": "Badge",
+      "slug": "badge",
+      "kind": "component",
+      "contractPath": "./components/badge.schema.json",
+      "keywords": [
+        "badge"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "35:167",
+        "componentKey": "eebdab1901e53a08ad4395e2546b9459e90433e1"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "badge",
+          "badge--natural",
+          "badge--neutral"
+        ]
+      }
+    },
+    {
+      "id": "component:chip",
+      "name": "Chip",
+      "slug": "chip",
+      "kind": "component",
+      "contractPath": "./components/chip.schema.json",
+      "keywords": [
+        "chip",
+        "icon"
+      ],
+      "dependencies": [
+        "icon-check"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "35:186",
+        "componentKey": "9e5bf92f006c4089c292176008506b8af258f943"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "chip",
+          "chip--m",
+          "icon",
+          "icon-check"
         ]
       }
     },
@@ -1476,6 +1476,84 @@
       }
     },
     {
+      "id": "component:timer",
+      "name": "Timer",
+      "slug": "timer",
+      "kind": "component",
+      "contractPath": "./components/timer.schema.json",
+      "keywords": [
+        "icon",
+        "timer"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right",
+        "icon-play"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "82:143",
+        "componentKey": "31467016a91c15fbdab58af7c00290565c85a826"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "button",
+          "button--secondary",
+          "icon",
+          "icon-button",
+          "icon-button--secondary",
+          "icon-pause",
+          "icon-rotate-ccw",
+          "timer",
+          "timer__controls",
+          "timer__dial",
+          "timer__label",
+          "timer__progress",
+          "timer__readout",
+          "timer__ring",
+          "timer__time",
+          "timer__track",
+          "visually-hidden"
+        ]
+      }
+    },
+    {
+      "id": "component:video-player",
+      "name": "Video player",
+      "slug": "video-player",
+      "kind": "component",
+      "contractPath": "./components/video-player.schema.json",
+      "keywords": [
+        "icon",
+        "player",
+        "video"
+      ],
+      "dependencies": [
+        "icon-play"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "83:70",
+        "componentKey": "7b062bb96aa6895c0502782396d3415a40d08445"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "icon",
+          "icon-play",
+          "video-player",
+          "video-player--vertical",
+          "video-player__duration",
+          "video-player__play",
+          "video-player__poster",
+          "video-player__title"
+        ]
+      }
+    },
+    {
       "id": "component:modal-slot",
       "name": "Modal / Slot",
       "slug": "modal-slot",
@@ -1610,84 +1688,6 @@
       }
     },
     {
-      "id": "component:timer",
-      "name": "Timer",
-      "slug": "timer",
-      "kind": "component",
-      "contractPath": "./components/timer.schema.json",
-      "keywords": [
-        "icon",
-        "timer"
-      ],
-      "dependencies": [
-        "button",
-        "icon-arrow-right",
-        "icon-play"
-      ],
-      "hasIcon": true,
-      "figmaSource": {
-        "fileKey": "v4mnn154qUmiB35CCnRfgh",
-        "nodeId": "82:143",
-        "componentKey": "31467016a91c15fbdab58af7c00290565c85a826"
-      },
-      "codeSource": {
-        "path": "design-system/css/components.css",
-        "classes": [
-          "button",
-          "button--secondary",
-          "icon",
-          "icon-button",
-          "icon-button--secondary",
-          "icon-pause",
-          "icon-rotate-ccw",
-          "timer",
-          "timer__controls",
-          "timer__dial",
-          "timer__label",
-          "timer__progress",
-          "timer__readout",
-          "timer__ring",
-          "timer__time",
-          "timer__track",
-          "visually-hidden"
-        ]
-      }
-    },
-    {
-      "id": "component:video-player",
-      "name": "Video player",
-      "slug": "video-player",
-      "kind": "component",
-      "contractPath": "./components/video-player.schema.json",
-      "keywords": [
-        "icon",
-        "player",
-        "video"
-      ],
-      "dependencies": [
-        "icon-play"
-      ],
-      "hasIcon": true,
-      "figmaSource": {
-        "fileKey": "v4mnn154qUmiB35CCnRfgh",
-        "nodeId": "83:70",
-        "componentKey": "7b062bb96aa6895c0502782396d3415a40d08445"
-      },
-      "codeSource": {
-        "path": "design-system/css/components.css",
-        "classes": [
-          "icon",
-          "icon-play",
-          "video-player",
-          "video-player--vertical",
-          "video-player__duration",
-          "video-player__play",
-          "video-player__poster",
-          "video-player__title"
-        ]
-      }
-    },
-    {
       "id": "pattern:navbar",
       "name": "Navbar",
       "slug": "navbar",
@@ -1776,42 +1776,6 @@
           "mobile-menu__top",
           "nav-item",
           "nav-item--menu"
-        ]
-      }
-    },
-    {
-      "id": "pattern:product-filter",
-      "name": "Product filter",
-      "slug": "product-filter",
-      "kind": "pattern",
-      "contractPath": "./components/product-filter.schema.json",
-      "keywords": [
-        "filter",
-        "icon",
-        "product"
-      ],
-      "dependencies": [
-        "chip",
-        "icon-check",
-        "tab"
-      ],
-      "hasIcon": true,
-      "figmaSource": {
-        "fileKey": "v4mnn154qUmiB35CCnRfgh",
-        "nodeId": "55:253",
-        "componentKey": "3b96938d2949d5b37f2f01a0b01056524046be55"
-      },
-      "codeSource": {
-        "path": "design-system/css/components.css",
-        "classes": [
-          "chip",
-          "icon",
-          "icon-check",
-          "product-filter",
-          "product-filter__group",
-          "product-filter__label",
-          "product-filter__options",
-          "tab"
         ]
       }
     },
@@ -2243,6 +2207,91 @@
       }
     },
     {
+      "id": "pattern:library",
+      "name": "Library",
+      "slug": "library",
+      "kind": "pattern",
+      "contractPath": "./components/library.schema.json",
+      "keywords": [
+        "icon",
+        "library"
+      ],
+      "dependencies": [
+        "badge",
+        "button",
+        "chip",
+        "icon-arrow-right",
+        "icon-check",
+        "link",
+        "product-card",
+        "product-filter",
+        "tab"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "96:1453",
+        "componentKey": "ab05e99d4f06fba281184c63c10655ed03bb159c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "button",
+          "button--secondary",
+          "library",
+          "library__grid",
+          "library__header",
+          "library__more",
+          "page-title",
+          "product-card",
+          "product-card__body",
+          "product-card__name",
+          "product-filter",
+          "product-filter__group",
+          "product-filter__label",
+          "product-filter__options",
+          "section__lead",
+          "tab"
+        ]
+      }
+    },
+    {
+      "id": "pattern:product-filter",
+      "name": "Product filter",
+      "slug": "product-filter",
+      "kind": "pattern",
+      "contractPath": "./components/product-filter.schema.json",
+      "keywords": [
+        "filter",
+        "icon",
+        "product"
+      ],
+      "dependencies": [
+        "chip",
+        "icon-check",
+        "tab"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "55:253",
+        "componentKey": "3b96938d2949d5b37f2f01a0b01056524046be55"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "chip",
+          "icon",
+          "icon-check",
+          "product-filter",
+          "product-filter__group",
+          "product-filter__label",
+          "product-filter__options",
+          "tab"
+        ]
+      }
+    },
+    {
       "id": "pattern:product-hero",
       "name": "Product hero",
       "slug": "product-hero",
@@ -2442,55 +2491,6 @@
           "recipe-hero__products-label",
           "section",
           "section__inner"
-        ]
-      }
-    },
-    {
-      "id": "pattern:library",
-      "name": "Library",
-      "slug": "library",
-      "kind": "pattern",
-      "contractPath": "./components/library.schema.json",
-      "keywords": [
-        "icon",
-        "library"
-      ],
-      "dependencies": [
-        "badge",
-        "button",
-        "chip",
-        "icon-arrow-right",
-        "icon-check",
-        "link",
-        "product-card",
-        "product-filter",
-        "tab"
-      ],
-      "hasIcon": true,
-      "figmaSource": {
-        "fileKey": "v4mnn154qUmiB35CCnRfgh",
-        "nodeId": "96:1453",
-        "componentKey": "ab05e99d4f06fba281184c63c10655ed03bb159c"
-      },
-      "codeSource": {
-        "path": "design-system/css/components.css",
-        "classes": [
-          "button",
-          "button--secondary",
-          "library",
-          "library__grid",
-          "library__header",
-          "library__more",
-          "page-title",
-          "product-card",
-          "product-card__body",
-          "product-card__name",
-          "product-filter",
-          "product-filter__group",
-          "product-filter__label",
-          "product-filter__options",
-          "section__lead",
-          "tab"
         ]
       }
     }

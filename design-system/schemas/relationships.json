@@ -23,11 +23,6 @@
       "type": "uses"
     },
     {
-      "from": "chip",
-      "to": "icon-check",
-      "type": "uses"
-    },
-    {
       "from": "input",
       "to": "icon-circle-alert",
       "type": "uses"
@@ -35,11 +30,6 @@
     {
       "from": "textarea",
       "to": "icon-circle-alert",
-      "type": "uses"
-    },
-    {
-      "from": "checkbox",
-      "to": "icon-check",
       "type": "uses"
     },
     {
@@ -53,6 +43,11 @@
       "type": "uses"
     },
     {
+      "from": "checkbox",
+      "to": "icon-check",
+      "type": "uses"
+    },
+    {
       "from": "search-field",
       "to": "icon-close",
       "type": "uses"
@@ -60,6 +55,11 @@
     {
       "from": "search-field",
       "to": "icon-search",
+      "type": "uses"
+    },
+    {
+      "from": "chip",
+      "to": "icon-check",
       "type": "uses"
     },
     {
@@ -153,6 +153,26 @@
       "type": "uses"
     },
     {
+      "from": "timer",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "timer",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "timer",
+      "to": "icon-play",
+      "type": "uses"
+    },
+    {
+      "from": "video-player",
+      "to": "icon-play",
+      "type": "uses"
+    },
+    {
       "from": "modal",
       "to": "button",
       "type": "uses"
@@ -195,26 +215,6 @@
     {
       "from": "suggestion-bubble",
       "to": "icon-message-circle",
-      "type": "uses"
-    },
-    {
-      "from": "timer",
-      "to": "button",
-      "type": "uses"
-    },
-    {
-      "from": "timer",
-      "to": "icon-arrow-right",
-      "type": "uses"
-    },
-    {
-      "from": "timer",
-      "to": "icon-play",
-      "type": "uses"
-    },
-    {
-      "from": "video-player",
-      "to": "icon-play",
       "type": "uses"
     },
     {
@@ -285,21 +285,6 @@
     {
       "from": "mobile-menu",
       "to": "nav-item",
-      "type": "uses"
-    },
-    {
-      "from": "product-filter",
-      "to": "chip",
-      "type": "uses"
-    },
-    {
-      "from": "product-filter",
-      "to": "icon-check",
-      "type": "uses"
-    },
-    {
-      "from": "product-filter",
-      "to": "tab",
       "type": "uses"
     },
     {
@@ -513,6 +498,66 @@
       "type": "uses"
     },
     {
+      "from": "library",
+      "to": "badge",
+      "type": "uses"
+    },
+    {
+      "from": "library",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "library",
+      "to": "chip",
+      "type": "uses"
+    },
+    {
+      "from": "library",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "library",
+      "to": "icon-check",
+      "type": "uses"
+    },
+    {
+      "from": "library",
+      "to": "link",
+      "type": "uses"
+    },
+    {
+      "from": "library",
+      "to": "product-card",
+      "type": "uses"
+    },
+    {
+      "from": "library",
+      "to": "product-filter",
+      "type": "uses"
+    },
+    {
+      "from": "library",
+      "to": "tab",
+      "type": "uses"
+    },
+    {
+      "from": "product-filter",
+      "to": "chip",
+      "type": "uses"
+    },
+    {
+      "from": "product-filter",
+      "to": "icon-check",
+      "type": "uses"
+    },
+    {
+      "from": "product-filter",
+      "to": "tab",
+      "type": "uses"
+    },
+    {
       "from": "product-hero",
       "to": "badge",
       "type": "uses"
@@ -621,52 +666,7 @@
       "from": "recipe-hero",
       "to": "icon-timer",
       "type": "uses"
-    },
-    {
-      "from": "library",
-      "to": "badge",
-      "type": "uses"
-    },
-    {
-      "from": "library",
-      "to": "button",
-      "type": "uses"
-    },
-    {
-      "from": "library",
-      "to": "chip",
-      "type": "uses"
-    },
-    {
-      "from": "library",
-      "to": "icon-arrow-right",
-      "type": "uses"
-    },
-    {
-      "from": "library",
-      "to": "icon-check",
-      "type": "uses"
-    },
-    {
-      "from": "library",
-      "to": "link",
-      "type": "uses"
-    },
-    {
-      "from": "library",
-      "to": "product-card",
-      "type": "uses"
-    },
-    {
-      "from": "library",
-      "to": "product-filter",
-      "type": "uses"
-    },
-    {
-      "from": "library",
-      "to": "tab",
-      "type": "uses"
     }
   ],
-  "lastSync": "2026-10-08T06:16:03Z"
+  "lastSync": "2026-10-08T07:04:34Z"
 }

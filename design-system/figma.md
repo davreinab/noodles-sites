@@ -12,6 +12,28 @@ están en `design.md § Sync`.
 
 ---
 
+## 0. Organización del archivo «DS - Noodles»
+
+Desde el 2026-10-08 el archivo agrupa los componentes **por familia**, una página por familia y
+una **sección de Figma por componente** (con su set, el título y la descripción de documentación y
+sus ejemplos), apiladas en vertical en este orden:
+
+| Bloque | Páginas |
+|---|---|
+| (portada) | cover |
+| ——— FUNDAMENTOS | Foundations · Iconography · Brand assets (logos y fideos) |
+| ——— COMPONENTES | Buttons & links · Forms · Navigation · Tags & chips · Cards · Content · Feedback & overlays |
+| ——— PATRONES | Pattern / Global · Pattern / Home · Pattern / Libraries · Pattern / Detail pages |
+
+- Un componente nuevo va como **sección nueva en la página de su familia**, no en una página propia.
+  Si no encaja en ninguna, se propone una familia antes de crearla.
+- **Las páginas de patrones empiezan por `Pattern /`.** No es estética: `ds-sync.py` decide si un
+  maestro es componente o patrón por las palabras de `patternKeywords` en el nombre de su página.
+  Un patrón en una página sin «Pattern» se sincronizaría como componente.
+- Las páginas separadoras («——— …») no llevan nada.
+- Mover un componente de página no cambia su id, su key ni sus instancias; en el repo solo cambia
+  la página que cita su ficha, y el sync la recoge en la siguiente lectura.
+
 ## 1. El orden de trabajo
 
 Siempre el mismo, y cada paso se confirma antes del siguiente.
@@ -58,10 +80,12 @@ Las versiones síncronas están deprecadas y **fallan en silencio**.
 
 Regla simple: si el método acaba en `Async` o devuelve una promesa, lleva `await`.
 
-### 2.2 · Los efectos necesitan `blendMode`, y `spread` no existe
+### 2.2 · Los efectos necesitan `blendMode`; `spread` solo se pinta con Clip content
 
-Sin `blendMode` la sombra **no se aplica** y no avisa. `spread` solo existe en la API REST, no
-en la de plugin: incluirlo invalida el efecto.
+Sin `blendMode` la sombra **no se aplica** y no avisa. `spread` sí se acepta en la API de plugin
+(y se puede ligar a una variable con `setBoundVariableForEffect`), pero Figma **solo lo pinta si el
+nodo tiene Clip content activado**; sin él, el efecto existe y no se ve (comprobado en la revisión
+de focus, 2026-10-07: `figma.md § 5`).
 
 ```javascript
 // correcto
@@ -71,7 +95,7 @@ node.effects = [{ type: "DROP_SHADOW", color: {r:0,g:0,b:0,a:0.25},
 
 | Tipo | Propiedades válidas |
 |---|---|
-| `DROP_SHADOW` · `INNER_SHADOW` | `type`, `color`, `offset`, `radius`, **`blendMode`**, `visible` |
+| `DROP_SHADOW` · `INNER_SHADOW` | `type`, `color`, `offset`, `radius`, **`blendMode`**, `visible`, `spread` (solo con Clip content), `showShadowBehindNode` |
 | `LAYER_BLUR` · `BACKGROUND_BLUR` | `type`, `radius`, `visible` |
 
 Recuerda que la elevación vive como **effect style**, no como variable (`design.md § Iconos,

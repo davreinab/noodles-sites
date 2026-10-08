@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 57 componentes sincronizados el 2026-10-08T06:16:03Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 57 componentes sincronizados el 2026-10-08T07:04:34Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -38,25 +38,25 @@
 - [Icon / circle-check](components/icon-circle-check.md) · component · `icon-circle-check` · ✅ criterio completo
 - [Icon / triangle-alert](components/icon-triangle-alert.md) · component · `icon-triangle-alert` · ✅ criterio completo
 - [Icon / message-circle](components/icon-message-circle.md) · component · `icon-message-circle` · ✅ criterio completo
-- [Decoration / Noodle](components/decoration-noodle.md) · component · `decoration-noodle` · ✅ criterio completo
 - [Logo / GB Foods](components/logo-gb-foods.md) · component · `logo-gb-foods` · ✅ criterio completo
 - [Logo / Aiki](components/logo-aiki.md) · component · `logo-aiki` · ✅ criterio completo
 - [Logo / Yatekomo](components/logo-yatekomo.md) · component · `logo-yatekomo` · ✅ criterio completo
 - [Logo / Saikebon](components/logo-saikebon.md) · component · `logo-saikebon` · ✅ criterio completo
 - [Logo / Daisuki](components/logo-daisuki.md) · component · `logo-daisuki` · ✅ criterio completo
+- [Decoration / Noodle](components/decoration-noodle.md) · component · `decoration-noodle` · ✅ criterio completo
 - [Button](components/button.md) · component · `button` · ✅ criterio completo
 - [Icon button](components/icon-button.md) · component · `icon-button` · ✅ criterio completo
 - [Link](components/link.md) · component · `link` · ✅ criterio completo
-- [Badge](components/badge.md) · component · `badge` · ✅ criterio completo
-- [Chip](components/chip.md) · component · `chip` · ✅ criterio completo
 - [Input](components/input.md) · component · `input` · ✅ criterio completo
 - [Textarea](components/textarea.md) · component · `textarea` · ✅ criterio completo
-- [Checkbox](components/checkbox.md) · component · `checkbox` · ✅ criterio completo
 - [Select](components/select.md) · component · `select` · ✅ criterio completo
+- [Checkbox](components/checkbox.md) · component · `checkbox` · ✅ criterio completo
 - [Search field](components/search-field.md) · component · `search-field` · ✅ criterio completo
 - [Nav item](components/nav-item.md) · component · `nav-item` · ✅ criterio completo
 - [Tab](components/tab.md) · component · `tab` · ✅ criterio completo
 - [Lang switch](components/lang-switch.md) · component · `lang-switch` · ✅ criterio completo
+- [Badge](components/badge.md) · component · `badge` · ✅ criterio completo
+- [Chip](components/chip.md) · component · `chip` · ✅ criterio completo
 - [Product card](components/product-card.md) · component · `product-card` · ✅ criterio completo
 - [Recipe card](components/recipe-card.md) · component · `recipe-card` · ✅ criterio completo
 - [Contest card](components/contest-card.md) · component · `contest-card` · ✅ criterio completo
@@ -66,12 +66,12 @@
 - [Nutrition bar](components/nutrition-bar.md) · component · `nutrition-bar` · ✅ criterio completo
 - [Nutrition panel](components/nutrition-panel.md) · component · `nutrition-panel` · ✅ criterio completo
 - [Step](components/step.md) · component · `step` · ✅ criterio completo
+- [Timer](components/timer.md) · component · `timer` · ✅ criterio completo
+- [Video player](components/video-player.md) · component · `video-player` · ✅ criterio completo
 - [Modal / Slot](components/modal-slot.md) · component · `modal-slot` · ✅ criterio completo
 - [Modal](components/modal.md) · component · `modal` · ✅ criterio completo
 - [Alert](components/alert.md) · component · `alert` · ✅ criterio completo
 - [Suggestion bubble](components/suggestion-bubble.md) · component · `suggestion-bubble` · ✅ criterio completo
-- [Timer](components/timer.md) · component · `timer` · ✅ criterio completo
-- [Video player](components/video-player.md) · component · `video-player` · ✅ criterio completo
 
 ## Cómo rellenar una ficha
 

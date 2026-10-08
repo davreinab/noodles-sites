@@ -84,22 +84,12 @@
     },
     {
       "from": "recipe-card",
-      "to": "icon-arrow-right",
-      "type": "uses"
-    },
-    {
-      "from": "recipe-card",
       "to": "icon-check",
       "type": "uses"
     },
     {
       "from": "recipe-card",
       "to": "icon-timer",
-      "type": "uses"
-    },
-    {
-      "from": "recipe-card",
-      "to": "link",
       "type": "uses"
     },
     {
@@ -120,6 +110,11 @@
     {
       "from": "contest-card",
       "to": "link",
+      "type": "uses"
+    },
+    {
+      "from": "category-card",
+      "to": "badge",
       "type": "uses"
     },
     {
@@ -234,7 +229,7 @@
     },
     {
       "from": "navbar",
-      "to": "icon-search",
+      "to": "icon-menu",
       "type": "uses"
     },
     {
@@ -245,21 +240,6 @@
     {
       "from": "navbar",
       "to": "logo-yatekomo",
-      "type": "uses"
-    },
-    {
-      "from": "navbar",
-      "to": "nav-item",
-      "type": "uses"
-    },
-    {
-      "from": "mobile-menu",
-      "to": "button",
-      "type": "uses"
-    },
-    {
-      "from": "mobile-menu",
-      "to": "icon-arrow-right",
       "type": "uses"
     },
     {
@@ -274,6 +254,26 @@
     },
     {
       "from": "mobile-menu",
+      "to": "icon-instagram",
+      "type": "uses"
+    },
+    {
+      "from": "mobile-menu",
+      "to": "icon-tiktok",
+      "type": "uses"
+    },
+    {
+      "from": "mobile-menu",
+      "to": "icon-x",
+      "type": "uses"
+    },
+    {
+      "from": "mobile-menu",
+      "to": "icon-youtube",
+      "type": "uses"
+    },
+    {
+      "from": "mobile-menu",
       "to": "lang-switch",
       "type": "uses"
     },
@@ -289,6 +289,11 @@
     },
     {
       "from": "footer",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "footer",
       "to": "icon-arrow-right",
       "type": "uses"
     },
@@ -299,32 +304,7 @@
     },
     {
       "from": "footer",
-      "to": "icon-instagram",
-      "type": "uses"
-    },
-    {
-      "from": "footer",
-      "to": "icon-tiktok",
-      "type": "uses"
-    },
-    {
-      "from": "footer",
-      "to": "icon-x",
-      "type": "uses"
-    },
-    {
-      "from": "footer",
-      "to": "icon-youtube",
-      "type": "uses"
-    },
-    {
-      "from": "footer",
       "to": "link",
-      "type": "uses"
-    },
-    {
-      "from": "footer",
-      "to": "logo-gb-foods",
       "type": "uses"
     },
     {
@@ -364,11 +344,6 @@
     },
     {
       "from": "promo",
-      "to": "badge",
-      "type": "uses"
-    },
-    {
-      "from": "promo",
       "to": "button",
       "type": "uses"
     },
@@ -394,47 +369,27 @@
     },
     {
       "from": "natural-formula",
-      "to": "icon-arrow-right",
+      "to": "button",
       "type": "uses"
     },
     {
       "from": "natural-formula",
-      "to": "link",
-      "type": "uses"
-    },
-    {
-      "from": "product-carousel",
-      "to": "badge",
-      "type": "uses"
-    },
-    {
-      "from": "product-carousel",
-      "to": "icon-arrow-left",
-      "type": "uses"
-    },
-    {
-      "from": "product-carousel",
       "to": "icon-arrow-right",
       "type": "uses"
     },
     {
-      "from": "product-carousel",
-      "to": "icon-button",
+      "from": "product-categories",
+      "to": "badge",
       "type": "uses"
     },
     {
-      "from": "product-carousel",
-      "to": "link",
+      "from": "product-categories",
+      "to": "category-card",
       "type": "uses"
     },
     {
-      "from": "product-carousel",
-      "to": "product-card",
-      "type": "uses"
-    },
-    {
-      "from": "product-carousel",
-      "to": "tab",
+      "from": "recipes",
+      "to": "button",
       "type": "uses"
     },
     {
@@ -459,22 +414,7 @@
     },
     {
       "from": "recipes",
-      "to": "link",
-      "type": "uses"
-    },
-    {
-      "from": "recipes",
       "to": "recipe-card",
-      "type": "uses"
-    },
-    {
-      "from": "banner",
-      "to": "button",
-      "type": "uses"
-    },
-    {
-      "from": "banner",
-      "to": "icon-arrow-right",
       "type": "uses"
     },
     {
@@ -673,5 +613,5 @@
       "type": "uses"
     }
   ],
-  "lastSync": "2026-10-08T10:21:35Z"
+  "lastSync": "2026-10-08T11:10:38Z"
 }

@@ -2,18 +2,18 @@
   "designSystem": "noodles-microsites",
   "note": "Informe de scripts/ds-coverage.py. No editar a mano.",
   "definition": "cobertura = elementos con al menos una clase de components.css ÷ elementos con alguna clase",
-  "dsClasses": 265,
+  "dsClasses": 280,
   "screens": 1,
   "summary": {
-    "withClass": 259,
-    "covered": 259,
+    "withClass": 220,
+    "covered": 220,
     "coverage": 100.0
   },
   "byScreen": [
     {
       "file": "UI/home.html",
-      "withClass": 259,
-      "covered": 259,
+      "withClass": 220,
+      "covered": 220,
       "coverage": 100.0,
       "foreignClasses": {}
     }

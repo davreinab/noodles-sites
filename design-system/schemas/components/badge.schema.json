@@ -6,7 +6,7 @@
     "slug": "badge",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T10:21:35Z",
+    "lastSync": "2026-10-08T11:10:38Z",
     "description": "Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). No es interactivo; no usar como botón.",
     "figmaPage": "Tags & chips",
     "figmaType": "COMPONENT_SET",
@@ -147,15 +147,15 @@
   "relations": {
     "uses": [],
     "usedBy": [
+      "category-card",
       "contest-card",
       "hero",
       "library",
       "nutrition-panel",
       "product-card",
-      "product-carousel",
+      "product-categories",
       "product-details",
-      "product-hero",
-      "promo"
+      "product-hero"
     ],
     "related": []
   }

@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un patrón que no esté aquí; los patrones se componen de átomos y consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 18 patrones sincronizados el 2026-10-08T10:21:35Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 18 patrones sincronizados el 2026-10-08T11:10:38Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -22,7 +22,7 @@
 - [Marquee](patterns/marquee.md) · pattern · `marquee` · ✅ criterio completo
 - [Promo](patterns/promo.md) · pattern · `promo` · ✅ criterio completo
 - [Natural formula](patterns/natural-formula.md) · pattern · `natural-formula` · ✅ criterio completo
-- [Product carousel](patterns/product-carousel.md) · pattern · `product-carousel` · ✅ criterio completo
+- [Product categories](patterns/product-categories.md) · pattern · `product-categories` · ✅ criterio completo
 - [Recipes](patterns/recipes.md) · pattern · `recipes` · ✅ criterio completo
 - [Banner](patterns/banner.md) · pattern · `banner` · ✅ criterio completo
 - [FAQ](patterns/faq.md) · pattern · `faq` · ✅ criterio completo
@@ -104,13 +104,13 @@ _Las capas se llaman `--layer-*` en este proyecto (no `--z-*`). Todo movimiento 
 
 ### Flujo de contenido
 - Orden de lectura y jerarquía de títulos por tipo de página:
-  - **Home:** Navbar · Hero · Promo (solo con campaña activa) · Marquee · Natural formula · Product carousel · Recipes · Banner · FAQ · Where to buy · Footer · Suggestion bubble. Sin campaña, el CTA del Hero lleva a producto y después a recetas.
+  - **Home** (wireframe UX `1YhsCqdqYCHlK4Y82IY5G3`, nodos 396:5700 desktop y 97:636 mobile): Navbar · Hero · Promo (solo con campaña activa) · Natural formula · Product categories · Recipes · Banner (solo con campaña) · FAQ · Where to buy · Footer (con la caja de sugerencias). Sin campaña, el CTA del Hero lleva a producto y después a recetas. Marquee y Suggestion bubble no están en el wireframe de la Home.
   - **Product page:** Product hero · Product details · Preparation · Recipes (que usan el producto) · Where to buy.
   - **Recipe page:** Recipe hero · Product details (valores de la receta) · Preparation sin Timer y con Step Media=True · Recipes relacionadas.
   - **Libraries (producto, receta, concurso):** Library con la card y el filtro que toquen.
   - **Natural formula page y FAQS:** cabecera + texto en columna de lectura + FAQ (en FAQS, un bloque por categoría).
   - Un solo `h1` por página (claim del hero, nombre del producto o de la receta, título de la librería); cada sección abre con `h2`; las cards usan `h3`.
-- Dónde van las acciones primarias (cabecera, pie de panel, fin de formulario): la acción principal de la página está en el hero (Button L en desktop, M en móvil); en cada sección, una sola acción al final o junto al título (Link «Ver todos»); en el Modal, en el pie alineada a la derecha (a todo el ancho en Full); en formularios, al final y a la izquierda. «Dónde comprar» es la acción recurrente (Navbar y Product hero).
+- Dónde van las acciones primarias (cabecera, pie de panel, fin de formulario): la acción principal de la página está en el hero (Button L en desktop, M en móvil); en cada sección, una sola acción al final o junto al título (Link «Ver todos»); en el Modal, en el pie alineada a la derecha (a todo el ancho en Full); en formularios, al final y a la izquierda. En la Navbar, el CTA es «New 100% Natural Formula» (wireframe UX); «Dónde comprar» queda en el Product hero y como sección Where to buy.
 - Estados vacíos, carga y error a nivel de página: los filtros solo muestran opciones con resultados, así que la librería no queda vacía (regla de negocio); si una sección no tiene contenido (sin promoción, sin recetas del producto) se oculta entera, sin mensaje. La carga de «Ver más» y del vídeo muestra el estado en el propio botón. Los errores de carga se avisan con Alert inline Error y una acción de reintentar en el lugar del contenido; nunca página en blanco.
 
 ## Capa de pantalla — composiciones y utilidades   ✍️ manual

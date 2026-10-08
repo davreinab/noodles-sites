@@ -1,6 +1,6 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": "2026-10-08T10:21:35Z",
+  "generatedAt": "2026-10-08T11:10:38Z",
   "adoptionMode": "new",
   "sourcesCompared": [
     "figma",
@@ -12,7 +12,7 @@
   ],
   "summary": {
     "critical": 0,
-    "warning": 5,
+    "warning": 9,
     "info": 11
   },
   "findings": [
@@ -80,6 +80,26 @@
       "severity": "warning",
       "check": "icon-not-exposed-as-swap",
       "detail": "Suggestion bubble: capa «icon-external» (Icon / external-link) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Mobile menu: capa «social» (Icon / tiktok) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Mobile menu: capa «social» (Icon / instagram) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Mobile menu: capa «social» (Icon / x) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Mobile menu: capa «social» (Icon / youtube) sin INSTANCE_SWAP"
     },
     {
       "severity": "warning",

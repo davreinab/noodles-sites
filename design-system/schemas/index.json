@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-08T10:21:35Z",
+  "lastSync": "2026-10-08T11:10:38Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -1202,10 +1202,8 @@
       ],
       "dependencies": [
         "chip",
-        "icon-arrow-right",
         "icon-check",
-        "icon-timer",
-        "link"
+        "icon-timer"
       ],
       "hasIcon": true,
       "figmaSource": {
@@ -1218,10 +1216,7 @@
         "classes": [
           "chip",
           "icon",
-          "icon-arrow-right",
           "icon-timer",
-          "link",
-          "link--standalone",
           "recipe-card",
           "recipe-card__body",
           "recipe-card__link",
@@ -1272,6 +1267,35 @@
           "icon-external-link",
           "link",
           "visually-hidden"
+        ]
+      }
+    },
+    {
+      "id": "component:category-card",
+      "name": "Category card",
+      "slug": "category-card",
+      "kind": "component",
+      "contractPath": "./components/category-card.schema.json",
+      "keywords": [
+        "card",
+        "category"
+      ],
+      "dependencies": [
+        "badge"
+      ],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "147:1353",
+        "componentKey": "bf00e7dd5888d2bce0451a38f38a9607a8ad8b8a"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "badge",
+          "category-card",
+          "category-card__media",
+          "category-card__name"
         ]
       }
     },
@@ -1701,10 +1725,9 @@
         "button",
         "icon-arrow-right",
         "icon-button",
-        "icon-search",
+        "icon-menu",
         "lang-switch",
-        "logo-yatekomo",
-        "nav-item"
+        "logo-yatekomo"
       ],
       "hasIcon": true,
       "figmaSource": {
@@ -1720,16 +1743,11 @@
           "icon-button",
           "icon-button--secondary",
           "icon-menu",
-          "icon-search",
-          "lang-switch",
-          "lang-switch__option",
           "logo",
-          "nav-item",
           "navbar",
           "navbar__actions",
           "navbar__inner",
-          "navbar__menu-button",
-          "navbar__nav"
+          "navbar__start"
         ]
       }
     },
@@ -1745,10 +1763,12 @@
         "mobile"
       ],
       "dependencies": [
-        "button",
-        "icon-arrow-right",
         "icon-button",
         "icon-close",
+        "icon-instagram",
+        "icon-tiktok",
+        "icon-x",
+        "icon-youtube",
         "lang-switch",
         "logo-yatekomo",
         "nav-item"
@@ -1762,17 +1782,21 @@
       "codeSource": {
         "path": "design-system/css/components.css",
         "classes": [
-          "button",
-          "button--inverse",
-          "button--l",
           "icon",
           "icon-button",
           "icon-button--inverse",
           "icon-close",
+          "icon-instagram",
+          "link",
+          "link--dark",
           "logo",
           "mobile-menu",
+          "mobile-menu__copyright",
           "mobile-menu__inner",
           "mobile-menu__nav",
+          "mobile-menu__social",
+          "mobile-menu__social-label",
+          "mobile-menu__social-list",
           "mobile-menu__top",
           "nav-item",
           "nav-item--menu"
@@ -1790,14 +1814,10 @@
         "icon"
       ],
       "dependencies": [
+        "button",
         "icon-arrow-right",
         "icon-external-link",
-        "icon-instagram",
-        "icon-tiktok",
-        "icon-x",
-        "icon-youtube",
         "link",
-        "logo-gb-foods",
         "logo-yatekomo"
       ],
       "hasIcon": true,
@@ -1809,21 +1829,22 @@
       "codeSource": {
         "path": "design-system/css/components.css",
         "classes": [
+          "button",
           "footer",
           "footer__brand",
           "footer__column",
           "footer__legal",
           "footer__links",
           "footer__main",
-          "footer__social",
+          "footer__ticket",
+          "footer__ticket-copy",
+          "footer__ticket-text",
+          "footer__ticket-title",
           "icon",
           "icon-external-link",
-          "icon-instagram",
           "link",
           "link--dark",
-          "link--standalone",
           "logo",
-          "logo--gb-foods",
           "visually-hidden"
         ]
       }
@@ -1856,12 +1877,10 @@
         "path": "design-system/css/components.css",
         "classes": [
           "badge",
-          "badge--natural",
           "button",
           "button--l",
           "decoration-noodle",
           "hero",
-          "hero__arrows",
           "hero__content",
           "hero__controls",
           "hero__dot",
@@ -1870,6 +1889,9 @@
           "hero__media",
           "hero__noodle",
           "hero__slide",
+          "hero__slide-content",
+          "hero__slide-copy",
+          "hero__slide-title",
           "hero__title",
           "icon",
           "icon-arrow-left",
@@ -1918,7 +1940,6 @@
         "promo"
       ],
       "dependencies": [
-        "badge",
         "button",
         "icon-arrow-right",
         "icon-play",
@@ -1934,22 +1955,20 @@
       "codeSource": {
         "path": "design-system/css/components.css",
         "classes": [
-          "badge",
           "button",
           "button--l",
-          "icon",
-          "icon-play",
           "link",
           "promo",
           "promo__actions",
+          "promo__art",
           "promo__body",
           "promo__content",
           "promo__grid",
+          "promo__media",
           "section",
           "section__inner",
           "section__title",
-          "video-player",
-          "video-player__play"
+          "video-player"
         ]
       }
     },
@@ -1965,8 +1984,8 @@
         "natural"
       ],
       "dependencies": [
-        "icon-arrow-right",
-        "link"
+        "button",
+        "icon-arrow-right"
       ],
       "hasIcon": true,
       "figmaSource": {
@@ -1977,45 +1996,38 @@
       "codeSource": {
         "path": "design-system/css/components.css",
         "classes": [
-          "icon",
-          "icon-arrow-right",
-          "link",
-          "link--dark",
-          "link--standalone",
+          "button",
+          "button--inverse",
+          "button--l",
           "natural-formula",
-          "natural-formula__claim",
-          "natural-formula__claims",
-          "natural-formula__label",
-          "natural-formula__value",
+          "natural-formula__grid",
+          "natural-formula__ingredient",
+          "natural-formula__item",
+          "natural-formula__list",
+          "natural-formula__removed",
+          "natural-formula__statement",
+          "natural-formula__title",
           "section",
-          "section__header",
           "section__inner",
-          "section__lead",
-          "section__title"
+          "visually-hidden"
         ]
       }
     },
     {
-      "id": "pattern:product-carousel",
-      "name": "Product carousel",
-      "slug": "product-carousel",
+      "id": "pattern:product-categories",
+      "name": "Product categories",
+      "slug": "product-categories",
       "kind": "pattern",
-      "contractPath": "./components/product-carousel.schema.json",
+      "contractPath": "./components/product-categories.schema.json",
       "keywords": [
-        "carousel",
-        "icon",
+        "categories",
         "product"
       ],
       "dependencies": [
         "badge",
-        "icon-arrow-left",
-        "icon-arrow-right",
-        "icon-button",
-        "link",
-        "product-card",
-        "tab"
+        "category-card"
       ],
-      "hasIcon": true,
+      "hasIcon": false,
       "figmaSource": {
         "fileKey": "v4mnn154qUmiB35CCnRfgh",
         "nodeId": "91:837",
@@ -2024,25 +2036,17 @@
       "codeSource": {
         "path": "design-system/css/components.css",
         "classes": [
-          "carousel",
-          "icon",
-          "icon-arrow-left",
-          "icon-arrow-right",
-          "icon-button",
-          "icon-button--secondary",
-          "link",
-          "link--standalone",
-          "product-card",
-          "product-card__body",
-          "product-card__name",
-          "product-carousel",
-          "product-carousel__tabs",
+          "badge",
+          "category-card",
+          "category-card__media",
+          "category-card__name",
+          "product-categories",
+          "product-categories__grid",
           "section",
-          "section__arrows",
-          "section__bar",
+          "section__header",
           "section__inner",
-          "section__title",
-          "tab"
+          "section__lead",
+          "section__title"
         ]
       }
     },
@@ -2057,11 +2061,11 @@
         "recipes"
       ],
       "dependencies": [
+        "button",
         "chip",
         "icon-arrow-right",
         "icon-check",
         "icon-timer",
-        "link",
         "recipe-card"
       ],
       "hasIcon": true,
@@ -2073,19 +2077,20 @@
       "codeSource": {
         "path": "design-system/css/components.css",
         "classes": [
+          "button",
+          "button--l",
+          "button--secondary",
           "carousel",
-          "carousel--3",
           "icon",
-          "icon-arrow-right",
-          "link",
-          "link--standalone",
+          "icon-timer",
           "recipe-card",
           "recipe-card__body",
           "recipe-card__link",
+          "recipe-card__meta",
           "recipe-card__title",
           "recipes",
+          "recipes__cta",
           "section",
-          "section__bar",
           "section__header",
           "section__inner",
           "section__lead",
@@ -2100,14 +2105,10 @@
       "kind": "pattern",
       "contractPath": "./components/banner.schema.json",
       "keywords": [
-        "banner",
-        "icon"
+        "banner"
       ],
-      "dependencies": [
-        "button",
-        "icon-arrow-right"
-      ],
-      "hasIcon": true,
+      "dependencies": [],
+      "hasIcon": false,
       "figmaSource": {
         "fileKey": "v4mnn154qUmiB35CCnRfgh",
         "nodeId": "92:884",
@@ -2117,14 +2118,7 @@
         "path": "design-system/css/components.css",
         "classes": [
           "banner",
-          "banner__body",
           "banner__box",
-          "banner__content",
-          "banner__media",
-          "banner__title",
-          "button",
-          "button--l",
-          "media-frame",
           "section",
           "section__inner"
         ]
@@ -2163,6 +2157,7 @@
           "faq",
           "faq__grid",
           "faq__list",
+          "faq__more",
           "icon",
           "icon-arrow-right",
           "icon-plus",
@@ -2198,13 +2193,14 @@
         "path": "design-system/css/components.css",
         "classes": [
           "section",
-          "section__header",
           "section__inner",
-          "section__lead",
-          "section__title",
           "where-to-buy",
+          "where-to-buy__grid",
+          "where-to-buy__kicker",
           "where-to-buy__list",
-          "where-to-buy__retailer"
+          "where-to-buy__retailer",
+          "where-to-buy__text",
+          "where-to-buy__title"
         ]
       }
     },
@@ -2498,7 +2494,7 @@
     }
   ],
   "counts": {
-    "atoms": 57,
+    "atoms": 58,
     "patterns": 18
   }
 }

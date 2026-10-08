@@ -1,7 +1,7 @@
-### Product filter   ⚙️ synced: 2026-10-08T10:21:35Z
+### Product filter   ⚙️ synced: 2026-10-08T11:10:38Z
 
 <!-- ⚙️ GENERATED:start:product-filter -->
-- **Figma:** `55:253` · página «Pattern / Libraries» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T10:21:35Z
+- **Figma:** `55:253` · página «Pattern / Libraries» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:10:38Z
 - **Descripción (Figma):** Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias.
 - **Anatomía:** `tab` → State=Selected, `tab` → State=Default, `tab` → State=Default, `chip` → State=Selected, `icon-leading` → Icon / check, `chip` → State=Default, `icon-leading` → Icon / check, `chip` → State=Default, `icon-leading` → Icon / check, `chip` → State=Selected, `icon-leading` → Icon / check, `chip` → State=Default, `icon-leading` → Icon / check, `chip` → State=Default, `icon-leading` → Icon / check, `chip` → State=Default, `icon-leading` → Icon / check
 - **Breakpoint:** Desktop, Mobile
@@ -27,4 +27,4 @@
   </div>
   ```
 - **Accesibilidad (pares AA verificados):** Etiquetas de nivel en gris cálido sobre crema 5,4:1; Tab y Chip con sus pares (seleccionado crema sobre tinta 17,2:1). Cada nivel es un grupo con nombre (`tablist` para el tipo; `fieldset`/`legend` con chips `aria-pressed` para línea y sabor). Al cambiar un nivel se anuncia el número de productos (aria-live) y el foco no se pierde. En móvil cada fila se desplaza en horizontal y sigue siendo operable con teclado.
-- **Cuándo usar / qué NO hace:** Solo en la Product library (y Product carousel para el tipo). No muestra filtros que den cero resultados ni sustituye a la búsqueda.
+- **Cuándo usar / qué NO hace:** Solo en la Product library. No muestra filtros que den cero resultados ni sustituye a la búsqueda.

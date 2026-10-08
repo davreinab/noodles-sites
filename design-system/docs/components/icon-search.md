@@ -1,7 +1,7 @@
-### Icon / search   ⚙️ synced: 2026-10-08T10:21:35Z
+### Icon / search   ⚙️ synced: 2026-10-08T11:10:38Z
 
 <!-- ⚙️ GENERATED:start:icon-search -->
-- **Figma:** `30:76` · página «Iconography» · COMPONENT · 1 variantes · última sync 2026-10-08T10:21:35Z
+- **Figma:** `30:76` · página «Iconography» · COMPONENT · 1 variantes · última sync 2026-10-08T11:10:38Z
 - **Descripción (Figma):** Buscar. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

@@ -1,28 +1,25 @@
-### Banner   ⚙️ synced: 2026-10-08T10:21:35Z
+### Banner   ⚙️ synced: 2026-10-08T11:10:38Z
 
 <!-- ⚙️ GENERATED:start:banner -->
-- **Figma:** `92:884` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T10:21:35Z
-- **Descripción (Figma):** Banner promocional de la Home (lanzamiento, sabor nuevo, mensaje de campaña): bloque color/surface/accent (naranja de marca) con borde de tinta, radius/lg y elevation/2 (sombra dura de marca) · titular (h1) · texto · Button Primary · imagen de marca. Sobre el acento solo va color/text/default (regla del token). Desktop: texto a la izquierda; Mobile: texto arriba e imagen debajo. No es un carrusel. Sin variables propias.
-- **Anatomía:** `cta` → Hierarchy=Primary, Size=L, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right
+- **Figma:** `92:884` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:10:38Z
+- **Descripción (Figma):** Banner de campaña de la Home (wireframe UX): una pieza gráfica de campaña a todo el ancho del contenido, dentro de un marco con borde de tinta, radius/lg y elevation/2. La imagen lleva el mensaje; el banner entero es un enlace a la campaña y su texto alternativo repite lo que dice la pieza. Se oculta si no hay campaña. No es un carrusel. Sin variables propias.
+- **Anatomía:** sin instancias anidadas
 - **Breakpoint:** Desktop, Mobile
 - **Propiedades de componente:** `Breakpoint` (VARIANT, por defecto Desktop)
-- **Iconos / instancias anidadas:** sí · swap: ninguna (⚠️ no expuesto) · por defecto: unknown
-- **Tokens que consume:** `border/width/thick`, `border/width/thin`, `button/primary/bg`, `button/primary/border`, `button/primary/text`, `color/border/default`, `color/effect/shadow-ink`, `color/surface/accent`, `color/surface/page`, `color/text/default`, `color/text/secondary`, `font/family/body`, `font/family/display`, `font/line-height/desktop/body-l`, `font/line-height/desktop/caption`, `font/line-height/desktop/h1`, `font/line-height/desktop/label`, `font/size/desktop/body-l`, `font/size/desktop/caption`, `font/size/desktop/h1`, `font/size/desktop/label`, `font/style/body`, `font/style/display`, `icon/size/sm`, `layout/frame`, `layout/margin`, `layout/section-y`, `radius/lg`, `radius/md`, `radius/pill`, `space/16`, `space/24`, `space/32`, `space/48`, `space/8`
-- **Text styles:** `Desktop/h1`, `Desktop/body-l`, `Desktop/label`, `Desktop/caption`
-- **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `button/primary/bg`, `button/primary/border`, `button/primary/text`, `color/border/default`, `color/effect/shadow-ink`, `color/surface/accent`, `color/surface/page`, `color/text/default`, `color/text/secondary`, `font/family/body`, `font/family/display`, `font/line-height/desktop/body-l`, `font/line-height/desktop/caption`, `font/line-height/desktop/h1`, `font/line-height/desktop/label`, `font/size/desktop/body-l`, `font/size/desktop/caption`, `font/size/desktop/h1`, `font/size/desktop/label`, `font/style/body`, `font/style/display`
+- **Iconos / instancias anidadas:** ninguno
+- **Tokens que consume:** `border/width/thin`, `color/border/default`, `color/effect/shadow-ink`, `color/surface/page`, `color/text/secondary`, `font/family/body`, `font/line-height/desktop/caption`, `font/size/desktop/caption`, `font/style/body`, `layout/frame`, `layout/margin`, `layout/section-y`, `radius/lg`, `radius/none`, `space/16`, `space/48`
+- **Text styles:** `Desktop/caption`
+- **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `color/border/default`, `color/effect/shadow-ink`, `color/surface/page`, `color/text/secondary`, `font/family/body`, `font/line-height/desktop/caption`, `font/size/desktop/caption`, `font/style/body`
 <!-- ⚙️ GENERATED:end:banner -->
 
-- **Propósito:** Banner de la Home para lanzamientos o mensajes de campaña: bloque naranja de acento con titular, texto, CTA e imagen.
+- **Propósito:** Banner de campaña de la Home (wireframe UX): una pieza gráfica a todo el ancho del contenido; el banner entero es el enlace a la campaña.
 - **Ejemplo de código:**
   ```html
-  <section class="section banner" aria-labelledby="bn-title">
+  <section class="section banner" aria-label="Campaña">
   <div class="section__inner">
-  <div class="banner__box">
-  <div class="banner__content"><h2 class="banner__title" id="bn-title">Nuevo sabor</h2><p class="banner__body">Texto del lanzamiento.</p><a class="button button--l" href="/productos/nuevo">Saber más</a></div>
-  <div class="media-frame banner__media"><img src="/media/banner.jpg" alt=""></div>
-  </div>
+  <a class="banner__box" href="/concursos/cucurella"><img src="/media/banner-campana.jpg" alt="Conoce a Marc Cucurella. Participa y podrás ganar más premios"></a>
   </div>
   </section>
   ```
-- **Accesibilidad (pares AA verificados):** Tinta sobre naranja 7,1:1 (sobre el acento solo va tinta, regla del token); botón crema sobre tinta 17,2:1. Sección con encabezado; la imagen es decorativa si el titular ya lo dice todo.
-- **Cuándo usar / qué NO hace:** Uno como máximo en la Home. No es un carrusel ni sustituye al Hero o a la Promo.
+- **Accesibilidad (pares AA verificados):** El texto alternativo repite lo que dice la pieza (la imagen lleva el mensaje). Marco con borde de tinta y foco visible en el enlace.
+- **Cuándo usar / qué NO hace:** En la Home, solo con campaña activa; sin ella se oculta. No es un carrusel ni lleva texto HTML encima de la imagen.

@@ -6,21 +6,24 @@
     "slug": "recipe-card",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T10:21:35Z",
-    "description": "Card de receta (Recipe library, Home, página de producto). Anatomía: media (imagen de marca; sin vídeo al principio) · título (h3) · tiempo (icono timer + texto, recipe-card/meta) · productos usados como Chip S (enlazan a la ficha de producto) · Link «Ver receta». La card enlaza a la receta; los Chip son enlaces propios y quedan fuera del área clicable principal. Hover: elevation/2; Focus: anillo recipe-card/focus-ring. Desktop 384 px; en móvil FILL.",
+    "lastSync": "2026-10-08T11:10:38Z",
+    "description": "Card de receta (Recipe library, Home, página de producto). Anatomía (wireframe UX): media vertical 288:415 (imagen de marca; sin vídeo al principio) · tiempo (icono timer + texto, recipe-card/meta) · título (h3) · productos usados como Chip S (enlazan a la ficha de producto). Sin enlace «Ver receta»: el título es el enlace y su área se estira a toda la card; los Chip son enlaces propios y quedan por encima. Comensales: sin definir (falta información). Hover: elevation/2; Focus: anillo recipe-card/focus-ring. Desktop 384 px; en móvil FILL.",
     "figmaPage": "Cards",
     "figmaType": "COMPONENT_SET",
     "variantCount": 3,
     "autoLayout": true,
-    "anatomyHash": "9285beb9ce12",
+    "anatomyHash": "b2dba44cfe3e",
     "verification": {
       "status": "verified",
       "date": "2026-10-08",
-      "figmaVersion": "9285beb9ce12",
+      "figmaVersion": "b2dba44cfe3e",
       "variantsChecked": [
-        "State=Default"
+        "State=Default",
+        "State=Hover",
+        "State=Focus"
       ],
-      "by": "agent (Claude)"
+      "by": "agent (Claude)",
+      "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)"
     }
   },
   "source": {
@@ -40,10 +43,7 @@
       "classes": [
         "chip",
         "icon",
-        "icon-arrow-right",
         "icon-timer",
-        "link",
-        "link--standalone",
         "recipe-card",
         "recipe-card__body",
         "recipe-card__link",
@@ -52,7 +52,7 @@
         "recipe-card__products",
         "recipe-card__title"
       ],
-      "example": "<article class=\"recipe-card\">\n<div class=\"recipe-card__media\"><img src=\"/media/receta-ramen.jpg\" alt=\"\"></div>\n<div class=\"recipe-card__body\">\n<h3 class=\"recipe-card__title\"><a class=\"recipe-card__link\" href=\"/recetas/ramen-picante\">Ramen picante</a></h3>\n<p class=\"recipe-card__meta\"><span class=\"icon icon-timer\" aria-hidden=\"true\"></span>10 min</p>\n<ul class=\"recipe-card__products\" aria-label=\"Productos de la receta\">\n<li><a class=\"chip\" href=\"/productos/yatekomo-pollo\">Yatekomo Pollo</a></li>\n</ul>\n<span class=\"link link--standalone\" aria-hidden=\"true\">Ver receta <span class=\"icon icon-arrow-right\"></span></span>\n</div>\n</article>"
+      "example": "<article class=\"recipe-card\">\n<div class=\"recipe-card__media\"><img src=\"/media/receta.jpg\" alt=\"\"></div>\n<div class=\"recipe-card__body\">\n<p class=\"recipe-card__meta\"><span class=\"icon icon-timer\" aria-hidden=\"true\"></span>20 minutes</p>\n<h3 class=\"recipe-card__title\"><a class=\"recipe-card__link\" href=\"/recetas/spicy-noodle-salad\">Spicy Noodle Salad with almond and mint</a></h3>\n<ul class=\"recipe-card__products\" aria-label=\"Productos de la receta\"><li><a class=\"chip\" href=\"/productos/cup-oriental\">Cup Oriental</a></li></ul>\n</div>\n</article>"
     }
   },
   "api": {
@@ -141,22 +141,6 @@
         "exposedAs": "Icon leading swap#35:27",
         "toggledBy": "Icon leading#35:22",
         "visibleByDefault": false
-      },
-      {
-        "layer": "link",
-        "component": "Type=Standalone, Surface=Light, State=Default",
-        "componentSlug": "link",
-        "exposedAs": null,
-        "toggledBy": null,
-        "visibleByDefault": true
-      },
-      {
-        "layer": "icon-trailing",
-        "component": "Icon / arrow-right",
-        "componentSlug": "icon-arrow-right",
-        "exposedAs": "Icon#35:0",
-        "toggledBy": null,
-        "visibleByDefault": true
       }
     ],
     "icons": {
@@ -183,15 +167,12 @@
       "font/line-height/desktop/body-s",
       "font/line-height/desktop/caption",
       "font/line-height/desktop/h3",
-      "font/line-height/desktop/label",
       "font/size/desktop/body-s",
       "font/size/desktop/caption",
       "font/size/desktop/h3",
-      "font/size/desktop/label",
       "font/style/body",
       "font/style/display",
       "icon/size/sm",
-      "link/default",
       "radius/md",
       "radius/none",
       "radius/pill",
@@ -222,6 +203,10 @@
       "paddingTop: space/16",
       "paddingRight: space/16",
       "paddingBottom: space/16",
+      "topLeftRadius: radius/none",
+      "topRightRadius: radius/none",
+      "bottomLeftRadius: radius/none",
+      "bottomRightRadius: radius/none",
       "fills: recipe-card/media-bg",
       "color: recipe-card/media-bg",
       "fills: recipe-card/meta",
@@ -235,18 +220,18 @@
       "paddingTop: space/24",
       "paddingRight: space/24",
       "paddingBottom: space/24",
-      "fills: recipe-card/title",
-      "fontSize: font/size/desktop/h3",
-      "fontStyle: font/style/display",
-      "fontFamily: font/family/display",
-      "lineHeight: font/line-height/desktop/h3",
-      "color: recipe-card/title",
       "itemSpacing: space/8",
       "width: icon/size/sm",
       "height: icon/size/sm",
       "strokes: recipe-card/meta",
       "fontSize: font/size/desktop/body-s",
       "lineHeight: font/line-height/desktop/body-s",
+      "fills: recipe-card/title",
+      "fontSize: font/size/desktop/h3",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: recipe-card/title",
       "counterAxisSpacing: space/8",
       "paddingTop: space/8",
       "paddingBottom: space/8",
@@ -261,22 +246,12 @@
       "color: chip/border",
       "strokes: chip/text",
       "color: chip/text",
-      "fills: chip/text",
-      "fills: link/default",
-      "fontSize: font/size/desktop/label",
-      "lineHeight: font/line-height/desktop/label",
-      "color: link/default",
-      "strokes: link/default",
-      "topLeftRadius: radius/none",
-      "topRightRadius: radius/none",
-      "bottomLeftRadius: radius/none",
-      "bottomRightRadius: radius/none"
+      "fills: chip/text"
     ],
     "textStyles": [
       "Desktop/caption",
-      "Desktop/h3",
       "Desktop/body-s",
-      "Desktop/label"
+      "Desktop/h3"
     ],
     "theming": {
       "brandAware": true,
@@ -299,14 +274,11 @@
         "font/line-height/desktop/body-s",
         "font/line-height/desktop/caption",
         "font/line-height/desktop/h3",
-        "font/line-height/desktop/label",
         "font/size/desktop/body-s",
         "font/size/desktop/caption",
         "font/size/desktop/h3",
-        "font/size/desktop/label",
         "font/style/body",
         "font/style/display",
-        "link/default",
         "recipe-card/bg",
         "recipe-card/border",
         "recipe-card/media-bg",
@@ -324,10 +296,8 @@
   "relations": {
     "uses": [
       "chip",
-      "icon-arrow-right",
       "icon-check",
-      "icon-timer",
-      "link"
+      "icon-timer"
     ],
     "usedBy": [
       "recipes"

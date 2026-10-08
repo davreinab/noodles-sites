@@ -642,9 +642,8 @@
   transition: box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
 }
 .recipe-card:hover { box-shadow: var(--elevation-2); }
-.recipe-card:hover .link { color: var(--link-hover); }
 .recipe-card:has(.recipe-card__link:focus-visible) { outline: var(--border-width-thin) solid var(--recipe-card-focus-ring); outline-offset: 0; }
-.recipe-card__media { aspect-ratio: 4 / 3; border-radius: var(--radius-none); background-color: var(--recipe-card-media-bg); }
+.recipe-card__media { aspect-ratio: 288 / 415; border-radius: var(--radius-none); background-color: var(--recipe-card-media-bg); }
 .recipe-card__media img { width: 100%; height: 100%; object-fit: cover; }
 .recipe-card__body { display: flex; flex-direction: column; gap: var(--space-16); padding: var(--space-24); }
 .recipe-card__title {
@@ -675,6 +674,43 @@
   font-size: var(--font-size-desktop-caption);
   line-height: var(--font-line-height-desktop-caption);
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CATEGORY CARD · enlace a la Product library filtrada por tipo (Cups, Bags, Sauces)
+   Imagen a sangre de fondo · Badge New opcional arriba · nombre sobre placa de tinta abajo.
+   ══════════════════════════════════════════════════════════════════════════ */
+.category-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  aspect-ratio: 1;
+  overflow: hidden;
+  padding: var(--space-16);
+  border: var(--border-width-thin) solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+  box-shadow: var(--elevation-1);
+  text-decoration: none;
+  transition: box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.category-card:hover { box-shadow: var(--elevation-2); }
+.category-card:focus-visible { outline: var(--border-width-thin) solid var(--color-border-default); outline-offset: 0; }
+.category-card__media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.category-card .badge { position: absolute; top: var(--space-16); left: var(--space-16); }
+.category-card__name {
+  position: relative;
+  padding: var(--space-8) var(--space-16);
+  background-color: var(--color-surface-inverse);
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+@media (prefers-reduced-motion: reduce) { .category-card { transition: none; } }
 
 /* ══════════════════════════════════════════════════════════════════════════
    CONTEST CARD · no es enlace en bloque: tiene acción y bases legales
@@ -1188,7 +1224,9 @@
   .page-title { font-size: var(--font-size-mobile-h1); line-height: var(--font-line-height-mobile-h1); }
 }
 
-/* ── NAVBAR · cabecera fija que se oculta al bajar y reaparece al subir ───────────────── */
+/* ── NAVBAR · menú · logo centrado · CTA; fija, se oculta al bajar y reaparece al subir ─────── */
+/* Wireframe UX: la navegación vive en el menú a pantalla completa (también en desktop); la barra
+   solo lleva el botón de menú, el logo centrado y, en desktop, el CTA a la fórmula natural. */
 .navbar {
   position: sticky;
   top: 0;
@@ -1199,19 +1237,17 @@
   transition: transform var(--motion-duration-base) var(--motion-easing-standard);
 }
 .navbar--hidden { transform: translateY(-100%); }
-.navbar__inner { display: flex; align-items: center; gap: var(--space-24); max-width: var(--layout-content-max); margin-inline: auto; }
+.navbar__inner { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: var(--space-24); max-width: var(--layout-content-max); margin-inline: auto; }
+.navbar__start { display: flex; align-items: center; }
 .navbar .logo { height: var(--space-48); }
-.navbar__nav { display: flex; flex: 1; gap: var(--space-8); }
-.navbar__actions { display: flex; align-items: center; gap: var(--space-16); margin-left: auto; }
-.navbar__menu-button { display: none; }
+.navbar__actions { display: flex; justify-content: flex-end; align-items: center; gap: var(--space-16); }
 @media (max-width: 768px) {
   .navbar .logo { height: var(--space-40); }
-  .navbar__nav, .navbar__actions .lang-switch, .navbar__actions .button { display: none; }
-  .navbar__menu-button { display: inline-flex; }
+  .navbar__actions .lang-switch, .navbar__actions .button { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .navbar { transition: none; } }
 
-/* ── MOBILE MENU · menú a pantalla completa (dialog) ───────────────────────────────────── */
+/* ── MOBILE MENU · menú a pantalla completa en todos los breakpoints (dialog) ──────────────── */
 .mobile-menu {
   width: 100%;
   max-width: none;
@@ -1223,12 +1259,28 @@
   background-color: var(--color-surface-inverse);
   color: var(--nav-item-menu-text);
 }
-.mobile-menu__inner { display: flex; flex-direction: column; gap: var(--space-40); }
+.mobile-menu__inner { display: flex; flex-direction: column; gap: var(--space-40); max-width: var(--layout-content-max); margin-inline: auto; }
 .mobile-menu__top { display: flex; justify-content: space-between; align-items: center; }
 .mobile-menu .logo { height: var(--space-40); }
-.mobile-menu__nav { display: flex; flex-direction: column; gap: var(--space-16); }
+.mobile-menu__nav { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-16); }
 .mobile-menu__nav .nav-item[aria-current="page"] { color: var(--nav-item-menu-text-active); font-size: var(--font-size-mobile-h2); line-height: var(--font-line-height-mobile-h2); }
-.mobile-menu .button { width: 100%; padding-inline: var(--space-32); }
+.mobile-menu__social { display: flex; flex-direction: column; gap: var(--space-16); }
+.mobile-menu__social-label {
+  margin: 0;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-s);
+  line-height: var(--font-line-height-desktop-body-s);
+}
+.mobile-menu__social-list { display: flex; gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
+.mobile-menu__social-list .icon { color: var(--icon-color-inverse); }
+.mobile-menu__copyright {
+  margin: 0;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
 
 /* ── PRODUCT FILTER · tipo → línea → sabor ─────────────────────────────────────────────── */
 .product-filter { display: flex; flex-direction: column; gap: var(--space-24); padding: var(--space-24) var(--layout-margin); }
@@ -1246,7 +1298,7 @@
   .product-filter__options > * { flex: none; scroll-snap-align: start; }
 }
 
-/* ── FOOTER · pie en tinta: logos, navegación, contacto, redes y franja legal ─────────── */
+/* ── FOOTER · pie en tinta: logo, enlaces, caja de sugerencias y franja legal ────────────────── */
 .footer {
   display: flex;
   flex-direction: column;
@@ -1255,23 +1307,32 @@
   background-color: var(--color-surface-inverse);
   color: var(--color-text-on-inverse);
 }
-.footer__main { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-64); max-width: var(--layout-content-max); margin-inline: auto; width: 100%; }
+.footer__main { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-64); max-width: var(--layout-content-max); margin-inline: auto; width: 100%; }
 .footer__brand { display: flex; flex-direction: column; gap: var(--space-24); }
 .footer .logo { height: var(--space-48); }
-.footer .logo--gb-foods { height: var(--space-32); }
-.footer__title {
+.footer__column { display: flex; flex: 1; flex-direction: column; gap: var(--space-24); }
+.footer__links { display: flex; flex-direction: column; gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
+.footer__ticket {
+  display: flex;
+  flex: 0 1 calc(var(--layout-reading) / 2);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-24);
+  padding: var(--space-32) var(--space-24);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-page);
+  color: var(--color-text-default);
+}
+.footer__ticket-title {
   margin: 0;
-  color: var(--color-text-on-inverse);
   font-family: var(--font-family-display), sans-serif;
-  font-size: var(--font-size-desktop-label);
-  line-height: var(--font-line-height-desktop-label);
-  font-weight: var(--font-desktop-label-weight);
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
   text-transform: uppercase;
 }
-.footer__column { display: flex; flex-direction: column; gap: var(--space-24); }
-.footer__links { display: flex; flex-direction: column; gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
-.footer__social { display: flex; gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
-.footer__social .icon { color: var(--icon-color-inverse); }
+.footer__ticket-text { margin: 0; font-family: var(--font-family-body), sans-serif; font-size: var(--font-size-desktop-body-m); line-height: var(--font-line-height-desktop-body-m); }
+.footer__ticket-copy { display: flex; flex-direction: column; gap: var(--space-8); }
 .footer__legal {
   display: flex;
   flex-wrap: wrap;
@@ -1290,12 +1351,15 @@
 .footer__legal .link { font-size: inherit; line-height: inherit; }
 @media (max-width: 768px) {
   .footer__main { flex-direction: column; gap: var(--space-40); }
+  .footer__ticket { order: -1; flex-basis: auto; align-self: stretch; }
+  .footer__ticket-title { font-size: var(--font-size-mobile-h3); line-height: var(--font-line-height-mobile-h3); }
   .footer__legal { flex-direction: column; align-items: flex-start; gap: var(--space-16); }
 }
 
-/* ── HERO · slider de máximo 3 slides ──────────────────────────────────────────────────── */
-/* Como el hero de las landings: fondo crema, fideo de marca a sangre por la izquierda (detrás del
-   contenido, se dibuja de arriba abajo al cargar) y packshot sin marco. Columnas 1fr / 1.15fr. */
+/* ── HERO · claim fijo + slider de máximo 3 slides ─────────────────────────────────────────── */
+/* Wireframe UX: claim fijo (h1) y, debajo, el contenido de la slide (NEW · título · subtítulo · CTA)
+   con los controles bajo el botón. Estilo de las landings: fondo crema, fideo de marca a sangre por
+   la izquierda (detrás del contenido, se dibuja de arriba abajo al cargar) y packshot sin marco. */
 .hero { position: relative; overflow: hidden; background-color: var(--color-surface-page); }
 .hero .section__inner { position: relative; }
 .hero__noodle {
@@ -1317,6 +1381,17 @@
   font-weight: var(--font-desktop-display-weight);
   text-transform: uppercase;
 }
+.hero__slide-content { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-24); }
+.hero__slide-copy { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-8); }
+.hero__slide-title {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
 .hero__lead {
   margin: 0;
   color: var(--color-text-default);
@@ -1326,7 +1401,7 @@
 }
 .hero__media { margin: 0; border-radius: var(--radius-none); }
 .hero__media img { display: block; width: 100%; height: auto; }
-.hero__controls { display: flex; justify-content: space-between; align-items: center; }
+.hero__controls { display: flex; align-items: center; gap: var(--space-16); }
 .hero__dots { display: flex; gap: var(--space-8); }
 .hero__dot {
   width: var(--space-16);
@@ -1339,13 +1414,14 @@
 }
 .hero__dot[aria-current="true"] { background-color: var(--color-text-default); }
 .hero__dot:focus-visible { outline: var(--border-width-thin) solid var(--color-border-default); outline-offset: 0; }
-.hero__arrows { display: flex; gap: var(--space-16); }
 @media (prefers-reduced-motion: reduce) { .hero__noodle { animation: none; } }
 @media (max-width: 768px) {
   .hero__slide { grid-template-columns: 1fr; gap: var(--space-32); }
-  .hero__media { order: -1; }
   .hero__noodle { left: 50%; transform: translateX(-50%); }
   .hero__title { font-size: var(--font-size-mobile-display); line-height: var(--font-line-height-mobile-display); }
+  .hero__slide-content { align-self: stretch; }
+  .hero__slide-content > .button { align-self: stretch; }
+  .hero__slide-title { font-size: var(--font-size-mobile-h3); line-height: var(--font-line-height-mobile-h3); }
   .hero__lead { font-size: var(--font-size-mobile-body-l); line-height: var(--font-line-height-mobile-body-l); }
 }
 
@@ -1374,44 +1450,68 @@
 @media (prefers-reduced-motion: reduce) { .marquee__track { animation: none; } }
 @media (max-width: 768px) { .marquee { padding-block: var(--space-16); } .marquee__item { font-size: var(--font-size-mobile-h3); line-height: var(--font-line-height-mobile-h3); } }
 
-/* ── PROMO · concurso o promoción con vídeo (se oculta sin promoción) ─────────────────── */
+/* ── PROMO · concurso con arte de campaña y vídeo (se oculta sin promoción) ─────────────────── */
 .promo { background-color: var(--color-surface-page); }
-.promo__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: var(--space-64); }
+.promo__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); align-items: center; gap: var(--space-64); }
 .promo__content { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-24); }
+.promo__art { margin: 0; }
+.promo__art img { display: block; max-width: 100%; max-height: calc(var(--space-96) * 2); }
+.promo__media { min-width: 0; }
 .promo__body { margin: 0; color: var(--color-text-default); font-family: var(--font-family-body), sans-serif; font-size: var(--font-size-desktop-body-l); line-height: var(--font-line-height-desktop-body-l); }
 .promo__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-16) var(--space-24); }
-@media (max-width: 768px) { .promo__grid { grid-template-columns: 1fr; gap: var(--space-32); } }
+@media (max-width: 768px) {
+  .promo__grid { grid-template-columns: 1fr; gap: var(--space-32); }
+  .promo__media { order: -1; }
+  .promo__actions .button { width: 100%; }
+}
 
-/* ── NATURAL FORMULA · claims del envase sobre verde natural ───────────────────────────── */
+/* ── NATURAL FORMULA · título + ingredientes eliminados (tachados) sobre verde natural ──────── */
 .natural-formula { background-color: var(--color-surface-natural); color: var(--color-text-on-natural); }
-.natural-formula .section__title, .natural-formula .section__lead { color: var(--color-text-on-natural); }
-.natural-formula__claims { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-32) var(--layout-gutter); margin: 0; padding: 0; list-style: none; }
-.natural-formula__claim { display: flex; flex-direction: column; gap: var(--space-8); }
-.natural-formula__value {
+.natural-formula__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: var(--space-64); }
+.natural-formula__title {
+  margin: 0;
+  color: var(--color-text-on-natural);
   font-family: var(--font-family-display), sans-serif;
   font-size: var(--font-size-desktop-display);
   line-height: var(--font-line-height-desktop-display);
+  font-weight: var(--font-desktop-display-weight);
+  text-transform: uppercase;
 }
-.natural-formula__label { font-family: var(--font-family-body), sans-serif; font-size: var(--font-size-desktop-body-l); line-height: var(--font-line-height-desktop-body-l); }
+.natural-formula__list { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-32); }
+.natural-formula__removed { display: flex; flex-direction: column; gap: var(--space-24); margin: 0; padding: 0; list-style: none; }
+.natural-formula__item { display: flex; flex-direction: column; gap: var(--space-4); }
+.natural-formula__ingredient { font-family: var(--font-family-body), sans-serif; font-size: var(--font-size-desktop-caption); line-height: var(--font-line-height-desktop-caption); text-decoration: line-through; }
+.natural-formula__statement {
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
 @media (max-width: 768px) {
-  .natural-formula__claims { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .natural-formula__value { font-size: var(--font-size-mobile-display); line-height: var(--font-line-height-mobile-display); }
+  .natural-formula__grid { grid-template-columns: 1fr; gap: var(--space-32); }
+  .natural-formula__title { font-size: var(--font-size-mobile-display); line-height: var(--font-line-height-mobile-display); }
+  .natural-formula__statement { font-size: var(--font-size-mobile-h3); line-height: var(--font-line-height-mobile-h3); }
+  .natural-formula__list .button { align-self: stretch; }
 }
 
-/* ── CARRUSELES Y REJILLAS · Product carousel, Recipes, Library ────────────────────────── */
+/* ── CARRUSELES Y REJILLAS · Product categories, Recipes, Library ──────────────────────────── */
 .section__bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: var(--space-16); }
-.section__arrows { display: flex; gap: var(--space-16); }
 .carousel { display: flex; gap: var(--layout-gutter); margin: 0; padding: 0; overflow-x: auto; list-style: none; scroll-snap-type: x mandatory; }
 .carousel > li { flex: none; width: calc((100% - 3 * var(--layout-gutter)) / 4); scroll-snap-align: start; }
 .carousel--3 > li { width: calc((100% - 2 * var(--layout-gutter)) / 3); }
-.product-carousel { background-color: var(--color-surface-page); }
-.product-carousel .section__inner, .recipes .section__inner, .where-to-buy .section__inner { gap: var(--space-32); }
-.product-carousel__tabs { display: flex; gap: var(--space-8); }
+.product-categories { background-color: var(--color-surface-page); }
+.product-categories .section__inner, .recipes .section__inner { gap: var(--space-32); }
+.product-categories__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--layout-gutter); margin: 0; padding: 0; list-style: none; }
 .recipes { background-color: var(--color-surface-card); }
-.recipes .section__bar { justify-content: flex-start; }
+.recipes .section__inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; }
+.recipes .carousel { grid-column: 1 / -1; }
+.recipes__cta { align-self: end; }
 @media (max-width: 768px) {
   .carousel > li, .carousel--3 > li { width: 85%; }
-  .section__bar .icon-button, .section__arrows { display: none; }
+  .product-categories__grid { grid-template-columns: 1fr; gap: var(--space-16); }
+  .recipes .section__inner { grid-template-columns: 1fr; }
+  .recipes__cta { order: 1; }
 }
 
 .library { padding: var(--layout-section-y) 0; background-color: var(--color-surface-page); }
@@ -1421,48 +1521,66 @@
 @media (max-width: 1024px) { .library__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 768px) { .library__grid { grid-template-columns: 1fr; } }
 
-/* ── BANNER · bloque de acento con titular, CTA e imagen ───────────────────────────────── */
+/* ── BANNER · pieza gráfica de campaña a todo el ancho (el banner entero es el enlace) ──────── */
 .banner { background-color: var(--color-surface-page); }
 .banner__box {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: center;
-  gap: var(--space-48);
-  padding: var(--space-48);
+  display: block;
+  overflow: hidden;
   border: var(--border-width-thin) solid var(--color-border-default);
   border-radius: var(--radius-lg);
-  background-color: var(--color-surface-accent);
+  background-color: var(--color-surface-page);
   box-shadow: var(--elevation-2);
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
 }
-.banner__content { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-24); }
-.banner__title { margin: 0; color: var(--color-text-default); font-family: var(--font-family-display), sans-serif; font-size: var(--font-size-desktop-h1); line-height: var(--font-line-height-desktop-h1); text-transform: uppercase; }
-.banner__body { margin: 0; color: var(--color-text-default); font-family: var(--font-family-body), sans-serif; font-size: var(--font-size-desktop-body-l); line-height: var(--font-line-height-desktop-body-l); }
-.banner__media { aspect-ratio: 4 / 3; }
-@media (max-width: 768px) {
-  .banner__box { grid-template-columns: 1fr; gap: var(--space-24); padding: var(--space-24); }
-  .banner__title { font-size: var(--font-size-mobile-h1); line-height: var(--font-line-height-mobile-h1); }
-}
+.banner__box img { display: block; width: 100%; height: auto; border-radius: var(--radius-none); }
+.banner__box:focus-visible { outline: var(--border-width-thin) solid var(--color-border-default); outline-offset: 0; }
 
-/* ── FAQ · cabecera + lista de Accordion item ──────────────────────────────────────────── */
+/* ── FAQ · cabecera + lista de Accordion item + «Still curious?» ──────────────────────────── */
 .faq { background-color: var(--color-surface-page); }
-.faq__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--space-64); }
-.faq__list { display: flex; flex-direction: column; gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
+.faq__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); grid-template-rows: auto 1fr; gap: var(--space-32) var(--space-64); }
+.faq__list { grid-column: 2; grid-row: 1 / span 2; display: flex; flex-direction: column; gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
 .faq__list .accordion-item__panel { color: var(--accordion-answer); }
-@media (max-width: 768px) { .faq__grid { grid-template-columns: 1fr; gap: var(--space-32); } }
+.faq__more {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-self: end;
+  gap: var(--space-8);
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+@media (max-width: 768px) {
+  .faq__grid { grid-template-columns: 1fr; grid-template-rows: none; gap: var(--space-32); }
+  .faq__list { grid-column: auto; grid-row: auto; }
+}
 
-/* ── WHERE TO BUY · distribuidores del país (enlaces externos) ─────────────────────────── */
-.where-to-buy { background-color: var(--color-surface-brand); text-align: center; }
-.where-to-buy .section__lead { color: var(--color-text-default); }
-.where-to-buy__list { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--layout-gutter); margin: 0; padding: 0; list-style: none; }
-.where-to-buy__list > li { width: calc((100% - 4 * var(--layout-gutter)) / 5); }
+/* ── WHERE TO BUY · antetítulo + título y logos de distribuidores del país ────────────────── */
+.where-to-buy { background-color: var(--color-surface-brand); }
+.where-to-buy__grid { display: flex; justify-content: space-between; align-items: center; gap: var(--space-64); }
+.where-to-buy__text { display: flex; flex-direction: column; gap: var(--space-4); }
+.where-to-buy__kicker { color: var(--color-text-default); font-family: var(--font-family-body), sans-serif; font-size: var(--font-size-desktop-caption); line-height: var(--font-line-height-desktop-caption); }
+.where-to-buy__title {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.where-to-buy__list { display: flex; gap: var(--layout-gutter); margin: 0; padding: 0; list-style: none; }
+.where-to-buy__list > li { flex: none; width: calc(var(--space-96) * 2); }
 .where-to-buy__retailer {
   display: grid;
   place-items: center;
   min-height: var(--space-96);
-  padding: var(--space-24);
-  border: var(--border-width-thin) solid var(--color-border-default);
   border-radius: var(--radius-md);
-  background-color: var(--color-surface-card);
   color: var(--color-text-secondary);
   font-family: var(--font-family-body), sans-serif;
   font-size: var(--font-size-desktop-caption);
@@ -1470,7 +1588,12 @@
 }
 .where-to-buy__retailer img { max-width: 100%; max-height: var(--space-48); }
 .where-to-buy__retailer:focus-visible { outline: var(--border-width-thin) solid var(--color-border-default); outline-offset: 0; }
-@media (max-width: 768px) { .where-to-buy__list > li { width: calc((100% - var(--layout-gutter)) / 2); } }
+@media (max-width: 768px) {
+  .where-to-buy__grid { flex-direction: column; align-items: stretch; gap: var(--space-24); }
+  .where-to-buy__title { font-size: var(--font-size-mobile-h3); line-height: var(--font-line-height-mobile-h3); }
+  .where-to-buy__list { overflow-x: auto; scroll-snap-type: x proximity; }
+  .where-to-buy__list > li { scroll-snap-align: start; }
+}
 
 /* ── PRODUCT HERO · galería + información del producto ────────────────────────────────── */
 .product-hero { background-color: var(--color-surface-page); }

@@ -2220,6 +2220,10 @@
               "paddingTop: space/16",
               "paddingRight: space/16",
               "paddingBottom: space/16",
+              "topLeftRadius: radius/none",
+              "topRightRadius: radius/none",
+              "bottomLeftRadius: radius/none",
+              "bottomRightRadius: radius/none",
               "fills: product-card/media-bg",
               "color: product-card/media-bg",
               "paddingLeft: space/8",
@@ -2260,11 +2264,7 @@
               "color: link/default",
               "width: icon/size/sm",
               "height: icon/size/sm",
-              "strokes: link/default",
-              "topLeftRadius: radius/none",
-              "topRightRadius: radius/none",
-              "bottomLeftRadius: radius/none",
-              "bottomRightRadius: radius/none"
+              "strokes: link/default"
             ],
             "textStyles": [
               "Mobile/label",
@@ -2281,7 +2281,7 @@
           "type": "COMPONENT_SET",
           "id": "67:133",
           "key": "ab4aa74b8fa80116dab895add61a6a81ffa67d8a",
-          "description": "Card de receta (Recipe library, Home, página de producto). Anatomía: media (imagen de marca; sin vídeo al principio) · título (h3) · tiempo (icono timer + texto, recipe-card/meta) · productos usados como Chip S (enlazan a la ficha de producto) · Link «Ver receta». La card enlaza a la receta; los Chip son enlaces propios y quedan fuera del área clicable principal. Hover: elevation/2; Focus: anillo recipe-card/focus-ring. Desktop 384 px; en móvil FILL.",
+          "description": "Card de receta (Recipe library, Home, página de producto). Anatomía (wireframe UX): media vertical 288:415 (imagen de marca; sin vídeo al principio) · tiempo (icono timer + texto, recipe-card/meta) · título (h3) · productos usados como Chip S (enlazan a la ficha de producto). Sin enlace «Ver receta»: el título es el enlace y su área se estira a toda la card; los Chip son enlaces propios y quedan por encima. Comensales: sin definir (falta información). Hover: elevation/2; Focus: anillo recipe-card/focus-ring. Desktop 384 px; en móvil FILL.",
           "variantAxes": {
             "State": [
               "Default",
@@ -2359,22 +2359,6 @@
               "exposedAs": "Icon leading swap#35:27",
               "toggledBy": "Icon leading#35:22",
               "visibleByDefault": false
-            },
-            {
-              "layer": "link",
-              "component": "Type=Standalone, Surface=Light, State=Default",
-              "componentSet": "Link",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon#35:0",
-              "toggledBy": null,
-              "visibleByDefault": true
             }
           ],
           "bindings": {
@@ -2396,6 +2380,10 @@
               "paddingTop: space/16",
               "paddingRight: space/16",
               "paddingBottom: space/16",
+              "topLeftRadius: radius/none",
+              "topRightRadius: radius/none",
+              "bottomLeftRadius: radius/none",
+              "bottomRightRadius: radius/none",
               "fills: recipe-card/media-bg",
               "color: recipe-card/media-bg",
               "fills: recipe-card/meta",
@@ -2409,18 +2397,18 @@
               "paddingTop: space/24",
               "paddingRight: space/24",
               "paddingBottom: space/24",
-              "fills: recipe-card/title",
-              "fontSize: font/size/desktop/h3",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
-              "lineHeight: font/line-height/desktop/h3",
-              "color: recipe-card/title",
               "itemSpacing: space/8",
               "width: icon/size/sm",
               "height: icon/size/sm",
               "strokes: recipe-card/meta",
               "fontSize: font/size/desktop/body-s",
               "lineHeight: font/line-height/desktop/body-s",
+              "fills: recipe-card/title",
+              "fontSize: font/size/desktop/h3",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: recipe-card/title",
               "counterAxisSpacing: space/8",
               "paddingTop: space/8",
               "paddingBottom: space/8",
@@ -2435,22 +2423,12 @@
               "color: chip/border",
               "strokes: chip/text",
               "color: chip/text",
-              "fills: chip/text",
-              "fills: link/default",
-              "fontSize: font/size/desktop/label",
-              "lineHeight: font/line-height/desktop/label",
-              "color: link/default",
-              "strokes: link/default",
-              "topLeftRadius: radius/none",
-              "topRightRadius: radius/none",
-              "bottomLeftRadius: radius/none",
-              "bottomRightRadius: radius/none"
+              "fills: chip/text"
             ],
             "textStyles": [
               "Desktop/caption",
-              "Desktop/h3",
               "Desktop/body-s",
-              "Desktop/label"
+              "Desktop/h3"
             ]
           },
           "autoLayout": true
@@ -2559,6 +2537,10 @@
               "paddingTop: space/16",
               "paddingRight: space/16",
               "paddingBottom: space/16",
+              "topLeftRadius: radius/none",
+              "topRightRadius: radius/none",
+              "bottomLeftRadius: radius/none",
+              "bottomRightRadius: radius/none",
               "fills: contest-card/media-bg",
               "color: contest-card/media-bg",
               "paddingLeft: space/8",
@@ -2616,11 +2598,7 @@
               "fontSize: font/size/desktop/body-m",
               "lineHeight: font/line-height/desktop/body-m",
               "color: link/default",
-              "strokes: link/default",
-              "topLeftRadius: radius/none",
-              "topRightRadius: radius/none",
-              "bottomLeftRadius: radius/none",
-              "bottomRightRadius: radius/none"
+              "strokes: link/default"
             ],
             "textStyles": [
               "Mobile/label",
@@ -2632,10 +2610,108 @@
             ]
           },
           "autoLayout": true
+        },
+        {
+          "page": "Cards",
+          "name": "Category card",
+          "type": "COMPONENT_SET",
+          "id": "147:1353",
+          "key": "bf00e7dd5888d2bce0451a38f38a9607a8ad8b8a",
+          "description": "Card de categoría de producto (Home · «Our products»: Cups, Bags, Sauces). Anatomía (wireframe UX): imagen de la categoría a sangre (fondo) · Badge New opcional arriba a la izquierda · nombre de la categoría en display h3 sobre placa color/surface/inverse abajo a la izquierda (texto color/text/on-inverse, 17:1). Toda la card es un enlace a la Product library filtrada por ese tipo. Hover: elevation/2; Focus: borde grueso. Desktop 392 px cuadrada; en móvil FILL (343). Sin variables propias.",
+          "variantAxes": {
+            "State": [
+              "Default",
+              "Hover",
+              "Focus"
+            ]
+          },
+          "variantCount": 3,
+          "properties": [
+            {
+              "name": "Name#147:0",
+              "kind": "TEXT",
+              "default": "Cups"
+            },
+            {
+              "name": "Badge#147:4",
+              "kind": "BOOLEAN",
+              "default": false
+            },
+            {
+              "name": "State",
+              "kind": "VARIANT",
+              "default": "Default",
+              "values": [
+                "Default",
+                "Hover",
+                "Focus"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "badge",
+              "component": "Type=New",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": "Badge#147:4",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: color/surface/card",
+              "strokes: color/border/default",
+              "effects: color/effect/shadow-ink",
+              "color: color/surface/card",
+              "color: color/border/default",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: badge/new/bg",
+              "color: badge/new/bg",
+              "fills: badge/new/text",
+              "fontSize: font/size/mobile/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/new/text",
+              "paddingTop: space/8",
+              "paddingBottom: space/8",
+              "fills: color/surface/inverse",
+              "color: color/surface/inverse",
+              "fills: color/text/on-inverse",
+              "fontSize: font/size/desktop/h3",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: color/text/on-inverse"
+            ],
+            "textStyles": [
+              "Mobile/label",
+              "Desktop/h3"
+            ]
+          },
+          "autoLayout": true
         }
       ],
-      "total": 3,
-      "read": 3
+      "total": 4,
+      "read": 4
     },
     {
       "name": "Content",
@@ -3893,7 +3969,7 @@
           "type": "COMPONENT_SET",
           "id": "55:116",
           "key": "5c42eb9d9261bf9933740f4f293126121318d0bc",
-          "description": "Patrón de cabecera. Desktop: logo · 5 Nav item (Bar) · Lang switch (solo marcas multiidioma) · buscar · CTA «Dónde comprar». Mobile: logo · buscar · menú (abre Mobile menu). Comportamiento: sticky (layer/sticky); se oculta al hacer scroll hacia abajo y reaparece al subir; respeta prefers-reduced-motion. Ancho ligado a layout/frame con modo fijado por variante. Sin variables propias: compone componentes y semánticos.",
+          "description": "Patrón de cabecera (wireframe UX). Desktop: botón menú (Icon button Secondary, abre el Menu a pantalla completa) a la izquierda · logo de marca centrado (enlace a la Home) · CTA Button Primary «New 100% Natural Formula» a la derecha (lleva a la Natural formula page) · Lang switch oculto salvo en marcas multiidioma. Mobile: botón menú · logo centrado. Sin enlaces de navegación ni buscador en la barra: la navegación vive en el Menu. Comportamiento: sticky (layer/sticky); se oculta al hacer scroll hacia abajo y reaparece al subir; respeta prefers-reduced-motion. Accesibilidad: &lt;header&gt; con &lt;nav&gt;; el botón menú lleva aria-expanded y aria-controls. Fondo color/surface/page con borde inferior color/border/default. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -3926,50 +4002,26 @@
           ],
           "nestedInstances": [
             {
+              "layer": "menu",
+              "component": "Hierarchy=Secondary, Size=M, State=Default",
+              "componentSet": "Icon button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / menu",
+              "componentSet": null,
+              "exposedAs": "Icon#33:125",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
               "layer": "logo",
               "component": "Version=Positive",
               "componentSet": "Logo / Yatekomo",
               "exposedAs": "Logo#55:0",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "nav-item",
-              "component": "Type=Bar, State=Active",
-              "componentSet": "Nav item",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "nav-item",
-              "component": "Type=Bar, State=Default",
-              "componentSet": "Nav item",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "nav-item",
-              "component": "Type=Bar, State=Default",
-              "componentSet": "Nav item",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "nav-item",
-              "component": "Type=Bar, State=Default",
-              "componentSet": "Nav item",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "nav-item",
-              "component": "Type=Bar, State=Default",
-              "componentSet": "Nav item",
-              "exposedAs": null,
               "toggledBy": null,
               "visibleByDefault": true
             },
@@ -3980,22 +4032,6 @@
               "exposedAs": null,
               "toggledBy": "Lang switch#55:3",
               "visibleByDefault": false
-            },
-            {
-              "layer": "search",
-              "component": "Hierarchy=Secondary, Size=M, State=Default",
-              "componentSet": "Icon button",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon",
-              "component": "Icon / search",
-              "componentSet": null,
-              "exposedAs": "Icon#33:125",
-              "toggledBy": null,
-              "visibleByDefault": true
             },
             {
               "layer": "cta",
@@ -4035,51 +4071,12 @@
               "strokes: color/border/default",
               "color: color/surface/page",
               "color: color/border/default",
-              "itemSpacing: space/8",
-              "itemSpacing: space/4",
-              "paddingLeft: space/16",
-              "paddingTop: space/8",
-              "paddingRight: space/16",
-              "paddingBottom: space/8",
-              "topLeftRadius: radius/sm",
-              "topRightRadius: radius/sm",
-              "bottomLeftRadius: radius/sm",
-              "bottomRightRadius: radius/sm",
-              "fills: nav-item/text-active",
-              "fontSize: font/size/desktop/label",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
-              "lineHeight: font/line-height/desktop/label",
-              "color: nav-item/text-active",
-              "height: border/width/thick",
-              "fills: nav-item/indicator",
-              "color: nav-item/indicator",
-              "fills: nav-item/text",
-              "color: nav-item/text",
-              "itemSpacing: space/16",
-              "paddingLeft: space/4",
-              "paddingTop: space/4",
-              "paddingRight: space/4",
-              "paddingBottom: space/4",
+              "width: icon-button/size/m",
+              "height: icon-button/size/m",
               "topLeftRadius: radius/pill",
               "topRightRadius: radius/pill",
               "bottomLeftRadius: radius/pill",
               "bottomRightRadius: radius/pill",
-              "strokeTopWeight: border/width/thin",
-              "strokeLeftWeight: border/width/thin",
-              "strokeRightWeight: border/width/thin",
-              "fills: lang-switch/bg",
-              "strokes: lang-switch/border",
-              "color: lang-switch/bg",
-              "color: lang-switch/border",
-              "fills: lang-switch/bg-selected",
-              "color: lang-switch/bg-selected",
-              "fills: lang-switch/text-selected",
-              "color: lang-switch/text-selected",
-              "fills: lang-switch/text",
-              "color: lang-switch/text",
-              "width: icon-button/size/m",
-              "height: icon-button/size/m",
               "strokeTopWeight: border/width/thick",
               "strokeBottomWeight: border/width/thick",
               "strokeLeftWeight: border/width/thick",
@@ -4090,6 +4087,36 @@
               "height: icon/size/md",
               "strokes: button/secondary/text",
               "color: button/secondary/text",
+              "strokes: icon/color/default",
+              "color: icon/color/default",
+              "itemSpacing: space/16",
+              "itemSpacing: space/4",
+              "paddingLeft: space/4",
+              "paddingTop: space/4",
+              "paddingRight: space/4",
+              "paddingBottom: space/4",
+              "strokeTopWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: lang-switch/bg",
+              "strokes: lang-switch/border",
+              "color: lang-switch/bg",
+              "color: lang-switch/border",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "fills: lang-switch/bg-selected",
+              "color: lang-switch/bg-selected",
+              "fills: lang-switch/text-selected",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "color: lang-switch/text-selected",
+              "fills: lang-switch/text",
+              "color: lang-switch/text",
+              "itemSpacing: space/8",
               "paddingLeft: space/24",
               "paddingRight: space/24",
               "fills: button/primary/bg",
@@ -4114,7 +4141,7 @@
           "type": "COMPONENT",
           "id": "55:119",
           "key": "0e73e5d01e03cfdd191b1f97e3a8c6ec4e210664",
-          "description": "Patrón: menú móvil a pantalla completa (se abre desde el botón menú de la Navbar). Logo negativo · cerrar · 5 Nav item (Menu) · Lang switch (solo marcas multiidioma) · CTA. Accesibilidad: role=&quot;dialog&quot; con aria-modal, foco atrapado dentro, Esc cierra y el foco vuelve al botón menú; layer/modal. Sin variables propias.",
+          "description": "Patrón: menú a pantalla completa en todos los breakpoints (wireframe UX: se abre desde el botón menú de la Navbar, también en desktop). Logo negativo · cerrar · 5 Nav item (Menu): Products, Natural formula, Recipes, Contests, FAQS · Lang switch (solo marcas multiidioma) · «Our social media:» con los iconos de redes de la marca (enlaces externos) · © GBFoods. Accesibilidad: &lt;dialog&gt; modal, foco atrapado dentro, Esc cierra y el foco vuelve al botón menú; layer/modal. Fondo color/surface/inverse. Sin variables propias.",
           "variantAxes": {},
           "variantCount": 1,
           "properties": [
@@ -4205,28 +4232,36 @@
               "visibleByDefault": false
             },
             {
-              "layer": "cta",
-              "component": "Hierarchy=Inverse, Size=L, State=Default",
-              "componentSet": "Button",
+              "layer": "social",
+              "component": "Icon / tiktok",
+              "componentSet": null,
               "exposedAs": null,
               "toggledBy": null,
               "visibleByDefault": true
             },
             {
-              "layer": "icon-leading",
-              "component": "Icon / arrow-right",
+              "layer": "social",
+              "component": "Icon / instagram",
               "componentSet": null,
-              "exposedAs": "Icon leading swap#33:75",
-              "toggledBy": "Icon leading#33:25",
-              "visibleByDefault": false
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
             },
             {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
+              "layer": "social",
+              "component": "Icon / x",
               "componentSet": null,
-              "exposedAs": "Icon trailing swap#33:100",
-              "toggledBy": "Icon trailing#33:50",
-              "visibleByDefault": false
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "social",
+              "component": "Icon / youtube",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
             }
           ],
           "bindings": {
@@ -4298,18 +4333,22 @@
               "color: lang-switch/text-selected",
               "fills: lang-switch/text",
               "color: lang-switch/text",
-              "itemSpacing: space/8",
-              "paddingLeft: space/32",
-              "paddingTop: space/24",
-              "paddingRight: space/32",
-              "paddingBottom: space/24",
-              "width: icon/size/sm",
-              "height: icon/size/sm",
-              "fills: button/inverse/text"
+              "fills: color/text/on-inverse",
+              "fontSize: font/size/desktop/body-s",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-s",
+              "color: color/text/on-inverse",
+              "fills: icon/color/inverse",
+              "color: icon/color/inverse",
+              "fontSize: font/size/desktop/caption",
+              "lineHeight: font/line-height/desktop/caption"
             ],
             "textStyles": [
               "Mobile/h2",
-              "Desktop/label"
+              "Desktop/label",
+              "Desktop/body-s",
+              "Desktop/caption"
             ]
           },
           "autoLayout": true
@@ -4320,7 +4359,7 @@
           "type": "COMPONENT_SET",
           "id": "56:167",
           "key": "ec0129ea04aee71e644071a1697618d4350e07b4",
-          "description": "Patrón de pie, en tinta: logo de marca (negativo) y GB Foods · navegación · contacto (formulario externo de GB Foods, icono external-link) · redes · franja legal por país (Privacy, Legal notice, Cookies, Lawful basis, Contest rules) y ©. Los textos legales cambian por país. Sin variables propias: compone Link, Icon y Logo con semánticos.",
+          "description": "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de sugerencias («Do you have any ideas, complaints or cravings?» + texto + Button Primary «Send suggestions» con external-link: abre el formulario externo de Calidad) · franja legal por país (Legal notice, Privacy policy, Cookies policy, Legal basis, Contact) y © GBFoods. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Menu. Desktop: logo y enlaces a la izquierda, caja de sugerencias a la derecha; Mobile: la caja arriba. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -4334,34 +4373,6 @@
               "kind": "INSTANCE_SWAP",
               "default": "21:168",
               "defaultComponent": "Version=Negative",
-              "preferredValues": []
-            },
-            {
-              "name": "Social 1#57:0",
-              "kind": "INSTANCE_SWAP",
-              "default": "21:62",
-              "defaultComponent": "Icon / tiktok",
-              "preferredValues": []
-            },
-            {
-              "name": "Social 2#57:3",
-              "kind": "INSTANCE_SWAP",
-              "default": "21:65",
-              "defaultComponent": "Icon / instagram",
-              "preferredValues": []
-            },
-            {
-              "name": "Social 3#57:6",
-              "kind": "INSTANCE_SWAP",
-              "default": "21:68",
-              "defaultComponent": "Icon / x",
-              "preferredValues": []
-            },
-            {
-              "name": "Social 4#57:9",
-              "kind": "INSTANCE_SWAP",
-              "default": "21:71",
-              "defaultComponent": "Icon / youtube",
               "preferredValues": []
             },
             {
@@ -4384,14 +4395,6 @@
               "visibleByDefault": true
             },
             {
-              "layer": "logo-gb-foods",
-              "component": "Logo / GB Foods",
-              "componentSet": null,
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
               "layer": "nav-link",
               "component": "Type=Inline, Surface=Dark, State=Default",
               "componentSet": "Link",
@@ -4472,51 +4475,59 @@
               "visibleByDefault": false
             },
             {
-              "layer": "contact-link",
-              "component": "Type=Standalone, Surface=Dark, State=Default",
+              "layer": "nav-link",
+              "component": "Type=Inline, Surface=Dark, State=Default",
               "componentSet": "Link",
               "exposedAs": null,
               "toggledBy": null,
               "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            },
+            {
+              "layer": "nav-link",
+              "component": "Type=Inline, Surface=Dark, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": false
+            },
+            {
+              "layer": "cta",
+              "component": "Hierarchy=Primary, Size=M, State=Default",
+              "componentSet": "Button",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
             },
             {
               "layer": "icon-trailing",
               "component": "Icon / external-link",
               "componentSet": null,
-              "exposedAs": "Icon#35:0",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "social",
-              "component": "Icon / tiktok",
-              "componentSet": null,
-              "exposedAs": "Social 1#57:0",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "social",
-              "component": "Icon / instagram",
-              "componentSet": null,
-              "exposedAs": "Social 2#57:3",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "social",
-              "component": "Icon / x",
-              "componentSet": null,
-              "exposedAs": "Social 3#57:6",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "social",
-              "component": "Icon / youtube",
-              "componentSet": null,
-              "exposedAs": "Social 4#57:9",
-              "toggledBy": null,
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
               "visibleByDefault": true
             },
             {
@@ -4623,16 +4634,42 @@
               "width: icon/size/sm",
               "height: icon/size/sm",
               "strokes: link/inverse",
-              "fontSize: font/size/desktop/label",
+              "paddingLeft: space/24",
+              "paddingTop: space/32",
+              "paddingRight: space/24",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "fills: color/surface/page",
+              "color: color/surface/page",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h3",
               "fontStyle: font/style/display",
               "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: color/text/default",
+              "paddingTop: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text",
+              "fontSize: font/size/desktop/label",
               "lineHeight: font/line-height/desktop/label",
               "strokes: icon/color/default",
               "color: icon/color/default",
-              "width: icon/size/md",
-              "height: icon/size/md",
-              "fills: icon/color/inverse",
-              "color: icon/color/inverse",
               "paddingTop: space/24",
               "strokeTopWeight: border/width/thin",
               "counterAxisSpacing: space/8",
@@ -4645,6 +4682,7 @@
             ],
             "textStyles": [
               "Desktop/body-m",
+              "Desktop/h3",
               "Desktop/label",
               "Desktop/caption"
             ]
@@ -4666,7 +4704,7 @@
           "type": "COMPONENT_SET",
           "id": "88:132",
           "key": "fcee0ddc73afc1a3fb701081c9a6645a910b1611",
-          "description": "Patrón hero de la Home. Slider de máximo 3 slides (regla de negocio): cada slide = imagen de producto o campaña (de marca, sin IA) · sello Badge Natural «The only 100% natural» · claim «Welcome to the new noodles era» (display) · texto · CTA a la acción principal (campaña activa o, sin campaña, producto). Controles: puntos (el activo relleno; el estado no depende solo del color: forma rellena vs contorno) y flechas Icon button. Accesibilidad: carrusel con aria-roledescription=&amp;quot;carrusel&amp;quot;, cada slide «1 de 3», sin autoplay (o con pausa visible y parado con prefers-reduced-motion); flechas con nombre «Slide anterior/siguiente». Fondo color/surface/page (crema), como el hero de las landings. Fideo de marca (Decoration / Noodle, Shape=1, Tone=Brand) a sangre por el lateral izquierdo (centrado en Mobile), detrás del contenido; en código se dibuja de arriba abajo al cargar (draw-in) y queda quieto, sin animación con prefers-reduced-motion. Imagen de producto sin marco (sin fondo, borde ni radio), packshot recortado sobre el fondo. Desktop: texto a la izquierda e imagen a la derecha; Mobile: imagen arriba. Sin variables propias.",
+          "description": "Patrón hero de la Home (wireframe UX). Claim fijo «Welcome to the new era» (h1, display) fuera del slider · slider de máximo 3 slides (regla de negocio; el wireframe dibuja 5 puntos: pendiente de confirmar): cada slide = Badge New · título (h2, estilo h3) · subtítulo · Button Primary L a la acción de la slide · controles anterior / puntos / siguiente bajo el botón. Imagen de producto o campaña de marca, sin IA, sin marco (packshot recortado sobre el fondo). Fondo color/surface/page (crema), como el hero de las landings; fideo de marca (Decoration / Noodle, Shape=1, Tone=Brand) a sangre por la izquierda (centrado en Mobile), detrás del contenido, que en código se dibuja de arriba abajo al cargar y queda quieto (sin animación con prefers-reduced-motion). Accesibilidad: carrusel con aria-roledescription=«carrusel», cada slide «1 de 3», sin autoplay; flechas con nombre «Slide anterior/siguiente»; el punto activo va relleno (forma, no solo color). Desktop: texto a la izquierda e imagen a la derecha; Mobile: texto arriba e imagen debajo. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -4695,8 +4733,8 @@
               "visibleByDefault": true
             },
             {
-              "layer": "seal",
-              "component": "Type=Natural",
+              "layer": "badge",
+              "component": "Type=New",
               "componentSet": "Badge",
               "exposedAs": null,
               "toggledBy": null,
@@ -4773,6 +4811,13 @@
               "color: decoration/noodle/brand",
               "itemSpacing: space/64",
               "itemSpacing: space/24",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/display",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/display",
+              "color: color/text/default",
+              "itemSpacing: space/8",
               "paddingLeft: space/8",
               "paddingTop: space/4",
               "paddingRight: space/8",
@@ -4781,23 +4826,18 @@
               "topRightRadius: radius/pill",
               "bottomLeftRadius: radius/pill",
               "bottomRightRadius: radius/pill",
-              "fills: badge/natural/bg",
-              "color: badge/natural/bg",
-              "fills: badge/natural/text",
+              "fills: badge/new/bg",
+              "color: badge/new/bg",
+              "fills: badge/new/text",
               "fontSize: font/size/mobile/label",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
               "lineHeight: font/line-height/mobile/label",
-              "color: badge/natural/text",
-              "fills: color/text/default",
-              "fontSize: font/size/desktop/display",
-              "lineHeight: font/line-height/desktop/display",
-              "color: color/text/default",
+              "color: badge/new/text",
+              "fontSize: font/size/desktop/h3",
+              "lineHeight: font/line-height/desktop/h3",
               "fontSize: font/size/desktop/body-l",
               "fontStyle: font/style/body",
               "fontFamily: font/family/body",
               "lineHeight: font/line-height/desktop/body-l",
-              "itemSpacing: space/8",
               "paddingLeft: space/32",
               "paddingTop: space/24",
               "paddingRight: space/32",
@@ -4817,15 +4857,6 @@
               "fills: button/primary/text",
               "fontSize: font/size/desktop/label",
               "lineHeight: font/line-height/desktop/label",
-              "topLeftRadius: radius/none",
-              "topRightRadius: radius/none",
-              "bottomLeftRadius: radius/none",
-              "bottomRightRadius: radius/none",
-              "width: space/16",
-              "height: space/16",
-              "strokeWeight: border/width/thin",
-              "strokes: color/border/default",
-              "color: color/border/default",
               "itemSpacing: space/16",
               "width: icon-button/size/m",
               "height: icon-button/size/m",
@@ -4834,11 +4865,21 @@
               "width: icon/size/md",
               "height: icon/size/md",
               "strokes: button/secondary/text",
-              "color: button/secondary/text"
+              "color: button/secondary/text",
+              "width: space/16",
+              "height: space/16",
+              "strokeWeight: border/width/thin",
+              "strokes: color/border/default",
+              "color: color/border/default",
+              "topLeftRadius: radius/none",
+              "topRightRadius: radius/none",
+              "bottomLeftRadius: radius/none",
+              "bottomRightRadius: radius/none"
             ],
             "textStyles": [
-              "Mobile/label",
               "Desktop/display",
+              "Mobile/label",
+              "Desktop/h3",
               "Desktop/body-l",
               "Desktop/label"
             ]
@@ -4900,7 +4941,7 @@
           "type": "COMPONENT_SET",
           "id": "91:113",
           "key": "c30835356fb592621ba20388988656c950b59fe7",
-          "description": "Módulo de promoción o concurso de la Home: Video player 16:9 (fachada) · Badge «Concurso» · título (h2) · texto · Button Primary «Participar» · Link de bases legales (obligatorio). Fondo color/surface/page (crema) para que el póster oscuro del vídeo se distinga; texto color/text/default. Se oculta entero si no hay promoción activa (regla de negocio); si el concurso es iframe de agencia, el CTA lleva external-link y el iframe necesita revisión de protección de datos antes de publicarse. Desktop: vídeo a la izquierda; Mobile: vídeo arriba. Sin variables propias.",
+          "description": "Módulo de promoción o concurso de la Home (wireframe UX): arte de la campaña (PNG recortado, de marca) · título (h2) · texto con los premios · Button Primary L «I want to participate» · Link de bases legales (obligatorio por regla de negocio, aunque el wireframe no lo dibuja) · Video player 16:9 (fachada) o imagen grande de la campaña. Fondo color/surface/page (crema). Se oculta entero si no hay promoción activa (regla de negocio); si el concurso es iframe de agencia, el CTA lleva external-link y el iframe necesita revisión de protección de datos. Desktop: texto a la izquierda y vídeo a la derecha; Mobile: vídeo arriba. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -4920,30 +4961,6 @@
             }
           ],
           "nestedInstances": [
-            {
-              "layer": "video",
-              "component": "Ratio=16:9, State=Poster",
-              "componentSet": "Video player",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-play",
-              "component": "Icon / play",
-              "componentSet": null,
-              "exposedAs": "Play icon#83:5",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "badge",
-              "component": "Type=New",
-              "componentSet": "Badge",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
             {
               "layer": "cta",
               "component": "Hierarchy=Primary, Size=L, State=Default",
@@ -4983,6 +5000,22 @@
               "exposedAs": "Icon#35:0",
               "toggledBy": null,
               "visibleByDefault": false
+            },
+            {
+              "layer": "video",
+              "component": "Ratio=16:9, State=Poster",
+              "componentSet": "Video player",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-play",
+              "component": "Icon / play",
+              "componentSet": null,
+              "exposedAs": "Play icon#83:5",
+              "toggledBy": null,
+              "visibleByDefault": true
             }
           ],
           "bindings": {
@@ -4995,6 +5028,51 @@
               "fills: color/surface/page",
               "color: color/surface/page",
               "itemSpacing: space/64",
+              "itemSpacing: space/24",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: color/text/secondary",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/body-l",
+              "lineHeight: font/line-height/desktop/body-l",
+              "counterAxisSpacing: space/16",
+              "itemSpacing: space/8",
+              "paddingLeft: space/32",
+              "paddingTop: space/24",
+              "paddingRight: space/32",
+              "paddingBottom: space/24",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: button/primary/bg",
+              "strokes: button/primary/border",
+              "color: button/primary/bg",
+              "color: button/primary/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: button/primary/text",
+              "color: button/primary/text",
+              "fills: button/primary/text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "fills: link/default",
+              "fontSize: font/size/desktop/body-m",
+              "lineHeight: font/line-height/desktop/body-m",
+              "color: link/default",
+              "strokes: link/default",
               "topLeftRadius: radius/md",
               "topRightRadius: radius/md",
               "bottomLeftRadius: radius/md",
@@ -5008,19 +5086,7 @@
               "color: video/poster-bg",
               "color: video/border",
               "fills: video/meta-text",
-              "fontSize: font/size/desktop/caption",
-              "fontStyle: font/style/body",
-              "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/caption",
               "color: video/meta-text",
-              "topLeftRadius: radius/pill",
-              "topRightRadius: radius/pill",
-              "bottomLeftRadius: radius/pill",
-              "bottomRightRadius: radius/pill",
-              "strokeTopWeight: border/width/thick",
-              "strokeBottomWeight: border/width/thick",
-              "strokeLeftWeight: border/width/thick",
-              "strokeRightWeight: border/width/thick",
               "fills: video/play-bg",
               "color: video/play-bg",
               "width: icon/size/lg",
@@ -5032,51 +5098,13 @@
               "paddingRight: space/8",
               "paddingBottom: space/4",
               "fills: video/meta-bg",
-              "color: video/meta-bg",
-              "fontSize: font/size/desktop/label",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
-              "lineHeight: font/line-height/desktop/label",
-              "itemSpacing: space/24",
-              "fills: badge/new/bg",
-              "color: badge/new/bg",
-              "fills: badge/new/text",
-              "fontSize: font/size/mobile/label",
-              "lineHeight: font/line-height/mobile/label",
-              "color: badge/new/text",
-              "fills: color/text/default",
-              "fontSize: font/size/desktop/h2",
-              "lineHeight: font/line-height/desktop/h2",
-              "color: color/text/default",
-              "fontSize: font/size/desktop/body-l",
-              "lineHeight: font/line-height/desktop/body-l",
-              "counterAxisSpacing: space/16",
-              "itemSpacing: space/8",
-              "paddingLeft: space/32",
-              "paddingTop: space/24",
-              "paddingRight: space/32",
-              "paddingBottom: space/24",
-              "fills: button/primary/bg",
-              "strokes: button/primary/border",
-              "color: button/primary/bg",
-              "color: button/primary/border",
-              "width: icon/size/sm",
-              "height: icon/size/sm",
-              "strokes: button/primary/text",
-              "color: button/primary/text",
-              "fills: button/primary/text",
-              "fills: link/default",
-              "fontSize: font/size/desktop/body-m",
-              "lineHeight: font/line-height/desktop/body-m",
-              "color: link/default",
-              "strokes: link/default"
+              "color: video/meta-bg"
             ],
             "textStyles": [
               "Desktop/caption",
-              "Desktop/label",
-              "Mobile/label",
               "Desktop/h2",
               "Desktop/body-l",
+              "Desktop/label",
               "Desktop/body-m"
             ]
           },
@@ -5088,7 +5116,7 @@
           "type": "COMPONENT_SET",
           "id": "91:704",
           "key": "28f6f7f9f4d1f9ca9efbdc6c17913332bf299b0b",
-          "description": "Sección de la fórmula natural (Home): título (h2) · texto · 4 claims del pack en display (100 % natural · −20 % sal · −80 % grasas saturadas · 0 aditivos ni conservantes) · Link Standalone Dark a la Natural formula page. Fondo color/surface/natural con texto color/text/on-natural (5,5:1, también en display). Los claims deben coincidir con el envase (restricción regulatoria): no se añaden claims nuevos sin validación de GB Foods. Los claims son una lista (&lt;ul&gt;), no encabezados. Desktop: 4 columnas; Mobile: 2×2. Sin variables propias.",
+          "description": "Sección de la fórmula natural (Home, wireframe UX): título display «100% natural noodles. Nothing else» (h2) · lista de ingredientes eliminados: cada uno con el nombre tachado (Additives, Preservatives, Palm oil, Glutamate; &lt;s&gt; o &lt;del&gt;, con texto oculto «sin») y la frase que lo explica · Button Inverse L «Learn more» a la Natural formula page (Inverse por contraste sobre el verde; el wireframe dibuja Secondary sobre blanco). Fondo color/surface/natural con texto color/text/on-natural (5,5:1). Los textos deben coincidir con el envase (restricción regulatoria). Desktop: título a la izquierda y lista a la derecha; Mobile: apilado. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -5109,20 +5137,28 @@
           ],
           "nestedInstances": [
             {
-              "layer": "link",
-              "component": "Type=Standalone, Surface=Dark, State=Default",
-              "componentSet": "Link",
+              "layer": "cta",
+              "component": "Hierarchy=Inverse, Size=L, State=Default",
+              "componentSet": "Button",
               "exposedAs": null,
               "toggledBy": null,
               "visibleByDefault": true
             },
             {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
+            },
+            {
               "layer": "icon-trailing",
               "component": "Icon / arrow-right",
               "componentSet": null,
-              "exposedAs": "Icon#35:0",
-              "toggledBy": null,
-              "visibleByDefault": true
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
             }
           ],
           "bindings": {
@@ -5135,34 +5171,52 @@
               "width: layout/frame",
               "fills: color/surface/natural",
               "color: color/surface/natural",
-              "itemSpacing: space/16",
+              "itemSpacing: space/64",
               "fills: color/text/on-natural",
-              "fontSize: font/size/desktop/h2",
+              "fontSize: font/size/desktop/display",
               "fontStyle: font/style/display",
               "fontFamily: font/family/display",
-              "lineHeight: font/line-height/desktop/h2",
+              "lineHeight: font/line-height/desktop/display",
               "color: color/text/on-natural",
-              "fontSize: font/size/desktop/body-l",
+              "itemSpacing: space/32",
+              "itemSpacing: space/24",
+              "itemSpacing: space/4",
+              "fontSize: font/size/desktop/caption",
               "fontStyle: font/style/body",
               "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/body-l",
-              "itemSpacing: layout/gutter",
-              "counterAxisSpacing: space/32",
+              "lineHeight: font/line-height/desktop/caption",
+              "textRangeFills: color/text/on-natural",
+              "fontSize: font/size/desktop/h3",
+              "lineHeight: font/line-height/desktop/h3",
               "itemSpacing: space/8",
-              "fontSize: font/size/desktop/display",
-              "lineHeight: font/line-height/desktop/display",
-              "fills: link/inverse",
-              "fontSize: font/size/desktop/label",
-              "lineHeight: font/line-height/desktop/label",
-              "color: link/inverse",
+              "paddingLeft: space/32",
+              "paddingTop: space/24",
+              "paddingRight: space/32",
+              "paddingBottom: space/24",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "fills: button/inverse/bg",
+              "strokes: button/inverse/border",
+              "color: button/inverse/bg",
+              "color: button/inverse/border",
               "width: icon/size/sm",
               "height: icon/size/sm",
-              "strokes: link/inverse"
+              "strokes: button/inverse/text",
+              "color: button/inverse/text",
+              "fills: button/inverse/text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label"
             ],
             "textStyles": [
-              "Desktop/h2",
-              "Desktop/body-l",
               "Desktop/display",
+              "Desktop/caption",
+              "Desktop/h3",
               "Desktop/label"
             ]
           },
@@ -5170,11 +5224,11 @@
         },
         {
           "page": "Pattern / Home",
-          "name": "Product carousel",
+          "name": "Product categories",
           "type": "COMPONENT_SET",
           "id": "91:837",
           "key": "12272bd4c32330984ee62c5ad3e3424bfceb18b4",
-          "description": "Productos de la Home: título (h2) · flechas Icon button (desktop) · Tabs de tipo (Cups / Bags / Sauces; tablist que filtra el carrusel, solo tipos con productos) · carrusel de Product card · Link «Ver todos los productos» a la Product library. Desktop: 4 cards visibles (310 px, gutter layout/gutter). Mobile: scroll horizontal con la siguiente card asomando (pista que comunica que hay más); sin flechas. Accesibilidad: el carrusel es una lista (&lt;ul&gt;) desplazable con teclado; las flechas son &lt;button&gt; con nombre y se desactivan al llegar al final. Sin variables propias.",
+          "description": "Productos de la Home (wireframe UX «Our products»): título (h2) + entradilla · 3 Category card, una por tipo de producto (Cups, Bags, Sauces; solo tipos con productos) que llevan a la Product library filtrada. Badge New en la categoría con novedad. Desktop: 3 columnas iguales (gutter layout/gutter); Mobile: apiladas a todo el ancho. Sustituye al antiguo Product carousel (pestañas + Product card). Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -5195,65 +5249,9 @@
           ],
           "nestedInstances": [
             {
-              "layer": "prev",
-              "component": "Hierarchy=Secondary, Size=M, State=Default",
-              "componentSet": "Icon button",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon",
-              "component": "Icon / arrow-left",
-              "componentSet": null,
-              "exposedAs": "Icon#33:125",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "next",
-              "component": "Hierarchy=Secondary, Size=M, State=Default",
-              "componentSet": "Icon button",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon#33:125",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "tab",
-              "component": "State=Selected",
-              "componentSet": "Tab",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "tab",
+              "layer": "category-card",
               "component": "State=Default",
-              "componentSet": "Tab",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "tab",
-              "component": "State=Default",
-              "componentSet": "Tab",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "product-card",
-              "component": "State=Default",
-              "componentSet": "Product card",
+              "componentSet": "Category card",
               "exposedAs": null,
               "toggledBy": null,
               "visibleByDefault": true
@@ -5263,61 +5261,13 @@
               "component": "Type=New",
               "componentSet": "Badge",
               "exposedAs": null,
-              "toggledBy": "Badge#66:8",
-              "visibleByDefault": true
-            },
-            {
-              "layer": "link",
-              "component": "Type=Standalone, Surface=Light, State=Default",
-              "componentSet": "Link",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon#35:0",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "product-card",
-              "component": "State=Default",
-              "componentSet": "Product card",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "badge",
-              "component": "Type=New",
-              "componentSet": "Badge",
-              "exposedAs": null,
-              "toggledBy": "Badge#66:8",
+              "toggledBy": "Badge#147:4",
               "visibleByDefault": false
             },
             {
-              "layer": "link",
-              "component": "Type=Standalone, Surface=Light, State=Default",
-              "componentSet": "Link",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon#35:0",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "product-card",
+              "layer": "category-card",
               "component": "State=Default",
-              "componentSet": "Product card",
+              "componentSet": "Category card",
               "exposedAs": null,
               "toggledBy": null,
               "visibleByDefault": true
@@ -5327,29 +5277,13 @@
               "component": "Type=New",
               "componentSet": "Badge",
               "exposedAs": null,
-              "toggledBy": "Badge#66:8",
+              "toggledBy": "Badge#147:4",
               "visibleByDefault": false
             },
             {
-              "layer": "link",
-              "component": "Type=Standalone, Surface=Light, State=Default",
-              "componentSet": "Link",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon#35:0",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "product-card",
+              "layer": "category-card",
               "component": "State=Default",
-              "componentSet": "Product card",
+              "componentSet": "Category card",
               "exposedAs": null,
               "toggledBy": null,
               "visibleByDefault": true
@@ -5359,39 +5293,7 @@
               "component": "Type=New",
               "componentSet": "Badge",
               "exposedAs": null,
-              "toggledBy": "Badge#66:8",
-              "visibleByDefault": false
-            },
-            {
-              "layer": "link",
-              "component": "Type=Standalone, Surface=Light, State=Default",
-              "componentSet": "Link",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon#35:0",
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "link",
-              "component": "Type=Standalone, Surface=Light, State=Default",
-              "componentSet": "Link",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon#35:0",
-              "toggledBy": null,
+              "toggledBy": "Badge#147:4",
               "visibleByDefault": true
             }
           ],
@@ -5405,102 +5307,64 @@
               "width: layout/frame",
               "fills: color/surface/page",
               "color: color/surface/page",
+              "itemSpacing: space/16",
               "fills: color/text/default",
               "fontSize: font/size/desktop/h2",
               "fontStyle: font/style/display",
               "fontFamily: font/family/display",
               "lineHeight: font/line-height/desktop/h2",
               "color: color/text/default",
-              "itemSpacing: space/16",
-              "width: icon-button/size/m",
-              "height: icon-button/size/m",
-              "topLeftRadius: radius/pill",
-              "topRightRadius: radius/pill",
-              "bottomLeftRadius: radius/pill",
-              "bottomRightRadius: radius/pill",
-              "strokeTopWeight: border/width/thick",
-              "strokeBottomWeight: border/width/thick",
-              "strokeLeftWeight: border/width/thick",
-              "strokeRightWeight: border/width/thick",
-              "strokes: button/secondary/border",
-              "color: button/secondary/border",
-              "width: icon/size/md",
-              "height: icon/size/md",
-              "strokes: button/secondary/text",
-              "color: button/secondary/text",
-              "itemSpacing: space/8",
-              "paddingLeft: space/24",
-              "paddingTop: space/16",
-              "paddingRight: space/24",
-              "paddingBottom: space/16",
-              "strokeTopWeight: border/width/thin",
-              "strokeBottomWeight: border/width/thin",
-              "strokeLeftWeight: border/width/thin",
-              "strokeRightWeight: border/width/thin",
-              "fills: tab/bg-selected",
-              "strokes: tab/border",
-              "color: tab/bg-selected",
-              "color: tab/border",
-              "fills: tab/text-selected",
-              "fontSize: font/size/desktop/label",
-              "lineHeight: font/line-height/desktop/label",
-              "color: tab/text-selected",
-              "fills: tab/bg",
-              "color: tab/bg",
-              "fills: tab/text",
-              "color: tab/text",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "color: color/text/secondary",
               "itemSpacing: layout/gutter",
+              "paddingLeft: space/16",
+              "paddingTop: space/16",
+              "paddingRight: space/16",
+              "paddingBottom: space/16",
               "topLeftRadius: radius/md",
               "topRightRadius: radius/md",
               "bottomLeftRadius: radius/md",
               "bottomRightRadius: radius/md",
-              "fills: product-card/bg",
-              "strokes: product-card/border",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "fills: color/surface/card",
+              "strokes: color/border/default",
               "effects: color/effect/shadow-ink",
-              "color: product-card/bg",
-              "color: product-card/border",
-              "paddingLeft: space/16",
-              "paddingRight: space/16",
-              "topLeftRadius: radius/none",
-              "topRightRadius: radius/none",
-              "bottomLeftRadius: radius/none",
-              "bottomRightRadius: radius/none",
-              "fills: product-card/media-bg",
-              "color: product-card/media-bg",
+              "color: color/surface/card",
+              "color: color/border/default",
               "paddingLeft: space/8",
               "paddingTop: space/4",
               "paddingRight: space/8",
               "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
               "fills: badge/new/bg",
               "color: badge/new/bg",
               "fills: badge/new/text",
               "fontSize: font/size/mobile/label",
               "lineHeight: font/line-height/mobile/label",
               "color: badge/new/text",
-              "fills: product-card/meta",
-              "fontSize: font/size/desktop/caption",
-              "fontStyle: font/style/body",
-              "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/caption",
-              "color: product-card/meta",
-              "paddingTop: space/24",
-              "paddingBottom: space/24",
-              "fills: product-card/title",
+              "paddingTop: space/8",
+              "paddingBottom: space/8",
+              "fills: color/surface/inverse",
+              "color: color/surface/inverse",
+              "fills: color/text/on-inverse",
               "fontSize: font/size/desktop/h3",
               "lineHeight: font/line-height/desktop/h3",
-              "color: product-card/title",
-              "paddingTop: space/8",
-              "fills: link/default",
-              "color: link/default",
-              "width: icon/size/sm",
-              "height: icon/size/sm",
-              "strokes: link/default"
+              "color: color/text/on-inverse"
             ],
             "textStyles": [
               "Desktop/h2",
-              "Desktop/label",
+              "Desktop/body-l",
               "Mobile/label",
-              "Desktop/caption",
               "Desktop/h3"
             ]
           },
@@ -5512,7 +5376,7 @@
           "type": "COMPONENT_SET",
           "id": "92:215",
           "key": "fb49dc85bcac640a3219e0b712f1c29393dd139a",
-          "description": "Sección de recetas (Home, página de producto con las recetas que lo usan): título (h2) + entradilla · 3 Recipe card · Link «Ver todas las recetas» a la Recipe library. Fondo color/surface/card para alternar con las secciones crema. Desktop: 3 columnas (421 px); Mobile: scroll horizontal con la siguiente card asomando y el enlace debajo. Sin buscador por ingredientes (regla de negocio). Sin variables propias.",
+          "description": "Sección de recetas (Home y página de producto con las recetas que lo usan; wireframe UX): título (h2) + entradilla · Button Secondary L «See all recipes» a la Recipe library (desktop junto al título, a la derecha; mobile debajo de las cards) · Recipe card. Desktop: 4 columnas; Mobile: scroll horizontal con la siguiente card asomando. Fondo color/surface/card para alternar con las secciones crema. Sin buscador por ingredientes (regla de negocio). Comensales («2 people»): sin definir, falta información. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -5533,20 +5397,28 @@
           ],
           "nestedInstances": [
             {
-              "layer": "link",
-              "component": "Type=Standalone, Surface=Light, State=Default",
-              "componentSet": "Link",
+              "layer": "cta",
+              "component": "Hierarchy=Secondary, Size=L, State=Default",
+              "componentSet": "Button",
               "exposedAs": null,
               "toggledBy": null,
               "visibleByDefault": true
             },
             {
+              "layer": "icon-leading",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#33:75",
+              "toggledBy": "Icon leading#33:25",
+              "visibleByDefault": false
+            },
+            {
               "layer": "icon-trailing",
               "component": "Icon / arrow-right",
               "componentSet": null,
-              "exposedAs": "Icon#35:0",
-              "toggledBy": null,
-              "visibleByDefault": true
+              "exposedAs": "Icon trailing swap#33:100",
+              "toggledBy": "Icon trailing#33:50",
+              "visibleByDefault": false
             },
             {
               "layer": "recipe-card",
@@ -5597,20 +5469,52 @@
               "visibleByDefault": false
             },
             {
-              "layer": "link",
-              "component": "Type=Standalone, Surface=Light, State=Default",
-              "componentSet": "Link",
+              "layer": "recipe-card",
+              "component": "State=Default",
+              "componentSet": "Recipe card",
               "exposedAs": null,
               "toggledBy": null,
               "visibleByDefault": true
             },
             {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
+              "layer": "icon-time",
+              "component": "Icon / timer",
               "componentSet": null,
-              "exposedAs": "Icon#35:0",
+              "exposedAs": "Time icon#67:8",
               "toggledBy": null,
               "visibleByDefault": true
+            },
+            {
+              "layer": "product-chip",
+              "component": "Size=S, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "product-chip",
+              "component": "Size=S, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": false
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
             },
             {
               "layer": "recipe-card",
@@ -5650,7 +5554,7 @@
               "componentSet": "Chip",
               "exposedAs": null,
               "toggledBy": null,
-              "visibleByDefault": true
+              "visibleByDefault": false
             },
             {
               "layer": "icon-leading",
@@ -5659,22 +5563,6 @@
               "exposedAs": "Icon leading swap#35:27",
               "toggledBy": "Icon leading#35:22",
               "visibleByDefault": false
-            },
-            {
-              "layer": "link",
-              "component": "Type=Standalone, Surface=Light, State=Default",
-              "componentSet": "Link",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon#35:0",
-              "toggledBy": null,
-              "visibleByDefault": true
             },
             {
               "layer": "recipe-card",
@@ -5714,7 +5602,7 @@
               "componentSet": "Chip",
               "exposedAs": null,
               "toggledBy": null,
-              "visibleByDefault": true
+              "visibleByDefault": false
             },
             {
               "layer": "icon-leading",
@@ -5723,22 +5611,6 @@
               "exposedAs": "Icon leading swap#35:27",
               "toggledBy": "Icon leading#35:22",
               "visibleByDefault": false
-            },
-            {
-              "layer": "link",
-              "component": "Type=Standalone, Surface=Light, State=Default",
-              "componentSet": "Link",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon#35:0",
-              "toggledBy": null,
-              "visibleByDefault": true
             }
           ],
           "bindings": {
@@ -5765,13 +5637,27 @@
               "fontFamily: font/family/body",
               "lineHeight: font/line-height/desktop/body-l",
               "color: color/text/secondary",
-              "fills: link/default",
-              "fontSize: font/size/desktop/label",
-              "lineHeight: font/line-height/desktop/label",
-              "color: link/default",
+              "paddingLeft: space/32",
+              "paddingTop: space/24",
+              "paddingRight: space/32",
+              "paddingBottom: space/24",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "strokeTopWeight: border/width/thick",
+              "strokeBottomWeight: border/width/thick",
+              "strokeLeftWeight: border/width/thick",
+              "strokeRightWeight: border/width/thick",
+              "strokes: button/secondary/border",
+              "color: button/secondary/border",
               "width: icon/size/sm",
               "height: icon/size/sm",
-              "strokes: link/default",
+              "strokes: button/secondary/text",
+              "color: button/secondary/text",
+              "fills: button/secondary/text",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
               "itemSpacing: layout/gutter",
               "topLeftRadius: radius/md",
               "topRightRadius: radius/md",
@@ -5801,23 +5687,17 @@
               "lineHeight: font/line-height/desktop/caption",
               "color: recipe-card/meta",
               "paddingLeft: space/24",
-              "paddingTop: space/24",
               "paddingRight: space/24",
-              "paddingBottom: space/24",
+              "strokes: recipe-card/meta",
+              "fontSize: font/size/desktop/body-s",
+              "lineHeight: font/line-height/desktop/body-s",
               "fills: recipe-card/title",
               "fontSize: font/size/desktop/h3",
               "lineHeight: font/line-height/desktop/h3",
               "color: recipe-card/title",
-              "strokes: recipe-card/meta",
-              "fontSize: font/size/desktop/body-s",
-              "lineHeight: font/line-height/desktop/body-s",
               "counterAxisSpacing: space/8",
               "paddingTop: space/8",
               "paddingBottom: space/8",
-              "topLeftRadius: radius/pill",
-              "topRightRadius: radius/pill",
-              "bottomLeftRadius: radius/pill",
-              "bottomRightRadius: radius/pill",
               "minHeight: chip/height/s",
               "fills: chip/bg",
               "strokes: chip/border",
@@ -5832,8 +5712,8 @@
               "Desktop/body-l",
               "Desktop/label",
               "Desktop/caption",
-              "Desktop/h3",
-              "Desktop/body-s"
+              "Desktop/body-s",
+              "Desktop/h3"
             ]
           },
           "autoLayout": true
@@ -5844,7 +5724,7 @@
           "type": "COMPONENT_SET",
           "id": "92:884",
           "key": "72865521a6dda59926e98e33656d07b8716406c8",
-          "description": "Banner promocional de la Home (lanzamiento, sabor nuevo, mensaje de campaña): bloque color/surface/accent (naranja de marca) con borde de tinta, radius/lg y elevation/2 (sombra dura de marca) · titular (h1) · texto · Button Primary · imagen de marca. Sobre el acento solo va color/text/default (regla del token). Desktop: texto a la izquierda; Mobile: texto arriba e imagen debajo. No es un carrusel. Sin variables propias.",
+          "description": "Banner de campaña de la Home (wireframe UX): una pieza gráfica de campaña a todo el ancho del contenido, dentro de un marco con borde de tinta, radius/lg y elevation/2. La imagen lleva el mensaje; el banner entero es un enlace a la campaña y su texto alternativo repite lo que dice la pieza. Se oculta si no hay campaña. No es un carrusel. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -5863,32 +5743,7 @@
               ]
             }
           ],
-          "nestedInstances": [
-            {
-              "layer": "cta",
-              "component": "Hierarchy=Primary, Size=L, State=Default",
-              "componentSet": "Button",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-leading",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon leading swap#33:75",
-              "toggledBy": "Icon leading#33:25",
-              "visibleByDefault": false
-            },
-            {
-              "layer": "icon-trailing",
-              "component": "Icon / arrow-right",
-              "componentSet": null,
-              "exposedAs": "Icon trailing swap#33:100",
-              "toggledBy": "Icon trailing#33:50",
-              "visibleByDefault": false
-            }
-          ],
+          "nestedInstances": [],
           "bindings": {
             "variables": [
               "paddingLeft: layout/margin",
@@ -5899,10 +5754,6 @@
               "fills: color/surface/page",
               "color: color/surface/page",
               "itemSpacing: space/48",
-              "paddingLeft: space/48",
-              "paddingTop: space/48",
-              "paddingRight: space/48",
-              "paddingBottom: space/48",
               "topLeftRadius: radius/lg",
               "topRightRadius: radius/lg",
               "bottomLeftRadius: radius/lg",
@@ -5911,63 +5762,25 @@
               "strokeBottomWeight: border/width/thin",
               "strokeLeftWeight: border/width/thin",
               "strokeRightWeight: border/width/thin",
-              "fills: color/surface/accent",
               "strokes: color/border/default",
               "effects: color/effect/shadow-ink",
-              "color: color/surface/accent",
               "color: color/border/default",
-              "itemSpacing: space/24",
-              "fills: color/text/default",
-              "fontSize: font/size/desktop/h1",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
-              "lineHeight: font/line-height/desktop/h1",
-              "color: color/text/default",
-              "fontSize: font/size/desktop/body-l",
-              "fontStyle: font/style/body",
-              "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/body-l",
-              "itemSpacing: space/8",
-              "paddingLeft: space/32",
-              "paddingTop: space/24",
-              "paddingRight: space/32",
-              "paddingBottom: space/24",
-              "topLeftRadius: radius/pill",
-              "topRightRadius: radius/pill",
-              "bottomLeftRadius: radius/pill",
-              "bottomRightRadius: radius/pill",
-              "strokeTopWeight: border/width/thick",
-              "strokeBottomWeight: border/width/thick",
-              "strokeLeftWeight: border/width/thick",
-              "strokeRightWeight: border/width/thick",
-              "fills: button/primary/bg",
-              "strokes: button/primary/border",
-              "color: button/primary/bg",
-              "color: button/primary/border",
-              "width: icon/size/sm",
-              "height: icon/size/sm",
-              "strokes: button/primary/text",
-              "color: button/primary/text",
-              "fills: button/primary/text",
-              "fontSize: font/size/desktop/label",
-              "lineHeight: font/line-height/desktop/label",
               "paddingLeft: space/16",
               "paddingTop: space/16",
               "paddingRight: space/16",
               "paddingBottom: space/16",
-              "topLeftRadius: radius/md",
-              "topRightRadius: radius/md",
-              "bottomLeftRadius: radius/md",
-              "bottomRightRadius: radius/md",
+              "topLeftRadius: radius/none",
+              "topRightRadius: radius/none",
+              "bottomLeftRadius: radius/none",
+              "bottomRightRadius: radius/none",
               "fills: color/text/secondary",
               "fontSize: font/size/desktop/caption",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
               "lineHeight: font/line-height/desktop/caption",
               "color: color/text/secondary"
             ],
             "textStyles": [
-              "Desktop/h1",
-              "Desktop/body-l",
-              "Desktop/label",
               "Desktop/caption"
             ]
           },
@@ -5979,7 +5792,7 @@
           "type": "COMPONENT_SET",
           "id": "92:960",
           "key": "d6393b085d0e5c126d1891ef1a1477660af75433",
-          "description": "Bloque de FAQ (Home, Natural formula con su FAQ propio, página FAQS indexada): título (h2) + entradilla + Link «Ver todas las preguntas» · lista de Accordion item (space/16 entre ítems; el primero puede ir abierto). En la página FAQS se repite por categorías sin el enlace. SEO/AEO: las respuestas están en el HTML y la página lleva datos estructurados FAQPage. Desktop: cabecera a la izquierda (400 px) y lista a la derecha; Mobile: apilado. Sin variables propias.",
+          "description": "Bloque de FAQ (Home, Natural formula y página FAQS; wireframe UX): título (h2) + entradilla · lista de Accordion item (space/16; uno abierto a la vez) · «Still curious?» + Link «See all FAQS» a la página FAQS (desktop al pie de la columna del título; mobile debajo de la lista). En la página FAQS se repite por categorías sin el enlace. SEO/AEO: las respuestas están en el HTML y la página lleva datos estructurados FAQPage; las respuestas las valida GB Foods. Desktop: cabecera a la izquierda (400 px) y lista a la derecha; Mobile: apilado. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -6012,6 +5825,22 @@
               "component": "Icon / arrow-right",
               "componentSet": null,
               "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "accordion-item",
+              "component": "Expanded=False, State=Default",
+              "componentSet": "Accordion item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-collapsed",
+              "component": "Icon / plus",
+              "componentSet": null,
+              "exposedAs": "Icon collapsed#69:14",
               "toggledBy": null,
               "visibleByDefault": true
             },
@@ -6062,22 +5891,6 @@
               "exposedAs": "Icon collapsed#69:14",
               "toggledBy": null,
               "visibleByDefault": true
-            },
-            {
-              "layer": "accordion-item",
-              "component": "Expanded=False, State=Default",
-              "componentSet": "Accordion item",
-              "exposedAs": null,
-              "toggledBy": null,
-              "visibleByDefault": true
-            },
-            {
-              "layer": "icon-collapsed",
-              "component": "Icon / plus",
-              "componentSet": null,
-              "exposedAs": "Icon collapsed#69:14",
-              "toggledBy": null,
-              "visibleByDefault": true
             }
           ],
           "bindings": {
@@ -6104,6 +5917,8 @@
               "lineHeight: font/line-height/desktop/body-l",
               "color: color/text/secondary",
               "itemSpacing: space/8",
+              "fontSize: font/size/desktop/body-m",
+              "lineHeight: font/line-height/desktop/body-m",
               "fills: link/default",
               "fontSize: font/size/desktop/label",
               "lineHeight: font/line-height/desktop/label",
@@ -6134,15 +5949,13 @@
               "strokes: accordion/icon",
               "color: accordion/icon",
               "fills: accordion/answer",
-              "fontSize: font/size/desktop/body-m",
-              "lineHeight: font/line-height/desktop/body-m",
               "color: accordion/answer"
             ],
             "textStyles": [
               "Desktop/h2",
               "Desktop/body-l",
-              "Desktop/label",
-              "Desktop/body-m"
+              "Desktop/body-m",
+              "Desktop/label"
             ]
           },
           "autoLayout": true
@@ -6153,7 +5966,7 @@
           "type": "COMPONENT_SET",
           "id": "92:990",
           "key": "433379b602c8052033bb1bac0d338039b7e8a2b0",
-          "description": "Dónde comprar (Home, página de producto; destino del CTA «Dónde comprar» de la Navbar): título (h2) · texto · rejilla de distribuidores del país. Cada distribuidor es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; tarjeta color/surface/card con borde de tinta sobre color/surface/brand. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: 5 por fila; Mobile: 2 por fila. Sin variables propias.",
+          "description": "Dónde comprar (Home, página de producto; destino del CTA de la Navbar; wireframe UX): antetítulo «Where to buy?» + título (h2, estilo h3) «You can find us at these shops» · fila de logos de distribuidores del país. Cada logo es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; sin tarjeta: el logo va directo sobre color/surface/brand. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: texto a la izquierda y logos a la derecha; Mobile: texto arriba y logos en fila con scroll horizontal. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -6183,16 +5996,18 @@
               "width: layout/frame",
               "fills: color/surface/brand",
               "color: color/surface/brand",
+              "itemSpacing: space/64",
+              "itemSpacing: space/4",
               "fills: color/text/default",
-              "fontSize: font/size/desktop/h2",
-              "fontStyle: font/style/display",
-              "fontFamily: font/family/display",
-              "lineHeight: font/line-height/desktop/h2",
-              "color: color/text/default",
-              "fontSize: font/size/desktop/body-l",
+              "fontSize: font/size/desktop/caption",
               "fontStyle: font/style/body",
               "fontFamily: font/family/body",
-              "lineHeight: font/line-height/desktop/body-l",
+              "lineHeight: font/line-height/desktop/caption",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/h3",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h3",
               "itemSpacing: layout/gutter",
               "counterAxisSpacing: layout/gutter",
               "topLeftRadius: radius/md",
@@ -6203,19 +6018,12 @@
               "strokeBottomWeight: border/width/thin",
               "strokeLeftWeight: border/width/thin",
               "strokeRightWeight: border/width/thin",
-              "fills: color/surface/card",
-              "strokes: color/border/default",
-              "color: color/surface/card",
-              "color: color/border/default",
               "fills: color/text/secondary",
-              "fontSize: font/size/desktop/caption",
-              "lineHeight: font/line-height/desktop/caption",
               "color: color/text/secondary"
             ],
             "textStyles": [
-              "Desktop/h2",
-              "Desktop/body-l",
-              "Desktop/caption"
+              "Desktop/caption",
+              "Desktop/h3"
             ]
           },
           "autoLayout": true
@@ -7497,5 +7305,5 @@
     }
   ],
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
-  "readAt": "2026-10-08T10:20:51.930Z"
+  "readAt": "2026-10-08T11:04:06.515Z"
 }

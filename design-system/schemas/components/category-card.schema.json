@@ -1,0 +1,220 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:category-card",
+  "meta": {
+    "name": "Category card",
+    "slug": "category-card",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-08T11:10:38Z",
+    "description": "Card de categoría de producto (Home · «Our products»: Cups, Bags, Sauces). Anatomía (wireframe UX): imagen de la categoría a sangre (fondo) · Badge New opcional arriba a la izquierda · nombre de la categoría en display h3 sobre placa color/surface/inverse abajo a la izquierda (texto color/text/on-inverse, 17:1). Toda la card es un enlace a la Product library filtrada por ese tipo. Hover: elevation/2; Focus: borde grueso. Desktop 392 px cuadrada; en móvil FILL (343). Sin variables propias.",
+    "figmaPage": "Cards",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 3,
+    "autoLayout": true,
+    "anatomyHash": "01c4256dcfcd",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-08",
+      "figmaVersion": "01c4256dcfcd",
+      "variantsChecked": [
+        "State=Default",
+        "State=Hover",
+        "State=Focus"
+      ],
+      "by": "agent (Claude)",
+      "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)"
+    }
+  },
+  "source": {
+    "docs": {
+      "file": "design-system/docs/components/category-card.md",
+      "section": "Category card"
+    },
+    "figma": {
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "147:1353",
+      "componentKey": "bf00e7dd5888d2bce0451a38f38a9607a8ad8b8a"
+    },
+    "code": {
+      "package": null,
+      "import": null,
+      "path": "design-system/css/components.css",
+      "classes": [
+        "badge",
+        "category-card",
+        "category-card__media",
+        "category-card__name"
+      ],
+      "example": "<a class=\"category-card\" href=\"/productos?tipo=cups\">\n<img class=\"category-card__media\" src=\"/media/cups.png\" alt=\"\">\n<span class=\"badge\">New</span>\n<span class=\"category-card__name\">Cups</span>\n</a>"
+    }
+  },
+  "api": {
+    "properties": [
+      {
+        "name": "Name#147:0",
+        "kind": "TEXT",
+        "default": "Cups"
+      },
+      {
+        "name": "Badge#147:4",
+        "kind": "BOOLEAN",
+        "default": false
+      },
+      {
+        "name": "State",
+        "kind": "VARIANT",
+        "default": "Default",
+        "values": [
+          "Default",
+          "Hover",
+          "Focus"
+        ]
+      }
+    ],
+    "variants": {
+      "State": [
+        "Default",
+        "Hover",
+        "Focus"
+      ]
+    },
+    "states": [
+      "Default",
+      "Hover",
+      "Focus"
+    ],
+    "defaults": {
+      "State": "Default"
+    },
+    "invalidCombinations": [],
+    "nestedInstances": [
+      {
+        "layer": "badge",
+        "component": "Type=New",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": "Badge#147:4",
+        "visibleByDefault": false
+      }
+    ],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "slots": [],
+    "tokensUsed": [
+      "badge/new/bg",
+      "badge/new/text",
+      "border/width/thin",
+      "color/border/default",
+      "color/effect/shadow-ink",
+      "color/surface/card",
+      "color/surface/inverse",
+      "color/text/on-inverse",
+      "font/family/display",
+      "font/line-height/desktop/h3",
+      "font/line-height/mobile/label",
+      "font/size/desktop/h3",
+      "font/size/mobile/label",
+      "font/style/display",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/4",
+      "space/8"
+    ],
+    "variablesUsed": [
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: color/surface/card",
+      "strokes: color/border/default",
+      "effects: color/effect/shadow-ink",
+      "color: color/surface/card",
+      "color: color/border/default",
+      "paddingLeft: space/8",
+      "paddingTop: space/4",
+      "paddingRight: space/8",
+      "paddingBottom: space/4",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: badge/new/bg",
+      "color: badge/new/bg",
+      "fills: badge/new/text",
+      "fontSize: font/size/mobile/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/mobile/label",
+      "color: badge/new/text",
+      "paddingTop: space/8",
+      "paddingBottom: space/8",
+      "fills: color/surface/inverse",
+      "color: color/surface/inverse",
+      "fills: color/text/on-inverse",
+      "fontSize: font/size/desktop/h3",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: color/text/on-inverse"
+    ],
+    "textStyles": [
+      "Mobile/label",
+      "Desktop/h3"
+    ],
+    "theming": {
+      "brandAware": true,
+      "attribute": "data-brand",
+      "brands": [
+        "yatekomo",
+        "saikebon",
+        "aiki",
+        "daisuki",
+        "de"
+      ],
+      "defaultBrand": "yatekomo",
+      "brandTokens": [
+        "badge/new/bg",
+        "badge/new/text",
+        "color/border/default",
+        "color/effect/shadow-ink",
+        "color/surface/card",
+        "color/surface/inverse",
+        "color/text/on-inverse",
+        "font/family/display",
+        "font/line-height/desktop/h3",
+        "font/line-height/mobile/label",
+        "font/size/desktop/h3",
+        "font/size/mobile/label",
+        "font/style/display"
+      ]
+    }
+  },
+  "behavior": {
+    "responsive": [],
+    "content": [],
+    "interactions": []
+  },
+  "compatibility": {},
+  "relations": {
+    "uses": [
+      "badge"
+    ],
+    "usedBy": [
+      "product-categories"
+    ],
+    "related": []
+  }
+}

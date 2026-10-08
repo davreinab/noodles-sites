@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="es" data-brand="yatekomo">
+<html lang="en" data-brand="yatekomo">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yatekomo · Inicio</title>
-<!-- Home (Yatekomo). Solo marcado + clases del DS: sin <style> ni estilos inline (design.md, regla 1b).
-     Orden de patterns.md § Home. Promo omitido: no hay campaña activa confirmada.
-     HUECO = contenido pendiente; se muestra el texto de marcador del maestro de Figma. -->
+<title>Yatekomo · Home</title>
+<!-- Home (Yatekomo). Contenido y estructura del wireframe UX «Rediseño sites · GB Noodles»
+     (Figma 1YhsCqdqYCHlK4Y82IY5G3 · Home desktop 396:5700 · mobile 97:636). Textos del wireframe, en inglés.
+     Solo marcado + clases del DS: sin <style> ni estilos inline (design.md, regla 1b).
+     HUECO = contenido o imagen pendiente; se marca con un comentario. -->
 <link rel="stylesheet" href="../design-system/tokens/tokens.css">
 <link rel="stylesheet" href="../design-system/css/components.css">
 </head>
@@ -14,215 +15,192 @@
 
 <header class="navbar">
   <div class="navbar__inner">
-    <a href="home.html" aria-label="Yatekomo, inicio"><img class="logo" src="../design-system/assets/logos/logo-yatekomo-positive.svg" alt="Yatekomo"></a>
-    <nav class="navbar__nav" aria-label="Principal">
-      <a class="nav-item" href="#">Productos</a>
-      <a class="nav-item" href="#">Recetas</a>
-      <a class="nav-item" href="#">Fórmula natural</a>
-      <a class="nav-item" href="#">Concursos</a>
-      <a class="nav-item" href="#">FAQ</a>
-    </nav>
+    <div class="navbar__start">
+      <button class="icon-button icon-button--secondary" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" data-menu-open><span class="icon icon-menu" aria-hidden="true"></span></button>
+    </div>
+    <a href="home.html" aria-label="Yatekomo, home"><img class="logo" src="../design-system/assets/logos/logo-yatekomo-positive.svg" alt="Yatekomo"></a>
     <div class="navbar__actions">
-      <button class="icon-button icon-button--secondary" type="button" aria-label="Buscar"><span class="icon icon-search" aria-hidden="true"></span></button>
-      <a class="button" href="#donde-comprar">Dónde comprar</a>
-      <button class="icon-button icon-button--secondary navbar__menu-button" type="button" aria-label="Menú" aria-expanded="false" aria-controls="menu" data-menu-open><span class="icon icon-menu" aria-hidden="true"></span></button>
+      <a class="button" href="#">New 100% Natural Formula</a>
     </div>
   </div>
 </header>
 
-<dialog class="mobile-menu" id="menu" aria-label="Menú">
+<dialog class="mobile-menu" id="menu" aria-label="Menu">
   <div class="mobile-menu__inner">
     <div class="mobile-menu__top">
       <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
-      <button class="icon-button icon-button--inverse" type="button" aria-label="Cerrar menú" data-menu-close><span class="icon icon-close" aria-hidden="true"></span></button>
+      <button class="icon-button icon-button--inverse" type="button" aria-label="Close menu" data-menu-close><span class="icon icon-close" aria-hidden="true"></span></button>
     </div>
-    <nav class="mobile-menu__nav" aria-label="Principal">
-      <a class="nav-item nav-item--menu" href="#">Productos</a>
-      <a class="nav-item nav-item--menu" href="#">Recetas</a>
-      <a class="nav-item nav-item--menu" href="#">Fórmula natural</a>
-      <a class="nav-item nav-item--menu" href="#">Concursos</a>
-      <a class="nav-item nav-item--menu" href="#">FAQ</a>
+    <nav class="mobile-menu__nav" aria-label="Main">
+      <a class="nav-item nav-item--menu" href="#">Products</a>
+      <a class="nav-item nav-item--menu" href="#">Natural formula</a>
+      <a class="nav-item nav-item--menu" href="#">Recipes</a>
+      <a class="nav-item nav-item--menu" href="#">Contests</a>
+      <a class="nav-item nav-item--menu" href="#">FAQS</a>
     </nav>
-    <a class="button button--inverse button--l" href="#donde-comprar" data-menu-close>Dónde comprar</a>
+    <div class="mobile-menu__social">
+      <p class="mobile-menu__social-label">Our social media:</p>
+      <!-- HUECO: URLs de las redes de la marca -->
+      <ul class="mobile-menu__social-list">
+        <li><a class="link link--dark" href="#" aria-label="TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="X"><span class="icon icon-x" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a></li>
+      </ul>
+    </div>
+    <p class="mobile-menu__copyright">© GBFoods</p>
   </div>
 </dialog>
 
 <main>
 
-  <section class="section hero" aria-roledescription="carrusel" aria-label="Destacados">
+  <section class="section hero" aria-roledescription="carousel" aria-label="Highlights">
     <span class="decoration-noodle hero__noodle" aria-hidden="true"></span>
     <div class="section__inner">
-      <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="1 de 3">
+      <div class="hero__slide">
         <div class="hero__content">
-          <span class="badge badge--natural">The only 100% natural</span>
-          <h1 class="hero__title">Welcome to the new noodles era</h1>
-          <!-- HUECO: texto de apoyo definitivo -->
-          <p class="hero__lead">Texto de apoyo de ejemplo: una frase sobre la fórmula natural y el sabor.</p>
-          <a class="button button--l" href="#">Descubre los productos</a>
+          <h1 class="hero__title">Welcome to the new era</h1>
+          <div class="hero__slide-content" role="group" aria-roledescription="slide" aria-label="1 of 3">
+            <div class="hero__slide-copy">
+              <span class="badge">New</span>
+              <h2 class="hero__slide-title">Do you like to cook? Check out our new bags</h2>
+              <p class="hero__lead">Same amount, super convenient for your recipes</p>
+            </div>
+            <a class="button button--l" href="#">Discover flavours</a>
+            <!-- HUECO: contenido de las slides 2 y 3 (máximo 3 por regla de negocio; el wireframe dibuja 5 puntos) -->
+            <div class="hero__controls">
+              <button class="icon-button icon-button--secondary" type="button" aria-label="Previous slide"><span class="icon icon-arrow-left" aria-hidden="true"></span></button>
+              <div class="hero__dots">
+                <button class="hero__dot" type="button" aria-current="true" aria-label="Slide 1"></button>
+                <button class="hero__dot" type="button" aria-label="Slide 2"></button>
+                <button class="hero__dot" type="button" aria-label="Slide 3"></button>
+              </div>
+              <button class="icon-button icon-button--secondary" type="button" aria-label="Next slide"><span class="icon icon-arrow-right" aria-hidden="true"></span></button>
+            </div>
+          </div>
         </div>
+        <!-- HUECO: imagen de la slide (el wireframe muestra las bolsas nuevas); de momento, las cups de Yatekomo -->
         <picture class="hero__media">
           <source media="(max-width: 768px)" srcset="assets/yatekomo-hero-cups-mobile.png">
-          <img src="assets/yatekomo-hero-cups.png" alt="Cups de Yatekomo Verduras, Pollo y Curry">
+          <img src="assets/yatekomo-hero-cups.png" alt="Yatekomo cups: Verduras, Pollo and Curry">
         </picture>
-      </div>
-      <!-- HUECO: contenido de las slides 2 y 3 -->
-      <div class="hero__controls">
-        <div class="hero__dots">
-          <button class="hero__dot" type="button" aria-current="true" aria-label="Slide 1"></button>
-          <button class="hero__dot" type="button" aria-label="Slide 2"></button>
-          <button class="hero__dot" type="button" aria-label="Slide 3"></button>
-        </div>
-        <div class="hero__arrows">
-          <button class="icon-button icon-button--secondary" type="button" aria-label="Slide anterior"><span class="icon icon-arrow-left" aria-hidden="true"></span></button>
-          <button class="icon-button icon-button--secondary" type="button" aria-label="Slide siguiente"><span class="icon icon-arrow-right" aria-hidden="true"></span></button>
-        </div>
       </div>
     </div>
   </section>
 
-  <div class="marquee" aria-hidden="true">
-    <ul class="marquee__track">
-      <li class="marquee__item">Welcome to the new noodles era</li><li class="marquee__item marquee__sep">✱</li>
-      <li class="marquee__item">The only 100% natural</li><li class="marquee__item marquee__sep">✱</li>
-      <li class="marquee__item">Welcome to the new noodles era</li><li class="marquee__item marquee__sep">✱</li>
-      <li class="marquee__item">The only 100% natural</li><li class="marquee__item marquee__sep">✱</li>
-      <li class="marquee__item">Welcome to the new noodles era</li><li class="marquee__item marquee__sep">✱</li>
-      <li class="marquee__item">The only 100% natural</li><li class="marquee__item marquee__sep">✱</li>
-    </ul>
-  </div>
+  <section class="section promo" aria-labelledby="pr-title">
+    <div class="section__inner">
+      <div class="promo__grid">
+        <div class="promo__content">
+          <!-- HUECO: arte de la campaña (logo «Conoce a Marc Cucurella», PNG recortado) -->
+          <h2 class="section__title" id="pr-title">Enter Yatekomo’s new giveaway and win prizes</h2>
+          <p class="promo__body">Official Spanish National Team jerseys and soccer balls signed by Marc Cucurella, and even the chance to meet him in person!</p>
+          <div class="promo__actions">
+            <a class="button button--l" href="#">I want to participate</a>
+            <!-- Bases legales: obligatorias por regla de negocio, aunque el wireframe no las dibuja -->
+            <a class="link" href="#">Contest rules</a>
+          </div>
+        </div>
+        <div class="promo__media">
+          <!-- HUECO: póster y vídeo de la campaña -->
+          <div class="video-player">
+            <button class="video-player__play" type="button" aria-label="Play video: Yatekomo giveaway"><span class="icon icon-play" aria-hidden="true"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="section natural-formula" aria-labelledby="nf-title">
     <div class="section__inner">
-      <div class="section__header">
-        <h2 class="section__title" id="nf-title">La fórmula natural</h2>
-        <!-- HUECO: texto validado con el envase -->
-        <p class="section__lead">Texto de ejemplo alineado con el envase: el mensaje natural va a alto nivel por restricciones regulatorias.</p>
+      <div class="natural-formula__grid">
+        <h2 class="natural-formula__title" id="nf-title">100% natural noodles. Nothing else</h2>
+        <div class="natural-formula__list">
+          <ul class="natural-formula__removed">
+            <li class="natural-formula__item"><s class="natural-formula__ingredient"><span class="visually-hidden">No </span>Additives</s><span class="natural-formula__statement">We’re all about the natural flavour of our ingredients</span></li>
+            <li class="natural-formula__item"><s class="natural-formula__ingredient"><span class="visually-hidden">No </span>Preservatives</s><span class="natural-formula__statement">Packaging and dehydration to improve shelf life</span></li>
+            <li class="natural-formula__item"><s class="natural-formula__ingredient"><span class="visually-hidden">No </span>Palm oil</s><span class="natural-formula__statement">Only virgin and vegetable oils</span></li>
+            <li class="natural-formula__item"><s class="natural-formula__ingredient"><span class="visually-hidden">No </span>Glutamate</s><span class="natural-formula__statement">No sweeteners at all, that’s not for us!</span></li>
+          </ul>
+          <a class="button button--inverse button--l" href="#">Learn more</a>
+        </div>
       </div>
-      <ul class="natural-formula__claims">
-        <li class="natural-formula__claim"><span class="natural-formula__value">100 %</span><span class="natural-formula__label">natural</span></li>
-        <li class="natural-formula__claim"><span class="natural-formula__value">−20 %</span><span class="natural-formula__label">de sal</span></li>
-        <li class="natural-formula__claim"><span class="natural-formula__value">−80 %</span><span class="natural-formula__label">de grasas saturadas</span></li>
-        <li class="natural-formula__claim"><span class="natural-formula__value">0</span><span class="natural-formula__label">aditivos ni conservantes</span></li>
-      </ul>
-      <a class="link link--standalone link--dark" href="#">Conoce la fórmula natural <span class="icon icon-arrow-right" aria-hidden="true"></span></a>
     </div>
   </section>
 
-  <section class="section product-carousel" aria-labelledby="pc-title">
+  <section class="section product-categories" aria-labelledby="pc-title">
     <div class="section__inner">
-      <div class="section__bar">
-        <h2 class="section__title" id="pc-title">Nuestros noodles</h2>
-        <div class="section__arrows">
-          <button class="icon-button icon-button--secondary" type="button" aria-label="Productos anteriores"><span class="icon icon-arrow-left" aria-hidden="true"></span></button>
-          <button class="icon-button icon-button--secondary" type="button" aria-label="Productos siguientes"><span class="icon icon-arrow-right" aria-hidden="true"></span></button>
-        </div>
+      <div class="section__header">
+        <h2 class="section__title" id="pc-title">Our products</h2>
+        <p class="section__lead">Products and flavors for every taste. Find your match!</p>
       </div>
-      <div class="product-carousel__tabs" role="tablist" aria-label="Tipo de producto">
-        <button class="tab" type="button" role="tab" aria-selected="true">Cups</button>
-        <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1">Bags</button>
-        <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1">Sauces</button>
-      </div>
-      <!-- HUECO: nombres y líneas reales de producto (las imágenes son de UI/assets) -->
-      <ul class="carousel" role="tabpanel" aria-label="Cups">
-        <li><a class="product-card" href="#">
-          <div class="product-card__media"><span class="badge">Nuevo</span><img src="assets/yatekomo-original-pollo.png" alt=""></div>
-          <div class="product-card__body">
-            <span class="product-card__line">Original</span>
-            <h3 class="product-card__name">Nombre del producto 1</h3>
-            <span class="product-card__cta"><span class="link link--standalone">Ver producto <span class="icon icon-arrow-right" aria-hidden="true"></span></span></span>
-          </div>
-        </a></li>
-        <li><a class="product-card" href="#">
-          <div class="product-card__media"><img src="assets/yatekomo-yakisoba-classic.png" alt=""></div>
-          <div class="product-card__body">
-            <span class="product-card__line">Original</span>
-            <h3 class="product-card__name">Nombre del producto 2</h3>
-            <span class="product-card__cta"><span class="link link--standalone">Ver producto <span class="icon icon-arrow-right" aria-hidden="true"></span></span></span>
-          </div>
-        </a></li>
-        <li><a class="product-card" href="#">
-          <div class="product-card__media"><img src="assets/yatekomo-tradicional.png" alt=""></div>
-          <div class="product-card__body">
-            <span class="product-card__line">Original</span>
-            <h3 class="product-card__name">Nombre del producto 3</h3>
-            <span class="product-card__cta"><span class="link link--standalone">Ver producto <span class="icon icon-arrow-right" aria-hidden="true"></span></span></span>
-          </div>
-        </a></li>
-        <li><a class="product-card" href="#">
-          <div class="product-card__media"><img src="assets/yatekomo-bol.png" alt=""></div>
-          <div class="product-card__body">
-            <span class="product-card__line">Original</span>
-            <h3 class="product-card__name">Nombre del producto 4</h3>
-            <span class="product-card__cta"><span class="link link--standalone">Ver producto <span class="icon icon-arrow-right" aria-hidden="true"></span></span></span>
-          </div>
-        </a></li>
+      <ul class="product-categories__grid">
+        <li><a class="category-card" href="#"><img class="category-card__media" src="assets/yakisoba.png" alt=""><span class="category-card__name">Cups</span></a></li>
+        <!-- HUECO: imágenes de Bags y Sauces (no hay assets) -->
+        <li><a class="category-card" href="#"><span class="category-card__name">Bags</span></a></li>
+        <li><a class="category-card" href="#"><span class="badge">New</span><span class="category-card__name">Sauces</span></a></li>
       </ul>
-      <a class="link link--standalone" href="#">Ver todos los productos <span class="icon icon-arrow-right" aria-hidden="true"></span></a>
     </div>
   </section>
 
   <section class="section recipes" aria-labelledby="rc-title">
     <div class="section__inner">
-      <div class="section__bar">
-        <div class="section__header">
-          <h2 class="section__title" id="rc-title">Hackea tu noodle</h2>
-          <p class="section__lead">Recetas rápidas con nuestros productos.</p>
-        </div>
-        <a class="link link--standalone" href="#">Ver todas las recetas <span class="icon icon-arrow-right" aria-hidden="true"></span></a>
+      <div class="section__header">
+        <h2 class="section__title" id="rc-title">We haven’t forgotten you, keen cook</h2>
+        <p class="section__lead">Explore and learn recipes to glow up your meals</p>
       </div>
-      <!-- HUECO: recetas reales (nombre, tiempo y productos); las fotos son de UI/assets/modelos -->
-      <ul class="carousel carousel--3">
+      <a class="button button--secondary button--l recipes__cta" href="#">See all recipes</a>
+      <!-- Comensales («2 people»): sin definir, falta información. HUECO: fotos de las recetas (ahora, fotos de UI/assets/modelos) -->
+      <ul class="carousel">
         <li><article class="recipe-card">
           <div class="recipe-card__media"><img src="assets/modelos/yatekomo-pollo-abuelos.jpg" alt=""></div>
           <div class="recipe-card__body">
-            <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Nombre de la receta 1</a></h3>
-            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>10 min</p>
-            <ul class="recipe-card__products" aria-label="Productos de la receta">
-              <li><a class="chip" href="#">Producto 1</a></li>
-              <li><a class="chip" href="#">Producto 2</a></li>
+            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p>
+            <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Spicy Noodle Salad with almond and mint</a></h3>
+            <ul class="recipe-card__products" aria-label="Products used">
+              <li><a class="chip" href="#">Cup Oriental</a></li>
+              <li><a class="chip" href="#">Salsa Sésamo</a></li>
             </ul>
-            <span class="link link--standalone" aria-hidden="true">Ver receta <span class="icon icon-arrow-right"></span></span>
           </div>
         </article></li>
         <li><article class="recipe-card">
           <div class="recipe-card__media"><img src="assets/modelos/situacion-8.jpg" alt=""></div>
           <div class="recipe-card__body">
-            <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Nombre de la receta 2</a></h3>
-            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>10 min</p>
-            <ul class="recipe-card__products" aria-label="Productos de la receta">
-              <li><a class="chip" href="#">Producto 1</a></li>
-              <li><a class="chip" href="#">Producto 2</a></li>
+            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>40 minutes</p>
+            <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Thai Chicken Noodles with Peanut</a></h3>
+            <ul class="recipe-card__products" aria-label="Products used">
+              <li><a class="chip" href="#">Cup Fideos de arroz</a></li>
             </ul>
-            <span class="link link--standalone" aria-hidden="true">Ver receta <span class="icon icon-arrow-right"></span></span>
           </div>
         </article></li>
         <li><article class="recipe-card">
           <div class="recipe-card__media"><img src="assets/modelos/situacion-9.jpg" alt=""></div>
           <div class="recipe-card__body">
-            <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Nombre de la receta 3</a></h3>
-            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>10 min</p>
-            <ul class="recipe-card__products" aria-label="Productos de la receta">
-              <li><a class="chip" href="#">Producto 1</a></li>
-              <li><a class="chip" href="#">Producto 2</a></li>
+            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>30 minutes</p>
+            <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Green Curry Ramen</a></h3>
+            <ul class="recipe-card__products" aria-label="Products used">
+              <li><a class="chip" href="#">Cup Verduras</a></li>
             </ul>
-            <span class="link link--standalone" aria-hidden="true">Ver receta <span class="icon icon-arrow-right"></span></span>
+          </div>
+        </article></li>
+        <li><article class="recipe-card">
+          <div class="recipe-card__media"><img src="assets/modelos/situacion-10.jpg" alt=""></div>
+          <div class="recipe-card__body">
+            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>50 minutes</p>
+            <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Traditional Japanese Ramen</a></h3>
+            <ul class="recipe-card__products" aria-label="Products used">
+              <li><a class="chip" href="#">Cup Hot&amp;Spicy</a></li>
+            </ul>
           </div>
         </article></li>
       </ul>
     </div>
   </section>
 
-  <section class="section banner" aria-labelledby="bn-title">
+  <section class="section banner" aria-label="Campaign">
     <div class="section__inner">
-      <div class="banner__box">
-        <div class="banner__content">
-          <!-- HUECO: titular, texto y destino del banner -->
-          <h2 class="banner__title" id="bn-title">Titular del banner</h2>
-          <p class="banner__body">Texto de ejemplo del banner: lanzamiento, sabor nuevo o mensaje de campaña.</p>
-          <a class="button button--l" href="#">Saber más</a>
-        </div>
-        <div class="media-frame banner__media"><img src="assets/modelos/situacion-10.jpg" alt=""></div>
-      </div>
+      <!-- HUECO: pieza gráfica de la campaña (Cucurella); el texto alternativo repetirá su mensaje -->
+      <a class="banner__box" href="#">Campaign artwork (full piece, with its text)</a>
     </div>
   </section>
 
@@ -230,47 +208,47 @@
     <div class="section__inner">
       <div class="faq__grid">
         <div class="section__header">
-          <h2 class="section__title" id="faq-title">Preguntas frecuentes</h2>
-          <p class="section__lead">Lo que más nos preguntáis sobre la fórmula natural y la preparación.</p>
-          <a class="link link--standalone" href="#">Ver todas las preguntas <span class="icon icon-arrow-right" aria-hidden="true"></span></a>
+          <h2 class="section__title" id="faq-title">Are you wondering how, too? We’ll tell you</h2>
+          <p class="section__lead">These are the questions we're asked most often, so you won't be left wondering</p>
         </div>
-        <!-- HUECO: respuestas validadas por GB Foods -->
+        <!-- HUECO: respuestas 1, 3 y 4 (las valida GB Foods) -->
         <ul class="faq__list">
           <li><div class="accordion-item">
-            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q1-btn" aria-expanded="true" aria-controls="q1">¿Por qué decimos que es 100 % natural?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
-            <div class="accordion-item__panel" id="q1" role="region" aria-labelledby="q1-btn">Respuesta pendiente.</div>
+            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q1-btn" aria-expanded="false" aria-controls="q1">How is it prepared?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+            <div class="accordion-item__panel" id="q1" role="region" aria-labelledby="q1-btn" hidden>Answer pending.</div>
           </div></li>
           <li><div class="accordion-item">
-            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q2-btn" aria-expanded="false" aria-controls="q2">¿Cuánto tarda en estar listo?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
-            <div class="accordion-item__panel" id="q2" role="region" aria-labelledby="q2-btn" hidden>Respuesta pendiente.</div>
+            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q2-btn" aria-expanded="true" aria-controls="q2">Why has the noodle recipe changed?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+            <div class="accordion-item__panel" id="q2" role="region" aria-labelledby="q2-btn">We've redesigned the recipe to make it much more natural without sacrificing the classic flavor. Before, only about 30% of the ingredients were natural; now, 100% of them are.</div>
           </div></li>
           <li><div class="accordion-item">
-            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q3-btn" aria-expanded="false" aria-controls="q3">¿Qué alérgenos contiene?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
-            <div class="accordion-item__panel" id="q3" role="region" aria-labelledby="q3-btn" hidden>Respuesta pendiente.</div>
+            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q3-btn" aria-expanded="false" aria-controls="q3">Has the taste of the product changed?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+            <div class="accordion-item__panel" id="q3" role="region" aria-labelledby="q3-btn" hidden>Answer pending.</div>
           </div></li>
           <li><div class="accordion-item">
-            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q4-btn" aria-expanded="false" aria-controls="q4">¿Dónde puedo comprarlo?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
-            <div class="accordion-item__panel" id="q4" role="region" aria-labelledby="q4-btn" hidden>Respuesta pendiente.</div>
+            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q4-btn" aria-expanded="false" aria-controls="q4">Where can I find the noodles?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+            <div class="accordion-item__panel" id="q4" role="region" aria-labelledby="q4-btn" hidden>Answer pending.</div>
           </div></li>
         </ul>
+        <p class="faq__more">Still curious? <a class="link link--standalone" href="#">See all FAQS <span class="icon icon-arrow-right" aria-hidden="true"></span></a></p>
       </div>
     </div>
   </section>
 
-  <section class="section where-to-buy" id="donde-comprar" aria-labelledby="wtb-title">
+  <section class="section where-to-buy" id="where-to-buy" aria-labelledby="wtb-title">
     <div class="section__inner">
-      <div class="section__header">
-        <h2 class="section__title" id="wtb-title">Dónde comprar</h2>
-        <p class="section__lead">Encuentra nuestros noodles en estos distribuidores.</p>
+      <div class="where-to-buy__grid">
+        <div class="where-to-buy__text">
+          <span class="where-to-buy__kicker">Where to buy?</span>
+          <h2 class="where-to-buy__title" id="wtb-title">You can find us at these shops</h2>
+        </div>
+        <!-- HUECO: logos de los distribuidores (los aporta GB Foods) y sus URLs -->
+        <ul class="where-to-buy__list">
+          <li><a class="where-to-buy__retailer" href="#" target="_blank" rel="noopener">Coviran<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          <li><a class="where-to-buy__retailer" href="#" target="_blank" rel="noopener">Alcampo<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          <li><a class="where-to-buy__retailer" href="#" target="_blank" rel="noopener">Consum<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        </ul>
       </div>
-      <!-- HUECO: distribuidores reales (logo y enlace externo) -->
-      <ul class="where-to-buy__list">
-        <li><a class="where-to-buy__retailer" href="#">Logo distribuidor 1</a></li>
-        <li><a class="where-to-buy__retailer" href="#">Logo distribuidor 2</a></li>
-        <li><a class="where-to-buy__retailer" href="#">Logo distribuidor 3</a></li>
-        <li><a class="where-to-buy__retailer" href="#">Logo distribuidor 4</a></li>
-        <li><a class="where-to-buy__retailer" href="#">Logo distribuidor 5</a></li>
-      </ul>
     </div>
   </section>
 
@@ -280,48 +258,41 @@
   <div class="footer__main">
     <div class="footer__brand">
       <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
-      <img class="logo logo--gb-foods" src="../design-system/assets/logos/logo-gb-foods.svg" alt="GB Foods">
     </div>
-    <nav class="footer__column" aria-label="Pie">
+    <nav class="footer__column" aria-label="Footer">
       <ul class="footer__links">
-        <li><a class="link link--dark" href="#">Productos</a></li>
-        <li><a class="link link--dark" href="#">Recetas</a></li>
-        <li><a class="link link--dark" href="#">Fórmula natural</a></li>
-        <li><a class="link link--dark" href="#">Concursos</a></li>
-        <li><a class="link link--dark" href="#">FAQ</a></li>
+        <li><a class="link link--dark" href="#">Products</a></li>
+        <li><a class="link link--dark" href="#">100% Natural formula</a></li>
+        <li><a class="link link--dark" href="#">Recipes</a></li>
+        <li><a class="link link--dark" href="#">Contests</a></li>
+        <li><a class="link link--dark" href="#">FAQS</a></li>
+        <!-- HUECO: enlaces de campaña activa -->
+        <li><a class="link link--dark" href="#">Campaign link 1</a></li>
+        <li><a class="link link--dark" href="#">Campaign link 2</a></li>
       </ul>
     </nav>
-    <div class="footer__column">
-      <!-- HUECO: URL del formulario de contacto de GB Foods -->
-      <a class="link link--standalone link--dark" href="#" target="_blank" rel="noopener">Contacto <span class="icon icon-external-link" aria-hidden="true"></span><span class="visually-hidden"> (abre en una pestaña nueva)</span></a>
-      <!-- HUECO: URLs de las redes de la marca -->
-      <ul class="footer__social" aria-label="Redes sociales">
-        <li><a class="link link--dark" href="#" aria-label="TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="X"><span class="icon icon-x" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a></li>
-      </ul>
+    <!-- Sellos y certificados («2025 Certified by»): sin definir, falta información -->
+    <div class="footer__ticket">
+      <div class="footer__ticket-copy">
+        <h2 class="footer__ticket-title">Do you have any ideas, complaints or cravings?</h2>
+        <p class="footer__ticket-text">Cut to the chase and tell us what you think. We're really reading your comments, for real.</p>
+      </div>
+      <!-- HUECO: URL del formulario externo de Calidad -->
+      <a class="button" href="#" target="_blank" rel="noopener">Send suggestions <span class="icon icon-external-link" aria-hidden="true"></span><span class="visually-hidden"> (opens in a new tab)</span></a>
     </div>
   </div>
   <div class="footer__legal">
-    <a class="link link--dark" href="#">Privacy</a>
     <a class="link link--dark" href="#">Legal notice</a>
-    <a class="link link--dark" href="#">Cookies</a>
-    <a class="link link--dark" href="#">Lawful basis</a>
-    <a class="link link--dark" href="#">Contest rules</a>
-    <span>© 2026 GB Foods</span>
+    <a class="link link--dark" href="#">Privacy policy</a>
+    <a class="link link--dark" href="#">Cookies policy</a>
+    <a class="link link--dark" href="#">Legal basis</a>
+    <a class="link link--dark" href="#">Contact</a>
+    <span>© GBFoods</span>
   </div>
 </footer>
 
-<!-- HUECO: URL del formulario externo de Calidad -->
-<a class="suggestion-bubble" href="#" target="_blank" rel="noopener" aria-label="Sugerencias (abre en una pestaña nueva)">
-  <span class="icon icon-message-circle" aria-hidden="true"></span>
-  <span class="suggestion-bubble__label">Sugerencias</span>
-  <span class="icon icon-external-link" aria-hidden="true"></span>
-</a>
-
 <script>
-  // Comportamiento mínimo de la maqueta: menú móvil (dialog) y FAQ con una sola respuesta abierta.
+  // Comportamiento mínimo de la maqueta: menú a pantalla completa (dialog) y FAQ con una sola respuesta abierta.
   const menu = document.getElementById('menu');
   const opener = document.querySelector('[data-menu-open]');
   opener.addEventListener('click', () => { menu.showModal(); opener.setAttribute('aria-expanded', 'true'); });

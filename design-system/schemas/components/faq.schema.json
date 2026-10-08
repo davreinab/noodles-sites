@@ -6,8 +6,8 @@
     "slug": "faq",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T10:21:35Z",
-    "description": "Bloque de FAQ (Home, Natural formula con su FAQ propio, página FAQS indexada): título (h2) + entradilla + Link «Ver todas las preguntas» · lista de Accordion item (space/16 entre ítems; el primero puede ir abierto). En la página FAQS se repite por categorías sin el enlace. SEO/AEO: las respuestas están en el HTML y la página lleva datos estructurados FAQPage. Desktop: cabecera a la izquierda (400 px) y lista a la derecha; Mobile: apilado. Sin variables propias.",
+    "lastSync": "2026-10-08T11:10:38Z",
+    "description": "Bloque de FAQ (Home, Natural formula y página FAQS; wireframe UX): título (h2) + entradilla · lista de Accordion item (space/16; uno abierto a la vez) · «Still curious?» + Link «See all FAQS» a la página FAQS (desktop al pie de la columna del título; mobile debajo de la lista). En la página FAQS se repite por categorías sin el enlace. SEO/AEO: las respuestas están en el HTML y la página lleva datos estructurados FAQPage; las respuestas las valida GB Foods. Desktop: cabecera a la izquierda (400 px) y lista a la derecha; Mobile: apilado. Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
@@ -46,6 +46,7 @@
         "faq",
         "faq__grid",
         "faq__list",
+        "faq__more",
         "icon",
         "icon-arrow-right",
         "icon-plus",
@@ -57,7 +58,7 @@
         "section__lead",
         "section__title"
       ],
-      "example": "<section class=\"section faq\" aria-labelledby=\"faq-title\">\n<div class=\"section__inner\">\n<div class=\"faq__grid\">\n<div class=\"section__header\"><h2 class=\"section__title\" id=\"faq-title\">Preguntas frecuentes</h2><p class=\"section__lead\">Lo que más nos preguntáis.</p><a class=\"link link--standalone\" href=\"/faqs\">Ver todas las preguntas <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a></div>\n<ul class=\"faq__list\"><li><div class=\"accordion-item\"><h3 class=\"accordion-item__heading\"><button class=\"accordion-item__button\" type=\"button\" aria-expanded=\"false\" aria-controls=\"q1\">¿Cuánto tarda en estar listo?<span class=\"icon icon-plus\" aria-hidden=\"true\"></span></button></h3><div class=\"accordion-item__panel\" id=\"q1\" hidden>Tres minutos.</div></div></li></ul>\n</div>\n</div>\n</section>"
+      "example": "<section class=\"section faq\" aria-labelledby=\"faq-title\">\n<div class=\"section__inner\">\n<div class=\"faq__grid\">\n<div class=\"section__header\"><h2 class=\"section__title\" id=\"faq-title\">Are you wondering how, too? We’ll tell you</h2><p class=\"section__lead\">These are the questions we're asked most often, so you won't be left wondering</p></div>\n<ul class=\"faq__list\"><li><div class=\"accordion-item\"><h3 class=\"accordion-item__heading\"><button class=\"accordion-item__button\" type=\"button\" aria-expanded=\"false\" aria-controls=\"q1\">How is it prepared?<span class=\"icon icon-plus\" aria-hidden=\"true\"></span></button></h3><div class=\"accordion-item__panel\" id=\"q1\" hidden>Respuesta.</div></div></li></ul>\n<p class=\"faq__more\">Still curious? <a class=\"link link--standalone\" href=\"/faqs\">See all FAQS <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a></p>\n</div>\n</div>\n</section>"
     }
   },
   "api": {
@@ -102,22 +103,6 @@
       },
       {
         "layer": "accordion-item",
-        "component": "Expanded=True, State=Default",
-        "componentSlug": "accordion-item",
-        "exposedAs": null,
-        "toggledBy": null,
-        "visibleByDefault": true
-      },
-      {
-        "layer": "icon-expanded",
-        "component": "Icon / minus",
-        "componentSlug": "icon-minus",
-        "exposedAs": "Icon expanded#69:21",
-        "toggledBy": null,
-        "visibleByDefault": true
-      },
-      {
-        "layer": "accordion-item",
         "component": "Expanded=False, State=Default",
         "componentSlug": "accordion-item",
         "exposedAs": null,
@@ -129,6 +114,22 @@
         "component": "Icon / plus",
         "componentSlug": "icon-plus",
         "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "accordion-item",
+        "component": "Expanded=True, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-expanded",
+        "component": "Icon / minus",
+        "componentSlug": "icon-minus",
+        "exposedAs": "Icon expanded#69:21",
         "toggledBy": null,
         "visibleByDefault": true
       },
@@ -230,6 +231,8 @@
       "lineHeight: font/line-height/desktop/body-l",
       "color: color/text/secondary",
       "itemSpacing: space/8",
+      "fontSize: font/size/desktop/body-m",
+      "lineHeight: font/line-height/desktop/body-m",
       "fills: link/default",
       "fontSize: font/size/desktop/label",
       "lineHeight: font/line-height/desktop/label",
@@ -260,15 +263,13 @@
       "strokes: accordion/icon",
       "color: accordion/icon",
       "fills: accordion/answer",
-      "fontSize: font/size/desktop/body-m",
-      "lineHeight: font/line-height/desktop/body-m",
       "color: accordion/answer"
     ],
     "textStyles": [
       "Desktop/h2",
       "Desktop/body-l",
-      "Desktop/label",
-      "Desktop/body-m"
+      "Desktop/body-m",
+      "Desktop/label"
     ],
     "theming": {
       "brandAware": true,

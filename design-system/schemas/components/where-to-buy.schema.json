@@ -6,22 +6,23 @@
     "slug": "where-to-buy",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T10:21:35Z",
-    "description": "Dónde comprar (Home, página de producto; destino del CTA «Dónde comprar» de la Navbar): título (h2) · texto · rejilla de distribuidores del país. Cada distribuidor es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; tarjeta color/surface/card con borde de tinta sobre color/surface/brand. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: 5 por fila; Mobile: 2 por fila. Sin variables propias.",
+    "lastSync": "2026-10-08T11:10:38Z",
+    "description": "Dónde comprar (Home, página de producto; destino del CTA de la Navbar; wireframe UX): antetítulo «Where to buy?» + título (h2, estilo h3) «You can find us at these shops» · fila de logos de distribuidores del país. Cada logo es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; sin tarjeta: el logo va directo sobre color/surface/brand. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: texto a la izquierda y logos a la derecha; Mobile: texto arriba y logos en fila con scroll horizontal. Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "359fd1b81072",
+    "anatomyHash": "f1d2ff914cb1",
     "verification": {
       "status": "verified",
       "date": "2026-10-08",
-      "figmaVersion": "359fd1b81072",
+      "figmaVersion": "f1d2ff914cb1",
       "variantsChecked": [
         "Breakpoint=Desktop",
         "Breakpoint=Mobile"
       ],
-      "by": "agent (Claude)"
+      "by": "agent (Claude)",
+      "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)"
     }
   },
   "source": {
@@ -40,15 +41,16 @@
       "path": "design-system/css/components.css",
       "classes": [
         "section",
-        "section__header",
         "section__inner",
-        "section__lead",
-        "section__title",
         "where-to-buy",
+        "where-to-buy__grid",
+        "where-to-buy__kicker",
         "where-to-buy__list",
-        "where-to-buy__retailer"
+        "where-to-buy__retailer",
+        "where-to-buy__text",
+        "where-to-buy__title"
       ],
-      "example": "<section class=\"section where-to-buy\" id=\"donde-comprar\" aria-labelledby=\"wtb-title\">\n<div class=\"section__inner\">\n<div class=\"section__header\"><h2 class=\"section__title\" id=\"wtb-title\">Dónde comprar</h2><p class=\"section__lead\">Encuentra nuestros noodles en estos distribuidores.</p></div>\n<ul class=\"where-to-buy__list\"><li><a class=\"where-to-buy__retailer\" href=\"https://tienda.example.org\" target=\"_blank\" rel=\"noopener\"><img src=\"/media/distribuidor.svg\" alt=\"Distribuidor (abre en una pestaña nueva)\"></a></li></ul>\n</div>\n</section>"
+      "example": "<section class=\"section where-to-buy\" id=\"donde-comprar\" aria-labelledby=\"wtb-title\">\n<div class=\"section__inner\">\n<div class=\"where-to-buy__grid\">\n<div class=\"where-to-buy__text\"><span class=\"where-to-buy__kicker\">Where to buy?</span><h2 class=\"where-to-buy__title\" id=\"wtb-title\">You can find us at these shops</h2></div>\n<ul class=\"where-to-buy__list\"><li><a class=\"where-to-buy__retailer\" href=\"https://tienda.example.org\" target=\"_blank\" rel=\"noopener\"><img src=\"/media/distribuidor.svg\" alt=\"Distribuidor (abre en una pestaña nueva)\"></a></li></ul>\n</div>\n</div>\n</section>"
     }
   },
   "api": {
@@ -85,19 +87,15 @@
     "slots": [],
     "tokensUsed": [
       "border/width/thin",
-      "color/border/default",
       "color/surface/brand",
-      "color/surface/card",
       "color/text/default",
       "color/text/secondary",
       "font/family/body",
       "font/family/display",
-      "font/line-height/desktop/body-l",
       "font/line-height/desktop/caption",
-      "font/line-height/desktop/h2",
-      "font/size/desktop/body-l",
+      "font/line-height/desktop/h3",
       "font/size/desktop/caption",
-      "font/size/desktop/h2",
+      "font/size/desktop/h3",
       "font/style/body",
       "font/style/display",
       "layout/frame",
@@ -105,7 +103,9 @@
       "layout/margin",
       "layout/section-y",
       "radius/md",
-      "space/32"
+      "space/32",
+      "space/4",
+      "space/64"
     ],
     "variablesUsed": [
       "itemSpacing: space/32",
@@ -116,16 +116,18 @@
       "width: layout/frame",
       "fills: color/surface/brand",
       "color: color/surface/brand",
+      "itemSpacing: space/64",
+      "itemSpacing: space/4",
       "fills: color/text/default",
-      "fontSize: font/size/desktop/h2",
-      "fontStyle: font/style/display",
-      "fontFamily: font/family/display",
-      "lineHeight: font/line-height/desktop/h2",
-      "color: color/text/default",
-      "fontSize: font/size/desktop/body-l",
+      "fontSize: font/size/desktop/caption",
       "fontStyle: font/style/body",
       "fontFamily: font/family/body",
-      "lineHeight: font/line-height/desktop/body-l",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: color/text/default",
+      "fontSize: font/size/desktop/h3",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h3",
       "itemSpacing: layout/gutter",
       "counterAxisSpacing: layout/gutter",
       "topLeftRadius: radius/md",
@@ -136,19 +138,12 @@
       "strokeBottomWeight: border/width/thin",
       "strokeLeftWeight: border/width/thin",
       "strokeRightWeight: border/width/thin",
-      "fills: color/surface/card",
-      "strokes: color/border/default",
-      "color: color/surface/card",
-      "color: color/border/default",
       "fills: color/text/secondary",
-      "fontSize: font/size/desktop/caption",
-      "lineHeight: font/line-height/desktop/caption",
       "color: color/text/secondary"
     ],
     "textStyles": [
-      "Desktop/h2",
-      "Desktop/body-l",
-      "Desktop/caption"
+      "Desktop/caption",
+      "Desktop/h3"
     ],
     "theming": {
       "brandAware": true,
@@ -162,19 +157,15 @@
       ],
       "defaultBrand": "yatekomo",
       "brandTokens": [
-        "color/border/default",
         "color/surface/brand",
-        "color/surface/card",
         "color/text/default",
         "color/text/secondary",
         "font/family/body",
         "font/family/display",
-        "font/line-height/desktop/body-l",
         "font/line-height/desktop/caption",
-        "font/line-height/desktop/h2",
-        "font/size/desktop/body-l",
+        "font/line-height/desktop/h3",
         "font/size/desktop/caption",
-        "font/size/desktop/h2",
+        "font/size/desktop/h3",
         "font/style/body",
         "font/style/display"
       ]

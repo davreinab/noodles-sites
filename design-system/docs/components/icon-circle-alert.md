@@ -1,7 +1,7 @@
-### Icon / circle-alert   ⚙️ synced: 2026-10-08T10:21:35Z
+### Icon / circle-alert   ⚙️ synced: 2026-10-08T11:10:38Z
 
 <!-- ⚙️ GENERATED:start:icon-circle-alert -->
-- **Figma:** `46:78` · página «Iconography» · COMPONENT · 1 variantes · última sync 2026-10-08T10:21:35Z
+- **Figma:** `46:78` · página «Iconography» · COMPONENT · 1 variantes · última sync 2026-10-08T11:10:38Z
 - **Descripción (Figma):** Aviso o error: mensajes de error de formulario, alertas. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

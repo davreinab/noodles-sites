@@ -6,7 +6,7 @@
     "slug": "product-card",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T10:21:35Z",
+    "lastSync": "2026-10-08T11:10:38Z",
     "description": "Card de producto (Product library, carruseles, productos relacionados). Anatomía: media (hueco de imagen 3D sobre product-card/media-bg; no se inventa fotografía) con Badge opcional (New/Natural) · línea (Original/Yakisoba/Rice) · nombre (h3) · Link «Ver producto». Toda la card es un único enlace al producto (el Link es la pista visual, no un segundo destino). Hover: elevation/2; Focus: anillo product-card/focus-ring. Desktop 320 px; en móvil ocupa la columna (FILL).",
     "figmaPage": "Cards",
     "figmaType": "COMPONENT_SET",
@@ -182,6 +182,10 @@
       "paddingTop: space/16",
       "paddingRight: space/16",
       "paddingBottom: space/16",
+      "topLeftRadius: radius/none",
+      "topRightRadius: radius/none",
+      "bottomLeftRadius: radius/none",
+      "bottomRightRadius: radius/none",
       "fills: product-card/media-bg",
       "color: product-card/media-bg",
       "paddingLeft: space/8",
@@ -222,11 +226,7 @@
       "color: link/default",
       "width: icon/size/sm",
       "height: icon/size/sm",
-      "strokes: link/default",
-      "topLeftRadius: radius/none",
-      "topRightRadius: radius/none",
-      "bottomLeftRadius: radius/none",
-      "bottomRightRadius: radius/none"
+      "strokes: link/default"
     ],
     "textStyles": [
       "Mobile/label",
@@ -283,8 +283,7 @@
       "link"
     ],
     "usedBy": [
-      "library",
-      "product-carousel"
+      "library"
     ],
     "related": []
   }

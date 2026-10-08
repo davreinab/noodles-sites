@@ -1,17 +1,17 @@
-### Mobile menu   ⚙️ synced: 2026-10-08T10:21:35Z
+### Mobile menu   ⚙️ synced: 2026-10-08T11:10:38Z
 
 <!-- ⚙️ GENERATED:start:mobile-menu -->
-- **Figma:** `55:119` · página «Pattern / Global» · COMPONENT · 1 variantes · última sync 2026-10-08T10:21:35Z
-- **Descripción (Figma):** Patrón: menú móvil a pantalla completa (se abre desde el botón menú de la Navbar). Logo negativo · cerrar · 5 Nav item (Menu) · Lang switch (solo marcas multiidioma) · CTA. Accesibilidad: role=&quot;dialog&quot; con aria-modal, foco atrapado dentro, Esc cierra y el foco vuelve al botón menú; layer/modal. Sin variables propias.
-- **Anatomía:** `logo` → Version=Negative, `close` → Hierarchy=Inverse, Size=M, State=Default, `icon` → Icon / close, `nav-item` → Type=Menu, State=Active, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `lang-switch` → Selected=First, `cta` → Hierarchy=Inverse, Size=L, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right
+- **Figma:** `55:119` · página «Pattern / Global» · COMPONENT · 1 variantes · última sync 2026-10-08T11:10:38Z
+- **Descripción (Figma):** Patrón: menú a pantalla completa en todos los breakpoints (wireframe UX: se abre desde el botón menú de la Navbar, también en desktop). Logo negativo · cerrar · 5 Nav item (Menu): Products, Natural formula, Recipes, Contests, FAQS · Lang switch (solo marcas multiidioma) · «Our social media:» con los iconos de redes de la marca (enlaces externos) · © GBFoods. Accesibilidad: &lt;dialog&gt; modal, foco atrapado dentro, Esc cierra y el foco vuelve al botón menú; layer/modal. Fondo color/surface/inverse. Sin variables propias.
+- **Anatomía:** `logo` → Version=Negative, `close` → Hierarchy=Inverse, Size=M, State=Default, `icon` → Icon / close, `nav-item` → Type=Menu, State=Active, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `lang-switch` → Selected=First, `social` → Icon / tiktok, `social` → Icon / instagram, `social` → Icon / x, `social` → Icon / youtube
 - **Propiedades de componente:** `Logo#55:6` (INSTANCE_SWAP, por defecto Version=Negative), `Lang switch#55:7` (BOOLEAN, por defecto False)
-- **Iconos / instancias anidadas:** sí · swap: `Logo#55:6` · por defecto: Version=Negative
-- **Tokens que consume:** `border/width/thick`, `border/width/thin`, `button/inverse/bg`, `button/inverse/border`, `button/inverse/text`, `color/surface/inverse`, `font/family/display`, `font/line-height/desktop/label`, `font/line-height/mobile/h2`, `font/size/desktop/label`, `font/size/mobile/h2`, `font/style/display`, `icon-button/size/m`, `icon/size/md`, `icon/size/sm`, `lang-switch/bg`, `lang-switch/bg-selected`, `lang-switch/border`, `lang-switch/text`, `lang-switch/text-selected`, `layout/frame`, `layout/margin`, `nav-item/menu-text`, `nav-item/menu-text-active`, `radius/pill`, `radius/sm`, `space/16`, `space/24`, `space/32`, `space/4`, `space/40`, `space/48`, `space/8`
-- **Text styles:** `Mobile/h2`, `Desktop/label`
-- **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `button/inverse/bg`, `button/inverse/border`, `button/inverse/text`, `color/surface/inverse`, `font/family/display`, `font/line-height/desktop/label`, `font/line-height/mobile/h2`, `font/size/desktop/label`, `font/size/mobile/h2`, `font/style/display`, `lang-switch/bg`, `lang-switch/bg-selected`, `lang-switch/border`, `lang-switch/text`, `lang-switch/text-selected`, `nav-item/menu-text`, `nav-item/menu-text-active`
+- **Iconos / instancias anidadas:** sí · swap: `Logo#55:6` · por defecto: Version=Negative · capas sin swap: social, social, social, social
+- **Tokens que consume:** `border/width/thick`, `border/width/thin`, `button/inverse/bg`, `button/inverse/border`, `button/inverse/text`, `color/surface/inverse`, `color/text/on-inverse`, `font/family/body`, `font/family/display`, `font/line-height/desktop/body-s`, `font/line-height/desktop/caption`, `font/line-height/desktop/label`, `font/line-height/mobile/h2`, `font/size/desktop/body-s`, `font/size/desktop/caption`, `font/size/desktop/label`, `font/size/mobile/h2`, `font/style/body`, `font/style/display`, `icon-button/size/m`, `icon/color/inverse`, `icon/size/md`, `lang-switch/bg`, `lang-switch/bg-selected`, `lang-switch/border`, `lang-switch/text`, `lang-switch/text-selected`, `layout/frame`, `layout/margin`, `nav-item/menu-text`, `nav-item/menu-text-active`, `radius/pill`, `radius/sm`, `space/16`, `space/4`, `space/40`, `space/48`, `space/8`
+- **Text styles:** `Mobile/h2`, `Desktop/label`, `Desktop/body-s`, `Desktop/caption`
+- **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `button/inverse/bg`, `button/inverse/border`, `button/inverse/text`, `color/surface/inverse`, `color/text/on-inverse`, `font/family/body`, `font/family/display`, `font/line-height/desktop/body-s`, `font/line-height/desktop/caption`, `font/line-height/desktop/label`, `font/line-height/mobile/h2`, `font/size/desktop/body-s`, `font/size/desktop/caption`, `font/size/desktop/label`, `font/size/mobile/h2`, `font/style/body`, `font/style/display`, `icon/color/inverse`, `lang-switch/bg`, `lang-switch/bg-selected`, `lang-switch/border`, `lang-switch/text`, `lang-switch/text-selected`, `nav-item/menu-text`, `nav-item/menu-text-active`
 <!-- ⚙️ GENERATED:end:mobile-menu -->
 
-- **Propósito:** Menú móvil a pantalla completa sobre tinta: logo negativo, cerrar, las cinco secciones, idioma y «Dónde comprar».
+- **Propósito:** Menú a pantalla completa en todos los breakpoints (wireframe UX): navegación principal, redes de la marca y ©. Se abre desde el botón de menú de la Navbar.
 - **Ejemplo de código:**
   ```html
   <dialog class="mobile-menu" id="menu" aria-label="Menú" open>
@@ -21,12 +21,16 @@
   <button class="icon-button icon-button--inverse" type="button" aria-label="Cerrar menú"><span class="icon icon-close" aria-hidden="true"></span></button>
   </div>
   <nav class="mobile-menu__nav" aria-label="Principal">
-  <a class="nav-item nav-item--menu" href="/productos" aria-current="page">Productos</a>
-  <a class="nav-item nav-item--menu" href="/recetas">Recetas</a>
+  <a class="nav-item nav-item--menu" href="/productos" aria-current="page">Products</a>
+  <a class="nav-item nav-item--menu" href="/formula-natural">Natural formula</a>
   </nav>
-  <a class="button button--inverse button--l" href="#donde-comprar">Dónde comprar</a>
+  <div class="mobile-menu__social">
+  <p class="mobile-menu__social-label">Our social media:</p>
+  <ul class="mobile-menu__social-list"><li><a class="link link--dark" href="https://www.instagram.com/" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li></ul>
+  </div>
+  <p class="mobile-menu__copyright">© GBFoods</p>
   </div>
   </dialog>
   ```
-- **Accesibilidad (pares AA verificados):** Crema sobre tinta 17,2:1; activo y foco en amarillo 12,3:1. Rol: `<dialog>` modal abierto con `showModal()` (foco atrapado, fondo inerte; el ejemplo lleva `open` solo para mostrarlo), abierto desde el botón de menú de la Navbar; Esc y «Cerrar menú» lo cierran y el foco vuelve al botón de menú. Enlaces grandes (Mobile/h2), muy por encima de 44 px de área táctil.
-- **Cuándo usar / qué NO hace:** Solo en móvil y tablet. No es un menú lateral parcial ni contiene búsqueda (la búsqueda sigue en la Navbar).
+- **Accesibilidad (pares AA verificados):** `<dialog>` modal: foco atrapado, Esc cierra y el foco vuelve al botón de menú. Ítems crema sobre tinta 17:1; el activo, amarillo con indicador (forma, no solo color). Cada red es un enlace con nombre.
+- **Cuándo usar / qué NO hace:** Es la navegación principal en todos los breakpoints. No lleva CTA ni buscador.

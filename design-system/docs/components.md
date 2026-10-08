@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 57 componentes sincronizados el 2026-10-08T10:21:35Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 58 componentes sincronizados el 2026-10-08T11:10:38Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -60,6 +60,7 @@
 - [Product card](components/product-card.md) · component · `product-card` · ✅ criterio completo
 - [Recipe card](components/recipe-card.md) · component · `recipe-card` · ✅ criterio completo
 - [Contest card](components/contest-card.md) · component · `contest-card` · ✅ criterio completo
+- [Category card](components/category-card.md) · component · `category-card` · ✅ criterio completo
 - [Accordion item](components/accordion-item.md) · component · `accordion-item` · ✅ criterio completo
 - [Ingredient item](components/ingredient-item.md) · component · `ingredient-item` · ✅ criterio completo
 - [Ingredients](components/ingredients.md) · component · `ingredients` · ✅ criterio completo

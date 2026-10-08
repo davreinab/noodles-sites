@@ -1,7 +1,7 @@
-### Textarea   ⚙️ synced: 2026-10-08T10:21:35Z
+### Textarea   ⚙️ synced: 2026-10-08T11:10:38Z
 
 <!-- ⚙️ GENERATED:start:textarea -->
-- **Figma:** `47:247` · página «Forms» · COMPONENT_SET · 6 variantes · última sync 2026-10-08T10:21:35Z
+- **Figma:** `47:247` · página «Forms» · COMPONENT_SET · 6 variantes · última sync 2026-10-08T11:10:38Z
 - **Descripción (Figma):** Campo de texto multilínea (comentarios, respuestas de concurso). Etiqueta siempre visible (no se sustituye por el placeholder). Error: borde rojo + icono + mensaje (nunca solo color); el mensaje se asocia con aria-describedby. Required muestra asterisco y requiere aria-required. El valor y el texto de ayuda se editan en la instancia.
 - **Anatomía:** `icon-error` → Icon / circle-alert
 - **State:** Default, Hover, Focus, Filled, Error, Disabled

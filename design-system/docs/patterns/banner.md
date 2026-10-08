@@ -1,7 +1,7 @@
-### Banner   ⚙️ synced: 2026-10-07T18:49:29Z
+### Banner   ⚙️ synced: 2026-10-08T06:16:03Z
 
 <!-- ⚙️ GENERATED:start:banner -->
-- **Figma:** `92:884` · página «Pattern / Banner» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:49:29Z
+- **Figma:** `92:884` · página «Pattern / Banner» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T06:16:03Z
 - **Descripción (Figma):** Banner promocional de la Home (lanzamiento, sabor nuevo, mensaje de campaña): bloque color/surface/accent (naranja de marca) con borde de tinta, radius/lg y elevation/2 (sombra dura de marca) · titular (h1) · texto · Button Primary · imagen de marca. Sobre el acento solo va color/text/default (regla del token). Desktop: texto a la izquierda; Mobile: texto arriba e imagen debajo. No es un carrusel. Sin variables propias.
 - **Anatomía:** `cta` → Hierarchy=Primary, Size=L, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right
 - **Breakpoint:** Desktop, Mobile

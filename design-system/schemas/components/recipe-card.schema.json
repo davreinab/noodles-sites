@@ -6,7 +6,7 @@
     "slug": "recipe-card",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:49:29Z",
+    "lastSync": "2026-10-08T06:16:03Z",
     "description": "Card de receta (Recipe library, Home, página de producto). Anatomía: media (imagen de marca; sin vídeo al principio) · título (h3) · tiempo (icono timer + texto, recipe-card/meta) · productos usados como Chip S (enlazan a la ficha de producto) · Link «Ver receta». La card enlaza a la receta; los Chip son enlaces propios y quedan fuera del área clicable principal. Hover: elevation/2; Focus: anillo recipe-card/focus-ring. Desktop 384 px; en móvil FILL.",
     "figmaPage": "Recipe card",
     "figmaType": "COMPONENT_SET",

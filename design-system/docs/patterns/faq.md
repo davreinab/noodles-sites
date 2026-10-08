@@ -1,7 +1,7 @@
-### FAQ   ⚙️ synced: 2026-10-07T18:49:29Z
+### FAQ   ⚙️ synced: 2026-10-08T06:16:03Z
 
 <!-- ⚙️ GENERATED:start:faq -->
-- **Figma:** `92:960` · página «Pattern / FAQ» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:49:29Z
+- **Figma:** `92:960` · página «Pattern / FAQ» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T06:16:03Z
 - **Descripción (Figma):** Bloque de FAQ (Home, Natural formula con su FAQ propio, página FAQS indexada): título (h2) + entradilla + Link «Ver todas las preguntas» · lista de Accordion item (space/16 entre ítems; el primero puede ir abierto). En la página FAQS se repite por categorías sin el enlace. SEO/AEO: las respuestas están en el HTML y la página lleva datos estructurados FAQPage. Desktop: cabecera a la izquierda (400 px) y lista a la derecha; Mobile: apilado. Sin variables propias.
 - **Anatomía:** `link` → Type=Standalone, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right, `accordion-item` → Expanded=True, State=Default, `icon-expanded` → Icon / minus, `accordion-item` → Expanded=False, State=Default, `icon-collapsed` → Icon / plus
 - **Breakpoint:** Desktop, Mobile

@@ -2,7 +2,7 @@
 
 # GB Noodles · Microsites · Assets  ·  _(iconos y fuentes exportados de Figma)_
 
-> Última sync: 2026-10-07T18:49:29Z. Los archivos viven en `../assets/icons/` y `../assets/fonts/`; las pantallas los referencian desde ahí. No existe ningún otro `img/` ni `fonts/` en el proyecto.
+> Última sync: 2026-10-08T06:16:03Z. Los archivos viven en `../assets/icons/` y `../assets/fonts/`; las pantallas los referencian desde ahí. No existe ningún otro `img/` ni `fonts/` en el proyecto.
 
 ## Iconos (`../assets/icons/`)
 | Archivo | Componente Figma | Node ID | Tamaños (tokens `--icon-size-*`) | Uso |
@@ -40,3 +40,6 @@
 | `anton-latin.woff2` | Anton · 400 | SIL OFL 1.1 (`OFL-anton.txt`) · Google Fonts | `--font-family-display` | subconjunto latin |
 | `archivo-latin-ext.woff2` | Archivo · variable 400–700 | SIL OFL 1.1 (`OFL-archivo.txt`) · Google Fonts | `--font-family-body` | subconjunto latin-ext |
 | `archivo-latin.woff2` | Archivo · variable 400–700 | SIL OFL 1.1 (`OFL-archivo.txt`) · Google Fonts | `--font-family-body` | subconjunto latin; 700 para alérgenos y valores |
+| `dirty-headline.ttf` | Dirty Headline | Landings (noodles/landing/assets/fonts) · ⬜ TODO — licencia pendiente (traspaso §11) | — (no la usa el DS) | traída de las landings para reutilizarla en pantallas; no se publica hasta confirmar la licencia |
+| `dirty-headline.woff` | Dirty Headline | Landings (noodles/landing/assets/fonts) · ⬜ TODO — licencia pendiente (traspaso §11) | — (no la usa el DS) | traída de las landings para reutilizarla en pantallas; no se publica hasta confirmar la licencia |
+| `dirty-headline.woff2` | Dirty Headline | Landings (noodles/landing/assets/fonts) · ⬜ TODO — licencia pendiente (traspaso §11) | — (no la usa el DS) | traída de las landings para reutilizarla en pantallas; no se publica hasta confirmar la licencia |

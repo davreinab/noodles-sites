@@ -6,7 +6,7 @@
     "slug": "input",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:49:29Z",
+    "lastSync": "2026-10-08T06:16:03Z",
     "description": "Campo de texto de una línea (formularios de concursos con estructura propia). Etiqueta siempre visible (no se sustituye por el placeholder). Error: borde rojo + icono + mensaje (nunca solo color); el mensaje se asocia al campo con aria-describedby. Required muestra asterisco y requiere aria-required. El valor y el texto de ayuda se editan en la instancia.",
     "figmaPage": "Input",
     "figmaType": "COMPONENT_SET",

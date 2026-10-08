@@ -1,7 +1,7 @@
-### Product details   ⚙️ synced: 2026-10-07T18:49:29Z
+### Product details   ⚙️ synced: 2026-10-08T06:16:03Z
 
 <!-- ⚙️ GENERATED:start:product-details -->
-- **Figma:** `94:329` · página «Pattern / Product details» · COMPONENT_SET · 2 variantes · última sync 2026-10-07T18:49:29Z
+- **Figma:** `94:329` · página «Pattern / Product details» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T06:16:03Z
 - **Descripción (Figma):** Sección de ingredientes y nutrición (página de producto; en la receta se usa con los valores de la receta): título (h2) · Ingredients (lista jerarquizada, alérgenos en negrita, Link «Ver etiqueta del envase» que abre Modal L con la imagen de la etiqueta) · Nutrition panel (barras proporcionales al % IR, alérgenos y nota de validación). Ancla destino de «Ver ingredientes» del Product hero. Desktop: dos columnas iguales; Mobile: ingredientes y después nutrición. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods. Sin variables propias.
 - **Anatomía:** `ingredients` → Ingredients, `ingredient-main` → Level=Main, `ingredient-secondary` → Level=Secondary, `label-link` → Type=Standalone, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right, `nutrition-panel` → Nutrition panel, `nutrition-bar` → Highlight=False, `nutrition-bar` → Highlight=True, `claim` → Type=Natural
 - **Breakpoint:** Desktop, Mobile

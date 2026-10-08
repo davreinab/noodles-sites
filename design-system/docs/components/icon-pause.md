@@ -1,7 +1,7 @@
-### Icon / pause   ⚙️ synced: 2026-10-07T18:49:29Z
+### Icon / pause   ⚙️ synced: 2026-10-08T06:16:03Z
 
 <!-- ⚙️ GENERATED:start:icon-pause -->
-- **Figma:** `76:52` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-07T18:49:29Z
+- **Figma:** `76:52` · página «Icons» · COMPONENT · 1 variantes · última sync 2026-10-08T06:16:03Z
 - **Descripción (Figma):** Pausa: temporizador y vídeo. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

@@ -1,7 +1,7 @@
-### Icon button   ⚙️ synced: 2026-10-07T18:49:29Z
+### Icon button   ⚙️ synced: 2026-10-08T06:16:03Z
 
 <!-- ⚙️ GENERATED:start:icon-button -->
-- **Figma:** `33:401` · página «Icon button» · COMPONENT_SET · 24 variantes · última sync 2026-10-07T18:49:29Z
+- **Figma:** `33:401` · página «Icon button» · COMPONENT_SET · 24 variantes · última sync 2026-10-08T06:16:03Z
 - **Descripción (Figma):** Botón solo con icono: cerrar, menú, flechas del slider, play. Mismas jerarquías y colores que Button. M 48 px (icono 24), L 64 px (icono 32). Accesibilidad: requiere nombre accesible (aria-label) porque no tiene texto visible. Tamaño fijo con icon-button/size/m (48) y /l (64), icono centrado. Norma de botones (2026-10-07): misma altura en la misma talla para Button e Icon button (M 48, L 64); en Button, el texto siempre en una sola línea.
 - **Anatomía:** `icon` → Icon / close
 - **Hierarchy:** Primary, Secondary, Inverse

@@ -40,5 +40,26 @@
     "origin": "github.com/google/fonts",
     "token": "—",
     "notes": "debe acompañar a las fuentes"
+  },
+  {
+    "file": "dirty-headline.woff2",
+    "family": "Dirty Headline",
+    "origin": "Landings (noodles/landing/assets/fonts) · ⬜ TODO — licencia pendiente (traspaso §11)",
+    "token": "— (no la usa el DS)",
+    "notes": "traída de las landings para reutilizarla en pantallas; no se publica hasta confirmar la licencia"
+  },
+  {
+    "file": "dirty-headline.woff",
+    "family": "Dirty Headline",
+    "origin": "Landings (noodles/landing/assets/fonts) · ⬜ TODO — licencia pendiente (traspaso §11)",
+    "token": "— (no la usa el DS)",
+    "notes": "traída de las landings para reutilizarla en pantallas; no se publica hasta confirmar la licencia"
+  },
+  {
+    "file": "dirty-headline.ttf",
+    "family": "Dirty Headline",
+    "origin": "Landings (noodles/landing/assets/fonts) · ⬜ TODO — licencia pendiente (traspaso §11)",
+    "token": "— (no la usa el DS)",
+    "notes": "traída de las landings para reutilizarla en pantallas; no se publica hasta confirmar la licencia"
   }
 ]

@@ -6,7 +6,7 @@
     "slug": "checkbox",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:49:29Z",
+    "lastSync": "2026-10-08T06:16:03Z",
     "description": "Casilla de verificación: consentimiento GDPR y aceptación de bases legales de concursos. Toda la fila (caja + etiqueta) es clicable; área táctil mínima 44 px en código. Marcada: tinta con check crema (el estado se ve por la forma, no solo por color). Error: borde rojo; el mensaje va en el formulario con aria-describedby. Nunca premarcada en consentimientos.",
     "figmaPage": "Checkbox",
     "figmaType": "COMPONENT_SET",

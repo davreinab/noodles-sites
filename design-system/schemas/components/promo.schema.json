@@ -6,7 +6,7 @@
     "slug": "promo",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:49:29Z",
+    "lastSync": "2026-10-08T06:16:03Z",
     "description": "Módulo de promoción o concurso de la Home: Video player 16:9 (fachada) · Badge «Concurso» · título (h2) · texto · Button Primary «Participar» · Link de bases legales (obligatorio). Fondo color/surface/page (crema) para que el póster oscuro del vídeo se distinga; texto color/text/default. Se oculta entero si no hay promoción activa (regla de negocio); si el concurso es iframe de agencia, el CTA lleva external-link y el iframe necesita revisión de protección de datos antes de publicarse. Desktop: vídeo a la izquierda; Mobile: vídeo arriba. Sin variables propias.",
     "figmaPage": "Pattern / Promo",
     "figmaType": "COMPONENT_SET",

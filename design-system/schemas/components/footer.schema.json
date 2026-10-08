@@ -6,7 +6,7 @@
     "slug": "footer",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-07T18:49:29Z",
+    "lastSync": "2026-10-08T06:16:03Z",
     "description": "Patrón de pie, en tinta: logo de marca (negativo) y GB Foods · navegación · contacto (formulario externo de GB Foods, icono external-link) · redes · franja legal por país (Privacy, Legal notice, Cookies, Lawful basis, Contest rules) y ©. Los textos legales cambian por país. Sin variables propias: compone Link, Icon y Logo con semánticos.",
     "figmaPage": "Pattern / Footer",
     "figmaType": "COMPONENT_SET",

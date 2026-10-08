@@ -1,7 +1,7 @@
-### Decoration / Noodle   ⚙️ synced: 2026-10-08T07:04:34Z
+### Decoration / Noodle   ⚙️ synced: 2026-10-08T07:26:15Z
 
 <!-- ⚙️ GENERATED:start:decoration-noodle -->
-- **Figma:** `21:165` · página «Brand assets» · COMPONENT_SET · 10 variantes · última sync 2026-10-08T07:04:34Z
+- **Figma:** `21:165` · página «Brand assets» · COMPONENT_SET · 10 variantes · última sync 2026-10-08T07:26:15Z
 - **Descripción (Figma):** Fideo decorativo de marca (5 trazos). Tone=Brand usa decoration/noodle/brand y Tone=Accent decoration/noodle/accent; ambos cambian con el modo de marca. Escalable; solo decorativo (aria-hidden).
 - **Anatomía:** sin instancias anidadas
 - **Shape:** 2, 3, 4, 5, 1

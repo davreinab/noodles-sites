@@ -1,7 +1,7 @@
-### Lang switch   ⚙️ synced: 2026-10-08T07:04:34Z
+### Lang switch   ⚙️ synced: 2026-10-08T07:26:15Z
 
 <!-- ⚙️ GENERATED:start:lang-switch -->
-- **Figma:** `54:71` · página «Navigation» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T07:04:34Z
+- **Figma:** `54:71` · página «Navigation» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T07:26:15Z
 - **Descripción (Figma):** Selector de idioma de dos opciones (p. ej. NL | FR en Aiki). Solo en marcas multiidioma. La opción activa en tinta. En código: enlaces a la versión de idioma con hreflang y aria-current en la activa; cada opción con lang=&quot;nl&quot;/&quot;fr&quot;.
 - **Anatomía:** sin instancias anidadas
 - **Selected:** First, Second

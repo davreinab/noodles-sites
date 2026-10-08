@@ -6,13 +6,22 @@
     "slug": "icon-x",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T07:04:34Z",
+    "lastSync": "2026-10-08T07:26:15Z",
     "description": "Red social: X. Color: icon/color/*. Tamaño: icon/size/*",
     "figmaPage": "Iconography",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "71105d84610a"
+    "anatomyHash": "71105d84610a",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-08",
+      "figmaVersion": "71105d84610a",
+      "variantsChecked": [
+        "trazo SVG exportado del maestro = assets/icons/x.svg"
+      ],
+      "by": "agent (Claude)"
+    }
   },
   "source": {
     "docs": {

@@ -324,11 +324,10 @@ class Audit:
 
     # ── 4. pantallas que usan contratos sin verificar ──────────────────────────
     def screens(self):
-        by_class = {}
-        for s in self.schemas:
-            st = self.status_of(s)
-            for c in self.classes_of(s):
-                by_class.setdefault(c, (s["meta"].get("slug", ""), st))
+        # Una clase pertenece al contrato cuyo slug es su bloque (.link, .link--dark → link). Los
+        # ejemplos de otros contratos también la listan, pero solo la reutilizan; y las clases de
+        # base sin contrato propio (.icon, .section, .visually-hidden) no se atribuyen a nadie.
+        status_by_slug = {s["meta"].get("slug", ""): self.status_of(s) for s in self.schemas}
         files = []
         for pat in self.cfg.get("screens") or []:
             files.extend(sorted(glob.glob(os.path.join(self.root, pat), recursive=True)))
@@ -339,9 +338,9 @@ class Audit:
                 used.update(attr.split())
             pend = {}
             for c in used:
-                if c in by_class and by_class[c][1] != "verified":
-                    slug, st = by_class[c]
-                    pend[slug] = st
+                block = re.split(r"__|--", c)[0]
+                if status_by_slug.get(block, "verified") != "verified":
+                    pend[block] = status_by_slug[block]
             if pend:
                 rel = os.path.relpath(f, self.root)
                 lista = ", ".join(f"{k} ({v})" for k, v in sorted(pend.items()))

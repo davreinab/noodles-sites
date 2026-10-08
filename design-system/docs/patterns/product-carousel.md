@@ -1,7 +1,7 @@
-### Product carousel   ⚙️ synced: 2026-10-08T07:04:34Z
+### Product carousel   ⚙️ synced: 2026-10-08T07:26:15Z
 
 <!-- ⚙️ GENERATED:start:product-carousel -->
-- **Figma:** `91:837` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T07:04:34Z
+- **Figma:** `91:837` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T07:26:15Z
 - **Descripción (Figma):** Productos de la Home: título (h2) · flechas Icon button (desktop) · Tabs de tipo (Cups / Bags / Sauces; tablist que filtra el carrusel, solo tipos con productos) · carrusel de Product card · Link «Ver todos los productos» a la Product library. Desktop: 4 cards visibles (310 px, gutter layout/gutter). Mobile: scroll horizontal con la siguiente card asomando (pista que comunica que hay más); sin flechas. Accesibilidad: el carrusel es una lista (&lt;ul&gt;) desplazable con teclado; las flechas son &lt;button&gt; con nombre y se desactivan al llegar al final. Sin variables propias.
 - **Anatomía:** `prev` → Hierarchy=Secondary, Size=M, State=Default, `icon` → Icon / arrow-left, `next` → Hierarchy=Secondary, Size=M, State=Default, `icon` → Icon / arrow-right, `tab` → State=Selected, `tab` → State=Default, `product-card` → State=Default, `badge` → Type=New, `link` → Type=Standalone, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right, `badge` → Type=New
 - **Breakpoint:** Desktop, Mobile
@@ -17,7 +17,7 @@
   ```html
   <section class="section product-carousel" aria-labelledby="pc-title">
   <div class="section__inner">
-  <div class="section__bar"><h2 class="section__title" id="pc-title">Nuestros noodles</h2><button class="icon-button icon-button--secondary" type="button" aria-label="Anteriores"><span class="icon icon-arrow-left" aria-hidden="true"></span></button></div>
+  <div class="section__bar"><h2 class="section__title" id="pc-title">Nuestros noodles</h2><div class="section__arrows"><button class="icon-button icon-button--secondary" type="button" aria-label="Productos anteriores"><span class="icon icon-arrow-left" aria-hidden="true"></span></button><button class="icon-button icon-button--secondary" type="button" aria-label="Productos siguientes"><span class="icon icon-arrow-right" aria-hidden="true"></span></button></div></div>
   <div class="product-carousel__tabs" role="tablist" aria-label="Tipo"><button class="tab" role="tab" aria-selected="true">Cups</button><button class="tab" role="tab" aria-selected="false" tabindex="-1">Bags</button></div>
   <ul class="carousel" role="tabpanel" aria-label="Cups">
   <li><a class="product-card" href="/productos/yatekomo-pollo"><div class="product-card__body"><h3 class="product-card__name">Yatekomo Pollo</h3></div></a></li>

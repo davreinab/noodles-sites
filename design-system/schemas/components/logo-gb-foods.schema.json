@@ -6,13 +6,22 @@
     "slug": "logo-gb-foods",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T07:04:34Z",
+    "lastSync": "2026-10-08T07:26:15Z",
     "description": "Logo GB Foods. Marca corporativa (Days you can trust). Solo negativo vectorial. No se recolorea.",
     "figmaPage": "Brand assets",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "179c4d8008e8"
+    "anatomyHash": "179c4d8008e8",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-08",
+      "figmaVersion": "179c4d8008e8",
+      "variantsChecked": [
+        "Logo / GB Foods (Footer, alto 32)"
+      ],
+      "by": "agent (Claude)"
+    }
   },
   "source": {
     "docs": {

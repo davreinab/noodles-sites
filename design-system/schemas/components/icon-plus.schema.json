@@ -6,13 +6,22 @@
     "slug": "icon-plus",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T07:04:34Z",
+    "lastSync": "2026-10-08T07:26:15Z",
     "description": "Más: abrir acordeón FAQ. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
     "figmaPage": "Iconography",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "27a63da5eaab"
+    "anatomyHash": "27a63da5eaab",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-08",
+      "figmaVersion": "27a63da5eaab",
+      "variantsChecked": [
+        "trazo SVG exportado del maestro = assets/icons/plus.svg"
+      ],
+      "by": "agent (Claude)"
+    }
   },
   "source": {
     "docs": {

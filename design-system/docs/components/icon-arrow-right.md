@@ -1,7 +1,7 @@
-### Icon / arrow-right   ⚙️ synced: 2026-10-08T07:04:34Z
+### Icon / arrow-right   ⚙️ synced: 2026-10-08T07:26:15Z
 
 <!-- ⚙️ GENERATED:start:icon-arrow-right -->
-- **Figma:** `30:52` · página «Iconography» · COMPONENT · 1 variantes · última sync 2026-10-08T07:04:34Z
+- **Figma:** `30:52` · página «Iconography» · COMPONENT · 1 variantes · última sync 2026-10-08T07:26:15Z
 - **Descripción (Figma):** Flecha derecha: avanzar, CTA con dirección, slider. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

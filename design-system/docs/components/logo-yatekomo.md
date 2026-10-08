@@ -1,7 +1,7 @@
-### Logo / Yatekomo   ⚙️ synced: 2026-10-08T07:04:34Z
+### Logo / Yatekomo   ⚙️ synced: 2026-10-08T07:26:15Z
 
 <!-- ⚙️ GENERATED:start:logo-yatekomo -->
-- **Figma:** `21:169` · página «Brand assets» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T07:04:34Z
+- **Figma:** `21:169` · página «Brand assets» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T07:26:15Z
 - **Descripción (Figma):** Logo Yatekomo. Positivo vectorial; negativo en PNG (pedir vectorial). No se recolorea.
 - **Anatomía:** sin instancias anidadas
 - **Version:** Positive, Negative

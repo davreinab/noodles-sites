@@ -1,7 +1,7 @@
-### Logo / Aiki   ⚙️ synced: 2026-10-08T07:04:34Z
+### Logo / Aiki   ⚙️ synced: 2026-10-08T07:26:15Z
 
 <!-- ⚙️ GENERATED:start:logo-aiki -->
-- **Figma:** `21:179` · página «Brand assets» · COMPONENT · 1 variantes · última sync 2026-10-08T07:04:34Z
+- **Figma:** `21:179` · página «Brand assets» · COMPONENT · 1 variantes · última sync 2026-10-08T07:26:15Z
 - **Descripción (Figma):** Logo Aïki (marca belga; slug sin diéresis). Solo PNG pixelado, sin variante negativa: pedir vectorial al cliente. No se recolorea.
 - **Anatomía:** sin instancias anidadas
 - **Propiedades de componente:** ninguna

@@ -6,13 +6,23 @@
     "slug": "recipes",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T07:04:34Z",
+    "lastSync": "2026-10-08T07:26:15Z",
     "description": "Sección de recetas (Home, página de producto con las recetas que lo usan): título (h2) + entradilla · 3 Recipe card · Link «Ver todas las recetas» a la Recipe library. Fondo color/surface/card para alternar con las secciones crema. Desktop: 3 columnas (421 px); Mobile: scroll horizontal con la siguiente card asomando y el enlace debajo. Sin buscador por ingredientes (regla de negocio). Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "1152e0377609"
+    "anatomyHash": "1152e0377609",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-08",
+      "figmaVersion": "1152e0377609",
+      "variantsChecked": [
+        "Breakpoint=Desktop",
+        "Breakpoint=Mobile"
+      ],
+      "by": "agent (Claude)"
+    }
   },
   "source": {
     "docs": {

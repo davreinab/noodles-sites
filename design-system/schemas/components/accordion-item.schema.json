@@ -6,13 +6,23 @@
     "slug": "accordion-item",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T07:04:34Z",
+    "lastSync": "2026-10-08T07:26:15Z",
     "description": "Ítem de acordeón para FAQ (página FAQS indexada, Natural formula, Home). Cabecera = &lt;button aria-expanded aria-controls&gt; dentro de un encabezado (h3); la respuesta es una región ligada a la cabecera. Enter/Espacio abren y cierran; los items no son independientes (solo uno abierto a la vez). Icono plus (cerrado) / minus (abierto), swaps Icon collapsed / Icon expanded. Para SEO/AEO la respuesta está en el HTML aunque esté cerrada (FAQPage schema). Hover: accordion/bg-hover; Focus: anillo accordion/focus-ring. Ancho FILL de la columna de lectura.",
     "figmaPage": "Content",
     "figmaType": "COMPONENT_SET",
     "variantCount": 6,
     "autoLayout": true,
-    "anatomyHash": "997e42acb572"
+    "anatomyHash": "997e42acb572",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-08",
+      "figmaVersion": "997e42acb572",
+      "variantsChecked": [
+        "Expanded=False, State=Default",
+        "Expanded=True, State=Default"
+      ],
+      "by": "agent (Claude)"
+    }
   },
   "source": {
     "docs": {

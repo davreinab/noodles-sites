@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-08T07:04:34Z",
+  "lastSync": "2026-10-08T07:26:15Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -1816,7 +1816,6 @@
           "footer__links",
           "footer__main",
           "footer__social",
-          "footer__title",
           "icon",
           "icon-external-link",
           "icon-instagram",
@@ -2037,6 +2036,7 @@
           "product-carousel",
           "product-carousel__tabs",
           "section",
+          "section__arrows",
           "section__bar",
           "section__inner",
           "section__title",

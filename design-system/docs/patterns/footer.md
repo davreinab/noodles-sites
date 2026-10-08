@@ -1,7 +1,7 @@
-### Footer   ⚙️ synced: 2026-10-08T07:04:34Z
+### Footer   ⚙️ synced: 2026-10-08T07:26:15Z
 
 <!-- ⚙️ GENERATED:start:footer -->
-- **Figma:** `56:167` · página «Pattern / Global» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T07:04:34Z
+- **Figma:** `56:167` · página «Pattern / Global» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T07:26:15Z
 - **Descripción (Figma):** Patrón de pie, en tinta: logo de marca (negativo) y GB Foods · navegación · contacto (formulario externo de GB Foods, icono external-link) · redes · franja legal por país (Privacy, Legal notice, Cookies, Lawful basis, Contest rules) y ©. Los textos legales cambian por país. Sin variables propias: compone Link, Icon y Logo con semánticos.
 - **Anatomía:** `logo` → Version=Negative, `logo-gb-foods` → Logo / GB Foods, `nav-link` → Type=Inline, Surface=Dark, State=Default, `icon-trailing` → Icon / arrow-right, `nav-link` → Type=Inline, Surface=Dark, State=Default, `icon-trailing` → Icon / arrow-right, `nav-link` → Type=Inline, Surface=Dark, State=Default, `icon-trailing` → Icon / arrow-right, `nav-link` → Type=Inline, Surface=Dark, State=Default, `icon-trailing` → Icon / arrow-right, `nav-link` → Type=Inline, Surface=Dark, State=Default, `icon-trailing` → Icon / arrow-right, `contact-link` → Type=Standalone, Surface=Dark, State=Default, `icon-trailing` → Icon / external-link, `social` → Icon / tiktok, `social` → Icon / instagram, `social` → Icon / x, `social` → Icon / youtube, `legal-link` → Type=Inline, Surface=Dark, State=Default, `icon-trailing` → Icon / arrow-right, `legal-link` → Type=Inline, Surface=Dark, State=Default, `icon-trailing` → Icon / arrow-right, `legal-link` → Type=Inline, Surface=Dark, State=Default, `icon-trailing` → Icon / arrow-right, `legal-link` → Type=Inline, Surface=Dark, State=Default, `icon-trailing` → Icon / arrow-right, `legal-link` → Type=Inline, Surface=Dark, State=Default, `icon-trailing` → Icon / arrow-right
 - **Breakpoint:** Desktop, Mobile
@@ -19,7 +19,6 @@
   <div class="footer__main">
   <div class="footer__brand"><img class="logo" src="../assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo"><img class="logo logo--gb-foods" src="../assets/logos/logo-gb-foods.svg" alt="GB Foods"></div>
   <nav class="footer__column" aria-label="Pie">
-  <h2 class="footer__title">Explora</h2>
   <ul class="footer__links"><li><a class="link link--dark" href="/productos">Productos</a></li><li><a class="link link--dark" href="/recetas">Recetas</a></li></ul>
   </nav>
   <div class="footer__column">

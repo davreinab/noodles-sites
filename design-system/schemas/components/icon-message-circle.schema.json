@@ -6,13 +6,22 @@
     "slug": "icon-message-circle",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T07:04:34Z",
+    "lastSync": "2026-10-08T07:26:15Z",
     "description": "Sugerencias: Suggestion bubble (formulario de Calidad). Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
     "figmaPage": "Iconography",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "ff4191a23639"
+    "anatomyHash": "ff4191a23639",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-08",
+      "figmaVersion": "ff4191a23639",
+      "variantsChecked": [
+        "trazo SVG exportado del maestro = assets/icons/message-circle.svg"
+      ],
+      "by": "agent (Claude)"
+    }
   },
   "source": {
     "docs": {

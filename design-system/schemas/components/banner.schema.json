@@ -6,13 +6,23 @@
     "slug": "banner",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T07:04:34Z",
+    "lastSync": "2026-10-08T07:26:15Z",
     "description": "Banner promocional de la Home (lanzamiento, sabor nuevo, mensaje de campaña): bloque color/surface/accent (naranja de marca) con borde de tinta, radius/lg y elevation/2 (sombra dura de marca) · titular (h1) · texto · Button Primary · imagen de marca. Sobre el acento solo va color/text/default (regla del token). Desktop: texto a la izquierda; Mobile: texto arriba e imagen debajo. No es un carrusel. Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "0b02ba48b50b"
+    "anatomyHash": "0b02ba48b50b",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-08",
+      "figmaVersion": "0b02ba48b50b",
+      "variantsChecked": [
+        "Breakpoint=Desktop",
+        "Breakpoint=Mobile"
+      ],
+      "by": "agent (Claude)"
+    }
   },
   "source": {
     "docs": {

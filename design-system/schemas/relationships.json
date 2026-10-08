@@ -8,6 +8,11 @@
   ],
   "relationships": [
     {
+      "from": "decoration-noodle-texture",
+      "to": "decoration-noodle",
+      "type": "uses"
+    },
+    {
       "from": "button",
       "to": "icon-arrow-right",
       "type": "uses"
@@ -349,6 +354,16 @@
     },
     {
       "from": "promo",
+      "to": "decoration-noodle",
+      "type": "uses"
+    },
+    {
+      "from": "promo",
+      "to": "decoration-noodle-texture",
+      "type": "uses"
+    },
+    {
+      "from": "promo",
       "to": "icon-arrow-right",
       "type": "uses"
     },
@@ -440,6 +455,16 @@
     {
       "from": "faq",
       "to": "link",
+      "type": "uses"
+    },
+    {
+      "from": "where-to-buy",
+      "to": "decoration-noodle",
+      "type": "uses"
+    },
+    {
+      "from": "where-to-buy",
+      "to": "decoration-noodle-texture",
       "type": "uses"
     },
     {
@@ -613,5 +638,5 @@
       "type": "uses"
     }
   ],
-  "lastSync": "2026-10-08T11:10:38Z"
+  "lastSync": "2026-10-08T11:52:41Z"
 }

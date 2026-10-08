@@ -1,7 +1,7 @@
-### Suggestion bubble   ⚙️ synced: 2026-10-08T11:10:38Z
+### Suggestion bubble   ⚙️ synced: 2026-10-08T11:52:41Z
 
 <!-- ⚙️ GENERATED:start:suggestion-bubble -->
-- **Figma:** `81:87` · página «Feedback & overlays» · COMPONENT_SET · 6 variantes · última sync 2026-10-08T11:10:38Z
+- **Figma:** `81:87` · página «Feedback & overlays» · COMPONENT_SET · 6 variantes · última sync 2026-10-08T11:52:41Z
 - **Descripción (Figma):** Botón flotante (suggestion box / Babelbox) hacia el formulario externo de Calidad. Fijo abajo a la derecha (layout/margin desde los bordes), layer/floating; no tapa el CTA del Mobile menu ni el Toast (que sube por encima). Expanded=True al cargar: icono + «Sugerencias» + external-link; al hacer scroll pasa a Expanded=False (solo icono, 56 px) y respeta prefers-reduced-motion. Es un &lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; con nombre accesible «Sugerencias (abre en una pestaña nueva)» también en la versión plegada. Hover: fondo amarillo de marca y elevation/2; Focus: anillo suggestion/focus-ring.
 - **Anatomía:** `icon` → Icon / message-circle, `icon-external` → Icon / external-link
 - **Expanded:** True, False

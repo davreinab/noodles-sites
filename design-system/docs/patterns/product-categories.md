@@ -1,7 +1,7 @@
-### Product categories   ⚙️ synced: 2026-10-08T11:10:38Z
+### Product categories   ⚙️ synced: 2026-10-08T11:52:41Z
 
 <!-- ⚙️ GENERATED:start:product-categories -->
-- **Figma:** `91:837` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:10:38Z
+- **Figma:** `91:837` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:52:41Z
 - **Descripción (Figma):** Productos de la Home (wireframe UX «Our products»): título (h2) + entradilla · 3 Category card, una por tipo de producto (Cups, Bags, Sauces; solo tipos con productos) que llevan a la Product library filtrada. Badge New en la categoría con novedad. Desktop: 3 columnas iguales (gutter layout/gutter); Mobile: apiladas a todo el ancho. Sustituye al antiguo Product carousel (pestañas + Product card). Sin variables propias.
 - **Anatomía:** `category-card` → State=Default, `badge` → Type=New, `category-card` → State=Default, `badge` → Type=New, `category-card` → State=Default, `badge` → Type=New
 - **Breakpoint:** Desktop, Mobile

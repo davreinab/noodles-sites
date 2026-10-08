@@ -1,7 +1,7 @@
-### Navbar   ⚙️ synced: 2026-10-08T11:10:38Z
+### Navbar   ⚙️ synced: 2026-10-08T11:52:41Z
 
 <!-- ⚙️ GENERATED:start:navbar -->
-- **Figma:** `55:116` · página «Pattern / Global» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:10:38Z
+- **Figma:** `55:116` · página «Pattern / Global» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:52:41Z
 - **Descripción (Figma):** Patrón de cabecera (wireframe UX). Desktop: botón menú (Icon button Secondary, abre el Menu a pantalla completa) a la izquierda · logo de marca centrado (enlace a la Home) · CTA Button Primary «New 100% Natural Formula» a la derecha (lleva a la Natural formula page) · Lang switch oculto salvo en marcas multiidioma. Mobile: botón menú · logo centrado. Sin enlaces de navegación ni buscador en la barra: la navegación vive en el Menu. Comportamiento: sticky (layer/sticky); se oculta al hacer scroll hacia abajo y reaparece al subir; respeta prefers-reduced-motion. Accesibilidad: &lt;header&gt; con &lt;nav&gt;; el botón menú lleva aria-expanded y aria-controls. Fondo color/surface/page con borde inferior color/border/default. Sin variables propias.
 - **Anatomía:** `menu` → Hierarchy=Secondary, Size=M, State=Default, `icon` → Icon / menu, `logo` → Version=Positive, `lang-switch` → Selected=First, `cta` → Hierarchy=Primary, Size=M, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right
 - **Breakpoint:** Desktop, Mobile

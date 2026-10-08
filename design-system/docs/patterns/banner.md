@@ -1,7 +1,7 @@
-### Banner   ⚙️ synced: 2026-10-08T11:10:38Z
+### Banner   ⚙️ synced: 2026-10-08T11:52:41Z
 
 <!-- ⚙️ GENERATED:start:banner -->
-- **Figma:** `92:884` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:10:38Z
+- **Figma:** `92:884` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:52:41Z
 - **Descripción (Figma):** Banner de campaña de la Home (wireframe UX): una pieza gráfica de campaña a todo el ancho del contenido, dentro de un marco con borde de tinta, radius/lg y elevation/2. La imagen lleva el mensaje; el banner entero es un enlace a la campaña y su texto alternativo repite lo que dice la pieza. Se oculta si no hay campaña. No es un carrusel. Sin variables propias.
 - **Anatomía:** sin instancias anidadas
 - **Breakpoint:** Desktop, Mobile

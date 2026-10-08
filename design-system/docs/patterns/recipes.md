@@ -1,7 +1,7 @@
-### Recipes   ⚙️ synced: 2026-10-08T11:10:38Z
+### Recipes   ⚙️ synced: 2026-10-08T11:52:41Z
 
 <!-- ⚙️ GENERATED:start:recipes -->
-- **Figma:** `92:215` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:10:38Z
+- **Figma:** `92:215` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:52:41Z
 - **Descripción (Figma):** Sección de recetas (Home y página de producto con las recetas que lo usan; wireframe UX): título (h2) + entradilla · Button Secondary L «See all recipes» a la Recipe library (desktop junto al título, a la derecha; mobile debajo de las cards) · Recipe card. Desktop: 4 columnas; Mobile: scroll horizontal con la siguiente card asomando. Fondo color/surface/card para alternar con las secciones crema. Sin buscador por ingredientes (regla de negocio). Comensales («2 people»): sin definir, falta información. Sin variables propias.
 - **Anatomía:** `cta` → Hierarchy=Secondary, Size=L, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right, `recipe-card` → State=Default, `icon-time` → Icon / timer, `product-chip` → Size=S, State=Default, `icon-leading` → Icon / check, `product-chip` → Size=S, State=Default, `icon-leading` → Icon / check, `recipe-card` → State=Default, `icon-time` → Icon / timer, `product-chip` → Size=S, State=Default, `icon-leading` → Icon / check, `product-chip` → Size=S, State=Default, `icon-leading` → Icon / check, `recipe-card` → State=Default, `icon-time` → Icon / timer, `product-chip` → Size=S, State=Default, `icon-leading` → Icon / check, `product-chip` → Size=S, State=Default, `icon-leading` → Icon / check, `recipe-card` → State=Default, `icon-time` → Icon / timer, `product-chip` → Size=S, State=Default, `icon-leading` → Icon / check, `product-chip` → Size=S, State=Default, `icon-leading` → Icon / check
 - **Breakpoint:** Desktop, Mobile

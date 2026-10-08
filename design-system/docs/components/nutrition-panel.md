@@ -1,7 +1,7 @@
-### Nutrition panel   ⚙️ synced: 2026-10-08T11:10:38Z
+### Nutrition panel   ⚙️ synced: 2026-10-08T11:52:41Z
 
 <!-- ⚙️ GENERATED:start:nutrition-panel -->
-- **Figma:** `71:75` · página «Content» · COMPONENT · 1 variantes · última sync 2026-10-08T11:10:38Z
+- **Figma:** `71:75` · página «Content» · COMPONENT · 1 variantes · última sync 2026-10-08T11:52:41Z
 - **Descripción (Figma):** Panel de nutrición de la página de producto y de receta: título (h3) · base (por 100 g, % IR) · 7 Nutrition bar (energía, grasas, saturadas, hidratos, azúcares, proteínas, sal; Highlight en los claims del pack) · alérgenos en negrita · nota de validación. Accesible como lista de pares nutriente/valor (o &lt;table&gt; con &lt;caption&gt;); las barras son aria-hidden. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods.
 - **Anatomía:** `nutrition-bar` → Highlight=False, `nutrition-bar` → Highlight=True, `claim` → Type=Natural
 - **Propiedades de componente:** ninguna

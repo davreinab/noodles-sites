@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-08T11:10:38Z",
+  "lastSync": "2026-10-08T11:52:41Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -762,8 +762,47 @@
         "path": "design-system/css/components.css",
         "classes": [
           "decoration-noodle",
+          "decoration-noodle--2",
           "decoration-noodle--3",
-          "decoration-noodle--accent"
+          "decoration-noodle--accent",
+          "decoration-noodle--texture"
+        ]
+      }
+    },
+    {
+      "id": "component:decoration-noodle-texture",
+      "name": "Decoration / Noodle texture",
+      "slug": "decoration-noodle-texture",
+      "kind": "component",
+      "contractPath": "./components/decoration-noodle-texture.schema.json",
+      "keywords": [
+        "decoration",
+        "noodle",
+        "texture"
+      ],
+      "dependencies": [
+        "decoration-noodle"
+      ],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "157:50",
+        "componentKey": "d56b442c19fd1a4d1c46ae77e260338306946af6"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "decoration-noodle",
+          "decoration-noodle--2",
+          "decoration-noodle--3",
+          "decoration-noodle--4",
+          "decoration-noodle--5",
+          "decoration-noodle--texture",
+          "decoration-noodle-texture",
+          "promo",
+          "section",
+          "section__inner",
+          "section__title"
         ]
       }
     },
@@ -1941,6 +1980,8 @@
       ],
       "dependencies": [
         "button",
+        "decoration-noodle",
+        "decoration-noodle-texture",
         "icon-arrow-right",
         "icon-play",
         "link",
@@ -1957,6 +1998,13 @@
         "classes": [
           "button",
           "button--l",
+          "decoration-noodle",
+          "decoration-noodle--2",
+          "decoration-noodle--3",
+          "decoration-noodle--4",
+          "decoration-noodle--5",
+          "decoration-noodle--texture",
+          "decoration-noodle-texture",
           "link",
           "promo",
           "promo__actions",
@@ -2182,7 +2230,10 @@
         "to",
         "where"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "decoration-noodle",
+        "decoration-noodle-texture"
+      ],
       "hasIcon": false,
       "figmaSource": {
         "fileKey": "v4mnn154qUmiB35CCnRfgh",
@@ -2192,6 +2243,13 @@
       "codeSource": {
         "path": "design-system/css/components.css",
         "classes": [
+          "decoration-noodle",
+          "decoration-noodle--2",
+          "decoration-noodle--3",
+          "decoration-noodle--4",
+          "decoration-noodle--5",
+          "decoration-noodle--texture",
+          "decoration-noodle-texture",
           "section",
           "section__inner",
           "where-to-buy",
@@ -2494,7 +2552,7 @@
     }
   ],
   "counts": {
-    "atoms": 58,
+    "atoms": 59,
     "patterns": 18
   }
 }

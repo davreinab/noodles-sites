@@ -1,6 +1,6 @@
 /* ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO.
    Design system: GB Noodles · Microsites · fileKey: v4mnn154qUmiB35CCnRfgh
-   Última sync: 2026-10-08T11:10:38Z · modo de adopción: new
+   Última sync: 2026-10-08T11:52:41Z · modo de adopción: new
    Se regenera con el protocolo de sync de design.md. */
 
 :root {
@@ -27,6 +27,7 @@
   --color-status-info-900: #0b4482; /* Texto de información. Primitivo: no se consume en componentes. */
   --shadow-ink-20: rgba(18, 18, 18, 0.2); /* Tinta al 20%. Translúcido permitido solo en sombras de elevación */
   --overlay-ink-70: rgba(18, 18, 18, 0.7); /* Tinta al 70 %. Translúcido permitido solo en velos (overlay) de modales y paneles. Primitivo: no se consume en componentes. */
+  --color-yatekomo-amber: #f4aa09; /* Ámbar de la trama de fideos: el naranja de marca al 50 % sobre el amarillo, resuelto como color opaco (regla 7, sin transparencias). Primitivo: no se consume en componentes. */
   /* ---- Semantic ---- */
   --color-surface-page: var(--color-yatekomo-yellow-soft); /* Fondo base de página */
   --color-surface-brand: var(--color-yatekomo-yellow); /* Fondo de marca (amarillo común a todas las marcas) */
@@ -256,6 +257,7 @@
   --modal-width-l: 880px; /* modal: Ancho del diálogo L (880px): etiqueta del envase, resultados de búsqueda */
   --icon-button-size-m: 48px; /* icon-button: Lado de la talla M (48px), igual que la altura de Button M */
   --icon-button-size-l: 64px; /* icon-button: Lado de la talla L (64px), igual que la altura de Button L */
+  --decoration-noodle-texture: var(--color-yatekomo-amber); /* decoration-noodle: Fideo de la trama de fondo (ámbar opaco = naranja al 50 % sobre amarillo, como en las landings). Solo sobre color/surface/brand. */
   /* ---- Layer ---- */
   --layer-base: 0; /* z-index 0. Contenido normal de la página */
   --layer-raised: 10; /* z-index 10. Contenido por encima de imágenes dentro de una sección (copy del hero, banderas) */

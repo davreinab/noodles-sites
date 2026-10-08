@@ -6,7 +6,7 @@
     "slug": "mobile-menu",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:10:38Z",
+    "lastSync": "2026-10-08T11:52:41Z",
     "description": "Patrón: menú a pantalla completa en todos los breakpoints (wireframe UX: se abre desde el botón menú de la Navbar, también en desktop). Logo negativo · cerrar · 5 Nav item (Menu): Products, Natural formula, Recipes, Contests, FAQS · Lang switch (solo marcas multiidioma) · «Our social media:» con los iconos de redes de la marca (enlaces externos) · © GBFoods. Accesibilidad: &lt;dialog&gt; modal, foco atrapado dentro, Esc cierra y el foco vuelve al botón menú; layer/modal. Fondo color/surface/inverse. Sin variables propias.",
     "figmaPage": "Pattern / Global",
     "figmaType": "COMPONENT",

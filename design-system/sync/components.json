@@ -656,7 +656,7 @@
           "type": "COMPONENT_SET",
           "id": "21:165",
           "key": "de6e1d33e0f5e285098cd62c42a915e478445c5c",
-          "description": "Fideo decorativo de marca (5 trazos). Tone=Brand usa decoration/noodle/brand y Tone=Accent decoration/noodle/accent; ambos cambian con el modo de marca. Escalable; solo decorativo (aria-hidden).",
+          "description": "Fideo decorativo de marca (5 trazos). Tone=Brand usa decoration/noodle/brand, Tone=Accent decoration/noodle/accent y Tone=Texture decoration/noodle/texture (ámbar opaco, solo dentro de Decoration / Noodle texture); cambian con el modo de marca. Escalable; solo decorativo (aria-hidden).",
           "variantAxes": {
             "Shape": [
               "2",
@@ -667,10 +667,11 @@
             ],
             "Tone": [
               "Brand",
-              "Accent"
+              "Accent",
+              "Texture"
             ]
           },
-          "variantCount": 10,
+          "variantCount": 15,
           "properties": [
             {
               "name": "Shape",
@@ -690,7 +691,8 @@
               "default": "Brand",
               "values": [
                 "Brand",
-                "Accent"
+                "Accent",
+                "Texture"
               ]
             }
           ],
@@ -703,10 +705,71 @@
             "textStyles": []
           },
           "autoLayout": false
+        },
+        {
+          "page": "Brand assets",
+          "name": "Decoration / Noodle texture",
+          "type": "COMPONENT",
+          "id": "157:50",
+          "key": "d56b442c19fd1a4d1c46ae77e260338306946af6",
+          "description": "Trama de fideos de fondo (como en las landings): los 5 fideos de Decoration / Noodle en tono Texture (decoration/noodle/texture: ámbar opaco, el naranja al 50 % sobre amarillo), en fila. Va a sangre por la derecha del módulo, detrás del contenido y más alta que él (se corta arriba y abajo). Solo sobre color/surface/brand; el texto encima es tinta (contraste con el ámbar ≥ 9:1). Decorativa: aria-hidden, sin interacción.",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [],
+          "nestedInstances": [
+            {
+              "layer": "noodle",
+              "component": "Shape=1, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=3, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=5, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=2, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=4, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "fills: decoration/noodle/texture",
+              "color: decoration/noodle/texture"
+            ],
+            "textStyles": []
+          },
+          "autoLayout": true
         }
       ],
-      "total": 6,
-      "read": 6
+      "total": 7,
+      "read": 7
     },
     {
       "name": "Buttons & links",
@@ -4941,7 +5004,7 @@
           "type": "COMPONENT_SET",
           "id": "91:113",
           "key": "c30835356fb592621ba20388988656c950b59fe7",
-          "description": "Módulo de promoción o concurso de la Home (wireframe UX): arte de la campaña (PNG recortado, de marca) · título (h2) · texto con los premios · Button Primary L «I want to participate» · Link de bases legales (obligatorio por regla de negocio, aunque el wireframe no lo dibuja) · Video player 16:9 (fachada) o imagen grande de la campaña. Fondo color/surface/page (crema). Se oculta entero si no hay promoción activa (regla de negocio); si el concurso es iframe de agencia, el CTA lleva external-link y el iframe necesita revisión de protección de datos. Desktop: texto a la izquierda y vídeo a la derecha; Mobile: vídeo arriba. Sin variables propias.",
+          "description": "Módulo de promoción o concurso de la Home (wireframe UX): arte de la campaña (PNG recortado, de marca) · título (h2) · texto con los premios · Button Primary L «I want to participate» · Link de bases legales (obligatorio por regla de negocio, aunque el wireframe no lo dibuja) · Video player 16:9 (fachada) o imagen grande de la campaña. Fondo color/surface/brand (amarillo) con la trama de fideos (Decoration / Noodle texture) a sangre por la derecha, detrás del contenido, como el módulo natural de las landings. Se oculta entero si no hay promoción activa (regla de negocio); si el concurso es iframe de agencia, el CTA lleva external-link y el iframe necesita revisión de protección de datos. Desktop: texto a la izquierda y vídeo a la derecha; Mobile: vídeo arriba. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -4961,6 +5024,54 @@
             }
           ],
           "nestedInstances": [
+            {
+              "layer": "noodle-texture",
+              "component": "Decoration / Noodle texture",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=1, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=3, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=5, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=2, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=4, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
             {
               "layer": "cta",
               "component": "Hierarchy=Primary, Size=L, State=Default",
@@ -5025,8 +5136,10 @@
               "paddingRight: layout/margin",
               "paddingBottom: layout/section-y",
               "width: layout/frame",
-              "fills: color/surface/page",
-              "color: color/surface/page",
+              "fills: color/surface/brand",
+              "color: color/surface/brand",
+              "fills: decoration/noodle/texture",
+              "color: decoration/noodle/texture",
               "itemSpacing: space/64",
               "itemSpacing: space/24",
               "fills: color/text/secondary",
@@ -5792,7 +5905,7 @@
           "type": "COMPONENT_SET",
           "id": "92:960",
           "key": "d6393b085d0e5c126d1891ef1a1477660af75433",
-          "description": "Bloque de FAQ (Home, Natural formula y página FAQS; wireframe UX): título (h2) + entradilla · lista de Accordion item (space/16; uno abierto a la vez) · «Still curious?» + Link «See all FAQS» a la página FAQS (desktop al pie de la columna del título; mobile debajo de la lista). En la página FAQS se repite por categorías sin el enlace. SEO/AEO: las respuestas están en el HTML y la página lleva datos estructurados FAQPage; las respuestas las valida GB Foods. Desktop: cabecera a la izquierda (400 px) y lista a la derecha; Mobile: apilado. Sin variables propias.",
+          "description": "Bloque de FAQ (Home, Natural formula y página FAQS; wireframe UX): título (h2) + entradilla · lista de Accordion item (space/16; uno abierto a la vez) · «Still curious?» + Link «See all FAQS» a la página FAQS (desktop al pie de la columna del título; mobile debajo de la lista). En la página FAQS se repite por categorías sin el enlace. SEO/AEO: las respuestas están en el HTML y la página lleva datos estructurados FAQPage; las respuestas las valida GB Foods. Desktop: cabecera a la izquierda (400 px) y lista a la derecha; Mobile: apilado. Fondo color/surface/card (blanco): en la Home va tras el Banner crema y no puede haber dos fondos crema seguidos. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -5900,8 +6013,8 @@
               "paddingRight: layout/margin",
               "paddingBottom: layout/section-y",
               "width: layout/frame",
-              "fills: color/surface/page",
-              "color: color/surface/page",
+              "fills: color/surface/card",
+              "color: color/surface/card",
               "itemSpacing: space/64",
               "itemSpacing: space/16",
               "fills: color/text/default",
@@ -5966,7 +6079,7 @@
           "type": "COMPONENT_SET",
           "id": "92:990",
           "key": "433379b602c8052033bb1bac0d338039b7e8a2b0",
-          "description": "Dónde comprar (Home, página de producto; destino del CTA de la Navbar; wireframe UX): antetítulo «Where to buy?» + título (h2, estilo h3) «You can find us at these shops» · fila de logos de distribuidores del país. Cada logo es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; sin tarjeta: el logo va directo sobre color/surface/brand. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: texto a la izquierda y logos a la derecha; Mobile: texto arriba y logos en fila con scroll horizontal. Sin variables propias.",
+          "description": "Dónde comprar (Home, página de producto; wireframe UX): antetítulo «Where to buy?» + título (h2, estilo h3) «You can find us at these shops» · fila de logos de distribuidores del país. Cada logo es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; sin tarjeta: el logo va directo sobre color/surface/brand, con la trama de fideos (Decoration / Noodle texture) a sangre por la derecha, detrás. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: texto a la izquierda y logos a la derecha; Mobile: texto arriba y logos en fila con scroll horizontal. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -5985,7 +6098,56 @@
               ]
             }
           ],
-          "nestedInstances": [],
+          "nestedInstances": [
+            {
+              "layer": "noodle-texture",
+              "component": "Decoration / Noodle texture",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=1, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=3, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=5, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=2, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "noodle",
+              "component": "Shape=4, Tone=Texture",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
           "bindings": {
             "variables": [
               "itemSpacing: space/32",
@@ -5996,6 +6158,8 @@
               "width: layout/frame",
               "fills: color/surface/brand",
               "color: color/surface/brand",
+              "fills: decoration/noodle/texture",
+              "color: decoration/noodle/texture",
               "itemSpacing: space/64",
               "itemSpacing: space/4",
               "fills: color/text/default",
@@ -7305,5 +7469,5 @@
     }
   ],
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
-  "readAt": "2026-10-08T11:04:06.515Z"
+  "readAt": "2026-10-08T11:52:19.492Z"
 }

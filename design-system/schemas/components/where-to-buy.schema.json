@@ -6,23 +6,22 @@
     "slug": "where-to-buy",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:10:38Z",
-    "description": "Dónde comprar (Home, página de producto; destino del CTA de la Navbar; wireframe UX): antetítulo «Where to buy?» + título (h2, estilo h3) «You can find us at these shops» · fila de logos de distribuidores del país. Cada logo es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; sin tarjeta: el logo va directo sobre color/surface/brand. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: texto a la izquierda y logos a la derecha; Mobile: texto arriba y logos en fila con scroll horizontal. Sin variables propias.",
+    "lastSync": "2026-10-08T11:52:41Z",
+    "description": "Dónde comprar (Home, página de producto; wireframe UX): antetítulo «Where to buy?» + título (h2, estilo h3) «You can find us at these shops» · fila de logos de distribuidores del país. Cada logo es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; sin tarjeta: el logo va directo sobre color/surface/brand, con la trama de fideos (Decoration / Noodle texture) a sangre por la derecha, detrás. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: texto a la izquierda y logos a la derecha; Mobile: texto arriba y logos en fila con scroll horizontal. Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "f1d2ff914cb1",
+    "anatomyHash": "044bece79d19",
     "verification": {
       "status": "verified",
       "date": "2026-10-08",
-      "figmaVersion": "f1d2ff914cb1",
+      "figmaVersion": "044bece79d19",
       "variantsChecked": [
         "Breakpoint=Desktop",
         "Breakpoint=Mobile"
       ],
-      "by": "agent (Claude)",
-      "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)"
+      "by": "agent (Claude)"
     }
   },
   "source": {
@@ -40,6 +39,13 @@
       "import": null,
       "path": "design-system/css/components.css",
       "classes": [
+        "decoration-noodle",
+        "decoration-noodle--2",
+        "decoration-noodle--3",
+        "decoration-noodle--4",
+        "decoration-noodle--5",
+        "decoration-noodle--texture",
+        "decoration-noodle-texture",
         "section",
         "section__inner",
         "where-to-buy",
@@ -50,7 +56,7 @@
         "where-to-buy__text",
         "where-to-buy__title"
       ],
-      "example": "<section class=\"section where-to-buy\" id=\"donde-comprar\" aria-labelledby=\"wtb-title\">\n<div class=\"section__inner\">\n<div class=\"where-to-buy__grid\">\n<div class=\"where-to-buy__text\"><span class=\"where-to-buy__kicker\">Where to buy?</span><h2 class=\"where-to-buy__title\" id=\"wtb-title\">You can find us at these shops</h2></div>\n<ul class=\"where-to-buy__list\"><li><a class=\"where-to-buy__retailer\" href=\"https://tienda.example.org\" target=\"_blank\" rel=\"noopener\"><img src=\"/media/distribuidor.svg\" alt=\"Distribuidor (abre en una pestaña nueva)\"></a></li></ul>\n</div>\n</div>\n</section>"
+      "example": "<section class=\"section where-to-buy\" id=\"donde-comprar\" aria-labelledby=\"wtb-title\">\n<div class=\"decoration-noodle-texture\" aria-hidden=\"true\"><span class=\"decoration-noodle decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--3 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--5 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--2 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--4 decoration-noodle--texture\"></span></div>\n<div class=\"section__inner\">\n<div class=\"where-to-buy__grid\">\n<div class=\"where-to-buy__text\"><span class=\"where-to-buy__kicker\">Where to buy?</span><h2 class=\"where-to-buy__title\" id=\"wtb-title\">You can find us at these shops</h2></div>\n<ul class=\"where-to-buy__list\"><li><a class=\"where-to-buy__retailer\" href=\"https://tienda.example.org\" target=\"_blank\" rel=\"noopener\"><img src=\"/media/distribuidor.svg\" alt=\"Distribuidor (abre en una pestaña nueva)\"></a></li></ul>\n</div>\n</div>\n</section>"
     }
   },
   "api": {
@@ -76,7 +82,56 @@
       "Breakpoint": "Desktop"
     },
     "invalidCombinations": [],
-    "nestedInstances": [],
+    "nestedInstances": [
+      {
+        "layer": "noodle-texture",
+        "component": "Decoration / Noodle texture",
+        "componentSlug": "decoration-noodle-texture",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "noodle",
+        "component": "Shape=1, Tone=Texture",
+        "componentSlug": "decoration-noodle",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "noodle",
+        "component": "Shape=3, Tone=Texture",
+        "componentSlug": "decoration-noodle",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "noodle",
+        "component": "Shape=5, Tone=Texture",
+        "componentSlug": "decoration-noodle",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "noodle",
+        "component": "Shape=2, Tone=Texture",
+        "componentSlug": "decoration-noodle",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "noodle",
+        "component": "Shape=4, Tone=Texture",
+        "componentSlug": "decoration-noodle",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -90,6 +145,7 @@
       "color/surface/brand",
       "color/text/default",
       "color/text/secondary",
+      "decoration/noodle/texture",
       "font/family/body",
       "font/family/display",
       "font/line-height/desktop/caption",
@@ -116,6 +172,8 @@
       "width: layout/frame",
       "fills: color/surface/brand",
       "color: color/surface/brand",
+      "fills: decoration/noodle/texture",
+      "color: decoration/noodle/texture",
       "itemSpacing: space/64",
       "itemSpacing: space/4",
       "fills: color/text/default",
@@ -178,7 +236,10 @@
   },
   "compatibility": {},
   "relations": {
-    "uses": [],
+    "uses": [
+      "decoration-noodle",
+      "decoration-noodle-texture"
+    ],
     "usedBy": [],
     "related": []
   }

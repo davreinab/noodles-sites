@@ -2,14 +2,14 @@
 
 # GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
 
-> Última sync: **2026-10-08T11:10:38Z** · modo de adopción: `new` · 329 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-08T11:52:41Z** · modo de adopción: `new` · 331 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice
 
-- [Primitive](#primitive) · 22 tokens · modos: Value
+- [Primitive](#primitive) · 23 tokens · modos: Value
 - [Semantic](#semantic) · 38 tokens · modos: Yatekomo, Saikebon, Aiki, Daisuki, DE
-- [Components](#components) · 189 tokens · modos: Value
+- [Components](#components) · 190 tokens · modos: Value
 - [Layer](#layer) · 7 tokens · modos: Value
 - [Spacing](#spacing) · 20 tokens · modos: Value
 - [Layout](#layout) · 7 tokens · modos: Desktop, Tablet, Mobile
@@ -57,6 +57,7 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 | `color/status/info-900` | `--color-status-info-900` | COLOR | `#0b4482` | — | Texto de información. Primitivo: no se consume en componentes. |
 | `shadow/ink-20` | `--shadow-ink-20` | COLOR | `rgba(18, 18, 18, 0.2)` | — | Tinta al 20%. Translúcido permitido solo en sombras de elevación |
 | `overlay/ink-70` | `--overlay-ink-70` | COLOR | `rgba(18, 18, 18, 0.7)` | — | Tinta al 70 %. Translúcido permitido solo en velos (overlay) de modales y paneles. Primitivo: no se consume en componentes. |
+| `color/yatekomo/amber` | `--color-yatekomo-amber` | COLOR | `#f4aa09` | — | Ámbar de la trama de fideos: el naranja de marca al 50 % sobre el amarillo, resuelto como color opaco (regla 7, sin transparencias). Primitivo: no se consume en componentes. |
 
 ## Semantic
 
@@ -294,6 +295,7 @@ Modos de marca de las colecciones `Semantic`, `Typography`. La marca por defecto
 | `modal/width/l` | `--modal-width-l` | FLOAT | `880px` | WIDTH_HEIGHT | modal: Ancho del diálogo L (880px): etiqueta del envase, resultados de búsqueda |
 | `icon-button/size/m` | `--icon-button-size-m` | FLOAT | `48px` | WIDTH_HEIGHT | icon-button: Lado de la talla M (48px), igual que la altura de Button M |
 | `icon-button/size/l` | `--icon-button-size-l` | FLOAT | `64px` | WIDTH_HEIGHT | icon-button: Lado de la talla L (64px), igual que la altura de Button L |
+| `decoration/noodle/texture` | `--decoration-noodle-texture` | COLOR | → `--color-yatekomo-amber` | FRAME_FILL, SHAPE_FILL | decoration-noodle: Fideo de la trama de fondo (ámbar opaco = naranja al 50 % sobre amarillo, como en las landings). Solo sobre color/surface/brand. |
 
 ## Layer
 

@@ -1,7 +1,7 @@
-### Mobile menu   ⚙️ synced: 2026-10-08T11:10:38Z
+### Mobile menu   ⚙️ synced: 2026-10-08T11:52:41Z
 
 <!-- ⚙️ GENERATED:start:mobile-menu -->
-- **Figma:** `55:119` · página «Pattern / Global» · COMPONENT · 1 variantes · última sync 2026-10-08T11:10:38Z
+- **Figma:** `55:119` · página «Pattern / Global» · COMPONENT · 1 variantes · última sync 2026-10-08T11:52:41Z
 - **Descripción (Figma):** Patrón: menú a pantalla completa en todos los breakpoints (wireframe UX: se abre desde el botón menú de la Navbar, también en desktop). Logo negativo · cerrar · 5 Nav item (Menu): Products, Natural formula, Recipes, Contests, FAQS · Lang switch (solo marcas multiidioma) · «Our social media:» con los iconos de redes de la marca (enlaces externos) · © GBFoods. Accesibilidad: &lt;dialog&gt; modal, foco atrapado dentro, Esc cierra y el foco vuelve al botón menú; layer/modal. Fondo color/surface/inverse. Sin variables propias.
 - **Anatomía:** `logo` → Version=Negative, `close` → Hierarchy=Inverse, Size=M, State=Default, `icon` → Icon / close, `nav-item` → Type=Menu, State=Active, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `nav-item` → Type=Menu, State=Default, `lang-switch` → Selected=First, `social` → Icon / tiktok, `social` → Icon / instagram, `social` → Icon / x, `social` → Icon / youtube
 - **Propiedades de componente:** `Logo#55:6` (INSTANCE_SWAP, por defecto Version=Negative), `Lang switch#55:7` (BOOLEAN, por defecto False)

@@ -6,7 +6,7 @@
     "slug": "product-categories",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:10:38Z",
+    "lastSync": "2026-10-08T11:52:41Z",
     "description": "Productos de la Home (wireframe UX «Our products»): título (h2) + entradilla · 3 Category card, una por tipo de producto (Cups, Bags, Sauces; solo tipos con productos) que llevan a la Product library filtrada. Badge New en la categoría con novedad. Desktop: 3 columnas iguales (gutter layout/gutter); Mobile: apiladas a todo el ancho. Sustituye al antiguo Product carousel (pestañas + Product card). Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",

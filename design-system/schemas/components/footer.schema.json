@@ -6,7 +6,7 @@
     "slug": "footer",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:10:38Z",
+    "lastSync": "2026-10-08T11:52:41Z",
     "description": "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de sugerencias («Do you have any ideas, complaints or cravings?» + texto + Button Primary «Send suggestions» con external-link: abre el formulario externo de Calidad) · franja legal por país (Legal notice, Privacy policy, Cookies policy, Legal basis, Contact) y © GBFoods. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Menu. Desktop: logo y enlaces a la izquierda, caja de sugerencias a la derecha; Mobile: la caja arriba. Sin variables propias.",
     "figmaPage": "Pattern / Global",
     "figmaType": "COMPONENT_SET",

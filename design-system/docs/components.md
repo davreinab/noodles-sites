@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 58 componentes sincronizados el 2026-10-08T11:10:38Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 59 componentes sincronizados el 2026-10-08T11:52:41Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -44,6 +44,7 @@
 - [Logo / Saikebon](components/logo-saikebon.md) · component · `logo-saikebon` · ✅ criterio completo
 - [Logo / Daisuki](components/logo-daisuki.md) · component · `logo-daisuki` · ✅ criterio completo
 - [Decoration / Noodle](components/decoration-noodle.md) · component · `decoration-noodle` · ✅ criterio completo
+- [Decoration / Noodle texture](components/decoration-noodle-texture.md) · component · `decoration-noodle-texture` · ✅ criterio completo
 - [Button](components/button.md) · component · `button` · ✅ criterio completo
 - [Icon button](components/icon-button.md) · component · `icon-button` · ✅ criterio completo
 - [Link](components/link.md) · component · `link` · ✅ criterio completo

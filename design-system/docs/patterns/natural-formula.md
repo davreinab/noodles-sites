@@ -1,7 +1,7 @@
-### Natural formula   ⚙️ synced: 2026-10-08T11:10:38Z
+### Natural formula   ⚙️ synced: 2026-10-08T11:52:41Z
 
 <!-- ⚙️ GENERATED:start:natural-formula -->
-- **Figma:** `91:704` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:10:38Z
+- **Figma:** `91:704` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:52:41Z
 - **Descripción (Figma):** Sección de la fórmula natural (Home, wireframe UX): título display «100% natural noodles. Nothing else» (h2) · lista de ingredientes eliminados: cada uno con el nombre tachado (Additives, Preservatives, Palm oil, Glutamate; &lt;s&gt; o &lt;del&gt;, con texto oculto «sin») y la frase que lo explica · Button Inverse L «Learn more» a la Natural formula page (Inverse por contraste sobre el verde; el wireframe dibuja Secondary sobre blanco). Fondo color/surface/natural con texto color/text/on-natural (5,5:1). Los textos deben coincidir con el envase (restricción regulatoria). Desktop: título a la izquierda y lista a la derecha; Mobile: apilado. Sin variables propias.
 - **Anatomía:** `cta` → Hierarchy=Inverse, Size=L, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right
 - **Breakpoint:** Desktop, Mobile

@@ -1,7 +1,7 @@
-### Link   ⚙️ synced: 2026-10-08T11:10:38Z
+### Link   ⚙️ synced: 2026-10-08T11:52:41Z
 
 <!-- ⚙️ GENERATED:start:link -->
-- **Figma:** `35:107` · página «Buttons & links» · COMPONENT_SET · 12 variantes · última sync 2026-10-08T11:10:38Z
+- **Figma:** `35:107` · página «Buttons & links» · COMPONENT_SET · 12 variantes · última sync 2026-10-08T11:52:41Z
 - **Descripción (Figma):** Enlace. Inline: dentro de un párrafo, siempre subrayado (no se distingue solo por color). Standalone: enlace suelto en Anton con flecha (p. ej. «Ver todas las recetas»), subrayado en hover. Surface Dark para fondos surface/inverse. Enlaces externos: icono external-link y aviso de que abre fuera. El texto se edita directamente en la instancia (sin propiedad de texto, para conservar el formato por variante).
 - **Anatomía:** `icon-trailing` → Icon / arrow-right
 - **Type:** Inline, Standalone

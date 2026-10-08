@@ -496,6 +496,28 @@
               }
             }
           }
+        },
+        {
+          "id": "VariableID:158:1337",
+          "name": "color/yatekomo/amber",
+          "type": "COLOR",
+          "description": "Ámbar de la trama de fideos: el naranja de marca al 50 % sobre el amarillo, resuelto como color opaco (regla 7, sin transparencias). Primitivo: no se consume en componentes.",
+          "scopes": [],
+          "codeSyntax": {
+            "WEB": "var(--color-yatekomo-amber)"
+          },
+          "hiddenFromPublishing": true,
+          "valuesByMode": {
+            "5:0": {
+              "type": "value",
+              "value": {
+                "r": 0.95686274766922,
+                "g": 0.6666666865348816,
+                "b": 0.03529411926865578,
+                "a": 1
+              }
+            }
+          }
         }
       ]
     },
@@ -6009,6 +6031,27 @@
               "value": 64
             }
           }
+        },
+        {
+          "id": "VariableID:158:1338",
+          "name": "decoration/noodle/texture",
+          "type": "COLOR",
+          "description": "decoration-noodle: Fideo de la trama de fondo (ámbar opaco = naranja al 50 % sobre amarillo, como en las landings). Solo sobre color/surface/brand.",
+          "scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "codeSyntax": {
+            "WEB": "var(--decoration-noodle-texture)"
+          },
+          "hiddenFromPublishing": false,
+          "valuesByMode": {
+            "9:0": {
+              "type": "alias",
+              "id": "VariableID:158:1337",
+              "name": "color/yatekomo/amber"
+            }
+          }
         }
       ]
     },
@@ -9033,12 +9076,12 @@
   ],
   "readProgress": {
     "v4mnn154qUmiB35CCnRfgh": {
-      "total": 211,
-      "read": 211
+      "total": 353,
+      "read": 353
     }
   },
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
   "fileName": "Document",
   "version": null,
-  "readAt": "2026-10-07T12:41:21.504Z"
+  "readAt": "2026-10-08T11:49:12.213Z"
 }

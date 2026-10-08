@@ -1,7 +1,7 @@
-### Category card   ⚙️ synced: 2026-10-08T11:10:38Z
+### Category card   ⚙️ synced: 2026-10-08T11:52:41Z
 
 <!-- ⚙️ GENERATED:start:category-card -->
-- **Figma:** `147:1353` · página «Cards» · COMPONENT_SET · 3 variantes · última sync 2026-10-08T11:10:38Z
+- **Figma:** `147:1353` · página «Cards» · COMPONENT_SET · 3 variantes · última sync 2026-10-08T11:52:41Z
 - **Descripción (Figma):** Card de categoría de producto (Home · «Our products»: Cups, Bags, Sauces). Anatomía (wireframe UX): imagen de la categoría a sangre (fondo) · Badge New opcional arriba a la izquierda · nombre de la categoría en display h3 sobre placa color/surface/inverse abajo a la izquierda (texto color/text/on-inverse, 17:1). Toda la card es un enlace a la Product library filtrada por ese tipo. Hover: elevation/2; Focus: borde grueso. Desktop 392 px cuadrada; en móvil FILL (343). Sin variables propias.
 - **Anatomía:** `badge` → Type=New
 - **State:** Default, Hover, Focus

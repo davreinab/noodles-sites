@@ -6,19 +6,20 @@
     "slug": "decoration-noodle",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:10:38Z",
-    "description": "Fideo decorativo de marca (5 trazos). Tone=Brand usa decoration/noodle/brand y Tone=Accent decoration/noodle/accent; ambos cambian con el modo de marca. Escalable; solo decorativo (aria-hidden).",
+    "lastSync": "2026-10-08T11:52:41Z",
+    "description": "Fideo decorativo de marca (5 trazos). Tone=Brand usa decoration/noodle/brand, Tone=Accent decoration/noodle/accent y Tone=Texture decoration/noodle/texture (ámbar opaco, solo dentro de Decoration / Noodle texture); cambian con el modo de marca. Escalable; solo decorativo (aria-hidden).",
     "figmaPage": "Brand assets",
     "figmaType": "COMPONENT_SET",
-    "variantCount": 10,
+    "variantCount": 15,
     "autoLayout": false,
-    "anatomyHash": "c10edbc5ec7b",
+    "anatomyHash": "d711a61741ab",
     "verification": {
       "status": "verified",
       "date": "2026-10-08",
-      "figmaVersion": "c10edbc5ec7b",
+      "figmaVersion": "d711a61741ab",
       "variantsChecked": [
-        "Shape=1, Tone=Brand"
+        "Shape=1, Tone=Brand",
+        "Shape=1..5, Tone=Texture"
       ],
       "by": "agent (Claude)"
     }
@@ -39,10 +40,12 @@
       "path": "design-system/css/components.css",
       "classes": [
         "decoration-noodle",
+        "decoration-noodle--2",
         "decoration-noodle--3",
-        "decoration-noodle--accent"
+        "decoration-noodle--accent",
+        "decoration-noodle--texture"
       ],
-      "example": "<span class=\"decoration-noodle\" aria-hidden=\"true\"></span>\n<span class=\"decoration-noodle decoration-noodle--3 decoration-noodle--accent\" aria-hidden=\"true\"></span>"
+      "example": "<span class=\"decoration-noodle\" aria-hidden=\"true\"></span>\n<span class=\"decoration-noodle decoration-noodle--3 decoration-noodle--accent\" aria-hidden=\"true\"></span>\n<span class=\"decoration-noodle decoration-noodle--2 decoration-noodle--texture\" aria-hidden=\"true\"></span>"
     }
   },
   "api": {
@@ -65,7 +68,8 @@
         "default": "Brand",
         "values": [
           "Brand",
-          "Accent"
+          "Accent",
+          "Texture"
         ]
       }
     ],
@@ -79,7 +83,8 @@
       ],
       "Tone": [
         "Brand",
-        "Accent"
+        "Accent",
+        "Texture"
       ]
     },
     "states": [],
@@ -130,7 +135,10 @@
   "relations": {
     "uses": [],
     "usedBy": [
-      "hero"
+      "decoration-noodle-texture",
+      "hero",
+      "promo",
+      "where-to-buy"
     ],
     "related": []
   }

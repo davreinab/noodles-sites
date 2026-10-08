@@ -6,7 +6,7 @@
     "slug": "natural-formula",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:10:38Z",
+    "lastSync": "2026-10-08T11:52:41Z",
     "description": "Sección de la fórmula natural (Home, wireframe UX): título display «100% natural noodles. Nothing else» (h2) · lista de ingredientes eliminados: cada uno con el nombre tachado (Additives, Preservatives, Palm oil, Glutamate; &lt;s&gt; o &lt;del&gt;, con texto oculto «sin») y la frase que lo explica · Button Inverse L «Learn more» a la Natural formula page (Inverse por contraste sobre el verde; el wireframe dibuja Secondary sobre blanco). Fondo color/surface/natural con texto color/text/on-natural (5,5:1). Los textos deben coincidir con el envase (restricción regulatoria). Desktop: título a la izquierda y lista a la derecha; Mobile: apilado. Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",

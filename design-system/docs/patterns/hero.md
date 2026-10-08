@@ -1,7 +1,7 @@
-### Hero   ⚙️ synced: 2026-10-08T11:10:38Z
+### Hero   ⚙️ synced: 2026-10-08T11:52:41Z
 
 <!-- ⚙️ GENERATED:start:hero -->
-- **Figma:** `88:132` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:10:38Z
+- **Figma:** `88:132` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:52:41Z
 - **Descripción (Figma):** Patrón hero de la Home (wireframe UX). Claim fijo «Welcome to the new era» (h1, display) fuera del slider · slider de máximo 3 slides (regla de negocio; el wireframe dibuja 5 puntos: pendiente de confirmar): cada slide = Badge New · título (h2, estilo h3) · subtítulo · Button Primary L a la acción de la slide · controles anterior / puntos / siguiente bajo el botón. Imagen de producto o campaña de marca, sin IA, sin marco (packshot recortado sobre el fondo). Fondo color/surface/page (crema), como el hero de las landings; fideo de marca (Decoration / Noodle, Shape=1, Tone=Brand) a sangre por la izquierda (centrado en Mobile), detrás del contenido, que en código se dibuja de arriba abajo al cargar y queda quieto (sin animación con prefers-reduced-motion). Accesibilidad: carrusel con aria-roledescription=«carrusel», cada slide «1 de 3», sin autoplay; flechas con nombre «Slide anterior/siguiente»; el punto activo va relleno (forma, no solo color). Desktop: texto a la izquierda e imagen a la derecha; Mobile: texto arriba e imagen debajo. Sin variables propias.
 - **Anatomía:** `noodle` → Shape=1, Tone=Brand, `badge` → Type=New, `cta` → Hierarchy=Primary, Size=L, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right, `prev` → Hierarchy=Secondary, Size=M, State=Default, `icon` → Icon / arrow-left, `next` → Hierarchy=Secondary, Size=M, State=Default, `icon` → Icon / arrow-right
 - **Breakpoint:** Desktop, Mobile

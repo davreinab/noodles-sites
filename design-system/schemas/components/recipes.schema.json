@@ -6,7 +6,7 @@
     "slug": "recipes",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:10:38Z",
+    "lastSync": "2026-10-08T11:52:41Z",
     "description": "Sección de recetas (Home y página de producto con las recetas que lo usan; wireframe UX): título (h2) + entradilla · Button Secondary L «See all recipes» a la Recipe library (desktop junto al título, a la derecha; mobile debajo de las cards) · Recipe card. Desktop: 4 columnas; Mobile: scroll horizontal con la siguiente card asomando. Fondo color/surface/card para alternar con las secciones crema. Sin buscador por ingredientes (regla de negocio). Comensales («2 people»): sin definir, falta información. Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",

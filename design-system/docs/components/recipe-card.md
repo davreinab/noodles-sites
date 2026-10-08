@@ -1,7 +1,7 @@
-### Recipe card   ⚙️ synced: 2026-10-08T11:10:38Z
+### Recipe card   ⚙️ synced: 2026-10-08T11:52:41Z
 
 <!-- ⚙️ GENERATED:start:recipe-card -->
-- **Figma:** `67:133` · página «Cards» · COMPONENT_SET · 3 variantes · última sync 2026-10-08T11:10:38Z
+- **Figma:** `67:133` · página «Cards» · COMPONENT_SET · 3 variantes · última sync 2026-10-08T11:52:41Z
 - **Descripción (Figma):** Card de receta (Recipe library, Home, página de producto). Anatomía (wireframe UX): media vertical 288:415 (imagen de marca; sin vídeo al principio) · tiempo (icono timer + texto, recipe-card/meta) · título (h3) · productos usados como Chip S (enlazan a la ficha de producto). Sin enlace «Ver receta»: el título es el enlace y su área se estira a toda la card; los Chip son enlaces propios y quedan por encima. Comensales: sin definir (falta información). Hover: elevation/2; Focus: anillo recipe-card/focus-ring. Desktop 384 px; en móvil FILL.
 - **Anatomía:** `icon-time` → Icon / timer, `product-chip` → Size=S, State=Default, `icon-leading` → Icon / check, `product-chip` → Size=S, State=Default, `icon-leading` → Icon / check
 - **State:** Default, Hover, Focus

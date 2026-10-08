@@ -6,23 +6,22 @@
     "slug": "promo",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:10:38Z",
-    "description": "Módulo de promoción o concurso de la Home (wireframe UX): arte de la campaña (PNG recortado, de marca) · título (h2) · texto con los premios · Button Primary L «I want to participate» · Link de bases legales (obligatorio por regla de negocio, aunque el wireframe no lo dibuja) · Video player 16:9 (fachada) o imagen grande de la campaña. Fondo color/surface/page (crema). Se oculta entero si no hay promoción activa (regla de negocio); si el concurso es iframe de agencia, el CTA lleva external-link y el iframe necesita revisión de protección de datos. Desktop: texto a la izquierda y vídeo a la derecha; Mobile: vídeo arriba. Sin variables propias.",
+    "lastSync": "2026-10-08T11:52:41Z",
+    "description": "Módulo de promoción o concurso de la Home (wireframe UX): arte de la campaña (PNG recortado, de marca) · título (h2) · texto con los premios · Button Primary L «I want to participate» · Link de bases legales (obligatorio por regla de negocio, aunque el wireframe no lo dibuja) · Video player 16:9 (fachada) o imagen grande de la campaña. Fondo color/surface/brand (amarillo) con la trama de fideos (Decoration / Noodle texture) a sangre por la derecha, detrás del contenido, como el módulo natural de las landings. Se oculta entero si no hay promoción activa (regla de negocio); si el concurso es iframe de agencia, el CTA lleva external-link y el iframe necesita revisión de protección de datos. Desktop: texto a la izquierda y vídeo a la derecha; Mobile: vídeo arriba. Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "6a0144669eed",
+    "anatomyHash": "3975c2436ea1",
     "verification": {
       "status": "verified",
       "date": "2026-10-08",
-      "figmaVersion": "6a0144669eed",
+      "figmaVersion": "3975c2436ea1",
       "variantsChecked": [
         "Breakpoint=Desktop",
         "Breakpoint=Mobile"
       ],
-      "by": "agent (Claude)",
-      "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)"
+      "by": "agent (Claude)"
     }
   },
   "source": {
@@ -42,6 +41,13 @@
       "classes": [
         "button",
         "button--l",
+        "decoration-noodle",
+        "decoration-noodle--2",
+        "decoration-noodle--3",
+        "decoration-noodle--4",
+        "decoration-noodle--5",
+        "decoration-noodle--texture",
+        "decoration-noodle-texture",
         "link",
         "promo",
         "promo__actions",
@@ -55,7 +61,7 @@
         "section__title",
         "video-player"
       ],
-      "example": "<section class=\"section promo\" aria-labelledby=\"pr-title\">\n<div class=\"section__inner\">\n<div class=\"promo__grid\">\n<div class=\"promo__content\">\n<figure class=\"promo__art\"><img src=\"/media/campana-arte.png\" alt=\"Conoce a Marc Cucurella. Participa y podrás ganar más premios\"></figure>\n<h2 class=\"section__title\" id=\"pr-title\">Enter Yatekomo’s new giveaway and win prizes</h2>\n<p class=\"promo__body\">Official Spanish National Team jerseys and soccer balls signed by Marc Cucurella.</p>\n<div class=\"promo__actions\"><a class=\"button button--l\" href=\"/concursos/cucurella\">I want to participate</a><a class=\"link\" href=\"/concursos/cucurella/bases\">Bases legales</a></div>\n</div>\n<div class=\"promo__media\"><div class=\"video-player\"><img src=\"/media/poster.jpg\" alt=\"\"></div></div>\n</div>\n</div>\n</section>"
+      "example": "<section class=\"section promo\" aria-labelledby=\"pr-title\">\n<div class=\"decoration-noodle-texture\" aria-hidden=\"true\"><span class=\"decoration-noodle decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--3 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--5 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--2 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--4 decoration-noodle--texture\"></span></div>\n<div class=\"section__inner\">\n<div class=\"promo__grid\">\n<div class=\"promo__content\">\n<figure class=\"promo__art\"><img src=\"/media/campana-arte.png\" alt=\"Conoce a Marc Cucurella. Participa y podrás ganar más premios\"></figure>\n<h2 class=\"section__title\" id=\"pr-title\">Enter Yatekomo’s new giveaway and win prizes</h2>\n<p class=\"promo__body\">Official Spanish National Team jerseys and soccer balls signed by Marc Cucurella.</p>\n<div class=\"promo__actions\"><a class=\"button button--l\" href=\"/concursos/cucurella\">I want to participate</a><a class=\"link\" href=\"/concursos/cucurella/bases\">Bases legales</a></div>\n</div>\n<div class=\"promo__media\"><div class=\"video-player\"><img src=\"/media/poster.jpg\" alt=\"\"></div></div>\n</div>\n</div>\n</section>"
     }
   },
   "api": {
@@ -82,6 +88,54 @@
     },
     "invalidCombinations": [],
     "nestedInstances": [
+      {
+        "layer": "noodle-texture",
+        "component": "Decoration / Noodle texture",
+        "componentSlug": "decoration-noodle-texture",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "noodle",
+        "component": "Shape=1, Tone=Texture",
+        "componentSlug": "decoration-noodle",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "noodle",
+        "component": "Shape=3, Tone=Texture",
+        "componentSlug": "decoration-noodle",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "noodle",
+        "component": "Shape=5, Tone=Texture",
+        "componentSlug": "decoration-noodle",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "noodle",
+        "component": "Shape=2, Tone=Texture",
+        "componentSlug": "decoration-noodle",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "noodle",
+        "component": "Shape=4, Tone=Texture",
+        "componentSlug": "decoration-noodle",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
       {
         "layer": "cta",
         "component": "Hierarchy=Primary, Size=L, State=Default",
@@ -153,9 +207,10 @@
       "button/primary/bg",
       "button/primary/border",
       "button/primary/text",
-      "color/surface/page",
+      "color/surface/brand",
       "color/text/default",
       "color/text/secondary",
+      "decoration/noodle/texture",
       "font/family/body",
       "font/family/display",
       "font/line-height/desktop/body-l",
@@ -197,8 +252,10 @@
       "paddingRight: layout/margin",
       "paddingBottom: layout/section-y",
       "width: layout/frame",
-      "fills: color/surface/page",
-      "color: color/surface/page",
+      "fills: color/surface/brand",
+      "color: color/surface/brand",
+      "fills: decoration/noodle/texture",
+      "color: decoration/noodle/texture",
       "itemSpacing: space/64",
       "itemSpacing: space/24",
       "fills: color/text/secondary",
@@ -294,7 +351,7 @@
         "button/primary/bg",
         "button/primary/border",
         "button/primary/text",
-        "color/surface/page",
+        "color/surface/brand",
         "color/text/default",
         "color/text/secondary",
         "font/family/body",
@@ -330,6 +387,8 @@
   "relations": {
     "uses": [
       "button",
+      "decoration-noodle",
+      "decoration-noodle-texture",
       "icon-arrow-right",
       "icon-play",
       "link",

@@ -6,8 +6,8 @@
   "contracts": 75,
   "contractsWithCss": 75,
   "verification": {
-    "verified": 38,
-    "unverified": 37,
+    "verified": 39,
+    "unverified": 36,
     "stale": 0
   },
   "findings": []

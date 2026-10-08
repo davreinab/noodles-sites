@@ -50,6 +50,7 @@
 <main>
 
   <section class="section hero" aria-roledescription="carrusel" aria-label="Destacados">
+    <span class="decoration-noodle hero__noodle" aria-hidden="true"></span>
     <div class="section__inner">
       <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="1 de 3">
         <div class="hero__content">
@@ -59,12 +60,10 @@
           <p class="hero__lead">Texto de apoyo de ejemplo: una frase sobre la fórmula natural y el sabor.</p>
           <a class="button button--l" href="#">Descubre los productos</a>
         </div>
-        <div class="media-frame hero__media">
-          <picture>
-            <source media="(max-width: 768px)" srcset="assets/yatekomo-hero-cups-mobile.png">
-            <img src="assets/yatekomo-hero-cups.png" alt="Vasos de Yatekomo">
-          </picture>
-        </div>
+        <picture class="hero__media">
+          <source media="(max-width: 768px)" srcset="assets/yatekomo-hero-cups-mobile.png">
+          <img src="assets/yatekomo-hero-cups.png" alt="Cups de Yatekomo Verduras, Pollo y Curry">
+        </picture>
       </div>
       <!-- HUECO: contenido de las slides 2 y 3 -->
       <div class="hero__controls">

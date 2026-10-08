@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-08T07:26:15Z",
+  "lastSync": "2026-10-08T10:21:35Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -1841,6 +1841,7 @@
       "dependencies": [
         "badge",
         "button",
+        "decoration-noodle",
         "icon-arrow-left",
         "icon-arrow-right",
         "icon-button"
@@ -1858,6 +1859,7 @@
           "badge--natural",
           "button",
           "button--l",
+          "decoration-noodle",
           "hero",
           "hero__arrows",
           "hero__content",
@@ -1866,6 +1868,7 @@
           "hero__dots",
           "hero__lead",
           "hero__media",
+          "hero__noodle",
           "hero__slide",
           "hero__title",
           "icon",
@@ -1873,7 +1876,6 @@
           "icon-arrow-right",
           "icon-button",
           "icon-button--secondary",
-          "media-frame",
           "section",
           "section__inner"
         ]

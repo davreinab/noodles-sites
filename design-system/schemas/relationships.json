@@ -344,6 +344,11 @@
     },
     {
       "from": "hero",
+      "to": "decoration-noodle",
+      "type": "uses"
+    },
+    {
+      "from": "hero",
       "to": "icon-arrow-left",
       "type": "uses"
     },
@@ -668,5 +673,5 @@
       "type": "uses"
     }
   ],
-  "lastSync": "2026-10-08T07:26:15Z"
+  "lastSync": "2026-10-08T10:21:35Z"
 }

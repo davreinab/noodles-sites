@@ -4666,7 +4666,7 @@
           "type": "COMPONENT_SET",
           "id": "88:132",
           "key": "fcee0ddc73afc1a3fb701081c9a6645a910b1611",
-          "description": "Patrón hero de la Home. Slider de máximo 3 slides (regla de negocio): cada slide = imagen de producto o campaña (de marca, sin IA) · sello Badge Natural «The only 100% natural» · claim «Welcome to the new noodles era» (display) · texto · CTA a la acción principal (campaña activa o, sin campaña, producto). Controles: puntos (el activo relleno; el estado no depende solo del color: forma rellena vs contorno) y flechas Icon button. Accesibilidad: carrusel con aria-roledescription=&quot;carrusel&quot;, cada slide «1 de 3», sin autoplay (o con pausa visible y parado con prefers-reduced-motion); flechas con nombre «Slide anterior/siguiente». Fondo color/surface/brand. Desktop: texto a la izquierda e imagen a la derecha; Mobile: imagen arriba. Sin variables propias.",
+          "description": "Patrón hero de la Home. Slider de máximo 3 slides (regla de negocio): cada slide = imagen de producto o campaña (de marca, sin IA) · sello Badge Natural «The only 100% natural» · claim «Welcome to the new noodles era» (display) · texto · CTA a la acción principal (campaña activa o, sin campaña, producto). Controles: puntos (el activo relleno; el estado no depende solo del color: forma rellena vs contorno) y flechas Icon button. Accesibilidad: carrusel con aria-roledescription=&amp;quot;carrusel&amp;quot;, cada slide «1 de 3», sin autoplay (o con pausa visible y parado con prefers-reduced-motion); flechas con nombre «Slide anterior/siguiente». Fondo color/surface/page (crema), como el hero de las landings. Fideo de marca (Decoration / Noodle, Shape=1, Tone=Brand) a sangre por el lateral izquierdo (centrado en Mobile), detrás del contenido; en código se dibuja de arriba abajo al cargar (draw-in) y queda quieto, sin animación con prefers-reduced-motion. Imagen de producto sin marco (sin fondo, borde ni radio), packshot recortado sobre el fondo. Desktop: texto a la izquierda e imagen a la derecha; Mobile: imagen arriba. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -4686,6 +4686,14 @@
             }
           ],
           "nestedInstances": [
+            {
+              "layer": "noodle",
+              "component": "Shape=1, Tone=Brand",
+              "componentSet": "Decoration / Noodle",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
             {
               "layer": "seal",
               "component": "Type=Natural",
@@ -4759,8 +4767,10 @@
               "paddingRight: layout/margin",
               "paddingBottom: layout/section-y",
               "width: layout/frame",
-              "fills: color/surface/brand",
-              "color: color/surface/brand",
+              "fills: color/surface/page",
+              "color: color/surface/page",
+              "fills: decoration/noodle/brand",
+              "color: decoration/noodle/brand",
               "itemSpacing: space/64",
               "itemSpacing: space/24",
               "paddingLeft: space/8",
@@ -4807,20 +4817,10 @@
               "fills: button/primary/text",
               "fontSize: font/size/desktop/label",
               "lineHeight: font/line-height/desktop/label",
-              "paddingLeft: space/16",
-              "paddingTop: space/16",
-              "paddingRight: space/16",
-              "paddingBottom: space/16",
-              "topLeftRadius: radius/md",
-              "topRightRadius: radius/md",
-              "bottomLeftRadius: radius/md",
-              "bottomRightRadius: radius/md",
-              "fills: color/surface/page",
-              "color: color/surface/page",
-              "fills: color/text/secondary",
-              "fontSize: font/size/desktop/caption",
-              "lineHeight: font/line-height/desktop/caption",
-              "color: color/text/secondary",
+              "topLeftRadius: radius/none",
+              "topRightRadius: radius/none",
+              "bottomLeftRadius: radius/none",
+              "bottomRightRadius: radius/none",
               "width: space/16",
               "height: space/16",
               "strokeWeight: border/width/thin",
@@ -4840,8 +4840,7 @@
               "Mobile/label",
               "Desktop/display",
               "Desktop/body-l",
-              "Desktop/label",
-              "Desktop/caption"
+              "Desktop/label"
             ]
           },
           "autoLayout": true
@@ -5244,6 +5243,14 @@
               "visibleByDefault": true
             },
             {
+              "layer": "tab",
+              "component": "State=Default",
+              "componentSet": "Tab",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
               "layer": "product-card",
               "component": "State=Default",
               "componentSet": "Product card",
@@ -5276,12 +5283,116 @@
               "visibleByDefault": true
             },
             {
+              "layer": "product-card",
+              "component": "State=Default",
+              "componentSet": "Product card",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
               "layer": "badge",
               "component": "Type=New",
               "componentSet": "Badge",
               "exposedAs": null,
               "toggledBy": "Badge#66:8",
               "visibleByDefault": false
+            },
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "product-card",
+              "component": "State=Default",
+              "componentSet": "Product card",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "badge",
+              "component": "Type=New",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": "Badge#66:8",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "product-card",
+              "component": "State=Default",
+              "componentSet": "Product card",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "badge",
+              "component": "Type=New",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": "Badge#66:8",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
             }
           ],
           "bindings": {
@@ -5468,6 +5579,166 @@
               "exposedAs": "Icon leading swap#35:27",
               "toggledBy": "Icon leading#35:22",
               "visibleByDefault": false
+            },
+            {
+              "layer": "product-chip",
+              "component": "Size=S, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "recipe-card",
+              "component": "State=Default",
+              "componentSet": "Recipe card",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-time",
+              "component": "Icon / timer",
+              "componentSet": null,
+              "exposedAs": "Time icon#67:8",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "product-chip",
+              "component": "Size=S, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "product-chip",
+              "component": "Size=S, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "recipe-card",
+              "component": "State=Default",
+              "componentSet": "Recipe card",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-time",
+              "component": "Icon / timer",
+              "componentSet": null,
+              "exposedAs": "Time icon#67:8",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "product-chip",
+              "component": "Size=S, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "product-chip",
+              "component": "Size=S, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "link",
+              "component": "Type=Standalone, Surface=Light, State=Default",
+              "componentSet": "Link",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-trailing",
+              "component": "Icon / arrow-right",
+              "componentSet": null,
+              "exposedAs": "Icon#35:0",
+              "toggledBy": null,
+              "visibleByDefault": true
             }
           ],
           "bindings": {
@@ -5757,6 +6028,38 @@
               "component": "Icon / minus",
               "componentSet": null,
               "exposedAs": "Icon expanded#69:21",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "accordion-item",
+              "component": "Expanded=False, State=Default",
+              "componentSet": "Accordion item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-collapsed",
+              "component": "Icon / plus",
+              "componentSet": null,
+              "exposedAs": "Icon collapsed#69:14",
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "accordion-item",
+              "component": "Expanded=False, State=Default",
+              "componentSet": "Accordion item",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-collapsed",
+              "component": "Icon / plus",
+              "componentSet": null,
+              "exposedAs": "Icon collapsed#69:14",
               "toggledBy": null,
               "visibleByDefault": true
             },
@@ -7194,5 +7497,5 @@
     }
   ],
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
-  "readAt": "2026-10-08T07:04:34Z"
+  "readAt": "2026-10-08T10:20:51.930Z"
 }

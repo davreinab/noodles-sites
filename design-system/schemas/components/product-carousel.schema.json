@@ -6,17 +6,17 @@
     "slug": "product-carousel",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T07:26:15Z",
+    "lastSync": "2026-10-08T10:21:35Z",
     "description": "Productos de la Home: título (h2) · flechas Icon button (desktop) · Tabs de tipo (Cups / Bags / Sauces; tablist que filtra el carrusel, solo tipos con productos) · carrusel de Product card · Link «Ver todos los productos» a la Product library. Desktop: 4 cards visibles (310 px, gutter layout/gutter). Mobile: scroll horizontal con la siguiente card asomando (pista que comunica que hay más); sin flechas. Accesibilidad: el carrusel es una lista (&lt;ul&gt;) desplazable con teclado; las flechas son &lt;button&gt; con nombre y se desactivan al llegar al final. Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "147c9ed5b618",
+    "anatomyHash": "2c11c7331960",
     "verification": {
       "status": "verified",
       "date": "2026-10-08",
-      "figmaVersion": "147c9ed5b618",
+      "figmaVersion": "2c11c7331960",
       "variantsChecked": [
         "Breakpoint=Desktop",
         "Breakpoint=Mobile"
@@ -135,6 +135,14 @@
         "visibleByDefault": true
       },
       {
+        "layer": "tab",
+        "component": "State=Default",
+        "componentSlug": "tab",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
         "layer": "product-card",
         "component": "State=Default",
         "componentSlug": "product-card",
@@ -167,12 +175,116 @@
         "visibleByDefault": true
       },
       {
+        "layer": "product-card",
+        "component": "State=Default",
+        "componentSlug": "product-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
         "layer": "badge",
         "component": "Type=New",
         "componentSlug": "badge",
         "exposedAs": null,
         "toggledBy": "Badge#66:8",
         "visibleByDefault": false
+      },
+      {
+        "layer": "link",
+        "component": "Type=Standalone, Surface=Light, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "product-card",
+        "component": "State=Default",
+        "componentSlug": "product-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "badge",
+        "component": "Type=New",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": "Badge#66:8",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "link",
+        "component": "Type=Standalone, Surface=Light, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "product-card",
+        "component": "State=Default",
+        "componentSlug": "product-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "badge",
+        "component": "Type=New",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": "Badge#66:8",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "link",
+        "component": "Type=Standalone, Surface=Light, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "link",
+        "component": "Type=Standalone, Surface=Light, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": true
       }
     ],
     "icons": {

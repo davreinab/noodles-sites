@@ -1,9 +1,9 @@
-### FAQ   ⚙️ synced: 2026-10-08T07:26:15Z
+### FAQ   ⚙️ synced: 2026-10-08T10:21:35Z
 
 <!-- ⚙️ GENERATED:start:faq -->
-- **Figma:** `92:960` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T07:26:15Z
+- **Figma:** `92:960` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T10:21:35Z
 - **Descripción (Figma):** Bloque de FAQ (Home, Natural formula con su FAQ propio, página FAQS indexada): título (h2) + entradilla + Link «Ver todas las preguntas» · lista de Accordion item (space/16 entre ítems; el primero puede ir abierto). En la página FAQS se repite por categorías sin el enlace. SEO/AEO: las respuestas están en el HTML y la página lleva datos estructurados FAQPage. Desktop: cabecera a la izquierda (400 px) y lista a la derecha; Mobile: apilado. Sin variables propias.
-- **Anatomía:** `link` → Type=Standalone, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right, `accordion-item` → Expanded=True, State=Default, `icon-expanded` → Icon / minus, `accordion-item` → Expanded=False, State=Default, `icon-collapsed` → Icon / plus
+- **Anatomía:** `link` → Type=Standalone, Surface=Light, State=Default, `icon-trailing` → Icon / arrow-right, `accordion-item` → Expanded=True, State=Default, `icon-expanded` → Icon / minus, `accordion-item` → Expanded=False, State=Default, `icon-collapsed` → Icon / plus, `accordion-item` → Expanded=False, State=Default, `icon-collapsed` → Icon / plus, `accordion-item` → Expanded=False, State=Default, `icon-collapsed` → Icon / plus
 - **Breakpoint:** Desktop, Mobile
 - **Propiedades de componente:** `Breakpoint` (VARIANT, por defecto Desktop)
 - **Iconos / instancias anidadas:** sí · swap: ninguna (⚠️ no expuesto) · por defecto: unknown

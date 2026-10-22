@@ -325,6 +325,10 @@
   "variants": {
     "default": {
       "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
     }
   }
 }

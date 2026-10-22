@@ -481,13 +481,18 @@ def analyze(sch, example, classes_in_css, fid_cfg=None, css_rules=None):
     root_tokens, child_tokens = set(), set()
     for t in top_level(example):  # los elementos de primer nivel (variantes puestas en fila) cuentan como raíz
         root_tokens |= set(_class_tokens(t["open"]))
-    if raiz:
-        dentro = example[raiz["start"] + len(raiz["open"]):raiz["end"]]
-        for m in re.finditer(r"<([a-zA-Z][\w-]*)([^>]*)>", dentro):
-            child_tokens |= set(_class_tokens(m.group(2)))
-    for e in elementos(example):  # cada elemento con el data-ds del componente es una muestra más, aunque esté anidado
+    todos_els = elementos(example)
+    muestras_ = [(t["start"], t["end"]) for t in top_level(example)]
+    for e in todos_els:  # cada elemento con el data-ds del componente es una muestra más, aunque esté anidado
         if e["attrs"].get("data-ds") == slug:
             root_tokens |= set(_class_tokens(e["open"]))
+            muestras_.append((e["start"], e["end"]))
+    if raiz:
+        muestras_.append((raiz["start"], raiz["end"]))
+    for a_, b_ in set(muestras_):  # lo que hay dentro de cualquier muestra, no solo de la primera, es de un elemento interno
+        for e in todos_els:
+            if a_ < e["start"] < b_:
+                child_tokens |= set(_class_tokens(e["open"]))
     child_tokens -= root_tokens
     directos = set()  # clases de los hijos directos del raíz
     if raiz:
@@ -616,7 +621,8 @@ def _root(slug, example, bases):
 
 def _with_classes(open_tag, remove, add):
     toks = _class_tokens(open_tag)
-    new = [t for t in toks if t not in remove] + [c for c in add if c not in toks]
+    quedan = [t for t in toks if t not in remove]
+    new = quedan + [c for c in add if c not in quedan]
     cls = " ".join(new)
     if re.search(r'class\s*=\s*"[^"]*"', open_tag):
         return re.sub(r'class\s*=\s*"[^"]*"', 'class="%s"' % cls, open_tag, count=1)
@@ -694,10 +700,7 @@ def gallery(sch, example, analysis, pairs=None):
         if it["state"] == "ignored":
             continue
         if it.get("spec"):
-            if root is None:
-                no_gen.append(it["label"])
-            else:
-                spec_ejes.setdefault((it["axis"], it["kind"]), []).append(it)
+            spec_ejes.setdefault((it["axis"], it["kind"]), []).append(it)
             continue
         if root is None or it["state"] == "unchecked" or (not it["classes"] and not it["default"]):
             no_gen.append(it["label"])
@@ -715,11 +718,35 @@ def gallery(sch, example, analysis, pairs=None):
             no_gen.append(f"{it['label']} (no se sabe a qué elemento va su clase: añádela al ejemplo)")
             continue
         por_eje.setdefault((it["axis"], it["kind"]), []).append(it)
-    if root is None:
+    if root is None and not spec_ejes:
         return None, no_gen
-    text = example[root["start"]:root["end"]]
-    open_tag = root["open"]
-    body = text[len(open_tag):]
+    # Sin una raíz identificable (el ejemplo va dentro de un contenedor sin data-ds ni clase base) las variantes con
+    # atributo o presencia que dicen su elemento (`target`) se pintan sobre el ejemplo entero; las demás se listan.
+    text = example[root["start"]:root["end"]] if root else example
+    open_tag = root["open"] if root else ""
+    body = text[len(open_tag):] if root else ""
+    muestras = {(t["start"], t["end"]) for t in top_level(example)}
+    muestras |= {(e["start"], e["end"]) for e in elementos(example) if e["attrs"].get("data-ds") == slug}
+
+    def base_de(it):
+        """El texto de la muestra donde sale lo que la variante cambia (una clase de un elemento interno puede estar solo en
+        otra muestra que la raíz); si no sale en ninguna, la raíz."""
+        busca = set(it.get("classes") or []) | ({it["target"]} if it.get("target") else set())
+        if not busca:
+            return text
+        orden = ([(root["start"], root["end"])] if root else []) + sorted(muestras)
+        for a_, b_ in orden:
+            for e in elementos(example[a_:b_])[1:]:
+                if busca & set(_class_tokens(e["open"])):
+                    return example[a_:b_]
+        return text
+    def base_spec(sp):
+        """La muestra donde sale el elemento de un estado por atributo o presencia: la raíz y, si no está en ella, la primera
+        otra muestra que lo tenga (un ejemplo con varias muestras puede mostrar cada estado en una distinta)."""
+        if not sp["target"]:
+            return text
+        orden = [text] + [example[a_:b_] for a_, b_ in sorted(muestras) if not (root and (a_, b_) == (root["start"], root["end"]))]
+        return next((t_ for t_ in orden if _destino(t_, sp["target"])), text)
     k, secciones = 0, []
     for (axis, kind), its in por_eje.items():
         celdas = []
@@ -728,7 +755,7 @@ def gallery(sch, example, analysis, pairs=None):
                 (f"{axis}=true", it["classes"]), (f"{axis}=false", [])]
             for etiqueta, add in opts:
                 if it.get("target"):
-                    celdas.append((etiqueta, _unique_ids(_en_hijo(text, it["target"], set(it["mods"]), add), k)))
+                    celdas.append((etiqueta, _unique_ids(_en_hijo(base_de(it), it["target"], set(it["mods"]), add), k)))
                 else:
                     tag = _with_classes(open_tag, set(it["mods"]) | (set(it["classes"]) if kind == "bool" else set()), add)
                     celdas.append((etiqueta, _unique_ids(tag + body, k)))
@@ -737,8 +764,9 @@ def gallery(sch, example, analysis, pairs=None):
             no_gen.append(f"{axis}: {len(its) - MAX_CELLS_PER_AXIS} valores más")
         secciones.append((axis if kind == "enum" else f"{axis} (con y sin)", celdas))
     for it in child_bool:
-        con = _unique_ids(text, k); k += 1
-        sin = _unique_ids(sin_elementos_con_clase(text, set(it["classes"])), k); k += 1
+        t_ = base_de(it)
+        con = _unique_ids(t_, k); k += 1
+        sin = _unique_ids(sin_elementos_con_clase(t_, set(it["classes"])), k); k += 1
         secciones.append((f"{it['axis']} (con y sin)", [(f"{it['axis']}=true", con), (f"{it['axis']}=false", sin)]))
     for (axis, kind), its in spec_ejes.items():
         todos = [i["spec"] for i in its if not i["spec"]["presence"]]
@@ -746,6 +774,9 @@ def gallery(sch, example, analysis, pairs=None):
         for it in its[:MAX_CELLS_PER_AXIS]:
             sp = it["spec"]
             donde = sp["target"] or "el elemento raíz"
+            if root is None and not sp["target"]:
+                no_gen.append(f"{it['label']} (el ejemplo no tiene un elemento raíz identificable: márcalo con data-ds=\"{slug}\" o declara un target)")
+                continue
             if kind == "enum":
                 if sp["presence"]:
                     no_gen.append(f"{it['label']} (una variante de un eje no puede ser «presence»)")
@@ -753,28 +784,29 @@ def gallery(sch, example, analysis, pairs=None):
                 if it["default"]:
                     h = sin_spec(text, todos)
                 else:
-                    h, ok = aplicar_spec(text, sp, quitar=todos)
+                    h, ok = aplicar_spec(base_spec(sp), sp, quitar=todos)
                     if not ok:
                         no_gen.append(f"{it['label']} (el elemento «{donde}» no sale en el ejemplo)")
                         continue
                 celdas.append((it["label"], _unique_ids(h, k))); k += 1
             else:
+                bs = base_spec(sp)
                 if sp["presence"]:
-                    if not spec_presente(sp, text):
+                    if not spec_presente(sp, bs):
                         no_gen.append(f"{it['label']} (el elemento «{donde}» no sale en el ejemplo)")
                         continue
-                    con, sin = text, sin_presencia(text, sp["target"])
+                    con, sin = bs, sin_presencia(bs, sp["target"])
                 else:
-                    con, ok = aplicar_spec(text, sp)
+                    con, ok = aplicar_spec(bs, sp)
                     if not ok:
                         no_gen.append(f"{it['label']} (el elemento «{donde}» no sale en el ejemplo)")
                         continue
-                    sin = sin_spec(text, [sp])
+                    sin = sin_spec(bs, [sp])
                 celdas.append((f"{axis}=true", _unique_ids(con, k))); k += 1
                 celdas.append((f"{axis}=false", _unique_ids(sin, k))); k += 1
         if celdas:
             secciones.append((axis if kind == "enum" else f"{axis} (con y sin)", celdas))
-    combos = combinaciones(analysis, pairs)
+    combos = combinaciones(analysis, pairs) if root else []
     if combos:
         todas = {c for it in analysis["items"] if it["state"] != "ignored" for c in it["classes"]} | {c for it in analysis["items"] for c in it["mods"]}
         celdas = []

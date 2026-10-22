@@ -377,6 +377,9 @@ def generate(root, check=False):
         pares = ctx[0].component_pairs(s["meta"]["slug"], ctx[1], ctx[2])["pairs"] if (ctx and (s.get("code") or {}).get("classes")) else None
         gal_html, _no_gen = dv.gallery(s, example, analisis, pares) if (dv and analisis) else (None, [])
         galeria = ("html", gal_html) if gal_html else (("texto", dv.lista_faltantes(analisis)) if (analisis and (analisis["missing"] or analisis["unchecked"])) else None)
+        if not gal_html and _no_gen:  # nada se pudo pintar: la página existe igual y dice por qué, aunque la cobertura esté completa
+            motivo = "No se han podido pintar: " + "; ".join(_no_gen) + "."
+            galeria = ("texto", (galeria[1] + " " if galeria else "") + motivo)
         ficha_hoja = hoja(s, ficha, textos_pendientes.get(sl), ctx)
         if analisis and analisis["total"]:
             ficha_hoja["coverage"] = {"visible": analisis["visible"], "total": analisis["total"], "missing": analisis["missing"],

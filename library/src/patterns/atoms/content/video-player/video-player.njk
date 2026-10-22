@@ -26,7 +26,11 @@
 <span class="video-player__duration" aria-hidden="true">0:45</span>
 </div></div><figcaption>poster=false</figcaption></figure>
 </div></section>
-<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">No se han podido pintar (sin clase conocida en el contrato ni en el CSS): playing=true (el elemento «iframe» no sale en el ejemplo). La galería clona el elemento raíz del ejemplo y solo cambia sus clases y atributos: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
+<section><h3>playing (con y sin)</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><div data-ds="video-player" class="video-player"><iframe title="Vídeo: Gana un viaje a Tokio" src="/assets/ds/images/placeholder.svg"></iframe></div></div><figcaption>playing=true</figcaption></figure>
+<figure><div class="ds-gallery__stage"><div data-ds="video-player" class="video-player"></div></div><figcaption>playing=false</figcaption></figure>
+</div></section>
+<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">La galería clona el elemento raíz del ejemplo y solo cambia sus clases y atributos: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
 </div>{% endraw %}
 {% else %}
 {% raw %}<div data-ds="video-player" class="video-player">

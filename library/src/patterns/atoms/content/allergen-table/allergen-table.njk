@@ -1,0 +1,21 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="allergen-table" class="allergen-table" aria-labelledby="allergen-table-intro">
+<p class="allergen-table__intro" id="allergen-table-intro">Allergen information (EU Reg. 1169/2011): <span aria-hidden="true">●</span> contains, <span aria-hidden="true">–</span> does not contain.</p>
+<ul class="allergen-table__list">
+<li class="allergen-table__item"><span class="allergen-table__name">Gluten</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+<li class="allergen-table__item"><span class="allergen-table__name">Crustaceans</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+<li class="allergen-table__item allergen-table__item--present"><span class="allergen-table__name">Eggs</span><span class="allergen-table__mark" aria-hidden="true">●</span><span class="visually-hidden"> contains</span></li>
+<li class="allergen-table__item allergen-table__item--present"><span class="allergen-table__name">Fish</span><span class="allergen-table__mark" aria-hidden="true">●</span><span class="visually-hidden"> contains</span></li>
+<li class="allergen-table__item allergen-table__item--present"><span class="allergen-table__name">Peanuts</span><span class="allergen-table__mark" aria-hidden="true">●</span><span class="visually-hidden"> contains</span></li>
+<li class="allergen-table__item allergen-table__item--present"><span class="allergen-table__name">Soy</span><span class="allergen-table__mark" aria-hidden="true">●</span><span class="visually-hidden"> contains</span></li>
+<li class="allergen-table__item allergen-table__item--present"><span class="allergen-table__name">Milk</span><span class="allergen-table__mark" aria-hidden="true">●</span><span class="visually-hidden"> contains</span></li>
+<li class="allergen-table__item"><span class="allergen-table__name">Nuts</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+<li class="allergen-table__item allergen-table__item--present"><span class="allergen-table__name">Celery</span><span class="allergen-table__mark" aria-hidden="true">●</span><span class="visually-hidden"> contains</span></li>
+<li class="allergen-table__item"><span class="allergen-table__name">Mustard</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+<li class="allergen-table__item"><span class="allergen-table__name">Sesame</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+<li class="allergen-table__item"><span class="allergen-table__name">Sulphites</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+<li class="allergen-table__item"><span class="allergen-table__name">Lupin</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+<li class="allergen-table__item"><span class="allergen-table__name">Molluscs</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+</ul>
+</section>{% endraw %}
+{% endmacro %}

@@ -1,0 +1,350 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:share-panel",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Share panel",
+    "slug": "share-panel",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Share panel: contenido del modal «Share» de la ficha de receta. «Share on your socials» con Icon button Secondary M de marca (WhatsApp, Instagram, Facebook, TikTok, X, Telegram; cada uno con aria-label «Share on …» en código); «Page link» con campo de solo lectura (Icon / link + URL) y botón Secondary «Copy link» (feedback «Link copied» en aria-live). Breakpoint Mobile: campo y botón apilados. Uso: modal Share de la ficha de receta (wireframe modal-share-desktop.png / modal-share-mobile.png; Recipe hero «Share recipe»). Clase CSS: .share-panel.",
+    "figmaPage": "Feedback & overlays",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "d03cef6ef605",
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "figmaVersion": null,
+      "variantsChecked": [],
+      "by": "agent (Claude)"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": [
+        "icon-link"
+      ]
+    },
+    "tokens": [
+      "border/width/thick",
+      "button/secondary/border",
+      "button/secondary/text",
+      "color/surface/card",
+      "color/text/default",
+      "color/text/secondary",
+      "field/bg",
+      "field/border",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon-button/size/m",
+      "icon/color/default",
+      "icon/size/md",
+      "icon/size/sm",
+      "radius/lg",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "button",
+      "button--secondary",
+      "icon",
+      "icon-button",
+      "icon-button--secondary",
+      "icon-facebook",
+      "icon-instagram",
+      "icon-link",
+      "icon-telegram",
+      "icon-tiktok",
+      "icon-whatsapp",
+      "icon-x",
+      "share-panel",
+      "share-panel__field",
+      "share-panel__input",
+      "share-panel__label",
+      "share-panel__row",
+      "share-panel__socials",
+      "share-panel__status",
+      "share-panel__title"
+    ],
+    "example": "<div data-ds=\"share-panel\" class=\"share-panel\">\n<h3 class=\"share-panel__title\">Share on your socials</h3>\n<ul class=\"share-panel__socials\">\n<li><a class=\"icon-button icon-button--secondary\" href=\"https://wa.me/\" aria-label=\"Share on WhatsApp\"><span class=\"icon icon-whatsapp\" aria-hidden=\"true\"></span></a></li>\n<li><a class=\"icon-button icon-button--secondary\" href=\"https://www.instagram.com/\" aria-label=\"Share on Instagram\"><span class=\"icon icon-instagram\" aria-hidden=\"true\"></span></a></li>\n<li><a class=\"icon-button icon-button--secondary\" href=\"https://www.facebook.com/\" aria-label=\"Share on Facebook\"><span class=\"icon icon-facebook\" aria-hidden=\"true\"></span></a></li>\n<li><a class=\"icon-button icon-button--secondary\" href=\"https://www.tiktok.com/\" aria-label=\"Share on TikTok\"><span class=\"icon icon-tiktok\" aria-hidden=\"true\"></span></a></li>\n<li><a class=\"icon-button icon-button--secondary\" href=\"https://x.com/\" aria-label=\"Share on X\"><span class=\"icon icon-x\" aria-hidden=\"true\"></span></a></li>\n<li><a class=\"icon-button icon-button--secondary\" href=\"https://t.me/\" aria-label=\"Share on Telegram\"><span class=\"icon icon-telegram\" aria-hidden=\"true\"></span></a></li>\n</ul>\n<label class=\"share-panel__label\" for=\"share-link\">Page link</label>\n<div class=\"share-panel__row\">\n<div class=\"share-panel__field\"><span class=\"icon icon-link\" aria-hidden=\"true\"></span><input class=\"share-panel__input\" id=\"share-link\" type=\"text\" value=\"https://example.com/recetas/spicy-noodle-salad\" readonly></div>\n<button class=\"button button--secondary\" type=\"button\">Copy link</button>\n</div>\n<p class=\"share-panel__status\" aria-live=\"polite\"></p>\n</div>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "222:2027",
+    "componentKey": "f2dae2a711e1d3cbb3913c281579add6833ba259",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "icon-button",
+        "component": "Hierarchy=Secondary, Size=M, State=Default",
+        "componentSlug": "icon-button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / whatsapp",
+        "componentSlug": "icon-whatsapp",
+        "exposedAs": "Icon#33:125",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-button",
+        "component": "Hierarchy=Secondary, Size=M, State=Default",
+        "componentSlug": "icon-button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / instagram",
+        "componentSlug": "icon-instagram",
+        "exposedAs": "Icon#33:125",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-button",
+        "component": "Hierarchy=Secondary, Size=M, State=Default",
+        "componentSlug": "icon-button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / facebook",
+        "componentSlug": "icon-facebook",
+        "exposedAs": "Icon#33:125",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-button",
+        "component": "Hierarchy=Secondary, Size=M, State=Default",
+        "componentSlug": "icon-button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / tiktok",
+        "componentSlug": "icon-tiktok",
+        "exposedAs": "Icon#33:125",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-button",
+        "component": "Hierarchy=Secondary, Size=M, State=Default",
+        "componentSlug": "icon-button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / x",
+        "componentSlug": "icon-x",
+        "exposedAs": "Icon#33:125",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-button",
+        "component": "Hierarchy=Secondary, Size=M, State=Default",
+        "componentSlug": "icon-button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / telegram",
+        "componentSlug": "icon-telegram",
+        "exposedAs": "Icon#33:125",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-link",
+        "component": "Icon / link",
+        "componentSlug": "icon-link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "copy-link",
+        "component": "Hierarchy=Secondary, Size=M, State=Default",
+        "componentSlug": "button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "toggledBy": "Icon leading#33:25",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "toggledBy": "Icon trailing#33:50",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/24",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "topLeftRadius: radius/lg",
+      "topRightRadius: radius/lg",
+      "bottomLeftRadius: radius/lg",
+      "bottomRightRadius: radius/lg",
+      "fills: color/surface/card",
+      "color: color/surface/card",
+      "itemSpacing: space/8",
+      "fills: color/text/default",
+      "lineHeight: font/line-height/desktop/body-l",
+      "fontFamily: font/family/body",
+      "fontSize: font/size/desktop/body-l",
+      "color: color/text/default",
+      "width: icon-button/size/m",
+      "height: icon-button/size/m",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thick",
+      "strokeBottomWeight: border/width/thick",
+      "strokeLeftWeight: border/width/thick",
+      "strokeRightWeight: border/width/thick",
+      "strokes: button/secondary/border",
+      "color: button/secondary/border",
+      "fills: icon/color/default",
+      "strokes: button/secondary/text",
+      "color: icon/color/default",
+      "color: button/secondary/text",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "lineHeight: font/line-height/desktop/body-m",
+      "fontSize: font/size/desktop/body-m",
+      "paddingLeft: space/16",
+      "paddingTop: space/8",
+      "paddingRight: space/16",
+      "paddingBottom: space/8",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: field/bg",
+      "strokes: field/border",
+      "color: field/bg",
+      "color: field/border",
+      "strokes: icon/color/default",
+      "fills: color/text/secondary",
+      "fontStyle: font/style/body",
+      "color: color/text/secondary",
+      "paddingTop: space/16",
+      "paddingBottom: space/16",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "fills: button/secondary/text",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label"
+    ],
+    "textStyles": [
+      "Desktop/body-m",
+      "Desktop/label"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/share-panel.md",
+    "section": "Share panel"
+  },
+  "relations": {
+    "uses": [
+      "button",
+      "icon-arrow-right",
+      "icon-button",
+      "icon-facebook",
+      "icon-instagram",
+      "icon-link",
+      "icon-telegram",
+      "icon-tiktok",
+      "icon-whatsapp",
+      "icon-x"
+    ],
+    "related": []
+  }
+}

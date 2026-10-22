@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un patrón que no esté aquí; los patrones se componen de átomos y consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 18 patrones sincronizados el 2026-10-08T11:52:41Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 24 patrones sincronizados el 2026-10-22T14:07:02Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -29,10 +29,16 @@
 - [Where to buy](patterns/where-to-buy.md) · pattern · `where-to-buy` · ✅ criterio completo
 - [Library](patterns/library.md) · pattern · `library` · ✅ criterio completo
 - [Product filter](patterns/product-filter.md) · pattern · `product-filter` · ✅ criterio completo
+- [Library hero](patterns/library-hero.md) · pattern · `library-hero` · ✅ criterio completo
+- [Product line](patterns/product-line.md) · pattern · `product-line` · ✅ criterio completo
+- [Library head](patterns/library-head.md) · pattern · `library-head` · ✅ criterio completo
+- [Recipe submit](patterns/recipe-submit.md) · pattern · `recipe-submit` · ✅ criterio completo
 - [Product hero](patterns/product-hero.md) · pattern · `product-hero` · ✅ criterio completo
 - [Product details](patterns/product-details.md) · pattern · `product-details` · ✅ criterio completo
 - [Preparation](patterns/preparation.md) · pattern · `preparation` · ✅ criterio completo
 - [Recipe hero](patterns/recipe-hero.md) · pattern · `recipe-hero` · ✅ criterio completo
+- [Recipe ingredients](patterns/recipe-ingredients.md) · pattern · `recipe-ingredients` · ✅ criterio completo
+- [Recipe steps](patterns/recipe-steps.md) · pattern · `recipe-steps` · ✅ criterio completo
 
 ## Cómo rellenar una ficha
 
@@ -102,7 +108,7 @@ CSS no admite `var()` en `@media`, por eso son la única medida que vive como co
 | drawer / panel lateral | no se usa | Mobile menu a pantalla completa | `--layer-modal` | entra con `--motion-duration-slow` + `--motion-easing-standard` |
 | modal | centrado, M o L, sobre `--color-surface-overlay` | Full | velo `--layer-overlay` · diálogo `--layer-modal` | `--motion-duration-slow` + `--motion-easing-standard` |
 | toast | abajo a la derecha | abajo centrado, ancho de columna | `--layer-toast` | `--motion-duration-base`; se cierra solo a los 6 s salvo Error |
-| navbar | fija arriba, se oculta al bajar | igual | `--layer-sticky` | `--motion-duration-base` |
+| navbar | fija arriba, transparente; opaca al hacer scroll (R-01.6) | igual | `--layer-sticky` | `--motion-duration-base` |
 | suggestion bubble | abajo a la derecha | igual, se pliega a icono | `--layer-floating` | `--motion-duration-fast` |
 
 _Las capas se llaman `--layer-*` en este proyecto (no `--z-*`). Todo movimiento respeta

@@ -83,6 +83,7 @@
 .icon-close           { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 6L6 18' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 6L18 18' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/close.svg */; }
 .icon-external-link   { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 3H21V9' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 14L21 3' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/external-link.svg */; }
 .icon-info            { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_76_61)'%3E%3Cpath d='M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 16V12' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 8H12.01' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_76_61'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") /* ../assets/icons/info.svg */; }
+.icon-link            { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/link.svg */; }
 .icon-menu            { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 5H20' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4 12H20' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4 19H20' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/menu.svg */; }
 .icon-message-circle  { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.9 20C9.80858 20.9791 12.0041 21.2442 14.0909 20.7478C16.1777 20.2513 18.0186 19.0258 19.2818 17.2922C20.545 15.5585 21.1474 13.4307 20.9806 11.2922C20.8137 9.15361 19.8886 7.14497 18.3718 5.62819C16.855 4.11142 14.8464 3.18625 12.7078 3.01942C10.5693 2.85258 8.44147 3.45505 6.70782 4.71825C4.97417 5.98145 3.74869 7.82231 3.25222 9.90911C2.75575 11.9959 3.02094 14.1914 4 16.1L2 22L7.9 20Z' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/message-circle.svg */; }
 .icon-minus           { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 12H19' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/minus.svg */; }
@@ -91,12 +92,17 @@
 .icon-plus            { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 12H19' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 5V19' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/plus.svg */; }
 .icon-rotate-ccw      { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 12C3 13.78 3.52784 15.5201 4.51677 17.0001C5.50571 18.4802 6.91131 19.6337 8.55585 20.3149C10.2004 20.9961 12.01 21.1743 13.7558 20.8271C15.5016 20.4798 17.1053 19.6226 18.364 18.364C19.6226 17.1053 20.4798 15.5016 20.8271 13.7558C21.1743 12.01 20.9961 10.2004 20.3149 8.55585C19.6337 6.91131 18.4802 5.50571 17.0001 4.51677C15.5201 3.52784 13.78 3 12 3C9.48395 3.00947 7.06897 3.99122 5.26 5.74L3 8' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3 3V8H8' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/rotate-ccw.svg */; }
 .icon-search          { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 21L16.66 16.66' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/search.svg */; }
+.icon-send            { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='m21.854 2.147-10.94 10.939' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/send.svg */; }
 .icon-timer           { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 2H14' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 14L15 11' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 16.4183 6 12 6C7.58172 6 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/timer.svg */; }
+.icon-trash           { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 6h18' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 11V17' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 11V17' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/trash.svg */; }
 .icon-triangle-alert  { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.73 18L13.73 4C13.5556 3.6922 13.3026 3.43618 12.9969 3.25806C12.6912 3.07995 12.3438 2.9861 11.99 2.9861C11.6362 2.9861 11.2887 3.07995 10.9831 3.25806C10.6774 3.43618 10.4244 3.6922 10.25 4L2.24999 18C2.07367 18.3054 1.98122 18.6519 1.982 19.0045C1.98278 19.3571 2.07677 19.7032 2.25444 20.0078C2.43211 20.3124 2.68714 20.5646 2.99369 20.7388C3.30023 20.9131 3.6474 21.0032 3.99999 21H20C20.3509 20.9996 20.6955 20.907 20.9993 20.7313C21.303 20.5556 21.5552 20.3031 21.7305 19.9991C21.9058 19.6951 21.998 19.3504 21.9979 18.9995C21.9978 18.6486 21.9054 18.3039 21.73 18Z' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 9V13' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 17H12.01' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/triangle-alert.svg */; }
 .icon-instagram       { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cg clip-path='url(%23clip0_21_65)'%3E %3Cpath d='M7.03008 0.0840168C5.75328 0.144217 4.88138 0.348017 4.11908 0.647417C3.33028 0.954917 2.66158 1.36742 1.99628 2.03512C1.33108 2.70282 0.921282 3.37192 0.616082 4.16212C0.320682 4.92592 0.120482 5.79862 0.0640816 7.07612C0.00768159 8.35362 -0.00481841 8.76432 0.00148159 12.0231C0.00768159 15.2817 0.0220816 15.6902 0.0839816 16.9704C0.144982 18.2469 0.347982 19.1186 0.647482 19.8811C0.955482 20.67 1.36748 21.3384 2.03548 22.0039C2.70338 22.6694 3.37198 23.0782 4.16398 23.3839C4.92718 23.6789 5.80008 23.88 7.07738 23.9359C8.35468 23.9919 8.76578 24.0049 12.0236 23.9986C15.2814 23.9924 15.6916 23.9779 16.9714 23.9172C18.2514 23.8565 19.1184 23.652 19.8812 23.3539C20.6701 23.0453 21.339 22.6339 22.004 21.9658C22.669 21.2976 23.0785 20.628 23.3835 19.8374C23.6792 19.0742 23.8801 18.2014 23.9355 16.925C23.9915 15.6441 24.0047 15.2352 23.9985 11.977C23.9922 8.71872 23.9775 8.31022 23.9168 7.03052C23.8561 5.75082 23.6528 4.88182 23.3535 4.11882C23.0451 3.32992 22.6335 2.66202 21.9659 1.99602C21.2982 1.33002 20.628 0.920817 19.8378 0.616517C19.074 0.321017 18.2017 0.119717 16.9244 0.0645168C15.6471 0.00931678 15.236 -0.00498321 11.977 0.00141679C8.71798 0.00761679 8.30998 0.0216168 7.03008 0.0840168ZM7.17028 21.7771C6.00028 21.7262 5.36498 21.5318 4.94158 21.3691C4.38098 21.1531 3.98158 20.892 3.55968 20.4741C3.13768 20.0563 2.87858 19.6555 2.65968 19.0961C2.49528 18.6727 2.29728 18.0381 2.24258 16.8681C2.18308 15.6036 2.17058 15.2239 2.16358 12.0201C2.15658 8.81642 2.16888 8.43712 2.22428 7.17212C2.27428 6.00312 2.46988 5.36712 2.63228 4.94392C2.84828 4.38262 3.10848 3.98392 3.52728 3.56232C3.94608 3.14062 4.34568 2.88092 4.90558 2.66202C5.32858 2.49692 5.96308 2.30062 7.13258 2.24492C8.39808 2.18492 8.77728 2.17292 11.9806 2.16592C15.1839 2.15892 15.5641 2.17092 16.8301 2.22672C17.9991 2.27752 18.6354 2.47122 19.0581 2.63472C19.6189 2.85072 20.0181 3.11012 20.4397 3.52972C20.8614 3.94912 21.1213 4.34732 21.3402 4.90842C21.5055 5.33012 21.7019 5.96442 21.7571 7.13472C21.8173 8.40022 21.831 8.77972 21.8367 11.9827C21.8425 15.1857 21.8312 15.5661 21.7757 16.8307C21.7247 18.0007 21.5307 18.6362 21.3677 19.0601C21.1517 19.6205 20.8914 20.0201 20.4723 20.4415C20.0533 20.863 19.6542 21.1226 19.094 21.3415C18.6716 21.5064 18.0363 21.7032 16.8678 21.7589C15.6022 21.8184 15.223 21.8309 12.0185 21.8379C8.81398 21.8449 8.43578 21.8319 7.17028 21.7771ZM16.953 5.58642C16.9535 5.87125 17.0384 6.14954 17.197 6.38609C17.3557 6.62265 17.5809 6.80684 17.8443 6.91537C18.1076 7.02391 18.3972 7.05191 18.6765 6.99583C18.9557 6.93975 19.2121 6.80212 19.4131 6.60034C19.6141 6.39855 19.7508 6.14169 19.8058 5.86222C19.8609 5.58276 19.8318 5.29325 19.7223 5.03032C19.6128 4.76739 19.4277 4.54284 19.1906 4.38508C18.9534 4.22731 18.6748 4.14342 18.39 4.14402C18.0082 4.14481 17.6423 4.29721 17.3728 4.56769C17.1034 4.83818 16.9523 5.20461 16.953 5.58642ZM5.83848 12.012C5.84518 15.4152 8.60908 18.1677 12.0115 18.1613C15.4141 18.1548 18.1685 15.3912 18.1621 11.988C18.1556 8.58482 15.3911 5.83152 11.9881 5.83822C8.58508 5.84492 5.83208 8.60922 5.83848 12.012ZM7.99998 12.0077C7.99842 11.2166 8.23149 10.4428 8.66971 9.78412C9.10793 9.12546 9.73163 8.61154 10.4619 8.30735C11.1922 8.00315 11.9963 7.92234 12.7726 8.07514C13.5488 8.22794 14.2623 8.60749 14.8228 9.16578C15.3833 9.72408 15.7657 10.436 15.9216 11.2117C16.0774 11.9873 15.9998 12.7917 15.6985 13.5232C15.3972 14.2547 14.8858 14.8804 14.2289 15.3213C13.572 15.7621 12.7991 15.9982 12.008 15.9998C11.4827 16.0009 10.9623 15.8985 10.4766 15.6985C9.99082 15.4985 9.54925 15.2047 9.17706 14.834C8.80487 14.4633 8.50935 14.0229 8.30739 13.5379C8.10542 13.053 8.00097 12.533 7.99998 12.0077Z' fill='black'/%3E %3C/g%3E %3Cdefs%3E %3CclipPath id='clip0_21_65'%3E %3Crect width='24' height='24' fill='white'/%3E %3C/clipPath%3E %3C/defs%3E %3C/svg%3E") /* ../assets/icons/instagram.svg */; }
 .icon-tiktok          { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cg clip-path='url(%23clip0_21_62)'%3E %3Cpath d='M12.525 0.02C13.835 0 15.135 0.01 16.435 0C16.515 1.53 17.065 3.09 18.185 4.17C19.305 5.28 20.885 5.79 22.425 5.96V9.99C20.985 9.94 19.535 9.64 18.225 9.02C17.655 8.76 17.125 8.43 16.605 8.09C16.595 11.01 16.615 13.93 16.585 16.84C16.505 18.24 16.045 19.63 15.235 20.78C13.925 22.7 11.655 23.95 9.325 23.99C7.895 24.07 6.465 23.68 5.245 22.96C3.225 21.77 1.805 19.59 1.595 17.25C1.575 16.75 1.565 16.25 1.585 15.76C1.765 13.86 2.705 12.04 4.165 10.8C5.825 9.36 8.145 8.67 10.315 9.08C10.335 10.56 10.275 12.04 10.275 13.52C9.285 13.2 8.125 13.29 7.255 13.89C6.625 14.3 6.145 14.93 5.895 15.64C5.685 16.15 5.745 16.71 5.755 17.25C5.995 18.89 7.575 20.27 9.255 20.12C10.375 20.11 11.445 19.46 12.025 18.51C12.215 18.18 12.425 17.84 12.435 17.45C12.535 15.66 12.495 13.88 12.505 12.09C12.515 8.06 12.495 4.04 12.525 0.02Z' fill='black'/%3E %3C/g%3E %3Cdefs%3E %3CclipPath id='clip0_21_62'%3E %3Crect width='24' height='24' fill='white'/%3E %3C/clipPath%3E %3C/defs%3E %3C/svg%3E") /* ../assets/icons/tiktok.svg */; }
 .icon-x               { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cg clip-path='url(%23clip0_21_68)'%3E %3Cpath d='M14.234 10.162L22.977 0H20.905L13.314 8.824L7.251 0H0.257996L9.42599 13.343L0.257996 24H2.33L10.346 14.682L16.749 24H23.742L14.234 10.162ZM11.397 13.461L10.468 12.132L3.076 1.56H6.258L12.223 10.092L13.152 11.421L20.906 22.511H17.724L11.397 13.461Z' fill='black'/%3E %3C/g%3E %3Cdefs%3E %3CclipPath id='clip0_21_68'%3E %3Crect width='24' height='24' fill='white'/%3E %3C/clipPath%3E %3C/defs%3E %3C/svg%3E") /* ../assets/icons/x.svg */; }
 .icon-youtube         { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M23.498 6.186C23.3624 5.67527 23.095 5.20913 22.7226 4.83426C22.3502 4.45939 21.8858 4.18894 21.376 4.05C19.505 3.545 12 3.545 12 3.545C12 3.545 4.495 3.545 2.623 4.05C2.11341 4.18918 1.64929 4.45973 1.27708 4.83458C0.904861 5.20943 0.637591 5.67544 0.502 6.186C0 8.07 0 12 0 12C0 12 0 15.93 0.502 17.814C0.637586 18.3247 0.904975 18.7909 1.27739 19.1657C1.64981 19.5406 2.11418 19.8111 2.624 19.95C4.495 20.455 12 20.455 12 20.455C12 20.455 19.505 20.455 21.377 19.95C21.8869 19.8111 22.3513 19.5407 22.7237 19.1658C23.0961 18.791 23.3635 18.3248 23.499 17.814C24 15.93 24 12 24 12C24 12 24 8.07 23.498 6.186ZM9.545 15.568V8.432L15.818 12L9.545 15.568Z' fill='black'/%3E %3C/svg%3E") /* ../assets/icons/youtube.svg */; }
+.icon-whatsapp        { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EWhatsApp%3C/title%3E%3Cpath d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z' fill='black'/%3E%3C/svg%3E") /* ../assets/icons/whatsapp.svg */; }
+.icon-facebook        { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EFacebook%3C/title%3E%3Cpath d='M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z' fill='black'/%3E%3C/svg%3E") /* ../assets/icons/facebook.svg */; }
+.icon-telegram        { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3ETelegram%3C/title%3E%3Cpath d='M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z' fill='black'/%3E%3C/svg%3E") /* ../assets/icons/telegram.svg */; }
 
 /* ══════════════════════════════════════════════════════════════════════════
    LOGO · marcas y GB Foods (assets/logos, exportados del maestro tal cual)
@@ -285,15 +291,16 @@
   align-items: center;
   padding: var(--space-4) var(--space-8);
   border-radius: var(--radius-pill);
-  background-color: var(--badge-new-bg);
-  color: var(--badge-new-text);
   font-family: var(--font-family-display), sans-serif;
   font-size: var(--font-size-mobile-label);
   line-height: var(--font-line-height-mobile-label);
   text-transform: uppercase;
   white-space: nowrap;
 }
-.badge--natural { background-color: var(--badge-natural-bg); color: var(--badge-natural-text); }
+/* New y Hot! son el mismo rojo de packaging (--badge-new-*): Hot! no añade color propio. */
+.badge, .badge--hot { background-color: var(--badge-new-bg); color: var(--badge-new-text); }
+/* Natural y Vegan son el mismo verde de claim natural (--badge-natural-*). */
+.badge--natural, .badge--vegan { background-color: var(--badge-natural-bg); color: var(--badge-natural-text); }
 .badge--neutral { background-color: var(--badge-neutral-bg); color: var(--badge-neutral-text); }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -637,6 +644,106 @@
 .product-card__cta { padding-top: var(--space-8); }
 
 /* ══════════════════════════════════════════════════════════════════════════
+   FLAVOUR TILE · sabor de una línea · imagen cuadrada (Square) o 3:4 (Tall, salsas) · badge opcional y nombre
+   Toda la tarjeta es el enlace a la ficha. Estados como Product card: hover = sombra dura (--elevation-2) sobre la imagen; foco = contorno fino.
+   Badge New / Vegan / Hot! arriba a la izquierda, dentro de la imagen (las clases de badge están en su bloque).
+   ══════════════════════════════════════════════════════════════════════════ */
+.flavour-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  color: var(--color-text-default);
+  text-decoration: none;
+}
+.flavour-tile__media {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-page);
+}
+.flavour-tile--tall .flavour-tile__media { aspect-ratio: 3 / 4; }
+.flavour-tile__media img { width: 100%; height: 100%; object-fit: contain; }
+.flavour-tile__media .badge { position: absolute; top: var(--space-8); left: var(--space-8); }
+.flavour-tile__name {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+  font-weight: bold;
+}
+.flavour-tile:hover .flavour-tile__media { box-shadow: var(--elevation-2); }
+.flavour-tile:focus-visible { outline: var(--border-width-thin) solid var(--color-border-default); outline-offset: var(--space-4); }
+/* ══════════════════════════════════════════════════════════════════════════
+   PRODUCT LINE · línea de producto dentro de un formato · packshot, nombre, texto y rejilla de Flavour tile
+   Surface Light (por defecto): fondo tarjeta blanca. Surface Dark (--dark): fondo tinta y texto claro; el hueco del packshot es crema en ambas.
+   Sauces (--sauces): sin packshot, rejilla de Flavour tile Tall en 3 columnas; en móvil, carrusel horizontal.
+   Las secciones con ancla llevan id; el scroll-margin de la barra de anclas es pendiente (ver ficha).
+   ══════════════════════════════════════════════════════════════════════════ */
+.product-line {
+  background-color: var(--color-surface-card);
+  color: var(--color-text-default);
+  /* Anclas de Anchor nav: la sección no queda tapada por la navbar sticky (ver .anchor-nav). */
+  scroll-margin-top: calc(var(--space-16) * 2 + var(--space-48));
+}
+.product-line--dark { background-color: var(--color-surface-inverse); color: var(--color-text-on-inverse); }
+.product-line__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  align-items: start;
+  gap: var(--space-64);
+  max-width: var(--layout-content-max);
+  margin-inline: auto;
+}
+.product-line__head { display: flex; flex-direction: column; gap: var(--space-8); max-width: var(--layout-content-max); margin-inline: auto; }
+.product-line__pack {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-page);
+}
+.product-line__pack img { width: 100%; height: 100%; object-fit: contain; }
+.product-line__info { display: flex; flex-direction: column; gap: var(--space-24); min-width: 0; }
+.product-line__name {
+  margin: 0;
+  color: inherit;
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.product-line__description {
+  margin: 0;
+  color: inherit;
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+.product-line__subtitle {
+  margin: 0;
+  color: inherit;
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+  font-weight: bold;
+}
+.product-line__grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-24) var(--space-16); margin: 0; padding: 0; list-style: none; }
+.product-line--sauces .product-line__inner { grid-template-columns: minmax(0, 1fr); }
+.product-line--sauces .product-line__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 768px) {
+  .product-line { scroll-margin-top: calc(var(--space-16) * 2 + var(--space-40)); }
+  .product-line__inner { grid-template-columns: 1fr; gap: var(--space-32); }
+  .product-line__pack { aspect-ratio: 4 / 3; }
+  .product-line__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .product-line--sauces .product-line__grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; }
+  .product-line--sauces .product-line__grid > li { flex: 0 0 85%; scroll-snap-align: start; }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
    RECIPE CARD · enlace principal estirado (título) + chips de producto con enlace propio
    ══════════════════════════════════════════════════════════════════════════ */
 .recipe-card {
@@ -652,7 +759,7 @@
 }
 .recipe-card:hover { box-shadow: var(--elevation-2); }
 .recipe-card:has(.recipe-card__link:focus-visible) { outline: var(--border-width-thin) solid var(--recipe-card-focus-ring); outline-offset: 0; }
-.recipe-card__media { aspect-ratio: 288 / 415; border-radius: var(--radius-none); background-color: var(--recipe-card-media-bg); }
+.recipe-card__media { aspect-ratio: 4 / 5; border-radius: var(--radius-none); background-color: var(--recipe-card-media-bg); }
 .recipe-card__media img { width: 100%; height: 100%; object-fit: cover; }
 .recipe-card__body { display: flex; flex-direction: column; gap: var(--space-16); padding: var(--space-24); }
 .recipe-card__title {
@@ -668,6 +775,7 @@
 .recipe-card__link::after { content: ""; position: absolute; inset: 0; }
 .recipe-card__meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--space-8);
   color: var(--recipe-card-meta);
@@ -683,6 +791,67 @@
   font-size: var(--font-size-desktop-caption);
   line-height: var(--font-line-height-desktop-caption);
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   ANCHOR NAV · barra de anclas a las secciones de formato (Cups · Bags · Sauces) · fondo amarillo de marca
+   Cada ítem: miniatura del envase + etiqueta en píldora. La sección visible lleva aria-current="true" en su enlace.
+   Sticky bajo la navbar: su top es la altura de la navbar (padding vertical ×2 + logo; ver .navbar), con los mismos tokens.
+   Móvil: fila desplazable en horizontal, sin salto de línea. Seleccionada = tinta; resto = blanco.
+   ══════════════════════════════════════════════════════════════════════════ */
+.anchor-nav {
+  position: sticky;
+  /* Altura de la navbar: padding vertical ×2 + logo (escritorio: --space-48; móvil: --space-40). */
+  top: calc(var(--space-16) * 2 + var(--space-48));
+  z-index: var(--layer-sticky);
+  background-color: var(--color-surface-brand);
+}
+.anchor-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-16) var(--space-32);
+  margin: 0;
+  padding: var(--space-16) var(--layout-margin);
+  list-style: none;
+}
+.anchor-nav__item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  color: var(--color-text-default);
+  text-decoration: none;
+}
+.anchor-nav__thumb {
+  flex: none;
+  width: var(--space-40);
+  height: var(--space-40);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-page);
+  object-fit: contain;
+}
+.anchor-nav__label {
+  display: inline-flex;
+  align-items: center;
+  height: var(--chip-height-m);
+  padding: 0 var(--space-16);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface-card);
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-label);
+  line-height: var(--font-line-height-desktop-label);
+  text-transform: uppercase;
+}
+.anchor-nav__item:hover .anchor-nav__label { background-color: var(--chip-bg-hover); }
+.anchor-nav__item[aria-current="true"] .anchor-nav__label { background-color: var(--color-surface-inverse); color: var(--color-text-on-inverse); }
+.anchor-nav__item:focus-visible { outline: var(--border-width-thin) solid var(--color-border-default); outline-offset: var(--space-4); }
+@media (max-width: 768px) {
+  .anchor-nav { top: calc(var(--space-16) * 2 + var(--space-40)); }
+  .anchor-nav__list { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; }
+  .anchor-nav__item { flex: none; }
+}
+@media (prefers-reduced-motion: reduce) { .anchor-nav { scroll-behavior: auto; } }
 
 /* ══════════════════════════════════════════════════════════════════════════
    CATEGORY CARD · enlace a la Product library filtrada por tipo (Cups, Bags, Sauces)
@@ -817,50 +986,113 @@
   margin: 0;
   color: var(--ingredient-text);
   font-family: var(--font-family-display), sans-serif;
-  font-size: var(--font-size-desktop-h3);
-  line-height: var(--font-line-height-desktop-h3);
-  font-weight: var(--font-desktop-h3-weight);
+  font-size: var(--font-size-desktop-h2);
+  line-height: var(--font-line-height-desktop-h2);
+  font-weight: var(--font-desktop-h2-weight);
   text-transform: uppercase;
 }
-.ingredients__list { margin: 0; padding: 0; list-style: none; }
+.ingredients__list { display: flex; flex-direction: column; gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
 .ingredients__note {
   margin: 0;
   color: var(--ingredient-meta);
   font-family: var(--font-family-body), sans-serif;
-  font-size: var(--font-size-desktop-caption);
-  line-height: var(--font-line-height-desktop-caption);
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
 }
-.ingredient-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--space-16);
-  padding: var(--space-16) 0;
-  border-bottom: var(--border-width-thin) solid var(--ingredient-divider);
-  color: var(--ingredient-text);
+.ingredients__more {
+  margin: 0;
+  color: var(--ingredient-meta);
   font-family: var(--font-family-body), sans-serif;
-  font-size: var(--font-size-desktop-body-l);
-  line-height: var(--font-line-height-desktop-body-l);
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
 }
-.ingredient-item__percent {
-  flex: none;
-  padding: var(--space-4) var(--space-8);
-  border-radius: var(--radius-pill);
-  background-color: var(--ingredient-percent-bg);
-  color: var(--ingredient-percent-text);
+.ingredients__link {
   font-family: var(--font-family-display), sans-serif;
   font-size: var(--font-size-desktop-label);
   line-height: var(--font-line-height-desktop-label);
   text-transform: uppercase;
 }
-.ingredient-item--secondary {
-  display: block;
-  padding-bottom: 0;
-  border-bottom: 0;
+/* Tarjeta de ingrediente: línea 1 = porcentaje del contenido (caption), línea 2 = nombre (display), línea 3 = composición (body S).
+   La variante secondary es una tarjeta solo con texto corrido (el resto de ingredientes). */
+.ingredient-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-16) var(--space-24);
+  border: var(--border-width-thin) solid var(--ingredient-divider);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+  color: var(--ingredient-text);
+  font-family: var(--font-family-body), sans-serif;
   font-size: var(--font-size-desktop-body-m);
   line-height: var(--font-line-height-desktop-body-m);
 }
+.ingredient-item__percent {
+  color: var(--ingredient-meta);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+.ingredient-item__name {
+  color: var(--ingredient-text);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.ingredient-item__text { color: var(--ingredient-meta); }
+.ingredient-item--secondary { color: var(--ingredient-text); }
 .ingredient-item strong, .nutrition-panel__allergens strong { font-weight: bold; }
+
+
+/* ══════════════════════════════════════════════════════════════════════════
+   RECIPE INGREDIENT · ingrediente de una receta · cantidad (caption) y nombre (negrita) · Brand: fondo tinta, miniatura del envase y enlace a la ficha
+   Tarjeta entera enlazada con ::after (un solo destino) cuando hay enlace; sin enlace, es texto.
+   Lista en 2 columnas en escritorio y 1 en móvil (la rejilla la pone el patrón Recipe ingredients).
+   ══════════════════════════════════════════════════════════════════════════ */
+.recipe-ingredient {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  padding: var(--space-16) var(--space-24);
+  border: var(--border-width-thin) solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+  color: var(--color-text-default);
+}
+.recipe-ingredient__info { display: flex; flex-direction: column; gap: var(--space-4); min-width: 0; }
+.recipe-ingredient__amount {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+.recipe-ingredient__name {
+  margin: 0;
+  color: inherit;
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+  font-weight: bold;
+}
+.recipe-ingredient__link { color: inherit; text-decoration: none; outline: none; }
+.recipe-ingredient__link::after { content: ""; position: absolute; inset: 0; }
+.recipe-ingredient:has(.recipe-ingredient__link:focus-visible) { outline: var(--border-width-thin) solid var(--color-border-default); outline-offset: 0; }
+.recipe-ingredient__thumb {
+  flex: none;
+  width: var(--space-64);
+  height: var(--space-64);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-page);
+  object-fit: contain;
+}
+.recipe-ingredient--brand { border-color: var(--color-surface-inverse); background-color: var(--color-surface-inverse); color: var(--color-text-on-inverse); }
+.recipe-ingredient--brand .recipe-ingredient__amount { color: var(--color-text-on-inverse); }
+.recipe-ingredient--brand:has(.recipe-ingredient__link:focus-visible) { outline-color: var(--color-text-on-inverse); }
 
 /* ══════════════════════════════════════════════════════════════════════════
    NUTRITION BAR · nutriente · valor · % IR · barra (relleno = --percent, en %)
@@ -941,27 +1173,250 @@
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
-   STEP · paso numerado (dentro de <ol>) · Media opcional (imagen o GIF 16:9)
+   NUTRITION RING · % de ingesta de referencia en un donut · Highlight (claim)
+   Pista y relleno son dos <circle> con pathLength="100": el relleno lleva
+   stroke-dasharray="<%> 100" en el SVG, así que el % se lee directamente.
+   El SVG es role="img" con aria-label; el % y el nombre visibles van aparte
+   con aria-hidden porque el aria-label ya los dice.
    ══════════════════════════════════════════════════════════════════════════ */
-.step { display: flex; align-items: flex-start; gap: var(--space-24); }
-.step__number {
-  display: grid;
-  place-content: center;
+.nutrition-rings { display: flex; flex-wrap: wrap; gap: var(--space-24); margin: 0; padding: 0; list-style: none; }
+.nutrition-ring {
+  display: flex;
   flex: none;
-  width: var(--space-56);
-  height: var(--space-56);
-  border: var(--border-width-thin) solid var(--step-border);
-  border-radius: var(--radius-pill);
-  background-color: var(--step-number-bg);
-  color: var(--step-number-text);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  width: calc(var(--space-96) + var(--space-48));
+  text-align: center;
+}
+.nutrition-ring__dial { position: relative; display: grid; place-items: center; width: 100%; aspect-ratio: 1; }
+.nutrition-ring__svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.nutrition-ring__track { fill: none; stroke: var(--nutrition-track); stroke-width: var(--space-8); }
+.nutrition-ring__fill { fill: none; stroke: var(--nutrition-fill); stroke-width: var(--space-8); }
+.nutrition-ring--highlight .nutrition-ring__fill { stroke: var(--nutrition-fill-highlight); }
+.nutrition-ring__value {
+  position: relative;
+  color: var(--nutrition-value);
   font-family: var(--font-family-display), sans-serif;
   font-size: var(--font-size-desktop-h3);
   line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.nutrition-ring__name {
+  color: var(--nutrition-label);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+.nutrition-ring__amount {
+  color: var(--nutrition-meta);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+.nutrition-rings:focus-visible { outline: var(--border-width-thin) solid var(--link-focus-ring); outline-offset: var(--space-4); }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   ALLERGEN CARD · alérgeno principal con su nota · borde fino y radio md
+   ══════════════════════════════════════════════════════════════════════════ */
+.allergen-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
+.allergen-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-16) var(--space-24);
+  border: var(--border-width-thin) solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+}
+.allergen-card__name {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+  font-weight: bold;
+}
+.allergen-card__note {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   ALLERGEN TABLE · rejilla de los 14 alérgenos UE · contenido del modal
+   Presente = celda amarilla de marca con ● · ausente = celda crema con –.
+   El estado se lee también por texto oculto («contains» / «does not contain»).
+   ══════════════════════════════════════════════════════════════════════════ */
+.allergen-table {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding: var(--space-24) var(--space-32);
+  border: var(--border-width-thin) solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+}
+.allergen-table__intro {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+.allergen-table__list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-8); margin: 0; padding: 0; list-style: none; }
+.allergen-table__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-page);
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+.allergen-table__item--present { background-color: var(--color-surface-brand); }
+.allergen-table__name { min-width: 0; }
+.allergen-table__mark { flex: none; }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   RECIPE MACROS · macronutrientes por ración · título, «Per serving» y filas Protein / Carbohydrates / Fat con valor en negrita
+   Los valores van en body-l negrita y sin mayúsculas. El botón «See allergen table» abre el modal de la tabla de alérgenos (ALLERGEN TABLE).
+   ══════════════════════════════════════════════════════════════════════════ */
+.recipe-macros {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  padding: var(--space-32);
+  border: var(--border-width-thin) solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+}
+.recipe-macros__title {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.recipe-macros__head {
+  margin: 0;
+  align-self: flex-end;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+.recipe-macros__list { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
+.recipe-macros__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-16);
+  padding: var(--space-16) 0;
+  border-bottom: var(--border-width-thin) solid var(--color-border-subtle);
+}
+.recipe-macros__name {
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+.recipe-macros__value {
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-l);
+  line-height: var(--font-line-height-desktop-body-l);
+  font-weight: bold;
+  white-space: nowrap;
+}
+.recipe-macros__action { align-self: flex-start; }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   NUTRITION LABEL · tabla de la etiqueta (Reg. 1169/2011) · contenido del modal
+   Filete grueso bajo el título y al cerrar la tabla; filetes finos entre filas.
+   Las filas «of which» llevan la clase de sangría nutrition-label__sub.
+   ══════════════════════════════════════════════════════════════════════════ */
+.nutrition-label {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+.nutrition-label__caption {
+  padding-block-end: var(--space-16);
+  border-block-end: var(--border-width-thick) solid var(--color-border-default);
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-align: start;
+  text-transform: uppercase;
+  caption-side: top;
+}
+.nutrition-label th,
+.nutrition-label td {
+  padding: var(--space-8) 0;
+  border-block-end: var(--border-width-thin) solid var(--color-border-default);
+  text-align: end;
+  vertical-align: middle;
+}
+.nutrition-label thead th {
+  padding-block: var(--space-24) var(--space-8);
+  border-block-end: 0;
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-label);
+  line-height: var(--font-line-height-desktop-label);
+  font-weight: var(--font-desktop-label-weight);
+  text-transform: uppercase;
+}
+.nutrition-label tbody th[scope="row"] { text-align: start; font-weight: normal; }
+.nutrition-label__sub { padding-inline-start: var(--space-24); }
+.nutrition-label tbody tr:last-child th,
+.nutrition-label tbody tr:last-child td { border-block-end: var(--border-width-thick) solid var(--color-border-default); }
+.nutrition-label__note {
+  margin: var(--space-16) 0 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   STEP · paso numerado (dentro de <ol>) · Media opcional (imagen o GIF 16:9)
+   ══════════════════════════════════════════════════════════════════════════ */
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-24);
+  padding: var(--space-24) var(--space-32);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+}
+.step__number {
+  flex: none;
+  color: var(--step-number-text);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h1);
+  line-height: var(--font-line-height-desktop-h1);
+  font-weight: var(--font-desktop-h1-weight);
 }
 .step__content { display: flex; flex: 1; flex-direction: column; gap: var(--space-16); padding-top: var(--space-8); }
 .step__text {
   margin: 0;
   color: var(--step-text);
+  font-weight: bold;
   font-family: var(--font-family-body), sans-serif;
   font-size: var(--font-size-desktop-body-l);
   line-height: var(--font-line-height-desktop-body-l);
@@ -969,6 +1424,82 @@
 .step__media { aspect-ratio: 16 / 9; overflow: hidden; border: var(--border-width-thin) solid var(--step-border); border-radius: var(--radius-md); background-color: var(--step-media-bg); }
 .step__media img, .step__media video { width: 100%; height: 100%; object-fit: cover; }
 .step--media .step__content { min-width: 0; }
+/* Título opcional del paso (Title=True): estilo de h3 display, encima del texto. */
+.step__title {
+  margin: 0;
+  color: var(--step-text);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+@media (max-width: 768px) { .step__title { font-size: var(--font-size-mobile-h3); line-height: var(--font-line-height-mobile-h3); } }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SHARE PANEL · contenido del modal «Share»: botones de redes con icono, enlace de solo lectura y botón de copiar
+   Cada botón de red lleva aria-label («Share on WhatsApp»…) porque el icono no tiene texto.
+   «Link copied» aparece en una región aria-live (polite): se anuncia sin mover el foco del botón «Copy link».
+   Móvil: los iconos se reparten en filas y el enlace y el botón se apilan.
+   ══════════════════════════════════════════════════════════════════════════ */
+.share-panel { display: flex; flex-direction: column; gap: var(--space-24); }
+.share-panel__title {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+  font-weight: bold;
+}
+.share-panel__socials { display: flex; flex-wrap: wrap; gap: var(--space-8); margin: 0; padding: 0; list-style: none; }
+.share-panel__label {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+  font-weight: bold;
+}
+.share-panel__row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-16); }
+.share-panel__field {
+  display: flex;
+  flex: 1 1 calc(var(--space-96) * 3);
+  align-items: center;
+  gap: var(--space-8);
+  min-width: 0;
+  padding: calc(var(--space-16) - var(--border-width-thin));
+  border: var(--border-width-thin) solid var(--field-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--field-bg);
+  color: var(--field-icon);
+}
+.share-panel__field:focus-within { outline: var(--border-width-thin) solid var(--field-focus-ring); outline-offset: 0; }
+.share-panel__field .icon { width: var(--icon-size-md); height: var(--icon-size-md); color: inherit; }
+.share-panel__input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background-color: var(--field-bg);
+  color: var(--field-text);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+  text-overflow: ellipsis;
+  outline: none;
+}
+.share-panel__status {
+  min-height: var(--space-24);
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+@media (max-width: 768px) {
+  .share-panel__row { flex-direction: column; align-items: stretch; }
+  .share-panel__field { flex: none; }
+}
+
 
 /* ══════════════════════════════════════════════════════════════════════════
    MODAL · <dialog> modal · Size M (por defecto) · L · Full (móvil)
@@ -1090,40 +1621,111 @@
 @media (prefers-reduced-motion: reduce) { .suggestion-bubble { transition: none; } }
 
 /* ══════════════════════════════════════════════════════════════════════════
-   TIMER · temporizador de 3 min · data-state="idle|running|paused|done"
-   El anillo es un SVG con pathLength="100"; el atributo stroke-dashoffset = 100 − % que queda (lo actualiza el script).
+   TIMER · temporizador de preparación de 3 min · data-state="idle|running|paused|done"
+   Orden: título · subtítulo · tiempo · etiqueta de estado · barra · controles.
+   La barra es un <progress> (rol progressbar con su valor en value): marca el % de
+   tiempo que queda (max 100). Relleno en tinta (--timer-progress, 13,7:1 sobre la pista);
+   al terminar (done) se llena y se pone en verde.
+   Compact: versión de móvil (tiempo y botón en una fila, etiqueta y barra debajo).
+   Se activa con .timer--compact y, en Preparation, sobre su timer en <= 768 px.
+   Desktop muestra el reset como texto y móvil como icono: el otro se oculta con display.
    ══════════════════════════════════════════════════════════════════════════ */
 .timer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--space-24);
+  align-items: stretch;
+  gap: var(--space-16);
   padding: var(--space-32);
   border: var(--border-width-thin) solid var(--timer-border);
   border-radius: var(--radius-md);
   background-color: var(--timer-bg);
 }
-.timer__dial { position: relative; display: grid; place-items: center; width: calc(var(--space-96) * 2 + var(--space-8)); aspect-ratio: 1; }
-.timer__ring { position: absolute; inset: 0; transform: rotate(-90deg); }
-.timer__track { fill: none; stroke: var(--timer-track); }
-.timer__progress { fill: none; stroke: var(--timer-progress); stroke-dasharray: 100; transition: stroke-dashoffset var(--motion-duration-base) linear; }
-.timer__readout { position: relative; display: flex; flex-direction: column; align-items: center; gap: var(--space-4); }
-.timer__time {
+.timer__title {
+  margin: 0;
   color: var(--timer-time);
   font-family: var(--font-family-display), sans-serif;
-  font-size: var(--font-size-desktop-h2);
-  line-height: var(--font-line-height-desktop-h2);
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
 }
-.timer__label {
+.timer__subtitle {
+  margin: 0;
   color: var(--timer-label);
   font-family: var(--font-family-body), sans-serif;
   font-size: var(--font-size-desktop-caption);
   line-height: var(--font-line-height-desktop-caption);
 }
-.timer__controls { display: flex; align-items: center; gap: var(--space-16); }
-.timer[data-state="done"] .timer__progress { stroke: var(--timer-progress-done); }
+.timer__time {
+  color: var(--timer-time);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h1);
+  line-height: var(--font-line-height-desktop-h1);
+}
+.timer__label {
+  margin: 0;
+  color: var(--timer-label);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-label);
+  line-height: var(--font-line-height-desktop-label);
+  text-transform: uppercase;
+}
+.timer__bar {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: var(--space-8);
+  margin: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background-color: var(--timer-track);
+}
+.timer__bar::-webkit-progress-bar { background-color: var(--timer-track); border-radius: var(--radius-pill); }
+.timer__bar::-webkit-progress-value { border-radius: var(--radius-pill); background-color: var(--timer-progress); transition: width var(--motion-duration-base) linear; }
+.timer__bar::-moz-progress-bar { border-radius: var(--radius-pill); background-color: var(--timer-progress); }
+.timer__controls { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-16); }
+.timer__reset {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--link-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-label);
+  line-height: var(--font-line-height-desktop-label);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.timer__reset .icon { width: var(--icon-size-sm); height: var(--icon-size-sm); }
+.timer__reset:focus-visible { outline: var(--border-width-thin) solid var(--link-focus-ring); outline-offset: var(--space-4); }
+.timer__reset-icon { display: none; }
+.timer[data-state="done"] .timer__bar::-webkit-progress-value { background-color: var(--timer-progress-done); }
+.timer[data-state="done"] .timer__bar::-moz-progress-bar { background-color: var(--timer-progress-done); }
 .timer[data-state="done"] .timer__label { color: var(--timer-done-text); }
-@media (prefers-reduced-motion: reduce) { .timer__progress { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .timer__bar::-webkit-progress-value { transition: none; } }
+@media (max-width: 768px) {
+  :is(.timer--compact, .preparation__grid > .timer) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "title title" "subtitle subtitle" "time controls" "label label" "bar bar";
+    align-items: center;
+    gap: var(--space-8) var(--space-16);
+    padding: var(--space-24);
+  }
+  :is(.timer--compact, .preparation__grid > .timer) > .timer__title { grid-area: title; }
+  :is(.timer--compact, .preparation__grid > .timer) > .timer__subtitle { grid-area: subtitle; }
+  :is(.timer--compact, .preparation__grid > .timer) > .timer__time { grid-area: time; }
+  :is(.timer--compact, .preparation__grid > .timer) > .timer__controls { grid-area: controls; }
+  :is(.timer--compact, .preparation__grid > .timer) > .timer__label { grid-area: label; }
+  :is(.timer--compact, .preparation__grid > .timer) > .timer__bar { grid-area: bar; }
+  :is(.timer--compact, .preparation__grid > .timer) .timer__title { font-size: var(--font-size-mobile-h3); line-height: var(--font-line-height-mobile-h3); }
+  :is(.timer--compact, .preparation__grid > .timer) .timer__time { font-size: var(--font-size-mobile-h1); line-height: var(--font-line-height-mobile-h1); }
+  :is(.timer--compact, .preparation__grid > .timer) .timer__reset { display: none; }
+  :is(.timer--compact, .preparation__grid > .timer) .timer__reset-icon { display: inline-flex; }
+}
 
 /* ══════════════════════════════════════════════════════════════════════════
    VIDEO PLAYER · fachada: póster + play + duración; al pulsar, el reproductor real
@@ -1179,7 +1781,7 @@
 }
 
 /* Lista de pasos (ol) */
-.steps { display: flex; flex-direction: column; gap: var(--space-32); margin: 0; padding: 0; list-style: none; }
+.steps { display: flex; flex-direction: column; gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
 
 /* ══════════════════════════════════════════════════════════════════════════════════════
    PATRONES · secciones de página (patterns.md § Composición de pantalla)
@@ -1236,19 +1838,24 @@
   .page-title { font-size: var(--font-size-mobile-h1); line-height: var(--font-line-height-mobile-h1); }
 }
 
-/* ── NAVBAR · menú · logo centrado · CTA; fija, se oculta al bajar y reaparece al subir ─────── */
+/* ── NAVBAR · menú · logo centrado · CTA; fija, transparente arriba y opaca al hacer scroll (R-01.6) ── */
 /* Wireframe UX: la navegación vive en el menú a pantalla completa (también en desktop); la barra
    solo lleva el botón de menú, el logo centrado y, en desktop, el CTA a la fórmula natural. */
+/* Arriba: sin fondo ni borde visibles (transparent es ausencia de capa, no un color translúcido). */
 .navbar {
   position: sticky;
   top: 0;
   z-index: var(--layer-sticky);
   padding: var(--space-16) var(--layout-margin);
-  border-bottom: var(--border-width-thin) solid var(--color-border-default);
-  background-color: var(--color-surface-page);
-  transition: transform var(--motion-duration-base) var(--motion-easing-standard);
+  border-bottom: var(--border-width-thin) solid transparent;
+  background-color: transparent;
+  transition: background-color var(--motion-duration-base) var(--motion-easing-standard), border-bottom-color var(--motion-duration-base) var(--motion-easing-standard);
 }
-.navbar--hidden { transform: translateY(-100%); }
+/* Al hacer scroll se fija opaca: fondo de página y filete inferior de borde. */
+.navbar--scrolled {
+  border-bottom-color: var(--color-border-default);
+  background-color: var(--color-surface-page);
+}
 .navbar__inner { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: var(--space-24); max-width: var(--layout-content-max); margin-inline: auto; }
 .navbar__start { display: flex; align-items: center; }
 .navbar .logo { height: var(--space-48); }
@@ -1324,16 +1931,29 @@
 .footer .logo { height: var(--space-48); }
 .footer__column { display: flex; flex: 1; flex-direction: column; gap: var(--space-24); }
 .footer__links { display: flex; flex-direction: column; gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
+/* Ticket de la landing: sin radio, con el borde superior dentado (los dientes son 16 px y el padding
+   superior añade el mismo aire) y un giro suave. El fondo va en ::before porque el clip-path recorta
+   la box-shadow; la sombra se pinta con filter: drop-shadow, que sigue la silueta dentada. El fondo
+   es el primer hijo posicionado, así que pinta por debajo del texto (los hijos van en position: relative). */
 .footer__ticket {
+  position: relative;
   display: flex;
   flex: 0 1 calc(var(--layout-reading) / 2);
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-24);
-  padding: var(--space-32) var(--space-24);
-  border-radius: var(--radius-md);
-  background-color: var(--color-surface-page);
+  padding: calc(var(--space-32) + var(--space-16)) var(--space-24) var(--space-32);
   color: var(--color-text-default);
+  transform: rotate(-0.6deg); /* giro del ticket de la landing (sin token de rotación) */
+  filter: drop-shadow(0 var(--space-8) var(--space-24) var(--shadow-soft));
+}
+.footer__ticket > * { position: relative; }
+.footer__ticket::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-surface-page);
+  clip-path: polygon(0% 0, 7.14% var(--space-16), 14.28% 0, 21.42% var(--space-16), 28.56% 0, 35.7% var(--space-16), 42.84% 0, 50% var(--space-16), 57.14% 0, 64.28% var(--space-16), 71.42% 0, 78.56% var(--space-16), 85.7% 0, 92.84% var(--space-16), 100% 0, 100% 100%, 0% 100%);
 }
 .footer__ticket-title {
   margin: 0;
@@ -1414,6 +2034,7 @@
 .hero__media { margin: 0; border-radius: var(--radius-none); }
 .hero__media img { display: block; width: 100%; height: auto; }
 .hero__controls { display: flex; align-items: center; gap: var(--space-16); }
+.hero__pause { flex: none; } /* el botón de pausa no se encoge en la fila de controles */
 .hero__dots { display: flex; gap: var(--space-8); }
 .hero__dot {
   width: var(--space-16);
@@ -1527,12 +2148,212 @@
   .recipes__cta { order: 1; }
 }
 
-.library { display: flex; flex-direction: column; gap: var(--space-32); padding: var(--layout-section-y) 0; background-color: var(--color-surface-page); }
+/* Library: solo recetas (antes también productos). Fondo blanco porque la cabecera de recetas (Library head) va en crema. */
+/* ══════════════════════════════════════════════════════════════════════════
+   LIBRARY HERO · cabecera de Products sobre tinta · título de página y bloque destacado (Badge New, titular, texto y packshots)
+   Escritorio: texto a la izquierda y packshots a la derecha. Móvil: apilado.
+   El título usa .page-title (en crema sobre tinta).
+   ══════════════════════════════════════════════════════════════════════════ */
+.library-hero { background-color: var(--color-surface-inverse); }
+.library-hero__inner { display: flex; flex-direction: column; gap: var(--space-48); max-width: var(--layout-content-max); margin-inline: auto; }
+.library-hero__title { color: var(--color-text-on-inverse); }
+.library-hero__feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: var(--space-64); }
+.library-hero__info { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-24); }
+.library-hero__heading {
+  margin: 0;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h2);
+  line-height: var(--font-line-height-desktop-h2);
+  font-weight: var(--font-desktop-h2-weight);
+  text-transform: uppercase;
+}
+.library-hero__text {
+  margin: 0;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-l);
+  line-height: var(--font-line-height-desktop-body-l);
+}
+.library-hero__media { display: flex; align-items: flex-end; justify-content: center; gap: var(--space-16); min-width: 0; }
+.library-hero__pack { width: 100%; max-width: calc(var(--space-96) * 3); aspect-ratio: 3 / 4; object-fit: contain; }
+@media (max-width: 768px) {
+  .library-hero__feature { grid-template-columns: 1fr; gap: var(--space-32); }
+  .library-hero__heading { font-size: var(--font-size-mobile-h2); line-height: var(--font-line-height-mobile-h2); }
+  .library-hero__text { font-size: var(--font-size-mobile-body-l); line-height: var(--font-line-height-mobile-body-l); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   LIBRARY HEAD · cabecera del catálogo de recetas · título, subtítulo, Search field, chips de filtro y fila de resultados
+   Chips de filtro conmutables con aria-pressed (uno o varios). Filtered: la fila de resultados muestra el número en negrita y «Clear filters» con icono de papelera.
+   El Search field va limitado a 576 px (6 × space-96; no hay token de ancho de campo: pendiente). Móvil: chips en fila desplazable.
+   ══════════════════════════════════════════════════════════════════════════ */
+.library-head { background-color: var(--color-surface-page); }
+.library-head__inner { display: flex; flex-direction: column; gap: var(--space-24); max-width: var(--layout-content-max); margin-inline: auto; }
+.library-head__intro { display: flex; flex-direction: column; gap: var(--space-16); }
+.library-head__lead {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-l);
+  line-height: var(--font-line-height-desktop-body-l);
+}
+.library-head__search { width: 100%; max-width: calc(var(--space-96) * 6); }
+.library-head__filters { display: flex; flex-wrap: wrap; gap: var(--space-8); margin: 0; padding: 0; list-style: none; }
+.library-head__results {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+.library-head__results strong { font-weight: bold; }
+.library-head__results .link { gap: var(--space-8); }
+@media (max-width: 768px) {
+  .library-head__lead { font-size: var(--font-size-mobile-body-l); line-height: var(--font-line-height-mobile-body-l); }
+  .library-head__filters { flex-wrap: nowrap; overflow-x: auto; }
+  .library-head__filters > li { flex: none; }
+}
+
+
+.library { display: flex; flex-direction: column; gap: var(--space-32); padding: var(--layout-section-y) 0; background-color: var(--color-surface-card); }
 .library__header { display: flex; flex-direction: column; gap: var(--space-16); padding-inline: var(--layout-margin); }
 .library__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-48) var(--layout-gutter); margin: 0; padding: 0 var(--layout-margin); list-style: none; }
-.library__more { display: flex; justify-content: center; }
+.library__more { display: flex; justify-content: center; padding-inline: var(--layout-margin); }
 @media (max-width: 1024px) { .library__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 768px) { .library { gap: var(--space-24); } .library__grid { grid-template-columns: 1fr; } }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   PAGINATION · navegación entre páginas de una rejilla · Previous · números · Next
+   Página actual: relleno en tinta y aria-current="page". Previous deshabilitado en la primera (disabled o aria-disabled).
+   Botones de 40 px con borde. Móvil: solo flechas con icono y el texto «Page 1 of 13» (los números se ocultan).
+   Los botones solo con icono llevan aria-label; el texto visible va en .pagination__text, oculto en móvil.
+   ══════════════════════════════════════════════════════════════════════════ */
+.pagination { display: flex; justify-content: center; }
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pagination__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  min-width: var(--space-40);
+  height: var(--space-40);
+  padding: 0 var(--space-8);
+  border: var(--border-width-thin) solid var(--button-secondary-border);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface-card);
+  color: var(--button-secondary-text);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-label);
+  line-height: var(--font-line-height-desktop-label);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.pagination__link .icon { width: var(--icon-size-sm); height: var(--icon-size-sm); color: inherit; }
+.pagination__link:hover { background-color: var(--button-secondary-bg-hover); color: var(--button-secondary-text-hover); border-color: var(--button-secondary-border-hover); }
+.pagination__link:focus-visible { outline: var(--border-width-thin) solid var(--button-secondary-focus-ring); outline-offset: 0; }
+.pagination__link[aria-current="page"] { background-color: var(--button-primary-bg); color: var(--button-primary-text); border-color: var(--button-primary-border); }
+.pagination__link:disabled, .pagination__link[aria-disabled="true"] {
+  background-color: var(--button-disabled-bg);
+  color: var(--button-disabled-text);
+  border-color: var(--button-disabled-border);
+  cursor: not-allowed;
+}
+.pagination__ellipsis { color: var(--color-text-default); font-family: var(--font-family-display), sans-serif; }
+.pagination__status {
+  display: none;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+@media (max-width: 768px) {
+  .pagination__page, .pagination__ellipsis { display: none; }
+  .pagination__text { display: none; }
+  .pagination__status { display: inline; }
+  .pagination__link { min-width: var(--space-40); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   EMPTY STATE · sin resultados en un listado · título y texto centrados; debajo, el contenido alternativo (p. ej. «Our most popular ones»)
+   Se usa tras Library head cuando la búsqueda o los filtros no devuelven recetas.
+   ══════════════════════════════════════════════════════════════════════════ */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-16);
+  text-align: center;
+}
+.empty-state__title {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.empty-state__text {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   RECIPE SUBMIT · invitación a enviar una receta propia · título y texto a la izquierda, Textarea y envío a la derecha · fondo blanco
+   Va entre el banner y el footer. El campo es un Textarea (.field) con su ayuda visible; el botón es el Button primary.
+   ══════════════════════════════════════════════════════════════════════════ */
+.recipe-submit { background-color: var(--color-surface-card); }
+.recipe-submit__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-64);
+  max-width: var(--layout-content-max);
+  margin-inline: auto;
+}
+.recipe-submit__intro { display: flex; flex-direction: column; gap: var(--space-16); }
+.recipe-submit__title {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h2);
+  line-height: var(--font-line-height-desktop-h2);
+  font-weight: var(--font-desktop-h2-weight);
+  text-transform: uppercase;
+}
+.recipe-submit__lead {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-l);
+  line-height: var(--font-line-height-desktop-body-l);
+}
+.recipe-submit__form { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-24); }
+.recipe-submit__form .field { width: 100%; }
+@media (max-width: 768px) {
+  .recipe-submit__inner { grid-template-columns: 1fr; gap: var(--space-32); }
+  .recipe-submit__title { font-size: var(--font-size-mobile-h2); line-height: var(--font-line-height-mobile-h2); }
+  .recipe-submit__lead { font-size: var(--font-size-mobile-body-l); line-height: var(--font-line-height-mobile-body-l); }
+}
 
 /* ── BANNER · pieza gráfica de campaña a todo el ancho (el banner entero es el enlace) ──────── */
 .banner { background-color: var(--color-surface-page); }
@@ -1608,68 +2429,164 @@
   .where-to-buy__list > li { scroll-snap-align: start; }
 }
 
-/* ── PRODUCT HERO · galería + información del producto ────────────────────────────────── */
-.product-hero { background-color: var(--color-surface-page); }
-.product-hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-64); }
-.product-hero__gallery { display: flex; flex-direction: column; gap: var(--space-16); }
-.product-hero__main { aspect-ratio: 1; background-color: var(--color-surface-card); }
-.product-hero__thumbs { display: flex; gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
-.product-hero__thumb {
-  width: var(--space-96);
-  height: var(--space-96);
-  padding: 0;
-  overflow: hidden;
-  border: var(--border-width-thin) solid var(--color-border-default);
-  border-radius: var(--radius-sm);
-  background-color: var(--color-surface-card);
-  cursor: pointer;
-}
-.product-hero__thumb[aria-current="true"] { border-width: var(--border-width-thick); }
-.product-hero__thumb:focus-visible { outline: var(--border-width-thin) solid var(--color-border-default); outline-offset: 0; }
+/* ── PRODUCT HERO · cabecera de producto sobre tinta: volver, badge, nombre, descripción, chips y packshot sobre foto ── */
+.product-hero { background-color: var(--color-surface-inverse); }
+.product-hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: var(--space-64); }
 .product-hero__info { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-24); }
-.product-hero__tags { display: flex; gap: var(--space-8); }
-.product-hero__line { color: var(--color-text-secondary); font-family: var(--font-family-body), sans-serif; font-size: var(--font-size-desktop-caption); line-height: var(--font-line-height-desktop-caption); }
-.product-hero__description { margin: 0; color: var(--color-text-default); font-family: var(--font-family-body), sans-serif; font-size: var(--font-size-desktop-body-l); line-height: var(--font-line-height-desktop-body-l); }
-.product-hero__highlights { display: flex; flex-direction: column; gap: var(--space-16); margin: 0; padding: 0; list-style: none; color: var(--color-text-default); font-family: var(--font-family-body), sans-serif; font-size: var(--font-size-desktop-body-l); line-height: var(--font-line-height-desktop-body-l); }
-.product-hero__highlights li { display: flex; align-items: center; gap: var(--space-16); }
-.product-hero__highlights .icon { color: var(--color-text-natural); }
-.product-hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-16) var(--space-24); }
+.product-hero__back {
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-label);
+  line-height: var(--font-line-height-desktop-label);
+  text-transform: uppercase;
+}
+.product-hero__title { color: var(--color-text-on-inverse); }
+.product-hero__description {
+  margin: 0;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-l);
+  line-height: var(--font-line-height-desktop-body-l);
+}
+.product-hero__tags { display: flex; flex-wrap: wrap; gap: var(--space-8); }
+.product-hero__chips { display: flex; flex-wrap: wrap; gap: var(--space-8); margin: 0; padding: 0; list-style: none; }
+.product-hero__chips .chip { cursor: default; }
+.product-hero__chips .chip:hover { background-color: var(--chip-bg); }
+.product-hero__media {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+}
+.product-hero__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.product-hero__pack {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 80%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
 @media (max-width: 768px) {
   .product-hero__grid { grid-template-columns: 1fr; gap: var(--space-32); }
-  .product-hero__thumb { width: var(--space-64); height: var(--space-64); }
-  .product-hero__description, .product-hero__highlights { font-size: var(--font-size-mobile-body-l); line-height: var(--font-line-height-mobile-body-l); }
+  .product-hero__media { aspect-ratio: 4 / 3; }
+  .product-hero__description { font-size: var(--font-size-mobile-body-l); line-height: var(--font-line-height-mobile-body-l); }
 }
 
-/* ── PRODUCT DETAILS · ingredientes y nutrición ────────────────────────────────────────── */
-.product-details { background-color: var(--color-surface-card); }
+/* ── PRODUCT DETAILS · dos secciones a sangre: ingredientes (crema) y nutrición (blanca) ── */
+.product-details { display: flex; flex-direction: column; }
+.product-details__ingredients { background-color: var(--color-surface-page); }
+.product-details__nutrition { background-color: var(--color-surface-card); }
 .product-details__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: var(--space-64); }
-@media (max-width: 768px) { .product-details__grid { grid-template-columns: 1fr; gap: var(--space-48); } }
-
-/* ── PREPARATION · pasos, vídeo de preparación y temporizador ──────────────────────────── */
-.preparation { background-color: var(--color-surface-page); }
-.preparation__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: var(--space-64); }
-.preparation__media { display: flex; flex-direction: column; gap: var(--space-32); }
+.product-details__media {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+}
+.product-details__media img { width: 100%; height: 100%; object-fit: cover; }
+.product-details__lead {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+.product-details__subtitle {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.product-details__allergens-head { display: flex; flex-direction: column; gap: var(--space-8); }
+.product-details__allergens { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-24); }
 @media (max-width: 768px) {
-  .preparation__grid { grid-template-columns: 1fr; gap: var(--space-32); }
-  .preparation__media { display: contents; }
-  .preparation__media > .video-player { order: -1; }
-  .preparation__media > .timer { order: 1; }
+  .product-details__grid { grid-template-columns: 1fr; gap: var(--space-32); }
+  .product-details__media { display: none; }
+  .allergen-cards { grid-template-columns: 1fr; }
+  .nutrition-rings { flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x proximity; }
+  .nutrition-ring { width: calc(var(--space-64) + var(--space-56)); scroll-snap-align: start; }
+  .allergen-table__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .preparation__grid { grid-template-columns: minmax(0, 1fr); }
+  .preparation__media, .preparation__steps--first, .preparation__steps--second, .preparation__grid > .timer { grid-column: auto; grid-row: auto; }
 }
 
-/* ── RECIPE HERO · cabecera de receta ──────────────────────────────────────────────────── */
+/* ── PREPARATION · pasos partidos en dos listas, vídeo y temporizador (fondo tinta) ──
+   Orden del DOM: vídeo · pasos 1-2 · temporizador · pasos 3-4. En escritorio, rejilla de 3 columnas
+   (vídeo en la primera, pasos 1-2 y 3-4 en la segunda, temporizador en la tercera al lado de los pasos 1-2).
+   Leída por filas, la rejilla da el mismo orden que el DOM. En móvil es una columna en ese orden. */
+.preparation { background-color: var(--color-surface-inverse); }
+.preparation .section__title { color: var(--color-text-on-inverse); }
+.preparation__subtitle {
+  margin: 0;
+  color: var(--color-text-brand-on-inverse);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+.preparation__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-32) var(--space-24); align-items: start; }
+.preparation__media { grid-column: 1; grid-row: 1 / span 2; }
+.preparation__steps { margin: 0; padding: 0; }
+.preparation__steps--first { grid-column: 2; grid-row: 1; }
+.preparation__steps--second { grid-column: 2; grid-row: 2; }
+.preparation__grid > .timer { grid-column: 3; grid-row: 1; }
+
+/* ── RECIPE HERO · cabecera de receta sobre amarillo de marca: volver, chips de productos, nombre (.page-title), descripción,
+   chips de tiempo y ración, enlace «Share recipe» y foto. Sin kicker «Receta» ni bloque «Productos que usa» aparte. ── */
 .recipe-hero { background-color: var(--color-surface-brand); }
 .recipe-hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: var(--space-64); }
 .recipe-hero__info { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-24); }
-.recipe-hero__kicker { color: var(--color-text-default); font-family: var(--font-family-body), sans-serif; font-size: var(--font-size-desktop-caption); line-height: var(--font-line-height-desktop-caption); }
-.recipe-hero__meta { display: flex; flex-wrap: wrap; gap: var(--space-8) var(--space-24); margin: 0; padding: 0; list-style: none; }
-.recipe-hero__meta li, .recipe-hero__description { display: flex; align-items: center; gap: var(--space-8); margin: 0; color: var(--color-text-default); font-family: var(--font-family-body), sans-serif; font-size: var(--font-size-desktop-body-l); line-height: var(--font-line-height-desktop-body-l); }
-.recipe-hero__products-label { margin: 0; color: var(--color-text-default); font-family: var(--font-family-display), sans-serif; font-size: var(--font-size-desktop-label); line-height: var(--font-line-height-desktop-label); text-transform: uppercase; }
+.recipe-hero__back {
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-label);
+  line-height: var(--font-line-height-desktop-label);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.recipe-hero__back .icon { width: var(--icon-size-sm); height: var(--icon-size-sm); color: inherit; }
 .recipe-hero__products { display: flex; flex-wrap: wrap; gap: var(--space-8); margin: 0; padding: 0; list-style: none; }
-.recipe-hero__products .chip { min-height: var(--chip-height-m); }
+.recipe-hero__products .chip, .recipe-hero__meta .chip { min-height: var(--chip-height-m); }
+.recipe-hero__description {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-l);
+  line-height: var(--font-line-height-desktop-body-l);
+}
+.recipe-hero__meta { display: flex; flex-wrap: wrap; gap: var(--space-8); margin: 0; padding: 0; list-style: none; }
 .recipe-hero__media { aspect-ratio: 4 / 3; }
 @media (max-width: 768px) {
   .recipe-hero__grid { grid-template-columns: 1fr; gap: var(--space-32); }
   .recipe-hero__media { order: -1; }
-  .recipe-hero__products-label { font-size: var(--font-size-mobile-label); line-height: var(--font-line-height-mobile-label); }
   .recipe-hero__description { font-size: var(--font-size-mobile-body-l); line-height: var(--font-line-height-mobile-body-l); }
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   RECIPE INGREDIENTS · módulo de ingredientes de la receta · título, subtítulo, lista de Recipe ingredient y Recipe macros · fondo blanco
+   Escritorio: lista a la izquierda (2 columnas) y Recipe macros a la derecha. Móvil: una columna, macros debajo.
+   Usa las clases de sección del patrón (.section, .section__header) para el ritmo vertical.
+   ══════════════════════════════════════════════════════════════════════════ */
+.recipe-ingredients { background-color: var(--color-surface-card); }
+.recipe-ingredients__body {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-64);
+}
+.recipe-ingredients__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
+@media (max-width: 768px) {
+  .recipe-ingredients__body { grid-template-columns: 1fr; gap: var(--space-32); }
+  .recipe-ingredients__list { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   RECIPE STEPS · módulo de preparación de la receta · título, subtítulo y lista numerada de Step (con título opcional) · fondo crema
+   La lista usa la clase .steps (ol). Se limita a la medida de lectura para que las líneas no sean demasiado largas.
+   ══════════════════════════════════════════════════════════════════════════ */
+.recipe-steps { background-color: var(--color-surface-page); }
+.recipe-steps .steps { max-width: var(--layout-reading); }

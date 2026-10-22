@@ -1,0 +1,272 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:allergen-table",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Allergen table",
+    "slug": "allergen-table",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Tabla de alérgenos UE (Reg. 1169/2011): contenido del modal «Allergy detailed table». Texto introductorio y rejilla de los 14 alérgenos (Gluten, Crustaceans, Eggs, Fish, Peanuts, Soy, Milk, Nuts, Celery, Mustard, Sesame, Sulphites, Lupin, Molluscs) con instancias de Allergen table / Cell: presente = cabecera amarilla de marca y ●; ausente = cabecera neutra y –. Breakpoint: Desktop 4 columnas, Mobile 2 columnas. Los ejemplos (Eggs, Fish, Peanuts, Soy, Milk, Celery) son provisionales hasta tener la ficha técnica validada. Se usa en el modal Allergy detailed table (wireframe UX 490:7469 y 490:11998). Clase CSS: .allergen-table.",
+    "figmaPage": "Content",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "ea41858dda99"
+  },
+  "api": {
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thin",
+      "color/surface/brand",
+      "color/surface/page",
+      "color/text/default",
+      "color/text/secondary",
+      "font/family/body",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/style/body",
+      "nutrition/bg",
+      "nutrition/border",
+      "radius/md",
+      "radius/sm",
+      "space/16",
+      "space/24",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "allergen-table",
+      "allergen-table__intro",
+      "allergen-table__item",
+      "allergen-table__item--present",
+      "allergen-table__list",
+      "allergen-table__mark",
+      "allergen-table__name",
+      "visually-hidden"
+    ],
+    "example": "<section data-ds=\"allergen-table\" class=\"allergen-table\" aria-labelledby=\"allergen-table-intro\">\n<p class=\"allergen-table__intro\" id=\"allergen-table-intro\">Allergen information (EU Reg. 1169/2011): <span aria-hidden=\"true\">●</span> contains, <span aria-hidden=\"true\">–</span> does not contain.</p>\n<ul class=\"allergen-table__list\">\n<li class=\"allergen-table__item\"><span class=\"allergen-table__name\">Gluten</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">–</span><span class=\"visually-hidden\"> does not contain</span></li>\n<li class=\"allergen-table__item\"><span class=\"allergen-table__name\">Crustaceans</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">–</span><span class=\"visually-hidden\"> does not contain</span></li>\n<li class=\"allergen-table__item allergen-table__item--present\"><span class=\"allergen-table__name\">Eggs</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">●</span><span class=\"visually-hidden\"> contains</span></li>\n<li class=\"allergen-table__item allergen-table__item--present\"><span class=\"allergen-table__name\">Fish</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">●</span><span class=\"visually-hidden\"> contains</span></li>\n<li class=\"allergen-table__item allergen-table__item--present\"><span class=\"allergen-table__name\">Peanuts</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">●</span><span class=\"visually-hidden\"> contains</span></li>\n<li class=\"allergen-table__item allergen-table__item--present\"><span class=\"allergen-table__name\">Soy</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">●</span><span class=\"visually-hidden\"> contains</span></li>\n<li class=\"allergen-table__item allergen-table__item--present\"><span class=\"allergen-table__name\">Milk</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">●</span><span class=\"visually-hidden\"> contains</span></li>\n<li class=\"allergen-table__item\"><span class=\"allergen-table__name\">Nuts</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">–</span><span class=\"visually-hidden\"> does not contain</span></li>\n<li class=\"allergen-table__item allergen-table__item--present\"><span class=\"allergen-table__name\">Celery</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">●</span><span class=\"visually-hidden\"> contains</span></li>\n<li class=\"allergen-table__item\"><span class=\"allergen-table__name\">Mustard</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">–</span><span class=\"visually-hidden\"> does not contain</span></li>\n<li class=\"allergen-table__item\"><span class=\"allergen-table__name\">Sesame</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">–</span><span class=\"visually-hidden\"> does not contain</span></li>\n<li class=\"allergen-table__item\"><span class=\"allergen-table__name\">Sulphites</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">–</span><span class=\"visually-hidden\"> does not contain</span></li>\n<li class=\"allergen-table__item\"><span class=\"allergen-table__name\">Lupin</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">–</span><span class=\"visually-hidden\"> does not contain</span></li>\n<li class=\"allergen-table__item\"><span class=\"allergen-table__name\">Molluscs</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">–</span><span class=\"visually-hidden\"> does not contain</span></li>\n</ul>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "193:344",
+    "componentKey": "d17d549a35acf65008ead29f771cb012ba8150de",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=false",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=false",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=true",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=true",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=true",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=true",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=true",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=false",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=true",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=false",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=false",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=false",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=false",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "Present=false",
+        "componentSlug": "allergen-table-cell",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/16",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: nutrition/bg",
+      "strokes: nutrition/border",
+      "color: nutrition/bg",
+      "color: nutrition/border",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: color/text/secondary",
+      "itemSpacing: space/8",
+      "paddingLeft: space/16",
+      "paddingTop: space/8",
+      "paddingRight: space/16",
+      "paddingBottom: space/8",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "fills: color/surface/page",
+      "color: color/surface/page",
+      "fills: color/text/default",
+      "color: color/text/default",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "fills: color/surface/brand",
+      "color: color/surface/brand"
+    ],
+    "textStyles": [
+      "Desktop/body-m",
+      "Desktop/caption"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/allergen-table.md",
+    "section": "Allergen table"
+  },
+  "relations": {
+    "uses": [
+      "allergen-table-cell"
+    ],
+    "related": []
+  }
+}

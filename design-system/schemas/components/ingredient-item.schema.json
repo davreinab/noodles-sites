@@ -7,8 +7,8 @@
     "slug": "ingredient-item",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T09:38:13Z",
-    "description": "Fila de ingrediente. Level=Main: ingrediente principal con porcentaje en pill (ingredient/percent-bg, verde natural) y filete inferior decorativo. Level=Secondary: el resto de ingredientes en texto corrido. Regla de negocio: los alérgenos van SIEMPRE en negrita (<strong>, Archivo Bold), también dentro del nombre. El texto no es propiedad para conservar la negrita: se edita en la instancia. Los datos salen del envase; los mostrados son de ejemplo.",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Tarjeta de ingrediente (punto 6 de la SPEC, wireframe UX 396:6073 en el archivo 1YhsCqdqYCHlK4Y82IY5G3). Fondo color/surface/card, borde fino color/border/subtle, radio md, padding 16/24. Level=Main: línea de porcentaje «79% of content» (caption, ingredient/meta), nombre (heading S) y composición (body S). Level=Secondary: resto de ingredientes en texto corrido (body S), sin línea de porcentaje. Los alérgenos van SIEMPRE en negrita (<strong>, Archivo Bold), también dentro de la composición. Los datos son de ejemplo; los reales se copian del envase.",
     "figmaPage": "Content",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
@@ -20,16 +20,18 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "7d3cdee35b0d",
+    "anatomyHash": "d0c2cf54ff84",
     "verification": {
-      "status": "verified",
+      "status": "stale",
       "date": "2026-10-22",
       "figmaVersion": "7d3cdee35b0d",
       "variantsChecked": [
         "Level=Main",
         "Level=Secondary"
       ],
-      "by": "agent (Claude Haiku, revisado)"
+      "by": "agent (Claude Haiku, revisado)",
+      "staleSince": "2026-10-22T14:07:02Z",
+      "reason": "la anatomía, las variantes, los tokens ligados o la key del maestro cambiaron desde la verificación"
     }
   },
   "api": {
@@ -37,7 +39,7 @@
       {
         "name": "percent",
         "type": "string",
-        "default": "52 %",
+        "default": "79% of content",
         "figma": "Percent#70:0"
       },
       {
@@ -64,21 +66,24 @@
     },
     "tokens": [
       "border/width/thin",
+      "color/border/subtle",
+      "color/surface/card",
+      "color/text/default",
+      "color/text/secondary",
       "font/family/body",
       "font/family/display",
-      "font/line-height/desktop/body-l",
-      "font/line-height/desktop/label",
-      "font/size/desktop/body-l",
-      "font/size/desktop/label",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h3",
+      "font/size/desktop/body-s",
+      "font/size/desktop/caption",
+      "font/size/desktop/h3",
       "font/style/body",
       "font/style/display",
-      "ingredient/divider",
-      "ingredient/percent-bg",
-      "ingredient/percent-text",
-      "ingredient/text",
-      "radius/pill",
+      "ingredient/meta",
+      "radius/md",
       "space/16",
-      "space/4",
+      "space/24",
       "space/8"
     ]
   },
@@ -87,9 +92,11 @@
     "classes": [
       "ingredient-item",
       "ingredient-item--secondary",
-      "ingredient-item__percent"
+      "ingredient-item__name",
+      "ingredient-item__percent",
+      "ingredient-item__text"
     ],
-    "example": "<li data-ds=\"ingredient-item\" class=\"ingredient-item\">Fideos de <strong>trigo</strong><span class=\"ingredient-item__percent\">52 %</span></li>\n<li data-ds=\"ingredient-item\" class=\"ingredient-item ingredient-item--secondary\">Otros: sal, especias, salsa de <strong>soja</strong> (<strong>soja</strong>, <strong>trigo</strong>), ajo y cebolla.</li>",
+    "example": "<li data-ds=\"ingredient-item\" class=\"ingredient-item\"><span class=\"ingredient-item__percent\">79% of content</span><span class=\"ingredient-item__name\">Oriental noodles</span><span class=\"ingredient-item__text\"><strong>Wheat</strong> flour, modified starch, salt, sodium and potassium carbonate</span></li>\n<li data-ds=\"ingredient-item\" class=\"ingredient-item ingredient-item--secondary\">Others: salt, spices, <strong>soy</strong> sauce (<strong>soy</strong>, <strong>wheat</strong>), garlic and onion.</li>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,
@@ -111,38 +118,44 @@
     },
     "nestedInstances": [],
     "variableBindings": [
-      "itemSpacing: space/16",
+      "itemSpacing: space/8",
+      "paddingLeft: space/24",
       "paddingTop: space/16",
+      "paddingRight: space/24",
       "paddingBottom: space/16",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokeTopWeight: border/width/thin",
       "strokeBottomWeight: border/width/thin",
-      "strokes: ingredient/divider",
-      "color: ingredient/divider",
-      "fills: ingredient/text",
-      "fontSize: font/size/desktop/body-l",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: color/surface/card",
+      "strokes: color/border/subtle",
+      "color: color/surface/card",
+      "color: color/border/subtle",
+      "fills: ingredient/meta",
+      "fontSize: font/size/desktop/caption",
       "fontStyle: font/style/body",
       "fontFamily: font/family/body",
-      "lineHeight: font/line-height/desktop/body-l",
-      "textRangeFills: ingredient/text",
-      "color: ingredient/text",
-      "paddingLeft: space/8",
-      "paddingTop: space/4",
-      "paddingRight: space/8",
-      "paddingBottom: space/4",
-      "topLeftRadius: radius/pill",
-      "topRightRadius: radius/pill",
-      "bottomLeftRadius: radius/pill",
-      "bottomRightRadius: radius/pill",
-      "fills: ingredient/percent-bg",
-      "color: ingredient/percent-bg",
-      "fills: ingredient/percent-text",
-      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: ingredient/meta",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h3",
       "fontStyle: font/style/display",
       "fontFamily: font/family/display",
-      "lineHeight: font/line-height/desktop/label",
-      "color: ingredient/percent-text"
+      "lineHeight: font/line-height/desktop/h3",
+      "color: color/text/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-s",
+      "lineHeight: font/line-height/desktop/body-s",
+      "color: color/text/secondary"
     ],
     "textStyles": [
-      "Desktop/label"
+      "Desktop/caption",
+      "Desktop/h3",
+      "Desktop/body-s"
     ]
   },
   "docs": {

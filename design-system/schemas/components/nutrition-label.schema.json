@@ -1,0 +1,136 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:nutrition-label",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Nutrition label",
+    "slug": "nutrition-label",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Tabla nutricional de la UE (Reg. 1169/2011), no el formato de EE. UU.: contenido del modal «Pack label». Columnas: Per 100 g · Per serving (93.6 g) · %RI*. Filas: Energy (kJ / kcal), Fat, of which saturates, Carbohydrate, of which sugars, Fibre, Protein, Salt; las filas «of which» van sangradas. Filetes gruesos de tinta bajo el título y antes del pie; filetes finos entre filas. Pie: «*Reference intake of an average adult (8,400 kJ / 2,000 kcal).». Valores de ejemplo coherentes, no validados. Se abre desde el enlace «Still curious? View pack label» de Ingredients (wireframe UX 490:11998). Clase CSS: .nutrition-label. Formato UE (Reg. 1169/2011) por decisión de David Reina 2026-10-22; ⬜ TODO confirmar con GB Foods.",
+    "figmaPage": "Content",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "17814f333229"
+  },
+  "api": {
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thick",
+      "border/width/thin",
+      "color/border/default",
+      "color/text/default",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h3",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/h3",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "nutrition/bg",
+      "nutrition/border",
+      "space/16",
+      "space/24",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "nutrition-label",
+      "nutrition-label__caption",
+      "nutrition-label__note",
+      "nutrition-label__sub",
+      "visually-hidden"
+    ],
+    "example": "<table data-ds=\"nutrition-label\" class=\"nutrition-label\">\n<caption class=\"nutrition-label__caption\">Nutrition information</caption>\n<thead><tr><th scope=\"col\"><span class=\"visually-hidden\">Nutrient</span></th><th scope=\"col\">Per 100 g</th><th scope=\"col\">Per serving (93.6 g)</th><th scope=\"col\">%RI*</th></tr></thead>\n<tbody>\n<tr><th scope=\"row\">Energy</th><td>1,850 kJ / 442 kcal</td><td>1,732 kJ / 414 kcal</td><td>21 %</td></tr>\n<tr><th scope=\"row\">Fat</th><td>16 g</td><td>15 g</td><td>21 %</td></tr>\n<tr><th scope=\"row\" class=\"nutrition-label__sub\">of which saturates</th><td>1.5 g</td><td>1.4 g</td><td>7 %</td></tr>\n<tr><th scope=\"row\">Carbohydrate</th><td>62 g</td><td>58 g</td><td>22 %</td></tr>\n<tr><th scope=\"row\" class=\"nutrition-label__sub\">of which sugars</th><td>3.2 g</td><td>3.0 g</td><td>3 %</td></tr>\n<tr><th scope=\"row\">Fibre</th><td>1.9 g</td><td>1.8 g</td><td>–</td></tr>\n<tr><th scope=\"row\">Protein</th><td>10 g</td><td>9.4 g</td><td>19 %</td></tr>\n<tr><th scope=\"row\">Salt</th><td>1.9 g</td><td>1.8 g</td><td>30 %</td></tr>\n</tbody>\n</table>\n<p class=\"nutrition-label__note\">*Reference intake of an average adult (8,400 kJ / 2,000 kcal).</p>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "194:249",
+    "componentKey": "ab52d1eeb059c26d44d3bba36b0914147bb2831c",
+    "propertyNames": {},
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: nutrition/bg",
+      "strokes: nutrition/border",
+      "color: nutrition/bg",
+      "color: nutrition/border",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h3",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: color/text/default",
+      "height: border/width/thick",
+      "paddingTop: space/8",
+      "paddingBottom: space/8",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "fills: color/border/default",
+      "color: color/border/default",
+      "paddingLeft: space/16",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: color/text/secondary"
+    ],
+    "textStyles": [
+      "Desktop/h3",
+      "Desktop/label",
+      "Desktop/body-m",
+      "Desktop/caption"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/nutrition-label.md",
+    "section": "Nutrition label"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:anchor-nav",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Anchor nav",
+    "slug": "anchor-nav",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Anchor nav: barra de anclas sticky bajo la navbar (position sticky en código) que lleva a las secciones de formato Cups · Bags · Sauces de la única página de catálogo; sustituye al Product filter (retirado). Enlaces #cups, #bags, #sauces; el item de la sección visible va en State=Current (aria-current). Breakpoint Desktop: fila centrada sobre fondo amarillo brand; Mobile: fila desplazable en horizontal. Uso: Product library (wireframe desktop 396:5932 y móvil 396:12565). Clase CSS: .anchor-nav (items .anchor-nav__item).",
+    "figmaPage": "Navigation",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "d7e81b7386a2",
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "figmaVersion": null,
+      "variantsChecked": [],
+      "by": "agent (Claude)"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "chip/bg",
+      "chip/bg-selected",
+      "chip/text",
+      "chip/text-selected",
+      "color/surface/brand",
+      "font/family/display",
+      "font/line-height/desktop/h3",
+      "font/size/desktop/h3",
+      "font/style/display",
+      "product-card/media-bg",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/32",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "anchor-nav",
+      "anchor-nav__item",
+      "anchor-nav__label",
+      "anchor-nav__list",
+      "anchor-nav__thumb"
+    ],
+    "example": "<nav data-ds=\"anchor-nav\" class=\"anchor-nav\" aria-label=\"Product formats\">\n<ul class=\"anchor-nav__list\">\n<li><a class=\"anchor-nav__item\" href=\"#cups\" aria-current=\"true\"><img class=\"anchor-nav__thumb\" src=\"../assets/images/placeholder.svg\" alt=\"\"><span class=\"anchor-nav__label\">Cups</span></a></li>\n<li><a class=\"anchor-nav__item\" href=\"#bags\"><img class=\"anchor-nav__thumb\" src=\"../assets/images/placeholder.svg\" alt=\"\"><span class=\"anchor-nav__label\">Bags</span></a></li>\n<li><a class=\"anchor-nav__item\" href=\"#sauces\"><img class=\"anchor-nav__thumb\" src=\"../assets/images/placeholder.svg\" alt=\"\"><span class=\"anchor-nav__label\">Sauces</span></a></li>\n</ul>\n</nav>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "210:84",
+    "componentKey": "78bfb1c5c48a697b5306a3002f38c9291f356e93",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Anchor nav item",
+        "component": "State=Current",
+        "componentSlug": "anchor-nav-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Anchor nav item",
+        "component": "State=Default",
+        "componentSlug": "anchor-nav-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Anchor nav item",
+        "component": "State=Default",
+        "componentSlug": "anchor-nav-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/32",
+      "paddingLeft: space/24",
+      "paddingTop: space/16",
+      "paddingRight: space/24",
+      "paddingBottom: space/16",
+      "fills: color/surface/brand",
+      "color: color/surface/brand",
+      "itemSpacing: space/8",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: product-card/media-bg",
+      "color: product-card/media-bg",
+      "paddingTop: space/8",
+      "paddingBottom: space/8",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: chip/bg-selected",
+      "color: chip/bg-selected",
+      "fills: chip/text-selected",
+      "fontSize: font/size/desktop/h3",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: chip/text-selected",
+      "fills: chip/bg",
+      "color: chip/bg",
+      "fills: chip/text",
+      "color: chip/text"
+    ],
+    "textStyles": [
+      "Desktop/h3"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/anchor-nav.md",
+    "section": "Anchor nav"
+  },
+  "relations": {
+    "uses": [
+      "anchor-nav-item"
+    ],
+    "related": []
+  }
+}

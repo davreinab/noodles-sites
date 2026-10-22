@@ -1,0 +1,93 @@
+{
+  "title": "Icon / facebook",
+  "description": "Logo de Facebook (Simple Icons, CC0), relleno, 24×24. Uso: botón «Share on Facebook» del Share panel (wireframe 396:6290).",
+  "status": "Draft",
+  "sheet": {
+    "contrast": null,
+    "pending": null,
+    "edit": {
+      "slug": "icon-facebook",
+      "name": "Icon / facebook",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "208:69",
+      "current": {
+        "description": "Logo de Facebook (Simple Icons, CC0), relleno, 24×24. Uso: botón «Share on Facebook» del Share panel (wireframe 396:6290).",
+        "Propósito": "",
+        "Accesibilidad (rol, nombre, estados y teclado)": "",
+        "Cuándo usar / qué NO hace": ""
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "208:69",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=208-69",
+      "page": "Iconography",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Logo de Facebook (Simple Icons, CC0), relleno, 24×24. Uso: botón «Share on Facebook» del Share panel (wireframe 396:6290)."
+    ],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default"
+        ]
+      }
+    ],
+    "tokenCount": 1,
+    "textStyles": [],
+    "classes": [],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "⬜ TODO",
+        "todo": true,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "⬜ TODO",
+        "todo": true,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "⬜ TODO",
+        "todo": true,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 3,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "icon-facebook",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "208:69",
+    "contract": "../../../../../../../design-system/schemas/components/icon-facebook.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

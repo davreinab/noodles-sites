@@ -1,0 +1,209 @@
+{
+  "title": "Recipe ingredient",
+  "description": "Recipe ingredient: línea de ingrediente de la ficha de receta (Ingredients). Cantidad en caption («200 g») y nombre en negrita (Name); se usa con Variant=Default (tarjeta blanca c…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".recipe-ingredient",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-card",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".recipe-ingredient.recipe-ingredient--brand",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".recipe-ingredient.recipe-ingredient--brand .recipe-ingredient__amount",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "recipe-ingredient",
+      "name": "Recipe ingredient",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "222:1906",
+      "current": {
+        "description": "Recipe ingredient: línea de ingrediente de la ficha de receta (Ingredients). Cantidad en caption («200 g») y nombre en negrita (Name); se usa con Variant=Default (tarjeta blanca con borde) o Variant=Brand (fondo tinta, texto claro y miniatura del envase a la derecha; enlaza a la ficha del producto). Uso: Recipe ingredients (wireframe 396:6398, ficha de receta 396:6292 / 396:6354). Clase CSS: .recipe-ingredient (modificador .recipe-ingredient--brand).",
+        "Propósito": "Una línea de la lista de ingredientes de una receta: cantidad («200 g») en caption y nombre en negrita. Type Default: tarjeta blanca con texto. Type Brand: fondo tinta con texto claro, miniatura del envase a la derecha y enlace a la ficha del producto. La rejilla de dos columnas (escritorio) y una (móvil) la pone el patrón Recipe ingredients.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Rol: `li` dentro de la lista `ul` del patrón; cantidad y nombre van en la misma fila, en ese orden. Sin enlace, el texto se lee como ingrediente. Con enlace (Brand), el enlace envuelve el nombre y su `::after` cubre toda la tarjeta: un solo destino, sin enlaces duplicados. El nombre accesible del enlace es el nombre del producto. La miniatura es decorativa (`alt=\"\"`). Pares texto/fondo: tinta sobre blanco (Default) y crema sobre tinta (Brand); las cifras de contraste las mide ds-fidelity y no constan aquí. Teclado: Tab llega al enlace y Enter abre la ficha. Foco: en Default, contorno de 2 px en la tarjeta; en Brand, contorno en color claro sobre toda la tarjeta (`:has()`).",
+        "Cuándo usar / qué NO hace": "Para cada ingrediente de la lista de una receta. Brand solo cuando el ingrediente es un producto de la marca, porque enlaza a su ficha. No es un botón ni una card de receta, y no lleva pasos de preparación."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "222:1906",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=222-1906",
+      "page": "Content",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Recipe ingredient: línea de ingrediente de la ficha de receta (Ingredients). Cantidad en caption («200 g») y nombre en negrita (Name); se usa con Variant=Default (tarjeta blanca con borde) o Variant=Brand (fondo tinta, texto claro y miniatura del envase a la derecha; enlaza a la ficha del producto). Uso: Recipe ingredients (wireframe 396:6398, ficha de receta 396:6292 / 396:6354). Clase CSS: .recipe-ingredient (modificador .recipe-ingredient--brand)."
+    ],
+    "props": [
+      {
+        "name": "quantity",
+        "type": "string",
+        "values": [],
+        "default": "200 g",
+        "figma": "Quantity#222:12"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "values": [],
+        "default": "Cup Oriental",
+        "figma": "Name#222:15"
+      },
+      {
+        "name": "variant",
+        "type": "enum",
+        "values": [
+          "Default",
+          "Brand"
+        ],
+        "default": "Default",
+        "figma": "Variant"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/border/default",
+          "color/surface/card",
+          "color/text/default",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/4"
+        ]
+      }
+    ],
+    "tokenCount": 13,
+    "textStyles": [
+      "Desktop/caption"
+    ],
+    "classes": [
+      "recipe-ingredient",
+      "recipe-ingredient--brand",
+      "recipe-ingredient__amount",
+      "recipe-ingredient__info",
+      "recipe-ingredient__link",
+      "recipe-ingredient__name",
+      "recipe-ingredient__thumb"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Una línea de la lista de ingredientes de una receta: cantidad («200 g») en caption y nombre en negrita. Type Default: tarjeta blanca con texto. Type Brand: fondo tinta con texto claro, miniatura del envase a la derecha y enlace a la ficha del producto. La rejilla de dos columnas (escritorio) y una (móvil) la pone el patrón Recipe ingredients.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Rol: `li` dentro de la lista `ul` del patrón; cantidad y nombre van en la misma fila, en ese orden. Sin enlace, el texto se lee como ingrediente. Con enlace (Brand), el enlace envuelve el nombre y su `::after` cubre toda la tarjeta: un solo destino, sin enlaces duplicados. El nombre accesible del enlace es el nombre del producto. La miniatura es decorativa (`alt=\"\"`). Pares texto/fondo: tinta sobre blanco (Default) y crema sobre tinta (Brand); las cifras de contraste las mide ds-fidelity y no constan aquí. Teclado: Tab llega al enlace y Enter abre la ficha. Foco: en Default, contorno de 2 px en la tarjeta; en Brand, contorno en color claro sobre toda la tarjeta (`:has()`).",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Para cada ingrediente de la lista de una receta. Brand solo cuando el ingrediente es un producto de la marca, porque enlaza a su ficha. No es un botón ni una card de receta, y no lleva pasos de preparación.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 2,
+      "total": 2,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "recipe-ingredient",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "222:1906",
+    "contract": "../../../../../../design-system/schemas/components/recipe-ingredient.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

@@ -13,5 +13,22 @@
     "kind": ["component", "pattern", "token", "class"],
     "replacement": "id del sustituto, o null si se retira sin sustituto (hay que explicarlo en reason)"
   },
-  "deprecations": []
+  "deprecations": [
+    {
+      "id": "suggestion-bubble",
+      "kind": "component",
+      "since": "2026-10-22",
+      "removeIn": "siguiente versión mayor tras cumplirse el plazo",
+      "reason": "El wireframe UX (565:13925 y 567:13926) no tiene burbuja flotante: la vía de sugerencias es la caja del Footer (R-08.4). Decidido por David Reina el 2026-10-22.",
+      "replacement": "footer"
+    },
+    {
+      "id": "product-filter",
+      "kind": "pattern",
+      "since": "2026-10-22",
+      "removeIn": "siguiente versión mayor tras cumplirse el plazo",
+      "reason": "El wireframe UX (396:5932) resuelve el catálogo tipo → línea → sabor como una sola página con anclas, no como filtro. Decidido por David Reina el 2026-10-22.",
+      "replacement": "anchor-nav"
+    }
+  ]
 }

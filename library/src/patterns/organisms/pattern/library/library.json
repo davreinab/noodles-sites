@@ -1,7 +1,7 @@
 {
   "title": "Library",
-  "description": "Librería (Product library; también Recipe y Contest library cambiando la card y el filtro): cabecera de página (h1 + entradilla) · Product filter a sangre (tipo → línea → sabor; s…",
-  "status": "Ready",
+  "description": "Library (Recipe library): cabecera Library head (título «Recipes», subtítulo, Search field, chips de filtro y estado Filtered con «48 results for your search» y «Clear filters»),…",
+  "status": "In review",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -17,10 +17,10 @@
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "nodeId": "96:1453",
       "current": {
-        "description": "Librería (Product library; también Recipe y Contest library cambiando la card y el filtro): cabecera de página (h1 + entradilla) · Product filter a sangre (tipo → línea → sabor; sin filtros que den resultados vacíos) · rejilla de cards (Desktop 4 columnas de 310 px con gutter layout/gutter y space/48 entre filas; Mobile 1 columna) · Button Secondary «Ver más» (carga más, no pagina; el foco va a la primera card nueva y se anuncia el número cargado). Recipe library: Recipe card en 3 columnas sin buscador por ingredientes. Contest library: Contest card en 2-3 columnas; la página agregadora es opcional. Al filtrar se anuncia «N productos» (aria-live). Sin variables propias.",
-        "Propósito": "Librería de producto (y de recetas o concursos cambiando la card y el filtro): cabecera, filtro a sangre, rejilla de cards y «Ver más».",
-        "Accesibilidad (rol, nombre, estados y teclado)": "Título tinta sobre crema 17,2:1; entradilla gris cálido sobre crema 5,4:1; el resto, los pares de sus componentes. Al filtrar se anuncia «N productos» (aria-live). «Ver más» carga más resultados (no pagina), mueve el foco a la primera card nueva y anuncia cuántas se han cargado.",
-        "Cuándo usar / qué NO hace": "Para Product library, Recipe library (Recipe card en tres columnas, sin buscador por ingredientes) y Contest library (opcional). No muestra filtros vacíos."
+        "description": "Library (Recipe library): cabecera Library head (título «Recipes», subtítulo, Search field, chips de filtro y estado Filtered con «48 results for your search» y «Clear filters»), rejilla de Recipe card (Desktop 4 columnas de 310 px con gutter 24 y space/48 entre filas; Mobile 1 columna) y Pagination (Previous · 1 2 3 … 12 13 · Next) en lugar del botón «Ver más». Solo recetas: la Product library usa Library hero y Product line (Pattern / Libraries). Sin variables propias.",
+        "Propósito": "Rejilla del catálogo de recetas: cards de Recipe card en 4 columnas en escritorio, 2 en tablet y 1 en móvil, y debajo Pagination en lugar de «ver más». La cabecera (Library head) va encima, fuera de este patrón. Solo recetas: los productos ya no van en Library (son Product line con anclas).",
+        "Accesibilidad (rol, nombre, estados y teclado)": "La rejilla es un `ul` con un `li` por receta; cada card es un `article` con su título en `h3`, y el enlace del título es su nombre accesible. La sección lleva nombre («Recipes»). La paginación es un `nav` propio con nombre «Pagination»; la página actual va con `aria-current=\"page\"` (ver Pagination). El patrón no tiene JavaScript: al cambiar de página, la página debe mover el foco al inicio de la rejilla y anunciar la página nueva («Page 2 of 13»). Teclado: Tab recorre los enlaces de las cards y después la paginación.",
+        "Cuándo usar / qué NO hace": "Para el catálogo de recetas (Recipe library), debajo de Library head. Solo recetas: el filtro de producto (Product filter) está retirado y los productos se muestran con Product line y anclas. No es el módulo de productos ni un listado de concursos."
       },
       "proposed": {},
       "pending": null
@@ -31,12 +31,12 @@
       "page": "Pattern / Libraries",
       "type": "COMPONENT_SET",
       "variants": 2,
-      "lastSync": "2026-10-22 · 09:38 UTC",
-      "verification": "verified",
-      "verificationLabel": "Verificado"
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "stale",
+      "verificationLabel": "Caducado"
     },
     "description": [
-      "Librería (Product library; también Recipe y Contest library cambiando la card y el filtro): cabecera de página (h1 + entradilla) · Product filter a sangre (tipo → línea → sabor; sin filtros que den resultados vacíos) · rejilla de cards (Desktop 4 columnas de 310 px con gutter layout/gutter y space/48 entre filas; Mobile 1 columna) · Button Secondary «Ver más» (carga más, no pagina; el foco va a la primera card nueva y se anuncia el número cargado). Recipe library: Recipe card en 3 columnas sin buscador por ingredientes. Contest library: Contest card en 2-3 columnas; la página agregadora es opcional. Al filtrar se anuncia «N productos» (aria-live). Sin variables propias."
+      "Library (Recipe library): cabecera Library head (título «Recipes», subtítulo, Search field, chips de filtro y estado Filtered con «48 results for your search» y «Clear filters»), rejilla de Recipe card (Desktop 4 columnas de 310 px con gutter 24 y space/48 entre filas; Mobile 1 columna) y Pagination (Previous · 1 2 3 … 12 13 · Next) en lugar del botón «Ver más». Solo recetas: la Product library usa Library hero y Product line (Pattern / Libraries). Sin variables propias."
     ],
     "props": [
       {
@@ -59,25 +59,31 @@
     },
     "nested": [
       {
-        "layer": "filter",
-        "component": "product-filter",
+        "layer": "Library head",
+        "component": "library-head",
         "exposedAs": "",
         "hidden": false
       },
       {
-        "layer": "tab",
-        "component": "tab",
+        "layer": "Search field",
+        "component": "search-field",
         "exposedAs": "",
         "hidden": false
       },
       {
-        "layer": "tab",
-        "component": "tab",
-        "exposedAs": "",
+        "layer": "icon-search",
+        "component": "icon-search",
+        "exposedAs": "Icon leading#51:0",
         "hidden": false
       },
       {
-        "layer": "chip",
+        "layer": "icon-clear",
+        "component": "icon-close",
+        "exposedAs": "Clear icon#51:5",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
         "component": "chip",
         "exposedAs": "",
         "hidden": false
@@ -89,7 +95,67 @@
         "hidden": false
       },
       {
-        "layer": "chip",
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
         "component": "chip",
         "exposedAs": "",
         "hidden": false
@@ -102,73 +168,395 @@
       },
       {
         "layer": "product-card",
-        "component": "product-card",
+        "component": "recipe-card",
         "exposedAs": "",
         "hidden": false
       },
       {
-        "layer": "badge",
-        "component": "badge",
-        "exposedAs": "",
+        "layer": "icon-time",
+        "component": "icon-timer",
+        "exposedAs": "Time icon#67:8",
         "hidden": false
       },
       {
-        "layer": "link",
-        "component": "link",
-        "exposedAs": "",
-        "hidden": false
-      },
-      {
-        "layer": "icon-trailing",
-        "component": "icon-arrow-right",
-        "exposedAs": "Icon#35:0",
-        "hidden": false
-      },
-      {
-        "layer": "badge",
-        "component": "badge",
-        "exposedAs": "",
-        "hidden": true
-      },
-      {
-        "layer": "load-more",
-        "component": "button",
+        "layer": "Chip",
+        "component": "chip",
         "exposedAs": "",
         "hidden": false
       },
       {
         "layer": "icon-leading",
-        "component": "icon-arrow-right",
-        "exposedAs": "Icon leading swap#33:75",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
         "hidden": true
       },
       {
-        "layer": "icon-trailing",
-        "component": "icon-arrow-right",
-        "exposedAs": "Icon trailing swap#33:100",
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "product-card",
+        "component": "recipe-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-time",
+        "component": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "product-card",
+        "component": "recipe-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-time",
+        "component": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "product-card",
+        "component": "recipe-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-time",
+        "component": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "product-card",
+        "component": "recipe-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-time",
+        "component": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "product-card",
+        "component": "recipe-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-time",
+        "component": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "product-card",
+        "component": "recipe-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-time",
+        "component": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "product-card",
+        "component": "recipe-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-time",
+        "component": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Pagination",
+        "component": "pagination",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      },
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      },
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      },
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      },
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      },
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      },
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
         "hidden": true
       }
     ],
     "tokens": [
       {
-        "group": "badge",
-        "items": [
-          "badge/new/bg",
-          "badge/new/text"
-        ]
-      },
-      {
         "group": "border",
         "items": [
-          "border/width/thick",
           "border/width/thin"
         ]
       },
       {
         "group": "button",
         "items": [
-          "button/secondary/border",
-          "button/secondary/text"
+          "button/primary/bg",
+          "button/primary/text"
         ]
       },
       {
@@ -177,6 +565,7 @@
           "chip/bg",
           "chip/bg-selected",
           "chip/border",
+          "chip/height/m",
           "chip/height/s",
           "chip/text",
           "chip/text-selected"
@@ -185,10 +574,22 @@
       {
         "group": "color",
         "items": [
+          "color/border/default",
+          "color/border/subtle",
           "color/effect/shadow-ink",
           "color/surface/page",
           "color/text/default",
+          "color/text/disabled",
           "color/text/secondary"
+        ]
+      },
+      {
+        "group": "field",
+        "items": [
+          "field/bg",
+          "field/border",
+          "field/icon",
+          "field/placeholder"
         ]
       },
       {
@@ -197,19 +598,19 @@
           "font/family/body",
           "font/family/display",
           "font/line-height/desktop/body-l",
+          "font/line-height/desktop/body-m",
           "font/line-height/desktop/body-s",
           "font/line-height/desktop/caption",
           "font/line-height/desktop/h1",
           "font/line-height/desktop/h3",
           "font/line-height/desktop/label",
-          "font/line-height/mobile/label",
           "font/size/desktop/body-l",
+          "font/size/desktop/body-m",
           "font/size/desktop/body-s",
           "font/size/desktop/caption",
           "font/size/desktop/h1",
           "font/size/desktop/h3",
           "font/size/desktop/label",
-          "font/size/mobile/label",
           "font/style/body",
           "font/style/display"
         ]
@@ -217,6 +618,8 @@
       {
         "group": "icon",
         "items": [
+          "icon/color/default",
+          "icon/size/md",
           "icon/size/sm"
         ]
       },
@@ -230,22 +633,6 @@
         ]
       },
       {
-        "group": "link",
-        "items": [
-          "link/default"
-        ]
-      },
-      {
-        "group": "product-card",
-        "items": [
-          "product-card/bg",
-          "product-card/border",
-          "product-card/media-bg",
-          "product-card/meta",
-          "product-card/title"
-        ]
-      },
-      {
         "group": "radius",
         "items": [
           "radius/md",
@@ -254,73 +641,79 @@
         ]
       },
       {
+        "group": "recipe-card",
+        "items": [
+          "recipe-card/bg",
+          "recipe-card/border",
+          "recipe-card/media-bg",
+          "recipe-card/meta",
+          "recipe-card/title"
+        ]
+      },
+      {
         "group": "space",
         "items": [
           "space/16",
           "space/24",
           "space/32",
-          "space/4",
           "space/48",
+          "space/64",
           "space/8"
-        ]
-      },
-      {
-        "group": "tab",
-        "items": [
-          "tab/bg",
-          "tab/bg-selected",
-          "tab/border",
-          "tab/text",
-          "tab/text-selected"
         ]
       }
     ],
-    "tokenCount": 59,
+    "tokenCount": 60,
     "textStyles": [
       "Desktop/h1",
       "Desktop/body-l",
-      "Desktop/caption",
-      "Desktop/label",
+      "Desktop/body-m",
       "Desktop/body-s",
-      "Mobile/label",
-      "Desktop/h3"
+      "Desktop/caption",
+      "Desktop/h3",
+      "Desktop/label"
     ],
     "classes": [
-      "button",
-      "button--secondary",
+      "chip",
+      "icon",
+      "icon-arrow-left",
+      "icon-arrow-right",
+      "icon-timer",
       "library",
       "library__grid",
-      "library__header",
       "library__more",
-      "page-title",
-      "product-card",
-      "product-card__body",
-      "product-card__name",
-      "product-filter",
-      "product-filter__group",
-      "product-filter__label",
-      "product-filter__options",
-      "section__lead",
-      "tab"
+      "pagination",
+      "pagination__ellipsis",
+      "pagination__link",
+      "pagination__list",
+      "pagination__page",
+      "pagination__status",
+      "pagination__text",
+      "recipe-card",
+      "recipe-card__body",
+      "recipe-card__link",
+      "recipe-card__media",
+      "recipe-card__meta",
+      "recipe-card__products",
+      "recipe-card__title"
     ],
     "manual": [
       {
         "label": "Propósito",
-        "md": "Librería de producto (y de recetas o concursos cambiando la card y el filtro): cabecera, filtro a sangre, rejilla de cards y «Ver más».",
+        "md": "Rejilla del catálogo de recetas: cards de Recipe card en 4 columnas en escritorio, 2 en tablet y 1 en móvil, y debajo Pagination en lugar de «ver más». La cabecera (Library head) va encima, fuera de este patrón. Solo recetas: los productos ya no van en Library (son Product line con anclas).",
         "todo": false,
         "na": false,
         "canNA": false
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "Título tinta sobre crema 17,2:1; entradilla gris cálido sobre crema 5,4:1; el resto, los pares de sus componentes. Al filtrar se anuncia «N productos» (aria-live). «Ver más» carga más resultados (no pagina), mueve el foco a la primera card nueva y anuncia cuántas se han cargado.",
+        "md": "La rejilla es un `ul` con un `li` por receta; cada card es un `article` con su título en `h3`, y el enlace del título es su nombre accesible. La sección lleva nombre («Recipes»). La paginación es un `nav` propio con nombre «Pagination»; la página actual va con `aria-current=\"page\"` (ver Pagination). El patrón no tiene JavaScript: al cambiar de página, la página debe mover el foco al inicio de la rejilla y anunciar la página nueva («Page 2 of 13»). Teclado: Tab recorre los enlaces de las cards y después la paginación.",
         "todo": false,
         "na": false,
         "canNA": true
       },
       {
         "label": "Cuándo usar / qué NO hace",
-        "md": "Para Product library, Recipe library (Recipe card en tres columnas, sin buscador por ingredientes) y Contest library (opcional). No muestra filtros vacíos.",
+        "md": "Para el catálogo de recetas (Recipe library), debajo de Library head. Solo recetas: el filtro de producto (Product filter) está retirado y los productos se muestran con Product line y anclas. No es el módulo de productos ni un listado de concursos.",
         "todo": false,
         "na": false,
         "canNA": false
@@ -332,7 +725,7 @@
   "ds": {
     "slug": "library",
     "kind": "pattern",
-    "verification": "verified",
+    "verification": "stale",
     "figmaNodeId": "96:1453",
     "contract": "../../../../../../design-system/schemas/components/library.schema.json"
   },

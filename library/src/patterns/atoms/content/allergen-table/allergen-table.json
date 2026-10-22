@@ -1,0 +1,241 @@
+{
+  "title": "Allergen table",
+  "description": "Tabla de alérgenos UE (Reg. 1169/2011): contenido del modal «Allergy detailed table». Texto introductorio y rejilla de los 14 alérgenos (Gluten, Crustaceans, Eggs, Fish, Peanuts,…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "allergen-table",
+      "name": "Allergen table",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "193:344",
+      "current": {
+        "description": "Tabla de alérgenos UE (Reg. 1169/2011): contenido del modal «Allergy detailed table». Texto introductorio y rejilla de los 14 alérgenos (Gluten, Crustaceans, Eggs, Fish, Peanuts, Soy, Milk, Nuts, Celery, Mustard, Sesame, Sulphites, Lupin, Molluscs) con instancias de Allergen table / Cell: presente = cabecera amarilla de marca y ●; ausente = cabecera neutra y –. Breakpoint: Desktop 4 columnas, Mobile 2 columnas. Los ejemplos (Eggs, Fish, Peanuts, Soy, Milk, Celery) son provisionales hasta tener la ficha técnica validada. Se usa en el modal Allergy detailed table (wireframe UX 490:7469 y 490:11998). Clase CSS: .allergen-table.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Es una lista (`ul` con `li`), no una tabla: cada celda es un dato suelto con su estado, sin cabeceras de fila ni de columna que relacionar. El estado no depende del color: el ● y el – son texto, y cada celda lleva un texto oculto (`visually-hidden`) con «contains» o «does not contain», que lee el lector de pantalla junto al nombre. Los símbolos llevan `aria-hidden`. Contrastes: tinta sobre amarillo de marca 12,3:1; tinta sobre crema 17,2:1; intro en gris cálido sobre blanco 5,9:1. El modal que lo contiene debe tener su nombre y devolver el foco al disparador.",
+        "Cuándo usar / qué NO hace": "Solo dentro del modal «Allergen detailed table», abierto desde el enlace de Product details. No se pone en la página: la página muestra Allergen card."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "193:344",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=193-344",
+      "page": "Content",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Tabla de alérgenos UE (Reg. 1169/2011): contenido del modal «Allergy detailed table». Texto introductorio y rejilla de los 14 alérgenos (Gluten, Crustaceans, Eggs, Fish, Peanuts, Soy, Milk, Nuts, Celery, Mustard, Sesame, Sulphites, Lupin, Molluscs) con instancias de Allergen table / Cell: presente = cabecera amarilla de marca y ●; ausente = cabecera neutra y –. Breakpoint: Desktop 4 columnas, Mobile 2 columnas. Los ejemplos (Eggs, Fish, Peanuts, Soy, Milk, Celery) son provisionales hasta tener la ficha técnica validada. Se usa en el modal Allergy detailed table (wireframe UX 490:7469 y 490:11998). Clase CSS: .allergen-table."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Allergen table / Cell",
+        "component": "allergen-table-cell",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/surface/brand",
+          "color/surface/page",
+          "color/text/default",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "nutrition",
+        "items": [
+          "nutrition/bg",
+          "nutrition/border"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/sm"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 18,
+    "textStyles": [
+      "Desktop/body-m",
+      "Desktop/caption"
+    ],
+    "classes": [
+      "allergen-table",
+      "allergen-table__intro",
+      "allergen-table__item",
+      "allergen-table__item--present",
+      "allergen-table__list",
+      "allergen-table__mark",
+      "allergen-table__name",
+      "visually-hidden"
+    ],
+    "manual": [
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Es una lista (`ul` con `li`), no una tabla: cada celda es un dato suelto con su estado, sin cabeceras de fila ni de columna que relacionar. El estado no depende del color: el ● y el – son texto, y cada celda lleva un texto oculto (`visually-hidden`) con «contains» o «does not contain», que lee el lector de pantalla junto al nombre. Los símbolos llevan `aria-hidden`. Contrastes: tinta sobre amarillo de marca 12,3:1; tinta sobre crema 17,2:1; intro en gris cálido sobre blanco 5,9:1. El modal que lo contiene debe tener su nombre y devolver el foco al disparador.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo dentro del modal «Allergen detailed table», abierto desde el enlace de Product details. No se pone en la página: la página muestra Allergen card.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "allergen-table",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "193:344",
+    "contract": "../../../../../../design-system/schemas/components/allergen-table.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

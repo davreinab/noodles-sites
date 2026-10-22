@@ -1,0 +1,12 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="recipe-macros" class="recipe-macros" aria-labelledby="recipe-macros-title">
+<h2 class="recipe-macros__title" id="recipe-macros-title">Recipe macros</h2>
+<p class="recipe-macros__head">Per serving</p>
+<ul class="recipe-macros__list">
+<li class="recipe-macros__row"><span class="recipe-macros__name">Protein</span><span class="recipe-macros__value">8.3 g</span></li>
+<li class="recipe-macros__row"><span class="recipe-macros__name">Carbohydrates</span><span class="recipe-macros__value">52 g</span></li>
+<li class="recipe-macros__row"><span class="recipe-macros__name">Fat</span><span class="recipe-macros__value">10 g</span></li>
+</ul>
+<button class="button button--secondary recipe-macros__action" type="button" aria-haspopup="dialog">See allergen table</button>
+</section>{% endraw %}
+{% endmacro %}

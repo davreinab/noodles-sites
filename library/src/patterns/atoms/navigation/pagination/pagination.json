@@ -1,0 +1,246 @@
+{
+  "title": "Pagination",
+  "description": "Pagination: paginador de la Recipe library que sustituye al botón «Ver más». Previous (deshabilitado en la página 1) · 1 2 3 … 12 13 · Next; página actual en Current (aria-current…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "pagination",
+      "name": "Pagination",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "219:1662",
+      "current": {
+        "description": "Pagination: paginador de la Recipe library que sustituye al botón «Ver más». Previous (deshabilitado en la página 1) · 1 2 3 … 12 13 · Next; página actual en Current (aria-current=page). Breakpoint Mobile: Previous/Next como flechas y «Page 1 of 13». Uso: Library (Recipe library, wireframe 171:3808 y móvil 486:13025). Clase CSS: .pagination (ítems .pagination__item). Nota: en Mobile las flechas son texto (←/→) y no iconos; los iconos chevron/arrow existentes no se han anidado.",
+        "Propósito": "Navegación entre páginas de una rejilla de recetas, en lugar de «ver más». Previous · números · Next. La página actual va rellena en tinta. Botones de 40 px con borde. En móvil se ocultan los números y la elipsis, y quedan las flechas solo con icono y el texto «Page 1 of 13» (`pagination__status`, oculto en escritorio).",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Rol: landmark `nav` con nombre por `aria-label` («Pagination») y lista `ul`. Página actual: `aria-current=\"page\"` en su enlace, que se anuncia como página actual; no se distingue solo por color. Anterior en la primera página: `disabled` en el botón (no se puede enfocar ni activar); si el patrón usa enlaces, `aria-disabled=\"true\"` y sin `href`. Anterior y siguiente llevan siempre `aria-label` («Previous page», «Next page»): en móvil su texto visible está oculto y el icono no tiene nombre. La elipsis es `aria-hidden`. En móvil los números se ocultan con display none, así que no son tabulables, y «Page 1 of 13» da la posición. Teclado: Tab recorre anterior, números visibles y siguiente; Enter o Espacio activan. Foco: contorno de 2 px.",
+        "Cuándo usar / qué NO hace": "Para listados paginados donde el usuario salta de página (Recipe library). No se muestra si todo cabe en una página. No es un filtro ni pestañas: cambia de página, no de criterio. Sus flechas son icono y texto del DS, no una imagen."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "219:1662",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=219-1662",
+      "page": "Navigation",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Pagination: paginador de la Recipe library que sustituye al botón «Ver más». Previous (deshabilitado en la página 1) · 1 2 3 … 12 13 · Next; página actual en Current (aria-current=page). Breakpoint Mobile: Previous/Next como flechas y «Page 1 of 13». Uso: Library (Recipe library, wireframe 171:3808 y móvil 486:13025). Clase CSS: .pagination (ítems .pagination__item). Nota: en Mobile las flechas son texto (←/→) y no iconos; los iconos chevron/arrow existentes no se han anidado."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      },
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      },
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      },
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      },
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      },
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      },
+      {
+        "layer": "Pagination item",
+        "component": "pagination-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "button",
+        "items": [
+          "button/primary/bg",
+          "button/primary/text"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/border/default",
+          "color/border/subtle",
+          "color/text/default",
+          "color/text/disabled"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/display",
+          "font/line-height/desktop/label",
+          "font/size/desktop/label",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default",
+          "icon/size/md"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 14,
+    "textStyles": [
+      "Desktop/label"
+    ],
+    "classes": [
+      "icon",
+      "icon-arrow-left",
+      "icon-arrow-right",
+      "pagination",
+      "pagination__ellipsis",
+      "pagination__link",
+      "pagination__list",
+      "pagination__page",
+      "pagination__status",
+      "pagination__text"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Navegación entre páginas de una rejilla de recetas, en lugar de «ver más». Previous · números · Next. La página actual va rellena en tinta. Botones de 40 px con borde. En móvil se ocultan los números y la elipsis, y quedan las flechas solo con icono y el texto «Page 1 of 13» (`pagination__status`, oculto en escritorio).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Rol: landmark `nav` con nombre por `aria-label` («Pagination») y lista `ul`. Página actual: `aria-current=\"page\"` en su enlace, que se anuncia como página actual; no se distingue solo por color. Anterior en la primera página: `disabled` en el botón (no se puede enfocar ni activar); si el patrón usa enlaces, `aria-disabled=\"true\"` y sin `href`. Anterior y siguiente llevan siempre `aria-label` («Previous page», «Next page»): en móvil su texto visible está oculto y el icono no tiene nombre. La elipsis es `aria-hidden`. En móvil los números se ocultan con display none, así que no son tabulables, y «Page 1 of 13» da la posición. Teclado: Tab recorre anterior, números visibles y siguiente; Enter o Espacio activan. Foco: contorno de 2 px.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Para listados paginados donde el usuario salta de página (Recipe library). No se muestra si todo cabe en una página. No es un filtro ni pestañas: cambia de página, no de criterio. Sus flechas son icono y texto del DS, no una imagen.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "pagination",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "219:1662",
+    "contract": "../../../../../../design-system/schemas/components/pagination.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

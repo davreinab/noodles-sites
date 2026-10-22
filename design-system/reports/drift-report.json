@@ -1,6 +1,6 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": "2026-10-22T10:27:20Z",
+  "generatedAt": "2026-10-22T14:07:02Z",
   "adoptionMode": "new",
   "sourcesCompared": [
     "figma",
@@ -12,8 +12,8 @@
   ],
   "summary": {
     "critical": 0,
-    "warning": 9,
-    "info": 11
+    "warning": 34,
+    "info": 17
   },
   "findings": [
     {
@@ -73,6 +73,86 @@
     },
     {
       "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / link: sin «Ejemplo de código» (code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / send: sin «Ejemplo de código» (code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / trash: sin «Ejemplo de código» (code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / whatsapp: sin «Ejemplo de código» (code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / facebook: sin «Ejemplo de código» (code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Icon / telegram: sin «Ejemplo de código» (code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Anchor nav item: sin «Ejemplo de código» (code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Pagination item: sin «Ejemplo de código» (code.example)"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Badge: el maestro cambió desde que se verificó (2026-10-08); vuelve a pasar el protocolo de verificación"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Recipe card: el maestro cambió desde que se verificó (2026-10-08); vuelve a pasar el protocolo de verificación"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Ingredient item: el maestro cambió desde que se verificó (2026-10-22); vuelve a pasar el protocolo de verificación"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Ingredients: el maestro cambió desde que se verificó (2026-10-22); vuelve a pasar el protocolo de verificación"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Nutrition panel: el maestro cambió desde que se verificó (2026-10-22); vuelve a pasar el protocolo de verificación"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Step: el maestro cambió desde que se verificó (2026-10-22); vuelve a pasar el protocolo de verificación"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Timer: el maestro cambió desde que se verificó (2026-10-22); vuelve a pasar el protocolo de verificación"
+    },
+    {
+      "severity": "warning",
+      "check": "code-example-missing-or-stale",
+      "detail": "Allergen table / Cell: sin «Ejemplo de código» (code.example)"
+    },
+    {
+      "severity": "warning",
       "check": "icon-not-exposed-as-swap",
       "detail": "Alert: capa «icon-status» (Icon / info) sin INSTANCE_SWAP"
     },
@@ -80,6 +160,16 @@
       "severity": "warning",
       "check": "icon-not-exposed-as-swap",
       "detail": "Suggestion bubble: capa «icon-external» (Icon / external-link) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Share panel: capa «icon-link» (Icon / link) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Navbar: el maestro cambió desde que se verificó (2026-10-08); vuelve a pasar el protocolo de verificación"
     },
     {
       "severity": "warning",
@@ -103,18 +193,83 @@
     },
     {
       "severity": "warning",
-      "check": "icon-not-exposed-as-swap",
-      "detail": "Product hero: capa «icon-check» (Icon / check) sin INSTANCE_SWAP"
+      "check": "verification-stale",
+      "detail": "Footer: el maestro cambió desde que se verificó (2026-10-08); vuelve a pasar el protocolo de verificación"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Hero: el maestro cambió desde que se verificó (2026-10-08); vuelve a pasar el protocolo de verificación"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Library: el maestro cambió desde que se verificó (2026-10-22); vuelve a pasar el protocolo de verificación"
     },
     {
       "severity": "warning",
       "check": "icon-not-exposed-as-swap",
-      "detail": "Recipe hero: capa «icon» (Icon / timer) sin INSTANCE_SWAP"
+      "detail": "Product hero: capa «icon-leading» (Icon / arrow-left) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Product hero: el maestro cambió desde que se verificó (2026-10-22); vuelve a pasar el protocolo de verificación"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Product details: el maestro cambió desde que se verificó (2026-10-22); vuelve a pasar el protocolo de verificación"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Preparation: el maestro cambió desde que se verificó (2026-10-22); vuelve a pasar el protocolo de verificación"
     },
     {
       "severity": "warning",
       "check": "icon-not-exposed-as-swap",
-      "detail": "Recipe hero: capa «icon» (Icon / circle-check) sin INSTANCE_SWAP"
+      "detail": "Recipe hero: capa «arrow» (Icon / arrow-left) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Recipe hero: capa «icon-send» (Icon / send) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "verification-stale",
+      "detail": "Recipe hero: el maestro cambió desde que se verificó (2026-10-22); vuelve a pasar el protocolo de verificación"
+    },
+    {
+      "severity": "info",
+      "check": "figma-vs-component-contracts",
+      "detail": "assets/icons/facebook.svg sin entrada en sync/icons.json"
+    },
+    {
+      "severity": "info",
+      "check": "figma-vs-component-contracts",
+      "detail": "assets/icons/link.svg sin entrada en sync/icons.json"
+    },
+    {
+      "severity": "info",
+      "check": "figma-vs-component-contracts",
+      "detail": "assets/icons/send.svg sin entrada en sync/icons.json"
+    },
+    {
+      "severity": "info",
+      "check": "figma-vs-component-contracts",
+      "detail": "assets/icons/telegram.svg sin entrada en sync/icons.json"
+    },
+    {
+      "severity": "info",
+      "check": "figma-vs-component-contracts",
+      "detail": "assets/icons/trash.svg sin entrada en sync/icons.json"
+    },
+    {
+      "severity": "info",
+      "check": "figma-vs-component-contracts",
+      "detail": "assets/icons/whatsapp.svg sin entrada en sync/icons.json"
     }
   ],
   "acceptedStructuralDifferences": [],

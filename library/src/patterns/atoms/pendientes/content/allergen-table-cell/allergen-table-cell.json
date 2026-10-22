@@ -1,0 +1,137 @@
+{
+  "title": "Allergen table / Cell",
+  "description": "Celda de la tabla de alérgenos (subcomponente de Allergen table). Present=true: el producto contiene el alérgeno; cabecera en amarillo de marca (color/surface/brand) y marca ●. Pr…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": null,
+    "pending": null,
+    "edit": {
+      "slug": "allergen-table-cell",
+      "name": "Allergen table / Cell",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "193:176",
+      "current": {
+        "description": "Celda de la tabla de alérgenos (subcomponente de Allergen table). Present=true: el producto contiene el alérgeno; cabecera en amarillo de marca (color/surface/brand) y marca ●. Present=false: no lo contiene; cabecera en superficie neutra (color/surface/page) y marca –. La presencia no depende solo del color: la marca ● o – y el texto oculto contains / does not contain lo indican. Propiedad de texto Name: nombre del alérgeno (en inglés). Se usa solo dentro de Allergen table (modal Allergy detailed table, wireframe UX 490:7469 y 490:11998). Clase CSS: .allergen-table (celda).",
+        "Propósito": "",
+        "Accesibilidad (rol, nombre, estados y teclado)": "",
+        "Cuándo usar / qué NO hace": ""
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "193:176",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=193-176",
+      "page": "Content",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Celda de la tabla de alérgenos (subcomponente de Allergen table). Present=true: el producto contiene el alérgeno; cabecera en amarillo de marca (color/surface/brand) y marca ●. Present=false: no lo contiene; cabecera en superficie neutra (color/surface/page) y marca –. La presencia no depende solo del color: la marca ● o – y el texto oculto contains / does not contain lo indican. Propiedad de texto Name: nombre del alérgeno (en inglés). Se usa solo dentro de Allergen table (modal Allergy detailed table, wireframe UX 490:7469 y 490:11998). Clase CSS: .allergen-table (celda)."
+    ],
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "values": [],
+        "default": "Gluten",
+        "figma": "Name#193:0"
+      },
+      {
+        "name": "present",
+        "type": "boolean",
+        "values": [],
+        "default": "true",
+        "figma": "Present"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/surface/brand",
+          "color/text/default",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/sm"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 12,
+    "textStyles": [
+      "Desktop/body-m",
+      "Desktop/caption"
+    ],
+    "classes": [],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "⬜ TODO",
+        "todo": true,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "⬜ TODO",
+        "todo": true,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "⬜ TODO",
+        "todo": true,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 3,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "allergen-table-cell",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "193:176",
+    "contract": "../../../../../../../design-system/schemas/components/allergen-table-cell.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

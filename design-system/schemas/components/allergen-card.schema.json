@@ -1,0 +1,132 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:allergen-card",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Allergen card",
+    "slug": "allergen-card",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Tarjeta de alérgeno principal de la sección Nutrition de la ficha de producto: nombre del alérgeno en negrita (Name, p. ej. «Gluten or derivatives») y nota de uso (Note, p. ej. «Not suitable for coeliacs»). Fondo nutrition/bg, borde nutrition/border y radio md. Se muestran tres tarjetas («Main allergens») y el enlace «Check the detailed table» abre Allergen table. Wireframe UX 396:6073. Clase CSS: .allergen-card.",
+    "figmaPage": "Content",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "ec2cbf3816fb"
+  },
+  "api": {
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "default": "Gluten or derivatives",
+        "figma": "Name#193:18"
+      },
+      {
+        "name": "note",
+        "type": "string",
+        "default": "Not suitable for coeliacs",
+        "figma": "Note#193:19"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thin",
+      "color/text/default",
+      "color/text/secondary",
+      "font/family/body",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/body-s",
+      "font/size/desktop/body-m",
+      "font/size/desktop/body-s",
+      "font/style/body",
+      "nutrition/bg",
+      "nutrition/border",
+      "radius/md",
+      "space/16",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "allergen-card",
+      "allergen-card__name",
+      "allergen-card__note"
+    ],
+    "example": "<li data-ds=\"allergen-card\" class=\"allergen-card\">\n<p class=\"allergen-card__name\">Gluten or derivatives</p>\n<p class=\"allergen-card__note\">Not suitable for coeliacs</p>\n</li>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "193:210",
+    "componentKey": "5b3b5e456df7a40ee84f37571de7e6da036a2e5b",
+    "propertyNames": {
+      "name": "Name#193:18",
+      "note": "Note#193:19"
+    },
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
+      "itemSpacing: space/8",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: nutrition/bg",
+      "strokes: nutrition/border",
+      "color: nutrition/bg",
+      "color: nutrition/border",
+      "fills: color/text/default",
+      "lineHeight: font/line-height/desktop/body-m",
+      "fontFamily: font/family/body",
+      "fontSize: font/size/desktop/body-m",
+      "color: color/text/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-s",
+      "fontStyle: font/style/body",
+      "lineHeight: font/line-height/desktop/body-s",
+      "color: color/text/secondary"
+    ],
+    "textStyles": [
+      "Desktop/body-s"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/allergen-card.md",
+    "section": "Allergen card"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

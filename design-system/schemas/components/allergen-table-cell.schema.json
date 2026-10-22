@@ -1,0 +1,126 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:allergen-table-cell",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Allergen table / Cell",
+    "slug": "allergen-table-cell",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Celda de la tabla de alérgenos (subcomponente de Allergen table). Present=true: el producto contiene el alérgeno; cabecera en amarillo de marca (color/surface/brand) y marca ●. Present=false: no lo contiene; cabecera en superficie neutra (color/surface/page) y marca –. La presencia no depende solo del color: la marca ● o – y el texto oculto contains / does not contain lo indican. Propiedad de texto Name: nombre del alérgeno (en inglés). Se usa solo dentro de Allergen table (modal Allergy detailed table, wireframe UX 490:7469 y 490:11998). Clase CSS: .allergen-table (celda).",
+    "figmaPage": "Content",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "5338d31c6992",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "default": "Gluten",
+        "figma": "Name#193:0"
+      },
+      {
+        "name": "present",
+        "type": "boolean",
+        "default": true,
+        "figma": "Present"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "color/surface/brand",
+      "color/text/default",
+      "color/text/secondary",
+      "font/family/body",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/style/body",
+      "radius/sm",
+      "space/16",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [],
+    "example": null,
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "193:176",
+    "componentKey": "f4765927bcdb36ea7f3f875b4ed46556c580c3d3",
+    "propertyNames": {
+      "name": "Name#193:0",
+      "present": "Present"
+    },
+    "variantAxes": {
+      "Present": [
+        "true",
+        "false"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [
+      "itemSpacing: space/8",
+      "paddingLeft: space/16",
+      "paddingTop: space/8",
+      "paddingRight: space/16",
+      "paddingBottom: space/8",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "fills: color/surface/brand",
+      "color: color/surface/brand",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: color/text/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: color/text/secondary"
+    ],
+    "textStyles": [
+      "Desktop/body-m",
+      "Desktop/caption"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/allergen-table-cell.md",
+    "section": "Allergen table / Cell"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

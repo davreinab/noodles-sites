@@ -1,0 +1,149 @@
+{
+  "title": "Nutrition label",
+  "description": "Tabla nutricional de la UE (Reg. 1169/2011), no el formato de EE. UU.: contenido del modal «Pack label». Columnas: Per 100 g · Per serving (93.6 g) · %RI*. Filas: Energy (kJ / kca…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".nutrition-label",
+          "why": "sin fondo propio: depende de dónde se ponga"
+        }
+      ],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "nutrition-label",
+      "name": "Nutrition label",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "194:249",
+      "current": {
+        "description": "Tabla nutricional de la UE (Reg. 1169/2011), no el formato de EE. UU.: contenido del modal «Pack label». Columnas: Per 100 g · Per serving (93.6 g) · %RI*. Filas: Energy (kJ / kcal), Fat, of which saturates, Carbohydrate, of which sugars, Fibre, Protein, Salt; las filas «of which» van sangradas. Filetes gruesos de tinta bajo el título y antes del pie; filetes finos entre filas. Pie: «*Reference intake of an average adult (8,400 kJ / 2,000 kcal).». Valores de ejemplo coherentes, no validados. Se abre desde el enlace «Still curious? View pack label» de Ingredients (wireframe UX 490:11998). Clase CSS: .nutrition-label. Formato UE (Reg. 1169/2011) por decisión de David Reina 2026-10-22; ⬜ TODO confirmar con GB Foods.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Tabla de datos real: `caption` con el título, `th scope=\"col\"` para las cabeceras de columna y `th scope=\"row\"` para cada nutriente. Las filas «of which» llevan `nutrition-label__sub` (sangría visual): su relación con la fila superior va en el texto, no solo en la sangría. El valor de cada celda se lee con su cabecera. Texto tinta sobre blanco 18,7:1; filetes de tinta. El pie es un párrafo aparte, no una fila.",
+        "Cuándo usar / qué NO hace": "Solo dentro del modal «Pack label», abierto desde «View pack label» en Ingredients. No sustituye a Nutrition bar ni a Nutrition ring: la tabla es la cifra oficial del envase."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "194:249",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=194-249",
+      "page": "Content",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Tabla nutricional de la UE (Reg. 1169/2011), no el formato de EE. UU.: contenido del modal «Pack label». Columnas: Per 100 g · Per serving (93.6 g) · %RI*. Filas: Energy (kJ / kcal), Fat, of which saturates, Carbohydrate, of which sugars, Fibre, Protein, Salt; las filas «of which» van sangradas. Filetes gruesos de tinta bajo el título y antes del pie; filetes finos entre filas. Pie: «*Reference intake of an average adult (8,400 kJ / 2,000 kcal).». Valores de ejemplo coherentes, no validados. Se abre desde el enlace «Still curious? View pack label» de Ingredients (wireframe UX 490:11998). Clase CSS: .nutrition-label. Formato UE (Reg. 1169/2011) por decisión de David Reina 2026-10-22; ⬜ TODO confirmar con GB Foods."
+    ],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick",
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/border/default",
+          "color/text/default",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h3",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/size/desktop/h3",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "nutrition",
+        "items": [
+          "nutrition/bg",
+          "nutrition/border"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 22,
+    "textStyles": [
+      "Desktop/h3",
+      "Desktop/label",
+      "Desktop/body-m",
+      "Desktop/caption"
+    ],
+    "classes": [
+      "nutrition-label",
+      "nutrition-label__caption",
+      "nutrition-label__note",
+      "nutrition-label__sub",
+      "visually-hidden"
+    ],
+    "manual": [
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Tabla de datos real: `caption` con el título, `th scope=\"col\"` para las cabeceras de columna y `th scope=\"row\"` para cada nutriente. Las filas «of which» llevan `nutrition-label__sub` (sangría visual): su relación con la fila superior va en el texto, no solo en la sangría. El valor de cada celda se lee con su cabecera. Texto tinta sobre blanco 18,7:1; filetes de tinta. El pie es un párrafo aparte, no una fila.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo dentro del modal «Pack label», abierto desde «View pack label» en Ingredients. No sustituye a Nutrition bar ni a Nutrition ring: la tabla es la cifra oficial del envase.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "nutrition-label",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "194:249",
+    "contract": "../../../../../../design-system/schemas/components/nutrition-label.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "title": "Step",
-  "description": "Paso numerado de preparación (página de producto, junto al temporizador de 3 minutos de la fase 5) o de receta. Anatomía: número en círculo (Anton, step/number-bg amarillo de marc…",
-  "status": "Ready",
+  "description": "Paso numerado de preparación (punto 7 de la SPEC, wireframe UX 396:6073 en el archivo 1YhsCqdqYCHlK4Y82IY5G3). Tarjeta sobre fondo color/surface/inverse: fondo color/surface/card…",
+  "status": "In review",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -17,10 +17,10 @@
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "nodeId": "71:164",
       "current": {
-        "description": "Paso numerado de preparación (página de producto, junto al temporizador de 3 minutos de la fase 5) o de receta. Anatomía: número en círculo (Anton, step/number-bg amarillo de marca, 56 px) · texto (body-l) · media opcional (Media=True: imagen o GIF 16:9; el GIF respeta prefers-reduced-motion y lleva pausa). Se usa dentro de <ol>: el número visual es decorativo (aria-hidden) porque la lista ya lo anuncia. Se apilan con space/32.",
-        "Propósito": "Paso numerado de la preparación de producto o de una receta, con imagen o GIF opcional.",
-        "Accesibilidad (rol, nombre, estados y teclado)": "Número tinta sobre amarillo 12,3:1; texto tinta sobre crema 17,2:1. Rol: `<li>` dentro de `<ol>`, que ya anuncia la posición; por eso el número visual es `aria-hidden`. La imagen describe el gesto en su `alt`; un GIF va como MP4 silencioso en bucle con botón de pausa y se detiene con prefers-reduced-motion.",
-        "Cuándo usar / qué NO hace": "En Preparation (producto) y en la receta. El texto sale del envase o de la receta; no se mezcla con el Timer (va al lado)."
+        "description": "Paso numerado de preparación (punto 7 de la SPEC, wireframe UX 396:6073 en el archivo 1YhsCqdqYCHlK4Y82IY5G3). Tarjeta sobre fondo color/surface/inverse: fondo color/surface/card (superficie opaca), radio md, padding 24. Número grande en display, sin círculo (step/number-text); texto en negrita (step/text). Media=True: añade la media (imagen o vídeo) bajo el texto. Anatomía: número · contenido (texto + media opcional).",
+        "Propósito": "Paso numerado de la preparación de producto o de una receta: tarjeta blanca con el número en display grande (sin círculo), título opcional (h3 display) y el texto en negrita. Imagen o GIF opcional (16:9).",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Rol: `li` dentro de `ol`, que ya anuncia la posición; por eso el número visual es `aria-hidden`. Texto tinta sobre blanco 18,7:1; el número en tinta sobre blanco. El título es un `h3` (el nivel lo fija la página; el ejemplo usa `h3`) y sin título no hay encabezado. La imagen describe el gesto en su `alt`; un GIF va como vídeo silencioso en bucle con botón de pausa y se detiene con prefers-reduced-motion.",
+        "Cuándo usar / qué NO hace": "En Preparation (producto) y en la receta. El texto sale del envase o de la receta; el Timer va aparte, no dentro de la tarjeta."
       },
       "proposed": {},
       "pending": null
@@ -31,12 +31,12 @@
       "page": "Content",
       "type": "COMPONENT_SET",
       "variants": 2,
-      "lastSync": "2026-10-22 · 09:38 UTC",
-      "verification": "verified",
-      "verificationLabel": "Verificado"
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "stale",
+      "verificationLabel": "Caducado"
     },
     "description": [
-      "Paso numerado de preparación (página de producto, junto al temporizador de 3 minutos de la fase 5) o de receta. Anatomía: número en círculo (Anton, step/number-bg amarillo de marca, 56 px) · texto (body-l) · media opcional (Media=True: imagen o GIF 16:9; el GIF respeta prefers-reduced-motion y lleva pausa). Se usa dentro de <ol>: el número visual es decorativo (aria-hidden) porque la lista ya lo anuncia. Se apilan con space/32."
+      "Paso numerado de preparación (punto 7 de la SPEC, wireframe UX 396:6073 en el archivo 1YhsCqdqYCHlK4Y82IY5G3). Tarjeta sobre fondo color/surface/inverse: fondo color/surface/card (superficie opaca), radio md, padding 24. Número grande en display, sin círculo (step/number-text); texto en negrita (step/text). Media=True: añade la media (imagen o vídeo) bajo el texto. Anatomía: número · contenido (texto + media opcional)."
     ],
     "props": [
       {
@@ -52,6 +52,20 @@
         "values": [],
         "default": "Abre la tapa hasta la mitad y añade agua hirviendo hasta la línea interior.",
         "figma": "Text#71:12"
+      },
+      {
+        "name": "title",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "Title#222:6"
+      },
+      {
+        "name": "heading",
+        "type": "string",
+        "values": [],
+        "default": "Add boiling water up to the mark",
+        "figma": "Heading#222:9"
       },
       {
         "name": "media",
@@ -77,22 +91,30 @@
         ]
       },
       {
+        "group": "color",
+        "items": [
+          "color/surface/card",
+          "color/text/default"
+        ]
+      },
+      {
         "group": "font",
         "items": [
           "font/family/body",
           "font/family/display",
           "font/line-height/desktop/body-l",
+          "font/line-height/desktop/display",
           "font/line-height/desktop/h3",
           "font/size/desktop/body-l",
+          "font/size/desktop/display",
           "font/size/desktop/h3",
-          "font/style/body",
           "font/style/display"
         ]
       },
       {
         "group": "radius",
         "items": [
-          "radius/pill"
+          "radius/md"
         ]
       },
       {
@@ -100,15 +122,12 @@
         "items": [
           "space/16",
           "space/24",
-          "space/56",
           "space/8"
         ]
       },
       {
         "group": "step",
         "items": [
-          "step/border",
-          "step/number-bg",
           "step/number-text",
           "step/text"
         ]
@@ -116,8 +135,8 @@
     ],
     "tokenCount": 18,
     "textStyles": [
-      "Desktop/h3",
-      "Desktop/body-l"
+      "Desktop/display",
+      "Desktop/h3"
     ],
     "classes": [
       "step",
@@ -126,26 +145,27 @@
       "step__media",
       "step__number",
       "step__text",
+      "step__title",
       "steps"
     ],
     "manual": [
       {
         "label": "Propósito",
-        "md": "Paso numerado de la preparación de producto o de una receta, con imagen o GIF opcional.",
+        "md": "Paso numerado de la preparación de producto o de una receta: tarjeta blanca con el número en display grande (sin círculo), título opcional (h3 display) y el texto en negrita. Imagen o GIF opcional (16:9).",
         "todo": false,
         "na": false,
         "canNA": false
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "Número tinta sobre amarillo 12,3:1; texto tinta sobre crema 17,2:1. Rol: `<li>` dentro de `<ol>`, que ya anuncia la posición; por eso el número visual es `aria-hidden`. La imagen describe el gesto en su `alt`; un GIF va como MP4 silencioso en bucle con botón de pausa y se detiene con prefers-reduced-motion.",
+        "md": "Rol: `li` dentro de `ol`, que ya anuncia la posición; por eso el número visual es `aria-hidden`. Texto tinta sobre blanco 18,7:1; el número en tinta sobre blanco. El título es un `h3` (el nivel lo fija la página; el ejemplo usa `h3`) y sin título no hay encabezado. La imagen describe el gesto en su `alt`; un GIF va como vídeo silencioso en bucle con botón de pausa y se detiene con prefers-reduced-motion.",
         "todo": false,
         "na": false,
         "canNA": true
       },
       {
         "label": "Cuándo usar / qué NO hace",
-        "md": "En Preparation (producto) y en la receta. El texto sale del envase o de la receta; no se mezcla con el Timer (va al lado).",
+        "md": "En Preparation (producto) y en la receta. El texto sale del envase o de la receta; el Timer va aparte, no dentro de la tarjeta.",
         "todo": false,
         "na": false,
         "canNA": false
@@ -157,14 +177,16 @@
       "visible": 1,
       "total": 1,
       "missing": [],
-      "unchecked": [],
+      "unchecked": [
+        "title=true"
+      ],
       "complete": true
     }
   },
   "ds": {
     "slug": "step",
     "kind": "component",
-    "verification": "verified",
+    "verification": "stale",
     "figmaNodeId": "71:164",
     "contract": "../../../../../../design-system/schemas/components/step.schema.json"
   },

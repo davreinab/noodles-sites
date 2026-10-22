@@ -63,6 +63,26 @@
       "type": "uses"
     },
     {
+      "from": "anchor-nav",
+      "to": "anchor-nav-item",
+      "type": "uses"
+    },
+    {
+      "from": "pagination-item",
+      "to": "icon-arrow-left",
+      "type": "uses"
+    },
+    {
+      "from": "pagination",
+      "to": "icon-arrow-left",
+      "type": "uses"
+    },
+    {
+      "from": "pagination",
+      "to": "pagination-item",
+      "type": "uses"
+    },
+    {
       "from": "chip",
       "to": "icon-check",
       "type": "uses"
@@ -123,6 +143,11 @@
       "type": "uses"
     },
     {
+      "from": "flavour-tile",
+      "to": "badge",
+      "type": "uses"
+    },
+    {
       "from": "accordion-item",
       "to": "icon-plus",
       "type": "uses"
@@ -173,6 +198,21 @@
       "type": "uses"
     },
     {
+      "from": "allergen-table",
+      "to": "allergen-table-cell",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-macros",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-macros",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
       "from": "modal",
       "to": "button",
       "type": "uses"
@@ -215,6 +255,56 @@
     {
       "from": "suggestion-bubble",
       "to": "icon-message-circle",
+      "type": "uses"
+    },
+    {
+      "from": "share-panel",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "share-panel",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "share-panel",
+      "to": "icon-button",
+      "type": "uses"
+    },
+    {
+      "from": "share-panel",
+      "to": "icon-facebook",
+      "type": "uses"
+    },
+    {
+      "from": "share-panel",
+      "to": "icon-instagram",
+      "type": "uses"
+    },
+    {
+      "from": "share-panel",
+      "to": "icon-link",
+      "type": "uses"
+    },
+    {
+      "from": "share-panel",
+      "to": "icon-telegram",
+      "type": "uses"
+    },
+    {
+      "from": "share-panel",
+      "to": "icon-tiktok",
+      "type": "uses"
+    },
+    {
+      "from": "share-panel",
+      "to": "icon-whatsapp",
+      "type": "uses"
+    },
+    {
+      "from": "share-panel",
+      "to": "icon-x",
       "type": "uses"
     },
     {
@@ -348,6 +438,11 @@
       "type": "uses"
     },
     {
+      "from": "hero",
+      "to": "icon-pause",
+      "type": "uses"
+    },
+    {
       "from": "promo",
       "to": "button",
       "type": "uses"
@@ -469,22 +564,12 @@
     },
     {
       "from": "library",
-      "to": "badge",
-      "type": "uses"
-    },
-    {
-      "from": "library",
-      "to": "button",
-      "type": "uses"
-    },
-    {
-      "from": "library",
       "to": "chip",
       "type": "uses"
     },
     {
       "from": "library",
-      "to": "icon-arrow-right",
+      "to": "icon-arrow-left",
       "type": "uses"
     },
     {
@@ -494,22 +579,42 @@
     },
     {
       "from": "library",
-      "to": "link",
+      "to": "icon-close",
       "type": "uses"
     },
     {
       "from": "library",
-      "to": "product-card",
+      "to": "icon-search",
       "type": "uses"
     },
     {
       "from": "library",
-      "to": "product-filter",
+      "to": "icon-timer",
       "type": "uses"
     },
     {
       "from": "library",
-      "to": "tab",
+      "to": "library-head",
+      "type": "uses"
+    },
+    {
+      "from": "library",
+      "to": "pagination",
+      "type": "uses"
+    },
+    {
+      "from": "library",
+      "to": "pagination-item",
+      "type": "uses"
+    },
+    {
+      "from": "library",
+      "to": "recipe-card",
+      "type": "uses"
+    },
+    {
+      "from": "library",
+      "to": "search-field",
       "type": "uses"
     },
     {
@@ -528,18 +633,78 @@
       "type": "uses"
     },
     {
+      "from": "library-hero",
+      "to": "badge",
+      "type": "uses"
+    },
+    {
+      "from": "product-line",
+      "to": "badge",
+      "type": "uses"
+    },
+    {
+      "from": "product-line",
+      "to": "flavour-tile",
+      "type": "uses"
+    },
+    {
+      "from": "library-head",
+      "to": "chip",
+      "type": "uses"
+    },
+    {
+      "from": "library-head",
+      "to": "icon-check",
+      "type": "uses"
+    },
+    {
+      "from": "library-head",
+      "to": "icon-close",
+      "type": "uses"
+    },
+    {
+      "from": "library-head",
+      "to": "icon-search",
+      "type": "uses"
+    },
+    {
+      "from": "library-head",
+      "to": "search-field",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-submit",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-submit",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-submit",
+      "to": "icon-circle-alert",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-submit",
+      "to": "textarea",
+      "type": "uses"
+    },
+    {
       "from": "product-hero",
       "to": "badge",
       "type": "uses"
     },
     {
       "from": "product-hero",
-      "to": "button",
+      "to": "chip",
       "type": "uses"
     },
     {
       "from": "product-hero",
-      "to": "icon-arrow-right",
+      "to": "icon-arrow-left",
       "type": "uses"
     },
     {
@@ -554,7 +719,7 @@
     },
     {
       "from": "product-details",
-      "to": "badge",
+      "to": "allergen-card",
       "type": "uses"
     },
     {
@@ -579,12 +744,7 @@
     },
     {
       "from": "product-details",
-      "to": "nutrition-bar",
-      "type": "uses"
-    },
-    {
-      "from": "product-details",
-      "to": "nutrition-panel",
+      "to": "nutrition-ring",
       "type": "uses"
     },
     {
@@ -624,21 +784,46 @@
     },
     {
       "from": "recipe-hero",
+      "to": "icon-arrow-left",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-hero",
       "to": "icon-check",
       "type": "uses"
     },
     {
       "from": "recipe-hero",
-      "to": "icon-circle-check",
+      "to": "icon-send",
       "type": "uses"
     },
     {
-      "from": "recipe-hero",
-      "to": "icon-timer",
+      "from": "recipe-ingredients",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-ingredients",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-ingredients",
+      "to": "recipe-ingredient",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-ingredients",
+      "to": "recipe-macros",
+      "type": "uses"
+    },
+    {
+      "from": "recipe-steps",
+      "to": "step",
       "type": "uses"
     }
   ],
-  "lastSync": "2026-10-22T09:37:04Z",
+  "lastSync": "2026-10-22T14:07:02Z",
   "usedBy": {
     "decoration-noodle": [
       "decoration-noodle-texture",
@@ -653,7 +838,9 @@
       "contest-card",
       "ingredients",
       "timer",
+      "recipe-macros",
       "modal",
+      "share-panel",
       "navbar",
       "footer",
       "hero",
@@ -661,22 +848,25 @@
       "natural-formula",
       "recipes",
       "faq",
-      "library",
-      "product-hero",
+      "recipe-submit",
       "product-details",
-      "preparation"
+      "preparation",
+      "recipe-ingredients"
     ],
     "icon-close": [
       "icon-button",
       "search-field",
       "modal",
       "alert",
-      "mobile-menu"
+      "mobile-menu",
+      "library",
+      "library-head"
     ],
     "icon-circle-alert": [
       "input",
       "textarea",
-      "select"
+      "select",
+      "recipe-submit"
     ],
     "icon-chevron-down": [
       "select"
@@ -688,22 +878,41 @@
       "recipes",
       "library",
       "product-filter",
+      "library-head",
       "product-hero",
       "recipe-hero"
     ],
     "icon-search": [
-      "search-field"
+      "search-field",
+      "library",
+      "library-head"
+    ],
+    "anchor-nav-item": [
+      "anchor-nav"
+    ],
+    "icon-arrow-left": [
+      "pagination-item",
+      "pagination",
+      "hero",
+      "library",
+      "product-hero",
+      "recipe-hero"
+    ],
+    "pagination-item": [
+      "pagination",
+      "library"
     ],
     "badge": [
       "product-card",
       "contest-card",
       "category-card",
+      "flavour-tile",
       "nutrition-panel",
       "hero",
       "product-categories",
-      "library",
-      "product-hero",
-      "product-details"
+      "library-hero",
+      "product-line",
+      "product-hero"
     ],
     "link": [
       "product-card",
@@ -712,7 +921,6 @@
       "footer",
       "promo",
       "faq",
-      "library",
       "product-hero",
       "product-details"
     ],
@@ -721,26 +929,30 @@
       "recipes",
       "library",
       "product-filter",
+      "library-head",
+      "product-hero",
       "recipe-hero"
     ],
     "icon-timer": [
       "recipe-card",
       "recipes",
-      "recipe-hero"
+      "library"
     ],
     "button": [
       "contest-card",
       "timer",
+      "recipe-macros",
       "modal",
+      "share-panel",
       "navbar",
       "footer",
       "hero",
       "promo",
       "natural-formula",
       "recipes",
-      "library",
-      "product-hero",
-      "preparation"
+      "recipe-submit",
+      "preparation",
+      "recipe-ingredients"
     ],
     "icon-plus": [
       "accordion-item",
@@ -751,8 +963,7 @@
       "product-details"
     ],
     "nutrition-bar": [
-      "nutrition-panel",
-      "product-details"
+      "nutrition-panel"
     ],
     "icon-play": [
       "timer",
@@ -760,8 +971,12 @@
       "promo",
       "preparation"
     ],
+    "allergen-table-cell": [
+      "allergen-table"
+    ],
     "icon-button": [
       "modal",
+      "share-panel",
       "navbar",
       "mobile-menu",
       "hero"
@@ -779,6 +994,30 @@
     "icon-message-circle": [
       "suggestion-bubble"
     ],
+    "icon-facebook": [
+      "share-panel"
+    ],
+    "icon-instagram": [
+      "share-panel",
+      "mobile-menu"
+    ],
+    "icon-link": [
+      "share-panel"
+    ],
+    "icon-telegram": [
+      "share-panel"
+    ],
+    "icon-tiktok": [
+      "share-panel",
+      "mobile-menu"
+    ],
+    "icon-whatsapp": [
+      "share-panel"
+    ],
+    "icon-x": [
+      "share-panel",
+      "mobile-menu"
+    ],
     "icon-menu": [
       "navbar"
     ],
@@ -791,22 +1030,13 @@
       "mobile-menu",
       "footer"
     ],
-    "icon-instagram": [
-      "mobile-menu"
-    ],
-    "icon-tiktok": [
-      "mobile-menu"
-    ],
-    "icon-x": [
-      "mobile-menu"
-    ],
     "icon-youtube": [
       "mobile-menu"
     ],
     "nav-item": [
       "mobile-menu"
     ],
-    "icon-arrow-left": [
+    "icon-pause": [
       "hero"
     ],
     "decoration-noodle-texture": [
@@ -821,7 +1051,8 @@
       "product-categories"
     ],
     "recipe-card": [
-      "recipes"
+      "recipes",
+      "library"
     ],
     "accordion-item": [
       "faq"
@@ -829,30 +1060,49 @@
     "icon-minus": [
       "faq"
     ],
-    "product-card": [
+    "library-head": [
       "library"
     ],
-    "product-filter": [
+    "pagination": [
       "library"
+    ],
+    "search-field": [
+      "library",
+      "library-head"
     ],
     "tab": [
-      "library",
       "product-filter"
+    ],
+    "flavour-tile": [
+      "product-line"
+    ],
+    "textarea": [
+      "recipe-submit"
+    ],
+    "allergen-card": [
+      "product-details"
     ],
     "ingredients": [
       "product-details"
     ],
-    "nutrition-panel": [
+    "nutrition-ring": [
       "product-details"
     ],
     "step": [
-      "preparation"
+      "preparation",
+      "recipe-steps"
     ],
     "timer": [
       "preparation"
     ],
-    "icon-circle-check": [
+    "icon-send": [
       "recipe-hero"
+    ],
+    "recipe-ingredient": [
+      "recipe-ingredients"
+    ],
+    "recipe-macros": [
+      "recipe-ingredients"
     ]
   }
 }

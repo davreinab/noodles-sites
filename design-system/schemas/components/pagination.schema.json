@@ -1,0 +1,264 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:pagination",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Pagination",
+    "slug": "pagination",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Pagination: paginador de la Recipe library que sustituye al botón «Ver más». Previous (deshabilitado en la página 1) · 1 2 3 … 12 13 · Next; página actual en Current (aria-current=page). Breakpoint Mobile: Previous/Next como flechas y «Page 1 of 13». Uso: Library (Recipe library, wireframe 171:3808 y móvil 486:13025). Clase CSS: .pagination (ítems .pagination__item). Nota: en Mobile las flechas son texto (←/→) y no iconos; los iconos chevron/arrow existentes no se han anidado.",
+    "figmaPage": "Navigation",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "6466cc9c6999",
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "figmaVersion": null,
+      "variantsChecked": [],
+      "by": "agent (Claude)"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "button/primary/bg",
+      "button/primary/text",
+      "color/border/default",
+      "color/border/subtle",
+      "color/text/default",
+      "color/text/disabled",
+      "font/family/display",
+      "font/line-height/desktop/label",
+      "font/size/desktop/label",
+      "font/style/display",
+      "icon/color/default",
+      "icon/size/md",
+      "radius/md",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "icon",
+      "icon-arrow-left",
+      "icon-arrow-right",
+      "pagination",
+      "pagination__ellipsis",
+      "pagination__link",
+      "pagination__list",
+      "pagination__page",
+      "pagination__status",
+      "pagination__text"
+    ],
+    "example": "<nav data-ds=\"pagination\" class=\"pagination\" aria-label=\"Pagination\">\n<ul class=\"pagination__list\">\n<li><button class=\"pagination__link\" type=\"button\" disabled aria-label=\"Previous page\"><span class=\"icon icon-arrow-left\" aria-hidden=\"true\"></span><span class=\"pagination__text\">Previous</span></button></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=1\" aria-current=\"page\">1</a></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=2\">2</a></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=3\">3</a></li>\n<li><span class=\"pagination__ellipsis\" aria-hidden=\"true\">…</span></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=12\">12</a></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=13\">13</a></li>\n<li><a class=\"pagination__link\" href=\"?page=2\" aria-label=\"Next page\"><span class=\"pagination__text\">Next</span><span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a></li>\n</ul>\n<p class=\"pagination__status\">Page 1 of 13</p>\n</nav>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "219:1662",
+    "componentKey": "96ece7d1e0b1c79bf1b80698ffddf3cecb31b8aa",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Pagination item",
+        "component": "State=Disabled",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Pagination item",
+        "component": "State=Current",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Pagination item",
+        "component": "State=Default",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Pagination item",
+        "component": "State=Default",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Pagination item",
+        "component": "State=Default",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Pagination item",
+        "component": "State=Default",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Pagination item",
+        "component": "State=Default",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/8",
+      "paddingLeft: space/8",
+      "paddingRight: space/8",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokes: color/border/subtle",
+      "color: color/border/subtle",
+      "fills: color/text/disabled",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label",
+      "color: color/text/disabled",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: icon/color/default",
+      "color: icon/color/default",
+      "fills: button/primary/bg",
+      "strokes: color/border/default",
+      "color: button/primary/bg",
+      "color: color/border/default",
+      "fills: button/primary/text",
+      "color: button/primary/text",
+      "fills: color/text/default",
+      "color: color/text/default"
+    ],
+    "textStyles": [
+      "Desktop/label"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/pagination.md",
+    "section": "Pagination"
+  },
+  "relations": {
+    "uses": [
+      "icon-arrow-left",
+      "pagination-item"
+    ],
+    "related": []
+  }
+}

@@ -1,0 +1,24 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="recipe-ingredients" class="section recipe-ingredients" aria-labelledby="ri-title">
+<div class="section__header">
+<h2 class="section__title" id="ri-title">Ingredients</h2>
+<p class="section__lead">Everything you need to make this recipe for 4 people.</p>
+</div>
+<div class="recipe-ingredients__body">
+<ul class="recipe-ingredients__list">
+<li class="recipe-ingredient"><div class="recipe-ingredient__info"><p class="recipe-ingredient__amount">150 g</p><p class="recipe-ingredient__name">Chicken breast</p></div></li>
+<li class="recipe-ingredient recipe-ingredient--brand"><div class="recipe-ingredient__info"><p class="recipe-ingredient__amount">200 g</p><p class="recipe-ingredient__name"><a class="recipe-ingredient__link" href="/productos/cup-oriental">Cup Oriental</a></p></div><img class="recipe-ingredient__thumb" src="/assets/ds/images/placeholder.svg" alt=""></li>
+</ul>
+<section class="recipe-macros" aria-labelledby="ri-macros">
+<h3 class="recipe-macros__title" id="ri-macros">Recipe macros</h3>
+<p class="recipe-macros__head">Per serving</p>
+<ul class="recipe-macros__list">
+<li class="recipe-macros__row"><span class="recipe-macros__name">Protein</span><span class="recipe-macros__value">8.3 g</span></li>
+<li class="recipe-macros__row"><span class="recipe-macros__name">Carbohydrates</span><span class="recipe-macros__value">52 g</span></li>
+<li class="recipe-macros__row"><span class="recipe-macros__name">Fat</span><span class="recipe-macros__value">10 g</span></li>
+</ul>
+<button class="button button--secondary recipe-macros__action" type="button" aria-haspopup="dialog">See allergen table</button>
+</section>
+</div>
+</section>{% endraw %}
+{% endmacro %}

@@ -1,0 +1,168 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:nutrition-ring",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Nutrition ring",
+    "slug": "nutrition-ring",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Anillo de nutriente de la ficha de producto: porcentaje de la ingesta de referencia (IR) en el centro (display), nombre del nutriente debajo (body) y valor (p. ej. 380 kcal). Pista = nutrition/track; relleno = nutrition/fill. Variant=Highlight usa nutrition/fill-highlight para un nutriente con claim (p. ej. sal reducida). Breakpoint: Desktop 148 px y Mobile 120 px (en mobile, carrusel horizontal con scroll-snap). Se usa en el módulo Nutrition de la ficha de producto (wireframe UX 396:6073). Clase CSS: .nutrition-ring. Accesible como role=img con aria-label, p. ej. «Energy 380 kcal, 19 % of the reference intake»; el anillo es decorativo y el dato accesible es el texto.",
+    "figmaPage": "Content",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 4,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "e234173409a1"
+  },
+  "api": {
+    "props": [
+      {
+        "name": "percent",
+        "type": "string",
+        "default": "19 %",
+        "figma": "Percent#193:3"
+      },
+      {
+        "name": "nutrient",
+        "type": "string",
+        "default": "Energy",
+        "figma": "Nutrient#193:8"
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "default": "380 kcal",
+        "figma": "Value#193:13"
+      },
+      {
+        "name": "variant",
+        "type": "enum",
+        "values": [
+          "Default",
+          "Highlight"
+        ],
+        "default": "Default",
+        "figma": "Variant"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/h3",
+      "font/size/desktop/body-s",
+      "font/size/desktop/h3",
+      "font/style/body",
+      "font/style/display",
+      "nutrition/fill",
+      "nutrition/label",
+      "nutrition/track",
+      "nutrition/value",
+      "space/16",
+      "space/4"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "nutrition-ring",
+      "nutrition-ring--highlight",
+      "nutrition-ring__amount",
+      "nutrition-ring__dial",
+      "nutrition-ring__fill",
+      "nutrition-ring__name",
+      "nutrition-ring__svg",
+      "nutrition-ring__track",
+      "nutrition-ring__value"
+    ],
+    "example": "<li data-ds=\"nutrition-ring\" class=\"nutrition-ring\">\n<div class=\"nutrition-ring__dial\">\n<svg class=\"nutrition-ring__svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Energy 380 kcal, 19 % of the reference intake\"><circle class=\"nutrition-ring__track\" cx=\"50\" cy=\"50\" r=\"40\" pathLength=\"100\"/><circle class=\"nutrition-ring__fill\" cx=\"50\" cy=\"50\" r=\"40\" pathLength=\"100\" stroke-dasharray=\"19 100\"/></svg>\n<span class=\"nutrition-ring__value\" aria-hidden=\"true\">19 %</span>\n</div>\n<span class=\"nutrition-ring__name\" aria-hidden=\"true\">Energy</span>\n<span class=\"nutrition-ring__amount\" aria-hidden=\"true\">380 kcal</span>\n</li>\n<li data-ds=\"nutrition-ring\" class=\"nutrition-ring nutrition-ring--highlight\">\n<div class=\"nutrition-ring__dial\">\n<svg class=\"nutrition-ring__svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Salt 2.3 g, 38 % of the reference intake\"><circle class=\"nutrition-ring__track\" cx=\"50\" cy=\"50\" r=\"40\" pathLength=\"100\"/><circle class=\"nutrition-ring__fill\" cx=\"50\" cy=\"50\" r=\"40\" pathLength=\"100\" stroke-dasharray=\"38 100\"/></svg>\n<span class=\"nutrition-ring__value\" aria-hidden=\"true\">38 %</span>\n</div>\n<span class=\"nutrition-ring__name\" aria-hidden=\"true\">Salt</span>\n<span class=\"nutrition-ring__amount\" aria-hidden=\"true\">2.3 g</span>\n</li>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "193:209",
+    "componentKey": "bb0a37deeebbad33a8bf87af9d99886abe535397",
+    "propertyNames": {
+      "percent": "Percent#193:3",
+      "nutrient": "Nutrient#193:8",
+      "value": "Value#193:13",
+      "variant": "Variant",
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Variant": [
+        "Default",
+        "Highlight"
+      ],
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [
+      "itemSpacing: space/16",
+      "fills: nutrition/track",
+      "color: nutrition/track",
+      "fills: nutrition/fill",
+      "color: nutrition/fill",
+      "fills: nutrition/value",
+      "fontSize: font/size/desktop/h3",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: nutrition/value",
+      "itemSpacing: space/4",
+      "fills: nutrition/label",
+      "fontSize: font/size/desktop/body-s",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-s",
+      "color: nutrition/label"
+    ],
+    "textStyles": [
+      "Desktop/h3",
+      "Desktop/body-s"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/nutrition-ring.md",
+    "section": "Nutrition ring"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

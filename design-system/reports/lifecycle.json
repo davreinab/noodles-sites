@@ -10,91 +10,103 @@
     "note": "El plazo corre desde 'since'. Antes de 'blockNewUsageFromDay' el uso existente solo avisa; a partir de ahí, un uso nuevo es error."
   },
   "summary": {
-    "deprecations": 0,
+    "deprecations": 2,
     "errors": 0,
-    "warnings": 0,
-    "stillUsed": 0
+    "warnings": 2,
+    "stillUsed": 2
   },
   "errors": [],
-  "warnings": [],
-  "usage": {},
+  "warnings": [
+    "suggestion-bubble: 246 usos todavía en el código (sustituto: footer) → UI/home.html (1), UI/home.html (21), design-system/showcase/index.html (2), design-system/showcase/index.html (4)",
+    "product-filter: 321 usos todavía en el código (sustituto: anchor-nav) → UI/home.html (4), UI/home.html (5), UI/home.html (21), design-system/showcase/index.html (4)"
+  ],
+  "usage": {
+    "suggestion-bubble": [
+      {
+        "file": "UI/home.html",
+        "hits": 21
+      },
+      {
+        "file": "design-system/showcase/index.html",
+        "hits": 200
+      },
+      {
+        "file": "UI/home.html",
+        "hits": 1
+      },
+      {
+        "file": "design-system/showcase/index.html",
+        "hits": 12
+      },
+      {
+        "file": "design-system/showcase/index.html",
+        "hits": 6
+      },
+      {
+        "file": "design-system/showcase/index.html",
+        "hits": 4
+      },
+      {
+        "file": "design-system/showcase/index.html",
+        "hits": 2
+      }
+    ],
+    "product-filter": [
+      {
+        "file": "UI/home.html",
+        "hits": 5
+      },
+      {
+        "file": "design-system/showcase/index.html",
+        "hits": 47
+      },
+      {
+        "file": "UI/home.html",
+        "hits": 21
+      },
+      {
+        "file": "design-system/showcase/index.html",
+        "hits": 200
+      },
+      {
+        "file": "design-system/showcase/index.html",
+        "hits": 10
+      },
+      {
+        "file": "design-system/showcase/index.html",
+        "hits": 4
+      },
+      {
+        "file": "design-system/showcase/index.html",
+        "hits": 4
+      },
+      {
+        "file": "design-system/showcase/index.html",
+        "hits": 4
+      },
+      {
+        "file": "design-system/showcase/index.html",
+        "hits": 4
+      },
+      {
+        "file": "UI/home.html",
+        "hits": 4
+      },
+      {
+        "file": "design-system/showcase/index.html",
+        "hits": 18
+      }
+    ]
+  },
   "contractsStamped": [
-    "accordion-item",
-    "alert",
-    "badge",
-    "banner",
-    "button",
-    "category-card",
-    "checkbox",
-    "chip",
-    "contest-card",
-    "decoration-noodle-texture",
-    "decoration-noodle",
-    "faq",
-    "footer",
-    "hero",
-    "icon-arrow-left",
-    "icon-arrow-right",
-    "icon-button",
-    "icon-check",
-    "icon-chevron-down",
-    "icon-circle-alert",
-    "icon-circle-check",
-    "icon-close",
-    "icon-external-link",
-    "icon-info",
-    "icon-instagram",
-    "icon-menu",
-    "icon-message-circle",
-    "icon-minus",
-    "icon-pause",
-    "icon-play",
-    "icon-plus",
-    "icon-rotate-ccw",
-    "icon-search",
-    "icon-tiktok",
-    "icon-timer",
-    "icon-triangle-alert",
-    "icon-x",
-    "icon-youtube",
-    "ingredient-item",
-    "ingredients",
-    "input",
-    "lang-switch",
-    "library",
-    "link",
-    "logo-aiki",
-    "logo-daisuki",
-    "logo-gb-foods",
-    "logo-saikebon",
-    "logo-yatekomo",
-    "marquee",
-    "mobile-menu",
-    "modal-slot",
-    "modal",
-    "natural-formula",
-    "nav-item",
-    "navbar",
-    "nutrition-bar",
-    "nutrition-panel",
-    "preparation",
-    "product-card",
-    "product-categories",
-    "product-details",
-    "product-filter",
-    "product-hero",
-    "promo",
-    "recipe-card",
-    "recipe-hero",
-    "recipes",
-    "search-field",
-    "select",
-    "step",
-    "suggestion-bubble",
-    "tab",
-    "textarea",
-    "timer",
-    "video-player",
-    "where-to-buy"
+    "allergen-table-cell",
+    "anchor-nav-item",
+    "icon-facebook",
+    "icon-link",
+    "icon-send",
+    "icon-telegram",
+    "icon-trash",
+    "icon-whatsapp",
+    "pagination-item"
   ]
 }

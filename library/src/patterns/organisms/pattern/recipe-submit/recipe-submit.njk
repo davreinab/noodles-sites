@@ -1,0 +1,18 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="recipe-submit" class="section recipe-submit" aria-labelledby="rs-title">
+<div class="recipe-submit__inner">
+<div class="recipe-submit__intro">
+<h2 class="recipe-submit__title" id="rs-title">Do you have your own recipes with Yatekomo?</h2>
+<p class="recipe-submit__lead">Share them with us so more people can enjoy your creations.</p>
+</div>
+<form class="recipe-submit__form" action="/recipes/submit" method="post">
+<div class="field">
+<label class="field__label" for="rs-recipe">Tell us your recipe</label>
+<textarea class="field__control field__control--textarea" id="rs-recipe" name="recipe" aria-describedby="rs-help"></textarea>
+<p class="field__helper" id="rs-help">List the ingredients with their quantities and the time of each step</p>
+</div>
+<button class="button" type="submit">Send my recipe</button>
+</form>
+</div>
+</section>{% endraw %}
+{% endmacro %}

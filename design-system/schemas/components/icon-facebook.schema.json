@@ -1,0 +1,72 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:icon-facebook",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Icon / facebook",
+    "slug": "icon-facebook",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Logo de Facebook (Simple Icons, CC0), relleno, 24×24. Uso: botón «Share on Facebook» del Share panel (wireframe 396:6290).",
+    "figmaPage": "Iconography",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": false,
+    "anatomyHash": "2089b747616d",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
+  },
+  "api": {
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "icon/color/default"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [],
+    "example": null,
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "208:69",
+    "componentKey": "27ca19cc39def06f6ec2f072794fb32db1ac8e8c",
+    "propertyNames": {},
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
+      "fills: icon/color/default",
+      "color: icon/color/default"
+    ],
+    "textStyles": []
+  },
+  "docs": {
+    "file": "design-system/docs/components/icon-facebook.md",
+    "section": "Icon / facebook"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

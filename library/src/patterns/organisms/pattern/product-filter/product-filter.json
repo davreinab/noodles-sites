@@ -1,7 +1,7 @@
 {
   "title": "Product filter",
-  "description": "Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; sol…",
-  "status": "Ready",
+  "description": "RETIRADO (2026-10-22): el catálogo es una sola página con anclas (Anchor nav), no un filtro (wireframe UX 396:5932). Patrón: filtro de la Product library en 3 niveles. Tipo (Tab:…",
+  "status": "Deprecated",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -17,7 +17,7 @@
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "nodeId": "55:253",
       "current": {
-        "description": "Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias.",
+        "description": "RETIRADO (2026-10-22): el catálogo es una sola página con anclas (Anchor nav), no un filtro (wireframe UX 396:5932). Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias.",
         "Propósito": "Filtro de la Product library en tres niveles: tipo (Tab), línea (Chip) y sabor (Chip). Cada nivel depende del anterior y solo muestra opciones con productos.",
         "Accesibilidad (rol, nombre, estados y teclado)": "Etiquetas de nivel en gris cálido sobre crema 5,4:1; Tab y Chip con sus pares (seleccionado crema sobre tinta 17,2:1). Cada nivel es un grupo con nombre (`tablist` para el tipo; `fieldset`/`legend` con chips `aria-pressed` para línea y sabor). Al cambiar un nivel se anuncia el número de productos (aria-live) y el foco no se pierde. En móvil cada fila se desplaza en horizontal y sigue siendo operable con teclado.",
         "Cuándo usar / qué NO hace": "Solo en la Product library. No muestra filtros que den cero resultados ni sustituye a la búsqueda."
@@ -31,12 +31,12 @@
       "page": "Pattern / Libraries",
       "type": "COMPONENT_SET",
       "variants": 2,
-      "lastSync": "2026-10-22 · 09:38 UTC",
+      "lastSync": "2026-10-22 · 14:07 UTC",
       "verification": "verified",
       "verificationLabel": "Verificado"
     },
     "description": [
-      "Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias."
+      "RETIRADO (2026-10-22): el catálogo es una sola página con anclas (Anchor nav), no un filtro (wireframe UX 396:5932). Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias."
     ],
     "props": [
       {

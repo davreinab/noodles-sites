@@ -7,8 +7,8 @@
     "slug": "library",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T09:38:13Z",
-    "description": "Librería (Product library; también Recipe y Contest library cambiando la card y el filtro): cabecera de página (h1 + entradilla) · Product filter a sangre (tipo → línea → sabor; sin filtros que den resultados vacíos) · rejilla de cards (Desktop 4 columnas de 310 px con gutter layout/gutter y space/48 entre filas; Mobile 1 columna) · Button Secondary «Ver más» (carga más, no pagina; el foco va a la primera card nueva y se anuncia el número cargado). Recipe library: Recipe card en 3 columnas sin buscador por ingredientes. Contest library: Contest card en 2-3 columnas; la página agregadora es opcional. Al filtrar se anuncia «N productos» (aria-live). Sin variables propias.",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Library (Recipe library): cabecera Library head (título «Recipes», subtítulo, Search field, chips de filtro y estado Filtered con «48 results for your search» y «Clear filters»), rejilla de Recipe card (Desktop 4 columnas de 310 px con gutter 24 y space/48 entre filas; Mobile 1 columna) y Pagination (Previous · 1 2 3 … 12 13 · Next) en lugar del botón «Ver más». Solo recetas: la Product library usa Library hero y Product line (Pattern / Libraries). Sin variables propias.",
     "figmaPage": "Pattern / Libraries",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
@@ -20,16 +20,18 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "e641caa78440",
+    "anatomyHash": "e028ca5ac7c3",
     "verification": {
-      "status": "verified",
+      "status": "stale",
       "date": "2026-10-22",
       "figmaVersion": "e641caa78440",
       "variantsChecked": [
         "Breakpoint=Desktop",
         "Breakpoint=Mobile"
       ],
-      "by": "agent (Claude Haiku, revisado)"
+      "by": "agent (Claude Haiku, revisado)",
+      "staleSince": "2026-10-22T14:07:02Z",
+      "reason": "la anatomía, las variantes, los tokens ligados o la key del maestro cambiaron desde la verificación"
     }
   },
   "api": {
@@ -57,88 +59,95 @@
       "unexposedIconLayers": []
     },
     "tokens": [
-      "badge/new/bg",
-      "badge/new/text",
-      "border/width/thick",
       "border/width/thin",
-      "button/secondary/border",
-      "button/secondary/text",
+      "button/primary/bg",
+      "button/primary/text",
       "chip/bg",
       "chip/bg-selected",
       "chip/border",
+      "chip/height/m",
       "chip/height/s",
       "chip/text",
       "chip/text-selected",
+      "color/border/default",
+      "color/border/subtle",
       "color/effect/shadow-ink",
       "color/surface/page",
       "color/text/default",
+      "color/text/disabled",
       "color/text/secondary",
+      "field/bg",
+      "field/border",
+      "field/icon",
+      "field/placeholder",
       "font/family/body",
       "font/family/display",
       "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
       "font/line-height/desktop/body-s",
       "font/line-height/desktop/caption",
       "font/line-height/desktop/h1",
       "font/line-height/desktop/h3",
       "font/line-height/desktop/label",
-      "font/line-height/mobile/label",
       "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
       "font/size/desktop/body-s",
       "font/size/desktop/caption",
       "font/size/desktop/h1",
       "font/size/desktop/h3",
       "font/size/desktop/label",
-      "font/size/mobile/label",
       "font/style/body",
       "font/style/display",
+      "icon/color/default",
+      "icon/size/md",
       "icon/size/sm",
       "layout/frame",
       "layout/gutter",
       "layout/margin",
       "layout/section-y",
-      "link/default",
-      "product-card/bg",
-      "product-card/border",
-      "product-card/media-bg",
-      "product-card/meta",
-      "product-card/title",
       "radius/md",
       "radius/none",
       "radius/pill",
+      "recipe-card/bg",
+      "recipe-card/border",
+      "recipe-card/media-bg",
+      "recipe-card/meta",
+      "recipe-card/title",
       "space/16",
       "space/24",
       "space/32",
-      "space/4",
       "space/48",
-      "space/8",
-      "tab/bg",
-      "tab/bg-selected",
-      "tab/border",
-      "tab/text",
-      "tab/text-selected"
+      "space/64",
+      "space/8"
     ]
   },
   "code": {
     "path": "design-system/css/components.css",
     "classes": [
-      "button",
-      "button--secondary",
+      "chip",
+      "icon",
+      "icon-arrow-left",
+      "icon-arrow-right",
+      "icon-timer",
       "library",
       "library__grid",
-      "library__header",
       "library__more",
-      "page-title",
-      "product-card",
-      "product-card__body",
-      "product-card__name",
-      "product-filter",
-      "product-filter__group",
-      "product-filter__label",
-      "product-filter__options",
-      "section__lead",
-      "tab"
+      "pagination",
+      "pagination__ellipsis",
+      "pagination__link",
+      "pagination__list",
+      "pagination__page",
+      "pagination__status",
+      "pagination__text",
+      "recipe-card",
+      "recipe-card__body",
+      "recipe-card__link",
+      "recipe-card__media",
+      "recipe-card__meta",
+      "recipe-card__products",
+      "recipe-card__title"
     ],
-    "example": "<section data-ds=\"library\" class=\"library\" aria-labelledby=\"lib-title\">\n<div class=\"library__header\"><h1 class=\"page-title\" id=\"lib-title\">Productos</h1><p class=\"section__lead\">Introducción de la librería.</p></div>\n<div class=\"product-filter\"><div class=\"product-filter__group\"><span class=\"product-filter__label\">Tipo</span><div class=\"product-filter__options\" role=\"tablist\"><button class=\"tab\" role=\"tab\" aria-selected=\"true\">Cups</button></div></div></div>\n<ul class=\"library__grid\"><li><a class=\"product-card\" href=\"/productos/yatekomo-pollo\"><div class=\"product-card__body\"><h3 class=\"product-card__name\">Yatekomo Pollo</h3></div></a></li></ul>\n<div class=\"library__more\"><button class=\"button button--secondary\" type=\"button\">Ver más productos</button></div>\n</section>",
+    "example": "<section data-ds=\"library\" class=\"library\" aria-label=\"Recipes\">\n<ul class=\"library__grid\">\n<li><article class=\"recipe-card\">\n<div class=\"recipe-card__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"recipe-card__body\">\n<p class=\"recipe-card__meta\"><span class=\"icon icon-timer\" aria-hidden=\"true\"></span>2 people · 20 minutes</p>\n<h3 class=\"recipe-card__title\"><a class=\"recipe-card__link\" href=\"/recetas/spicy-noodle-salad\">Spicy Noodle Salad with almond and mint</a></h3>\n<ul class=\"recipe-card__products\" aria-label=\"Products used in this recipe\"><li><a class=\"chip\" href=\"/productos/cup-oriental\">Cup Oriental</a></li></ul>\n</div>\n</article></li>\n</ul>\n<div class=\"library__more\"><nav class=\"pagination\" aria-label=\"Pagination\">\n<ul class=\"pagination__list\">\n<li><button class=\"pagination__link\" type=\"button\" disabled aria-label=\"Previous page\"><span class=\"icon icon-arrow-left\" aria-hidden=\"true\"></span><span class=\"pagination__text\">Previous</span></button></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=1\" aria-current=\"page\">1</a></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=2\">2</a></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=3\">3</a></li>\n<li><span class=\"pagination__ellipsis\" aria-hidden=\"true\">…</span></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=13\">13</a></li>\n<li><a class=\"pagination__link\" href=\"?page=2\" aria-label=\"Next page\"><span class=\"pagination__text\">Next</span><span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a></li>\n</ul>\n<p class=\"pagination__status\">Page 1 of 13</p>\n</nav></div>\n</section>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,
@@ -159,32 +168,40 @@
     },
     "nestedInstances": [
       {
-        "layer": "filter",
-        "component": "Breakpoint=Desktop",
-        "componentSlug": "product-filter",
+        "layer": "Library head",
+        "component": "State=Default, Breakpoint=Desktop",
+        "componentSlug": "library-head",
         "exposedAs": null,
         "toggledBy": null,
         "visibleByDefault": true
       },
       {
-        "layer": "tab",
-        "component": "State=Selected",
-        "componentSlug": "tab",
-        "exposedAs": null,
-        "toggledBy": null,
-        "visibleByDefault": true
-      },
-      {
-        "layer": "tab",
+        "layer": "Search field",
         "component": "State=Default",
-        "componentSlug": "tab",
+        "componentSlug": "search-field",
         "exposedAs": null,
         "toggledBy": null,
         "visibleByDefault": true
       },
       {
-        "layer": "chip",
-        "component": "Size=S, State=Selected",
+        "layer": "icon-search",
+        "component": "Icon / search",
+        "componentSlug": "icon-search",
+        "exposedAs": "Icon leading#51:0",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-clear",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": "Clear icon#51:5",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Selected",
         "componentSlug": "chip",
         "exposedAs": null,
         "toggledBy": null,
@@ -199,7 +216,135 @@
         "visibleByDefault": true
       },
       {
-        "layer": "chip",
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "product-card",
+        "component": "State=Default",
+        "componentSlug": "recipe-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-time",
+        "component": "Icon / timer",
+        "componentSlug": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
         "component": "Size=S, State=Default",
         "componentSlug": "chip",
         "exposedAs": null,
@@ -217,65 +362,457 @@
       {
         "layer": "product-card",
         "component": "State=Default",
-        "componentSlug": "product-card",
+        "componentSlug": "recipe-card",
         "exposedAs": null,
         "toggledBy": null,
         "visibleByDefault": true
       },
       {
-        "layer": "badge",
-        "component": "Type=New",
-        "componentSlug": "badge",
-        "exposedAs": null,
-        "toggledBy": "Badge#66:8",
-        "visibleByDefault": true
-      },
-      {
-        "layer": "link",
-        "component": "Type=Standalone, Surface=Light, State=Default",
-        "componentSlug": "link",
-        "exposedAs": null,
+        "layer": "icon-time",
+        "component": "Icon / timer",
+        "componentSlug": "icon-timer",
+        "exposedAs": "Time icon#67:8",
         "toggledBy": null,
         "visibleByDefault": true
       },
       {
-        "layer": "icon-trailing",
-        "component": "Icon / arrow-right",
-        "componentSlug": "icon-arrow-right",
-        "exposedAs": "Icon#35:0",
-        "toggledBy": null,
-        "visibleByDefault": true
-      },
-      {
-        "layer": "badge",
-        "component": "Type=New",
-        "componentSlug": "badge",
-        "exposedAs": null,
-        "toggledBy": "Badge#66:8",
-        "visibleByDefault": false
-      },
-      {
-        "layer": "load-more",
-        "component": "Hierarchy=Secondary, Size=M, State=Default",
-        "componentSlug": "button",
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
         "exposedAs": null,
         "toggledBy": null,
         "visibleByDefault": true
       },
       {
         "layer": "icon-leading",
-        "component": "Icon / arrow-right",
-        "componentSlug": "icon-arrow-right",
-        "exposedAs": "Icon leading swap#33:75",
-        "toggledBy": "Icon leading#33:25",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
         "visibleByDefault": false
       },
       {
-        "layer": "icon-trailing",
-        "component": "Icon / arrow-right",
-        "componentSlug": "icon-arrow-right",
-        "exposedAs": "Icon trailing swap#33:100",
-        "toggledBy": "Icon trailing#33:50",
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "product-card",
+        "component": "State=Default",
+        "componentSlug": "recipe-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-time",
+        "component": "Icon / timer",
+        "componentSlug": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "product-card",
+        "component": "State=Default",
+        "componentSlug": "recipe-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-time",
+        "component": "Icon / timer",
+        "componentSlug": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "product-card",
+        "component": "State=Default",
+        "componentSlug": "recipe-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-time",
+        "component": "Icon / timer",
+        "componentSlug": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "product-card",
+        "component": "State=Default",
+        "componentSlug": "recipe-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-time",
+        "component": "Icon / timer",
+        "componentSlug": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "product-card",
+        "component": "State=Default",
+        "componentSlug": "recipe-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-time",
+        "component": "Icon / timer",
+        "componentSlug": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "product-card",
+        "component": "State=Default",
+        "componentSlug": "recipe-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-time",
+        "component": "Icon / timer",
+        "componentSlug": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Pagination",
+        "component": "Breakpoint=Desktop",
+        "componentSlug": "pagination",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Pagination item",
+        "component": "State=Disabled",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Pagination item",
+        "component": "State=Current",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Pagination item",
+        "component": "State=Default",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Pagination item",
+        "component": "State=Default",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Pagination item",
+        "component": "State=Default",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Pagination item",
+        "component": "State=Default",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Pagination item",
+        "component": "State=Default",
+        "componentSlug": "pagination-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
         "visibleByDefault": false
       }
     ],
@@ -286,9 +823,11 @@
       "width: layout/frame",
       "fills: color/surface/page",
       "color: color/surface/page",
-      "itemSpacing: space/16",
-      "paddingLeft: layout/margin",
-      "paddingRight: layout/margin",
+      "itemSpacing: space/24",
+      "paddingLeft: space/64",
+      "paddingTop: space/48",
+      "paddingRight: space/64",
+      "paddingBottom: space/48",
       "fills: color/text/default",
       "fontSize: font/size/desktop/h1",
       "fontStyle: font/style/display",
@@ -301,16 +840,10 @@
       "fontFamily: font/family/body",
       "lineHeight: font/line-height/desktop/body-l",
       "color: color/text/secondary",
-      "itemSpacing: space/24",
-      "paddingTop: space/24",
-      "paddingBottom: space/24",
       "itemSpacing: space/8",
-      "fontSize: font/size/desktop/caption",
-      "lineHeight: font/line-height/desktop/caption",
-      "counterAxisSpacing: space/8",
-      "paddingLeft: space/24",
+      "paddingLeft: space/16",
       "paddingTop: space/16",
-      "paddingRight: space/24",
+      "paddingRight: space/16",
       "paddingBottom: space/16",
       "topLeftRadius: radius/pill",
       "topRightRadius: radius/pill",
@@ -320,23 +853,21 @@
       "strokeBottomWeight: border/width/thin",
       "strokeLeftWeight: border/width/thin",
       "strokeRightWeight: border/width/thin",
-      "fills: tab/bg-selected",
-      "strokes: tab/border",
-      "color: tab/bg-selected",
-      "color: tab/border",
-      "fills: tab/text-selected",
-      "fontSize: font/size/desktop/label",
-      "lineHeight: font/line-height/desktop/label",
-      "color: tab/text-selected",
-      "fills: tab/bg",
-      "color: tab/bg",
-      "fills: tab/text",
-      "color: tab/text",
-      "paddingLeft: space/16",
+      "fills: field/bg",
+      "strokes: field/border",
+      "color: field/bg",
+      "color: field/border",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: field/icon",
+      "color: field/icon",
+      "fills: field/placeholder",
+      "fontSize: font/size/desktop/body-m",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: field/placeholder",
       "paddingTop: space/8",
-      "paddingRight: space/16",
       "paddingBottom: space/8",
-      "minHeight: chip/height/s",
+      "minHeight: chip/height/m",
       "fills: chip/bg-selected",
       "strokes: chip/border",
       "color: chip/bg-selected",
@@ -354,59 +885,64 @@
       "color: chip/text",
       "fills: chip/text",
       "itemSpacing: layout/gutter",
-      "counterAxisSpacing: space/48",
+      "paddingLeft: layout/margin",
+      "paddingRight: layout/margin",
       "topLeftRadius: radius/md",
       "topRightRadius: radius/md",
       "bottomLeftRadius: radius/md",
       "bottomRightRadius: radius/md",
-      "fills: product-card/bg",
-      "strokes: product-card/border",
+      "fills: recipe-card/bg",
+      "strokes: recipe-card/border",
       "effects: color/effect/shadow-ink",
-      "color: product-card/bg",
-      "color: product-card/border",
-      "fills: product-card/media-bg",
-      "color: product-card/media-bg",
-      "paddingLeft: space/8",
-      "paddingTop: space/4",
-      "paddingRight: space/8",
-      "paddingBottom: space/4",
-      "fills: badge/new/bg",
-      "color: badge/new/bg",
-      "fills: badge/new/text",
-      "fontSize: font/size/mobile/label",
-      "lineHeight: font/line-height/mobile/label",
-      "color: badge/new/text",
-      "fills: product-card/meta",
-      "color: product-card/meta",
-      "fills: product-card/title",
-      "fontSize: font/size/desktop/h3",
-      "lineHeight: font/line-height/desktop/h3",
-      "color: product-card/title",
-      "fills: link/default",
-      "color: link/default",
-      "strokes: link/default",
-      "strokeTopWeight: border/width/thick",
-      "strokeBottomWeight: border/width/thick",
-      "strokeLeftWeight: border/width/thick",
-      "strokeRightWeight: border/width/thick",
-      "strokes: button/secondary/border",
-      "color: button/secondary/border",
-      "strokes: button/secondary/text",
-      "color: button/secondary/text",
-      "fills: button/secondary/text",
+      "color: recipe-card/bg",
+      "color: recipe-card/border",
       "topLeftRadius: radius/none",
       "topRightRadius: radius/none",
       "bottomLeftRadius: radius/none",
-      "bottomRightRadius: radius/none"
+      "bottomRightRadius: radius/none",
+      "fills: recipe-card/media-bg",
+      "color: recipe-card/media-bg",
+      "fills: recipe-card/meta",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: recipe-card/meta",
+      "itemSpacing: space/16",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "strokes: recipe-card/meta",
+      "fills: recipe-card/title",
+      "fontSize: font/size/desktop/h3",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: recipe-card/title",
+      "counterAxisSpacing: space/8",
+      "minHeight: chip/height/s",
+      "paddingLeft: space/8",
+      "paddingRight: space/8",
+      "strokes: color/border/subtle",
+      "color: color/border/subtle",
+      "fills: color/text/disabled",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label",
+      "color: color/text/disabled",
+      "strokes: icon/color/default",
+      "color: icon/color/default",
+      "fills: button/primary/bg",
+      "strokes: color/border/default",
+      "color: button/primary/bg",
+      "color: color/border/default",
+      "fills: button/primary/text",
+      "color: button/primary/text"
     ],
     "textStyles": [
       "Desktop/h1",
       "Desktop/body-l",
-      "Desktop/caption",
-      "Desktop/label",
+      "Desktop/body-m",
       "Desktop/body-s",
-      "Mobile/label",
-      "Desktop/h3"
+      "Desktop/caption",
+      "Desktop/h3",
+      "Desktop/label"
     ]
   },
   "docs": {
@@ -415,16 +951,22 @@
   },
   "relations": {
     "uses": [
-      "badge",
-      "button",
       "chip",
-      "icon-arrow-right",
+      "icon-arrow-left",
       "icon-check",
-      "link",
-      "product-card",
-      "product-filter",
-      "tab"
+      "icon-close",
+      "icon-search",
+      "icon-timer",
+      "library-head",
+      "pagination",
+      "pagination-item",
+      "recipe-card",
+      "search-field"
     ],
-    "related": []
+    "related": [
+      "library-head",
+      "empty-state",
+      "product-filter"
+    ]
   }
 }

@@ -1,0 +1,159 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:pagination-item",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Pagination item",
+    "slug": "pagination-item",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Pagination item: botón cuadrado 40×40 con borde (radius/md) para el paginador de la Recipe library. State=Default (número o Previous/Next activos), Current (página actual, relleno tinta con aria-current=page), Disabled (Previous en la primera página). Propiedad Label (número o texto). Uso: Pagination (Recipe library, wireframe 171:3808 y móviles 486:13025 / 265:3948). Clase CSS: .pagination__item (.pagination__item--current, .pagination__item--disabled).",
+    "figmaPage": "Navigation",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 3,
+    "autoLayout": true,
+    "anatomyHash": "6a3820109267",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "default": "1",
+        "figma": "Label#219:4"
+      },
+      {
+        "name": "icon",
+        "type": "boolean",
+        "default": false,
+        "figma": "Icon#221:0"
+      },
+      {
+        "name": "arrow",
+        "type": "icon",
+        "default": "Icon / arrow-left",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Arrow#221:4"
+      },
+      {
+        "name": "current",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Current"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Disabled"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "arrow"
+      ],
+      "defaultIcons": [
+        "Icon / arrow-left"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "color/border/default",
+      "color/text/default",
+      "font/family/display",
+      "font/line-height/desktop/label",
+      "font/size/desktop/label",
+      "font/style/display",
+      "icon/color/default",
+      "icon/size/md",
+      "radius/md",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [],
+    "example": null,
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "219:1639",
+    "componentKey": "2d1e0f204af61a060130f3e200df18384e4c521d",
+    "propertyNames": {
+      "label": "Label#219:4",
+      "icon": "Icon#221:0",
+      "arrow": "Arrow#221:4",
+      "current": "State=Current",
+      "disabled": "State=Disabled"
+    },
+    "variantAxes": {
+      "State": [
+        "Default",
+        "Current",
+        "Disabled"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "icon",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "toggledBy": "Icon#221:0",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
+      "paddingLeft: space/8",
+      "paddingRight: space/8",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokes: color/border/default",
+      "color: color/border/default",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label",
+      "color: color/text/default",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: icon/color/default",
+      "color: icon/color/default"
+    ],
+    "textStyles": [
+      "Desktop/label"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/pagination-item.md",
+    "section": "Pagination item"
+  },
+  "relations": {
+    "uses": [
+      "icon-arrow-left"
+    ],
+    "related": []
+  }
+}

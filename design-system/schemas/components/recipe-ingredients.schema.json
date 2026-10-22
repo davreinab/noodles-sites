@@ -1,0 +1,315 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:recipe-ingredients",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Recipe ingredients",
+    "slug": "recipe-ingredients",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Recipe ingredients: bloque de ingredientes de la ficha de receta. Título «Ingredients» con subtítulo, lista de Recipe ingredient (2 columnas en desktop, 1 en mobile; Variant=Brand para los productos del catálogo) y Recipe macros a la derecha (desktop) o debajo (mobile). Fondo blanco (surface/card). Uso: ficha de receta (wireframe desktop 396:6398, 396:6354). Clase CSS: .recipe-ingredients.",
+    "figmaPage": "Pattern / Detail pages",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "8dda849d647e",
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "figmaVersion": null,
+      "variantsChecked": [],
+      "by": "agent (Claude)"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thick",
+      "button/secondary/border",
+      "button/secondary/text",
+      "color/border/default",
+      "color/surface/card",
+      "color/surface/inverse",
+      "color/text/default",
+      "color/text/on-inverse",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/h3",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/h2",
+      "font/size/desktop/h3",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "product-card/media-bg",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/32",
+      "space/4",
+      "space/64",
+      "space/8",
+      "space/80"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "button",
+      "button--secondary",
+      "recipe-ingredient",
+      "recipe-ingredient--brand",
+      "recipe-ingredient__amount",
+      "recipe-ingredient__info",
+      "recipe-ingredient__link",
+      "recipe-ingredient__name",
+      "recipe-ingredient__thumb",
+      "recipe-ingredients",
+      "recipe-ingredients__body",
+      "recipe-ingredients__list",
+      "recipe-macros",
+      "recipe-macros__action",
+      "recipe-macros__head",
+      "recipe-macros__list",
+      "recipe-macros__name",
+      "recipe-macros__row",
+      "recipe-macros__title",
+      "recipe-macros__value",
+      "section",
+      "section__header",
+      "section__lead",
+      "section__title"
+    ],
+    "example": "<section data-ds=\"recipe-ingredients\" class=\"section recipe-ingredients\" aria-labelledby=\"ri-title\">\n<div class=\"section__header\">\n<h2 class=\"section__title\" id=\"ri-title\">Ingredients</h2>\n<p class=\"section__lead\">Everything you need to make this recipe for 4 people.</p>\n</div>\n<div class=\"recipe-ingredients__body\">\n<ul class=\"recipe-ingredients__list\">\n<li class=\"recipe-ingredient\"><div class=\"recipe-ingredient__info\"><p class=\"recipe-ingredient__amount\">150 g</p><p class=\"recipe-ingredient__name\">Chicken breast</p></div></li>\n<li class=\"recipe-ingredient recipe-ingredient--brand\"><div class=\"recipe-ingredient__info\"><p class=\"recipe-ingredient__amount\">200 g</p><p class=\"recipe-ingredient__name\"><a class=\"recipe-ingredient__link\" href=\"/productos/cup-oriental\">Cup Oriental</a></p></div><img class=\"recipe-ingredient__thumb\" src=\"../assets/images/placeholder.svg\" alt=\"\"></li>\n</ul>\n<section class=\"recipe-macros\" aria-labelledby=\"ri-macros\">\n<h3 class=\"recipe-macros__title\" id=\"ri-macros\">Recipe macros</h3>\n<p class=\"recipe-macros__head\">Per serving</p>\n<ul class=\"recipe-macros__list\">\n<li class=\"recipe-macros__row\"><span class=\"recipe-macros__name\">Protein</span><span class=\"recipe-macros__value\">8.3 g</span></li>\n<li class=\"recipe-macros__row\"><span class=\"recipe-macros__name\">Carbohydrates</span><span class=\"recipe-macros__value\">52 g</span></li>\n<li class=\"recipe-macros__row\"><span class=\"recipe-macros__name\">Fat</span><span class=\"recipe-macros__value\">10 g</span></li>\n</ul>\n<button class=\"button button--secondary recipe-macros__action\" type=\"button\" aria-haspopup=\"dialog\">See allergen table</button>\n</section>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "222:2116",
+    "componentKey": "e2a27cf489669e948d91d94b1025c3ec91e41ea3",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Recipe ingredient",
+        "component": "Variant=Brand",
+        "componentSlug": "recipe-ingredient",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Recipe ingredient",
+        "component": "Variant=Brand",
+        "componentSlug": "recipe-ingredient",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Recipe ingredient",
+        "component": "Variant=Default",
+        "componentSlug": "recipe-ingredient",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Recipe ingredient",
+        "component": "Variant=Default",
+        "componentSlug": "recipe-ingredient",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Recipe ingredient",
+        "component": "Variant=Default",
+        "componentSlug": "recipe-ingredient",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Recipe ingredient",
+        "component": "Variant=Default",
+        "componentSlug": "recipe-ingredient",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "macros",
+        "component": "Recipe macros",
+        "componentSlug": "recipe-macros",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "allergen-button",
+        "component": "Hierarchy=Secondary, Size=M, State=Default",
+        "componentSlug": "button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "toggledBy": "Icon leading#33:25",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "toggledBy": "Icon trailing#33:50",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/32",
+      "paddingLeft: space/64",
+      "paddingTop: space/80",
+      "paddingRight: space/64",
+      "paddingBottom: space/80",
+      "fills: color/surface/card",
+      "color: color/surface/card",
+      "itemSpacing: space/8",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h2",
+      "color: color/text/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: color/text/secondary",
+      "itemSpacing: space/64",
+      "itemSpacing: space/16",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: color/surface/inverse",
+      "color: color/surface/inverse",
+      "itemSpacing: space/4",
+      "fills: color/text/on-inverse",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: color/text/on-inverse",
+      "fills: product-card/media-bg",
+      "color: product-card/media-bg",
+      "strokes: color/border/default",
+      "color: color/border/default",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "fontSize: font/size/desktop/h3",
+      "lineHeight: font/line-height/desktop/h3",
+      "lineHeight: font/line-height/desktop/body-l",
+      "fontSize: font/size/desktop/body-l",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thick",
+      "strokeBottomWeight: border/width/thick",
+      "strokeLeftWeight: border/width/thick",
+      "strokeRightWeight: border/width/thick",
+      "strokes: button/secondary/border",
+      "color: button/secondary/border",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: button/secondary/text",
+      "color: button/secondary/text",
+      "fills: button/secondary/text",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label"
+    ],
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m",
+      "Desktop/caption",
+      "Desktop/h3",
+      "Desktop/label"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/recipe-ingredients.md",
+    "section": "Recipe ingredients"
+  },
+  "relations": {
+    "uses": [
+      "button",
+      "icon-arrow-right",
+      "recipe-ingredient",
+      "recipe-macros"
+    ],
+    "related": [
+      "recipe-steps"
+    ]
+  }
+}

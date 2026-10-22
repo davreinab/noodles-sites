@@ -7,11 +7,11 @@
     "slug": "navbar",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T10:02:01Z",
-    "description": "Patrón de cabecera (wireframe UX). Desktop: botón menú (Icon button Secondary, abre el Menu a pantalla completa) a la izquierda · logo de marca centrado (enlace a la Home) · CTA Button Primary «New 100% Natural Formula» a la derecha (lleva a la Natural formula page) · Lang switch oculto salvo en marcas multiidioma. Mobile: botón menú · logo centrado. Sin enlaces de navegación ni buscador en la barra: la navegación vive en el Menu. Comportamiento: sticky (layer/sticky); se oculta al hacer scroll hacia abajo y reaparece al subir; respeta prefers-reduced-motion. Accesibilidad: <header> con <nav>; el botón menú lleva aria-expanded y aria-controls. Fondo color/surface/page con borde inferior color/border/default. Sin variables propias.",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Patrón de cabecera (wireframe UX). Desktop: botón menú (Icon button Secondary, abre el Menu a pantalla completa) a la izquierda · logo de marca centrado (enlace a la Home) · CTA Button Primary «New 100% Natural Formula» a la derecha · Lang switch oculto salvo en marcas multiidioma. Mobile: botón menú · logo centrado. State=Top: transparente sobre el contenido, arriba de la página. State=Scrolled: al bajar queda fija arriba (layer/sticky) con fondo color/surface/page y borde inferior color/border/default. Sin enlaces de navegación ni buscador en la barra. Accesibilidad: <header> con <nav>; el botón menú lleva aria-expanded y aria-controls. Sin variables propias.",
     "figmaPage": "Pattern / Global",
     "figmaType": "COMPONENT_SET",
-    "variantCount": 2,
+    "variantCount": 4,
     "autoLayout": true,
     "lifecycle": {
       "status": "active",
@@ -20,9 +20,9 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "afbf13ea7495",
+    "anatomyHash": "ec3188d452e3",
     "verification": {
-      "status": "verified",
+      "status": "stale",
       "date": "2026-10-08",
       "figmaVersion": "afbf13ea7495",
       "variantsChecked": [
@@ -30,7 +30,9 @@
         "Breakpoint=Mobile"
       ],
       "by": "agent (Claude)",
-      "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)"
+      "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)",
+      "staleSince": "2026-10-22T14:07:02Z",
+      "reason": "la anatomía, las variantes, los tokens ligados o la key del maestro cambiaron desde la verificación"
     }
   },
   "api": {
@@ -58,6 +60,18 @@
         ],
         "default": "Desktop",
         "figma": "Breakpoint"
+      },
+      {
+        "name": "scrolled",
+        "type": "boolean",
+        "default": true,
+        "figma": "State=Scrolled"
+      },
+      {
+        "name": "top",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Top"
       }
     ],
     "cssStates": [],
@@ -136,12 +150,18 @@
     "propertyNames": {
       "logo": "Logo#55:0",
       "langSwitch": "Lang switch#55:3",
-      "breakpoint": "Breakpoint"
+      "breakpoint": "Breakpoint",
+      "scrolled": "State=Scrolled",
+      "top": "State=Top"
     },
     "variantAxes": {
       "Breakpoint": [
         "Desktop",
         "Mobile"
+      ],
+      "State": [
+        "Scrolled",
+        "Top"
       ]
     },
     "nestedInstances": [

@@ -1,0 +1,359 @@
+{
+  "title": "Product line",
+  "description": "Product line: bloque de una línea de producto de la Product library (Yatekomo, Yakisoba, Sauces): packshot grande (placeholder 3D, sin fotografía) a la izquierda en Standard y, a…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".product-line",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-card",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".product-line.product-line--dark",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "product-line",
+      "name": "Product line",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "212:746",
+      "current": {
+        "description": "Product line: bloque de una línea de producto de la Product library (Yatekomo, Yakisoba, Sauces): packshot grande (placeholder 3D, sin fotografía) a la izquierda en Standard y, a la derecha, nombre de línea (h3), descripción, «Find your favourite flavour» (h4) y rejilla de Flavour tile (5 columnas en desktop, 2 en mobile). Surface=Light (crema/blanco) o Dark (tinta) para alternar bandas; Header (opcional) muestra la cabecera de formato («Cups», «Sauces»). Kind=Sauces: sin packshot, rejilla de Flavour tile Tall (3 columnas en desktop; carrusel horizontal en mobile). Uso: Product library (wireframe desktop 396:5932, móvil 396:12565). Clase CSS: .product-line (modificadores .product-line--dark y .product-line--sauces).",
+        "Propósito": "Bloque de una línea de producto dentro de un formato de la página Products: packshot grande a la izquierda y, a la derecha, nombre de línea (YATEKOMO, YAKISOBA), descripción, «Find your favourite flavour» y la rejilla de sabores (Flavour tile). Las líneas consecutivas alternan Surface Light (blanco) y Dark (tinta). Type Sauces no lleva packshot: muestra las salsas como Flavour tile Tall (3 columnas en escritorio; carrusel horizontal en móvil). La cabecera del formato (`product-line__head`, con «Cups» y su subtítulo) es opcional. Las secciones con ancla llevan `id` (p. ej. `id=\"cups\"`) para Anchor nav. Las secciones con ancla tienen `scroll-margin-top` igual a la altura de la navbar, para que la barra sticky no tape el encabezado.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Rol: sección (`section`) con nombre por su h3 de línea (`aria-labelledby`). Jerarquía: h2 del formato (si hay cabecera), h3 de la línea y h4 «Find your favourite flavour». El packshot lleva `alt=\"\"` porque el nombre de la línea va escrito a su lado. Las tarjetas de sabor son enlaces (Flavour tile) cuyo nombre es el texto visible, con el badge delante si lo hay. El patrón no tiene más controles. Teclado: Tab entra en la primera tarjeta y recorre la rejilla en orden; en el carrusel móvil de Sauces, el contenedor no captura teclas y Tab sigue el orden del DOM. El foco lo pone Flavour tile.",
+        "Cuándo usar / qué NO hace": "Para cada línea de producto dentro de un formato (Cups, Bags, Sauces) en la página Products. No es una ficha de producto (eso son Product hero y Product details) ni un listado filtrable: no filtra y no pagina. Una línea sin sabores no se muestra."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "212:746",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=212-746",
+      "page": "Pattern / Libraries",
+      "type": "COMPONENT_SET",
+      "variants": 6,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Product line: bloque de una línea de producto de la Product library (Yatekomo, Yakisoba, Sauces): packshot grande (placeholder 3D, sin fotografía) a la izquierda en Standard y, a la derecha, nombre de línea (h3), descripción, «Find your favourite flavour» (h4) y rejilla de Flavour tile (5 columnas en desktop, 2 en mobile). Surface=Light (crema/blanco) o Dark (tinta) para alternar bandas; Header (opcional) muestra la cabecera de formato («Cups», «Sauces»). Kind=Sauces: sin packshot, rejilla de Flavour tile Tall (3 columnas en desktop; carrusel horizontal en mobile). Uso: Product library (wireframe desktop 396:5932, móvil 396:12565). Clase CSS: .product-line (modificadores .product-line--dark y .product-line--sauces)."
+    ],
+    "props": [
+      {
+        "name": "header",
+        "type": "boolean",
+        "values": [],
+        "default": "true",
+        "figma": "Header#212:0"
+      },
+      {
+        "name": "surface",
+        "type": "enum",
+        "values": [
+          "Light",
+          "Dark"
+        ],
+        "default": "Light",
+        "figma": "Surface"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      },
+      {
+        "name": "kind",
+        "type": "enum",
+        "values": [
+          "Standard",
+          "Sauces"
+        ],
+        "default": "Standard",
+        "figma": "Kind"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "Flavour tile",
+        "component": "flavour-tile",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "Badge type#209:14",
+        "hidden": true
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "flavour-tile",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "Badge type#209:14",
+        "hidden": true
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "flavour-tile",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "Badge type#209:14",
+        "hidden": false
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "flavour-tile",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "Badge type#209:14",
+        "hidden": false
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "flavour-tile",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "Badge type#209:14",
+        "hidden": true
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "flavour-tile",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "Badge type#209:14",
+        "hidden": true
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "flavour-tile",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "Badge type#209:14",
+        "hidden": false
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "flavour-tile",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "Badge type#209:14",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "badge",
+        "items": [
+          "badge/natural/bg",
+          "badge/natural/text",
+          "badge/new/bg",
+          "badge/new/text"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/surface/card",
+          "color/surface/page",
+          "color/text/default",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h2",
+          "font/line-height/desktop/h3",
+          "font/line-height/mobile/label",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/size/desktop/h2",
+          "font/size/desktop/h3",
+          "font/size/mobile/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "product-card",
+        "items": [
+          "product-card/media-bg",
+          "product-card/meta",
+          "product-card/title"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/lg",
+          "radius/md",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/32",
+          "space/4",
+          "space/48",
+          "space/64",
+          "space/8",
+          "space/80"
+        ]
+      }
+    ],
+    "tokenCount": 36,
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m",
+      "Desktop/caption",
+      "Desktop/h3",
+      "Mobile/label"
+    ],
+    "classes": [
+      "badge",
+      "badge--hot",
+      "flavour-tile",
+      "flavour-tile__media",
+      "flavour-tile__name",
+      "product-line",
+      "product-line__description",
+      "product-line__grid",
+      "product-line__head",
+      "product-line__info",
+      "product-line__inner",
+      "product-line__name",
+      "product-line__pack",
+      "product-line__subtitle",
+      "section",
+      "section__lead",
+      "section__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Bloque de una línea de producto dentro de un formato de la página Products: packshot grande a la izquierda y, a la derecha, nombre de línea (YATEKOMO, YAKISOBA), descripción, «Find your favourite flavour» y la rejilla de sabores (Flavour tile). Las líneas consecutivas alternan Surface Light (blanco) y Dark (tinta). Type Sauces no lleva packshot: muestra las salsas como Flavour tile Tall (3 columnas en escritorio; carrusel horizontal en móvil). La cabecera del formato (`product-line__head`, con «Cups» y su subtítulo) es opcional. Las secciones con ancla llevan `id` (p. ej. `id=\"cups\"`) para Anchor nav. Las secciones con ancla tienen `scroll-margin-top` igual a la altura de la navbar, para que la barra sticky no tape el encabezado.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Rol: sección (`section`) con nombre por su h3 de línea (`aria-labelledby`). Jerarquía: h2 del formato (si hay cabecera), h3 de la línea y h4 «Find your favourite flavour». El packshot lleva `alt=\"\"` porque el nombre de la línea va escrito a su lado. Las tarjetas de sabor son enlaces (Flavour tile) cuyo nombre es el texto visible, con el badge delante si lo hay. El patrón no tiene más controles. Teclado: Tab entra en la primera tarjeta y recorre la rejilla en orden; en el carrusel móvil de Sauces, el contenedor no captura teclas y Tab sigue el orden del DOM. El foco lo pone Flavour tile.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Para cada línea de producto dentro de un formato (Cups, Bags, Sauces) en la página Products. No es una ficha de producto (eso son Product hero y Product details) ni un listado filtrable: no filtra y no pagina. Una línea sin sabores no se muestra.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 2,
+      "total": 4,
+      "missing": [
+        "surface=Dark",
+        "kind=Sauces"
+      ],
+      "unchecked": [
+        "header=true"
+      ],
+      "complete": false
+    }
+  },
+  "ds": {
+    "slug": "product-line",
+    "kind": "pattern",
+    "verification": "unverified",
+    "figmaNodeId": "212:746",
+    "contract": "../../../../../../design-system/schemas/components/product-line.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

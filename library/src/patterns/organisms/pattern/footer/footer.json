@@ -1,7 +1,7 @@
 {
   "title": "Footer",
   "description": "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de…",
-  "status": "Ready",
+  "status": "In review",
   "sheet": {
     "contrast": {
       "pairs": [
@@ -30,7 +30,7 @@
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "nodeId": "56:167",
       "current": {
-        "description": "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de sugerencias («Do you have any ideas, complaints or cravings?» + texto + Button Primary «Send suggestions» con external-link: abre el formulario externo de Calidad) · franja legal por país (Legal notice, Privacy policy, Cookies policy, Legal basis, Contact) y © GBFoods. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Menu. Desktop: logo y enlaces a la izquierda, caja de sugerencias a la derecha; Mobile: la caja arriba. Sin variables propias.",
+        "description": "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de sugerencias («Do you have any ideas, complaints or cravings?» + texto + Button Primary «Send suggestions» con external-link: abre el formulario externo de Calidad) · franja legal por país (Legal notice, Privacy policy, Cookies policy, Legal basis, Contest rules, Contact) y © GBFoods. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Menu. Desktop: logo y enlaces a la izquierda, caja de sugerencias a la derecha; Mobile: la caja arriba. Sin variables propias. Caja de sugerencias con estilo ticket (borde superior dentado, sombra elevation/3, giro -0.6°), como en la landing.",
         "Propósito": "Pie de todas las páginas (wireframe UX): logo, enlaces (con hasta dos de campaña), caja de sugerencias al formulario externo de Calidad y franja legal por país.",
         "Accesibilidad (rol, nombre, estados y teclado)": "Enlaces crema sobre tinta 17:1; la caja de sugerencias, tinta sobre crema 17,2:1 con Button Primary. El botón externo avisa de que abre otra pestaña. Los enlaces legales están en el HTML de todas las páginas.",
         "Cuándo usar / qué NO hace": "En todas las páginas. Los textos legales cambian por país. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Mobile menu, no aquí."
@@ -44,12 +44,12 @@
       "page": "Pattern / Global",
       "type": "COMPONENT_SET",
       "variants": 2,
-      "lastSync": "2026-10-22 · 09:38 UTC",
-      "verification": "verified",
-      "verificationLabel": "Verificado"
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "stale",
+      "verificationLabel": "Caducado"
     },
     "description": [
-      "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de sugerencias («Do you have any ideas, complaints or cravings?» + texto + Button Primary «Send suggestions» con external-link: abre el formulario externo de Calidad) · franja legal por país (Legal notice, Privacy policy, Cookies policy, Legal basis, Contact) y © GBFoods. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Menu. Desktop: logo y enlaces a la izquierda, caja de sugerencias a la derecha; Mobile: la caja arriba. Sin variables propias."
+      "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de sugerencias («Do you have any ideas, complaints or cravings?» + texto + Button Primary «Send suggestions» con external-link: abre el formulario externo de Calidad) · franja legal por país (Legal notice, Privacy policy, Cookies policy, Legal basis, Contest rules, Contact) y © GBFoods. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Menu. Desktop: logo y enlaces a la izquierda, caja de sugerencias a la derecha; Mobile: la caja arriba. Sin variables propias. Caja de sugerencias con estilo ticket (borde superior dentado, sombra elevation/3, giro -0.6°), como en la landing."
     ],
     "props": [
       {
@@ -249,6 +249,18 @@
         "component": "icon-arrow-right",
         "exposedAs": "Icon#35:0",
         "hidden": true
+      },
+      {
+        "layer": "legal-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
       }
     ],
     "tokens": [
@@ -317,8 +329,13 @@
       {
         "group": "radius",
         "items": [
-          "radius/md",
           "radius/pill"
+        ]
+      },
+      {
+        "group": "shadow",
+        "items": [
+          "shadow/soft"
         ]
       },
       {
@@ -388,7 +405,7 @@
   "ds": {
     "slug": "footer",
     "kind": "pattern",
-    "verification": "verified",
+    "verification": "stale",
     "figmaNodeId": "56:167",
     "contract": "../../../../../../design-system/schemas/components/footer.schema.json"
   },

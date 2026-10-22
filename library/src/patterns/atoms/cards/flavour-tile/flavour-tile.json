@@ -1,0 +1,212 @@
+{
+  "title": "Flavour tile",
+  "description": "Flavour tile: tarjeta de sabor de la Product line (cups, bags y salsas). Size=Square: imagen 1:1 (sabores). Size=Tall: imagen 3:4 (salsas). Badge opcional arriba a la izquierda (N…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".flavour-tile",
+          "why": "sin fondo propio: depende de dónde se ponga"
+        }
+      ],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "flavour-tile",
+      "name": "Flavour tile",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "209:138",
+      "current": {
+        "description": "Flavour tile: tarjeta de sabor de la Product line (cups, bags y salsas). Size=Square: imagen 1:1 (sabores). Size=Tall: imagen 3:4 (salsas). Badge opcional arriba a la izquierda (New, Vegan o Hot!, mediante Badge type) y nombre debajo en body bold (Archivo Bold sobre Desktop/body-m). Toda la tarjeta es un enlace a la ficha del sabor. Estados: Default; Hover (elevation de Product card); Focus (anillo product-card/focus-ring). Uso: Product line del catálogo (wireframe desktop 396:5932 y móvil 396:12565). Clase CSS: .flavour-tile (variante Tall: .flavour-tile--tall). Textos de ejemplo en inglés.",
+        "Propósito": "Tarjeta de un sabor (Square, por defecto) o de una salsa (Tall, imagen 3:4) dentro de una línea de Product line. Lleva un badge opcional arriba a la izquierda, dentro de la imagen (New, Vegan o Hot!), y el nombre debajo en body negrita. Toda la tarjeta es el enlace a la ficha del producto. Estados como Product card: hover sube la sombra dura (elevation/2) sobre la imagen; foco, contorno fino.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Rol: enlace (`a`) que engloba la tarjeta. Su nombre accesible es el texto visible completo, incluido el badge si lo hay («New Chicken»), por eso el badge va antes del nombre en el DOM. La imagen lleva `alt=\"\"` porque el nombre va escrito debajo. No tiene estado seleccionado. Hover: sombra sobre la imagen; el enlace se distingue por su nombre, no solo por el hover. Teclado: Tab alcanza el enlace y Enter abre la ficha. Foco: contorno fino de 2 px alrededor de la tarjeta.",
+        "Cuándo usar / qué NO hace": "Para cada sabor o salsa de una rejilla dentro de Product line (Square en 5 columnas, Tall en 3). No es un botón de compra ni un filtro, y no lleva precio. El texto del badge se lee como parte del nombre; no añadir frases largas."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "209:138",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=209-138",
+      "page": "Cards",
+      "type": "COMPONENT_SET",
+      "variants": 6,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Flavour tile: tarjeta de sabor de la Product line (cups, bags y salsas). Size=Square: imagen 1:1 (sabores). Size=Tall: imagen 3:4 (salsas). Badge opcional arriba a la izquierda (New, Vegan o Hot!, mediante Badge type) y nombre debajo en body bold (Archivo Bold sobre Desktop/body-m). Toda la tarjeta es un enlace a la ficha del sabor. Estados: Default; Hover (elevation de Product card); Focus (anillo product-card/focus-ring). Uso: Product line del catálogo (wireframe desktop 396:5932 y móvil 396:12565). Clase CSS: .flavour-tile (variante Tall: .flavour-tile--tall). Textos de ejemplo en inglés."
+    ],
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "values": [],
+        "default": "Chicken",
+        "figma": "Name#209:0"
+      },
+      {
+        "name": "badge",
+        "type": "boolean",
+        "values": [],
+        "default": "true",
+        "figma": "Badge#209:7"
+      },
+      {
+        "name": "badgeType",
+        "type": "icon",
+        "values": [],
+        "default": "Type=New",
+        "figma": "Badge type#209:14"
+      },
+      {
+        "name": "size",
+        "type": "enum",
+        "values": [
+          "Square",
+          "Tall"
+        ],
+        "default": "Square",
+        "figma": "Size"
+      }
+    ],
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "badgeType"
+      ],
+      "defaults": [
+        "Type=New"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "Badge type#209:14",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "badge",
+        "items": [
+          "badge/new/bg",
+          "badge/new/text"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/line-height/mobile/label",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/size/mobile/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "product-card",
+        "items": [
+          "product-card/media-bg",
+          "product-card/meta",
+          "product-card/title"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/4",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 19,
+    "textStyles": [
+      "Desktop/caption",
+      "Mobile/label"
+    ],
+    "classes": [
+      "badge",
+      "badge--hot",
+      "flavour-tile",
+      "flavour-tile--tall",
+      "flavour-tile__media",
+      "flavour-tile__name"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Tarjeta de un sabor (Square, por defecto) o de una salsa (Tall, imagen 3:4) dentro de una línea de Product line. Lleva un badge opcional arriba a la izquierda, dentro de la imagen (New, Vegan o Hot!), y el nombre debajo en body negrita. Toda la tarjeta es el enlace a la ficha del producto. Estados como Product card: hover sube la sombra dura (elevation/2) sobre la imagen; foco, contorno fino.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Rol: enlace (`a`) que engloba la tarjeta. Su nombre accesible es el texto visible completo, incluido el badge si lo hay («New Chicken»), por eso el badge va antes del nombre en el DOM. La imagen lleva `alt=\"\"` porque el nombre va escrito debajo. No tiene estado seleccionado. Hover: sombra sobre la imagen; el enlace se distingue por su nombre, no solo por el hover. Teclado: Tab alcanza el enlace y Enter abre la ficha. Foco: contorno fino de 2 px alrededor de la tarjeta.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Para cada sabor o salsa de una rejilla dentro de Product line (Square en 5 columnas, Tall en 3). No es un botón de compra ni un filtro, y no lleva precio. El texto del badge se lee como parte del nombre; no añadir frases largas.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 2,
+      "total": 2,
+      "missing": [],
+      "unchecked": [
+        "badge=true"
+      ],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "flavour-tile",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "209:138",
+    "contract": "../../../../../../design-system/schemas/components/flavour-tile.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

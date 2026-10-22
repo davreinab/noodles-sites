@@ -1,0 +1,254 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:recipe-steps",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Recipe steps",
+    "slug": "recipe-steps",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Recipe steps: módulo de pasos de preparación de la ficha de receta, con fondo crema (surface/page). Breakpoint=Desktop: título «Step-by-step preparation» y subtítulo; lista de 6 Step (640 de ancho) con Title=true y Heading; el paso 2 con Media=True. Breakpoint=Mobile (375): padding space/48 vertical y space/16 lateral, pasos a ancho completo (343). Uso: ficha de receta (wireframe desktop 396:6398 y 396:6354). Clase CSS: .recipe-steps.",
+    "figmaPage": "Pattern / Detail pages",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "a266c47ccf7c",
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "figmaVersion": null,
+      "variantsChecked": [],
+      "by": "agent (Claude)"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thin",
+      "color/surface/card",
+      "color/surface/page",
+      "color/text/default",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/display",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/h3",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/display",
+      "font/size/desktop/h2",
+      "font/size/desktop/h3",
+      "font/style/body",
+      "font/style/display",
+      "radius/md",
+      "space/16",
+      "space/24",
+      "space/48",
+      "space/64",
+      "space/8",
+      "space/80",
+      "step/border",
+      "step/media-bg",
+      "step/number-text",
+      "step/text"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "recipe-steps",
+      "section",
+      "section__header",
+      "section__lead",
+      "section__title",
+      "step",
+      "step__content",
+      "step__number",
+      "step__text",
+      "step__title",
+      "steps"
+    ],
+    "example": "<section data-ds=\"recipe-steps\" class=\"section recipe-steps\" aria-labelledby=\"rsteps-title\">\n<div class=\"section__header\">\n<h2 class=\"section__title\" id=\"rsteps-title\">Step-by-step preparation</h2>\n<p class=\"section__lead\">Follow the steps below for a perfect result.</p>\n</div>\n<ol class=\"steps\">\n<li class=\"step\">\n<span class=\"step__number\" aria-hidden=\"true\">1</span>\n<div class=\"step__content\"><h3 class=\"step__title\">Add boiling water up to the mark</h3><p class=\"step__text\">Open the lid halfway and add boiling water up to the inner line.</p></div>\n</li>\n<li class=\"step\">\n<span class=\"step__number\" aria-hidden=\"true\">2</span>\n<div class=\"step__content\"><h3 class=\"step__title\">Wait 3 minutes</h3><p class=\"step__text\">Let the noodles rest while the sauce warms up.</p></div>\n</li>\n<li class=\"step\">\n<span class=\"step__number\" aria-hidden=\"true\">3</span>\n<div class=\"step__content\"><p class=\"step__text\">Drain the water carefully and set the noodles aside.</p></div>\n</li>\n</ol>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "224:487",
+    "componentKey": "5b41883268c77f6606dffd0eaff85bea7b9f4bd6",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Step 1",
+        "component": "Media=False",
+        "componentSlug": "step",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Step 2",
+        "component": "Media=True",
+        "componentSlug": "step",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Step 3",
+        "component": "Media=False",
+        "componentSlug": "step",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Step 4",
+        "component": "Media=False",
+        "componentSlug": "step",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Step 5",
+        "component": "Media=False",
+        "componentSlug": "step",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Step 6",
+        "component": "Media=False",
+        "componentSlug": "step",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/48",
+      "paddingLeft: space/64",
+      "paddingTop: space/80",
+      "paddingRight: space/64",
+      "paddingBottom: space/80",
+      "fills: color/surface/page",
+      "color: color/surface/page",
+      "itemSpacing: space/8",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h2",
+      "color: color/text/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: color/text/secondary",
+      "itemSpacing: space/24",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: color/surface/card",
+      "color: color/surface/card",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: step/number-text",
+      "fontSize: font/size/desktop/display",
+      "lineHeight: font/line-height/desktop/display",
+      "color: step/number-text",
+      "itemSpacing: space/16",
+      "paddingTop: space/8",
+      "fontSize: font/size/desktop/h3",
+      "lineHeight: font/line-height/desktop/h3",
+      "fills: step/text",
+      "lineHeight: font/line-height/desktop/body-l",
+      "fontSize: font/size/desktop/body-l",
+      "color: step/text",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "fills: step/media-bg",
+      "strokes: step/border",
+      "color: step/media-bg",
+      "color: step/border",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption"
+    ],
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m",
+      "Desktop/display",
+      "Desktop/h3",
+      "Desktop/caption"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/recipe-steps.md",
+    "section": "Recipe steps"
+  },
+  "relations": {
+    "uses": [
+      "step"
+    ],
+    "related": [
+      "recipe-ingredients"
+    ]
+  }
+}

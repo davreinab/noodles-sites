@@ -1,0 +1,126 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:anchor-nav-item",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Anchor nav item",
+    "slug": "anchor-nav-item",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Anchor nav item: elemento de la barra de anclas del catálogo; miniatura del envase (hueco product-card/media-bg) + etiqueta en píldora Anton (Desktop/h3). State=Current marca la sección visible (aria-current en código; chip seleccionado). Propiedad Label = nombre del formato (Cups, Bags, Sauces). Uso: Anchor nav (Product library, wireframe desktop 396:5932 y móvil 396:12565). Clase CSS: .anchor-nav__item.",
+    "figmaPage": "Navigation",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "1df9cb6039ca",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "default": "Cups",
+        "figma": "Label#210:0"
+      },
+      {
+        "name": "current",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Current"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "chip/bg",
+      "chip/text",
+      "font/family/display",
+      "font/line-height/desktop/h3",
+      "font/size/desktop/h3",
+      "font/style/display",
+      "product-card/media-bg",
+      "radius/md",
+      "radius/pill",
+      "space/24",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [],
+    "example": null,
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "210:57",
+    "componentKey": "91cc227997b285bd0f688ae2fbd5fc350ebd9237",
+    "propertyNames": {
+      "label": "Label#210:0",
+      "current": "State=Current"
+    },
+    "variantAxes": {
+      "State": [
+        "Default",
+        "Current"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [
+      "itemSpacing: space/8",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: product-card/media-bg",
+      "color: product-card/media-bg",
+      "paddingLeft: space/24",
+      "paddingTop: space/8",
+      "paddingRight: space/24",
+      "paddingBottom: space/8",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: chip/bg",
+      "color: chip/bg",
+      "fills: chip/text",
+      "fontSize: font/size/desktop/h3",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: chip/text"
+    ],
+    "textStyles": [
+      "Desktop/h3"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/anchor-nav-item.md",
+    "section": "Anchor nav item"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "title": "Anchor nav item",
+  "description": "Anchor nav item: elemento de la barra de anclas del catálogo; miniatura del envase (hueco product-card/media-bg) + etiqueta en píldora Anton (Desktop/h3). State=Current marca la s…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": null,
+    "pending": null,
+    "edit": {
+      "slug": "anchor-nav-item",
+      "name": "Anchor nav item",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "210:57",
+      "current": {
+        "description": "Anchor nav item: elemento de la barra de anclas del catálogo; miniatura del envase (hueco product-card/media-bg) + etiqueta en píldora Anton (Desktop/h3). State=Current marca la sección visible (aria-current en código; chip seleccionado). Propiedad Label = nombre del formato (Cups, Bags, Sauces). Uso: Anchor nav (Product library, wireframe desktop 396:5932 y móvil 396:12565). Clase CSS: .anchor-nav__item.",
+        "Propósito": "",
+        "Accesibilidad (rol, nombre, estados y teclado)": "",
+        "Cuándo usar / qué NO hace": ""
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "210:57",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=210-57",
+      "page": "Navigation",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Anchor nav item: elemento de la barra de anclas del catálogo; miniatura del envase (hueco product-card/media-bg) + etiqueta en píldora Anton (Desktop/h3). State=Current marca la sección visible (aria-current en código; chip seleccionado). Propiedad Label = nombre del formato (Cups, Bags, Sauces). Uso: Anchor nav (Product library, wireframe desktop 396:5932 y móvil 396:12565). Clase CSS: .anchor-nav__item."
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "values": [],
+        "default": "Cups",
+        "figma": "Label#210:0"
+      },
+      {
+        "name": "current",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Current"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "chip",
+        "items": [
+          "chip/bg",
+          "chip/text"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/display",
+          "font/line-height/desktop/h3",
+          "font/size/desktop/h3",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "product-card",
+        "items": [
+          "product-card/media-bg"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/24",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 11,
+    "textStyles": [
+      "Desktop/h3"
+    ],
+    "classes": [],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "⬜ TODO",
+        "todo": true,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "⬜ TODO",
+        "todo": true,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "⬜ TODO",
+        "todo": true,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 3,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "anchor-nav-item",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "210:57",
+    "contract": "../../../../../../../design-system/schemas/components/anchor-nav-item.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

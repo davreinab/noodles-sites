@@ -1,0 +1,154 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:recipe-ingredient",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Recipe ingredient",
+    "slug": "recipe-ingredient",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Recipe ingredient: línea de ingrediente de la ficha de receta (Ingredients). Cantidad en caption («200 g») y nombre en negrita (Name); se usa con Variant=Default (tarjeta blanca con borde) o Variant=Brand (fondo tinta, texto claro y miniatura del envase a la derecha; enlaza a la ficha del producto). Uso: Recipe ingredients (wireframe 396:6398, ficha de receta 396:6292 / 396:6354). Clase CSS: .recipe-ingredient (modificador .recipe-ingredient--brand).",
+    "figmaPage": "Content",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "64fcfef85e98",
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "figmaVersion": null,
+      "variantsChecked": [],
+      "by": "agent (Claude)"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "quantity",
+        "type": "string",
+        "default": "200 g",
+        "figma": "Quantity#222:12"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "default": "Cup Oriental",
+        "figma": "Name#222:15"
+      },
+      {
+        "name": "variant",
+        "type": "enum",
+        "values": [
+          "Default",
+          "Brand"
+        ],
+        "default": "Default",
+        "figma": "Variant"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "color/border/default",
+      "color/surface/card",
+      "color/text/default",
+      "color/text/secondary",
+      "font/family/body",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/style/body",
+      "radius/md",
+      "space/16",
+      "space/4"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "recipe-ingredient",
+      "recipe-ingredient--brand",
+      "recipe-ingredient__amount",
+      "recipe-ingredient__info",
+      "recipe-ingredient__link",
+      "recipe-ingredient__name",
+      "recipe-ingredient__thumb"
+    ],
+    "example": "<li data-ds=\"recipe-ingredient\" class=\"recipe-ingredient\">\n<div class=\"recipe-ingredient__info\">\n<p class=\"recipe-ingredient__amount\">200 g</p>\n<p class=\"recipe-ingredient__name\">Spring onion</p>\n</div>\n</li>\n<li data-ds=\"recipe-ingredient\" class=\"recipe-ingredient recipe-ingredient--brand\">\n<div class=\"recipe-ingredient__info\">\n<p class=\"recipe-ingredient__amount\">1 unit</p>\n<p class=\"recipe-ingredient__name\"><a class=\"recipe-ingredient__link\" href=\"/productos/cup-oriental\">Cup Oriental</a></p>\n</div>\n<img class=\"recipe-ingredient__thumb\" src=\"../assets/images/placeholder.svg\" alt=\"\">\n</li>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "222:1906",
+    "componentKey": "1a9c993138da878a15a74737469ab4a3054922a6",
+    "propertyNames": {
+      "quantity": "Quantity#222:12",
+      "name": "Name#222:15",
+      "variant": "Variant"
+    },
+    "variantAxes": {
+      "Variant": [
+        "Default",
+        "Brand"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [
+      "itemSpacing: space/4",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: color/surface/card",
+      "strokes: color/border/default",
+      "color: color/surface/card",
+      "color: color/border/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/caption",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: color/text/secondary",
+      "fills: color/text/default",
+      "lineHeight: font/line-height/desktop/body-m",
+      "fontSize: font/size/desktop/body-m",
+      "color: color/text/default"
+    ],
+    "textStyles": [
+      "Desktop/caption"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/recipe-ingredient.md",
+    "section": "Recipe ingredient"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

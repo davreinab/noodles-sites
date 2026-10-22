@@ -1,0 +1,298 @@
+{
+  "title": "Share panel",
+  "description": "Share panel: contenido del modal «Share» de la ficha de receta. «Share on your socials» con Icon button Secondary M de marca (WhatsApp, Instagram, Facebook, TikTok, X, Telegram; c…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "share-panel",
+      "name": "Share panel",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "222:2027",
+      "current": {
+        "description": "Share panel: contenido del modal «Share» de la ficha de receta. «Share on your socials» con Icon button Secondary M de marca (WhatsApp, Instagram, Facebook, TikTok, X, Telegram; cada uno con aria-label «Share on …» en código); «Page link» con campo de solo lectura (Icon / link + URL) y botón Secondary «Copy link» (feedback «Link copied» en aria-live). Breakpoint Mobile: campo y botón apilados. Uso: modal Share de la ficha de receta (wireframe modal-share-desktop.png / modal-share-mobile.png; Recipe hero «Share recipe»). Clase CSS: .share-panel.",
+        "Propósito": "Contenido del modal «Share» de una receta o de un producto: título «Share on your socials», fila de icon buttons para WhatsApp, Instagram, Facebook, TikTok, X y Telegram, campo «Page link» de solo lectura con la URL y botón «Copy link». El mensaje «Link copied» aparece en `share-panel__status`. Los enlaces de redes los pone la página; el copiado lo hace la página con JavaScript, porque el componente no tiene script.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Rol: sección dentro del modal (el nombre del diálogo, «Share», lo da el modal). Cada red es un enlace con icono: el icono es decorativo (`aria-hidden`) y el nombre sale de `aria-label` («Share on …»), porque no hay texto visible. Campo: `label for` da el nombre «Page link»; `readonly` impide escribir, pero el texto se puede seleccionar y copiar. Botón «Copy link»: `button type=\"button\"`. Al copiar, «Link copied» va en `p.share-panel__status` con `aria-live=\"polite\"`: se anuncia sin mover el foco, que se queda en el botón. Teclado: Tab recorre redes, campo y botón; Enter activa. Foco: contorno de 2 px en botones y campo (`:focus-within`). En móvil los iconos se reparten en filas y el campo y el botón se apilan.",
+        "Cuándo usar / qué NO hace": "Solo dentro del modal Share de receta o producto; el botón que lo abre (p. ej. «Share recipe») va en el hero. No genera la URL ni comparte nada por sí mismo: cada red abre su destino y el copiado lo gestiona la página."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "222:2027",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=222-2027",
+      "page": "Feedback & overlays",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Share panel: contenido del modal «Share» de la ficha de receta. «Share on your socials» con Icon button Secondary M de marca (WhatsApp, Instagram, Facebook, TikTok, X, Telegram; cada uno con aria-label «Share on …» en código); «Page link» con campo de solo lectura (Icon / link + URL) y botón Secondary «Copy link» (feedback «Link copied» en aria-live). Breakpoint Mobile: campo y botón apilados. Uso: modal Share de la ficha de receta (wireframe modal-share-desktop.png / modal-share-mobile.png; Recipe hero «Share recipe»). Clase CSS: .share-panel."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "icon-button",
+        "component": "icon-button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-whatsapp",
+        "exposedAs": "Icon#33:125",
+        "hidden": false
+      },
+      {
+        "layer": "icon-button",
+        "component": "icon-button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-instagram",
+        "exposedAs": "Icon#33:125",
+        "hidden": false
+      },
+      {
+        "layer": "icon-button",
+        "component": "icon-button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-facebook",
+        "exposedAs": "Icon#33:125",
+        "hidden": false
+      },
+      {
+        "layer": "icon-button",
+        "component": "icon-button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-tiktok",
+        "exposedAs": "Icon#33:125",
+        "hidden": false
+      },
+      {
+        "layer": "icon-button",
+        "component": "icon-button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-x",
+        "exposedAs": "Icon#33:125",
+        "hidden": false
+      },
+      {
+        "layer": "icon-button",
+        "component": "icon-button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-telegram",
+        "exposedAs": "Icon#33:125",
+        "hidden": false
+      },
+      {
+        "layer": "icon-link",
+        "component": "icon-link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "copy-link",
+        "component": "button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "hidden": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick"
+        ]
+      },
+      {
+        "group": "button",
+        "items": [
+          "button/secondary/border",
+          "button/secondary/text"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/surface/card",
+          "color/text/default",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "field",
+        "items": [
+          "field/bg",
+          "field/border"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-l",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-l",
+          "font/size/desktop/body-m",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default",
+          "icon/size/md",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "icon-button",
+        "items": [
+          "icon-button/size/m"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/lg",
+          "radius/md",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 28,
+    "textStyles": [
+      "Desktop/body-m",
+      "Desktop/label"
+    ],
+    "classes": [
+      "button",
+      "button--secondary",
+      "icon",
+      "icon-button",
+      "icon-button--secondary",
+      "icon-facebook",
+      "icon-instagram",
+      "icon-link",
+      "icon-telegram",
+      "icon-tiktok",
+      "icon-whatsapp",
+      "icon-x",
+      "share-panel",
+      "share-panel__field",
+      "share-panel__input",
+      "share-panel__label",
+      "share-panel__row",
+      "share-panel__socials",
+      "share-panel__status",
+      "share-panel__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Contenido del modal «Share» de una receta o de un producto: título «Share on your socials», fila de icon buttons para WhatsApp, Instagram, Facebook, TikTok, X y Telegram, campo «Page link» de solo lectura con la URL y botón «Copy link». El mensaje «Link copied» aparece en `share-panel__status`. Los enlaces de redes los pone la página; el copiado lo hace la página con JavaScript, porque el componente no tiene script.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Rol: sección dentro del modal (el nombre del diálogo, «Share», lo da el modal). Cada red es un enlace con icono: el icono es decorativo (`aria-hidden`) y el nombre sale de `aria-label` («Share on …»), porque no hay texto visible. Campo: `label for` da el nombre «Page link»; `readonly` impide escribir, pero el texto se puede seleccionar y copiar. Botón «Copy link»: `button type=\"button\"`. Al copiar, «Link copied» va en `p.share-panel__status` con `aria-live=\"polite\"`: se anuncia sin mover el foco, que se queda en el botón. Teclado: Tab recorre redes, campo y botón; Enter activa. Foco: contorno de 2 px en botones y campo (`:focus-within`). En móvil los iconos se reparten en filas y el campo y el botón se apilan.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo dentro del modal Share de receta o producto; el botón que lo abre (p. ej. «Share recipe») va en el hero. No genera la URL ni comparte nada por sí mismo: cada red abre su destino y el copiado lo gestiona la página.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "share-panel",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "222:2027",
+    "contract": "../../../../../../design-system/schemas/components/share-panel.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

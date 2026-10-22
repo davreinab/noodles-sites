@@ -1,9 +1,9 @@
-### Product filter   ⚙️ synced: 2026-10-22T09:37:04Z
+### Product filter   ⚙️ synced: 2026-10-22T14:07:02Z
 
 <!-- ⚙️ GENERATED:start:product-filter -->
-- **Figma:** `55:253` · página «Pattern / Libraries» · COMPONENT_SET · 2 variantes · última sync 2026-10-22T09:37:04Z
-- **Descripción (Figma):** Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias.
-- **Anatomía:** `tab` → State=Selected, `tab` → State=Default, `tab` → State=Default, `chip` → State=Selected, `icon-leading` → Icon / check, `chip` → State=Default, `icon-leading` → Icon / check, `chip` → State=Default, `icon-leading` → Icon / check, `chip` → State=Selected, `icon-leading` → Icon / check, `chip` → State=Default, `icon-leading` → Icon / check, `chip` → State=Default, `icon-leading` → Icon / check, `chip` → State=Default, `icon-leading` → Icon / check
+- **Figma:** `55:253` · página «Pattern / Libraries» · COMPONENT_SET · 2 variantes · última sync 2026-10-22T14:07:02Z
+- **Descripción (Figma):** RETIRADO (2026-10-22): el catálogo es una sola página con anclas (Anchor nav), no un filtro (wireframe UX 396:5932). Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias.
+- **Anatomía:** `tab` → State=Selected, `tab` → State=Default, `tab` → State=Default, `chip` → Size=S, State=Selected, `icon-leading` → Icon / check, `chip` → Size=S, State=Default, `icon-leading` → Icon / check, `chip` → Size=S, State=Default, `icon-leading` → Icon / check, `chip` → Size=S, State=Selected, `icon-leading` → Icon / check, `chip` → Size=S, State=Default, `icon-leading` → Icon / check, `chip` → Size=S, State=Default, `icon-leading` → Icon / check, `chip` → Size=S, State=Default, `icon-leading` → Icon / check
 - **API:** `breakpoint`: Desktop, Mobile (por defecto Desktop)
 - **Nombres en Figma:** `breakpoint` ← `Breakpoint`
 - **Iconos / instancias anidadas:** sí · swap: ninguna (⚠️ no expuesto) · por defecto: unknown

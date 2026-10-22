@@ -1,0 +1,171 @@
+{
+  "title": "Pagination item",
+  "description": "Pagination item: botón cuadrado 40×40 con borde (radius/md) para el paginador de la Recipe library. State=Default (número o Previous/Next activos), Current (página actual, relleno…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": null,
+    "pending": null,
+    "edit": {
+      "slug": "pagination-item",
+      "name": "Pagination item",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "219:1639",
+      "current": {
+        "description": "Pagination item: botón cuadrado 40×40 con borde (radius/md) para el paginador de la Recipe library. State=Default (número o Previous/Next activos), Current (página actual, relleno tinta con aria-current=page), Disabled (Previous en la primera página). Propiedad Label (número o texto). Uso: Pagination (Recipe library, wireframe 171:3808 y móviles 486:13025 / 265:3948). Clase CSS: .pagination__item (.pagination__item--current, .pagination__item--disabled).",
+        "Propósito": "",
+        "Accesibilidad (rol, nombre, estados y teclado)": "",
+        "Cuándo usar / qué NO hace": ""
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "219:1639",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=219-1639",
+      "page": "Navigation",
+      "type": "COMPONENT_SET",
+      "variants": 3,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Pagination item: botón cuadrado 40×40 con borde (radius/md) para el paginador de la Recipe library. State=Default (número o Previous/Next activos), Current (página actual, relleno tinta con aria-current=page), Disabled (Previous en la primera página). Propiedad Label (número o texto). Uso: Pagination (Recipe library, wireframe 171:3808 y móviles 486:13025 / 265:3948). Clase CSS: .pagination__item (.pagination__item--current, .pagination__item--disabled)."
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "values": [],
+        "default": "1",
+        "figma": "Label#219:4"
+      },
+      {
+        "name": "icon",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "Icon#221:0"
+      },
+      {
+        "name": "arrow",
+        "type": "icon",
+        "values": [],
+        "default": "Icon / arrow-left",
+        "figma": "Arrow#221:4"
+      },
+      {
+        "name": "current",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Current"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Disabled"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "arrow"
+      ],
+      "defaults": [
+        "Icon / arrow-left"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "icon",
+        "component": "icon-arrow-left",
+        "exposedAs": "Arrow#221:4",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/border/default",
+          "color/text/default"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/display",
+          "font/line-height/desktop/label",
+          "font/size/desktop/label",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default",
+          "icon/size/md"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 10,
+    "textStyles": [
+      "Desktop/label"
+    ],
+    "classes": [],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "⬜ TODO",
+        "todo": true,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "⬜ TODO",
+        "todo": true,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "⬜ TODO",
+        "todo": true,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 3,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "pagination-item",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "219:1639",
+    "contract": "../../../../../../../design-system/schemas/components/pagination-item.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

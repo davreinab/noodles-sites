@@ -1,0 +1,127 @@
+{
+  "title": "Empty state",
+  "description": "Empty state de la Recipe library: sin resultados para la búsqueda o filtros. Título centrado (Desktop/h2) «We couldn't find any results for your search» y texto «Try with differen…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "empty-state",
+      "name": "Empty state",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "219:1663",
+      "current": {
+        "description": "Empty state de la Recipe library: sin resultados para la búsqueda o filtros. Título centrado (Desktop/h2) «We couldn't find any results for your search» y texto «Try with different ingredients». Debajo, en la pantalla (no dentro del componente), «Our most popular ones» con una rejilla de Recipe card. Uso: Recipe library en estado vacío (wireframe 485:6064 y móvil 486:14260). Clase CSS: .empty-state.",
+        "Propósito": "Mensaje de una búsqueda o un filtro que no devuelve recetas: título («We couldn't find any results for your search») y texto («Try with different ingredients»), centrados. Debajo, la página muestra el contenido alternativo, p. ej. «Our most popular ones» con una rejilla de Recipe card.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Rol: ninguno; es contenido de texto, sin `role`. El componente no anuncia nada: el cambio a «sin resultados» lo anuncia la página en la región de estado del patrón Library head. El título es un encabezado y su nivel lo fija la página (el ejemplo usa `h2`). No tiene elementos interactivos ni foco: el teclado pasa al contenido siguiente.",
+        "Cuándo usar / qué NO hace": "Cuando una búsqueda o un filtro devuelve cero resultados en un listado. No lleva botones: «Clear filters» va en el patrón Library head. No es un error de página ni una alerta (eso es Alert)."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "219:1663",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=219-1663",
+      "page": "Feedback & overlays",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Empty state de la Recipe library: sin resultados para la búsqueda o filtros. Título centrado (Desktop/h2) «We couldn't find any results for your search» y texto «Try with different ingredients». Debajo, en la pantalla (no dentro del componente), «Our most popular ones» con una rejilla de Recipe card. Uso: Recipe library en estado vacío (wireframe 485:6064 y móvil 486:14260). Clase CSS: .empty-state."
+    ],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/text/default",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/h2",
+          "font/size/desktop/body-m",
+          "font/size/desktop/h2",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/48",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 12,
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m"
+    ],
+    "classes": [
+      "empty-state",
+      "empty-state__text",
+      "empty-state__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Mensaje de una búsqueda o un filtro que no devuelve recetas: título («We couldn't find any results for your search») y texto («Try with different ingredients»), centrados. Debajo, la página muestra el contenido alternativo, p. ej. «Our most popular ones» con una rejilla de Recipe card.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Rol: ninguno; es contenido de texto, sin `role`. El componente no anuncia nada: el cambio a «sin resultados» lo anuncia la página en la región de estado del patrón Library head. El título es un encabezado y su nivel lo fija la página (el ejemplo usa `h2`). No tiene elementos interactivos ni foco: el teclado pasa al contenido siguiente.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Cuando una búsqueda o un filtro devuelve cero resultados en un listado. No lleva botones: «Clear filters» va en el patrón Library head. No es un error de página ni una alerta (eso es Alert).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "empty-state",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "219:1663",
+    "contract": "../../../../../../design-system/schemas/components/empty-state.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

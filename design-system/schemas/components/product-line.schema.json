@@ -1,0 +1,389 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:product-line",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Product line",
+    "slug": "product-line",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Product line: bloque de una línea de producto de la Product library (Yatekomo, Yakisoba, Sauces): packshot grande (placeholder 3D, sin fotografía) a la izquierda en Standard y, a la derecha, nombre de línea (h3), descripción, «Find your favourite flavour» (h4) y rejilla de Flavour tile (5 columnas en desktop, 2 en mobile). Surface=Light (crema/blanco) o Dark (tinta) para alternar bandas; Header (opcional) muestra la cabecera de formato («Cups», «Sauces»). Kind=Sauces: sin packshot, rejilla de Flavour tile Tall (3 columnas en desktop; carrusel horizontal en mobile). Uso: Product library (wireframe desktop 396:5932, móvil 396:12565). Clase CSS: .product-line (modificadores .product-line--dark y .product-line--sauces).",
+    "figmaPage": "Pattern / Libraries",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 6,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "c66257572af8",
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "figmaVersion": null,
+      "variantsChecked": [],
+      "by": "agent (Claude)"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "header",
+        "type": "boolean",
+        "default": true,
+        "figma": "Header#212:0"
+      },
+      {
+        "name": "surface",
+        "type": "enum",
+        "values": [
+          "Light",
+          "Dark"
+        ],
+        "default": "Light",
+        "figma": "Surface"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      },
+      {
+        "name": "kind",
+        "type": "enum",
+        "values": [
+          "Standard",
+          "Sauces"
+        ],
+        "default": "Standard",
+        "figma": "Kind"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "badge/natural/bg",
+      "badge/natural/text",
+      "badge/new/bg",
+      "badge/new/text",
+      "color/surface/card",
+      "color/surface/page",
+      "color/text/default",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/h3",
+      "font/line-height/mobile/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/h2",
+      "font/size/desktop/h3",
+      "font/size/mobile/label",
+      "font/style/body",
+      "font/style/display",
+      "product-card/media-bg",
+      "product-card/meta",
+      "product-card/title",
+      "radius/lg",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/32",
+      "space/4",
+      "space/48",
+      "space/64",
+      "space/8",
+      "space/80"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "badge",
+      "badge--hot",
+      "flavour-tile",
+      "flavour-tile__media",
+      "flavour-tile__name",
+      "product-line",
+      "product-line__description",
+      "product-line__grid",
+      "product-line__head",
+      "product-line__info",
+      "product-line__inner",
+      "product-line__name",
+      "product-line__pack",
+      "product-line__subtitle",
+      "section",
+      "section__lead",
+      "section__title"
+    ],
+    "example": "<section data-ds=\"product-line\" class=\"section product-line\" id=\"cups\" aria-labelledby=\"pl-yatekomo\">\n<div class=\"product-line__head\"><h2 class=\"section__title\">Cups</h2><p class=\"section__lead\">Ready in 3 minutes.</p></div>\n<div class=\"product-line__inner\">\n<div class=\"product-line__pack\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"product-line__info\">\n<h3 class=\"product-line__name\" id=\"pl-yatekomo\">Yatekomo</h3>\n<p class=\"product-line__description\">Take our word for it. Oriental-style noodles, no fuss, ready in 3 minutes.</p>\n<h4 class=\"product-line__subtitle\">Find your favourite flavour</h4>\n<ul class=\"product-line__grid\">\n<li><a class=\"flavour-tile\" href=\"/productos/chicken-yakisoba\"><span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"><span class=\"badge\">New</span></span><span class=\"flavour-tile__name\">Chicken</span></a></li>\n<li><a class=\"flavour-tile\" href=\"/productos/hot-spicy\"><span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"><span class=\"badge badge--hot\">Hot!</span></span><span class=\"flavour-tile__name\">Hot &amp; Spicy</span></a></li>\n</ul>\n</div>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "212:746",
+    "componentKey": "d244cadbf78e1ac32a2326e027c21282ffa2e9ae",
+    "propertyNames": {
+      "header": "Header#212:0",
+      "surface": "Surface",
+      "breakpoint": "Breakpoint",
+      "kind": "Kind"
+    },
+    "variantAxes": {
+      "Surface": [
+        "Light",
+        "Dark"
+      ],
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ],
+      "Kind": [
+        "Standard",
+        "Sauces"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Flavour tile",
+        "component": "Size=Square, State=Default",
+        "componentSlug": "flavour-tile",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=New",
+        "componentSlug": "badge",
+        "exposedAs": "Badge type#209:14",
+        "toggledBy": "Badge#209:7",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "Size=Square, State=Default",
+        "componentSlug": "flavour-tile",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=New",
+        "componentSlug": "badge",
+        "exposedAs": "Badge type#209:14",
+        "toggledBy": "Badge#209:7",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "Size=Square, State=Default",
+        "componentSlug": "flavour-tile",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=New",
+        "componentSlug": "badge",
+        "exposedAs": "Badge type#209:14",
+        "toggledBy": "Badge#209:7",
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "Size=Square, State=Default",
+        "componentSlug": "flavour-tile",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=Vegan",
+        "componentSlug": "badge",
+        "exposedAs": "Badge type#209:14",
+        "toggledBy": "Badge#209:7",
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "Size=Square, State=Default",
+        "componentSlug": "flavour-tile",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=New",
+        "componentSlug": "badge",
+        "exposedAs": "Badge type#209:14",
+        "toggledBy": "Badge#209:7",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "Size=Square, State=Default",
+        "componentSlug": "flavour-tile",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=New",
+        "componentSlug": "badge",
+        "exposedAs": "Badge type#209:14",
+        "toggledBy": "Badge#209:7",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "Size=Square, State=Default",
+        "componentSlug": "flavour-tile",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=Hot",
+        "componentSlug": "badge",
+        "exposedAs": "Badge type#209:14",
+        "toggledBy": "Badge#209:7",
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Flavour tile",
+        "component": "Size=Square, State=Default",
+        "componentSlug": "flavour-tile",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=New",
+        "componentSlug": "badge",
+        "exposedAs": "Badge type#209:14",
+        "toggledBy": "Badge#209:7",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/32",
+      "paddingLeft: space/64",
+      "paddingTop: space/80",
+      "paddingRight: space/64",
+      "paddingBottom: space/80",
+      "fills: color/surface/card",
+      "color: color/surface/card",
+      "itemSpacing: space/8",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h2",
+      "color: color/text/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: color/text/secondary",
+      "itemSpacing: space/48",
+      "topLeftRadius: radius/lg",
+      "topRightRadius: radius/lg",
+      "bottomLeftRadius: radius/lg",
+      "bottomRightRadius: radius/lg",
+      "fills: color/surface/page",
+      "color: color/surface/page",
+      "fills: product-card/meta",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: product-card/meta",
+      "itemSpacing: space/24",
+      "fontSize: font/size/desktop/h3",
+      "lineHeight: font/line-height/desktop/h3",
+      "itemSpacing: space/16",
+      "paddingLeft: space/8",
+      "paddingTop: space/8",
+      "paddingRight: space/8",
+      "paddingBottom: space/8",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: product-card/media-bg",
+      "color: product-card/media-bg",
+      "paddingTop: space/4",
+      "paddingBottom: space/4",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: badge/new/bg",
+      "color: badge/new/bg",
+      "fills: badge/new/text",
+      "fontSize: font/size/mobile/label",
+      "lineHeight: font/line-height/mobile/label",
+      "color: badge/new/text",
+      "fills: product-card/title",
+      "color: product-card/title",
+      "fills: badge/natural/bg",
+      "color: badge/natural/bg",
+      "fills: badge/natural/text",
+      "color: badge/natural/text"
+    ],
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m",
+      "Desktop/caption",
+      "Desktop/h3",
+      "Mobile/label"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/product-line.md",
+    "section": "Product line"
+  },
+  "relations": {
+    "uses": [
+      "badge",
+      "flavour-tile"
+    ],
+    "related": [
+      "anchor-nav",
+      "badge"
+    ]
+  }
+}

@@ -1,9 +1,9 @@
-### Nutrition panel   ⚙️ synced: 2026-10-22T09:37:04Z
+### Nutrition panel   ⚙️ synced: 2026-10-22T14:07:02Z
 
 <!-- ⚙️ GENERATED:start:nutrition-panel -->
-- **Figma:** `71:75` · página «Content» · COMPONENT · 1 variantes · última sync 2026-10-22T09:37:04Z
+- **Figma:** `71:75` · página «Content» · COMPONENT · 1 variantes · última sync 2026-10-22T14:07:02Z
 - **Descripción (Figma):** Panel de nutrición de la página de producto y de receta: título (h3) · base (por 100 g, % IR) · 7 Nutrition bar (energía, grasas, saturadas, hidratos, azúcares, proteínas, sal; Highlight en los claims del pack) · alérgenos en negrita · nota de validación. Accesible como lista de pares nutriente/valor (o <table> con <caption>); las barras son aria-hidden. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods.
-- **Anatomía:** `nutrition-bar` → Highlight=False, `nutrition-bar` → Highlight=True, `claim` → Type=Natural
+- **Anatomía:** `nutrition-bar` → Highlight=False, `nutrition-bar` → Highlight=False, `nutrition-bar` → Highlight=True, `claim` → Type=Natural, `nutrition-bar` → Highlight=False, `nutrition-bar` → Highlight=False, `nutrition-bar` → Highlight=False, `nutrition-bar` → Highlight=True, `claim` → Type=Natural
 - **API:** sin propiedades
 - **Iconos / instancias anidadas:** ninguno
 - **Tokens que consume:** `badge/natural/bg`, `badge/natural/text`, `border/width/thin`, `font/family/body`, `font/family/display`, `font/line-height/desktop/body-m`, `font/line-height/desktop/caption`, `font/line-height/desktop/h3`, `font/line-height/mobile/label`, `font/size/desktop/body-m`, `font/size/desktop/caption`, `font/size/desktop/h3`, `font/size/mobile/label`, `font/style/body`, `font/style/display`, `nutrition/allergen`, `nutrition/bg`, `nutrition/border`, `nutrition/fill`, `nutrition/fill-highlight`, `nutrition/label`, `nutrition/meta`, `nutrition/track`, `nutrition/value`, `radius/md`, `radius/pill`, `space/16`, `space/24`, `space/32`, `space/4`, `space/8`

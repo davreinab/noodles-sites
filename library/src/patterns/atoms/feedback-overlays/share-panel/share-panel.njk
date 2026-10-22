@@ -1,0 +1,19 @@
+{% macro render(data) %}
+{% raw %}<div data-ds="share-panel" class="share-panel">
+<h3 class="share-panel__title">Share on your socials</h3>
+<ul class="share-panel__socials">
+<li><a class="icon-button icon-button--secondary" href="https://wa.me/" aria-label="Share on WhatsApp"><span class="icon icon-whatsapp" aria-hidden="true"></span></a></li>
+<li><a class="icon-button icon-button--secondary" href="https://www.instagram.com/" aria-label="Share on Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
+<li><a class="icon-button icon-button--secondary" href="https://www.facebook.com/" aria-label="Share on Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a></li>
+<li><a class="icon-button icon-button--secondary" href="https://www.tiktok.com/" aria-label="Share on TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
+<li><a class="icon-button icon-button--secondary" href="https://x.com/" aria-label="Share on X"><span class="icon icon-x" aria-hidden="true"></span></a></li>
+<li><a class="icon-button icon-button--secondary" href="https://t.me/" aria-label="Share on Telegram"><span class="icon icon-telegram" aria-hidden="true"></span></a></li>
+</ul>
+<label class="share-panel__label" for="share-link">Page link</label>
+<div class="share-panel__row">
+<div class="share-panel__field"><span class="icon icon-link" aria-hidden="true"></span><input class="share-panel__input" id="share-link" type="text" value="https://example.com/recetas/spicy-noodle-salad" readonly></div>
+<button class="button button--secondary" type="button">Copy link</button>
+</div>
+<p class="share-panel__status" aria-live="polite"></p>
+</div>{% endraw %}
+{% endmacro %}

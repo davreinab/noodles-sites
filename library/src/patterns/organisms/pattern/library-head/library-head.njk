@@ -1,0 +1,29 @@
+{% macro render(data) %}
+{% if data.view == "todas" %}
+<p class="ds-gallery__note" style="font:14px/1.5 system-ui;color:#1f1f1f;max-width:70ch">No se han podido pintar: filtered=true (no hay clase ni atributo declarados para ella: declara su selector en modifiers).</p>
+{% else %}
+{% raw %}<section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title">
+<div class="library-head__inner">
+<div class="library-head__intro">
+<h1 class="page-title" id="lhead-title">Recipes</h1>
+<p class="library-head__lead">Explore and learn recipes to level up your dishes.</p>
+</div>
+<form class="search-field library-head__search" role="search" action="/recipes">
+<span class="icon icon-search" aria-hidden="true"></span>
+<label class="visually-hidden" for="lhead-q">Search a recipe or ingredient</label>
+<input class="search-field__input" id="lhead-q" name="q" type="search" placeholder="Search a recipe or ingredient">
+</form>
+<ul class="library-head__filters" aria-label="Filter recipes">
+<li><button class="chip" type="button" aria-pressed="true"><span class="icon icon-check" aria-hidden="true"></span>All</button></li>
+<li><button class="chip" type="button" aria-pressed="false">Less ingredients</button></li>
+<li><button class="chip" type="button" aria-pressed="false">Quick recipes</button></li>
+<li><button class="chip" type="button" aria-pressed="false">High protein</button></li>
+</ul>
+<div class="library-head__results">
+<p aria-live="polite"><strong>48</strong> results for your search</p>
+<button class="link" type="button"><span class="icon icon-trash" aria-hidden="true"></span>Clear filters</button>
+</div>
+</div>
+</section>{% endraw %}
+{% endif %}
+{% endmacro %}

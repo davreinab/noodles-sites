@@ -1,11 +1,45 @@
 {% macro render(data) %}
-{% raw %}<section data-ds="product-details" class="section product-details" id="ingredientes" aria-labelledby="pd-title">
+{% raw %}<div data-ds="product-details" class="product-details">
+<section class="section product-details__ingredients">
 <div class="section__inner">
-<h2 class="section__title" id="pd-title">Ingredientes y nutrición</h2>
 <div class="product-details__grid">
-<section class="ingredients" aria-label="Ingredientes"><ul class="ingredients__list"><li class="ingredient-item">Fideos de <strong>trigo</strong><span class="ingredient-item__percent">52 %</span></li></ul></section>
-<section class="nutrition-panel" aria-label="Nutrición"><ul class="nutrition-panel__list"><li class="nutrition-bar nutrition-bar--highlight"><div class="nutrition-bar__row"><span class="nutrition-bar__label">Sal</span><span class="nutrition-bar__amount"><span class="badge badge--natural">−20 %</span><span class="nutrition-bar__value">1,9 g</span><span class="nutrition-bar__percent">32 % IR</span></span></div><meter class="nutrition-bar__meter" min="0" max="100" value="32" aria-hidden="true"></meter></li></ul></section>
+<div class="product-details__media"><img src="/assets/ds/images/placeholder.svg" alt=""></div>
+<section class="ingredients" aria-labelledby="ing-title-2">
+<h2 class="ingredients__title" id="ing-title-2">Ingredients</h2>
+<p class="ingredients__note">100% natural with nothing added. We'll give you all the details.</p>
+<ul class="ingredients__list">
+<li class="ingredient-item"><span class="ingredient-item__percent">79% of content</span><span class="ingredient-item__name">Oriental noodles</span><span class="ingredient-item__text"><strong>Wheat</strong> flour, modified starch, salt, sodium and potassium carbonate</span></li>
+<li class="ingredient-item ingredient-item--secondary">Others: salt, spices, <strong>soy</strong> sauce (<strong>soy</strong>, <strong>wheat</strong>), garlic and onion.</li>
+</ul>
+<p class="ingredients__more">Still curious? <a class="link link--standalone ingredients__link" href="#etiqueta" aria-haspopup="dialog">View pack label <span class="icon icon-arrow-right" aria-hidden="true"></span></a></p>
+</section>
 </div>
 </div>
-</section>{% endraw %}
+</section>
+<section class="section product-details__nutrition" aria-labelledby="nut-title">
+<div class="section__inner">
+<div class="product-details__allergens-head">
+<h2 class="section__title" id="nut-title">Nutritional information</h2>
+<p class="product-details__lead">Per 100 g · % of the reference intake</p>
+</div>
+<ul class="nutrition-rings" tabindex="0" aria-label="Nutrition per 100 g (scroll to see all)">
+<li class="nutrition-ring"><div class="nutrition-ring__dial"><svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Energy 380 kcal, 19 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="19 100"/></svg><span class="nutrition-ring__value" aria-hidden="true">19 %</span></div><span class="nutrition-ring__name" aria-hidden="true">Energy</span><span class="nutrition-ring__amount" aria-hidden="true">380 kcal</span></li>
+<li class="nutrition-ring"><div class="nutrition-ring__dial"><svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Protein 8.3 g, 17 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="17 100"/></svg><span class="nutrition-ring__value" aria-hidden="true">17 %</span></div><span class="nutrition-ring__name" aria-hidden="true">Protein</span><span class="nutrition-ring__amount" aria-hidden="true">8.3 g</span></li>
+<li class="nutrition-ring"><div class="nutrition-ring__dial"><svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Carbohydrates 52 g, 20 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="20 100"/></svg><span class="nutrition-ring__value" aria-hidden="true">20 %</span></div><span class="nutrition-ring__name" aria-hidden="true">Carbohydrates</span><span class="nutrition-ring__amount" aria-hidden="true">52 g</span></li>
+<li class="nutrition-ring"><div class="nutrition-ring__dial"><svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Fat 15 g, 21 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="21 100"/></svg><span class="nutrition-ring__value" aria-hidden="true">21 %</span></div><span class="nutrition-ring__name" aria-hidden="true">Fat</span><span class="nutrition-ring__amount" aria-hidden="true">15 g</span></li>
+<li class="nutrition-ring"><div class="nutrition-ring__dial"><svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Fibre 1.9 g, 8 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="8 100"/></svg><span class="nutrition-ring__value" aria-hidden="true">8 %</span></div><span class="nutrition-ring__name" aria-hidden="true">Fibre</span><span class="nutrition-ring__amount" aria-hidden="true">1.9 g</span></li>
+<li class="nutrition-ring nutrition-ring--highlight"><div class="nutrition-ring__dial"><svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Salt 2.3 g, 38 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="38 100"/></svg><span class="nutrition-ring__value" aria-hidden="true">38 %</span></div><span class="nutrition-ring__name" aria-hidden="true">Salt</span><span class="nutrition-ring__amount" aria-hidden="true">2.3 g</span></li>
+</ul>
+<div class="product-details__allergens">
+<h3 class="product-details__subtitle">Main allergens</h3>
+<ul class="allergen-cards">
+<li class="allergen-card"><p class="allergen-card__name">Gluten or derivatives</p><p class="allergen-card__note">Not suitable for coeliacs</p></li>
+<li class="allergen-card"><p class="allergen-card__name">Nuts</p><p class="allergen-card__note">May contain traces</p></li>
+<li class="allergen-card"><p class="allergen-card__name">Eggs</p><p class="allergen-card__note">Contains preparations</p></li>
+</ul>
+<a class="link link--standalone" href="#alergenos" aria-haspopup="dialog">To see all allergens · Check the detailed table <span class="icon icon-arrow-right" aria-hidden="true"></span></a>
+</div>
+</div>
+</section>
+</div>{% endraw %}
 {% endmacro %}

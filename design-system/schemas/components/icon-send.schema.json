@@ -1,0 +1,72 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:icon-send",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Icon / send",
+    "slug": "icon-send",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Icono de envío (Lucide send), trazo 2.5, 24×24. Uso: enlace «Share recipe» de la cabecera de la ficha de receta (wireframe 396:6290).",
+    "figmaPage": "Iconography",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": false,
+    "anatomyHash": "e9d51dbe8204",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
+  },
+  "api": {
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "icon/color/default"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [],
+    "example": null,
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "208:56",
+    "componentKey": "3c18e5844975c795496e98102428136d5df04f03",
+    "propertyNames": {},
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
+      "strokes: icon/color/default",
+      "color: icon/color/default"
+    ],
+    "textStyles": []
+  },
+  "docs": {
+    "file": "design-system/docs/components/icon-send.md",
+    "section": "Icon / send"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

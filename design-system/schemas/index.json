@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-22T10:02:01Z",
+  "lastSync": "2026-10-22T14:07:02Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -621,6 +621,138 @@
       }
     },
     {
+      "id": "component:icon-link",
+      "name": "Icon / link",
+      "slug": "icon-link",
+      "kind": "component",
+      "contractPath": "./components/icon-link.schema.json",
+      "keywords": [
+        "icon",
+        "link"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "208:52",
+        "componentKey": "979ec77cbbebb2cecfad8f57ac439a34bcba9386"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-send",
+      "name": "Icon / send",
+      "slug": "icon-send",
+      "kind": "component",
+      "contractPath": "./components/icon-send.schema.json",
+      "keywords": [
+        "icon",
+        "send"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "208:56",
+        "componentKey": "3c18e5844975c795496e98102428136d5df04f03"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-trash",
+      "name": "Icon / trash",
+      "slug": "icon-trash",
+      "kind": "component",
+      "contractPath": "./components/icon-trash.schema.json",
+      "keywords": [
+        "icon",
+        "trash"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "208:63",
+        "componentKey": "7ea58ad45bad684a2e644156bb296275027c4df6"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-whatsapp",
+      "name": "Icon / whatsapp",
+      "slug": "icon-whatsapp",
+      "kind": "component",
+      "contractPath": "./components/icon-whatsapp.schema.json",
+      "keywords": [
+        "icon",
+        "whatsapp"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "208:66",
+        "componentKey": "efe73fa7fac7b6d27cb69516c98c1aa1e820ce16"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-facebook",
+      "name": "Icon / facebook",
+      "slug": "icon-facebook",
+      "kind": "component",
+      "contractPath": "./components/icon-facebook.schema.json",
+      "keywords": [
+        "facebook",
+        "icon"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "208:69",
+        "componentKey": "27ca19cc39def06f6ec2f072794fb32db1ac8e8c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:icon-telegram",
+      "name": "Icon / telegram",
+      "slug": "icon-telegram",
+      "kind": "component",
+      "contractPath": "./components/icon-telegram.schema.json",
+      "keywords": [
+        "icon",
+        "telegram"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "208:75",
+        "componentKey": "4d1f4a45624decd8e68943e5d52315ce48e1981b"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
       "id": "component:logo-gb-foods",
       "name": "Logo / GB Foods",
       "slug": "logo-gb-foods",
@@ -1144,6 +1276,120 @@
       }
     },
     {
+      "id": "component:anchor-nav-item",
+      "name": "Anchor nav item",
+      "slug": "anchor-nav-item",
+      "kind": "component",
+      "contractPath": "./components/anchor-nav-item.schema.json",
+      "keywords": [
+        "anchor",
+        "item",
+        "nav"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "210:57",
+        "componentKey": "91cc227997b285bd0f688ae2fbd5fc350ebd9237"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:anchor-nav",
+      "name": "Anchor nav",
+      "slug": "anchor-nav",
+      "kind": "component",
+      "contractPath": "./components/anchor-nav.schema.json",
+      "keywords": [
+        "anchor",
+        "nav"
+      ],
+      "dependencies": [
+        "anchor-nav-item"
+      ],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "210:84",
+        "componentKey": "78bfb1c5c48a697b5306a3002f38c9291f356e93"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "anchor-nav",
+          "anchor-nav__item",
+          "anchor-nav__label",
+          "anchor-nav__list",
+          "anchor-nav__thumb"
+        ]
+      }
+    },
+    {
+      "id": "component:pagination-item",
+      "name": "Pagination item",
+      "slug": "pagination-item",
+      "kind": "component",
+      "contractPath": "./components/pagination-item.schema.json",
+      "keywords": [
+        "icon",
+        "item",
+        "pagination"
+      ],
+      "dependencies": [
+        "icon-arrow-left"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "219:1639",
+        "componentKey": "2d1e0f204af61a060130f3e200df18384e4c521d"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:pagination",
+      "name": "Pagination",
+      "slug": "pagination",
+      "kind": "component",
+      "contractPath": "./components/pagination.schema.json",
+      "keywords": [
+        "icon",
+        "pagination"
+      ],
+      "dependencies": [
+        "icon-arrow-left",
+        "pagination-item"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "219:1662",
+        "componentKey": "96ece7d1e0b1c79bf1b80698ffddf3cecb31b8aa"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "icon",
+          "icon-arrow-left",
+          "icon-arrow-right",
+          "pagination",
+          "pagination__ellipsis",
+          "pagination__link",
+          "pagination__list",
+          "pagination__page",
+          "pagination__status",
+          "pagination__text"
+        ]
+      }
+    },
+    {
       "id": "component:badge",
       "name": "Badge",
       "slug": "badge",
@@ -1163,8 +1409,10 @@
         "path": "design-system/css/components.css",
         "classes": [
           "badge",
+          "badge--hot",
           "badge--natural",
-          "badge--neutral"
+          "badge--neutral",
+          "badge--vegan"
         ]
       }
     },
@@ -1347,6 +1595,38 @@
       }
     },
     {
+      "id": "component:flavour-tile",
+      "name": "Flavour tile",
+      "slug": "flavour-tile",
+      "kind": "component",
+      "contractPath": "./components/flavour-tile.schema.json",
+      "keywords": [
+        "flavour",
+        "icon",
+        "tile"
+      ],
+      "dependencies": [
+        "badge"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "209:138",
+        "componentKey": "ea68911207ad0689488650a916061578eac9656a"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "badge",
+          "badge--hot",
+          "flavour-tile",
+          "flavour-tile--tall",
+          "flavour-tile__media",
+          "flavour-tile__name"
+        ]
+      }
+    },
+    {
       "id": "component:accordion-item",
       "name": "Accordion item",
       "slug": "accordion-item",
@@ -1400,7 +1680,9 @@
         "classes": [
           "ingredient-item",
           "ingredient-item--secondary",
-          "ingredient-item__percent"
+          "ingredient-item__name",
+          "ingredient-item__percent",
+          "ingredient-item__text"
         ]
       }
     },
@@ -1432,9 +1714,13 @@
           "icon-arrow-right",
           "ingredient-item",
           "ingredient-item--secondary",
+          "ingredient-item__name",
           "ingredient-item__percent",
+          "ingredient-item__text",
           "ingredients",
+          "ingredients__link",
           "ingredients__list",
+          "ingredients__more",
           "ingredients__note",
           "ingredients__title",
           "link",
@@ -1543,6 +1829,7 @@
           "step__media",
           "step__number",
           "step__text",
+          "step__title",
           "steps"
         ]
       }
@@ -1574,20 +1861,21 @@
           "button",
           "button--secondary",
           "icon",
+          "icon-arrow-right",
           "icon-button",
           "icon-button--secondary",
           "icon-pause",
           "icon-play",
           "icon-rotate-ccw",
           "timer",
+          "timer__bar",
           "timer__controls",
-          "timer__dial",
           "timer__label",
-          "timer__progress",
-          "timer__readout",
-          "timer__ring",
+          "timer__reset",
+          "timer__reset-icon",
+          "timer__subtitle",
           "timer__time",
-          "timer__track",
+          "timer__title",
           "visually-hidden"
         ]
       }
@@ -1623,6 +1911,215 @@
           "video-player__play",
           "video-player__poster",
           "video-player__title"
+        ]
+      }
+    },
+    {
+      "id": "component:allergen-table-cell",
+      "name": "Allergen table / Cell",
+      "slug": "allergen-table-cell",
+      "kind": "component",
+      "contractPath": "./components/allergen-table-cell.schema.json",
+      "keywords": [
+        "allergen",
+        "cell",
+        "table"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "193:176",
+        "componentKey": "f4765927bcdb36ea7f3f875b4ed46556c580c3d3"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": []
+      }
+    },
+    {
+      "id": "component:nutrition-ring",
+      "name": "Nutrition ring",
+      "slug": "nutrition-ring",
+      "kind": "component",
+      "contractPath": "./components/nutrition-ring.schema.json",
+      "keywords": [
+        "nutrition",
+        "ring"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "193:209",
+        "componentKey": "bb0a37deeebbad33a8bf87af9d99886abe535397"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "nutrition-ring",
+          "nutrition-ring--highlight",
+          "nutrition-ring__amount",
+          "nutrition-ring__dial",
+          "nutrition-ring__fill",
+          "nutrition-ring__name",
+          "nutrition-ring__svg",
+          "nutrition-ring__track",
+          "nutrition-ring__value"
+        ]
+      }
+    },
+    {
+      "id": "component:allergen-card",
+      "name": "Allergen card",
+      "slug": "allergen-card",
+      "kind": "component",
+      "contractPath": "./components/allergen-card.schema.json",
+      "keywords": [
+        "allergen",
+        "card"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "193:210",
+        "componentKey": "5b3b5e456df7a40ee84f37571de7e6da036a2e5b"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "allergen-card",
+          "allergen-card__name",
+          "allergen-card__note"
+        ]
+      }
+    },
+    {
+      "id": "component:allergen-table",
+      "name": "Allergen table",
+      "slug": "allergen-table",
+      "kind": "component",
+      "contractPath": "./components/allergen-table.schema.json",
+      "keywords": [
+        "allergen",
+        "table"
+      ],
+      "dependencies": [
+        "allergen-table-cell"
+      ],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "193:344",
+        "componentKey": "d17d549a35acf65008ead29f771cb012ba8150de"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "allergen-table",
+          "allergen-table__intro",
+          "allergen-table__item",
+          "allergen-table__item--present",
+          "allergen-table__list",
+          "allergen-table__mark",
+          "allergen-table__name",
+          "visually-hidden"
+        ]
+      }
+    },
+    {
+      "id": "component:nutrition-label",
+      "name": "Nutrition label",
+      "slug": "nutrition-label",
+      "kind": "component",
+      "contractPath": "./components/nutrition-label.schema.json",
+      "keywords": [
+        "label",
+        "nutrition"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "194:249",
+        "componentKey": "ab52d1eeb059c26d44d3bba36b0914147bb2831c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "nutrition-label",
+          "nutrition-label__caption",
+          "nutrition-label__note",
+          "nutrition-label__sub",
+          "visually-hidden"
+        ]
+      }
+    },
+    {
+      "id": "component:recipe-ingredient",
+      "name": "Recipe ingredient",
+      "slug": "recipe-ingredient",
+      "kind": "component",
+      "contractPath": "./components/recipe-ingredient.schema.json",
+      "keywords": [
+        "ingredient",
+        "recipe"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "222:1906",
+        "componentKey": "1a9c993138da878a15a74737469ab4a3054922a6"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "recipe-ingredient",
+          "recipe-ingredient--brand",
+          "recipe-ingredient__amount",
+          "recipe-ingredient__info",
+          "recipe-ingredient__link",
+          "recipe-ingredient__name",
+          "recipe-ingredient__thumb"
+        ]
+      }
+    },
+    {
+      "id": "component:recipe-macros",
+      "name": "Recipe macros",
+      "slug": "recipe-macros",
+      "kind": "component",
+      "contractPath": "./components/recipe-macros.schema.json",
+      "keywords": [
+        "icon",
+        "macros",
+        "recipe"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "222:1907",
+        "componentKey": "0e99c0b2f97fc7c642593f4ac9a2380bc661c456"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "button",
+          "button--secondary",
+          "recipe-macros",
+          "recipe-macros__action",
+          "recipe-macros__head",
+          "recipe-macros__list",
+          "recipe-macros__name",
+          "recipe-macros__row",
+          "recipe-macros__title",
+          "recipe-macros__value"
         ]
       }
     },
@@ -1762,6 +2259,87 @@
           "icon-message-circle",
           "suggestion-bubble",
           "suggestion-bubble__label"
+        ]
+      }
+    },
+    {
+      "id": "component:empty-state",
+      "name": "Empty state",
+      "slug": "empty-state",
+      "kind": "component",
+      "contractPath": "./components/empty-state.schema.json",
+      "keywords": [
+        "empty",
+        "state"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "219:1663",
+        "componentKey": "d7dadbb2b6d4416b338168e137a303474a53bd44"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "empty-state",
+          "empty-state__text",
+          "empty-state__title"
+        ]
+      }
+    },
+    {
+      "id": "component:share-panel",
+      "name": "Share panel",
+      "slug": "share-panel",
+      "kind": "component",
+      "contractPath": "./components/share-panel.schema.json",
+      "keywords": [
+        "icon",
+        "panel",
+        "share"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right",
+        "icon-button",
+        "icon-facebook",
+        "icon-instagram",
+        "icon-link",
+        "icon-telegram",
+        "icon-tiktok",
+        "icon-whatsapp",
+        "icon-x"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "222:2027",
+        "componentKey": "f2dae2a711e1d3cbb3913c281579add6833ba259"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "button",
+          "button--secondary",
+          "icon",
+          "icon-button",
+          "icon-button--secondary",
+          "icon-facebook",
+          "icon-instagram",
+          "icon-link",
+          "icon-telegram",
+          "icon-tiktok",
+          "icon-whatsapp",
+          "icon-x",
+          "share-panel",
+          "share-panel__field",
+          "share-panel__input",
+          "share-panel__label",
+          "share-panel__row",
+          "share-panel__socials",
+          "share-panel__status",
+          "share-panel__title"
         ]
       }
     },
@@ -1923,7 +2501,8 @@
         "decoration-noodle",
         "icon-arrow-left",
         "icon-arrow-right",
-        "icon-button"
+        "icon-button",
+        "icon-pause"
       ],
       "hasIcon": true,
       "figmaSource": {
@@ -2292,15 +2871,17 @@
         "library"
       ],
       "dependencies": [
-        "badge",
-        "button",
         "chip",
-        "icon-arrow-right",
+        "icon-arrow-left",
         "icon-check",
-        "link",
-        "product-card",
-        "product-filter",
-        "tab"
+        "icon-close",
+        "icon-search",
+        "icon-timer",
+        "library-head",
+        "pagination",
+        "pagination-item",
+        "recipe-card",
+        "search-field"
       ],
       "hasIcon": true,
       "figmaSource": {
@@ -2311,22 +2892,28 @@
       "codeSource": {
         "path": "design-system/css/components.css",
         "classes": [
-          "button",
-          "button--secondary",
+          "chip",
+          "icon",
+          "icon-arrow-left",
+          "icon-arrow-right",
+          "icon-timer",
           "library",
           "library__grid",
-          "library__header",
           "library__more",
-          "page-title",
-          "product-card",
-          "product-card__body",
-          "product-card__name",
-          "product-filter",
-          "product-filter__group",
-          "product-filter__label",
-          "product-filter__options",
-          "section__lead",
-          "tab"
+          "pagination",
+          "pagination__ellipsis",
+          "pagination__link",
+          "pagination__list",
+          "pagination__page",
+          "pagination__status",
+          "pagination__text",
+          "recipe-card",
+          "recipe-card__body",
+          "recipe-card__link",
+          "recipe-card__media",
+          "recipe-card__meta",
+          "recipe-card__products",
+          "recipe-card__title"
         ]
       }
     },
@@ -2367,6 +2954,176 @@
       }
     },
     {
+      "id": "pattern:library-hero",
+      "name": "Library hero",
+      "slug": "library-hero",
+      "kind": "pattern",
+      "contractPath": "./components/library-hero.schema.json",
+      "keywords": [
+        "hero",
+        "library"
+      ],
+      "dependencies": [
+        "badge"
+      ],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "211:327",
+        "componentKey": "349efa3f4bb78711ab369312b5647fe7f58f5b6a"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "badge",
+          "library-hero",
+          "library-hero__feature",
+          "library-hero__heading",
+          "library-hero__info",
+          "library-hero__inner",
+          "library-hero__media",
+          "library-hero__pack",
+          "library-hero__text",
+          "library-hero__title",
+          "page-title",
+          "section"
+        ]
+      }
+    },
+    {
+      "id": "pattern:product-line",
+      "name": "Product line",
+      "slug": "product-line",
+      "kind": "pattern",
+      "contractPath": "./components/product-line.schema.json",
+      "keywords": [
+        "line",
+        "product"
+      ],
+      "dependencies": [
+        "badge",
+        "flavour-tile"
+      ],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "212:746",
+        "componentKey": "d244cadbf78e1ac32a2326e027c21282ffa2e9ae"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "badge",
+          "badge--hot",
+          "flavour-tile",
+          "flavour-tile__media",
+          "flavour-tile__name",
+          "product-line",
+          "product-line__description",
+          "product-line__grid",
+          "product-line__head",
+          "product-line__info",
+          "product-line__inner",
+          "product-line__name",
+          "product-line__pack",
+          "product-line__subtitle",
+          "section",
+          "section__lead",
+          "section__title"
+        ]
+      }
+    },
+    {
+      "id": "pattern:library-head",
+      "name": "Library head",
+      "slug": "library-head",
+      "kind": "pattern",
+      "contractPath": "./components/library-head.schema.json",
+      "keywords": [
+        "head",
+        "icon",
+        "library"
+      ],
+      "dependencies": [
+        "chip",
+        "icon-check",
+        "icon-close",
+        "icon-search",
+        "search-field"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "219:1839",
+        "componentKey": "d5e7974870a8e8e885ecfa9f467990324683d348"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "chip",
+          "icon",
+          "icon-check",
+          "icon-search",
+          "icon-trash",
+          "library-head",
+          "library-head__filters",
+          "library-head__inner",
+          "library-head__intro",
+          "library-head__lead",
+          "library-head__results",
+          "library-head__search",
+          "link",
+          "page-title",
+          "search-field",
+          "search-field__input",
+          "section",
+          "visually-hidden"
+        ]
+      }
+    },
+    {
+      "id": "pattern:recipe-submit",
+      "name": "Recipe submit",
+      "slug": "recipe-submit",
+      "kind": "pattern",
+      "contractPath": "./components/recipe-submit.schema.json",
+      "keywords": [
+        "icon",
+        "recipe",
+        "submit"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right",
+        "icon-circle-alert",
+        "textarea"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "219:1911",
+        "componentKey": "9f6a03fde4c66bdd79c907cb51012e2d8ee71c52"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "button",
+          "field",
+          "field__control",
+          "field__control--textarea",
+          "field__helper",
+          "field__label",
+          "recipe-submit",
+          "recipe-submit__form",
+          "recipe-submit__inner",
+          "recipe-submit__intro",
+          "recipe-submit__lead",
+          "recipe-submit__title",
+          "section"
+        ]
+      }
+    },
+    {
       "id": "pattern:product-hero",
       "name": "Product hero",
       "slug": "product-hero",
@@ -2379,8 +3136,8 @@
       ],
       "dependencies": [
         "badge",
-        "button",
-        "icon-arrow-right",
+        "chip",
+        "icon-arrow-left",
         "icon-check",
         "link"
       ],
@@ -2394,28 +3151,24 @@
         "path": "design-system/css/components.css",
         "classes": [
           "badge",
-          "badge--natural",
-          "button",
-          "button--l",
+          "chip",
           "icon",
-          "icon-arrow-right",
-          "icon-check",
+          "icon-arrow-left",
           "link",
+          "link--dark",
           "link--standalone",
-          "media-frame",
           "page-title",
           "product-hero",
-          "product-hero__actions",
+          "product-hero__back",
+          "product-hero__chips",
           "product-hero__description",
-          "product-hero__gallery",
           "product-hero__grid",
-          "product-hero__highlights",
           "product-hero__info",
-          "product-hero__line",
-          "product-hero__main",
+          "product-hero__media",
+          "product-hero__pack",
+          "product-hero__photo",
           "product-hero__tags",
-          "product-hero__thumb",
-          "product-hero__thumbs",
+          "product-hero__title",
           "section",
           "section__inner"
         ]
@@ -2433,13 +3186,12 @@
         "product"
       ],
       "dependencies": [
-        "badge",
+        "allergen-card",
         "icon-arrow-right",
         "ingredient-item",
         "ingredients",
         "link",
-        "nutrition-bar",
-        "nutrition-panel"
+        "nutrition-ring"
       ],
       "hasIcon": true,
       "figmaSource": {
@@ -2450,24 +3202,44 @@
       "codeSource": {
         "path": "design-system/css/components.css",
         "classes": [
-          "badge",
-          "badge--natural",
+          "allergen-card",
+          "allergen-card__name",
+          "allergen-card__note",
+          "allergen-cards",
+          "icon",
+          "icon-arrow-right",
           "ingredient-item",
+          "ingredient-item--secondary",
+          "ingredient-item__name",
           "ingredient-item__percent",
+          "ingredient-item__text",
           "ingredients",
+          "ingredients__link",
           "ingredients__list",
-          "nutrition-bar",
-          "nutrition-bar--highlight",
-          "nutrition-bar__amount",
-          "nutrition-bar__label",
-          "nutrition-bar__meter",
-          "nutrition-bar__percent",
-          "nutrition-bar__row",
-          "nutrition-bar__value",
-          "nutrition-panel",
-          "nutrition-panel__list",
+          "ingredients__more",
+          "ingredients__note",
+          "ingredients__title",
+          "link",
+          "link--standalone",
+          "nutrition-ring",
+          "nutrition-ring--highlight",
+          "nutrition-ring__amount",
+          "nutrition-ring__dial",
+          "nutrition-ring__fill",
+          "nutrition-ring__name",
+          "nutrition-ring__svg",
+          "nutrition-ring__track",
+          "nutrition-ring__value",
+          "nutrition-rings",
           "product-details",
+          "product-details__allergens",
+          "product-details__allergens-head",
           "product-details__grid",
+          "product-details__ingredients",
+          "product-details__lead",
+          "product-details__media",
+          "product-details__nutrition",
+          "product-details__subtitle",
           "section",
           "section__inner",
           "section__title"
@@ -2502,12 +3274,18 @@
         "path": "design-system/css/components.css",
         "classes": [
           "button",
+          "button--secondary",
           "icon",
           "icon-play",
           "preparation",
           "preparation__grid",
           "preparation__media",
+          "preparation__steps",
+          "preparation__steps--first",
+          "preparation__steps--second",
+          "preparation__subtitle",
           "section",
+          "section__header",
           "section__inner",
           "section__title",
           "step",
@@ -2516,9 +3294,16 @@
           "step__text",
           "steps",
           "timer",
+          "timer__bar",
           "timer__controls",
+          "timer__label",
+          "timer__subtitle",
+          "timer__time",
+          "timer__title",
           "video-player",
-          "video-player__play"
+          "video-player__duration",
+          "video-player__play",
+          "visually-hidden"
         ]
       }
     },
@@ -2535,9 +3320,9 @@
       ],
       "dependencies": [
         "chip",
+        "icon-arrow-left",
         "icon-check",
-        "icon-circle-check",
-        "icon-timer"
+        "icon-send"
       ],
       "hasIcon": true,
       "figmaSource": {
@@ -2551,27 +3336,117 @@
           "chip",
           "chip--m",
           "icon",
-          "icon-circle-check",
+          "icon-arrow-left",
+          "icon-send",
           "icon-timer",
+          "link",
           "media-frame",
           "page-title",
           "recipe-hero",
+          "recipe-hero__back",
           "recipe-hero__description",
           "recipe-hero__grid",
           "recipe-hero__info",
-          "recipe-hero__kicker",
           "recipe-hero__media",
           "recipe-hero__meta",
           "recipe-hero__products",
-          "recipe-hero__products-label",
           "section",
           "section__inner"
+        ]
+      }
+    },
+    {
+      "id": "pattern:recipe-ingredients",
+      "name": "Recipe ingredients",
+      "slug": "recipe-ingredients",
+      "kind": "pattern",
+      "contractPath": "./components/recipe-ingredients.schema.json",
+      "keywords": [
+        "icon",
+        "ingredients",
+        "recipe"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right",
+        "recipe-ingredient",
+        "recipe-macros"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "222:2116",
+        "componentKey": "e2a27cf489669e948d91d94b1025c3ec91e41ea3"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "button",
+          "button--secondary",
+          "recipe-ingredient",
+          "recipe-ingredient--brand",
+          "recipe-ingredient__amount",
+          "recipe-ingredient__info",
+          "recipe-ingredient__link",
+          "recipe-ingredient__name",
+          "recipe-ingredient__thumb",
+          "recipe-ingredients",
+          "recipe-ingredients__body",
+          "recipe-ingredients__list",
+          "recipe-macros",
+          "recipe-macros__action",
+          "recipe-macros__head",
+          "recipe-macros__list",
+          "recipe-macros__name",
+          "recipe-macros__row",
+          "recipe-macros__title",
+          "recipe-macros__value",
+          "section",
+          "section__header",
+          "section__lead",
+          "section__title"
+        ]
+      }
+    },
+    {
+      "id": "pattern:recipe-steps",
+      "name": "Recipe steps",
+      "slug": "recipe-steps",
+      "kind": "pattern",
+      "contractPath": "./components/recipe-steps.schema.json",
+      "keywords": [
+        "recipe",
+        "steps"
+      ],
+      "dependencies": [
+        "step"
+      ],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "224:487",
+        "componentKey": "5b41883268c77f6606dffd0eaff85bea7b9f4bd6"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "recipe-steps",
+          "section",
+          "section__header",
+          "section__lead",
+          "section__title",
+          "step",
+          "step__content",
+          "step__number",
+          "step__text",
+          "step__title",
+          "steps"
         ]
       }
     }
   ],
   "counts": {
-    "atoms": 59,
-    "patterns": 18
+    "atoms": 79,
+    "patterns": 24
   }
 }

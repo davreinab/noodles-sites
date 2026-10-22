@@ -1,13 +1,31 @@
 {% macro render(data) %}
 {% raw %}<section data-ds="preparation" class="section preparation" aria-labelledby="prep-title">
 <div class="section__inner">
-<h2 class="section__title" id="prep-title">Preparación</h2>
+<header class="section__header">
+<h2 class="section__title" id="prep-title">Preparation</h2>
+<p class="preparation__subtitle">Ready in just 4 steps</p>
+</header>
 <div class="preparation__grid">
-<ol class="steps"><li class="step"><span class="step__number" aria-hidden="true">1</span><div class="step__content"><p class="step__text">Abre la tapa hasta la mitad.</p></div></li></ol>
-<div class="preparation__media">
-<div class="video-player"><button class="video-player__play" type="button" aria-label="Ver la preparación (0:30)"><span class="icon icon-play" aria-hidden="true"></span></button></div>
-<section class="timer" data-state="idle" aria-label="Temporizador"><div class="timer__controls"><button class="button" type="button"><span class="icon icon-play" aria-hidden="true"></span>Empezar</button></div></section>
+<div class="video-player preparation__media"><button class="video-player__play" type="button" aria-label="Watch the preparation video (0:45)"><span class="icon icon-play" aria-hidden="true"></span></button><span class="video-player__duration">0:45</span></div>
+<ol class="steps preparation__steps preparation__steps--first">
+<li class="step"><span class="step__number" aria-hidden="true">1</span><div class="step__content"><p class="step__text">Open the lid halfway and add boiling water up to the mark.</p></div></li>
+<li class="step"><span class="step__number" aria-hidden="true">2</span><div class="step__content"><p class="step__text">Leave to stand for 3 minutes.</p></div></li>
+</ol>
+<section class="timer" data-state="idle" aria-labelledby="timer-title-prep">
+<h3 class="timer__title" id="timer-title-prep">Not a second more!</h3>
+<p class="timer__subtitle">Use our timer to prepare your Yatekomo.</p>
+<span class="timer__time" role="timer">3:00</span>
+<p class="timer__label">Ready</p>
+<progress class="timer__bar" max="100" value="100" aria-label="Time remaining"></progress>
+<div class="timer__controls">
+<button class="button button--secondary" type="button"><span class="icon icon-play" aria-hidden="true"></span>Start</button>
 </div>
+<p class="visually-hidden" aria-live="polite"></p>
+</section>
+<ol class="steps preparation__steps preparation__steps--second" start="3">
+<li class="step"><span class="step__number" aria-hidden="true">3</span><div class="step__content"><p class="step__text">Drain the water (careful! contents very hot).</p></div></li>
+<li class="step"><span class="step__number" aria-hidden="true">4</span><div class="step__content"><p class="step__text">Add the sauce sachet and enjoy your Yatekomo.</p></div></li>
+</ol>
 </div>
 </div>
 </section>{% endraw %}

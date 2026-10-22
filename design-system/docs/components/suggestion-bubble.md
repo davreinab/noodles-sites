@@ -1,8 +1,8 @@
-### Suggestion bubble   ⚙️ synced: 2026-10-22T09:37:04Z
+### Suggestion bubble   ⚙️ synced: 2026-10-22T14:07:02Z
 
 <!-- ⚙️ GENERATED:start:suggestion-bubble -->
-- **Figma:** `81:87` · página «Feedback & overlays» · COMPONENT_SET · 6 variantes · última sync 2026-10-22T09:37:04Z
-- **Descripción (Figma):** Botón flotante (suggestion box / Babelbox) hacia el formulario externo de Calidad. Fijo abajo a la derecha (layout/margin desde los bordes), layer/floating; no tapa el CTA del Mobile menu ni el Toast (que sube por encima). Expanded=True al cargar: icono + «Sugerencias» + external-link; al hacer scroll pasa a Expanded=False (solo icono, 56 px) y respeta prefers-reduced-motion. Es un <a target="_blank" rel="noopener"> con nombre accesible «Sugerencias (abre en una pestaña nueva)» también en la versión plegada. Hover: fondo amarillo de marca y elevation/2; Focus: anillo suggestion/focus-ring.
+- **Figma:** `81:87` · página «Feedback & overlays» · COMPONENT_SET · 6 variantes · última sync 2026-10-22T14:07:02Z
+- **Descripción (Figma):** RETIRADO (2026-10-22): no se usa; la vía de sugerencias es la caja del Footer (wireframe UX). Botón flotante (suggestion box / Babelbox) hacia el formulario externo de Calidad. Fijo abajo a la derecha (layout/margin desde los bordes), layer/floating; no tapa el CTA del Mobile menu ni el Toast (que sube por encima). Expanded=True al cargar: icono + «Sugerencias» + external-link; al hacer scroll pasa a Expanded=False (solo icono, 56 px) y respeta prefers-reduced-motion. Es un <a target="_blank" rel="noopener"> con nombre accesible «Sugerencias (abre en una pestaña nueva)» también en la versión plegada. Hover: fondo amarillo de marca y elevation/2; Focus: anillo suggestion/focus-ring.
 - **Anatomía:** `icon` → Icon / message-circle, `icon-external` → Icon / external-link
 - **API:** `label` (string, por defecto Sugerencias) · `icon` (icon, por defecto Icon / message-circle) · `expanded` (boolean, por defecto true)
 - **Estados de CSS:** Hover, Focus

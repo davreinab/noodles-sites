@@ -2,7 +2,7 @@
 
 # GB Noodles · Microsites · Assets  ·  _(iconos y fuentes exportados de Figma)_
 
-> Última sync: 2026-10-22T09:37:04Z. Los archivos viven en `../assets/icons/` y `../assets/fonts/`; las pantallas los referencian desde ahí. No existe ningún otro `img/` ni `fonts/` en el proyecto.
+> Última sync: 2026-10-22T14:07:02Z. Los archivos viven en `../assets/icons/` y `../assets/fonts/`; las pantallas los referencian desde ahí. No existe ningún otro `img/` ni `fonts/` en el proyecto.
 
 ## Iconos (`../assets/icons/`)
 | Archivo | Componente Figma | Node ID | Tamaños (tokens `--icon-size-*`) | Uso |
@@ -30,6 +30,12 @@
 | `circle-check.svg` | Icon / circle-check | `76:65` | `--icon-button-size-m`, `--icon-button-size-l`, `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI (Alert Success, temporizador) |
 | `triangle-alert.svg` | Icon / triangle-alert | `76:70` | `--icon-button-size-m`, `--icon-button-size-l`, `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI (Alert de advertencia) |
 | `message-circle.svg` | Icon / message-circle | `76:73` | `--icon-button-size-m`, `--icon-button-size-l`, `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | glifo UI (Suggestion bubble) |
+| `facebook.svg` | unknown (no está en sync/icons.json) | `unknown` | `--icon-button-size-m`, `--icon-button-size-l`, `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | — |
+| `link.svg` | unknown (no está en sync/icons.json) | `unknown` | `--icon-button-size-m`, `--icon-button-size-l`, `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | — |
+| `send.svg` | unknown (no está en sync/icons.json) | `unknown` | `--icon-button-size-m`, `--icon-button-size-l`, `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | — |
+| `telegram.svg` | unknown (no está en sync/icons.json) | `unknown` | `--icon-button-size-m`, `--icon-button-size-l`, `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | — |
+| `trash.svg` | unknown (no está en sync/icons.json) | `unknown` | `--icon-button-size-m`, `--icon-button-size-l`, `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | — |
+| `whatsapp.svg` | unknown (no está en sync/icons.json) | `unknown` | `--icon-button-size-m`, `--icon-button-size-l`, `--icon-size-sm`, `--icon-size-md`, `--icon-size-lg`, `--icon-size-xl` | — |
 
 ## Fuentes (`../assets/fonts/`)
 | Archivo | Familia · peso | Origen (Figma / Google Fonts / licencia) | Token `--family-*` | Notas |

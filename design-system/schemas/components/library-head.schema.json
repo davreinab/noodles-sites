@@ -1,0 +1,372 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:library-head",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Library head",
+    "slug": "library-head",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Library head: cabecera de la Recipe library: título de página («Recipes»), subtítulo («Explore and learn recipes to level up your dishes.»), Search field («Search a recipe or ingredient», sin etiqueta visible: aria-label «Buscar» y role=search) y fila de chips de filtro (All, Less ingredients, Quick recipes, High protein, Single, +2 people, Spicy) con aria-pressed. State=Default: All seleccionado. State=Filtered: un chip seleccionado (Less ingredients), fila «48 results for your search» (48 en negrita) y «Clear filters» con Icon / trash a la derecha. Mobile: chips en fila desplazable. Fondo crema (surface/page). Uso: Recipe library (wireframe desktop 171:3808, estados 483:5711 y 485:6064; móvil 486:13025 y 265:3948). Clase CSS: .library-head (.library-head--filtered).",
+    "figmaPage": "Pattern / Libraries",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 4,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "6b87de4a1cc5",
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "figmaVersion": null,
+      "variantsChecked": [],
+      "by": "agent (Claude)"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "filtered",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Filtered"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thin",
+      "chip/bg",
+      "chip/bg-selected",
+      "chip/border",
+      "chip/height/m",
+      "chip/text",
+      "chip/text-selected",
+      "color/surface/page",
+      "color/text/default",
+      "color/text/secondary",
+      "field/bg",
+      "field/border",
+      "field/icon",
+      "field/placeholder",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/h1",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
+      "font/size/desktop/body-s",
+      "font/size/desktop/h1",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/md",
+      "icon/size/sm",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/48",
+      "space/64",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "chip",
+      "icon",
+      "icon-check",
+      "icon-search",
+      "icon-trash",
+      "library-head",
+      "library-head__filters",
+      "library-head__inner",
+      "library-head__intro",
+      "library-head__lead",
+      "library-head__results",
+      "library-head__search",
+      "link",
+      "page-title",
+      "search-field",
+      "search-field__input",
+      "section",
+      "visually-hidden"
+    ],
+    "example": "<section data-ds=\"library-head\" class=\"section library-head\" aria-labelledby=\"lhead-title\">\n<div class=\"library-head__inner\">\n<div class=\"library-head__intro\">\n<h1 class=\"page-title\" id=\"lhead-title\">Recipes</h1>\n<p class=\"library-head__lead\">Explore and learn recipes to level up your dishes.</p>\n</div>\n<form class=\"search-field library-head__search\" role=\"search\" action=\"/recipes\">\n<span class=\"icon icon-search\" aria-hidden=\"true\"></span>\n<label class=\"visually-hidden\" for=\"lhead-q\">Search a recipe or ingredient</label>\n<input class=\"search-field__input\" id=\"lhead-q\" name=\"q\" type=\"search\" placeholder=\"Search a recipe or ingredient\">\n</form>\n<ul class=\"library-head__filters\" aria-label=\"Filter recipes\">\n<li><button class=\"chip\" type=\"button\" aria-pressed=\"true\"><span class=\"icon icon-check\" aria-hidden=\"true\"></span>All</button></li>\n<li><button class=\"chip\" type=\"button\" aria-pressed=\"false\">Less ingredients</button></li>\n<li><button class=\"chip\" type=\"button\" aria-pressed=\"false\">Quick recipes</button></li>\n<li><button class=\"chip\" type=\"button\" aria-pressed=\"false\">High protein</button></li>\n</ul>\n<div class=\"library-head__results\">\n<p aria-live=\"polite\"><strong>48</strong> results for your search</p>\n<button class=\"link\" type=\"button\"><span class=\"icon icon-trash\" aria-hidden=\"true\"></span>Clear filters</button>\n</div>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "219:1839",
+    "componentKey": "d5e7974870a8e8e885ecfa9f467990324683d348",
+    "propertyNames": {
+      "filtered": "State=Filtered",
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "State": [
+        "Default",
+        "Filtered"
+      ],
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Search field",
+        "component": "State=Default",
+        "componentSlug": "search-field",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-search",
+        "component": "Icon / search",
+        "componentSlug": "icon-search",
+        "exposedAs": "Icon leading#51:0",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-clear",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": "Clear icon#51:5",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Selected",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/24",
+      "paddingLeft: space/64",
+      "paddingTop: space/48",
+      "paddingRight: space/64",
+      "paddingBottom: space/48",
+      "fills: color/surface/page",
+      "color: color/surface/page",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h1",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h1",
+      "color: color/text/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-l",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-l",
+      "color: color/text/secondary",
+      "itemSpacing: space/8",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: field/bg",
+      "strokes: field/border",
+      "color: field/bg",
+      "color: field/border",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: field/icon",
+      "color: field/icon",
+      "fills: field/placeholder",
+      "fontSize: font/size/desktop/body-m",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: field/placeholder",
+      "paddingTop: space/8",
+      "paddingBottom: space/8",
+      "minHeight: chip/height/m",
+      "fills: chip/bg-selected",
+      "strokes: chip/border",
+      "color: chip/bg-selected",
+      "color: chip/border",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: chip/text-selected",
+      "color: chip/text-selected",
+      "fills: chip/text-selected",
+      "fontSize: font/size/desktop/body-s",
+      "lineHeight: font/line-height/desktop/body-s",
+      "fills: chip/bg",
+      "color: chip/bg",
+      "strokes: chip/text",
+      "color: chip/text",
+      "fills: chip/text"
+    ],
+    "textStyles": [
+      "Desktop/h1",
+      "Desktop/body-l",
+      "Desktop/body-m",
+      "Desktop/body-s"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/library-head.md",
+    "section": "Library head"
+  },
+  "relations": {
+    "uses": [
+      "chip",
+      "icon-check",
+      "icon-close",
+      "icon-search",
+      "search-field"
+    ],
+    "related": [
+      "empty-state",
+      "library"
+    ]
+  }
+}

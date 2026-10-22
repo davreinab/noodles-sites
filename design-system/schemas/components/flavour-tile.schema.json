@@ -1,0 +1,204 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:flavour-tile",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Flavour tile",
+    "slug": "flavour-tile",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Flavour tile: tarjeta de sabor de la Product line (cups, bags y salsas). Size=Square: imagen 1:1 (sabores). Size=Tall: imagen 3:4 (salsas). Badge opcional arriba a la izquierda (New, Vegan o Hot!, mediante Badge type) y nombre debajo en body bold (Archivo Bold sobre Desktop/body-m). Toda la tarjeta es un enlace a la ficha del sabor. Estados: Default; Hover (elevation de Product card); Focus (anillo product-card/focus-ring). Uso: Product line del catálogo (wireframe desktop 396:5932 y móvil 396:12565). Clase CSS: .flavour-tile (variante Tall: .flavour-tile--tall). Textos de ejemplo en inglés.",
+    "figmaPage": "Cards",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 6,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "37c27bf93b20",
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "figmaVersion": null,
+      "variantsChecked": [],
+      "by": "agent (Claude)"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "default": "Chicken",
+        "figma": "Name#209:0"
+      },
+      {
+        "name": "badge",
+        "type": "boolean",
+        "default": true,
+        "figma": "Badge#209:7"
+      },
+      {
+        "name": "badgeType",
+        "type": "icon",
+        "default": "Type=New",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Badge type#209:14"
+      },
+      {
+        "name": "size",
+        "type": "enum",
+        "values": [
+          "Square",
+          "Tall"
+        ],
+        "default": "Square",
+        "figma": "Size"
+      }
+    ],
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "badgeType"
+      ],
+      "defaultIcons": [
+        "Type=New"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "badge/new/bg",
+      "badge/new/text",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/mobile/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/mobile/label",
+      "font/style/body",
+      "font/style/display",
+      "product-card/media-bg",
+      "product-card/meta",
+      "product-card/title",
+      "radius/md",
+      "radius/pill",
+      "space/4",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "badge",
+      "badge--hot",
+      "flavour-tile",
+      "flavour-tile--tall",
+      "flavour-tile__media",
+      "flavour-tile__name"
+    ],
+    "example": "<a data-ds=\"flavour-tile\" class=\"flavour-tile\" href=\"/productos/chicken-yakisoba\">\n<span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"><span class=\"badge\">New</span></span>\n<span class=\"flavour-tile__name\">Chicken</span>\n</a>\n<a data-ds=\"flavour-tile\" class=\"flavour-tile flavour-tile--tall\" href=\"/productos/sesame-sauce\">\n<span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"><span class=\"badge badge--hot\">Hot!</span></span>\n<span class=\"flavour-tile__name\">Sesame sauce</span>\n</a>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "209:138",
+    "componentKey": "ea68911207ad0689488650a916061578eac9656a",
+    "propertyNames": {
+      "name": "Name#209:0",
+      "badge": "Badge#209:7",
+      "badgeType": "Badge type#209:14",
+      "size": "Size"
+    },
+    "variantAxes": {
+      "Size": [
+        "Square",
+        "Tall"
+      ],
+      "State": [
+        "Default",
+        "Hover",
+        "Focus"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Badge",
+        "component": "Type=New",
+        "componentSlug": "badge",
+        "exposedAs": "Badge type#209:14",
+        "toggledBy": "Badge#209:7",
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/8",
+      "paddingLeft: space/8",
+      "paddingTop: space/8",
+      "paddingRight: space/8",
+      "paddingBottom: space/8",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: product-card/media-bg",
+      "color: product-card/media-bg",
+      "fills: product-card/meta",
+      "fontSize: font/size/desktop/caption",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: product-card/meta",
+      "paddingTop: space/4",
+      "paddingBottom: space/4",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: badge/new/bg",
+      "color: badge/new/bg",
+      "fills: badge/new/text",
+      "fontSize: font/size/mobile/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/mobile/label",
+      "color: badge/new/text",
+      "fills: product-card/title",
+      "lineHeight: font/line-height/desktop/body-m",
+      "fontSize: font/size/desktop/body-m",
+      "color: product-card/title"
+    ],
+    "textStyles": [
+      "Desktop/caption",
+      "Mobile/label"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/flavour-tile.md",
+    "section": "Flavour tile"
+  },
+  "relations": {
+    "uses": [
+      "badge"
+    ],
+    "related": []
+  }
+}

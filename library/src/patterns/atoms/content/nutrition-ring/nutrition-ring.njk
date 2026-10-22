@@ -1,0 +1,43 @@
+{% macro render(data) %}
+{% if data.view == "todas" %}
+{% raw %}<div class="ds-gallery">
+<style>.ds-gallery{font:14px/1.4 system-ui,sans-serif;color:#1f1f1f}.ds-gallery h3{font:600 12px/1.3 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;color:#4a4a4a}.ds-gallery section{margin:0 0 32px}.ds-gallery__row{display:flex;flex-wrap:wrap;align-items:center;gap:24px 32px}.ds-gallery figure{margin:0;display:flex;flex-direction:column;gap:8px;align-items:flex-start}.ds-gallery figcaption{font:12px/1.3 ui-monospace,monospace;color:#4a4a4a}.ds-gallery__stage{padding:8px;min-width:48px;min-height:32px;outline:1px dashed #bebebe;outline-offset:0}</style>
+<section><h3>variant</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><li data-ds="nutrition-ring" class="nutrition-ring">
+<div class="nutrition-ring__dial">
+<svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Energy 380 kcal, 19 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="19 100"/></svg>
+<span class="nutrition-ring__value" aria-hidden="true">19 %</span>
+</div>
+<span class="nutrition-ring__name" aria-hidden="true">Energy</span>
+<span class="nutrition-ring__amount" aria-hidden="true">380 kcal</span>
+</li></div><figcaption>variant=Default</figcaption></figure>
+<figure><div class="ds-gallery__stage"><li data-ds="nutrition-ring" class="nutrition-ring nutrition-ring--highlight">
+<div class="nutrition-ring__dial">
+<svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Energy 380 kcal, 19 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="19 100"/></svg>
+<span class="nutrition-ring__value" aria-hidden="true">19 %</span>
+</div>
+<span class="nutrition-ring__name" aria-hidden="true">Energy</span>
+<span class="nutrition-ring__amount" aria-hidden="true">380 kcal</span>
+</li></div><figcaption>variant=Highlight</figcaption></figure>
+</div></section>
+<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">La galería clona el elemento raíz del ejemplo y solo cambia sus clases: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
+</div>{% endraw %}
+{% else %}
+{% raw %}<li data-ds="nutrition-ring" class="nutrition-ring">
+<div class="nutrition-ring__dial">
+<svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Energy 380 kcal, 19 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="19 100"/></svg>
+<span class="nutrition-ring__value" aria-hidden="true">19 %</span>
+</div>
+<span class="nutrition-ring__name" aria-hidden="true">Energy</span>
+<span class="nutrition-ring__amount" aria-hidden="true">380 kcal</span>
+</li>
+<li data-ds="nutrition-ring" class="nutrition-ring nutrition-ring--highlight">
+<div class="nutrition-ring__dial">
+<svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Salt 2.3 g, 38 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="38 100"/></svg>
+<span class="nutrition-ring__value" aria-hidden="true">38 %</span>
+</div>
+<span class="nutrition-ring__name" aria-hidden="true">Salt</span>
+<span class="nutrition-ring__amount" aria-hidden="true">2.3 g</span>
+</li>{% endraw %}
+{% endif %}
+{% endmacro %}

@@ -1,7 +1,7 @@
 {
   "title": "Badge",
-  "description": "Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). No es interactivo; no usar co…",
-  "status": "Ready",
+  "description": "Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). Vegan: claim vegano (verde na…",
+  "status": "In review",
   "sheet": {
     "contrast": {
       "pairs": [
@@ -19,7 +19,31 @@
         },
         {
           "theme": "light",
+          "state": ".badge.badge--hot",
+          "fg": "#ffffff",
+          "bg": "#e1251b",
+          "fgVar": "--badge-new-text",
+          "bgVar": "--badge-new-bg",
+          "ratio": 4.69,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
           "state": ".badge.badge--natural",
+          "fg": "#ffffff",
+          "bg": "#007a33",
+          "fgVar": "--badge-natural-text",
+          "bgVar": "--badge-natural-bg",
+          "ratio": 5.48,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".badge.badge--vegan",
           "fg": "#ffffff",
           "bg": "#007a33",
           "fgVar": "--badge-natural-text",
@@ -54,9 +78,9 @@
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "nodeId": "35:167",
       "current": {
-        "description": "Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). No es interactivo; no usar como botón.",
-        "Propósito": "Etiqueta corta de estado o atributo: «Nuevo», «100 % natural», «En curso», «Finalizado», claims como «−20 %». New en rojo de packaging, Natural en verde y Neutral en tinta.",
-        "Accesibilidad (rol, nombre, estados y teclado)": "New: blanco sobre rojo 4,7:1. Natural: blanco sobre verde 5,5:1. Neutral: crema sobre tinta 17,2:1. Texto en mayúsculas de Anton a 14 px: los tres pares superan 4,5:1. No es interactivo (sin foco ni rol); su texto se lee en el orden del contenido. El estado lo dice la palabra, nunca solo el color.",
+        "description": "Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). Vegan: claim vegano (verde natural, mismas variables badge/natural; texto fijo «Vegan»). Hot: aviso de picante (rojo de badge/new; texto fijo «Hot!»). Usos: Flavour tile (Product library, wireframe desktop 396:5932 y móvil 396:12565). No es interactivo; no usar como botón.",
+        "Propósito": "Etiqueta corta de estado o atributo: «Nuevo», «100 % natural», «En curso», «Finalizado», claims como «−20 %». New en rojo de packaging, Natural en verde y Neutral en tinta. Vegan y Hot! son alias de color de Natural y New (mismo par de colores); se usan en Flavour tile.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "New: blanco sobre rojo 4,7:1. Natural: blanco sobre verde 5,5:1. Neutral: crema sobre tinta 17,2:1. Vegan usa el mismo par que Natural y Hot! el mismo que New, así que sus contrastes son los mismos. Texto en mayúsculas de Anton a 14 px: los tres pares superan 4,5:1. No es interactivo (sin foco ni rol); su texto se lee en el orden del contenido. El estado lo dice la palabra, nunca solo el color.",
         "Cuándo usar / qué NO hace": "Para marcar un estado o un atributo de un producto, concurso o claim. Máximo dos por card. No es un botón ni un filtro (eso es Chip) y no lleva frases: una o dos palabras."
       },
       "proposed": {},
@@ -67,13 +91,13 @@
       "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=35-167",
       "page": "Tags & chips",
       "type": "COMPONENT_SET",
-      "variants": 3,
-      "lastSync": "2026-10-22 · 09:38 UTC",
-      "verification": "verified",
-      "verificationLabel": "Verificado"
+      "variants": 5,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "stale",
+      "verificationLabel": "Caducado"
     },
     "description": [
-      "Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). No es interactivo; no usar como botón."
+      "Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). Vegan: claim vegano (verde natural, mismas variables badge/natural; texto fijo «Vegan»). Hot: aviso de picante (rojo de badge/new; texto fijo «Hot!»). Usos: Flavour tile (Product library, wireframe desktop 396:5932 y móvil 396:12565). No es interactivo; no usar como botón."
     ],
     "props": [
       {
@@ -89,7 +113,9 @@
         "values": [
           "New",
           "Natural",
-          "Neutral"
+          "Neutral",
+          "Vegan",
+          "Hot"
         ],
         "default": "New",
         "figma": "Type"
@@ -140,20 +166,22 @@
     ],
     "classes": [
       "badge",
+      "badge--hot",
       "badge--natural",
-      "badge--neutral"
+      "badge--neutral",
+      "badge--vegan"
     ],
     "manual": [
       {
         "label": "Propósito",
-        "md": "Etiqueta corta de estado o atributo: «Nuevo», «100 % natural», «En curso», «Finalizado», claims como «−20 %». New en rojo de packaging, Natural en verde y Neutral en tinta.",
+        "md": "Etiqueta corta de estado o atributo: «Nuevo», «100 % natural», «En curso», «Finalizado», claims como «−20 %». New en rojo de packaging, Natural en verde y Neutral en tinta. Vegan y Hot! son alias de color de Natural y New (mismo par de colores); se usan en Flavour tile.",
         "todo": false,
         "na": false,
         "canNA": false
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "New: blanco sobre rojo 4,7:1. Natural: blanco sobre verde 5,5:1. Neutral: crema sobre tinta 17,2:1. Texto en mayúsculas de Anton a 14 px: los tres pares superan 4,5:1. No es interactivo (sin foco ni rol); su texto se lee en el orden del contenido. El estado lo dice la palabra, nunca solo el color.",
+        "md": "New: blanco sobre rojo 4,7:1. Natural: blanco sobre verde 5,5:1. Neutral: crema sobre tinta 17,2:1. Vegan usa el mismo par que Natural y Hot! el mismo que New, así que sus contrastes son los mismos. Texto en mayúsculas de Anton a 14 px: los tres pares superan 4,5:1. No es interactivo (sin foco ni rol); su texto se lee en el orden del contenido. El estado lo dice la palabra, nunca solo el color.",
         "todo": false,
         "na": false,
         "canNA": true
@@ -169,8 +197,8 @@
     "manualTodo": 0,
     "notes": "",
     "coverage": {
-      "visible": 3,
-      "total": 3,
+      "visible": 5,
+      "total": 5,
       "missing": [],
       "unchecked": [],
       "complete": true
@@ -179,7 +207,7 @@
   "ds": {
     "slug": "badge",
     "kind": "component",
-    "verification": "verified",
+    "verification": "stale",
     "figmaNodeId": "35:167",
     "contract": "../../../../../../design-system/schemas/components/badge.schema.json"
   },

@@ -1,20 +1,39 @@
 {
   "title": "Ingredient item",
-  "description": "Fila de ingrediente. Level=Main: ingrediente principal con porcentaje en pill (ingredient/percent-bg, verde natural) y filete inferior decorativo. Level=Secondary: el resto de ing…",
-  "status": "Ready",
+  "description": "Tarjeta de ingrediente (punto 6 de la SPEC, wireframe UX 396:6073 en el archivo 1YhsCqdqYCHlK4Y82IY5G3). Fondo color/surface/card, borde fino color/border/subtle, radio md, paddin…",
+  "status": "In review",
   "sheet": {
     "contrast": {
-      "pairs": [],
-      "fail": 0,
-      "untestable": [
+      "pairs": [
         {
           "theme": "light",
           "state": ".ingredient-item",
-          "why": "sin fondo propio: depende de dónde se ponga"
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--ingredient-text",
+          "bgVar": "--color-surface-card",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".ingredient-item.ingredient-item--secondary",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--ingredient-text",
+          "bgVar": "--color-surface-card",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
         }
       ],
+      "fail": 0,
+      "untestable": [],
       "exempt": 0,
-      "label": "Sin parejas medibles"
+      "label": "Cumple AA"
     },
     "pending": null,
     "edit": {
@@ -23,9 +42,9 @@
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "nodeId": "70:58",
       "current": {
-        "description": "Fila de ingrediente. Level=Main: ingrediente principal con porcentaje en pill (ingredient/percent-bg, verde natural) y filete inferior decorativo. Level=Secondary: el resto de ingredientes en texto corrido. Regla de negocio: los alérgenos van SIEMPRE en negrita (<strong>, Archivo Bold), también dentro del nombre. El texto no es propiedad para conservar la negrita: se edita en la instancia. Los datos salen del envase; los mostrados son de ejemplo.",
-        "Propósito": "Fila de ingrediente. Main: ingrediente principal con su porcentaje en una píldora verde. Secondary: el resto de ingredientes en texto corrido. Los alérgenos van en negrita.",
-        "Accesibilidad (rol, nombre, estados y teclado)": "Texto tinta sobre crema 17,2:1 o blanco 18,7:1; porcentaje blanco sobre verde 5,5:1. Filete arena decorativo (no es límite de control). Los alérgenos se marcan con `<strong>`, que se anuncia como énfasis y se ve en negrita (regla de negocio), no solo con color. Es un `<li>` dentro de la lista de Ingredients.",
+        "description": "Tarjeta de ingrediente (punto 6 de la SPEC, wireframe UX 396:6073 en el archivo 1YhsCqdqYCHlK4Y82IY5G3). Fondo color/surface/card, borde fino color/border/subtle, radio md, padding 16/24. Level=Main: línea de porcentaje «79% of content» (caption, ingredient/meta), nombre (heading S) y composición (body S). Level=Secondary: resto de ingredientes en texto corrido (body S), sin línea de porcentaje. Los alérgenos van SIEMPRE en negrita (<strong>, Archivo Bold), también dentro de la composición. Los datos son de ejemplo; los reales se copian del envase.",
+        "Propósito": "Tarjeta de un ingrediente. Main: porcentaje del contenido (caption), nombre del componente (display) y composición (body S). Secondary: tarjeta solo con texto corrido, para el resto de ingredientes. Los alérgenos van en negrita dentro de la composición.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Es un `li` dentro de la lista de Ingredients. Las tres líneas son texto y se leen en orden: porcentaje, nombre, composición. Texto tinta sobre blanco 18,7:1; la línea de porcentaje y la composición en gris cálido sobre blanco 5,9:1. El alérgeno se marca con `<strong>`, que se lee como énfasis y se ve en negrita (no solo con color).",
         "Cuándo usar / qué NO hace": "Solo dentro de Ingredients. Los datos se copian del envase; no se resumen ni se reordenan."
       },
       "proposed": {},
@@ -37,19 +56,19 @@
       "page": "Content",
       "type": "COMPONENT_SET",
       "variants": 2,
-      "lastSync": "2026-10-22 · 09:38 UTC",
-      "verification": "verified",
-      "verificationLabel": "Verificado"
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "stale",
+      "verificationLabel": "Caducado"
     },
     "description": [
-      "Fila de ingrediente. Level=Main: ingrediente principal con porcentaje en pill (ingredient/percent-bg, verde natural) y filete inferior decorativo. Level=Secondary: el resto de ingredientes en texto corrido. Regla de negocio: los alérgenos van SIEMPRE en negrita (<strong>, Archivo Bold), también dentro del nombre. El texto no es propiedad para conservar la negrita: se edita en la instancia. Los datos salen del envase; los mostrados son de ejemplo."
+      "Tarjeta de ingrediente (punto 6 de la SPEC, wireframe UX 396:6073 en el archivo 1YhsCqdqYCHlK4Y82IY5G3). Fondo color/surface/card, borde fino color/border/subtle, radio md, padding 16/24. Level=Main: línea de porcentaje «79% of content» (caption, ingredient/meta), nombre (heading S) y composición (body S). Level=Secondary: resto de ingredientes en texto corrido (body S), sin línea de porcentaje. Los alérgenos van SIEMPRE en negrita (<strong>, Archivo Bold), también dentro de la composición. Los datos son de ejemplo; los reales se copian del envase."
     ],
     "props": [
       {
         "name": "percent",
         "type": "string",
         "values": [],
-        "default": "52 %",
+        "default": "79% of content",
         "figma": "Percent#70:0"
       },
       {
@@ -79,14 +98,25 @@
         ]
       },
       {
+        "group": "color",
+        "items": [
+          "color/border/subtle",
+          "color/surface/card",
+          "color/text/default",
+          "color/text/secondary"
+        ]
+      },
+      {
         "group": "font",
         "items": [
           "font/family/body",
           "font/family/display",
-          "font/line-height/desktop/body-l",
-          "font/line-height/desktop/label",
-          "font/size/desktop/body-l",
-          "font/size/desktop/label",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h3",
+          "font/size/desktop/body-s",
+          "font/size/desktop/caption",
+          "font/size/desktop/h3",
           "font/style/body",
           "font/style/display"
         ]
@@ -94,47 +124,48 @@
       {
         "group": "ingredient",
         "items": [
-          "ingredient/divider",
-          "ingredient/percent-bg",
-          "ingredient/percent-text",
-          "ingredient/text"
+          "ingredient/meta"
         ]
       },
       {
         "group": "radius",
         "items": [
-          "radius/pill"
+          "radius/md"
         ]
       },
       {
         "group": "space",
         "items": [
           "space/16",
-          "space/4",
+          "space/24",
           "space/8"
         ]
       }
     ],
-    "tokenCount": 17,
+    "tokenCount": 20,
     "textStyles": [
-      "Desktop/label"
+      "Desktop/caption",
+      "Desktop/h3",
+      "Desktop/body-s"
     ],
     "classes": [
       "ingredient-item",
       "ingredient-item--secondary",
-      "ingredient-item__percent"
+      "ingredient-item__name",
+      "ingredient-item__percent",
+      "ingredient-item__text"
     ],
     "manual": [
       {
         "label": "Propósito",
-        "md": "Fila de ingrediente. Main: ingrediente principal con su porcentaje en una píldora verde. Secondary: el resto de ingredientes en texto corrido. Los alérgenos van en negrita.",
+        "md": "Tarjeta de un ingrediente. Main: porcentaje del contenido (caption), nombre del componente (display) y composición (body S). Secondary: tarjeta solo con texto corrido, para el resto de ingredientes. Los alérgenos van en negrita dentro de la composición.",
         "todo": false,
         "na": false,
         "canNA": false
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "Texto tinta sobre crema 17,2:1 o blanco 18,7:1; porcentaje blanco sobre verde 5,5:1. Filete arena decorativo (no es límite de control). Los alérgenos se marcan con `<strong>`, que se anuncia como énfasis y se ve en negrita (regla de negocio), no solo con color. Es un `<li>` dentro de la lista de Ingredients.",
+        "md": "Es un `li` dentro de la lista de Ingredients. Las tres líneas son texto y se leen en orden: porcentaje, nombre, composición. Texto tinta sobre blanco 18,7:1; la línea de porcentaje y la composición en gris cálido sobre blanco 5,9:1. El alérgeno se marca con `<strong>`, que se lee como énfasis y se ve en negrita (no solo con color).",
         "todo": false,
         "na": false,
         "canNA": true
@@ -160,7 +191,7 @@
   "ds": {
     "slug": "ingredient-item",
     "kind": "component",
-    "verification": "verified",
+    "verification": "stale",
     "figmaNodeId": "70:58",
     "contract": "../../../../../../design-system/schemas/components/ingredient-item.schema.json"
   },

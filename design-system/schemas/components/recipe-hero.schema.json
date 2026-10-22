@@ -7,7 +7,7 @@
     "slug": "recipe-hero",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T09:38:13Z",
+    "lastSync": "2026-10-22T14:07:02Z",
     "description": "Cabecera de la página de receta: kicker «Receta» · título (h1) · tiempo (timer) y dificultad · descripción · productos usados como Chip M (enlazan a la ficha de producto; lista <ul>) · imagen principal de marca (sin vídeo al principio, regla de negocio). Fondo color/surface/brand. Después van Product details (ingredientes y nutrición de la receta) y Preparation sin Timer con Step Media=True. Desktop: texto a la izquierda; Mobile: imagen arriba. Sin variables propias.",
     "figmaPage": "Pattern / Detail pages",
     "figmaType": "COMPONENT_SET",
@@ -20,16 +20,18 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "056dbba062f8",
+    "anatomyHash": "941027f89237",
     "verification": {
-      "status": "verified",
+      "status": "stale",
       "date": "2026-10-22",
       "figmaVersion": "056dbba062f8",
       "variantsChecked": [
         "Breakpoint=Desktop",
         "Breakpoint=Mobile"
       ],
-      "by": "agent (Claude Haiku, revisado)"
+      "by": "agent (Claude Haiku, revisado)",
+      "staleSince": "2026-10-22T14:07:02Z",
+      "reason": "la anatomía, las variantes, los tokens ligados o la key del maestro cambiaron desde la verificación"
     }
   },
   "api": {
@@ -55,8 +57,8 @@
       "defaultIcons": [],
       "compatible": "unknown",
       "unexposedIconLayers": [
-        "icon",
-        "icon"
+        "arrow",
+        "icon-send"
       ]
     },
     "tokens": [
@@ -64,6 +66,7 @@
       "chip/bg",
       "chip/border",
       "chip/height/m",
+      "chip/height/s",
       "chip/text",
       "color/border/default",
       "color/surface/brand",
@@ -73,17 +76,18 @@
       "font/family/body",
       "font/family/display",
       "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
       "font/line-height/desktop/body-s",
       "font/line-height/desktop/caption",
       "font/line-height/desktop/h1",
-      "font/line-height/desktop/label",
       "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
       "font/size/desktop/body-s",
       "font/size/desktop/caption",
       "font/size/desktop/h1",
-      "font/size/desktop/label",
       "font/style/body",
       "font/style/display",
+      "icon/color/default",
       "icon/size/md",
       "icon/size/sm",
       "layout/frame",
@@ -103,23 +107,24 @@
       "chip",
       "chip--m",
       "icon",
-      "icon-circle-check",
+      "icon-arrow-left",
+      "icon-send",
       "icon-timer",
+      "link",
       "media-frame",
       "page-title",
       "recipe-hero",
+      "recipe-hero__back",
       "recipe-hero__description",
       "recipe-hero__grid",
       "recipe-hero__info",
-      "recipe-hero__kicker",
       "recipe-hero__media",
       "recipe-hero__meta",
       "recipe-hero__products",
-      "recipe-hero__products-label",
       "section",
       "section__inner"
     ],
-    "example": "<section data-ds=\"recipe-hero\" class=\"section recipe-hero\" aria-labelledby=\"rh-title\">\n<div class=\"section__inner\">\n<div class=\"recipe-hero__grid\">\n<div class=\"recipe-hero__info\">\n<span class=\"recipe-hero__kicker\">Receta</span>\n<h1 class=\"page-title\" id=\"rh-title\">Ramen picante</h1>\n<ul class=\"recipe-hero__meta\"><li><span class=\"icon icon-timer\" aria-hidden=\"true\"></span>10 min</li><li><span class=\"icon icon-circle-check\" aria-hidden=\"true\"></span>Fácil</li></ul>\n<p class=\"recipe-hero__description\">Para quién es y por qué apetece.</p>\n<h2 class=\"recipe-hero__products-label\">Productos que usa</h2>\n<ul class=\"recipe-hero__products\"><li><a class=\"chip chip--m\" href=\"/productos/yatekomo-pollo\">Yatekomo Pollo</a></li></ul>\n</div>\n<div class=\"media-frame recipe-hero__media\"><img src=\"/media/receta-ramen.jpg\" alt=\"Ramen picante servido en un cuenco\"></div>\n</div>\n</div>\n</section>",
+    "example": "<section data-ds=\"recipe-hero\" class=\"section recipe-hero\" aria-labelledby=\"rh-title\">\n<div class=\"section__inner\">\n<div class=\"recipe-hero__grid\">\n<div class=\"recipe-hero__info\">\n<a class=\"recipe-hero__back\" href=\"/recipes\"><span class=\"icon icon-arrow-left\" aria-hidden=\"true\"></span>All recipes</a>\n<ul class=\"recipe-hero__products\" aria-label=\"Products used in this recipe\"><li><a class=\"chip chip--m\" href=\"/productos/cup-oriental\">Cup Oriental</a></li><li><a class=\"chip chip--m\" href=\"/productos/sauce-sesame\">Sauce Sesame</a></li></ul>\n<h1 class=\"page-title\" id=\"rh-title\">Oriental chicken noodles</h1>\n<p class=\"recipe-hero__description\">Quick, savory noodles with a smoky soy glaze.</p>\n<ul class=\"recipe-hero__meta\"><li><span class=\"chip chip--m\"><span class=\"icon icon-timer\" aria-hidden=\"true\"></span>15 min preparation</span></li><li><span class=\"chip chip--m\">4 people</span></li></ul>\n<button class=\"link\" type=\"button\" aria-haspopup=\"dialog\"><span class=\"icon icon-send\" aria-hidden=\"true\"></span>Share recipe</button>\n</div>\n<div class=\"media-frame recipe-hero__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"Oriental chicken noodles served in a bowl\"></div>\n</div>\n</div>\n</section>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,
@@ -140,23 +145,47 @@
     },
     "nestedInstances": [
       {
-        "layer": "icon",
-        "component": "Icon / timer",
-        "componentSlug": "icon-timer",
+        "layer": "arrow",
+        "component": "Icon / arrow-left",
+        "componentSlug": "icon-arrow-left",
         "exposedAs": null,
         "toggledBy": null,
         "visibleByDefault": true
       },
       {
-        "layer": "icon",
-        "component": "Icon / circle-check",
-        "componentSlug": "icon-circle-check",
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
         "exposedAs": null,
         "toggledBy": null,
         "visibleByDefault": true
       },
       {
-        "layer": "product-chip",
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
         "component": "Size=M, State=Default",
         "componentSlug": "chip",
         "exposedAs": null,
@@ -170,6 +199,30 @@
         "exposedAs": "Icon leading swap#35:27",
         "toggledBy": "Icon leading#35:22",
         "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-send",
+        "component": "Icon / send",
+        "componentSlug": "icon-send",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
       }
     ],
     "variableBindings": [
@@ -182,25 +235,16 @@
       "color: color/surface/brand",
       "itemSpacing: space/64",
       "itemSpacing: space/24",
-      "fills: color/text/default",
-      "fontSize: font/size/desktop/caption",
-      "fontStyle: font/style/body",
-      "fontFamily: font/family/body",
-      "lineHeight: font/line-height/desktop/caption",
-      "color: color/text/default",
-      "fontSize: font/size/desktop/h1",
-      "fontStyle: font/style/display",
-      "fontFamily: font/family/display",
-      "lineHeight: font/line-height/desktop/h1",
       "itemSpacing: space/8",
       "width: icon/size/md",
       "height: icon/size/md",
-      "strokes: color/text/default",
-      "fontSize: font/size/desktop/body-l",
-      "lineHeight: font/line-height/desktop/body-l",
-      "fontSize: font/size/desktop/label",
-      "lineHeight: font/line-height/desktop/label",
-      "counterAxisSpacing: space/8",
+      "strokes: icon/color/default",
+      "color: icon/color/default",
+      "fills: color/text/default",
+      "lineHeight: font/line-height/desktop/body-m",
+      "fontFamily: font/family/body",
+      "fontSize: font/size/desktop/body-m",
+      "color: color/text/default",
       "paddingLeft: space/16",
       "paddingTop: space/8",
       "paddingRight: space/16",
@@ -213,7 +257,7 @@
       "strokeBottomWeight: border/width/thin",
       "strokeLeftWeight: border/width/thin",
       "strokeRightWeight: border/width/thin",
-      "minHeight: chip/height/m",
+      "minHeight: chip/height/s",
       "fills: chip/bg",
       "strokes: chip/border",
       "color: chip/bg",
@@ -224,7 +268,15 @@
       "color: chip/text",
       "fills: chip/text",
       "fontSize: font/size/desktop/body-s",
+      "fontStyle: font/style/body",
       "lineHeight: font/line-height/desktop/body-s",
+      "fontSize: font/size/desktop/h1",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h1",
+      "fontSize: font/size/desktop/body-l",
+      "lineHeight: font/line-height/desktop/body-l",
+      "minHeight: chip/height/m",
       "paddingTop: space/16",
       "paddingBottom: space/16",
       "topLeftRadius: radius/md",
@@ -236,14 +288,16 @@
       "color: color/surface/page",
       "color: color/border/default",
       "fills: color/text/secondary",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
       "color: color/text/secondary"
     ],
     "textStyles": [
-      "Desktop/caption",
+      "Desktop/body-s",
       "Desktop/h1",
       "Desktop/body-l",
-      "Desktop/label",
-      "Desktop/body-s"
+      "Desktop/body-m",
+      "Desktop/caption"
     ]
   },
   "docs": {
@@ -253,10 +307,12 @@
   "relations": {
     "uses": [
       "chip",
+      "icon-arrow-left",
       "icon-check",
-      "icon-circle-check",
-      "icon-timer"
+      "icon-send"
     ],
-    "related": []
+    "related": [
+      "share-panel"
+    ]
   }
 }

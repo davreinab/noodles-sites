@@ -1,0 +1,20 @@
+Simple Icons (versión 13.15.0)
+Licencia: CC0 1.0 Universal (dominio público)
+Fuente: https://github.com/simple-icons/simple-icons
+
+Copyright (c) Simple Icons Contributors.
+
+Los SVG de Simple Icons se publican bajo Creative Commons CC0 1.0 Universal:
+se puede copiar, modificar, distribuir y usar, también con fines comerciales,
+sin pedir permiso ni dar crédito. Texto legal completo:
+https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Aviso: la licencia cubre el dibujo del icono, no las marcas. Los logotipos
+(WhatsApp, Facebook, X, Telegram) son marcas de sus respectivos titulares y
+se usan aquí solo para identificar el enlace o la red social correspondiente.
+
+---
+
+Iconos de marca derivados de Simple Icons:
+
+whatsapp, facebook, telegram

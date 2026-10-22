@@ -76,6 +76,7 @@
                 <button class="hero__dot" type="button" aria-label="Slide 3"></button>
               </div>
               <button class="icon-button icon-button--secondary" type="button" aria-label="Next slide"><span class="icon icon-arrow-right" aria-hidden="true"></span></button>
+              <button class="icon-button icon-button--secondary hero__pause" type="button" aria-label="Pause slideshow"><span class="icon icon-pause" aria-hidden="true"></span></button>
             </div>
           </div>
         </div>
@@ -288,6 +289,7 @@
     <a class="link link--dark" href="#">Privacy policy</a>
     <a class="link link--dark" href="#">Cookies policy</a>
     <a class="link link--dark" href="#">Legal basis</a>
+    <a class="link link--dark" href="#">Contest rules</a>
     <a class="link link--dark" href="#">Contact</a>
     <span>© GBFoods</span>
   </div>
@@ -311,6 +313,50 @@
     btn.setAttribute('aria-expanded', String(open));
     document.getElementById(btn.getAttribute('aria-controls')).hidden = !open;
   }));
+
+  // Cabecera: transparente arriba; al hacer scroll se fija opaca (R-01.6).
+  const header = document.querySelector('.navbar');
+  const syncHeader = () => header.classList.toggle('navbar--scrolled', window.scrollY > 0);
+  window.addEventListener('scroll', syncHeader, { passive: true });
+  syncHeader();
+
+  // Carrusel del hero: avanza el punto activo cada 6 s; las flechas y los puntos mueven la slide.
+  // Con prefers-reduced-motion arranca parado (el botón de pausa muestra «Play»).
+  const SLIDE_INTERVAL = 6000;
+  const heroDots = Array.from(document.querySelectorAll('.hero__dot'));
+  const heroGroup = document.querySelector('.hero__slide-content');
+  const heroPrev = document.querySelector('[aria-label="Previous slide"]');
+  const heroNext = document.querySelector('[aria-label="Next slide"]');
+  const heroPause = document.querySelector('.hero__pause');
+  const heroIcon = heroPause.querySelector('.icon');
+  let current = heroDots.findIndex(dot => dot.getAttribute('aria-current') === 'true');
+  let playing = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let timer = null;
+
+  // Marca el punto activo y actualiza el nombre del grupo («2 of 3»); no cambia el contenido.
+  const showSlide = index => {
+    current = (index + heroDots.length) % heroDots.length;
+    heroDots.forEach((dot, i) => i === current ? dot.setAttribute('aria-current', 'true') : dot.removeAttribute('aria-current'));
+    heroGroup.setAttribute('aria-label', `${current + 1} of ${heroDots.length}`);
+  };
+  const stopTimer = () => { clearInterval(timer); timer = null; };
+  const startTimer = () => { stopTimer(); timer = setInterval(() => showSlide(current + 1), SLIDE_INTERVAL); };
+  // Un cambio manual reinicia la cuenta de 6 s para no saltar dos slides seguidas.
+  const goTo = index => { showSlide(index); if (playing) startTimer(); };
+
+  // Botón de pausa: alterna el estado, el icono y el nombre accesible.
+  const setPlaying = on => {
+    playing = on;
+    heroPause.setAttribute('aria-label', on ? 'Pause slideshow' : 'Play slideshow');
+    heroIcon.classList.toggle('icon-pause', on);
+    heroIcon.classList.toggle('icon-play', !on);
+    if (on) startTimer(); else stopTimer();
+  };
+  heroPause.addEventListener('click', () => setPlaying(!playing));
+  heroPrev.addEventListener('click', () => goTo(current - 1));
+  heroNext.addEventListener('click', () => goTo(current + 1));
+  heroDots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+  setPlaying(playing);
 </script>
 </body>
 </html>

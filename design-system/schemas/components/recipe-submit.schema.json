@@ -1,0 +1,267 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:recipe-submit",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Recipe submit",
+    "slug": "recipe-submit",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Recipe submit: bloque de captación de recetas de usuarios (fondo surface/card, blanco). Título «Do you have your own recipes with Yatekomo?», subtítulo, y a la derecha Textarea («Tell us your recipe», ayuda «List the ingredients with their quantities and the time of each step») y Button Primary M «Send my recipe». Breakpoint Mobile: apilado. Uso: Recipe library, entre el banner y el footer (wireframe 171:3808 y móvil 486:13025). Clase CSS: .recipe-submit. Nota: el subtítulo es provisional (la SPEC no lo fija).",
+    "figmaPage": "Pattern / Libraries",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "78e0024c764b",
+    "verification": {
+      "status": "unverified",
+      "date": null,
+      "figmaVersion": null,
+      "variantsChecked": [],
+      "by": "agent (Claude)"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thick",
+      "border/width/thin",
+      "button/primary/bg",
+      "button/primary/border",
+      "button/primary/text",
+      "color/surface/card",
+      "color/text/default",
+      "color/text/secondary",
+      "field/bg",
+      "field/border",
+      "field/error-text",
+      "field/helper",
+      "field/label",
+      "field/placeholder",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/h2",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "radius/pill",
+      "radius/sm",
+      "space/128",
+      "space/16",
+      "space/24",
+      "space/4",
+      "space/64",
+      "space/8",
+      "space/80"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "button",
+      "field",
+      "field__control",
+      "field__control--textarea",
+      "field__helper",
+      "field__label",
+      "recipe-submit",
+      "recipe-submit__form",
+      "recipe-submit__inner",
+      "recipe-submit__intro",
+      "recipe-submit__lead",
+      "recipe-submit__title",
+      "section"
+    ],
+    "example": "<section data-ds=\"recipe-submit\" class=\"section recipe-submit\" aria-labelledby=\"rs-title\">\n<div class=\"recipe-submit__inner\">\n<div class=\"recipe-submit__intro\">\n<h2 class=\"recipe-submit__title\" id=\"rs-title\">Do you have your own recipes with Yatekomo?</h2>\n<p class=\"recipe-submit__lead\">Share them with us so more people can enjoy your creations.</p>\n</div>\n<form class=\"recipe-submit__form\" action=\"/recipes/submit\" method=\"post\">\n<div class=\"field\">\n<label class=\"field__label\" for=\"rs-recipe\">Tell us your recipe</label>\n<textarea class=\"field__control field__control--textarea\" id=\"rs-recipe\" name=\"recipe\" aria-describedby=\"rs-help\"></textarea>\n<p class=\"field__helper\" id=\"rs-help\">List the ingredients with their quantities and the time of each step</p>\n</div>\n<button class=\"button\" type=\"submit\">Send my recipe</button>\n</form>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "219:1911",
+    "componentKey": "9f6a03fde4c66bdd79c907cb51012e2d8ee71c52",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "textarea",
+        "component": "State=Default",
+        "componentSlug": "textarea",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#50:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "submit",
+        "component": "Hierarchy=Primary, Size=M, State=Default",
+        "componentSlug": "button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "toggledBy": "Icon leading#33:25",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "toggledBy": "Icon trailing#33:50",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/64",
+      "paddingLeft: space/64",
+      "paddingTop: space/80",
+      "paddingRight: space/64",
+      "paddingBottom: space/80",
+      "fills: color/surface/card",
+      "color: color/surface/card",
+      "itemSpacing: space/16",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h2",
+      "color: color/text/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: color/text/secondary",
+      "itemSpacing: space/24",
+      "itemSpacing: space/8",
+      "itemSpacing: space/4",
+      "fills: field/label",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label",
+      "color: field/label",
+      "fills: field/error-text",
+      "color: field/error-text",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "height: space/128",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: field/bg",
+      "strokes: field/border",
+      "color: field/bg",
+      "color: field/border",
+      "fills: field/placeholder",
+      "color: field/placeholder",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: field/error-text",
+      "fills: field/helper",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: field/helper",
+      "paddingLeft: space/24",
+      "paddingRight: space/24",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thick",
+      "strokeBottomWeight: border/width/thick",
+      "strokeLeftWeight: border/width/thick",
+      "strokeRightWeight: border/width/thick",
+      "fills: button/primary/bg",
+      "strokes: button/primary/border",
+      "color: button/primary/bg",
+      "color: button/primary/border",
+      "strokes: button/primary/text",
+      "color: button/primary/text",
+      "fills: button/primary/text"
+    ],
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m",
+      "Desktop/label",
+      "Desktop/caption"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/recipe-submit.md",
+    "section": "Recipe submit"
+  },
+  "relations": {
+    "uses": [
+      "button",
+      "icon-arrow-right",
+      "icon-circle-alert",
+      "textarea"
+    ],
+    "related": []
+  }
+}

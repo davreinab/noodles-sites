@@ -7,8 +7,8 @@
     "slug": "footer",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T09:38:13Z",
-    "description": "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de sugerencias («Do you have any ideas, complaints or cravings?» + texto + Button Primary «Send suggestions» con external-link: abre el formulario externo de Calidad) · franja legal por país (Legal notice, Privacy policy, Cookies policy, Legal basis, Contact) y © GBFoods. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Menu. Desktop: logo y enlaces a la izquierda, caja de sugerencias a la derecha; Mobile: la caja arriba. Sin variables propias.",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de sugerencias («Do you have any ideas, complaints or cravings?» + texto + Button Primary «Send suggestions» con external-link: abre el formulario externo de Calidad) · franja legal por país (Legal notice, Privacy policy, Cookies policy, Legal basis, Contest rules, Contact) y © GBFoods. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Menu. Desktop: logo y enlaces a la izquierda, caja de sugerencias a la derecha; Mobile: la caja arriba. Sin variables propias. Caja de sugerencias con estilo ticket (borde superior dentado, sombra elevation/3, giro -0.6°), como en la landing.",
     "figmaPage": "Pattern / Global",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
@@ -20,9 +20,9 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "a5af28de00db",
+    "anatomyHash": "1917f17b5ef7",
     "verification": {
-      "status": "verified",
+      "status": "stale",
       "date": "2026-10-08",
       "figmaVersion": "a5af28de00db",
       "variantsChecked": [
@@ -30,7 +30,9 @@
         "Breakpoint=Mobile"
       ],
       "by": "agent (Claude)",
-      "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)"
+      "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)",
+      "staleSince": "2026-10-22T14:07:02Z",
+      "reason": "la anatomía, las variantes, los tokens ligados o la key del maestro cambiaron desde la verificación"
     }
   },
   "api": {
@@ -97,8 +99,8 @@
       "layout/frame",
       "layout/margin",
       "link/inverse",
-      "radius/md",
       "radius/pill",
+      "shadow/soft",
       "space/16",
       "space/24",
       "space/32",
@@ -372,6 +374,22 @@
         "exposedAs": "Icon#35:0",
         "toggledBy": null,
         "visibleByDefault": false
+      },
+      {
+        "layer": "legal-link",
+        "component": "Type=Inline, Surface=Dark, State=Default",
+        "componentSlug": "link",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "toggledBy": null,
+        "visibleByDefault": false
       }
     ],
     "variableBindings": [
@@ -397,13 +415,10 @@
       "height: icon/size/sm",
       "strokes: link/inverse",
       "paddingLeft: space/24",
-      "paddingTop: space/32",
+      "paddingTop: space/48",
       "paddingRight: space/24",
-      "topLeftRadius: radius/md",
-      "topRightRadius: radius/md",
-      "bottomLeftRadius: radius/md",
-      "bottomRightRadius: radius/md",
       "fills: color/surface/page",
+      "effects: shadow/soft",
       "color: color/surface/page",
       "fills: color/text/default",
       "fontSize: font/size/desktop/h3",

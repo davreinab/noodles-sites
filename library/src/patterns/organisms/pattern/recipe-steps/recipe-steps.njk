@@ -1,0 +1,22 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="recipe-steps" class="section recipe-steps" aria-labelledby="rsteps-title">
+<div class="section__header">
+<h2 class="section__title" id="rsteps-title">Step-by-step preparation</h2>
+<p class="section__lead">Follow the steps below for a perfect result.</p>
+</div>
+<ol class="steps">
+<li class="step">
+<span class="step__number" aria-hidden="true">1</span>
+<div class="step__content"><h3 class="step__title">Add boiling water up to the mark</h3><p class="step__text">Open the lid halfway and add boiling water up to the inner line.</p></div>
+</li>
+<li class="step">
+<span class="step__number" aria-hidden="true">2</span>
+<div class="step__content"><h3 class="step__title">Wait 3 minutes</h3><p class="step__text">Let the noodles rest while the sauce warms up.</p></div>
+</li>
+<li class="step">
+<span class="step__number" aria-hidden="true">3</span>
+<div class="step__content"><p class="step__text">Drain the water carefully and set the noodles aside.</p></div>
+</li>
+</ol>
+</section>{% endraw %}
+{% endmacro %}

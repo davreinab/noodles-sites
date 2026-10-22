@@ -1,8 +1,26 @@
 {% macro render(data) %}
-{% raw %}<section data-ds="library" class="library" aria-labelledby="lib-title">
-<div class="library__header"><h1 class="page-title" id="lib-title">Productos</h1><p class="section__lead">Introducción de la librería.</p></div>
-<div class="product-filter"><div class="product-filter__group"><span class="product-filter__label">Tipo</span><div class="product-filter__options" role="tablist"><button class="tab" role="tab" aria-selected="true">Cups</button></div></div></div>
-<ul class="library__grid"><li><a class="product-card" href="/productos/yatekomo-pollo"><div class="product-card__body"><h3 class="product-card__name">Yatekomo Pollo</h3></div></a></li></ul>
-<div class="library__more"><button class="button button--secondary" type="button">Ver más productos</button></div>
+{% raw %}<section data-ds="library" class="library" aria-label="Recipes">
+<ul class="library__grid">
+<li><article class="recipe-card">
+<div class="recipe-card__media"><img src="/assets/ds/images/placeholder.svg" alt=""></div>
+<div class="recipe-card__body">
+<p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>2 people · 20 minutes</p>
+<h3 class="recipe-card__title"><a class="recipe-card__link" href="/recetas/spicy-noodle-salad">Spicy Noodle Salad with almond and mint</a></h3>
+<ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="/productos/cup-oriental">Cup Oriental</a></li></ul>
+</div>
+</article></li>
+</ul>
+<div class="library__more"><nav class="pagination" aria-label="Pagination">
+<ul class="pagination__list">
+<li><button class="pagination__link" type="button" disabled aria-label="Previous page"><span class="icon icon-arrow-left" aria-hidden="true"></span><span class="pagination__text">Previous</span></button></li>
+<li><a class="pagination__link pagination__page" href="?page=1" aria-current="page">1</a></li>
+<li><a class="pagination__link pagination__page" href="?page=2">2</a></li>
+<li><a class="pagination__link pagination__page" href="?page=3">3</a></li>
+<li><span class="pagination__ellipsis" aria-hidden="true">…</span></li>
+<li><a class="pagination__link pagination__page" href="?page=13">13</a></li>
+<li><a class="pagination__link" href="?page=2" aria-label="Next page"><span class="pagination__text">Next</span><span class="icon icon-arrow-right" aria-hidden="true"></span></a></li>
+</ul>
+<p class="pagination__status">Page 1 of 13</p>
+</nav></div>
 </section>{% endraw %}
 {% endmacro %}

@@ -1,0 +1,180 @@
+{
+  "title": "Nutrition ring",
+  "description": "Anillo de nutriente de la ficha de producto: porcentaje de la ingesta de referencia (IR) en el centro (display), nombre del nutriente debajo (body) y valor (p. ej. 380 kcal). Pist…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "nutrition-ring",
+      "name": "Nutrition ring",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "193:209",
+      "current": {
+        "description": "Anillo de nutriente de la ficha de producto: porcentaje de la ingesta de referencia (IR) en el centro (display), nombre del nutriente debajo (body) y valor (p. ej. 380 kcal). Pista = nutrition/track; relleno = nutrition/fill. Variant=Highlight usa nutrition/fill-highlight para un nutriente con claim (p. ej. sal reducida). Breakpoint: Desktop 148 px y Mobile 120 px (en mobile, carrusel horizontal con scroll-snap). Se usa en el módulo Nutrition de la ficha de producto (wireframe UX 396:6073). Clase CSS: .nutrition-ring. Accesible como role=img con aria-label, p. ej. «Energy 380 kcal, 19 % of the reference intake»; el anillo es decorativo y el dato accesible es el texto.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "El SVG es `role=\"img\"` con `aria-label` completo («Energy 380 kcal, 19 % of the reference intake»): es el dato accesible. El %, el nombre y el valor visibles van con `aria-hidden` para no repetirlos. La pista (`--nutrition-track`) y el relleno de tinta se leen sobre blanco: el relleno de tinta da 18,7:1 sobre blanco; el relleno highlight (verde) da 4,0:1 sobre la pista arena, ≥ 3:1 para elementos gráficos. Sin color como único indicador: el % va escrito.",
+        "Cuándo usar / qué NO hace": "Dentro de la sección Nutritional information de Product details, en una lista (`ul`) de seis anillos. No sustituye a la tabla de la etiqueta (Nutrition label) ni al panel de barras (Nutrition bar): es la vista resumida de la ingesta de referencia."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "193:209",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=193-209",
+      "page": "Content",
+      "type": "COMPONENT_SET",
+      "variants": 4,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Anillo de nutriente de la ficha de producto: porcentaje de la ingesta de referencia (IR) en el centro (display), nombre del nutriente debajo (body) y valor (p. ej. 380 kcal). Pista = nutrition/track; relleno = nutrition/fill. Variant=Highlight usa nutrition/fill-highlight para un nutriente con claim (p. ej. sal reducida). Breakpoint: Desktop 148 px y Mobile 120 px (en mobile, carrusel horizontal con scroll-snap). Se usa en el módulo Nutrition de la ficha de producto (wireframe UX 396:6073). Clase CSS: .nutrition-ring. Accesible como role=img con aria-label, p. ej. «Energy 380 kcal, 19 % of the reference intake»; el anillo es decorativo y el dato accesible es el texto."
+    ],
+    "props": [
+      {
+        "name": "percent",
+        "type": "string",
+        "values": [],
+        "default": "19 %",
+        "figma": "Percent#193:3"
+      },
+      {
+        "name": "nutrient",
+        "type": "string",
+        "values": [],
+        "default": "Energy",
+        "figma": "Nutrient#193:8"
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "values": [],
+        "default": "380 kcal",
+        "figma": "Value#193:13"
+      },
+      {
+        "name": "variant",
+        "type": "enum",
+        "values": [
+          "Default",
+          "Highlight"
+        ],
+        "default": "Default",
+        "figma": "Variant"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/h3",
+          "font/size/desktop/body-s",
+          "font/size/desktop/h3",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "nutrition",
+        "items": [
+          "nutrition/fill",
+          "nutrition/label",
+          "nutrition/track",
+          "nutrition/value"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/4"
+        ]
+      }
+    ],
+    "tokenCount": 14,
+    "textStyles": [
+      "Desktop/h3",
+      "Desktop/body-s"
+    ],
+    "classes": [
+      "nutrition-ring",
+      "nutrition-ring--highlight",
+      "nutrition-ring__amount",
+      "nutrition-ring__dial",
+      "nutrition-ring__fill",
+      "nutrition-ring__name",
+      "nutrition-ring__svg",
+      "nutrition-ring__track",
+      "nutrition-ring__value"
+    ],
+    "manual": [
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "El SVG es `role=\"img\"` con `aria-label` completo («Energy 380 kcal, 19 % of the reference intake»): es el dato accesible. El %, el nombre y el valor visibles van con `aria-hidden` para no repetirlos. La pista (`--nutrition-track`) y el relleno de tinta se leen sobre blanco: el relleno de tinta da 18,7:1 sobre blanco; el relleno highlight (verde) da 4,0:1 sobre la pista arena, ≥ 3:1 para elementos gráficos. Sin color como único indicador: el % va escrito.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Dentro de la sección Nutritional information de Product details, en una lista (`ul`) de seis anillos. No sustituye a la tabla de la etiqueta (Nutrition label) ni al panel de barras (Nutrition bar): es la vista resumida de la ingesta de referencia.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 2,
+      "total": 2,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "nutrition-ring",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "193:209",
+    "contract": "../../../../../../design-system/schemas/components/nutrition-ring.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

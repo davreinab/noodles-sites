@@ -1,0 +1,72 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:icon-trash",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Icon / trash",
+    "slug": "icon-trash",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Icono de papelera (Lucide trash-2), trazo 2.5, 24×24. Uso: botón «Clear filters» del estado Filtered de Library head (wireframe 171:3808).",
+    "figmaPage": "Iconography",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": false,
+    "anatomyHash": "fd1476f9c582",
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    }
+  },
+  "api": {
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "icon/color/default"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [],
+    "example": null,
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "208:63",
+    "componentKey": "7ea58ad45bad684a2e644156bb296275027c4df6",
+    "propertyNames": {},
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
+      "strokes: icon/color/default",
+      "color: icon/color/default"
+    ],
+    "textStyles": []
+  },
+  "docs": {
+    "file": "design-system/docs/components/icon-trash.md",
+    "section": "Icon / trash"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

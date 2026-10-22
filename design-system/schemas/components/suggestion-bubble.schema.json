@@ -7,18 +7,18 @@
     "slug": "suggestion-bubble",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T09:38:13Z",
-    "description": "Botón flotante (suggestion box / Babelbox) hacia el formulario externo de Calidad. Fijo abajo a la derecha (layout/margin desde los bordes), layer/floating; no tapa el CTA del Mobile menu ni el Toast (que sube por encima). Expanded=True al cargar: icono + «Sugerencias» + external-link; al hacer scroll pasa a Expanded=False (solo icono, 56 px) y respeta prefers-reduced-motion. Es un <a target=\"_blank\" rel=\"noopener\"> con nombre accesible «Sugerencias (abre en una pestaña nueva)» también en la versión plegada. Hover: fondo amarillo de marca y elevation/2; Focus: anillo suggestion/focus-ring.",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "RETIRADO (2026-10-22): no se usa; la vía de sugerencias es la caja del Footer (wireframe UX). Botón flotante (suggestion box / Babelbox) hacia el formulario externo de Calidad. Fijo abajo a la derecha (layout/margin desde los bordes), layer/floating; no tapa el CTA del Mobile menu ni el Toast (que sube por encima). Expanded=True al cargar: icono + «Sugerencias» + external-link; al hacer scroll pasa a Expanded=False (solo icono, 56 px) y respeta prefers-reduced-motion. Es un <a target=\"_blank\" rel=\"noopener\"> con nombre accesible «Sugerencias (abre en una pestaña nueva)» también en la versión plegada. Hover: fondo amarillo de marca y elevation/2; Focus: anillo suggestion/focus-ring.",
     "figmaPage": "Feedback & overlays",
     "figmaType": "COMPONENT_SET",
     "variantCount": 6,
     "autoLayout": true,
     "lifecycle": {
-      "status": "active",
-      "since": null,
-      "removeIn": null,
-      "replacement": null,
-      "reason": null
+      "status": "deprecated",
+      "since": "2026-10-22",
+      "removeIn": "siguiente versión mayor tras cumplirse el plazo",
+      "replacement": "footer",
+      "reason": "El wireframe UX (565:13925 y 567:13926) no tiene burbuja flotante: la vía de sugerencias es la caja del Footer (R-08.4). Decidido por David Reina el 2026-10-22."
     },
     "anatomyHash": "d9b37ef7c0be",
     "verification": {

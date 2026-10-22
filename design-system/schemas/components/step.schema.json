@@ -7,8 +7,8 @@
     "slug": "step",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T09:38:13Z",
-    "description": "Paso numerado de preparación (página de producto, junto al temporizador de 3 minutos de la fase 5) o de receta. Anatomía: número en círculo (Anton, step/number-bg amarillo de marca, 56 px) · texto (body-l) · media opcional (Media=True: imagen o GIF 16:9; el GIF respeta prefers-reduced-motion y lleva pausa). Se usa dentro de <ol>: el número visual es decorativo (aria-hidden) porque la lista ya lo anuncia. Se apilan con space/32.",
+    "lastSync": "2026-10-22T14:07:02Z",
+    "description": "Paso numerado de preparación (punto 7 de la SPEC, wireframe UX 396:6073 en el archivo 1YhsCqdqYCHlK4Y82IY5G3). Tarjeta sobre fondo color/surface/inverse: fondo color/surface/card (superficie opaca), radio md, padding 24. Número grande en display, sin círculo (step/number-text); texto en negrita (step/text). Media=True: añade la media (imagen o vídeo) bajo el texto. Anatomía: número · contenido (texto + media opcional).",
     "figmaPage": "Content",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
@@ -20,16 +20,18 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "8c0eac93875f",
+    "anatomyHash": "df494faf71d2",
     "verification": {
-      "status": "verified",
+      "status": "stale",
       "date": "2026-10-22",
       "figmaVersion": "8c0eac93875f",
       "variantsChecked": [
         "Media=False",
         "Media=True"
       ],
-      "by": "agent (Claude Haiku, revisado)"
+      "by": "agent (Claude Haiku, revisado)",
+      "staleSince": "2026-10-22T14:07:02Z",
+      "reason": "la anatomía, las variantes, los tokens ligados o la key del maestro cambiaron desde la verificación"
     }
   },
   "api": {
@@ -45,6 +47,18 @@
         "type": "string",
         "default": "Abre la tapa hasta la mitad y añade agua hirviendo hasta la línea interior.",
         "figma": "Text#71:12"
+      },
+      {
+        "name": "title",
+        "type": "boolean",
+        "default": false,
+        "figma": "Title#222:6"
+      },
+      {
+        "name": "heading",
+        "type": "string",
+        "default": "Add boiling water up to the mark",
+        "figma": "Heading#222:9"
       },
       {
         "name": "media",
@@ -66,21 +80,21 @@
     },
     "tokens": [
       "border/width/thin",
+      "color/surface/card",
+      "color/text/default",
       "font/family/body",
       "font/family/display",
       "font/line-height/desktop/body-l",
+      "font/line-height/desktop/display",
       "font/line-height/desktop/h3",
       "font/size/desktop/body-l",
+      "font/size/desktop/display",
       "font/size/desktop/h3",
-      "font/style/body",
       "font/style/display",
-      "radius/pill",
+      "radius/md",
       "space/16",
       "space/24",
-      "space/56",
       "space/8",
-      "step/border",
-      "step/number-bg",
       "step/number-text",
       "step/text"
     ]
@@ -94,9 +108,10 @@
       "step__media",
       "step__number",
       "step__text",
+      "step__title",
       "steps"
     ],
-    "example": "<ol data-ds=\"step\" class=\"steps\">\n<li class=\"step\">\n<span class=\"step__number\" aria-hidden=\"true\">1</span>\n<div class=\"step__content\"><p class=\"step__text\">Abre la tapa hasta la mitad.</p></div>\n</li>\n<li class=\"step step--media\">\n<span class=\"step__number\" aria-hidden=\"true\">2</span>\n<div class=\"step__content\">\n<p class=\"step__text\">Añade agua hirviendo hasta la línea interior.</p>\n<div class=\"step__media\"><img src=\"/media/paso-2.jpg\" alt=\"Agua hasta la línea interior del vaso\"></div>\n</div>\n</li>\n</ol>",
+    "example": "<ol data-ds=\"step\" class=\"steps\">\n<li class=\"step\">\n<span class=\"step__number\" aria-hidden=\"true\">1</span>\n<div class=\"step__content\"><h3 class=\"step__title\">Add boiling water up to the mark</h3><p class=\"step__text\">Open the lid halfway and pour the water in up to the inner line.</p></div>\n</li>\n<li class=\"step step--media\">\n<span class=\"step__number\" aria-hidden=\"true\">2</span>\n<div class=\"step__content\">\n<p class=\"step__text\">Leave to stand for 3 minutes.</p>\n<div class=\"step__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"Cup filled up to the inner line with boiling water\"></div>\n</div>\n</li>\n</ol>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,
@@ -109,6 +124,8 @@
     "propertyNames": {
       "number": "Number#71:9",
       "text": "Text#71:12",
+      "title": "Title#222:6",
+      "heading": "Heading#222:9",
       "media": "Media"
     },
     "variantAxes": {
@@ -120,38 +137,41 @@
     "nestedInstances": [],
     "variableBindings": [
       "itemSpacing: space/24",
-      "width: space/56",
-      "height: space/56",
-      "topLeftRadius: radius/pill",
-      "topRightRadius: radius/pill",
-      "bottomLeftRadius: radius/pill",
-      "bottomRightRadius: radius/pill",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: color/surface/card",
+      "color: color/surface/card",
       "strokeTopWeight: border/width/thin",
       "strokeBottomWeight: border/width/thin",
       "strokeLeftWeight: border/width/thin",
       "strokeRightWeight: border/width/thin",
-      "fills: step/number-bg",
-      "strokes: step/border",
-      "color: step/number-bg",
-      "color: step/border",
       "fills: step/number-text",
-      "fontSize: font/size/desktop/h3",
+      "fontSize: font/size/desktop/display",
       "fontStyle: font/style/display",
       "fontFamily: font/family/display",
-      "lineHeight: font/line-height/desktop/h3",
+      "lineHeight: font/line-height/desktop/display",
       "color: step/number-text",
       "itemSpacing: space/16",
       "paddingTop: space/8",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h3",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: color/text/default",
       "fills: step/text",
-      "fontSize: font/size/desktop/body-l",
-      "fontStyle: font/style/body",
-      "fontFamily: font/family/body",
       "lineHeight: font/line-height/desktop/body-l",
+      "fontFamily: font/family/body",
+      "fontSize: font/size/desktop/body-l",
       "color: step/text"
     ],
     "textStyles": [
-      "Desktop/h3",
-      "Desktop/body-l"
+      "Desktop/display",
+      "Desktop/h3"
     ]
   },
   "docs": {

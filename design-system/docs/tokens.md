@@ -2,7 +2,7 @@
 
 # GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
 
-> Última sync: **2026-10-22T09:37:04Z** · modo de adopción: `new` · 331 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-22T14:49:47Z** · modo de adopción: `new` · 331 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice
@@ -219,7 +219,7 @@
 |---|---|---|---|---|---|
 | `layer/base` | `--layer-base` | FLOAT | `0` | — | z-index 0. Contenido normal de la página |
 | `layer/raised` | `--layer-raised` | FLOAT | `10` | — | z-index 10. Contenido por encima de imágenes dentro de una sección (copy del hero, banderas) |
-| `layer/sticky` | `--layer-sticky` | FLOAT | `100` | — | z-index 100. Navbar que se oculta al bajar y reaparece al subir |
+| `layer/sticky` | `--layer-sticky` | FLOAT | `100` | — | z-index 100. Navbar: transparente arriba; al hacer scroll se queda fija y opaca |
 | `layer/floating` | `--layer-floating` | FLOAT | `200` | — | z-index 200. Suggestion bubble flotante |
 | `layer/overlay` | `--layer-overlay` | FLOAT | `300` | — | z-index 300. Velo (scrim) detrás de modales |
 | `layer/modal` | `--layer-modal` | FLOAT | `400` | — | z-index 400. Modales: etiqueta del envase, alérgenos, resultados |

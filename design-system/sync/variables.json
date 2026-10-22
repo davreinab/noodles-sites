@@ -6106,7 +6106,7 @@
           "id": "VariableID:9:10",
           "name": "layer/sticky",
           "type": "FLOAT",
-          "description": "z-index 100. Navbar que se oculta al bajar y reaparece al subir",
+          "description": "z-index 100. Navbar: transparente arriba; al hacer scroll se queda fija y opaca",
           "scopes": [],
           "codeSyntax": {
             "WEB": "var(--layer-sticky)"
@@ -6117,7 +6117,9 @@
               "type": "value",
               "value": 100
             }
-          }
+          },
+          "h": "8f05d84b",
+          "key": "73da30571928f88d921855f3cd7f0179e50399bd"
         },
         {
           "id": "VariableID:9:11",
@@ -9083,5 +9085,15 @@
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
   "fileName": "Document",
   "version": null,
-  "readAt": "2026-10-08T11:49:12.213Z"
+  "readAt": "2026-10-08T11:49:12.213Z",
+  "partialRefresh": {
+    "history": [
+      {
+        "at": "2026-10-22T14:48:00.178Z",
+        "what": "refresco puntual de 1 variable(s)/estilo(s) de «Document» con VARIABLE_IDS/VARIABLE_NAMES + --merge",
+        "scope": "layer/sticky",
+        "missing": []
+      }
+    ]
+  }
 }

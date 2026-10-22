@@ -133,3 +133,4 @@
 {"ts": "2026-10-22T16:30:05+02:00", "actor": "script", "action": "ds-library", "detail": "catálogo regenerado: 103 patrones, 60 archivos escritos, 22 retirados"}
 {"ts": "2026-10-22T16:30:57+02:00", "actor": "script", "action": "ds-sync", "detail": "regenerados los artefactos del DS desde los volcados de Figma", "files": ["design-system/agent-manifest.json", "design-system/reports/drift-report.json"]}
 {"ts": "2026-10-22T16:30:58+02:00", "actor": "script", "action": "ds-library", "detail": "catálogo regenerado: 103 patrones, 2 archivos escritos, 0 retirados"}
+{"ts": "2026-10-22T16:49:48+02:00", "actor": "script", "action": "ds-sync", "detail": "regenerados los artefactos del DS desde los volcados de Figma", "files": ["design-system/agent-manifest.json", "design-system/docs/tokens.md", "design-system/reports/drift-report.json", "design-system/showcase/index.html", "design-system/tokens/tokens.css", "design-system/tokens/tokens.json"]}

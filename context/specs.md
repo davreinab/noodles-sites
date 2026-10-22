@@ -21,8 +21,9 @@ Referencia de origen (user stories, features, touchpoints): [`synthesis.md`](./s
 
 > Requisitos derivados el 2026-10-07 del traspaso, [`business-rules.md`](./business-rules.md) y
 > [`user-flow.md`](./user-flow.md); cada uno cita la user story de [`synthesis.md`](./synthesis.md) de la que nace.
-> No se especifican las landing pages (fuera del proyecto) ni los temas de
-> [`user-flow.md § Elementos sin definir`](./user-flow.md) (falta información).
+> No se especifican las landing pages (fuera del proyecto). Los temas que estaban sin definir se levantaron el
+> 2026-10-22 ([`user-flow.md § Elementos sin definir`](./user-flow.md)); sus requisitos esperan user story:
+> ver «Pendiente de user story» al final.
 
 ## F-01 · Home y navegación común
 
@@ -30,7 +31,9 @@ Referencia de origen (user stories, features, touchpoints): [`synthesis.md`](./s
 - R-01.1 El sistema DEBE llevar desde la Home a la acción principal del mercado: la campaña activa o, si no la hay, los productos y después las recetas. — **Origen:** US-01
 - R-01.2 El sistema DEBE ocultar entero el módulo de promoción o concurso de la Home cuando no hay una promoción activa. — **Origen:** US-01
 - R-01.3 El sistema NO DEBE mostrar más de 3 slides en el hero de la Home. — **Origen:** US-01
-- R-01.4 El sistema DEBE mostrar en todas las páginas una navbar que se oculta al bajar y reaparece al subir. — **Origen:** US-01
+- ~~R-01.4 El sistema DEBE mostrar en todas las páginas una navbar que se oculta al bajar y reaparece al subir.~~ *Retirado el 2026-10-22: lo sustituye R-01.6* (cambio 2026-10-22, David Reina: adaptar a la estructura de los wireframes UX). — **Origen:** US-01
+- R-01.6 El sistema DEBE mostrar en todas las páginas una cabecera transparente sobre el contenido que, al bajar, queda fija arriba con fondo opaco. — **Origen:** US-01
+- R-01.7 El sistema DEBE pasar las slides del hero automáticamente, con un control de pausa visible, y NO DEBE moverlas si la persona tiene activado «reducir movimiento». — **Origen:** US-01
 - R-01.5 El sistema DEBE incluir en todas las páginas un footer común (logo, contacto y navegación) y un bottom footer con los legales del país. — **Origen:** US-11
 
 ### Escenarios
@@ -45,10 +48,15 @@ Referencia de origen (user stories, features, touchpoints): [`synthesis.md`](./s
 - **Cuando** la persona abre la Home
 - **Entonces** el módulo de promoción no aparece y la acción principal lleva a los productos
 
-#### Escenario: Navbar al hacer scroll
+#### Escenario: Cabecera al hacer scroll
 - **Dado** que la persona está en cualquier página
-- **Cuando** baja por la página y después sube
-- **Entonces** la navbar se oculta al bajar y reaparece al subir
+- **Cuando** baja por la página
+- **Entonces** la cabecera queda fija arriba con fondo opaco
+
+#### Escenario: Pausa del slider
+- **Dado** que el hero de la Home tiene varias slides
+- **Cuando** la persona pulsa pausa, o tiene activado «reducir movimiento»
+- **Entonces** las slides dejan de pasar solas
 
 ## F-02 · Fórmula natural y FAQ
 
@@ -118,9 +126,16 @@ Referencia de origen (user stories, features, touchpoints): [`synthesis.md`](./s
 - R-05.2 El sistema DEBE mostrar en cada receta la imagen principal, los ingredientes, la nutrición y los pasos. — **Origen:** US-06
 - R-05.3 El sistema DEBE mostrar los productos de la marca que usa la receta como chips que enlazan a su ficha. — **Origen:** US-06
 - R-05.4 El sistema NO DEBE mostrar vídeo en la receta en el lanzamiento. — **Origen:** US-06
-- R-05.5 El sistema NO DEBE ofrecer un buscador de recetas por ingredientes. — **Origen:** US-06
+- ~~R-05.5 El sistema NO DEBE ofrecer un buscador de recetas por ingredientes.~~ *Retirado el 2026-10-22: lo sustituye R-05.6* (cambio 2026-10-22, David Reina: adaptar a la estructura de los wireframes UX). — **Origen:** US-06
+- R-05.6 El sistema DEBE permitir buscar recetas por nombre o por ingrediente y filtrarlas con etiquetas. — **Origen:** US-06
+- R-05.7 El sistema DEBE mostrar, cuando una búsqueda no da resultados, un aviso y las recetas más populares. — **Origen:** US-06
 
 ### Escenarios
+
+#### Escenario: Búsqueda de receta sin resultados
+- **Dado** que la persona está en la librería de recetas
+- **Cuando** busca un ingrediente que no aparece en ninguna receta
+- **Entonces** ve un aviso de que no hay resultados y las recetas más populares
 
 #### Escenario: Producto de una receta
 - **Dado** que la receta usa Yatekomo Pollo
@@ -162,7 +177,8 @@ Referencia de origen (user stories, features, touchpoints): [`synthesis.md`](./s
 ## F-08 · Feedback, contacto y legales
 
 ### Requisitos
-- R-08.1 El sistema DEBE mostrar en todas las páginas la suggestion bubble, que lleva al formulario externo de Calidad. — **Origen:** US-10
+- ~~R-08.1 El sistema DEBE mostrar en todas las páginas la suggestion bubble, que lleva al formulario externo de Calidad.~~ *Retirado el 2026-10-22: lo sustituye R-08.4* (cambio 2026-10-22, David Reina: adaptar a la estructura de los wireframes UX). — **Origen:** US-10
+- R-08.4 El sistema DEBE mostrar en el pie de todas las páginas una caja de sugerencias que lleva al formulario de Calidad. — **Origen:** US-10
 - R-08.2 El sistema DEBE resolver el contacto con el formulario externo de GB Foods. — **Origen:** US-11
 - R-08.3 El sistema DEBE publicar los legales propios de cada país: Privacy, Legal notice, Cookies, Lawful basis y Contest rules. — **Origen:** US-11
 
@@ -170,7 +186,7 @@ Referencia de origen (user stories, features, touchpoints): [`synthesis.md`](./s
 
 #### Escenario: Sugerencia
 - **Dado** que la persona está en cualquier página
-- **Cuando** pulsa la suggestion bubble
+- **Cuando** pulsa «Send suggestions» en la caja del pie
 - **Entonces** llega al formulario externo de Calidad
 
 #### Escenario: Legales por país
@@ -200,3 +216,16 @@ Referencia de origen (user stories, features, touchpoints): [`synthesis.md`](./s
 - **Dado** que el equipo de marketing de Italia tiene una campaña nueva
 - **Cuando** la publica en la web de Saikebon
 - **Entonces** la campaña aparece en la Home de Saikebon sin intervención técnica
+
+## Pendiente de user story
+
+Funciones que dibujan los wireframes UX (2026-10-22) y que todavía no tienen user story en
+[`synthesis.md`](./synthesis.md). No son normativas hasta tenerla (regla 4):
+- Formulario propio de participación en concursos, con prueba de compra, y pantallas de resultado
+  (gana, no gana, máximo de participaciones). ⬜ TODO — origen
+- Ganadores anteriores y contenido de la comunidad en la página de concurso. ⬜ TODO — origen
+- Newsletter y redes en la librería y la página de concursos. ⬜ TODO — origen
+- Compartir una receta (redes y copiar enlace) y mostrar sus comensales. ⬜ TODO — origen
+- Enviar recetas propias desde la librería de recetas. ⬜ TODO — origen
+- Badges VEGAN y HOT! en el catálogo. ⬜ TODO — origen
+- Sellos y certificados en el pie. ⬜ TODO — origen

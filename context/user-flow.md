@@ -16,7 +16,12 @@
 > 2026-10-22): 26 pantallas y 4 modales, en escala de grises, sin enlaces de prototipo entre pantallas. Siete
 > cabeceras de sección llevan la marca «Needs client feedback» (entre ellas Menu, Home, Natural formula y
 > Products). Los textos y cifras del wireframe son de ejemplo salvo que una regla diga otra cosa. Las versiones
-> móviles (página «📱 Mobile», 77 frames) no se han revisado: ⬜ TODO.
+> **Wireframes móviles:** sección `567:13926` de la página «📱 Mobile» (leída el 2026-10-22): 22 pantallas a 375 px,
+> la misma estructura que en desktop. Varias tienen el nombre cambiado en Figma (el menú y la Home se llaman
+> «Products Library»; la Recipe page, «Product Page»): manda la cabecera de su grupo.
+> **Desde el 2026-10-22 la estructura de los wireframes manda** sobre la del FigJam y la del traspaso cuando
+> chocan (David Reina: «hay que adaptar lo que teníamos con la estructura analizada»). Los bloques «Estructura en
+> el FigJam» se conservan como origen; donde difieren, vale el bloque «Estructura en el wireframe UX».
 
 ## Modelo conceptual
 Una web por marca y mercado, todas con la misma estructura. La Home lleva a la acción
@@ -62,21 +67,22 @@ desembocan en la misma Product page. El tablero incluye además «New product la
 landing pages» con su plantilla: **no son de este proyecto** (David Reina, 2026-10-07) y no se recogen aquí.
 
 **Transversales (todas las páginas):**
-- Navbar que se oculta al bajar y reaparece al subir.
+- ~~Navbar que se oculta al bajar y reaparece al subir~~ (traspaso; sustituido el 2026-10-22, ver abajo).
   - **Wireframe UX:** botón de menú, logo centrado y CTA «New 100% Natural Formula». Anotación en Figma
     (`396:5701`): «header flotante transparente, se queda sticky al scroll con fondo opaco».
-    ⚠️ Choca con «se oculta al bajar y reaparece al subir» (traspaso): pendiente de decidir.
+    Decidido (David Reina, 2026-10-22: «hay que adaptar lo que teníamos con la estructura analizada»): manda el wireframe. Móvil: botón de menú y logo, sin el CTA.
   - **Menú** (`377:9923`): a pantalla completa, también en desktop. Claim, Products, Natural formula
-    (etiqueta NEW), Recipes, Contests, FAQS, redes sociales y ©.
+    (etiqueta NEW), Recipes, Contests, FAQS, redes sociales y ©. En móvil, cada sección con flecha.
 - Footer compartido (logo, contacto, navegación, sellos).
   - **Wireframe UX:** logo; enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y dos
     «Campaign link»; «2025 Certified by» con sellos (EFSA, BREEAM: ver «Elementos sin definir»); caja de
     sugerencias («Do you have any ideas, complaints or cravings?» + «Send suggestions»); franja legal Legal
-    notice, Privacy policy, Cookies policy, Legal basis, Contact y © GBFoods. ⚠️ La franja no incluye Contest
-    rules, que [`business-rules.md § Legal`](./business-rules.md) pone entre los cinco legales: pendiente de decidir.
+    notice, Privacy policy, Cookies policy, Legal basis, Contact y © GBFoods. En móvil, la caja de sugerencias va
+    a todo el ancho encima del pie. Decidido (David Reina, 2026-10-22: «hay que adaptar lo que teníamos con la estructura analizada»): la franja legal añade **Contest rules** a lo que dibuja el wireframe,
+    porque las bases son obligatorias ([`business-rules.md § Legal`](./business-rules.md)).
 - Bottom footer legal (ver [`business-rules.md § Legal`](./business-rules.md)).
-- Suggestion bubble flotante.
-  - ⚠️ El wireframe UX no la tiene: la vía de sugerencias es la caja del footer. Pendiente de decidir.
+- ~~Suggestion bubble flotante~~ (sustituida el 2026-10-22, ver abajo).
+  - Decidido (David Reina, 2026-10-22: «hay que adaptar lo que teníamos con la estructura analizada»): no hay burbuja; la vía de sugerencias es la caja del footer.
 
 ## Pantallas
 
@@ -93,7 +99,7 @@ título, subtítulo, CTA y controles) · Concurso (arte de campaña, texto de pr
 Fórmula natural (título e ingredientes eliminados, tachados, con su explicación) · Our products (Cups, Bags,
 Sauces) · Recetas (4 cards y «See all recipes») · Banner de campaña (solo imagen) · FAQ («Still curious? See
 all FAQS») · Where to buy (logos de distribuidores) · Footer. Anotaciones en Figma: el slider tiene hasta 3
-slides y «pasa automáticamente» (`396:5702`; ⚠️ ver [`business-rules.md § Componentes interactivos`](./business-rules.md));
+slides y «pasa automáticamente» (`396:5702`; con pausa, ver [`business-rules.md § Componentes interactivos`](./business-rules.md));
 el acordeón solo tiene una pregunta abierta (`396:5821`).
 
 ### 2. Natural formula page
@@ -133,9 +139,9 @@ Navegación en 3 niveles: tipo → línea → sabor.
 **Estructura en el wireframe UX** (`396:5932`): hero con producto destacado (NEW) · barra de anclas Cups ·
 Bags · Sauces · por formato, un bloque por línea (Yatekomo, Yakisoba) con packshot, descripción y rejilla
 «Find your favourite flavour» con badges NEW, VEGAN y HOT! · Sauces como rejilla de productos. Los tres
-niveles tipo → línea → sabor son **una sola página con anclas**, no un filtro. ⚠️ El DS tiene el patrón
-Product filter (tipo → línea → sabor como filtro) y [`specs.md`](./specs.md) R-03 habla de filtrar:
-pendiente de decidir.
+niveles tipo → línea → sabor son **una sola página con anclas**, no un filtro. Decidido (David Reina, 2026-10-22: «hay que adaptar lo que teníamos con la estructura analizada»): manda el wireframe;
+el patrón Product filter del DS y [`specs.md`](./specs.md) R-03 quedan ⬜ TODO — revisar. Móvil: anclas en
+píldoras, sabores en rejilla de 2 columnas y salsas en carrusel horizontal.
 
 ### 4. Product page
 - Etiquetas, nombre y highlights.
@@ -159,14 +165,17 @@ pendiente de decidir.
   la etiqueta del envase (`490:7469`).
 - **Nutritional information:** seis gráficos circulares (energía, proteína, hidratos, grasa, fibra, sal) con % y
   valor; «Main allergens» en tres tarjetas y «Check the detailed table», que abre el modal con los 14 alérgenos
-  (`490:11998`, marca ● si está presente). ⚠️ El DS representa la nutrición con barras (Nutrition bar):
-  pendiente de decidir. ⚠️ El modal de etiqueta usa el formato de EE. UU. (Nutrition Facts, % Daily Value,
-  peso en onzas): ⬜ TODO — confirmar el formato de etiqueta europeo con GB Foods.
-- **Preparation:** cuatro pasos, imagen o vídeo y temporizador de 3:00 (Empezar, Reiniciar).
+  (`490:11998`, marca ● si está presente). Decidido (David Reina, 2026-10-22: «hay que adaptar lo que teníamos con la estructura analizada»): nutrición en gráficos circulares, como el wireframe
+  (el Nutrition bar del DS queda ⬜ TODO — revisar). La etiqueta del envase sigue la estructura del wireframe
+  pero con el formato europeo ([`business-rules.md § Catálogo de producto`](./business-rules.md)); el wireframe
+  dibuja el de EE. UU. En móvil, los gráficos van en carrusel horizontal.
+- **Preparation:** cuatro pasos, imagen o vídeo y temporizador de 3:00 (Empezar, Reiniciar). En móvil el
+  temporizador va **entre el paso 2 y el 3**, justo en el paso de reposo de 3 minutos.
 - **Recipes** con ese producto, **banner** y «Other products and flavours».
 
 ### 5. Recipe library
-Sin buscador por ingredientes: con tan pocas recetas daría muchos resultados vacíos.
+~~Sin buscador por ingredientes: con tan pocas recetas daría muchos resultados vacíos.~~ Sustituido el
+2026-10-22 por el buscador del wireframe (ver abajo); los resultados vacíos tienen su estado.
 
 **Estructura en el FigJam** (de arriba abajo; Navbar, Suggestion bubble, Footer y Bottom footer en todas):
 - **Slim head:** título y claim de la sección, y herramientas de filtro, búsqueda u orden.
@@ -176,8 +185,8 @@ Sin buscador por ingredientes: con tan pocas recetas daría muchos resultados va
 **Estructura en el wireframe UX** (`171:3808`; estados `483:5711` y `485:6064`): cabecera con buscador
 («Buscar receta o ingrediente») y chips de filtro · rejilla de 4 columnas (personas · minutos, nombre, chips
 de producto) · paginación · banner · formulario «Do you have your own recipes with Yatekomo?» (texto libre y
-«Enviar mi receta»). ⚠️ Choca con «sin buscador por ingredientes» (arriba) y con el tema sin definir
-«filtro, búsqueda y orden»: pendiente de decidir.
+«Enviar mi receta»). Decidido (David Reina, 2026-10-22: «hay que adaptar lo que teníamos con la estructura analizada»): buscador y filtros como el wireframe; deja sin efecto «sin buscador por
+ingredientes». Móvil: chips en fila desplazable y rejilla de una columna.
 
 ### 6. Recipe page
 - Imagen principal, ingredientes con los productos como chips, nutrición y pasos.
@@ -194,7 +203,8 @@ de producto) · paginación · banner · formulario «Do you have your own recip
 descripción, chips de tiempo y comensales, «Share recipe» que abre el modal de compartir `500:8062`, imagen) ·
 Ingredients (cantidad e ingrediente, con el producto de la marca destacado) y «Recipe macros» por ración, con
 «Ver tabla de alérgenos» (mismo modal de 14 alérgenos) · Step-by-step (pasos numerados, imagen opcional por
-paso) · Other similar recipes · banner. Sin vídeo y sin utensilios.
+paso) · Other similar recipes · banner. Sin vídeo y sin utensilios. En móvil, «Share recipe» va junto a los chips
+y las recetas similares en carrusel horizontal.
 
 ### 7. Contest library
 Una página agregadora no es obligatoria.
@@ -239,21 +249,19 @@ apartados numerados, tabla de plazos de conservación y fecha de actualización.
 Enlace externo.
 
 ### Elementos sin definir
-Decisión de David Reina (2026-10-07): estos temas quedan **sin definir** de momento. No se
-diseñan, no se especifican y no se crean componentes ni reglas para ellos; ante cualquier
-petición relacionada, la respuesta es que **falta información**.
-- **Suggestion box como formulario propio** (la regla vigente es el enlace al formulario externo de Calidad, [`business-rules.md § Contacto`](./business-rules.md)).
-- **Recipe library:** filtro, búsqueda y orden.
-- **Contest page:** formulario de participación propio y testimonios (el traspaso admite estructura propia, iframe o enlace externo).
-- **Product page:** badges «hot!» y «vegan!», moodboard del sabor y packs.
-- **Recipe page:** comensales, utensilios y compartir o guardar la receta.
-- **Newsletter y redes** en las páginas de concursos.
-- **Sellos de salud y certificados alimentarios** en el footer (pendientes de GB Foods).
-
-El wireframe UX Desktop (`565:13925`, leído el 2026-10-22) ya dibuja contenido para seis de estos temas: buscador
-y chips en la Recipe library; formulario de participación, ganadores y comunidad en la Contest page; badges NEW,
-VEGAN y HOT!; comensales y compartir en la Recipe page (no utensilios ni guardar); newsletter y redes en
-concursos; sellos EFSA y BREEAM en el footer. **Siguen sin definir** hasta que David Reina decida levantarlos.
+~~Decisión de David Reina (2026-10-07): estos temas quedan sin definir.~~ **Levantados el 2026-10-22** (David
+Reina, al adaptar el contexto a los wireframes): se definen como los dibuja el wireframe UX.
+- **Sugerencias:** caja en el footer con «Send suggestions» (ver «Footer compartido»). Si abre un formulario propio
+  o el externo de Calidad: ⬜ TODO — ver [`business-rules.md § Contacto`](./business-rules.md).
+- **Recipe library:** buscador por receta o ingrediente, chips de filtro, número de resultados, «Clear filters» y
+  paginación. Orden: no aparece en el wireframe (⬜ TODO).
+- **Contest page:** formulario de participación propio, ganadores anteriores y contenido de la comunidad.
+- **Catálogo:** badges NEW, VEGAN y HOT!. El moodboard del sabor y los packs no aparecen en el wireframe (⬜ TODO).
+- **Recipe page:** comensales y compartir (redes y copiar enlace). Utensilios y guardar no aparecen (⬜ TODO).
+- **Concursos:** newsletter y redes en la Contest library y la Contest page.
+- **Footer:** sellos y certificados («2025 Certified by», EFSA y BREEAM en el wireframe). Cuáles: ⬜ TODO — GB Foods.
+- **Recipe library:** formulario «Do you have your own recipes with Yatekomo?» para enviar recetas (nuevo en el
+  wireframe; qué se hace con ellas: ⬜ TODO).
 
 ## Estados
 - Home sin promoción activa: el módulo de promo o concurso se oculta.

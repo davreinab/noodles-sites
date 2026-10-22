@@ -20,8 +20,9 @@ dónde viene una capacidad, el objetivo dice para qué la queremos. Las dos cosa
 
 > **Origen de esta cadena (2026-10-07):** el proyecto no tiene módulo de investigación. Los
 > hallazgos salen de lo que afirma el cliente en el traspaso y de los perfiles definidos por el
-> proyecto (hipótesis), y lo dicen en su prevalencia. Quedan fuera las landing pages y los temas
-> sin definir de [`user-flow.md § Elementos sin definir`](./user-flow.md).
+> proyecto (hipótesis), y lo dicen en su prevalencia. Quedan fuera las landing pages. Los temas que estaban
+> sin definir se levantaron el 2026-10-22 al adoptar los wireframes UX; sus features y user stories: ⬜ TODO
+> (ver [`specs.md § Pendiente de user story`](./specs.md)).
 
 ## Hallazgos
 Lo que la evidencia dice **cruzando fuentes**. Una observación suelta (`R-… §O-n`) o un dato
@@ -96,9 +97,9 @@ columnas es una feature que nadie pidió.
 | FT-07 | Concursos con tres modelos (estructura propia, iframe o enlace externo); la librería es opcional | TP-06 | OBJ-04 | in fase 2 | Traspaso §7 |
 | FT-08 | Dónde comprar por país | TP-07 | ⬜ TODO | in fase 2 | Traspaso §4 y §7 |
 | FT-09 | FAQS como página indexada | TP-08 | OBJ-06 | in fase 2 | Traspaso §3 y §7 |
-| FT-10 | Suggestion bubble hacia el formulario externo de Calidad | TP-09 | ⬜ TODO | in fase 2 | Traspaso §5 y §7 · E-02 |
+| FT-10 | Caja de sugerencias en el pie hacia el formulario de Calidad (antes: suggestion bubble; cambio 2026-10-22) | TP-09 | ⬜ TODO | in fase 2 | Traspaso §5 y §7 · E-02 |
 | FT-11 | Legales por país y contacto externo | TP-10 | OBJ-02 | in fase 2 | Traspaso §5 y §7 |
-| FT-12 | Navegación común: navbar que se oculta al bajar, footer y bottom footer legal | TP-01 | OBJ-02 | in fase 2 | Traspaso §7 |
+| FT-12 | Navegación común: cabecera transparente que se fija al bajar, menú a pantalla completa, footer y bottom footer legal (cambio 2026-10-22) | TP-01 | OBJ-02 | in fase 2 | Traspaso §7 |
 | FT-13 | Plataforma multimarca y multiidioma con gestión autónoma del contenido | TP-11 | OBJ-02 | in fase 2 | Traspaso §2 · project-context |
 | FT-14 | Medición con GA4, GTM y data layer desde el inicio | TP-11 | ⬜ TODO | in fase 2 | Traspaso §2 · restricciones del encargo |
 

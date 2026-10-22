@@ -684,6 +684,21 @@ def combinaciones(analysis, pairs):
     return out[:MAX_COMBOS]
 
 
+def agrupa_motivos(pares):
+    """[(etiqueta, motivo)] → ['eje=a/b/c (motivo)', …]: las variantes de un mismo eje con el mismo motivo van en una sola entrada."""
+    grupos = {}
+    for et, mot in pares:
+        eje, _, val = et.partition("=")
+        grupos.setdefault((eje, mot), []).append(val)
+    return [f"{eje}={'/'.join(v for v in vals if v)} ({mot})" if any(vals) else f"{eje} ({mot})" for (eje, mot), vals in grupos.items()]
+
+
+def nota_no_pintadas(no_gen):
+    """La única redacción de la lista de variantes que la galería no pudo pintar: cada una con su motivo, separadas por comas
+    (los motivos no llevan comas) y terminada en punto, igual que el resto de notas de la ficha."""
+    return ("No se han podido pintar: " + ", ".join(no_gen) + ".") if no_gen else ""
+
+
 def gallery(sch, example, analysis, pairs=None):
     """(html | None, no_generables) — la rejilla «Todas las variantes» y las variantes que no se pudieron pintar.
 
@@ -696,14 +711,31 @@ def gallery(sch, example, analysis, pairs=None):
     root = _root(slug, example, bases)
     por_eje, no_gen = {}, []
     child_bool, spec_ejes = [], {}
+    por_eje_n, comparten = {}, {}
+    for it in analysis["items"]:
+        if it["state"] != "ignored":
+            por_eje_n[it["axis"]] = por_eje_n.get(it["axis"], 0) + 1
+            if it["kind"] == "enum" and it["classes"] and not it.get("spec"):
+                comparten.setdefault((it["axis"], tuple(it["classes"])), []).append(it["label"])
     for it in analysis["items"]:
         if it["state"] == "ignored":
+            continue
+        if it["kind"] == "enum" and it["default"] and por_eje_n.get(it["axis"]) == 1:
+            continue  # un eje con un solo valor no tiene nada que variar: el ejemplo ya es ese valor
+        grupo = comparten.get((it["axis"], tuple(it["classes"]))) or []
+        if it["kind"] == "enum" and len(grupo) > 1 and not it.get("spec"):
+            if grupo[0] == it["label"]:  # una sola entrada por grupo de valores que comparten clase
+                vals = "/".join(x.split("=", 1)[1] for x in grupo)
+                no_gen.append(f"{it['axis']}={vals} (comparten la clase .{it['classes'][0]}: por clase no se distinguen; declara un selector o un atributo para cada valor)")
             continue
         if it.get("spec"):
             spec_ejes.setdefault((it["axis"], it["kind"]), []).append(it)
             continue
-        if root is None or it["state"] == "unchecked" or (not it["classes"] and not it["default"]):
-            no_gen.append(it["label"])
+        if root is None:
+            no_gen.append(f"{it['label']} (el ejemplo no tiene un elemento raíz identificable: márcalo con data-ds=\"{slug}\")")
+            continue
+        if it["state"] == "unchecked" or (not it["classes"] and not it["default"]):
+            no_gen.append(f"{it['label']} (no hay clase ni atributo declarados para ella: declara su selector en modifiers)")
             continue
         scope = it.get("scope", "root")
         if scope == "child":
@@ -761,7 +793,7 @@ def gallery(sch, example, analysis, pairs=None):
                     celdas.append((etiqueta, _unique_ids(tag + body, k)))
                 k += 1
         if len(its) > MAX_CELLS_PER_AXIS:
-            no_gen.append(f"{axis}: {len(its) - MAX_CELLS_PER_AXIS} valores más")
+            no_gen.append(f"{axis} ({len(its) - MAX_CELLS_PER_AXIS} valores más: la galería pinta como mucho {MAX_CELLS_PER_AXIS} por propiedad)")
         secciones.append((axis if kind == "enum" else f"{axis} (con y sin)", celdas))
     for it in child_bool:
         t_ = base_de(it)
@@ -832,9 +864,9 @@ def gallery(sch, example, analysis, pairs=None):
             "(otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.")
     if analysis.get("ignored_reasons"):
         nota = ("No se pintan por su naturaleza (declarado en coverageIgnore): "
-                + "; ".join(f"{l}: {r}" for l, r in analysis["ignored_reasons"]) + ". " + nota)
+                + ", ".join(agrupa_motivos(analysis["ignored_reasons"])) + ". " + nota)
     if no_gen:
-        nota = "No se han podido pintar (sin clase conocida en el contrato ni en el CSS): " + ", ".join(no_gen) + ". " + nota
+        nota = nota_no_pintadas(no_gen) + " " + nota
     out.append('<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">' + nota + "</p>")
     out.append("</div>")
     return "\n".join(out), no_gen
@@ -846,9 +878,7 @@ def lista_faltantes(analysis):
         return ""
     partes = []
     if analysis.get("ignored_reasons"):
-        partes.append("No se pintan por su naturaleza: " + "; ".join(f"{l}: {r}" for l, r in analysis["ignored_reasons"]) + ".")
+        partes.append("No se pintan por su naturaleza: " + ", ".join(agrupa_motivos(analysis["ignored_reasons"])) + ".")
     if analysis["missing"]:
         partes.append("Variantes de Figma que no salen en el ejemplo: " + ", ".join(analysis["missing"]) + ".")
-    if analysis["unchecked"]:
-        partes.append("Sin clase conocida (no se puede comprobar): " + ", ".join(analysis["unchecked"]) + ".")
     return " ".join(partes)

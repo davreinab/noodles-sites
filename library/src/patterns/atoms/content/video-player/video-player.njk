@@ -14,7 +14,7 @@
 <span class="video-player__duration" aria-hidden="true">0:45</span>
 </div></div><figcaption>ratio=9:16</figcaption></figure>
 </div></section>
-<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">No se han podido pintar (sin clase conocida en el contrato ni en el CSS): poster=true, playing=true. La galería clona el elemento raíz del ejemplo y solo cambia sus clases: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
+<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">La galería clona el elemento raíz del ejemplo y solo cambia sus clases: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
 </div>{% endraw %}
 {% else %}
 {% raw %}<div data-ds="video-player" class="video-player">
@@ -22,6 +22,7 @@
 <button class="video-player__play" type="button" aria-label="Reproducir vídeo: Gana un viaje a Tokio (0:45)"><span class="icon icon-play" aria-hidden="true"></span></button>
 <span class="video-player__duration" aria-hidden="true">0:45</span>
 </div>
-<div data-ds="video-player" class="video-player video-player--vertical"><span class="video-player__title">Receta en vídeo</span></div>{% endraw %}
+<div data-ds="video-player" class="video-player video-player--vertical"><span class="video-player__title">Receta en vídeo</span></div>
+<div data-ds="video-player" class="video-player"><iframe title="Vídeo: Gana un viaje a Tokio" src="/assets/ds/images/placeholder.svg"></iframe></div>{% endraw %}
 {% endif %}
 {% endmacro %}

@@ -260,9 +260,7 @@
       "visible": 6,
       "total": 6,
       "missing": [],
-      "unchecked": [
-        "dismissible=true"
-      ],
+      "unchecked": [],
       "complete": true
     }
   },

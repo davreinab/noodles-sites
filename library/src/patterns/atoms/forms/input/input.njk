@@ -1,7 +1,4 @@
 {% macro render(data) %}
-{% if data.view == "todas" %}
-<p class="ds-gallery__note" style="font:14px/1.5 system-ui;color:#1f1f1f;max-width:70ch">Sin clase conocida (no se puede comprobar): required=true, helper=true, filled=true, error=true, disabled=true.</p>
-{% else %}
 {% raw %}<div data-ds="input" class="field">
 <label class="field__label" for="nombre">Nombre<span class="field__required" aria-hidden="true">*</span></label>
 <input class="field__control" id="nombre" name="nombre" type="text" placeholder="Escribe aquí" required aria-describedby="nombre-ayuda">
@@ -11,6 +8,13 @@
 <label class="field__label" for="email">Email</label>
 <input class="field__control" id="email" type="email" aria-invalid="true" aria-describedby="email-error">
 <p class="field__error" id="email-error"><span class="icon icon-circle-alert" aria-hidden="true"></span>Este campo es obligatorio</p>
+</div>
+<div data-ds="input" class="field">
+<label class="field__label" for="ciudad">Ciudad</label>
+<input class="field__control" id="ciudad" name="ciudad" type="text" value="Valencia">
+</div>
+<div data-ds="input" class="field">
+<label class="field__label" for="codigo-cliente">Código de cliente</label>
+<input class="field__control" id="codigo-cliente" name="codigo-cliente" type="text" value="YT-2041" disabled>
 </div>{% endraw %}
-{% endif %}
 {% endmacro %}

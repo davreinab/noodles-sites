@@ -44,7 +44,7 @@
       "page": "Pattern / Global",
       "type": "COMPONENT",
       "variants": 1,
-      "lastSync": "2026-10-22 · 09:38 UTC",
+      "lastSync": "2026-10-22 · 10:02 UTC",
       "verification": "verified",
       "verificationLabel": "Verificado"
     },
@@ -266,6 +266,8 @@
       "icon-button--inverse",
       "icon-close",
       "icon-instagram",
+      "lang-switch",
+      "lang-switch__option",
       "link",
       "link--dark",
       "logo",
@@ -316,10 +318,6 @@
   "variants": {
     "default": {
       "_title": "Ejemplo de código"
-    },
-    "todas-las-variantes": {
-      "_title": "Todas las variantes",
-      "view": "todas"
     }
   }
 }

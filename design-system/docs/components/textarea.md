@@ -25,6 +25,14 @@
   <textarea class="field__control field__control--textarea" id="respuesta" aria-invalid="true" aria-describedby="respuesta-error"></textarea>
   <p class="field__error" id="respuesta-error"><span class="icon icon-circle-alert" aria-hidden="true"></span>Este campo es obligatorio</p>
   </div>
+  <div data-ds="textarea" class="field">
+  <label class="field__label" for="comentario">Comentario</label>
+  <textarea class="field__control field__control--textarea" id="comentario" name="comentario">Me encantan los fideos, pero me gustaría más opciones sin gluten.</textarea>
+  </div>
+  <div data-ds="textarea" class="field">
+  <label class="field__label" for="notas-cerradas">Notas del pedido</label>
+  <textarea class="field__control field__control--textarea" id="notas-cerradas" name="notas-cerradas" disabled>Pedido cerrado. No se pueden añadir notas.</textarea>
+  </div>
   ```
 - **Accesibilidad (rol, nombre, estados y teclado):** Texto tinta sobre blanco 18,7:1; placeholder y ayuda en gris cálido sobre blanco 5,9:1; etiqueta tinta sobre crema 17,2:1; borde de tinta sobre crema 17,2:1 (≥ 3:1 de límite de control). Error: borde y mensaje en `--field-border-error`/`--field-error-text` (rojo de estado, verificado en la fase 2) con icono circle-alert y texto, nunca solo color. Desactivado: gris cálido sobre arena 4,3:1 (exento). Rol: `<textarea>` con `<label for>`; ayuda y error por `aria-describedby`. Si hay límite de caracteres, el contador se anuncia de forma educada (aria-live polite) solo al acercarse al límite. Foco igual que Input.
 - **Cuándo usar / qué NO hace:** Para respuestas de más de una línea. No se usa para datos cortos (Input) ni sin etiqueta.

@@ -1,11 +1,11 @@
 {% macro render(data) %}
-{% if data.view == "todas" %}
-<p class="ds-gallery__note" style="font:14px/1.5 system-ui;color:#1f1f1f;max-width:70ch">Sin clase conocida (no se puede comprobar): badge=true.</p>
-{% else %}
 {% raw %}<a data-ds="category-card" class="category-card" href="/productos?tipo=cups">
 <img class="category-card__media" src="/assets/ds/images/placeholder.svg" alt="">
 <span class="badge">New</span>
 <span class="category-card__name">Cups</span>
+</a>
+<a data-ds="category-card" class="category-card" href="/productos?tipo=cups">
+<img class="category-card__media" src="/assets/ds/images/placeholder.svg" alt="">
+<span class="category-card__name">Cups</span>
 </a>{% endraw %}
-{% endif %}
 {% endmacro %}

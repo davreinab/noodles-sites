@@ -7,7 +7,7 @@
     "slug": "search-field",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T09:38:13Z",
+    "lastSync": "2026-10-22T10:02:01Z",
     "description": "Campo de búsqueda (resultados en modal). Sin etiqueta visible: requiere aria-label («Buscar») y role=\"search\" en el formulario. Lupa delante; con texto aparece el botón borrar (aria-label «Borrar búsqueda»). Forma pill para distinguirlo de los campos de formulario. El valor se edita en la instancia.",
     "figmaPage": "Forms",
     "figmaType": "COMPONENT_SET",
@@ -106,7 +106,7 @@
       "search-field__input",
       "visually-hidden"
     ],
-    "example": "<form data-ds=\"search-field\" class=\"search-field\" role=\"search\" action=\"/buscar\">\n<span class=\"icon icon-search\" aria-hidden=\"true\"></span>\n<label class=\"visually-hidden\" for=\"q\">Buscar recetas y productos</label>\n<input class=\"search-field__input\" id=\"q\" name=\"q\" type=\"search\" placeholder=\"Buscar recetas y productos\">\n<button class=\"search-field__clear\" type=\"button\" aria-label=\"Borrar búsqueda\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span></button>\n</form>",
+    "example": "<form data-ds=\"search-field\" class=\"search-field\" role=\"search\" action=\"/buscar\">\n<span class=\"icon icon-search\" aria-hidden=\"true\"></span>\n<label class=\"visually-hidden\" for=\"q\">Buscar recetas y productos</label>\n<input class=\"search-field__input\" id=\"q\" name=\"q\" type=\"search\" placeholder=\"Buscar recetas y productos\">\n<button class=\"search-field__clear\" type=\"button\" aria-label=\"Borrar búsqueda\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span></button>\n</form>\n<form data-ds=\"search-field\" class=\"search-field\" role=\"search\" action=\"/buscar\">\n<span class=\"icon icon-search\" aria-hidden=\"true\"></span>\n<label class=\"visually-hidden\" for=\"q-con-texto\">Buscar recetas y productos</label>\n<input class=\"search-field__input\" id=\"q-con-texto\" name=\"q\" type=\"search\" value=\"fideos yakisoba\">\n<button class=\"search-field__clear\" type=\"button\" aria-label=\"Borrar búsqueda\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span></button>\n</form>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

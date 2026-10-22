@@ -20,6 +20,10 @@
   <span class="badge">New</span>
   <span class="category-card__name">Cups</span>
   </a>
+  <a data-ds="category-card" class="category-card" href="/productos?tipo=cups">
+  <img class="category-card__media" src="/media/cups.png" alt="">
+  <span class="category-card__name">Cups</span>
+  </a>
   ```
 - **Accesibilidad (rol, nombre, estados y teclado):** Nombre crema sobre tinta 17:1, legible sobre cualquier foto porque va en su placa. La imagen es decorativa (`alt=""`): el nombre da el destino. Toda la card es un único enlace con foco visible; hover y foco no dependen solo del color (sombra y contorno).
 - **Cuándo usar / qué NO hace:** En «Our products» de la Home, una por tipo con productos. No muestra productos sueltos (eso es Product card) ni lleva más texto que el nombre.

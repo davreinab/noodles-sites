@@ -21,6 +21,12 @@
   <input class="search-field__input" id="q" name="q" type="search" placeholder="Buscar recetas y productos">
   <button class="search-field__clear" type="button" aria-label="Borrar búsqueda"><span class="icon icon-close" aria-hidden="true"></span></button>
   </form>
+  <form data-ds="search-field" class="search-field" role="search" action="/buscar">
+  <span class="icon icon-search" aria-hidden="true"></span>
+  <label class="visually-hidden" for="q-con-texto">Buscar recetas y productos</label>
+  <input class="search-field__input" id="q-con-texto" name="q" type="search" value="fideos yakisoba">
+  <button class="search-field__clear" type="button" aria-label="Borrar búsqueda"><span class="icon icon-close" aria-hidden="true"></span></button>
+  </form>
   ```
 - **Accesibilidad (rol, nombre, estados y teclado):** Texto tinta sobre blanco 18,7:1; placeholder gris cálido sobre blanco 5,9:1; iconos y borde tinta (≥ 3:1). Rol: `<form role="search">` con `<input type="search">` y etiqueta (oculta visualmente porque el placeholder no cuenta como nombre). Borrar es un `<button>` con `aria-label` y devuelve el foco al campo. Los resultados se anuncian («N resultados») con aria-live. Foco: el contorno rodea la píldora entera (`:focus-within`).
 - **Cuándo usar / qué NO hace:** Para buscar en la web (Navbar y página de resultados). No filtra el catálogo (eso es Product filter) y no se usa como campo de formulario genérico.

@@ -128,7 +128,7 @@
       "page": "Buttons & links",
       "type": "COMPONENT_SET",
       "variants": 24,
-      "lastSync": "2026-10-22 · 09:38 UTC",
+      "lastSync": "2026-10-22 · 10:02 UTC",
       "verification": "verified",
       "verificationLabel": "Verificado"
     },
@@ -232,6 +232,7 @@
     "textStyles": [],
     "classes": [
       "icon",
+      "icon-arrow-left",
       "icon-arrow-right",
       "icon-button",
       "icon-button--inverse",
@@ -269,9 +270,7 @@
       "visible": 5,
       "total": 5,
       "missing": [],
-      "unchecked": [
-        "disabled=true"
-      ],
+      "unchecked": [],
       "complete": true
     }
   },

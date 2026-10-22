@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-22T09:55:34Z",
+  "lastSync": "2026-10-22T10:02:01Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -835,7 +835,8 @@
           "button--l",
           "button--secondary",
           "icon",
-          "icon-arrow-right"
+          "icon-arrow-right",
+          "icon-play"
         ]
       }
     },
@@ -862,6 +863,7 @@
         "path": "design-system/css/components.css",
         "classes": [
           "icon",
+          "icon-arrow-left",
           "icon-arrow-right",
           "icon-button",
           "icon-button--inverse",
@@ -1575,6 +1577,7 @@
           "icon-button",
           "icon-button--secondary",
           "icon-pause",
+          "icon-play",
           "icon-rotate-ccw",
           "timer",
           "timer__controls",
@@ -1794,6 +1797,8 @@
           "icon-button",
           "icon-button--secondary",
           "icon-menu",
+          "lang-switch",
+          "lang-switch__option",
           "logo",
           "navbar",
           "navbar__actions",
@@ -1838,6 +1843,8 @@
           "icon-button--inverse",
           "icon-close",
           "icon-instagram",
+          "lang-switch",
+          "lang-switch__option",
           "link",
           "link--dark",
           "logo",

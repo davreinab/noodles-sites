@@ -1,7 +1,4 @@
 {% macro render(data) %}
-{% if data.view == "todas" %}
-<p class="ds-gallery__note" style="font:14px/1.5 system-ui;color:#1f1f1f;max-width:70ch">Sin clase conocida (no se puede comprobar): running=true, paused=true, done=true.</p>
-{% else %}
 {% raw %}<section data-ds="timer" class="timer" data-state="running" aria-labelledby="timer-title">
 <h3 class="visually-hidden" id="timer-title">Temporizador de preparación</h3>
 <div class="timer__dial">
@@ -13,6 +10,28 @@
 <button class="button button--secondary" type="button"><span class="icon icon-pause" aria-hidden="true"></span>Pausar</button>
 <button class="icon-button icon-button--secondary" type="button" aria-label="Reiniciar"><span class="icon icon-rotate-ccw" aria-hidden="true"></span></button>
 </div>
+</section>
+<section data-ds="timer" class="timer" data-state="paused" aria-labelledby="timer-title-pausado">
+<h3 class="visually-hidden" id="timer-title-pausado">Temporizador de preparación</h3>
+<div class="timer__dial">
+<svg class="timer__ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="timer__track" cx="50" cy="50" r="46" stroke-width="8" pathLength="100"/><circle class="timer__progress" cx="50" cy="50" r="46" stroke-width="8" pathLength="100" stroke-dashoffset="60"/></svg>
+<div class="timer__readout"><span class="timer__time" role="timer">1:12</span><span class="timer__label">En pausa</span></div>
+</div>
+<p class="visually-hidden" aria-live="polite"></p>
+<div class="timer__controls">
+<button class="button" type="button"><span class="icon icon-play" aria-hidden="true"></span>Seguir</button>
+<button class="icon-button icon-button--secondary" type="button" aria-label="Reiniciar"><span class="icon icon-rotate-ccw" aria-hidden="true"></span></button>
+</div>
+</section>
+<section data-ds="timer" class="timer" data-state="done" aria-labelledby="timer-title-listo">
+<h3 class="visually-hidden" id="timer-title-listo">Temporizador de preparación</h3>
+<div class="timer__dial">
+<svg class="timer__ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="timer__track" cx="50" cy="50" r="46" stroke-width="8" pathLength="100"/><circle class="timer__progress" cx="50" cy="50" r="46" stroke-width="8" pathLength="100" stroke-dashoffset="100"/></svg>
+<div class="timer__readout"><span class="timer__time" role="timer">0:00</span><span class="timer__label">Listo</span></div>
+</div>
+<p class="visually-hidden" aria-live="polite">¡Listo!</p>
+<div class="timer__controls">
+<button class="button" type="button"><span class="icon icon-rotate-ccw" aria-hidden="true"></span>Reiniciar</button>
+</div>
 </section>{% endraw %}
-{% endif %}
 {% endmacro %}

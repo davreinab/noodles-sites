@@ -26,6 +26,29 @@
   <button class="icon-button icon-button--secondary" type="button" aria-label="Reiniciar"><span class="icon icon-rotate-ccw" aria-hidden="true"></span></button>
   </div>
   </section>
+  <section data-ds="timer" class="timer" data-state="paused" aria-labelledby="timer-title-pausado">
+  <h3 class="visually-hidden" id="timer-title-pausado">Temporizador de preparación</h3>
+  <div class="timer__dial">
+  <svg class="timer__ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="timer__track" cx="50" cy="50" r="46" stroke-width="8" pathLength="100"/><circle class="timer__progress" cx="50" cy="50" r="46" stroke-width="8" pathLength="100" stroke-dashoffset="60"/></svg>
+  <div class="timer__readout"><span class="timer__time" role="timer">1:12</span><span class="timer__label">En pausa</span></div>
+  </div>
+  <p class="visually-hidden" aria-live="polite"></p>
+  <div class="timer__controls">
+  <button class="button" type="button"><span class="icon icon-play" aria-hidden="true"></span>Seguir</button>
+  <button class="icon-button icon-button--secondary" type="button" aria-label="Reiniciar"><span class="icon icon-rotate-ccw" aria-hidden="true"></span></button>
+  </div>
+  </section>
+  <section data-ds="timer" class="timer" data-state="done" aria-labelledby="timer-title-listo">
+  <h3 class="visually-hidden" id="timer-title-listo">Temporizador de preparación</h3>
+  <div class="timer__dial">
+  <svg class="timer__ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="timer__track" cx="50" cy="50" r="46" stroke-width="8" pathLength="100"/><circle class="timer__progress" cx="50" cy="50" r="46" stroke-width="8" pathLength="100" stroke-dashoffset="100"/></svg>
+  <div class="timer__readout"><span class="timer__time" role="timer">0:00</span><span class="timer__label">Listo</span></div>
+  </div>
+  <p class="visually-hidden" aria-live="polite">¡Listo!</p>
+  <div class="timer__controls">
+  <button class="button" type="button"><span class="icon icon-rotate-ccw" aria-hidden="true"></span>Reiniciar</button>
+  </div>
+  </section>
   ```
 - **Accesibilidad (rol, nombre, estados y teclado):** Tiempo tinta sobre blanco 18,7:1; etiqueta gris cálido sobre blanco 5,9:1; progreso de tinta sobre pista arena 13,7:1; terminado en verde sobre blanco 5,5:1. El anillo es decorativo (`aria-hidden`). El tiempo va en `role="timer"` (no anuncia cada segundo) y una región `aria-live="polite"` dice solo «Queda 1 minuto» y «¡Listo!». El botón principal cambia de nombre (Empezar/Pausar/Seguir). Sonido o vibración al terminar solo si el usuario lo activa; con reduce-motion el anillo salta sin animarse.
 - **Cuándo usar / qué NO hace:** Solo en la preparación del producto (3 minutos). No es una cuenta atrás de concursos ni de promociones.

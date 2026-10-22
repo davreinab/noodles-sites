@@ -26,6 +26,24 @@
   </div>
   <p class="field__error" id="pais-error"><span class="icon icon-circle-alert" aria-hidden="true"></span>Elige un país</p>
   </div>
+  <div data-ds="select" class="field">
+  <label class="field__label" for="pais-normal">País</label>
+  <div class="field__select">
+  <select class="field__control" id="pais-normal" name="pais-normal">
+  <option value="">Elige una opción</option>
+  <option value="es">España</option>
+  <option value="fr">Francia</option>
+  </select>
+  </div>
+  </div>
+  <div data-ds="select" class="field">
+  <label class="field__label" for="pais-desactivado">País</label>
+  <div class="field__select">
+  <select class="field__control" id="pais-desactivado" name="pais-desactivado" disabled>
+  <option value="es">España</option>
+  </select>
+  </div>
+  </div>
   ```
 - **Accesibilidad (rol, nombre, estados y teclado):** Texto tinta sobre blanco 18,7:1; placeholder y ayuda en gris cálido sobre blanco 5,9:1; etiqueta tinta sobre crema 17,2:1; borde de tinta sobre crema 17,2:1 (≥ 3:1 de límite de control). Error: borde y mensaje en `--field-border-error`/`--field-error-text` (rojo de estado, verificado en la fase 2) con icono circle-alert y texto, nunca solo color. Desactivado: gris cálido sobre arena 4,3:1 (exento). Chevron (`--field-icon`, tinta) decorativo. Rol: `<select>` nativo, que da gratis el teclado (flechas, letras, Enter, Esc) y la lista accesible en móvil; por eso el estado Open del maestro es solo referencia visual y no se reconstruye un listbox propio. Nombre por `<label for>`.
 - **Cuándo usar / qué NO hace:** Para elegir una opción entre cinco o más. Con dos a cuatro opciones visibles, mejor Chip o casillas. No se usa para navegar entre páginas.

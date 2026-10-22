@@ -1,7 +1,4 @@
 {% macro render(data) %}
-{% if data.view == "todas" %}
-<p class="ds-gallery__note" style="font:14px/1.5 system-ui;color:#1f1f1f;max-width:70ch">Sin clase conocida (no se puede comprobar): langSwitch=true.</p>
-{% else %}
 {% raw %}<dialog data-ds="mobile-menu" class="mobile-menu" id="menu" aria-label="Menú" open>
 <div class="mobile-menu__inner">
 <div class="mobile-menu__top">
@@ -18,6 +15,26 @@
 </div>
 <p class="mobile-menu__copyright">© GBFoods</p>
 </div>
+</dialog>
+<dialog data-ds="mobile-menu" class="mobile-menu" id="menu-idioma" aria-label="Menú" open>
+<div class="mobile-menu__inner">
+<div class="mobile-menu__top">
+<img class="logo" src="/assets/ds/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
+<button class="icon-button icon-button--inverse" type="button" aria-label="Cerrar menú"><span class="icon icon-close" aria-hidden="true"></span></button>
+</div>
+<nav class="mobile-menu__nav" aria-label="Principal">
+<a class="nav-item nav-item--menu" href="/productos" aria-current="page">Products</a>
+<a class="nav-item nav-item--menu" href="/formula-natural">Natural formula</a>
+</nav>
+<nav data-ds="lang-switch" class="lang-switch" aria-label="Idioma">
+<a class="lang-switch__option" href="/nl/" hreflang="nl" lang="nl" aria-current="true">NL</a>
+<a class="lang-switch__option" href="/fr/" hreflang="fr" lang="fr">FR</a>
+</nav>
+<div class="mobile-menu__social">
+<p class="mobile-menu__social-label">Our social media:</p>
+<ul class="mobile-menu__social-list"><li><a class="link link--dark" href="https://www.instagram.com/" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li></ul>
+</div>
+<p class="mobile-menu__copyright">© GBFoods</p>
+</div>
 </dialog>{% endraw %}
-{% endif %}
 {% endmacro %}

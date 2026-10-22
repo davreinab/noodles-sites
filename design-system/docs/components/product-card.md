@@ -26,6 +26,16 @@
   <span class="product-card__cta"><span class="link link--standalone">Ver producto <span class="icon icon-arrow-right" aria-hidden="true"></span></span></span>
   </div>
   </a>
+  <a data-ds="product-card" class="product-card" href="/productos/yatekomo-pollo">
+  <div class="product-card__media">
+  <img src="/media/yatekomo-pollo-3d.png" alt="">
+  </div>
+  <div class="product-card__body">
+  <span class="product-card__line">Original</span>
+  <h3 class="product-card__name">Yatekomo Pollo</h3>
+  <span class="product-card__cta"><span class="link link--standalone">Ver producto <span class="icon icon-arrow-right" aria-hidden="true"></span></span></span>
+  </div>
+  </a>
   ```
 - **Accesibilidad (rol, nombre, estados y teclado):** Nombre tinta sobre blanco 18,7:1; línea gris cálido sobre blanco 5,9:1; hueco de imagen crema; borde de tinta sobre crema 17,2:1. Rol: un solo `<a>`; su nombre es el texto de la card (Badge, línea, nombre y «Ver producto»), por eso la imagen va con `alt=""` (decorativa: el nombre ya está en texto). «Ver producto» es una pista visual dentro del enlace, no un segundo enlace. Teclado: un solo tabulador por card. Foco: contorno de 2 px pegado que sigue el radio; hover sube a `--elevation-2` y respeta reduce-motion porque solo cambia la sombra.
 - **Cuándo usar / qué NO hace:** En rejillas y carruseles de producto. No lleva botones ni enlaces dentro (sería un enlace anidado); si hace falta una segunda acción, va fuera de la card. La foto es la de marca (3D o girosu), nunca generada con IA.

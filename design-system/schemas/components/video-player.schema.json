@@ -7,7 +7,7 @@
     "slug": "video-player",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T09:38:13Z",
+    "lastSync": "2026-10-22T10:02:01Z",
     "description": "Reproductor de vídeo como fachada. State=Poster: póster de marca (sin imagen generada con IA), botón play de 80 px (video/play-bg, borde grueso) y duración. State=Playing: al pulsar se sustituye por el reproductor real (iframe de YouTube con youtube-nocookie o <video> MP4) con sus controles nativos; no se carga nada de terceros antes del clic (privacidad y rendimiento). Ratio=16:9 (preparación, promo de Home, concursos) y 9:16 (recetas en vídeo vertical). Accesibilidad: el play es un <button> con nombre «Reproducir vídeo: <título> (0:45)»; foco con anillo video/focus-ring amarillo sobre el póster oscuro; subtítulos obligatorios si el vídeo tiene voz; sin autoplay con sonido; el GIF de preparación usa este mismo componente en MP4 silencioso en bucle con botón de pausa.",
     "figmaPage": "Content",
     "figmaType": "COMPONENT_SET",
@@ -121,7 +121,7 @@
       "video-player__poster",
       "video-player__title"
     ],
-    "example": "<div data-ds=\"video-player\" class=\"video-player\">\n<img class=\"video-player__poster\" src=\"/media/promo-poster.jpg\" alt=\"\">\n<button class=\"video-player__play\" type=\"button\" aria-label=\"Reproducir vídeo: Gana un viaje a Tokio (0:45)\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span></button>\n<span class=\"video-player__duration\" aria-hidden=\"true\">0:45</span>\n</div>\n<div data-ds=\"video-player\" class=\"video-player video-player--vertical\"><span class=\"video-player__title\">Receta en vídeo</span></div>",
+    "example": "<div data-ds=\"video-player\" class=\"video-player\">\n<img class=\"video-player__poster\" src=\"/media/promo-poster.jpg\" alt=\"\">\n<button class=\"video-player__play\" type=\"button\" aria-label=\"Reproducir vídeo: Gana un viaje a Tokio (0:45)\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span></button>\n<span class=\"video-player__duration\" aria-hidden=\"true\">0:45</span>\n</div>\n<div data-ds=\"video-player\" class=\"video-player video-player--vertical\"><span class=\"video-player__title\">Receta en vídeo</span></div>\n<div data-ds=\"video-player\" class=\"video-player\"><iframe title=\"Vídeo: Gana un viaje a Tokio\" src=\"about:blank\"></iframe></div>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

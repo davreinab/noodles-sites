@@ -20,6 +20,7 @@
   <span class="video-player__duration" aria-hidden="true">0:45</span>
   </div>
   <div data-ds="video-player" class="video-player video-player--vertical"><span class="video-player__title">Receta en vídeo</span></div>
+  <div data-ds="video-player" class="video-player"><iframe title="Vídeo: Gana un viaje a Tokio" src="about:blank"></iframe></div>
   ```
 - **Accesibilidad (rol, nombre, estados y teclado):** Play: tinta sobre amarillo 12,3:1 (icono, ≥ 3:1); duración crema sobre tinta 17,2:1. Rol: el play es un `<button>` con nombre que incluye el título y la duración; al activarlo se sustituye por el iframe o `<video controls>` y el foco pasa al reproductor. Foco del play: contorno de 2 px pegado en amarillo (12,3:1 sobre el póster oscuro). Subtítulos obligatorios si hay voz; sin autoplay con sonido. No se carga nada de terceros antes del clic (privacidad).
 - **Cuándo usar / qué NO hace:** Para vídeo de preparación, promo de la Home y recetas en vertical. El póster es de marca, sin imágenes generadas con IA. No se usa para GIF decorativos sin control de pausa.

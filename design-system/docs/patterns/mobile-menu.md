@@ -31,6 +31,27 @@
   <p class="mobile-menu__copyright">© GBFoods</p>
   </div>
   </dialog>
+  <dialog data-ds="mobile-menu" class="mobile-menu" id="menu-idioma" aria-label="Menú" open>
+  <div class="mobile-menu__inner">
+  <div class="mobile-menu__top">
+  <img class="logo" src="../assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
+  <button class="icon-button icon-button--inverse" type="button" aria-label="Cerrar menú"><span class="icon icon-close" aria-hidden="true"></span></button>
+  </div>
+  <nav class="mobile-menu__nav" aria-label="Principal">
+  <a class="nav-item nav-item--menu" href="/productos" aria-current="page">Products</a>
+  <a class="nav-item nav-item--menu" href="/formula-natural">Natural formula</a>
+  </nav>
+  <nav data-ds="lang-switch" class="lang-switch" aria-label="Idioma">
+  <a class="lang-switch__option" href="/nl/" hreflang="nl" lang="nl" aria-current="true">NL</a>
+  <a class="lang-switch__option" href="/fr/" hreflang="fr" lang="fr">FR</a>
+  </nav>
+  <div class="mobile-menu__social">
+  <p class="mobile-menu__social-label">Our social media:</p>
+  <ul class="mobile-menu__social-list"><li><a class="link link--dark" href="https://www.instagram.com/" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li></ul>
+  </div>
+  <p class="mobile-menu__copyright">© GBFoods</p>
+  </div>
+  </dialog>
   ```
 - **Accesibilidad (rol, nombre, estados y teclado):** `<dialog>` modal: foco atrapado, Esc cierra y el foco vuelve al botón de menú. Ítems crema sobre tinta 17:1; el activo, amarillo con indicador (forma, no solo color). Cada red es un enlace con nombre.
 - **Cuándo usar / qué NO hace:** Es la navegación principal en todos los breakpoints. No lleva CTA ni buscador.

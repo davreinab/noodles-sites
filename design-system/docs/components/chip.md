@@ -18,6 +18,7 @@
   <button data-ds="chip" class="chip" type="button" aria-pressed="false">Yakisoba</button>
   <button data-ds="chip" class="chip" type="button" aria-pressed="true"><span class="icon icon-check" aria-hidden="true"></span>Original</button>
   <a data-ds="chip" class="chip chip--m" href="/productos/yatekomo-original">Yatekomo Original</a>
+  <button data-ds="chip" class="chip" type="button" disabled>Agotado</button>
   ```
 - **Accesibilidad (rol, nombre, estados y teclado):** Default: tinta sobre blanco 18,7:1; borde de tinta sobre crema 17,2:1 (≥ 3:1). Hover: tinta sobre amarillo 12,3:1. Selected: crema sobre tinta 17,2:1 y con icono check, así que el estado no depende solo del color. Disabled: gris cálido sobre arena 4,3:1 (exento). Rol: como filtro, `<button aria-pressed>` dentro de un grupo con nombre (`role="group" aria-label="Línea"`); como producto, `<a>`. Teclado: Tab entre chips y Enter/Espacio para alternar. Foco: contorno de 2 px pegado en tinta. Área táctil: S mide 36 px, por debajo de 44; se compensa con `--space-8` entre chips (cumple el mínimo de 24 px de WCAG 2.5.8). Para uso táctil principal, M.
 - **Cuándo usar / qué NO hace:** Para filtros de selección múltiple o única y para productos citados en una receta. No es la acción principal (Button), no es una etiqueta informativa (Badge) y no navega entre pestañas de contenido (Tab).

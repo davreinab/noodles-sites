@@ -7,7 +7,7 @@
     "slug": "category-card",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T09:38:13Z",
+    "lastSync": "2026-10-22T10:02:01Z",
     "description": "Card de categoría de producto (Home · «Our products»: Cups, Bags, Sauces). Anatomía (wireframe UX): imagen de la categoría a sangre (fondo) · Badge New opcional arriba a la izquierda · nombre de la categoría en display h3 sobre placa color/surface/inverse abajo a la izquierda (texto color/text/on-inverse, 17:1). Toda la card es un enlace a la Product library filtrada por ese tipo. Hover: elevation/2; Focus: borde grueso. Desktop 392 px cuadrada; en móvil FILL (343). Sin variables propias.",
     "figmaPage": "Cards",
     "figmaType": "COMPONENT_SET",
@@ -93,7 +93,7 @@
       "category-card__media",
       "category-card__name"
     ],
-    "example": "<a data-ds=\"category-card\" class=\"category-card\" href=\"/productos?tipo=cups\">\n<img class=\"category-card__media\" src=\"/media/cups.png\" alt=\"\">\n<span class=\"badge\">New</span>\n<span class=\"category-card__name\">Cups</span>\n</a>",
+    "example": "<a data-ds=\"category-card\" class=\"category-card\" href=\"/productos?tipo=cups\">\n<img class=\"category-card__media\" src=\"/media/cups.png\" alt=\"\">\n<span class=\"badge\">New</span>\n<span class=\"category-card__name\">Cups</span>\n</a>\n<a data-ds=\"category-card\" class=\"category-card\" href=\"/productos?tipo=cups\">\n<img class=\"category-card__media\" src=\"/media/cups.png\" alt=\"\">\n<span class=\"category-card__name\">Cups</span>\n</a>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

@@ -11,12 +11,13 @@
 <figure><div class="ds-gallery__stage"><button data-ds="button" class="button" type="button">Dónde comprar</button></div><figcaption>size=M</figcaption></figure>
 <figure><div class="ds-gallery__stage"><button data-ds="button" class="button button--l" type="button">Dónde comprar</button></div><figcaption>size=L</figcaption></figure>
 </div></section>
-<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">No se han podido pintar (sin clase conocida en el contrato ni en el CSS): iconLeading=true, iconTrailing=true, disabled=true. La galería clona el elemento raíz del ejemplo y solo cambia sus clases: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
+<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">La galería clona el elemento raíz del ejemplo y solo cambia sus clases: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
 </div>{% endraw %}
 {% else %}
 {% raw %}<button data-ds="button" class="button" type="button">Dónde comprar</button>
 <a data-ds="button" class="button button--secondary" href="/recetas">Ver recetas <span class="icon icon-arrow-right" aria-hidden="true"></span></a>
 <button data-ds="button" class="button button--inverse button--l" type="button">Participar</button>
-<button data-ds="button" class="button" type="button" aria-disabled="true">No disponible</button>{% endraw %}
+<button data-ds="button" class="button" type="button" aria-disabled="true">No disponible</button>
+<button data-ds="button" class="button button--secondary" type="button"><span class="icon icon-play" aria-hidden="true"></span>Ver vídeo</button>{% endraw %}
 {% endif %}
 {% endmacro %}

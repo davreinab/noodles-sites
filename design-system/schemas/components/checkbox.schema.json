@@ -7,7 +7,7 @@
     "slug": "checkbox",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T09:38:13Z",
+    "lastSync": "2026-10-22T10:02:01Z",
     "description": "Casilla de verificación: consentimiento GDPR y aceptación de bases legales de concursos. Toda la fila (caja + etiqueta) es clicable; área táctil mínima 44 px en código. Marcada: tinta con check crema (el estado se ve por la forma, no solo por color). Error: borde rojo; el mensaje va en el formulario con aria-describedby. Nunca premarcada en consentimientos.",
     "figmaPage": "Forms",
     "figmaType": "COMPONENT_SET",
@@ -108,7 +108,7 @@
       "checkbox__label",
       "link"
     ],
-    "example": "<label data-ds=\"checkbox\" class=\"checkbox\">\n<input class=\"checkbox__input\" type=\"checkbox\" name=\"bases\" required>\n<span class=\"checkbox__label\">Acepto las <a class=\"link\" href=\"/bases\">bases legales</a></span>\n</label>",
+    "example": "<label data-ds=\"checkbox\" class=\"checkbox\">\n<input class=\"checkbox__input\" type=\"checkbox\" name=\"bases\" required>\n<span class=\"checkbox__label\">Acepto las <a class=\"link\" href=\"/bases\">bases legales</a></span>\n</label>\n<label data-ds=\"checkbox\" class=\"checkbox\">\n<input class=\"checkbox__input\" type=\"checkbox\" name=\"privacidad\" required aria-invalid=\"true\">\n<span class=\"checkbox__label\">Acepto la <a class=\"link\" href=\"/privacidad\">política de privacidad</a></span>\n</label>\n<label data-ds=\"checkbox\" class=\"checkbox\">\n<input class=\"checkbox__input\" type=\"checkbox\" name=\"novedades\" disabled>\n<span class=\"checkbox__label\">Quiero recibir novedades por correo</span>\n</label>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

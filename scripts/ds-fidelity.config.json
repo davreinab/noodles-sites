@@ -96,7 +96,74 @@
       "active"
     ],
     "axes": [],
-    "components": {}
+    "components": {
+      "select": {
+        "required=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
+        "open=true": "Lista nativa del navegador: no se puede pintar en una muestra estática.",
+        "error=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
+        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
+      },
+      "input": {
+        "required=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
+        "helper=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin.",
+        "filled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
+        "error=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
+        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
+      },
+      "textarea": {
+        "required=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
+        "helper=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin.",
+        "filled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
+        "error=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
+        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
+      },
+      "checkbox": {
+        "error=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
+        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
+      },
+      "chip": {
+        "iconLeading=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin.",
+        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
+      },
+      "icon-button": {
+        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
+      },
+      "button": {
+        "iconLeading=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin.",
+        "iconTrailing=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin.",
+        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
+      },
+      "timer": {
+        "running=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
+        "paused=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
+        "done=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
+      },
+      "video-player": {
+        "poster=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
+        "playing=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
+      },
+      "product-card": {
+        "badge=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin."
+      },
+      "category-card": {
+        "badge=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin."
+      },
+      "navbar": {
+        "langSwitch=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin."
+      },
+      "mobile-menu": {
+        "langSwitch=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin."
+      },
+      "alert": {
+        "dismissible=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin."
+      },
+      "modal": {
+        "footer=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin."
+      },
+      "search-field": {
+        "filled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
+      }
+    }
   },
   "_notes": {
     "modifiers": "Logo Version=Negative es otro archivo SVG (assets/logos/*-negative.svg) con la misma clase .logo: no hay modificador CSS. Contest card Status=Closed cambia el contenido (Badge Neutral y Link a ganadores), no el estilo. Video player Ratio=9:16 → .video-player--vertical.",

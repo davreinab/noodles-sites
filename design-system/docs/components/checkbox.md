@@ -19,6 +19,14 @@
   <input class="checkbox__input" type="checkbox" name="bases" required>
   <span class="checkbox__label">Acepto las <a class="link" href="/bases">bases legales</a></span>
   </label>
+  <label data-ds="checkbox" class="checkbox">
+  <input class="checkbox__input" type="checkbox" name="privacidad" required aria-invalid="true">
+  <span class="checkbox__label">Acepto la <a class="link" href="/privacidad">política de privacidad</a></span>
+  </label>
+  <label data-ds="checkbox" class="checkbox">
+  <input class="checkbox__input" type="checkbox" name="novedades" disabled>
+  <span class="checkbox__label">Quiero recibir novedades por correo</span>
+  </label>
   ```
 - **Accesibilidad (rol, nombre, estados y teclado):** Caja: borde de tinta sobre blanco 18,7:1 (≥ 3:1). Marcada: check crema sobre tinta 17,2:1; el estado se ve por el check, no solo por el relleno. Hover: fondo amarillo 12,3:1 con borde de tinta. Etiqueta tinta sobre crema 17,2:1. Rol: `<input type="checkbox">` nativo dentro de `<label>` (toda la etiqueta es clicable). Teclado: Espacio. Error: `aria-invalid="true"` y mensaje enlazado. Foco: contorno de 2 px pegado a la caja de 24 px; el área clicable incluye la etiqueta.
 - **Cuándo usar / qué NO hace:** Para consentimientos y opciones que se pueden marcar a la vez. No es un interruptor de ajuste inmediato ni un filtro de catálogo (eso es Chip). Las casillas de consentimiento nunca van marcadas por defecto.

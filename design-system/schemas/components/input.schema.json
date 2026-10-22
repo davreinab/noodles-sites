@@ -7,7 +7,7 @@
     "slug": "input",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T09:38:13Z",
+    "lastSync": "2026-10-22T10:02:01Z",
     "description": "Campo de texto de una línea (formularios de concursos con estructura propia). Etiqueta siempre visible (no se sustituye por el placeholder). Error: borde rojo + icono + mensaje (nunca solo color); el mensaje se asocia al campo con aria-describedby. Required muestra asterisco y requiere aria-required. El valor y el texto de ayuda se editan en la instancia.",
     "figmaPage": "Forms",
     "figmaType": "COMPONENT_SET",
@@ -138,7 +138,7 @@
       "icon",
       "icon-circle-alert"
     ],
-    "example": "<div data-ds=\"input\" class=\"field\">\n<label class=\"field__label\" for=\"nombre\">Nombre<span class=\"field__required\" aria-hidden=\"true\">*</span></label>\n<input class=\"field__control\" id=\"nombre\" name=\"nombre\" type=\"text\" placeholder=\"Escribe aquí\" required aria-describedby=\"nombre-ayuda\">\n<p class=\"field__helper\" id=\"nombre-ayuda\">Texto de ayuda</p>\n</div>\n<div data-ds=\"input\" class=\"field\">\n<label class=\"field__label\" for=\"email\">Email</label>\n<input class=\"field__control\" id=\"email\" type=\"email\" aria-invalid=\"true\" aria-describedby=\"email-error\">\n<p class=\"field__error\" id=\"email-error\"><span class=\"icon icon-circle-alert\" aria-hidden=\"true\"></span>Este campo es obligatorio</p>\n</div>",
+    "example": "<div data-ds=\"input\" class=\"field\">\n<label class=\"field__label\" for=\"nombre\">Nombre<span class=\"field__required\" aria-hidden=\"true\">*</span></label>\n<input class=\"field__control\" id=\"nombre\" name=\"nombre\" type=\"text\" placeholder=\"Escribe aquí\" required aria-describedby=\"nombre-ayuda\">\n<p class=\"field__helper\" id=\"nombre-ayuda\">Texto de ayuda</p>\n</div>\n<div data-ds=\"input\" class=\"field\">\n<label class=\"field__label\" for=\"email\">Email</label>\n<input class=\"field__control\" id=\"email\" type=\"email\" aria-invalid=\"true\" aria-describedby=\"email-error\">\n<p class=\"field__error\" id=\"email-error\"><span class=\"icon icon-circle-alert\" aria-hidden=\"true\"></span>Este campo es obligatorio</p>\n</div>\n<div data-ds=\"input\" class=\"field\">\n<label class=\"field__label\" for=\"ciudad\">Ciudad</label>\n<input class=\"field__control\" id=\"ciudad\" name=\"ciudad\" type=\"text\" value=\"Valencia\">\n</div>\n<div data-ds=\"input\" class=\"field\">\n<label class=\"field__label\" for=\"codigo-cliente\">Código de cliente</label>\n<input class=\"field__control\" id=\"codigo-cliente\" name=\"codigo-cliente\" type=\"text\" value=\"YT-2041\" disabled>\n</div>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

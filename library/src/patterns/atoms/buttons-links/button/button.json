@@ -128,7 +128,7 @@
       "page": "Buttons & links",
       "type": "COMPONENT_SET",
       "variants": 24,
-      "lastSync": "2026-10-22 · 09:38 UTC",
+      "lastSync": "2026-10-22 · 10:02 UTC",
       "verification": "verified",
       "verificationLabel": "Verificado"
     },
@@ -285,7 +285,8 @@
       "button--l",
       "button--secondary",
       "icon",
-      "icon-arrow-right"
+      "icon-arrow-right",
+      "icon-play"
     ],
     "manual": [
       {
@@ -316,11 +317,7 @@
       "visible": 5,
       "total": 5,
       "missing": [],
-      "unchecked": [
-        "iconLeading=true",
-        "iconTrailing=true",
-        "disabled=true"
-      ],
+      "unchecked": [],
       "complete": true
     }
   },

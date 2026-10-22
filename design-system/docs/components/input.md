@@ -25,6 +25,14 @@
   <input class="field__control" id="email" type="email" aria-invalid="true" aria-describedby="email-error">
   <p class="field__error" id="email-error"><span class="icon icon-circle-alert" aria-hidden="true"></span>Este campo es obligatorio</p>
   </div>
+  <div data-ds="input" class="field">
+  <label class="field__label" for="ciudad">Ciudad</label>
+  <input class="field__control" id="ciudad" name="ciudad" type="text" value="Valencia">
+  </div>
+  <div data-ds="input" class="field">
+  <label class="field__label" for="codigo-cliente">Código de cliente</label>
+  <input class="field__control" id="codigo-cliente" name="codigo-cliente" type="text" value="YT-2041" disabled>
+  </div>
   ```
 - **Accesibilidad (rol, nombre, estados y teclado):** Texto tinta sobre blanco 18,7:1; placeholder y ayuda en gris cálido sobre blanco 5,9:1; etiqueta tinta sobre crema 17,2:1; borde de tinta sobre crema 17,2:1 (≥ 3:1 de límite de control). Error: borde y mensaje en `--field-border-error`/`--field-error-text` (rojo de estado, verificado en la fase 2) con icono circle-alert y texto, nunca solo color. Desactivado: gris cálido sobre arena 4,3:1 (exento). Rol: `<input>` nativo con `<label for>` (nombre); la ayuda y el error se enlazan con `aria-describedby` y el error marca `aria-invalid="true"`. El asterisco de obligatorio es visual: el campo lleva `required`. El placeholder no sustituye a la etiqueta. Foco: contorno de 2 px pegado; el hover engorda el borde por dentro sin mover el layout.
 - **Cuándo usar / qué NO hace:** Para datos de una línea (nombre, email, código). Textos largos: Textarea. Opciones cerradas: Select o Checkbox. Búsqueda: Search field. No se usa sin etiqueta visible.

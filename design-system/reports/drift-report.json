@@ -1,6 +1,6 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": "2026-10-22T14:49:47Z",
+  "generatedAt": "2026-10-22T15:29:03Z",
   "adoptionMode": "new",
   "sourcesCompared": [
     "figma",
@@ -12,7 +12,7 @@
   ],
   "summary": {
     "critical": 0,
-    "warning": 10,
+    "warning": 25,
     "info": 17
   },
   "findings": [
@@ -74,6 +74,21 @@
     {
       "severity": "warning",
       "check": "icon-not-exposed-as-swap",
+      "detail": "Removed tag: capa «icon» (Icon / close) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Ingredient swap: capa «icon» (Icon / close) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Ingredient swap: capa «arrow» (Icon / chevron-down) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
       "detail": "Alert: capa «icon-status» (Icon / info) sin INSTANCE_SWAP"
     },
     {
@@ -120,6 +135,66 @@
       "severity": "warning",
       "check": "icon-not-exposed-as-swap",
       "detail": "Recipe hero: capa «icon-send» (Icon / send) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Natural improvement: capa «icon» (Icon / close) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Natural improvement: capa «arrow» (Icon / chevron-down) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Natural improvement: capa «icon» (Icon / close) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Natural improvement: capa «arrow» (Icon / chevron-down) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Natural improvement: capa «icon» (Icon / close) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Natural improvement: capa «arrow» (Icon / chevron-down) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Natural improvement: capa «icon» (Icon / close) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Natural improvement: capa «arrow» (Icon / chevron-down) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Natural improvement: capa «icon» (Icon / close) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Natural improvement: capa «icon» (Icon / close) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Natural improvement: capa «icon» (Icon / close) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Natural improvement: capa «icon» (Icon / close) sin INSTANCE_SWAP"
     },
     {
       "severity": "info",

@@ -1,0 +1,187 @@
+{
+  "title": "Ingredient swap",
+  "description": "Ingredient swap: ingrediente retirado y su sustituto (Natural improvement → «Replaced ingredients»; wireframe UX 274:6354; clase CSS .ingredient-swap). Arriba la píldora tachada (…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "ingredient-swap",
+      "name": "Ingredient swap",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "276:283",
+      "current": {
+        "description": "Ingredient swap: ingrediente retirado y su sustituto (Natural improvement → «Replaced ingredients»; wireframe UX 274:6354; clase CSS .ingredient-swap). Arriba la píldora tachada (Removed, mismo estilo que Removed tag, con «removed:» oculto), flecha chevron-down y debajo la tarjeta del sustituto: nombre en negrita en verde natural (text/natural, Archivo Bold 18/24, sin estilo de texto), motivo en Desktop/body-s y miniatura de 56 px (placeholder). Tarjeta: fondo blanco (surface/card) y borde verde natural (surface/natural); no hay variable opaca de superficie natural clara, así que no se usa verde claro. Props: Removed, Name, Reason. Ejemplos de ingredientes y motivos ⬜ TODO envase.",
+        "Propósito": "Muestra un cambio de ingrediente: arriba el ingrediente retirado (Removed tag), una flecha hacia abajo y debajo la tarjeta del sustituto, con su nombre en verde natural, el motivo y una miniatura. Props del maestro: Removed, Name, Reason.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Es un `li` de la lista de reemplazos. Se lee en orden: ingrediente retirado (con «Removed:» oculto), nombre del sustituto, motivo. La flecha va con `aria-hidden`: es solo dirección. La miniatura es decorativa (`alt=\"\"`) porque el nombre y el motivo ya dicen el cambio. No es interactivo: no hay foco ni teclado. Contrastes: nombre en verde natural sobre blanco (el token documenta 5,0:1 sobre crema y sobre blanco es algo mayor); motivo en gris cálido sobre blanco (5,4:1).",
+        "Cuándo usar / qué NO hace": "Solo en Natural improvement, para explicar qué sustituye a qué. No es un selector ni una comparativa de nutrientes. Los nombres, motivos e ingredientes son de ejemplo: ⬜ TODO envase (deben coincidir con la fórmula validada). La miniatura es un placeholder hasta tener foto del ingrediente."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "276:283",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=276-283",
+      "page": "Content",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-22 · 15:21 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Ingredient swap: ingrediente retirado y su sustituto (Natural improvement → «Replaced ingredients»; wireframe UX 274:6354; clase CSS .ingredient-swap). Arriba la píldora tachada (Removed, mismo estilo que Removed tag, con «removed:» oculto), flecha chevron-down y debajo la tarjeta del sustituto: nombre en negrita en verde natural (text/natural, Archivo Bold 18/24, sin estilo de texto), motivo en Desktop/body-s y miniatura de 56 px (placeholder). Tarjeta: fondo blanco (surface/card) y borde verde natural (surface/natural); no hay variable opaca de superficie natural clara, así que no se usa verde claro. Props: Removed, Name, Reason. Ejemplos de ingredientes y motivos ⬜ TODO envase."
+    ],
+    "props": [
+      {
+        "name": "removed",
+        "type": "string",
+        "values": [],
+        "default": "Palm oil",
+        "figma": "Removed#276:1"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "values": [],
+        "default": "Sunflower oil",
+        "figma": "Name#276:2"
+      },
+      {
+        "name": "reason",
+        "type": "string",
+        "values": [],
+        "default": "Cold-pressed, no tropical deforestation footprint.",
+        "figma": "Reason#276:3"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "icon",
+        "component": "icon-close",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "arrow",
+        "component": "icon-chevron-down",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/border/subtle",
+          "color/surface/card",
+          "color/surface/natural",
+          "color/surface/page",
+          "color/text/default",
+          "color/text/natural",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/body-s",
+          "font/size/desktop/body-s",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default",
+          "icon/size/md"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/pill",
+          "radius/sm"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 18,
+    "textStyles": [
+      "Desktop/body-s"
+    ],
+    "classes": [
+      "icon",
+      "icon-chevron-down",
+      "icon-close",
+      "ingredient-swap",
+      "ingredient-swap__arrow",
+      "ingredient-swap__card",
+      "ingredient-swap__name",
+      "ingredient-swap__reason",
+      "ingredient-swap__text",
+      "ingredient-swap__thumb",
+      "removed-tag",
+      "removed-tag__text",
+      "visually-hidden"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Muestra un cambio de ingrediente: arriba el ingrediente retirado (Removed tag), una flecha hacia abajo y debajo la tarjeta del sustituto, con su nombre en verde natural, el motivo y una miniatura. Props del maestro: Removed, Name, Reason.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Es un `li` de la lista de reemplazos. Se lee en orden: ingrediente retirado (con «Removed:» oculto), nombre del sustituto, motivo. La flecha va con `aria-hidden`: es solo dirección. La miniatura es decorativa (`alt=\"\"`) porque el nombre y el motivo ya dicen el cambio. No es interactivo: no hay foco ni teclado. Contrastes: nombre en verde natural sobre blanco (el token documenta 5,0:1 sobre crema y sobre blanco es algo mayor); motivo en gris cálido sobre blanco (5,4:1).",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en Natural improvement, para explicar qué sustituye a qué. No es un selector ni una comparativa de nutrientes. Los nombres, motivos e ingredientes son de ejemplo: ⬜ TODO envase (deben coincidir con la fórmula validada). La miniatura es un placeholder hasta tener foto del ingrediente.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "ingredient-swap",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "276:283",
+    "contract": "../../../../../../design-system/schemas/components/ingredient-swap.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

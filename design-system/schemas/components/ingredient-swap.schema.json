@@ -1,0 +1,193 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:ingredient-swap",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Ingredient swap",
+    "slug": "ingredient-swap",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T15:21:21Z",
+    "description": "Ingredient swap: ingrediente retirado y su sustituto (Natural improvement → «Replaced ingredients»; wireframe UX 274:6354; clase CSS .ingredient-swap). Arriba la píldora tachada (Removed, mismo estilo que Removed tag, con «removed:» oculto), flecha chevron-down y debajo la tarjeta del sustituto: nombre en negrita en verde natural (text/natural, Archivo Bold 18/24, sin estilo de texto), motivo en Desktop/body-s y miniatura de 56 px (placeholder). Tarjeta: fondo blanco (surface/card) y borde verde natural (surface/natural); no hay variable opaca de superficie natural clara, así que no se usa verde claro. Props: Removed, Name, Reason. Ejemplos de ingredientes y motivos ⬜ TODO envase.",
+    "figmaPage": "Content",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": true,
+    "anatomyHash": "4374dc7fe9ca",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "4374dc7fe9ca",
+      "variantsChecked": [
+        "default"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "removed",
+        "type": "string",
+        "default": "Palm oil",
+        "figma": "Removed#276:1"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "default": "Sunflower oil",
+        "figma": "Name#276:2"
+      },
+      {
+        "name": "reason",
+        "type": "string",
+        "default": "Cold-pressed, no tropical deforestation footprint.",
+        "figma": "Reason#276:3"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": [
+        "icon",
+        "arrow"
+      ]
+    },
+    "tokens": [
+      "color/border/subtle",
+      "color/surface/card",
+      "color/surface/natural",
+      "color/surface/page",
+      "color/text/default",
+      "color/text/natural",
+      "color/text/secondary",
+      "font/family/body",
+      "font/line-height/desktop/body-s",
+      "font/size/desktop/body-s",
+      "font/style/body",
+      "icon/color/default",
+      "icon/size/md",
+      "radius/md",
+      "radius/pill",
+      "radius/sm",
+      "space/16",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "icon",
+      "icon-chevron-down",
+      "icon-close",
+      "ingredient-swap",
+      "ingredient-swap__arrow",
+      "ingredient-swap__card",
+      "ingredient-swap__name",
+      "ingredient-swap__reason",
+      "ingredient-swap__text",
+      "ingredient-swap__thumb",
+      "removed-tag",
+      "removed-tag__text",
+      "visually-hidden"
+    ],
+    "example": "<li data-ds=\"ingredient-swap\" class=\"ingredient-swap\"><span class=\"removed-tag\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span><span class=\"visually-hidden\">Removed:</span><s class=\"removed-tag__text\">Palm oil</s></span><span class=\"icon icon-chevron-down ingredient-swap__arrow\" aria-hidden=\"true\"></span><div class=\"ingredient-swap__card\"><div class=\"ingredient-swap__text\"><p class=\"ingredient-swap__name\">Sunflower oil</p><p class=\"ingredient-swap__reason\">Cold-pressed, no tropical deforestation footprint.</p></div><img class=\"ingredient-swap__thumb\" src=\"../assets/images/placeholder.svg\" alt=\"\"></div></li>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "276:283",
+    "componentKey": "12163b5fc14ffe0f8efcc5b145c3ca040602af47",
+    "propertyNames": {
+      "removed": "Removed#276:1",
+      "name": "Name#276:2",
+      "reason": "Reason#276:3"
+    },
+    "variantAxes": {},
+    "nestedInstances": [
+      {
+        "layer": "icon",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "arrow",
+        "component": "Icon / chevron-down",
+        "componentSlug": "icon-chevron-down",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/16",
+      "itemSpacing: space/8",
+      "paddingLeft: space/16",
+      "paddingTop: space/8",
+      "paddingRight: space/16",
+      "paddingBottom: space/8",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: color/surface/card",
+      "strokes: color/border/subtle",
+      "color: color/surface/card",
+      "color: color/border/subtle",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-s",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-s",
+      "color: color/text/secondary",
+      "strokes: icon/color/default",
+      "color: icon/color/default",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "paddingTop: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokes: color/surface/natural",
+      "color: color/surface/natural",
+      "fills: color/text/natural",
+      "color: color/text/natural",
+      "fills: color/text/default",
+      "color: color/text/default",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "fills: color/surface/page",
+      "color: color/surface/page"
+    ],
+    "textStyles": [
+      "Desktop/body-s"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/ingredient-swap.md",
+    "section": "Ingredient swap"
+  },
+  "relations": {
+    "uses": [
+      "icon-chevron-down",
+      "icon-close"
+    ],
+    "related": []
+  }
+}

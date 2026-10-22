@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un patrón que no esté aquí; los patrones se componen de átomos y consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 24 patrones sincronizados el 2026-10-22T14:07:02Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 28 patrones sincronizados el 2026-10-22T15:21:21Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -39,6 +39,10 @@
 - [Recipe hero](patterns/recipe-hero.md) · pattern · `recipe-hero` · ✅ criterio completo
 - [Recipe ingredients](patterns/recipe-ingredients.md) · pattern · `recipe-ingredients` · ✅ criterio completo
 - [Recipe steps](patterns/recipe-steps.md) · pattern · `recipe-steps` · ✅ criterio completo
+- [Natural hero](patterns/natural-hero.md) · pattern · `natural-hero` · ⬜ 2 pendientes
+- [Natural improvement](patterns/natural-improvement.md) · pattern · `natural-improvement` · ⬜ 2 pendientes
+- [Natural stats](patterns/natural-stats.md) · pattern · `natural-stats` · ⬜ 2 pendientes
+- [Natural pillars](patterns/natural-pillars.md) · pattern · `natural-pillars` · ⬜ 2 pendientes
 
 ## Cómo rellenar una ficha
 

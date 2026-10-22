@@ -1,0 +1,133 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:removed-tag",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Removed tag",
+    "slug": "removed-tag",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T15:21:21Z",
+    "description": "Removed tag: píldora de ingrediente retirado de la fórmula natural (Natural formula, wireframe UX 274:6354; clase CSS .removed-tag). Icono x (close) a la izquierda y texto tachado en color/text/secondary; el texto oculto «removed:» va delante para lectores de pantalla, porque el tachado por sí solo no comunica el estado. Se usa en «We also removed» (Natural improvement) y dentro de Ingredient swap. Label: nombre del ingrediente retirado, p. ej. «Preservatives» (ejemplo ⬜ TODO envase).",
+    "figmaPage": "Tags & chips",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": true,
+    "anatomyHash": "c940e2a4d2af",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "c940e2a4d2af",
+      "variantsChecked": [
+        "default"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "default": "Preservatives",
+        "figma": "Label#276:0"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": [
+        "icon"
+      ]
+    },
+    "tokens": [
+      "color/border/subtle",
+      "color/surface/card",
+      "color/text/secondary",
+      "font/family/body",
+      "font/line-height/desktop/body-s",
+      "font/size/desktop/body-s",
+      "font/style/body",
+      "icon/color/default",
+      "radius/pill",
+      "space/16",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "icon",
+      "icon-close",
+      "removed-tag",
+      "removed-tag__text",
+      "visually-hidden"
+    ],
+    "example": "<span data-ds=\"removed-tag\" class=\"removed-tag\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span><span class=\"visually-hidden\">Removed:</span><s class=\"removed-tag__text\">Preservatives</s></span>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "276:51",
+    "componentKey": "16b9f8ba6d1ac0069aea80e8ab6c3c8646a88e4e",
+    "propertyNames": {
+      "label": "Label#276:0"
+    },
+    "variantAxes": {},
+    "nestedInstances": [
+      {
+        "layer": "icon",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/8",
+      "paddingLeft: space/16",
+      "paddingTop: space/8",
+      "paddingRight: space/16",
+      "paddingBottom: space/8",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: color/surface/card",
+      "strokes: color/border/subtle",
+      "color: color/surface/card",
+      "color: color/border/subtle",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-s",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-s",
+      "color: color/text/secondary",
+      "strokes: icon/color/default",
+      "color: icon/color/default"
+    ],
+    "textStyles": [
+      "Desktop/body-s"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/removed-tag.md",
+    "section": "Removed tag"
+  },
+  "relations": {
+    "uses": [
+      "icon-close"
+    ],
+    "related": []
+  }
+}

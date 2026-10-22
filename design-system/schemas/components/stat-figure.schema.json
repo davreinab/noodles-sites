@@ -1,0 +1,125 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:stat-figure",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Stat figure",
+    "slug": "stat-figure",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T15:21:21Z",
+    "description": "Stat figure: cifra destacada con marcador tipo <mark> (clase CSS .stat-figure; wireframe UX 274:6354, módulo Natural stats). Cifra en Desktop/h2 (Anton) sobre bloque amarillo de marca (surface/brand) con texto en tinta (text/default, contraste ~12:1); el marcador lleva relleno de space/2 vertical y space/8 horizontal (la landing usa 2px 10px; 10 px no existe como variable, se usa space/8). Etiqueta en Desktop/body-s en text/on-inverse sobre el fondo tinta del patrón. Cifras de ejemplo ⬜ TODO envase (-45%, +5g, +20g, 100%). Props: Figure, Label.",
+    "figmaPage": "Content",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": true,
+    "anatomyHash": "3175316b75fd",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "3175316b75fd",
+      "variantsChecked": [
+        "default"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "figure",
+        "type": "string",
+        "default": "-45%",
+        "figma": "Figure#277:75"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "Less processed ingredients",
+        "figma": "Label#277:76"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "color/surface/brand",
+      "color/text/default",
+      "color/text/on-inverse",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/h2",
+      "font/size/desktop/body-s",
+      "font/size/desktop/h2",
+      "font/style/body",
+      "font/style/display",
+      "space/2",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "stat-figure",
+      "stat-figure__label",
+      "stat-figure__value"
+    ],
+    "example": "<li data-ds=\"stat-figure\" class=\"stat-figure\"><mark class=\"stat-figure__value\">-45%</mark><span class=\"stat-figure__label\">Less processed ingredients</span></li>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "277:325",
+    "componentKey": "009bce22fb545e891c10612cd2351f5efc57d8f2",
+    "propertyNames": {
+      "figure": "Figure#277:75",
+      "label": "Label#277:76"
+    },
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
+      "itemSpacing: space/8",
+      "paddingLeft: space/8",
+      "paddingTop: space/2",
+      "paddingRight: space/8",
+      "paddingBottom: space/2",
+      "fills: color/surface/brand",
+      "color: color/surface/brand",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h2",
+      "color: color/text/default",
+      "fills: color/text/on-inverse",
+      "fontSize: font/size/desktop/body-s",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-s",
+      "color: color/text/on-inverse"
+    ],
+    "textStyles": [
+      "Desktop/body-s"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/stat-figure.md",
+    "section": "Stat figure"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

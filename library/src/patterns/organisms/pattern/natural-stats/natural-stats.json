@@ -1,0 +1,207 @@
+{
+  "title": "Natural stats",
+  "description": "Natural stats: bloque de cifras de la página Natural formula (wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-stats). Fondo tinta (surface/inverse) con título y…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".natural-stats",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "natural-stats",
+      "name": "Natural stats",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "279:776",
+      "current": {
+        "description": "Natural stats: bloque de cifras de la página Natural formula (wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-stats). Fondo tinta (surface/inverse) con título y subtítulo en text/on-inverse (amarillo suave, contraste alto). Cuatro Stat figure en fila en desktop y en rejilla 2×2 en móvil. Props: Title, Subtitle. Cifras, etiquetas y textos de ejemplo ⬜ TODO envase (business-rules).",
+        "Propósito": "Bloque de cuatro cifras sobre fondo tinta («Eating fast doesn't mean to eat unhealthy»): título en h2, entradilla y cuatro Stat figure en fila.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "`section` con nombre por el h2 y lista (`ul`) con nombre propio. Las cifras se leen con su etiqueta. Sin interacción. Contrastes: crema sobre tinta (17:1, token documentado); tinta sobre amarillo de marca en cada cifra (12,3:1).",
+        "Cuándo usar / qué NO hace": "En la Natural formula page, entre Natural improvement y Natural pillars. Las cuatro cifras, sus etiquetas y el título son ⬜ TODO envase: cada cifra debe salir de la tabla nutricional o de un dato verificado; no se redondea ni se compara con competidores sin estudio. Con más de cuatro cifras, no es este patrón."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "279:776",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=279-776",
+      "page": "Pattern / Detail pages",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 15:21 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Natural stats: bloque de cifras de la página Natural formula (wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-stats). Fondo tinta (surface/inverse) con título y subtítulo en text/on-inverse (amarillo suave, contraste alto). Cuatro Stat figure en fila en desktop y en rejilla 2×2 en móvil. Props: Title, Subtitle. Cifras, etiquetas y textos de ejemplo ⬜ TODO envase (business-rules)."
+    ],
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "values": [],
+        "default": "Eating fast doesn't mean to eat unhealthy",
+        "figma": "Title#279:18"
+      },
+      {
+        "name": "subtitle",
+        "type": "string",
+        "values": [],
+        "default": "The new formula improves the nutritional profile across the board, without adding a single minute to prep time.",
+        "figma": "Subtitle#279:21"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "stat-figure",
+        "component": "stat-figure",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "stat-figure",
+        "component": "stat-figure",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "stat-figure",
+        "component": "stat-figure",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "stat-figure",
+        "component": "stat-figure",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/surface/brand",
+          "color/surface/inverse",
+          "color/text/default",
+          "color/text/on-inverse"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-l",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/h2",
+          "font/size/desktop/body-l",
+          "font/size/desktop/body-s",
+          "font/size/desktop/h2",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/2",
+          "space/32",
+          "space/48",
+          "space/64",
+          "space/8",
+          "space/96"
+        ]
+      }
+    ],
+    "tokenCount": 21,
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-l",
+      "Desktop/body-s"
+    ],
+    "classes": [
+      "natural-stats",
+      "natural-stats__head",
+      "natural-stats__list",
+      "natural-stats__subtitle",
+      "natural-stats__title",
+      "section",
+      "section__inner",
+      "stat-figure",
+      "stat-figure__label",
+      "stat-figure__value"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Bloque de cuatro cifras sobre fondo tinta («Eating fast doesn't mean to eat unhealthy»): título en h2, entradilla y cuatro Stat figure en fila.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "`section` con nombre por el h2 y lista (`ul`) con nombre propio. Las cifras se leen con su etiqueta. Sin interacción. Contrastes: crema sobre tinta (17:1, token documentado); tinta sobre amarillo de marca en cada cifra (12,3:1).",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En la Natural formula page, entre Natural improvement y Natural pillars. Las cuatro cifras, sus etiquetas y el título son ⬜ TODO envase: cada cifra debe salir de la tabla nutricional o de un dato verificado; no se redondea ni se compara con competidores sin estudio. Con más de cuatro cifras, no es este patrón.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "natural-stats",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "279:776",
+    "contract": "../../../../../../design-system/schemas/components/natural-stats.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

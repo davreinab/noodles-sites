@@ -1,0 +1,205 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:natural-stats",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Natural stats",
+    "slug": "natural-stats",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T15:21:21Z",
+    "description": "Natural stats: bloque de cifras de la página Natural formula (wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-stats). Fondo tinta (surface/inverse) con título y subtítulo en text/on-inverse (amarillo suave, contraste alto). Cuatro Stat figure en fila en desktop y en rejilla 2×2 en móvil. Props: Title, Subtitle. Cifras, etiquetas y textos de ejemplo ⬜ TODO envase (business-rules).",
+    "figmaPage": "Pattern / Detail pages",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "80351b3fbef3",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "80351b3fbef3",
+      "variantsChecked": [
+        "Breakpoint=Desktop",
+        "Breakpoint=Mobile"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "default": "Eating fast doesn't mean to eat unhealthy",
+        "figma": "Title#279:18"
+      },
+      {
+        "name": "subtitle",
+        "type": "string",
+        "default": "The new formula improves the nutritional profile across the board, without adding a single minute to prep time.",
+        "figma": "Subtitle#279:21"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "color/surface/brand",
+      "color/surface/inverse",
+      "color/text/default",
+      "color/text/on-inverse",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/h2",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-s",
+      "font/size/desktop/h2",
+      "font/style/body",
+      "font/style/display",
+      "space/16",
+      "space/2",
+      "space/32",
+      "space/48",
+      "space/64",
+      "space/8",
+      "space/96"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "natural-stats",
+      "natural-stats__head",
+      "natural-stats__list",
+      "natural-stats__subtitle",
+      "natural-stats__title",
+      "section",
+      "section__inner",
+      "stat-figure",
+      "stat-figure__label",
+      "stat-figure__value"
+    ],
+    "example": "<section data-ds=\"natural-stats\" class=\"section natural-stats\" aria-labelledby=\"ns-title\"><div class=\"section__inner\"><div class=\"natural-stats__head\"><h2 class=\"natural-stats__title\" id=\"ns-title\">Eating fast doesn't mean to eat unhealthy</h2><p class=\"natural-stats__subtitle\">The new formula improves the nutritional profile across the board, without adding a single minute to prep time.</p></div><ul class=\"natural-stats__list\" aria-label=\"Key figures\"><li data-ds=\"stat-figure\" class=\"stat-figure\"><mark class=\"stat-figure__value\">-45%</mark><span class=\"stat-figure__label\">Less processed ingredients</span></li><li data-ds=\"stat-figure\" class=\"stat-figure\"><mark class=\"stat-figure__value\">+5g</mark><span class=\"stat-figure__label\">Improved protein for your muscles</span></li><li data-ds=\"stat-figure\" class=\"stat-figure\"><mark class=\"stat-figure__value\">+20g</mark><span class=\"stat-figure__label\">Natural fiber to help digestive system</span></li><li data-ds=\"stat-figure\" class=\"stat-figure\"><mark class=\"stat-figure__value\">100%</mark><span class=\"stat-figure__label\">Flavour, same as always</span></li></ul></div></section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "279:776",
+    "componentKey": "172f908a79c0231b82cde1494df00e28c5bbdda3",
+    "propertyNames": {
+      "title": "Title#279:18",
+      "subtitle": "Subtitle#279:21",
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "stat-figure",
+        "component": "Stat figure",
+        "componentSlug": "stat-figure",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "stat-figure",
+        "component": "Stat figure",
+        "componentSlug": "stat-figure",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "stat-figure",
+        "component": "Stat figure",
+        "componentSlug": "stat-figure",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "stat-figure",
+        "component": "Stat figure",
+        "componentSlug": "stat-figure",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/48",
+      "paddingLeft: space/64",
+      "paddingTop: space/96",
+      "paddingRight: space/64",
+      "paddingBottom: space/96",
+      "fills: color/surface/inverse",
+      "color: color/surface/inverse",
+      "itemSpacing: space/16",
+      "fills: color/text/on-inverse",
+      "fontSize: font/size/desktop/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h2",
+      "color: color/text/on-inverse",
+      "fontSize: font/size/desktop/body-l",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-l",
+      "itemSpacing: space/32",
+      "itemSpacing: space/8",
+      "paddingLeft: space/8",
+      "paddingTop: space/2",
+      "paddingRight: space/8",
+      "paddingBottom: space/2",
+      "fills: color/surface/brand",
+      "color: color/surface/brand",
+      "fills: color/text/default",
+      "color: color/text/default",
+      "fontSize: font/size/desktop/body-s",
+      "lineHeight: font/line-height/desktop/body-s"
+    ],
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-l",
+      "Desktop/body-s"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/natural-stats.md",
+    "section": "Natural stats"
+  },
+  "relations": {
+    "uses": [
+      "stat-figure"
+    ],
+    "related": []
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:pillar-item",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Pillar item",
+    "slug": "pillar-item",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T15:21:21Z",
+    "description": "Pillar item: pilar de «Taste you can trust» con número en círculo verde natural (surface/natural, número en on-natural, blanco ~5.5:1 sobre el verde) y texto a la derecha: título en negrita (Archivo Bold 18/24, sin estilo de texto) y cuerpo en Desktop/body-m. Se usa en lista ordenada de cuatro (Natural pillars; clase CSS .pillar-item; wireframe UX 274:6354). Props: Number, Title, Text. Textos de ejemplo ⬜ TODO envase.",
+    "figmaPage": "Content",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": true,
+    "anatomyHash": "efeac56acd00",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "efeac56acd00",
+      "variantsChecked": [
+        "default"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "number",
+        "type": "string",
+        "default": "1",
+        "figma": "Number#277:77"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "default": "Better noodles start with better production",
+        "figma": "Title#277:78"
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "default": "CO2-neutral production commitments and factory-level sourcing standards.",
+        "figma": "Text#277:79"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "color/surface/natural",
+      "color/text/default",
+      "color/text/on-natural",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "radius/pill",
+      "space/16",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "pillar-item",
+      "pillar-item__number",
+      "pillar-item__text",
+      "pillar-item__title"
+    ],
+    "example": "<li data-ds=\"pillar-item\" class=\"pillar-item\"><span class=\"pillar-item__number\" aria-hidden=\"true\">1</span><p class=\"pillar-item__title\">Better noodles start with better production</p><p class=\"pillar-item__text\">CO2-neutral production commitments and factory-level sourcing standards.</p></li>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "277:332",
+    "componentKey": "fafb8d42cf90dfec23646d13eb76ae4e08624c14",
+    "propertyNames": {
+      "number": "Number#277:77",
+      "title": "Title#277:78",
+      "text": "Text#277:79"
+    },
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
+      "itemSpacing: space/16",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: color/surface/natural",
+      "color: color/surface/natural",
+      "fills: color/text/on-natural",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label",
+      "color: color/text/on-natural",
+      "itemSpacing: space/8",
+      "fills: color/text/default",
+      "color: color/text/default",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m"
+    ],
+    "textStyles": [
+      "Desktop/label",
+      "Desktop/body-m"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/pillar-item.md",
+    "section": "Pillar item"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

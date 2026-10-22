@@ -1,0 +1,274 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:natural-hero",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Natural hero",
+    "slug": "natural-hero",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T15:21:21Z",
+    "description": "Natural hero: cabecera de la página Natural formula (wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-hero). Fondo verde natural (surface/natural) con textos en blanco (text/on-natural; blanco sobre verde ~5.5:1, AA). Badge Neutral «New improved formula» (tinta sobre verde; la variante Natural desaparecería sobre el fondo verde). Claim h1 (Title), entradilla (Lead), fila de Chip M (Ready in 3', Real flavour, Full ingredient transparency) e imagen a la derecha (placeholder de packshot e ingredientes). Desktop: texto a la izquierda y 560×480 a la derecha. Mobile: texto arriba e imagen debajo a ancho completo. Props: Title, Lead; el resto son instancias editables. El claim es el de la SPEC ⬜ TODO: validar con el envase.",
+    "figmaPage": "Pattern / Detail pages",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "51dad383ad31",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "51dad383ad31",
+      "variantsChecked": [
+        "Breakpoint=Desktop",
+        "Breakpoint=Mobile"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "default": "100% natural. We cut the bullsh*t.",
+        "figma": "Title#278:0"
+      },
+      {
+        "name": "lead",
+        "type": "string",
+        "default": "We rebuilt our recipe from scratch: same great taste, only ingredients you can actually recognize.",
+        "figma": "Lead#278:3"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "badge/neutral/bg",
+      "badge/neutral/text",
+      "border/width/thin",
+      "chip/bg",
+      "chip/border",
+      "chip/height/m",
+      "chip/text",
+      "color/surface/natural",
+      "color/surface/page",
+      "color/text/on-natural",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/h1",
+      "font/line-height/mobile/label",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-s",
+      "font/size/desktop/h1",
+      "font/size/mobile/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/4",
+      "space/64",
+      "space/8",
+      "space/96"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "badge",
+      "badge--neutral",
+      "chip",
+      "natural-hero",
+      "natural-hero__chips",
+      "natural-hero__content",
+      "natural-hero__grid",
+      "natural-hero__image",
+      "natural-hero__media",
+      "natural-hero__text",
+      "natural-hero__title",
+      "section",
+      "section__inner"
+    ],
+    "example": "<section data-ds=\"natural-hero\" class=\"section natural-hero\" aria-labelledby=\"nh-title\"><div class=\"section__inner\"><div class=\"natural-hero__grid\"><div class=\"natural-hero__content\"><span class=\"badge badge--neutral\">New improved formula</span><h1 class=\"natural-hero__title\" id=\"nh-title\">100% natural. We cut the bullsh*t.</h1><p class=\"natural-hero__text\">We rebuilt our recipe from scratch: same great taste, only ingredients you can actually recognize.</p><ul class=\"natural-hero__chips\"><li class=\"chip\">Ready in 3'</li><li class=\"chip\">Real flavour</li><li class=\"chip\">Full ingredient transparency</li></ul></div><figure class=\"natural-hero__media\"><img class=\"natural-hero__image\" src=\"../assets/images/placeholder.svg\" alt=\"Noodle packshot and its ingredients\"></figure></div></div></section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "278:519",
+    "componentKey": "46b5d92b8dd250bcc7f3694ee9f1fde5fa5d8c10",
+    "propertyNames": {
+      "title": "Title#278:0",
+      "lead": "Lead#278:3",
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "badge",
+        "component": "Type=Neutral",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
+      "paddingLeft: space/64",
+      "paddingTop: space/96",
+      "paddingRight: space/64",
+      "paddingBottom: space/96",
+      "fills: color/surface/natural",
+      "color: color/surface/natural",
+      "itemSpacing: space/64",
+      "itemSpacing: space/24",
+      "paddingLeft: space/8",
+      "paddingTop: space/4",
+      "paddingRight: space/8",
+      "paddingBottom: space/4",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: badge/neutral/bg",
+      "color: badge/neutral/bg",
+      "fills: badge/neutral/text",
+      "fontSize: font/size/mobile/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/mobile/label",
+      "color: badge/neutral/text",
+      "fills: color/text/on-natural",
+      "fontSize: font/size/desktop/h1",
+      "lineHeight: font/line-height/desktop/h1",
+      "color: color/text/on-natural",
+      "fontSize: font/size/desktop/body-l",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-l",
+      "itemSpacing: space/8",
+      "paddingLeft: space/16",
+      "paddingTop: space/8",
+      "paddingRight: space/16",
+      "paddingBottom: space/8",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "minHeight: chip/height/m",
+      "fills: chip/bg",
+      "strokes: chip/border",
+      "color: chip/bg",
+      "color: chip/border",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: chip/text",
+      "color: chip/text",
+      "fills: chip/text",
+      "fontSize: font/size/desktop/body-s",
+      "lineHeight: font/line-height/desktop/body-s",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: color/surface/page",
+      "color: color/surface/page"
+    ],
+    "textStyles": [
+      "Mobile/label",
+      "Desktop/h1",
+      "Desktop/body-l",
+      "Desktop/body-s"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/natural-hero.md",
+    "section": "Natural hero"
+  },
+  "relations": {
+    "uses": [
+      "badge",
+      "chip",
+      "icon-check"
+    ],
+    "related": []
+  }
+}

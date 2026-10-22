@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 79 componentes sincronizados el 2026-10-22T14:30:04Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 84 componentes sincronizados el 2026-10-22T15:21:21Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -68,6 +68,7 @@
 - [Pagination](components/pagination.md) · component · `pagination` · ✅ criterio completo
 - [Badge](components/badge.md) · component · `badge` · ✅ criterio completo
 - [Chip](components/chip.md) · component · `chip` · ✅ criterio completo
+- [Removed tag](components/removed-tag.md) · component · `removed-tag` · ⬜ 2 pendientes
 - [Product card](components/product-card.md) · component · `product-card` · ✅ criterio completo
 - [Recipe card](components/recipe-card.md) · component · `recipe-card` · ✅ criterio completo
 - [Contest card](components/contest-card.md) · component · `contest-card` · ✅ criterio completo
@@ -88,6 +89,10 @@
 - [Nutrition label](components/nutrition-label.md) · component · `nutrition-label` · ⬜ 1 pendiente
 - [Recipe ingredient](components/recipe-ingredient.md) · component · `recipe-ingredient` · ✅ criterio completo
 - [Recipe macros](components/recipe-macros.md) · component · `recipe-macros` · ✅ criterio completo
+- [Ingredient swap](components/ingredient-swap.md) · component · `ingredient-swap` · ⬜ 2 pendientes
+- [Origins map](components/origins-map.md) · component · `origins-map` · ⬜ 2 pendientes
+- [Stat figure](components/stat-figure.md) · component · `stat-figure` · ⬜ 2 pendientes
+- [Pillar item](components/pillar-item.md) · component · `pillar-item` · ⬜ 2 pendientes
 - [Modal / Slot](components/modal-slot.md) · component · `modal-slot` · ✅ criterio completo
 - [Modal](components/modal.md) · component · `modal` · ✅ criterio completo
 - [Alert](components/alert.md) · component · `alert` · ✅ criterio completo
@@ -123,5 +128,11 @@ Cada ficha nace con el bloque generado y cuatro campos de criterio en `⬜ TODO`
 
 - **Nuevos** (sin volcado de Figma; contrato `unverified`): anchor-nav, flavour-tile, pagination, empty-state, recipe-ingredient, recipe-macros, share-panel.
 - **Actualizados** (criterio y ejemplo; `meta.verification` sin cambios): badge (alias Vegan y Hot!), recipe-card (meta encima del nombre, imagen 4:5, chips de producto), step (título opcional).
+
+## Nota de cambios · fase 4 (2026-10-22)
+
+- **Nuevos** (fichas a mano, sin volcado de Figma todavía; el sync rellena el bloque GENERATED): removed-tag, ingredient-swap, origins-map, stat-figure, pillar-item. CSS en `css/components.css` tras `.natural-formula`.
+- **Origins map:** la `ul` lleva los seis orígenes y es la que se lee; el círculo se coloca con CSS (ángulo por `:nth-child`, radio en `cqw`). Móvil conserva el círculo más pequeño (radio del 36 %), sin pasar a dos columnas.
+- **Pendiente:** todas las cifras, ingredientes, países y textos de Natural formula son de ejemplo (⬜ TODO envase).
 
 ## Catálogo propuesto (⬜ por definir en Figma)

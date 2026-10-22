@@ -1,0 +1,165 @@
+{
+  "title": "Removed tag",
+  "description": "Removed tag: píldora de ingrediente retirado de la fórmula natural (Natural formula, wireframe UX 274:6354; clase CSS .removed-tag). Icono x (close) a la izquierda y texto tachado…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".removed-tag",
+          "fg": "#6b6455",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-secondary",
+          "bgVar": "--color-surface-card",
+          "ratio": 5.87,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "removed-tag",
+      "name": "Removed tag",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "276:51",
+      "current": {
+        "description": "Removed tag: píldora de ingrediente retirado de la fórmula natural (Natural formula, wireframe UX 274:6354; clase CSS .removed-tag). Icono x (close) a la izquierda y texto tachado en color/text/secondary; el texto oculto «removed:» va delante para lectores de pantalla, porque el tachado por sí solo no comunica el estado. Se usa en «We also removed» (Natural improvement) y dentro de Ingredient swap. Label: nombre del ingrediente retirado, p. ej. «Preservatives» (ejemplo ⬜ TODO envase).",
+        "Propósito": "Píldora que marca un ingrediente retirado de la fórmula: icono x y el nombre tachado. Se usa sola en «We also removed» y dentro de Ingredient swap, donde el ingrediente retirado va arriba del sustituto.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Sin rol propio: es texto en línea. El nombre sale del texto visible, precedido por el texto oculto «Removed:» (`visually-hidden`), porque el tachado solo se ve y no lo anuncia ningún lector. El icono x va con `aria-hidden`. No es interactivo: no recibe foco ni tiene teclado. Contraste: texto tinta sobre tarjeta blanca (más de 12:1); el borde beige es decorativo y el dato no depende de él.",
+        "Cuándo usar / qué NO hace": "Solo para ingredientes retirados de la fórmula natural, con el texto exacto del envase (⬜ TODO envase: los nombres de ejemplo «Preservatives», «Refined sugar», «Hydrogenated fats» y «GMO ingredients» deben validarse con GB Foods). No es un filtro ni un botón, no se pulsa. No sirve para alérgenos: esos van en Allergen table."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "276:51",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=276-51",
+      "page": "Tags & chips",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-22 · 15:21 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Removed tag: píldora de ingrediente retirado de la fórmula natural (Natural formula, wireframe UX 274:6354; clase CSS .removed-tag). Icono x (close) a la izquierda y texto tachado en color/text/secondary; el texto oculto «removed:» va delante para lectores de pantalla, porque el tachado por sí solo no comunica el estado. Se usa en «We also removed» (Natural improvement) y dentro de Ingredient swap. Label: nombre del ingrediente retirado, p. ej. «Preservatives» (ejemplo ⬜ TODO envase)."
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "values": [],
+        "default": "Preservatives",
+        "figma": "Label#276:0"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "icon",
+        "component": "icon-close",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/border/subtle",
+          "color/surface/card",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/body-s",
+          "font/size/desktop/body-s",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 11,
+    "textStyles": [
+      "Desktop/body-s"
+    ],
+    "classes": [
+      "icon",
+      "icon-close",
+      "removed-tag",
+      "removed-tag__text",
+      "visually-hidden"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Píldora que marca un ingrediente retirado de la fórmula: icono x y el nombre tachado. Se usa sola en «We also removed» y dentro de Ingredient swap, donde el ingrediente retirado va arriba del sustituto.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Sin rol propio: es texto en línea. El nombre sale del texto visible, precedido por el texto oculto «Removed:» (`visually-hidden`), porque el tachado solo se ve y no lo anuncia ningún lector. El icono x va con `aria-hidden`. No es interactivo: no recibe foco ni tiene teclado. Contraste: texto tinta sobre tarjeta blanca (más de 12:1); el borde beige es decorativo y el dato no depende de él.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo para ingredientes retirados de la fórmula natural, con el texto exacto del envase (⬜ TODO envase: los nombres de ejemplo «Preservatives», «Refined sugar», «Hydrogenated fats» y «GMO ingredients» deben validarse con GB Foods). No es un filtro ni un botón, no se pulsa. No sirve para alérgenos: esos van en Allergen table.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "removed-tag",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "276:51",
+    "contract": "../../../../../../design-system/schemas/components/removed-tag.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

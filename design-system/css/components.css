@@ -2164,6 +2164,389 @@
   .natural-formula__list .button { align-self: stretch; }
 }
 
+/* ══════════════════════════════════════════════════════════════════════════
+   REMOVED TAG · ingrediente retirado · píldora con icono x y texto tachado
+   El tachado no basta para quien usa lector de pantalla: el «Removed:» va en texto oculto delante.
+   ══════════════════════════════════════════════════════════════════════════ */
+.removed-tag {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: var(--space-8);
+  padding: calc(var(--space-8) - var(--border-width-thin)) calc(var(--space-16) - var(--border-width-thin));
+  border: var(--border-width-thin) solid var(--color-border-subtle);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface-card);
+  /* El maestro liga la etiqueta a color/text/secondary (el tachado ya marca el estado) */
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-s);
+  line-height: var(--font-line-height-desktop-body-s);
+}
+.removed-tag .icon { width: var(--icon-size-sm); height: var(--icon-size-sm); }
+.removed-tag__text { text-decoration: line-through; text-decoration-thickness: var(--border-width-thin); }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   INGREDIENT SWAP · ingrediente retirado → flecha → sustituto (nombre, motivo y miniatura)
+   La tarjeta del sustituto va en blanco con borde verde natural; el nombre en verde natural.
+   ══════════════════════════════════════════════════════════════════════════ */
+.ingredient-swap { display: flex; flex-direction: column; align-items: stretch; gap: var(--space-16); }
+.ingredient-swap__arrow { align-self: flex-start; }
+.ingredient-swap__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  padding: var(--space-16);
+  border: var(--border-width-thin) solid var(--color-surface-natural);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+}
+.ingredient-swap__text { display: flex; flex-direction: column; gap: var(--space-8); min-width: 0; }
+.ingredient-swap__name {
+  margin: 0;
+  color: var(--color-text-natural);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+  font-weight: bold;
+}
+.ingredient-swap__reason {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-s);
+  line-height: var(--font-line-height-desktop-body-s);
+}
+.ingredient-swap__thumb { flex: none; width: var(--space-56); height: var(--space-56); object-fit: cover; border-radius: var(--radius-sm); background-color: var(--color-surface-page); }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   ORIGINS MAP · sello «100% natural» en el centro y seis orígenes en anillo
+   La lista <ul> es la que lee el lector de pantalla; el círculo es solo colocación.
+   Cada <li> lleva su ángulo en --origins-angle (0 = arriba, sentido horario) y se
+   coloca con translate + rotate: el giro de vuelta deja el texto derecho.
+   El radio se mide en cqw (ancho del propio mapa), así el círculo escala con la pantalla.
+   ══════════════════════════════════════════════════════════════════════════ */
+.origins-map {
+  /* Radio de los nodos: el centro de cada píldora cae sobre el anillo (240 de 640 px en el maestro) */
+  --origins-radius: 37.5cqw;
+  position: relative;
+  width: 100%;
+  max-width: calc(var(--space-128) * 5);
+  aspect-ratio: 1;
+  margin-inline: auto;
+  container-type: inline-size;
+}
+/* Anillo fino: diámetro del 75 % del mapa (480 de 640 px en el maestro), o sea inset del 12,5 % (el mismo que el de las píldoras). */
+.origins-map::before {
+  content: "";
+  position: absolute;
+  inset: 12.5%;
+  border: var(--border-width-thin) solid var(--color-border-subtle);
+  border-radius: var(--radius-pill);
+}
+.origins-map__seal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: 31.25%;
+  aspect-ratio: 1;
+  margin: 0;
+  padding: var(--space-8);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface-natural);
+  color: var(--color-text-on-natural);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+  text-align: center;
+}
+.origins-map__list { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; }
+.origins-map__item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  transform: rotate(var(--origins-angle)) translateY(calc(var(--origins-radius) * -1)) rotate(calc(var(--origins-angle) * -1));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: var(--space-8) var(--space-16);
+  /* Sin filete: en el maestro la píldora es solo fondo card */
+  border: 0;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface-card);
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  text-align: center;
+  white-space: nowrap;
+}
+/* Ángulos de los seis nodos: arriba, a la derecha y en sentido horario (Wheat, Soy sauce, Sesame oil, Vegetables, Sunflower oil, Spices). */
+.origins-map__item:nth-child(1) { --origins-angle: 0deg; }
+.origins-map__item:nth-child(2) { --origins-angle: 60deg; }
+.origins-map__item:nth-child(3) { --origins-angle: 120deg; }
+.origins-map__item:nth-child(4) { --origins-angle: 180deg; }
+.origins-map__item:nth-child(5) { --origins-angle: 240deg; }
+.origins-map__item:nth-child(6) { --origins-angle: 300deg; }
+.origins-map__name {
+  font-size: var(--font-size-desktop-body-s);
+  line-height: var(--font-line-height-desktop-body-s);
+  font-weight: bold;
+}
+.origins-map__country {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-desktop-body-s);
+  line-height: var(--font-line-height-desktop-body-s);
+}
+/* Móvil: el mismo círculo, más pequeño. Con 288 px útiles (320 - 2 × 16) y radio del 36 % las píldoras no se pisan. */
+@media (max-width: 768px) {
+  /* Móvil (327 px en el maestro): anillo de 240 px (inset 13,3 %), sello de 112 px (34,25 %) y píldora de 112 × 48 */
+  .origins-map { --origins-radius: 36.7cqw; }
+  .origins-map::before { inset: 13.3%; }
+  .origins-map__seal { width: 34.25%; font-size: var(--font-size-mobile-h3); line-height: var(--font-line-height-mobile-h3); }
+  .origins-map__item { padding: var(--space-4) var(--space-8); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   STAT FIGURE · cifra destacada con marcador amarillo de marca y etiqueta · sobre tinta
+   La cifra va en <mark> (marcador amarillo, texto tinta) y sin mayúsculas: «+5g» no se transforma.
+   ══════════════════════════════════════════════════════════════════════════ */
+.stat-figure { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-8); margin: 0; }
+.stat-figure__value {
+  display: inline-block;
+  /* Marca de cifra del maestro: 2 px arriba y abajo, 8 px a los lados */
+  padding: var(--space-2) var(--space-8);
+  background-color: var(--color-surface-brand);
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h2);
+  line-height: var(--font-line-height-desktop-h2);
+  font-weight: var(--font-desktop-h2-weight);
+  text-transform: none;
+}
+.stat-figure__label {
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-s);
+  line-height: var(--font-line-height-desktop-body-s);
+}
+/* Móvil: el maestro liga las cifras a desktop/h2 (48 px), pero a 320 px la columna de 2 no cabe
+   («100%» se sale). Se reduce a móvil/h2 para que quepa: desviación pendiente de confirmar con el maestro. */
+@media (max-width: 768px) {
+  .stat-figure__value { font-size: var(--font-size-mobile-h2); line-height: var(--font-line-height-mobile-h2); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   PILLAR ITEM · pilar numerado de «Taste you can trust» · círculo verde natural con el número
+   El número va con aria-hidden: el orden lo da la lista <ol>.
+   ══════════════════════════════════════════════════════════════════════════ */
+.pillar-item {
+  display: grid;
+  grid-template-columns: var(--space-40) minmax(0, 1fr);
+  align-items: start;
+  column-gap: var(--space-16);
+  row-gap: var(--space-8);
+  margin: 0;
+}
+.pillar-item__number {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: var(--space-40);
+  height: var(--space-40);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface-natural);
+  color: var(--color-text-on-natural);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-label);
+  line-height: var(--font-line-height-desktop-label);
+}
+.pillar-item__title {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+  font-weight: bold;
+}
+.pillar-item__text {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+
+/* ── NATURAL HERO · cabecera de la Natural formula page · fondo verde natural ─────────────── */
+.natural-hero { background-color: var(--color-surface-natural); color: var(--color-text-on-natural); }
+/* Columnas 688 : 560 px en el maestro (texto más ancho que la imagen) */
+.natural-hero__grid { display: grid; grid-template-columns: minmax(0, 11fr) minmax(0, 9fr); align-items: center; gap: var(--space-64); }
+.natural-hero__content { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-24); }
+.natural-hero__title {
+  margin: 0;
+  color: var(--color-text-on-natural);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h1);
+  line-height: var(--font-line-height-desktop-h1);
+  font-weight: var(--font-desktop-h1-weight);
+  text-transform: uppercase;
+}
+.natural-hero__text {
+  margin: 0;
+  color: var(--color-text-on-natural);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-l);
+  line-height: var(--font-line-height-desktop-body-l);
+}
+.natural-hero__chips { display: flex; flex-wrap: wrap; gap: var(--space-8); margin: 0; padding: 0; list-style: none; }
+/* Los chips son decorativos aquí (no enlazan): no cambian de fondo al pasar el ratón. */
+/* Las píldoras del hero son tamaño M en el maestro (no S, que es el por defecto de .chip) */
+.natural-hero .chip { min-height: var(--chip-height-m); }
+.natural-hero .chip:hover { background-color: var(--chip-bg); cursor: default; }
+.natural-hero__media { margin: 0; }
+.natural-hero__image {
+  display: block;
+  width: 100%;
+  /* 560 × 480 px en el maestro */
+  aspect-ratio: 7 / 6;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-page);
+}
+@media (max-width: 768px) {
+  .natural-hero__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-32); }
+  .natural-hero__title { font-size: var(--font-size-mobile-h1); line-height: var(--font-line-height-mobile-h1); }
+  .natural-hero__text { font-size: var(--font-size-mobile-body-l); line-height: var(--font-line-height-mobile-body-l); }
+  /* 327 × 240 px en el maestro (ancho completo, alto fijo) */
+  .natural-hero__image { aspect-ratio: 109 / 80; }
+}
+
+/* ── NATURAL IMPROVEMENT · reemplazos, ingredientes retirados y orígenes · fondo crema ───── */
+.natural-improvement { background-color: var(--color-surface-page); color: var(--color-text-default); }
+/* Bloques de la sección separados 64 px en escritorio (48 en móvil) según el maestro */
+.natural-improvement .section__inner { gap: var(--space-64); }
+.natural-improvement__head { display: flex; flex-direction: column; gap: var(--space-16); }
+.natural-improvement__title {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h2);
+  line-height: var(--font-line-height-desktop-h2);
+  font-weight: var(--font-desktop-h2-weight);
+  text-transform: uppercase;
+}
+.natural-improvement__subtitle {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-l);
+  line-height: var(--font-line-height-desktop-body-l);
+}
+.natural-improvement__block { display: flex; flex-direction: column; gap: var(--space-24); }
+.natural-improvement__heading {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.natural-improvement__swaps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-24) var(--layout-gutter); margin: 0; padding: 0; list-style: none; }
+.natural-improvement__removed { display: flex; flex-wrap: wrap; gap: var(--space-8); margin: 0; padding: 0; list-style: none; }
+.natural-improvement__origins-text {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+@media (max-width: 768px) {
+  .natural-improvement__title { font-size: var(--font-size-mobile-h2); line-height: var(--font-line-height-mobile-h2); }
+  .natural-improvement .section__inner { gap: var(--space-48); }
+  .natural-improvement__subtitle { font-size: var(--font-size-mobile-body-l); line-height: var(--font-line-height-mobile-body-l); }
+  .natural-improvement__heading { font-size: var(--font-size-mobile-h3); line-height: var(--font-line-height-mobile-h3); }
+  .natural-improvement__origins-text { font-size: var(--font-size-mobile-body-m); line-height: var(--font-line-height-mobile-body-m); }
+  .natural-improvement__swaps { grid-template-columns: minmax(0, 1fr); gap: var(--space-16); }
+}
+
+/* ── NATURAL STATS · cifras con marcador amarillo sobre tinta ─────────────────────────────── */
+.natural-stats { background-color: var(--color-surface-inverse); color: var(--color-text-on-inverse); }
+.natural-stats__head { display: flex; flex-direction: column; gap: var(--space-16); }
+.natural-stats__title {
+  margin: 0;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h2);
+  line-height: var(--font-line-height-desktop-h2);
+  font-weight: var(--font-desktop-h2-weight);
+  text-transform: uppercase;
+}
+.natural-stats__subtitle {
+  margin: 0;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-l);
+  line-height: var(--font-line-height-desktop-body-l);
+}
+/* Cuatro cifras en fila con 32 px entre columnas (el maestro no usa el gutter del layout) */
+.natural-stats__list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-32); margin: 0; padding: 0; list-style: none; }
+@media (max-width: 768px) {
+  .natural-stats__title { font-size: var(--font-size-mobile-h2); line-height: var(--font-line-height-mobile-h2); }
+  .natural-stats__subtitle { font-size: var(--font-size-mobile-body-l); line-height: var(--font-line-height-mobile-body-l); }
+  .natural-stats__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-24) var(--space-32); }
+}
+
+/* ── NATURAL PILLARS · cuatro pilares numerados con imagen · fondo blanco ─────────────────── */
+.natural-pillars { background-color: var(--color-surface-card); color: var(--color-text-default); }
+/* Columnas 688 : 560 px en el maestro (igual que Natural hero) */
+.natural-pillars__grid { display: grid; grid-template-columns: minmax(0, 11fr) minmax(0, 9fr); align-items: center; gap: var(--space-64); }
+.natural-pillars__content { display: flex; flex-direction: column; gap: var(--space-48); }
+.natural-pillars__head { display: flex; flex-direction: column; gap: var(--space-16); }
+.natural-pillars__title {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h2);
+  line-height: var(--font-line-height-desktop-h2);
+  font-weight: var(--font-desktop-h2-weight);
+  text-transform: uppercase;
+}
+.natural-pillars__subtitle {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-l);
+  line-height: var(--font-line-height-desktop-body-l);
+}
+.natural-pillars__list { display: flex; flex-direction: column; gap: var(--space-24); margin: 0; padding: 0; list-style: none; }
+.natural-pillars__media { margin: 0; }
+.natural-pillars__image {
+  display: block;
+  width: 100%;
+  /* 560 × 520 px en el maestro */
+  aspect-ratio: 14 / 13;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-page);
+}
+@media (max-width: 768px) {
+  .natural-pillars__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-32); }
+  .natural-pillars__image { aspect-ratio: 109 / 80; }
+  .natural-pillars__title { font-size: var(--font-size-mobile-h2); line-height: var(--font-line-height-mobile-h2); }
+  .natural-pillars__subtitle { font-size: var(--font-size-mobile-body-l); line-height: var(--font-line-height-mobile-body-l); }
+  .removed-tag { font-size: var(--font-size-mobile-body-s); line-height: var(--font-line-height-mobile-body-s); }
+  .ingredient-swap__name { font-size: var(--font-size-mobile-body-m); line-height: var(--font-line-height-mobile-body-m); }
+  .ingredient-swap__reason { font-size: var(--font-size-mobile-body-s); line-height: var(--font-line-height-mobile-body-s); }
+}
+
 /* ── CARRUSELES Y REJILLAS · Product categories, Recipes, Library ──────────────────────────── */
 .section__bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: var(--space-16); }
 .carousel { display: flex; gap: var(--layout-gutter); margin: 0; padding: 0; overflow-x: auto; list-style: none; scroll-snap-type: x mandatory; }

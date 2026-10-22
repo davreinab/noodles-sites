@@ -1,0 +1,224 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:natural-pillars",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Natural pillars",
+    "slug": "natural-pillars",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T15:21:21Z",
+    "description": "Natural pillars: bloque «Taste you can trust» de la página Natural formula (wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-pillars). Fondo blanco (surface/card, sección Trust). A la izquierda título, subtítulo «Better for people, better for the planet» y lista ordenada de cuatro Pillar item; a la derecha imagen placeholder (560×520 en desktop; en móvil va debajo a ancho completo). Props: Title, Subtitle. Textos de ejemplo y pilares ⬜ TODO envase.",
+    "figmaPage": "Pattern / Detail pages",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "1002639051f9",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "1002639051f9",
+      "variantsChecked": [
+        "Breakpoint=Desktop",
+        "Breakpoint=Mobile"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "default": "Taste you can trust",
+        "figma": "Title#279:24"
+      },
+      {
+        "name": "subtitle",
+        "type": "string",
+        "default": "Better for people, better for the planet",
+        "figma": "Subtitle#279:27"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "color/surface/card",
+      "color/surface/natural",
+      "color/surface/page",
+      "color/text/default",
+      "color/text/on-natural",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
+      "font/size/desktop/h2",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/48",
+      "space/64",
+      "space/8",
+      "space/96"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "natural-pillars",
+      "natural-pillars__content",
+      "natural-pillars__grid",
+      "natural-pillars__head",
+      "natural-pillars__image",
+      "natural-pillars__list",
+      "natural-pillars__media",
+      "natural-pillars__subtitle",
+      "natural-pillars__title",
+      "pillar-item",
+      "pillar-item__number",
+      "pillar-item__text",
+      "pillar-item__title",
+      "section",
+      "section__inner"
+    ],
+    "example": "<section data-ds=\"natural-pillars\" class=\"section natural-pillars\" aria-labelledby=\"np-title\"><div class=\"section__inner\"><div class=\"natural-pillars__grid\"><div class=\"natural-pillars__content\"><div class=\"natural-pillars__head\"><h2 class=\"natural-pillars__title\" id=\"np-title\">Taste you can trust</h2><p class=\"natural-pillars__subtitle\">Better for people, better for the planet</p></div><ol class=\"natural-pillars__list\"><li data-ds=\"pillar-item\" class=\"pillar-item\"><span class=\"pillar-item__number\" aria-hidden=\"true\">1</span><p class=\"pillar-item__title\">Better noodles start with better production</p><p class=\"pillar-item__text\">CO2-neutral production commitments and factory-level sourcing standards.</p></li><li data-ds=\"pillar-item\" class=\"pillar-item\"><span class=\"pillar-item__number\" aria-hidden=\"true\">2</span><p class=\"pillar-item__title\">Growing together with local communities</p><p class=\"pillar-item__text\">Sourcing partnerships and support programmes with local farming communities.</p></li><li data-ds=\"pillar-item\" class=\"pillar-item\"><span class=\"pillar-item__number\" aria-hidden=\"true\">3</span><p class=\"pillar-item__title\">Innovation in every recipe</p><p class=\"pillar-item__text\">R&amp;D behind each natural substitution, tested to keep the exact same taste.</p></li><li data-ds=\"pillar-item\" class=\"pillar-item\"><span class=\"pillar-item__number\" aria-hidden=\"true\">4</span><p class=\"pillar-item__title\">Cleaner recipe. Same great taste.</p><p class=\"pillar-item__text\">Closing statement tying the four pillars back to the «Taste you can trust» claim.</p></li></ol></div><figure class=\"natural-pillars__media\"><img class=\"natural-pillars__image\" src=\"../assets/images/placeholder.svg\" alt=\"\"></figure></div></div></section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "279:844",
+    "componentKey": "b8058dcee4c38f1551f1c73451050a661f58ead8",
+    "propertyNames": {
+      "title": "Title#279:24",
+      "subtitle": "Subtitle#279:27",
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "pillar-item",
+        "component": "Pillar item",
+        "componentSlug": "pillar-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "pillar-item",
+        "component": "Pillar item",
+        "componentSlug": "pillar-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "pillar-item",
+        "component": "Pillar item",
+        "componentSlug": "pillar-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "pillar-item",
+        "component": "Pillar item",
+        "componentSlug": "pillar-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
+      "paddingLeft: space/64",
+      "paddingTop: space/96",
+      "paddingRight: space/64",
+      "paddingBottom: space/96",
+      "fills: color/surface/card",
+      "color: color/surface/card",
+      "itemSpacing: space/64",
+      "itemSpacing: space/48",
+      "itemSpacing: space/16",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h2",
+      "color: color/text/default",
+      "fontSize: font/size/desktop/body-l",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-l",
+      "itemSpacing: space/24",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: color/surface/natural",
+      "color: color/surface/natural",
+      "fills: color/text/on-natural",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label",
+      "color: color/text/on-natural",
+      "itemSpacing: space/8",
+      "fontSize: font/size/desktop/body-m",
+      "lineHeight: font/line-height/desktop/body-m",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: color/surface/page",
+      "color: color/surface/page"
+    ],
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-l",
+      "Desktop/label",
+      "Desktop/body-m"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/natural-pillars.md",
+    "section": "Natural pillars"
+  },
+  "relations": {
+    "uses": [
+      "pillar-item"
+    ],
+    "related": []
+  }
+}

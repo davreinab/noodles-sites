@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-22T14:30:04Z",
+  "lastSync": "2026-10-22T15:21:21Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -1475,6 +1475,37 @@
       }
     },
     {
+      "id": "component:removed-tag",
+      "name": "Removed tag",
+      "slug": "removed-tag",
+      "kind": "component",
+      "contractPath": "./components/removed-tag.schema.json",
+      "keywords": [
+        "icon",
+        "removed",
+        "tag"
+      ],
+      "dependencies": [
+        "icon-close"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "276:51",
+        "componentKey": "16b9f8ba6d1ac0069aea80e8ab6c3c8646a88e4e"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "icon",
+          "icon-close",
+          "removed-tag",
+          "removed-tag__text",
+          "visually-hidden"
+        ]
+      }
+    },
+    {
       "id": "component:product-card",
       "name": "Product card",
       "slug": "product-card",
@@ -2156,6 +2187,129 @@
           "recipe-macros__row",
           "recipe-macros__title",
           "recipe-macros__value"
+        ]
+      }
+    },
+    {
+      "id": "component:ingredient-swap",
+      "name": "Ingredient swap",
+      "slug": "ingredient-swap",
+      "kind": "component",
+      "contractPath": "./components/ingredient-swap.schema.json",
+      "keywords": [
+        "icon",
+        "ingredient",
+        "swap"
+      ],
+      "dependencies": [
+        "icon-chevron-down",
+        "icon-close"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "276:283",
+        "componentKey": "12163b5fc14ffe0f8efcc5b145c3ca040602af47"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "icon",
+          "icon-chevron-down",
+          "icon-close",
+          "ingredient-swap",
+          "ingredient-swap__arrow",
+          "ingredient-swap__card",
+          "ingredient-swap__name",
+          "ingredient-swap__reason",
+          "ingredient-swap__text",
+          "ingredient-swap__thumb",
+          "removed-tag",
+          "removed-tag__text",
+          "visually-hidden"
+        ]
+      }
+    },
+    {
+      "id": "component:origins-map",
+      "name": "Origins map",
+      "slug": "origins-map",
+      "kind": "component",
+      "contractPath": "./components/origins-map.schema.json",
+      "keywords": [
+        "map",
+        "origins"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "277:319",
+        "componentKey": "a4c73fb0767b10d28849de7c4d3800a8068c0432"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "origins-map",
+          "origins-map__country",
+          "origins-map__item",
+          "origins-map__list",
+          "origins-map__name",
+          "origins-map__seal",
+          "visually-hidden"
+        ]
+      }
+    },
+    {
+      "id": "component:stat-figure",
+      "name": "Stat figure",
+      "slug": "stat-figure",
+      "kind": "component",
+      "contractPath": "./components/stat-figure.schema.json",
+      "keywords": [
+        "figure",
+        "stat"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "277:325",
+        "componentKey": "009bce22fb545e891c10612cd2351f5efc57d8f2"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "stat-figure",
+          "stat-figure__label",
+          "stat-figure__value"
+        ]
+      }
+    },
+    {
+      "id": "component:pillar-item",
+      "name": "Pillar item",
+      "slug": "pillar-item",
+      "kind": "component",
+      "contractPath": "./components/pillar-item.schema.json",
+      "keywords": [
+        "item",
+        "pillar"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "277:332",
+        "componentKey": "fafb8d42cf90dfec23646d13eb76ae4e08624c14"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "pillar-item",
+          "pillar-item__number",
+          "pillar-item__text",
+          "pillar-item__title"
         ]
       }
     },
@@ -3485,10 +3639,186 @@
           "steps"
         ]
       }
+    },
+    {
+      "id": "pattern:natural-hero",
+      "name": "Natural hero",
+      "slug": "natural-hero",
+      "kind": "pattern",
+      "contractPath": "./components/natural-hero.schema.json",
+      "keywords": [
+        "hero",
+        "icon",
+        "natural"
+      ],
+      "dependencies": [
+        "badge",
+        "chip",
+        "icon-check"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "278:519",
+        "componentKey": "46b5d92b8dd250bcc7f3694ee9f1fde5fa5d8c10"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "badge",
+          "badge--neutral",
+          "chip",
+          "natural-hero",
+          "natural-hero__chips",
+          "natural-hero__content",
+          "natural-hero__grid",
+          "natural-hero__image",
+          "natural-hero__media",
+          "natural-hero__text",
+          "natural-hero__title",
+          "section",
+          "section__inner"
+        ]
+      }
+    },
+    {
+      "id": "pattern:natural-improvement",
+      "name": "Natural improvement",
+      "slug": "natural-improvement",
+      "kind": "pattern",
+      "contractPath": "./components/natural-improvement.schema.json",
+      "keywords": [
+        "icon",
+        "improvement",
+        "natural"
+      ],
+      "dependencies": [
+        "icon-chevron-down",
+        "icon-close",
+        "ingredient-swap",
+        "origins-map",
+        "removed-tag"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "279:725",
+        "componentKey": "790636ccafa5a96b2add3a2a1934d323fb972fe7"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "icon",
+          "icon-chevron-down",
+          "icon-close",
+          "ingredient-swap",
+          "ingredient-swap__arrow",
+          "ingredient-swap__card",
+          "ingredient-swap__name",
+          "ingredient-swap__reason",
+          "ingredient-swap__text",
+          "ingredient-swap__thumb",
+          "natural-improvement",
+          "natural-improvement__block",
+          "natural-improvement__head",
+          "natural-improvement__heading",
+          "natural-improvement__origins-text",
+          "natural-improvement__removed",
+          "natural-improvement__subtitle",
+          "natural-improvement__swaps",
+          "natural-improvement__title",
+          "origins-map",
+          "origins-map__country",
+          "origins-map__item",
+          "origins-map__list",
+          "origins-map__name",
+          "origins-map__seal",
+          "removed-tag",
+          "removed-tag__text",
+          "section",
+          "section__inner",
+          "visually-hidden"
+        ]
+      }
+    },
+    {
+      "id": "pattern:natural-stats",
+      "name": "Natural stats",
+      "slug": "natural-stats",
+      "kind": "pattern",
+      "contractPath": "./components/natural-stats.schema.json",
+      "keywords": [
+        "natural",
+        "stats"
+      ],
+      "dependencies": [
+        "stat-figure"
+      ],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "279:776",
+        "componentKey": "172f908a79c0231b82cde1494df00e28c5bbdda3"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "natural-stats",
+          "natural-stats__head",
+          "natural-stats__list",
+          "natural-stats__subtitle",
+          "natural-stats__title",
+          "section",
+          "section__inner",
+          "stat-figure",
+          "stat-figure__label",
+          "stat-figure__value"
+        ]
+      }
+    },
+    {
+      "id": "pattern:natural-pillars",
+      "name": "Natural pillars",
+      "slug": "natural-pillars",
+      "kind": "pattern",
+      "contractPath": "./components/natural-pillars.schema.json",
+      "keywords": [
+        "natural",
+        "pillars"
+      ],
+      "dependencies": [
+        "pillar-item"
+      ],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "279:844",
+        "componentKey": "b8058dcee4c38f1551f1c73451050a661f58ead8"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "natural-pillars",
+          "natural-pillars__content",
+          "natural-pillars__grid",
+          "natural-pillars__head",
+          "natural-pillars__image",
+          "natural-pillars__list",
+          "natural-pillars__media",
+          "natural-pillars__subtitle",
+          "natural-pillars__title",
+          "pillar-item",
+          "pillar-item__number",
+          "pillar-item__text",
+          "pillar-item__title",
+          "section",
+          "section__inner"
+        ]
+      }
     }
   ],
   "counts": {
-    "atoms": 79,
-    "patterns": 24
+    "atoms": 84,
+    "patterns": 28
   }
 }

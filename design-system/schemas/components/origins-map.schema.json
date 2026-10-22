@@ -1,0 +1,237 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:origins-map",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Origins map",
+    "slug": "origins-map",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T15:21:21Z",
+    "description": "Origins map: anillo de orígenes de ingredientes con sello central «100% NATURAL» (Natural improvement → «Ingredient origins»; wireframe UX 274:6354; clase CSS .origins-map). Sello en verde natural (surface/natural) con texto en blanco (on-natural). Seis nodos en píldora (ingrediente en negrita + país en secundario) colocados en círculo con posición calculada por ángulo; el anillo es una línea fina (border/subtle). Es el único componente con posición absoluta: un anillo no se puede expresar con auto-layout. Desktop 640 px y Mobile 327 px (mismo diagrama escalado). Accesibilidad: en código va como lista ul con los pares ingrediente/país. Cifras y orígenes de ejemplo ⬜ TODO envase.",
+    "figmaPage": "Content",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": false,
+    "anatomyHash": "152a230d88f6",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "152a230d88f6",
+      "variantsChecked": [
+        "Breakpoint=Desktop",
+        "Breakpoint=Mobile"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "seal",
+        "type": "string",
+        "default": "100% NATURAL",
+        "figma": "Seal#277:0"
+      },
+      {
+        "name": "origin1Ingredient",
+        "type": "string",
+        "default": "Wheat",
+        "figma": "Origin 1 ingredient#277:3"
+      },
+      {
+        "name": "origin1Country",
+        "type": "string",
+        "default": "Spain",
+        "figma": "Origin 1 country#277:6"
+      },
+      {
+        "name": "origin2Ingredient",
+        "type": "string",
+        "default": "Soy sauce",
+        "figma": "Origin 2 ingredient#277:9"
+      },
+      {
+        "name": "origin2Country",
+        "type": "string",
+        "default": "France",
+        "figma": "Origin 2 country#277:12"
+      },
+      {
+        "name": "origin3Ingredient",
+        "type": "string",
+        "default": "Sesame oil",
+        "figma": "Origin 3 ingredient#277:15"
+      },
+      {
+        "name": "origin3Country",
+        "type": "string",
+        "default": "China",
+        "figma": "Origin 3 country#277:18"
+      },
+      {
+        "name": "origin4Ingredient",
+        "type": "string",
+        "default": "Vegetables",
+        "figma": "Origin 4 ingredient#277:21"
+      },
+      {
+        "name": "origin4Country",
+        "type": "string",
+        "default": "Spain",
+        "figma": "Origin 4 country#277:24"
+      },
+      {
+        "name": "origin5Ingredient",
+        "type": "string",
+        "default": "Sunflower oil",
+        "figma": "Origin 5 ingredient#277:27"
+      },
+      {
+        "name": "origin5Country",
+        "type": "string",
+        "default": "Netherlands",
+        "figma": "Origin 5 country#277:30"
+      },
+      {
+        "name": "origin6Ingredient",
+        "type": "string",
+        "default": "Spices",
+        "figma": "Origin 6 ingredient#277:33"
+      },
+      {
+        "name": "origin6Country",
+        "type": "string",
+        "default": "Poland",
+        "figma": "Origin 6 country#277:36"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "color/border/subtle",
+      "color/surface/card",
+      "color/surface/natural",
+      "color/text/default",
+      "color/text/on-natural",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/h3",
+      "font/size/desktop/body-s",
+      "font/size/desktop/h3",
+      "font/style/body",
+      "font/style/display",
+      "radius/pill",
+      "space/16",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "origins-map",
+      "origins-map__country",
+      "origins-map__item",
+      "origins-map__list",
+      "origins-map__name",
+      "origins-map__seal",
+      "visually-hidden"
+    ],
+    "example": "<div data-ds=\"origins-map\" class=\"origins-map\"><p class=\"origins-map__seal\">100% natural</p><ul class=\"origins-map__list\" aria-label=\"Ingredient origins\"><li class=\"origins-map__item\"><span class=\"origins-map__name\">Wheat</span><span class=\"visually-hidden\"> from </span><span class=\"origins-map__country\">Spain</span></li><li class=\"origins-map__item\"><span class=\"origins-map__name\">Soy sauce</span><span class=\"visually-hidden\"> from </span><span class=\"origins-map__country\">France</span></li><li class=\"origins-map__item\"><span class=\"origins-map__name\">Sesame oil</span><span class=\"visually-hidden\"> from </span><span class=\"origins-map__country\">China</span></li><li class=\"origins-map__item\"><span class=\"origins-map__name\">Vegetables</span><span class=\"visually-hidden\"> from </span><span class=\"origins-map__country\">Spain</span></li><li class=\"origins-map__item\"><span class=\"origins-map__name\">Sunflower oil</span><span class=\"visually-hidden\"> from </span><span class=\"origins-map__country\">Netherlands</span></li><li class=\"origins-map__item\"><span class=\"origins-map__name\">Spices</span><span class=\"visually-hidden\"> from </span><span class=\"origins-map__country\">Poland</span></li></ul></div>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "277:319",
+    "componentKey": "a4c73fb0767b10d28849de7c4d3800a8068c0432",
+    "propertyNames": {
+      "seal": "Seal#277:0",
+      "origin1Ingredient": "Origin 1 ingredient#277:3",
+      "origin1Country": "Origin 1 country#277:6",
+      "origin2Ingredient": "Origin 2 ingredient#277:9",
+      "origin2Country": "Origin 2 country#277:12",
+      "origin3Ingredient": "Origin 3 ingredient#277:15",
+      "origin3Country": "Origin 3 country#277:18",
+      "origin4Ingredient": "Origin 4 ingredient#277:21",
+      "origin4Country": "Origin 4 country#277:24",
+      "origin5Ingredient": "Origin 5 ingredient#277:27",
+      "origin5Country": "Origin 5 country#277:30",
+      "origin6Ingredient": "Origin 6 ingredient#277:33",
+      "origin6Country": "Origin 6 country#277:36",
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [
+      "strokes: color/border/subtle",
+      "color: color/border/subtle",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: color/surface/natural",
+      "color: color/surface/natural",
+      "fills: color/text/on-natural",
+      "fontSize: font/size/desktop/h3",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: color/text/on-natural",
+      "paddingLeft: space/16",
+      "paddingTop: space/8",
+      "paddingRight: space/16",
+      "paddingBottom: space/8",
+      "fills: color/surface/card",
+      "color: color/surface/card",
+      "fills: color/text/default",
+      "color: color/text/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-s",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-s",
+      "color: color/text/secondary"
+    ],
+    "textStyles": [
+      "Desktop/h3",
+      "Desktop/body-s"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/origins-map.md",
+    "section": "Origins map"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

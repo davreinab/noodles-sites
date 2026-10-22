@@ -88,6 +88,11 @@
       "type": "uses"
     },
     {
+      "from": "removed-tag",
+      "to": "icon-close",
+      "type": "uses"
+    },
+    {
       "from": "product-card",
       "to": "badge",
       "type": "uses"
@@ -210,6 +215,16 @@
     {
       "from": "recipe-macros",
       "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "ingredient-swap",
+      "to": "icon-chevron-down",
+      "type": "uses"
+    },
+    {
+      "from": "ingredient-swap",
+      "to": "icon-close",
       "type": "uses"
     },
     {
@@ -821,9 +836,59 @@
       "from": "recipe-steps",
       "to": "step",
       "type": "uses"
+    },
+    {
+      "from": "natural-hero",
+      "to": "badge",
+      "type": "uses"
+    },
+    {
+      "from": "natural-hero",
+      "to": "chip",
+      "type": "uses"
+    },
+    {
+      "from": "natural-hero",
+      "to": "icon-check",
+      "type": "uses"
+    },
+    {
+      "from": "natural-improvement",
+      "to": "icon-chevron-down",
+      "type": "uses"
+    },
+    {
+      "from": "natural-improvement",
+      "to": "icon-close",
+      "type": "uses"
+    },
+    {
+      "from": "natural-improvement",
+      "to": "ingredient-swap",
+      "type": "uses"
+    },
+    {
+      "from": "natural-improvement",
+      "to": "origins-map",
+      "type": "uses"
+    },
+    {
+      "from": "natural-improvement",
+      "to": "removed-tag",
+      "type": "uses"
+    },
+    {
+      "from": "natural-stats",
+      "to": "stat-figure",
+      "type": "uses"
+    },
+    {
+      "from": "natural-pillars",
+      "to": "pillar-item",
+      "type": "uses"
     }
   ],
-  "lastSync": "2026-10-22T14:07:02Z",
+  "lastSync": "2026-10-22T15:21:21Z",
   "usedBy": {
     "decoration-noodle": [
       "decoration-noodle-texture",
@@ -856,11 +921,14 @@
     "icon-close": [
       "icon-button",
       "search-field",
+      "removed-tag",
+      "ingredient-swap",
       "modal",
       "alert",
       "mobile-menu",
       "library",
-      "library-head"
+      "library-head",
+      "natural-improvement"
     ],
     "icon-circle-alert": [
       "input",
@@ -869,7 +937,9 @@
       "recipe-submit"
     ],
     "icon-chevron-down": [
-      "select"
+      "select",
+      "ingredient-swap",
+      "natural-improvement"
     ],
     "icon-check": [
       "checkbox",
@@ -880,7 +950,8 @@
       "product-filter",
       "library-head",
       "product-hero",
-      "recipe-hero"
+      "recipe-hero",
+      "natural-hero"
     ],
     "icon-search": [
       "search-field",
@@ -912,7 +983,8 @@
       "product-categories",
       "library-hero",
       "product-line",
-      "product-hero"
+      "product-hero",
+      "natural-hero"
     ],
     "link": [
       "product-card",
@@ -931,7 +1003,8 @@
       "product-filter",
       "library-head",
       "product-hero",
-      "recipe-hero"
+      "recipe-hero",
+      "natural-hero"
     ],
     "icon-timer": [
       "recipe-card",
@@ -1103,6 +1176,21 @@
     ],
     "recipe-macros": [
       "recipe-ingredients"
+    ],
+    "ingredient-swap": [
+      "natural-improvement"
+    ],
+    "origins-map": [
+      "natural-improvement"
+    ],
+    "removed-tag": [
+      "natural-improvement"
+    ],
+    "stat-figure": [
+      "natural-stats"
+    ],
+    "pillar-item": [
+      "natural-pillars"
     ]
   }
 }

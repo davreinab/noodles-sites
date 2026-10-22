@@ -1,0 +1,450 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:natural-improvement",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Natural improvement",
+    "slug": "natural-improvement",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-22T15:21:21Z",
+    "description": "Natural improvement: sección de mejoras de la fórmula natural (página Natural formula; wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-improvement). Fondo crema (surface/page) con textos en tinta (text/default). Título «That's what we call an improvement» y subtítulo; tres bloques con h3: «Replaced ingredients» (4 instancias de Ingredient swap: 4 columnas en desktop y 1 en móvil), «We also removed» (fila de Removed tag) e «Ingredient origins» (texto y Origins map). Props: Title, Subtitle, Replaced title, Removed title, Origins title, Origins text. Ingredientes, motivos y orígenes de ejemplo ⬜ TODO envase (business-rules).",
+    "figmaPage": "Pattern / Detail pages",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "anatomyHash": "6130344c3d46",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "6130344c3d46",
+      "variantsChecked": [
+        "Breakpoint=Desktop",
+        "Breakpoint=Mobile"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "default": "That's what we call an improvement",
+        "figma": "Title#279:0"
+      },
+      {
+        "name": "subtitle",
+        "type": "string",
+        "default": "Every ingredient we removed has a natural replacement with a clear reason behind it.",
+        "figma": "Subtitle#279:3"
+      },
+      {
+        "name": "replacedTitle",
+        "type": "string",
+        "default": "Replaced ingredients",
+        "figma": "Replaced title#279:6"
+      },
+      {
+        "name": "removedTitle",
+        "type": "string",
+        "default": "We also removed",
+        "figma": "Removed title#279:9"
+      },
+      {
+        "name": "originsTitle",
+        "type": "string",
+        "default": "Ingredient origins",
+        "figma": "Origins title#279:12"
+      },
+      {
+        "name": "originsText",
+        "type": "string",
+        "default": "The new formula improves the nutritional profile across the board, without adding a single minute to prep time.",
+        "figma": "Origins text#279:15"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": [
+        "icon",
+        "arrow",
+        "icon",
+        "arrow",
+        "icon",
+        "arrow",
+        "icon",
+        "arrow",
+        "icon",
+        "icon",
+        "icon",
+        "icon"
+      ]
+    },
+    "tokens": [
+      "color/border/subtle",
+      "color/surface/card",
+      "color/surface/natural",
+      "color/surface/page",
+      "color/text/default",
+      "color/text/natural",
+      "color/text/on-natural",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/h3",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
+      "font/size/desktop/body-s",
+      "font/size/desktop/h2",
+      "font/size/desktop/h3",
+      "font/style/body",
+      "font/style/display",
+      "icon/color/default",
+      "icon/size/md",
+      "radius/md",
+      "radius/pill",
+      "radius/sm",
+      "space/16",
+      "space/24",
+      "space/64",
+      "space/8",
+      "space/96"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "icon",
+      "icon-chevron-down",
+      "icon-close",
+      "ingredient-swap",
+      "ingredient-swap__arrow",
+      "ingredient-swap__card",
+      "ingredient-swap__name",
+      "ingredient-swap__reason",
+      "ingredient-swap__text",
+      "ingredient-swap__thumb",
+      "natural-improvement",
+      "natural-improvement__block",
+      "natural-improvement__head",
+      "natural-improvement__heading",
+      "natural-improvement__origins-text",
+      "natural-improvement__removed",
+      "natural-improvement__subtitle",
+      "natural-improvement__swaps",
+      "natural-improvement__title",
+      "origins-map",
+      "origins-map__country",
+      "origins-map__item",
+      "origins-map__list",
+      "origins-map__name",
+      "origins-map__seal",
+      "removed-tag",
+      "removed-tag__text",
+      "section",
+      "section__inner",
+      "visually-hidden"
+    ],
+    "example": "<section data-ds=\"natural-improvement\" class=\"section natural-improvement\" aria-labelledby=\"ni-title\"><div class=\"section__inner\"><div class=\"natural-improvement__head\"><h2 class=\"natural-improvement__title\" id=\"ni-title\">That's what we call an improvement</h2><p class=\"natural-improvement__subtitle\">Every ingredient we removed has a natural replacement with a clear reason behind it.</p></div><div class=\"natural-improvement__block\"><h3 class=\"natural-improvement__heading\" id=\"ni-swaps\">Replaced ingredients</h3><ul class=\"natural-improvement__swaps\" aria-labelledby=\"ni-swaps\"><li class=\"ingredient-swap\"><span class=\"removed-tag\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span><span class=\"visually-hidden\">Removed:</span><s class=\"removed-tag__text\">Palm oil</s></span><span class=\"icon icon-chevron-down ingredient-swap__arrow\" aria-hidden=\"true\"></span><div class=\"ingredient-swap__card\"><div class=\"ingredient-swap__text\"><p class=\"ingredient-swap__name\">Sunflower oil</p><p class=\"ingredient-swap__reason\">Cold-pressed, no tropical deforestation footprint.</p></div><img class=\"ingredient-swap__thumb\" src=\"../assets/images/placeholder.svg\" alt=\"\"></div></li></ul></div><div class=\"natural-improvement__block\"><h3 class=\"natural-improvement__heading\" id=\"ni-removed\">We also removed</h3><ul class=\"natural-improvement__removed\" aria-labelledby=\"ni-removed\"><li><span class=\"removed-tag\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span><span class=\"visually-hidden\">Removed:</span><s class=\"removed-tag__text\">Preservatives</s></span></li></ul></div><div class=\"natural-improvement__block\"><h3 class=\"natural-improvement__heading\" id=\"ni-origins\">Ingredient origins</h3><p class=\"natural-improvement__origins-text\">The new formula improves the nutritional profile across the board, without adding a single minute to prep time.</p><div data-ds=\"origins-map\" class=\"origins-map\"><p class=\"origins-map__seal\">100% natural</p><ul class=\"origins-map__list\" aria-label=\"Ingredient origins\"><li class=\"origins-map__item\"><span class=\"origins-map__name\">Wheat</span><span class=\"visually-hidden\"> from </span><span class=\"origins-map__country\">Spain</span></li></ul></div></div></div></section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "279:725",
+    "componentKey": "790636ccafa5a96b2add3a2a1934d323fb972fe7",
+    "propertyNames": {
+      "title": "Title#279:0",
+      "subtitle": "Subtitle#279:3",
+      "replacedTitle": "Replaced title#279:6",
+      "removedTitle": "Removed title#279:9",
+      "originsTitle": "Origins title#279:12",
+      "originsText": "Origins text#279:15",
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "ingredient-swap",
+        "component": "Ingredient swap",
+        "componentSlug": "ingredient-swap",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "arrow",
+        "component": "Icon / chevron-down",
+        "componentSlug": "icon-chevron-down",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "ingredient-swap",
+        "component": "Ingredient swap",
+        "componentSlug": "ingredient-swap",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "arrow",
+        "component": "Icon / chevron-down",
+        "componentSlug": "icon-chevron-down",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "ingredient-swap",
+        "component": "Ingredient swap",
+        "componentSlug": "ingredient-swap",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "arrow",
+        "component": "Icon / chevron-down",
+        "componentSlug": "icon-chevron-down",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "ingredient-swap",
+        "component": "Ingredient swap",
+        "componentSlug": "ingredient-swap",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "arrow",
+        "component": "Icon / chevron-down",
+        "componentSlug": "icon-chevron-down",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "removed-tag",
+        "component": "Removed tag",
+        "componentSlug": "removed-tag",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "removed-tag",
+        "component": "Removed tag",
+        "componentSlug": "removed-tag",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "removed-tag",
+        "component": "Removed tag",
+        "componentSlug": "removed-tag",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "removed-tag",
+        "component": "Removed tag",
+        "componentSlug": "removed-tag",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "origins-map",
+        "component": "Breakpoint=Desktop",
+        "componentSlug": "origins-map",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/64",
+      "paddingLeft: space/64",
+      "paddingTop: space/96",
+      "paddingRight: space/64",
+      "paddingBottom: space/96",
+      "fills: color/surface/page",
+      "color: color/surface/page",
+      "itemSpacing: space/16",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h2",
+      "color: color/text/default",
+      "fontSize: font/size/desktop/body-l",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-l",
+      "itemSpacing: space/24",
+      "fontSize: font/size/desktop/h3",
+      "lineHeight: font/line-height/desktop/h3",
+      "itemSpacing: space/8",
+      "paddingLeft: space/16",
+      "paddingTop: space/8",
+      "paddingRight: space/16",
+      "paddingBottom: space/8",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "fills: color/surface/card",
+      "strokes: color/border/subtle",
+      "color: color/surface/card",
+      "color: color/border/subtle",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-s",
+      "lineHeight: font/line-height/desktop/body-s",
+      "color: color/text/secondary",
+      "strokes: icon/color/default",
+      "color: icon/color/default",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "paddingTop: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokes: color/surface/natural",
+      "color: color/surface/natural",
+      "fills: color/text/natural",
+      "color: color/text/natural",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "fontSize: font/size/desktop/body-m",
+      "lineHeight: font/line-height/desktop/body-m",
+      "fills: color/surface/natural",
+      "fills: color/text/on-natural",
+      "color: color/text/on-natural"
+    ],
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-l",
+      "Desktop/h3",
+      "Desktop/body-s",
+      "Desktop/body-m"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/natural-improvement.md",
+    "section": "Natural improvement"
+  },
+  "relations": {
+    "uses": [
+      "icon-chevron-down",
+      "icon-close",
+      "ingredient-swap",
+      "origins-map",
+      "removed-tag"
+    ],
+    "related": []
+  }
+}

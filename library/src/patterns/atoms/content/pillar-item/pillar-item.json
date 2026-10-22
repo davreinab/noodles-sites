@@ -1,0 +1,157 @@
+{
+  "title": "Pillar item",
+  "description": "Pillar item: pilar de «Taste you can trust» con número en círculo verde natural (surface/natural, número en on-natural, blanco ~5.5:1 sobre el verde) y texto a la derecha: título…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "pillar-item",
+      "name": "Pillar item",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "277:332",
+      "current": {
+        "description": "Pillar item: pilar de «Taste you can trust» con número en círculo verde natural (surface/natural, número en on-natural, blanco ~5.5:1 sobre el verde) y texto a la derecha: título en negrita (Archivo Bold 18/24, sin estilo de texto) y cuerpo en Desktop/body-m. Se usa en lista ordenada de cuatro (Natural pillars; clase CSS .pillar-item; wireframe UX 274:6354). Props: Number, Title, Text. Textos de ejemplo ⬜ TODO envase.",
+        "Propósito": "Un pilar de «Taste you can trust»: número en círculo verde natural, título en negrita y texto explicativo.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Es un `li` de una lista ordenada: el orden de los pilares lo da el `ol`. El número visible va con `aria-hidden` para no repetir lo que la lista ya dice. El título y el texto se leen en ese orden. Contrastes: número en crema sobre verde natural (5,5:1); texto gris cálido sobre blanco (5,4:1). No es interactivo.",
+        "Cuándo usar / qué NO hace": "En Natural pillars, para una lista de cuatro razones numeradas. No sirve para pasos de preparación (eso es Step) ni para más de cuatro pilares sin revisar el diseño. Los textos de los pilares son ⬜ TODO envase y de ejemplo: deben validarse con el claim «Taste you can trust» antes de publicar."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "277:332",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=277-332",
+      "page": "Content",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-22 · 15:21 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Pillar item: pilar de «Taste you can trust» con número en círculo verde natural (surface/natural, número en on-natural, blanco ~5.5:1 sobre el verde) y texto a la derecha: título en negrita (Archivo Bold 18/24, sin estilo de texto) y cuerpo en Desktop/body-m. Se usa en lista ordenada de cuatro (Natural pillars; clase CSS .pillar-item; wireframe UX 274:6354). Props: Number, Title, Text. Textos de ejemplo ⬜ TODO envase."
+    ],
+    "props": [
+      {
+        "name": "number",
+        "type": "string",
+        "values": [],
+        "default": "1",
+        "figma": "Number#277:77"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "values": [],
+        "default": "Better noodles start with better production",
+        "figma": "Title#277:78"
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "values": [],
+        "default": "CO2-neutral production commitments and factory-level sourcing standards.",
+        "figma": "Text#277:79"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/surface/natural",
+          "color/text/default",
+          "color/text/on-natural"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-m",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 14,
+    "textStyles": [
+      "Desktop/label",
+      "Desktop/body-m"
+    ],
+    "classes": [
+      "pillar-item",
+      "pillar-item__number",
+      "pillar-item__text",
+      "pillar-item__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Un pilar de «Taste you can trust»: número en círculo verde natural, título en negrita y texto explicativo.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Es un `li` de una lista ordenada: el orden de los pilares lo da el `ol`. El número visible va con `aria-hidden` para no repetir lo que la lista ya dice. El título y el texto se leen en ese orden. Contrastes: número en crema sobre verde natural (5,5:1); texto gris cálido sobre blanco (5,4:1). No es interactivo.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En Natural pillars, para una lista de cuatro razones numeradas. No sirve para pasos de preparación (eso es Step) ni para más de cuatro pilares sin revisar el diseño. Los textos de los pilares son ⬜ TODO envase y de ejemplo: deben validarse con el claim «Taste you can trust» antes de publicar.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "pillar-item",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "277:332",
+    "contract": "../../../../../../design-system/schemas/components/pillar-item.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

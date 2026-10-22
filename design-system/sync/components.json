@@ -3893,10 +3893,142 @@
             }
           },
           "autoLayout": true
+        },
+        {
+          "page": "Tags & chips",
+          "name": "Removed tag",
+          "type": "COMPONENT",
+          "id": "276:51",
+          "key": "16b9f8ba6d1ac0069aea80e8ab6c3c8646a88e4e",
+          "published": null,
+          "description": "Removed tag: píldora de ingrediente retirado de la fórmula natural (Natural formula, wireframe UX 274:6354; clase CSS .removed-tag). Icono x (close) a la izquierda y texto tachado en color/text/secondary; el texto oculto «removed:» va delante para lectores de pantalla, porque el tachado por sí solo no comunica el estado. Se usa en «We also removed» (Natural improvement) y dentro de Ingredient swap. Label: nombre del ingrediente retirado, p. ej. «Preservatives» (ejemplo ⬜ TODO envase).",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [
+            {
+              "name": "Label#276:0",
+              "kind": "TEXT",
+              "default": "Preservatives"
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/8",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: color/surface/card",
+              "strokes: color/border/subtle",
+              "color: color/surface/card",
+              "color: color/border/subtle",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/body-s",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-s",
+              "color: color/text/secondary",
+              "strokes: icon/color/default",
+              "color: icon/color/default"
+            ],
+            "textStyles": [
+              "Desktop/body-s"
+            ],
+            "variableKeys": {
+              "space/8": {
+                "key": "a522eed3f8fb0579196e315e33e1ce9ca4795718",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/16": {
+                "key": "7f80708f74de63e48149957e338bdea2eca26adb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "radius/pill": {
+                "key": "12b235796cc9f8fb56cc69420482be95350b287a",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/card": {
+                "key": "0e7b16ec7006a96dcf0ea60237881ba05db243d0",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/border/subtle": {
+                "key": "c341f571ca0c08673ee7729f4d239af5bb008cf9",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/text/secondary": {
+                "key": "c91ea8a60137b60e040a7c72d72fde32170e2726",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/body-s": {
+                "key": "4b712381715f46620eae332bbc6a12973409cb95",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/body": {
+                "key": "526ac3ab5e53de36b3bc915dd568b7c4171fc46b",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/body": {
+                "key": "2e36d04ea2fd1115d1b93c870146a232a3381a48",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-s": {
+                "key": "7cbc2ec1504d06f6d76d843af678ff0ae1c4acef",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "icon/color/default": {
+                "key": "f254d6ca95ffb5598cfdf521ecc9f96852587ad1",
+                "remote": false,
+                "collectionKey": "a66e68ecd6ef4d4034729b8f89465dfa0baa6433",
+                "collectionName": "Components"
+              }
+            },
+            "styleKeys": {
+              "Desktop/body-s": {
+                "key": "3a0d37f49f37bcdc29b4889a76b5876a839ec009",
+                "remote": false,
+                "type": "text"
+              }
+            }
+          },
+          "autoLayout": true
         }
       ],
-      "total": 2,
-      "read": 2
+      "total": 3,
+      "read": 3
     },
     {
       "name": "Cards",
@@ -9032,10 +9164,763 @@
             }
           },
           "autoLayout": true
+        },
+        {
+          "page": "Content",
+          "name": "Ingredient swap",
+          "type": "COMPONENT",
+          "id": "276:283",
+          "key": "12163b5fc14ffe0f8efcc5b145c3ca040602af47",
+          "published": null,
+          "description": "Ingredient swap: ingrediente retirado y su sustituto (Natural improvement → «Replaced ingredients»; wireframe UX 274:6354; clase CSS .ingredient-swap). Arriba la píldora tachada (Removed, mismo estilo que Removed tag, con «removed:» oculto), flecha chevron-down y debajo la tarjeta del sustituto: nombre en negrita en verde natural (text/natural, Archivo Bold 18/24, sin estilo de texto), motivo en Desktop/body-s y miniatura de 56 px (placeholder). Tarjeta: fondo blanco (surface/card) y borde verde natural (surface/natural); no hay variable opaca de superficie natural clara, así que no se usa verde claro. Props: Removed, Name, Reason. Ejemplos de ingredientes y motivos ⬜ TODO envase.",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [
+            {
+              "name": "Removed#276:1",
+              "kind": "TEXT",
+              "default": "Palm oil"
+            },
+            {
+              "name": "Name#276:2",
+              "kind": "TEXT",
+              "default": "Sunflower oil"
+            },
+            {
+              "name": "Reason#276:3",
+              "kind": "TEXT",
+              "default": "Cold-pressed, no tropical deforestation footprint."
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "icon",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "arrow",
+              "component": "Icon / chevron-down",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/16",
+              "itemSpacing: space/8",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: color/surface/card",
+              "strokes: color/border/subtle",
+              "color: color/surface/card",
+              "color: color/border/subtle",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/body-s",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-s",
+              "color: color/text/secondary",
+              "strokes: icon/color/default",
+              "color: icon/color/default",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "paddingTop: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokes: color/surface/natural",
+              "color: color/surface/natural",
+              "fills: color/text/natural",
+              "color: color/text/natural",
+              "fills: color/text/default",
+              "color: color/text/default",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "fills: color/surface/page",
+              "color: color/surface/page"
+            ],
+            "textStyles": [
+              "Desktop/body-s"
+            ],
+            "variableKeys": {
+              "space/16": {
+                "key": "7f80708f74de63e48149957e338bdea2eca26adb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/8": {
+                "key": "a522eed3f8fb0579196e315e33e1ce9ca4795718",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "radius/pill": {
+                "key": "12b235796cc9f8fb56cc69420482be95350b287a",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/card": {
+                "key": "0e7b16ec7006a96dcf0ea60237881ba05db243d0",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/border/subtle": {
+                "key": "c341f571ca0c08673ee7729f4d239af5bb008cf9",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/text/secondary": {
+                "key": "c91ea8a60137b60e040a7c72d72fde32170e2726",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/body-s": {
+                "key": "4b712381715f46620eae332bbc6a12973409cb95",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/body": {
+                "key": "526ac3ab5e53de36b3bc915dd568b7c4171fc46b",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/body": {
+                "key": "2e36d04ea2fd1115d1b93c870146a232a3381a48",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-s": {
+                "key": "7cbc2ec1504d06f6d76d843af678ff0ae1c4acef",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "icon/color/default": {
+                "key": "f254d6ca95ffb5598cfdf521ecc9f96852587ad1",
+                "remote": false,
+                "collectionKey": "a66e68ecd6ef4d4034729b8f89465dfa0baa6433",
+                "collectionName": "Components"
+              },
+              "icon/size/md": {
+                "key": "14991531415270440237c10a21689bdcc6fa02c8",
+                "remote": false,
+                "collectionKey": "a66e68ecd6ef4d4034729b8f89465dfa0baa6433",
+                "collectionName": "Components"
+              },
+              "radius/md": {
+                "key": "dd84512986524c40e4583a9045a43543cdbd30bb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/natural": {
+                "key": "7affea7c83578c8f6d2e0d713b43691c18ac055a",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/text/natural": {
+                "key": "53c3a0a3cddc88fca74765b97f80b8bd5d4b273c",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/text/default": {
+                "key": "a8f82fbbe73e6b70668de790dfa26591c4b8eaf1",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "radius/sm": {
+                "key": "acb0607507b899a317fcd9a3896259295fc8d3bc",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/page": {
+                "key": "6c72e1cd4f29b1cef2aaaf74940b96c674dc2654",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              }
+            },
+            "styleKeys": {
+              "Desktop/body-s": {
+                "key": "3a0d37f49f37bcdc29b4889a76b5876a839ec009",
+                "remote": false,
+                "type": "text"
+              }
+            }
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Content",
+          "name": "Origins map",
+          "type": "COMPONENT_SET",
+          "id": "277:319",
+          "key": "a4c73fb0767b10d28849de7c4d3800a8068c0432",
+          "published": null,
+          "description": "Origins map: anillo de orígenes de ingredientes con sello central «100% NATURAL» (Natural improvement → «Ingredient origins»; wireframe UX 274:6354; clase CSS .origins-map). Sello en verde natural (surface/natural) con texto en blanco (on-natural). Seis nodos en píldora (ingrediente en negrita + país en secundario) colocados en círculo con posición calculada por ángulo; el anillo es una línea fina (border/subtle). Es el único componente con posición absoluta: un anillo no se puede expresar con auto-layout. Desktop 640 px y Mobile 327 px (mismo diagrama escalado). Accesibilidad: en código va como lista ul con los pares ingrediente/país. Cifras y orígenes de ejemplo ⬜ TODO envase.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Seal#277:0",
+              "kind": "TEXT",
+              "default": "100% NATURAL"
+            },
+            {
+              "name": "Origin 1 ingredient#277:3",
+              "kind": "TEXT",
+              "default": "Wheat"
+            },
+            {
+              "name": "Origin 1 country#277:6",
+              "kind": "TEXT",
+              "default": "Spain"
+            },
+            {
+              "name": "Origin 2 ingredient#277:9",
+              "kind": "TEXT",
+              "default": "Soy sauce"
+            },
+            {
+              "name": "Origin 2 country#277:12",
+              "kind": "TEXT",
+              "default": "France"
+            },
+            {
+              "name": "Origin 3 ingredient#277:15",
+              "kind": "TEXT",
+              "default": "Sesame oil"
+            },
+            {
+              "name": "Origin 3 country#277:18",
+              "kind": "TEXT",
+              "default": "China"
+            },
+            {
+              "name": "Origin 4 ingredient#277:21",
+              "kind": "TEXT",
+              "default": "Vegetables"
+            },
+            {
+              "name": "Origin 4 country#277:24",
+              "kind": "TEXT",
+              "default": "Spain"
+            },
+            {
+              "name": "Origin 5 ingredient#277:27",
+              "kind": "TEXT",
+              "default": "Sunflower oil"
+            },
+            {
+              "name": "Origin 5 country#277:30",
+              "kind": "TEXT",
+              "default": "Netherlands"
+            },
+            {
+              "name": "Origin 6 ingredient#277:33",
+              "kind": "TEXT",
+              "default": "Spices"
+            },
+            {
+              "name": "Origin 6 country#277:36",
+              "kind": "TEXT",
+              "default": "Poland"
+            },
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "strokes: color/border/subtle",
+              "color: color/border/subtle",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: color/surface/natural",
+              "color: color/surface/natural",
+              "fills: color/text/on-natural",
+              "fontSize: font/size/desktop/h3",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h3",
+              "color: color/text/on-natural",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "fills: color/surface/card",
+              "color: color/surface/card",
+              "fills: color/text/default",
+              "color: color/text/default",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/body-s",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-s",
+              "color: color/text/secondary"
+            ],
+            "textStyles": [
+              "Desktop/h3",
+              "Desktop/body-s"
+            ],
+            "variableKeys": {
+              "color/border/subtle": {
+                "key": "c341f571ca0c08673ee7729f4d239af5bb008cf9",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "radius/pill": {
+                "key": "12b235796cc9f8fb56cc69420482be95350b287a",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/natural": {
+                "key": "7affea7c83578c8f6d2e0d713b43691c18ac055a",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/text/on-natural": {
+                "key": "69ec62314b50045d0c68bc3b1d9fdf0906b11476",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/h3": {
+                "key": "6a86d8860c7625b02623cf661c4fc2b62b8a72d8",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/display": {
+                "key": "b0915717f8b7d4e81111392a7f21a747933f0d60",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/display": {
+                "key": "ff74fc0b46b208932a2fd830641816bdac673a36",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/h3": {
+                "key": "ac020ed1deeb440ee78adff3ab618ab82f6c4275",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "space/16": {
+                "key": "7f80708f74de63e48149957e338bdea2eca26adb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/8": {
+                "key": "a522eed3f8fb0579196e315e33e1ce9ca4795718",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/card": {
+                "key": "0e7b16ec7006a96dcf0ea60237881ba05db243d0",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/text/default": {
+                "key": "a8f82fbbe73e6b70668de790dfa26591c4b8eaf1",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/text/secondary": {
+                "key": "c91ea8a60137b60e040a7c72d72fde32170e2726",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/body-s": {
+                "key": "4b712381715f46620eae332bbc6a12973409cb95",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/body": {
+                "key": "526ac3ab5e53de36b3bc915dd568b7c4171fc46b",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/body": {
+                "key": "2e36d04ea2fd1115d1b93c870146a232a3381a48",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-s": {
+                "key": "7cbc2ec1504d06f6d76d843af678ff0ae1c4acef",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              }
+            },
+            "styleKeys": {
+              "Desktop/h3": {
+                "key": "efef830a4e380f5c2f54097efcc8b001abd24500",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/body-s": {
+                "key": "3a0d37f49f37bcdc29b4889a76b5876a839ec009",
+                "remote": false,
+                "type": "text"
+              }
+            }
+          },
+          "autoLayout": false
+        },
+        {
+          "page": "Content",
+          "name": "Stat figure",
+          "type": "COMPONENT",
+          "id": "277:325",
+          "key": "009bce22fb545e891c10612cd2351f5efc57d8f2",
+          "published": null,
+          "description": "Stat figure: cifra destacada con marcador tipo <mark> (clase CSS .stat-figure; wireframe UX 274:6354, módulo Natural stats). Cifra en Desktop/h2 (Anton) sobre bloque amarillo de marca (surface/brand) con texto en tinta (text/default, contraste ~12:1); el marcador lleva relleno de space/2 vertical y space/8 horizontal (la landing usa 2px 10px; 10 px no existe como variable, se usa space/8). Etiqueta en Desktop/body-s en text/on-inverse sobre el fondo tinta del patrón. Cifras de ejemplo ⬜ TODO envase (-45%, +5g, +20g, 100%). Props: Figure, Label.",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [
+            {
+              "name": "Figure#277:75",
+              "kind": "TEXT",
+              "default": "-45%"
+            },
+            {
+              "name": "Label#277:76",
+              "kind": "TEXT",
+              "default": "Less processed ingredients"
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/8",
+              "paddingLeft: space/8",
+              "paddingTop: space/2",
+              "paddingRight: space/8",
+              "paddingBottom: space/2",
+              "fills: color/surface/brand",
+              "color: color/surface/brand",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/default",
+              "fills: color/text/on-inverse",
+              "fontSize: font/size/desktop/body-s",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-s",
+              "color: color/text/on-inverse"
+            ],
+            "textStyles": [
+              "Desktop/body-s"
+            ],
+            "variableKeys": {
+              "space/8": {
+                "key": "a522eed3f8fb0579196e315e33e1ce9ca4795718",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/2": {
+                "key": "43da6e8533eba5f34c7cfc80d5b8243b5b4f11bb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/brand": {
+                "key": "c5d65ef249c8949366048de419ded94e195e2422",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/text/default": {
+                "key": "a8f82fbbe73e6b70668de790dfa26591c4b8eaf1",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/h2": {
+                "key": "fa1d20b9d02814a55da9b7c07061f62da4b7f2e8",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/display": {
+                "key": "b0915717f8b7d4e81111392a7f21a747933f0d60",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/display": {
+                "key": "ff74fc0b46b208932a2fd830641816bdac673a36",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/h2": {
+                "key": "fc81585f582d5d92c9b27cb6f0cd220b46fa5c21",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "color/text/on-inverse": {
+                "key": "9d6c9bf06d3d8c2d4ec09fd65bdcfe6a3cefebe6",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/body-s": {
+                "key": "4b712381715f46620eae332bbc6a12973409cb95",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/body": {
+                "key": "526ac3ab5e53de36b3bc915dd568b7c4171fc46b",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/body": {
+                "key": "2e36d04ea2fd1115d1b93c870146a232a3381a48",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-s": {
+                "key": "7cbc2ec1504d06f6d76d843af678ff0ae1c4acef",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              }
+            },
+            "styleKeys": {
+              "Desktop/body-s": {
+                "key": "3a0d37f49f37bcdc29b4889a76b5876a839ec009",
+                "remote": false,
+                "type": "text"
+              }
+            }
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Content",
+          "name": "Pillar item",
+          "type": "COMPONENT",
+          "id": "277:332",
+          "key": "fafb8d42cf90dfec23646d13eb76ae4e08624c14",
+          "published": null,
+          "description": "Pillar item: pilar de «Taste you can trust» con número en círculo verde natural (surface/natural, número en on-natural, blanco ~5.5:1 sobre el verde) y texto a la derecha: título en negrita (Archivo Bold 18/24, sin estilo de texto) y cuerpo en Desktop/body-m. Se usa en lista ordenada de cuatro (Natural pillars; clase CSS .pillar-item; wireframe UX 274:6354). Props: Number, Title, Text. Textos de ejemplo ⬜ TODO envase.",
+          "variantAxes": {},
+          "variantCount": 1,
+          "properties": [
+            {
+              "name": "Number#277:77",
+              "kind": "TEXT",
+              "default": "1"
+            },
+            {
+              "name": "Title#277:78",
+              "kind": "TEXT",
+              "default": "Better noodles start with better production"
+            },
+            {
+              "name": "Text#277:79",
+              "kind": "TEXT",
+              "default": "CO2-neutral production commitments and factory-level sourcing standards."
+            }
+          ],
+          "nestedInstances": [],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/16",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: color/surface/natural",
+              "color: color/surface/natural",
+              "fills: color/text/on-natural",
+              "fontSize: font/size/desktop/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/label",
+              "color: color/text/on-natural",
+              "itemSpacing: space/8",
+              "fills: color/text/default",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/body-m",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-m"
+            ],
+            "textStyles": [
+              "Desktop/label",
+              "Desktop/body-m"
+            ],
+            "variableKeys": {
+              "space/16": {
+                "key": "7f80708f74de63e48149957e338bdea2eca26adb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "radius/pill": {
+                "key": "12b235796cc9f8fb56cc69420482be95350b287a",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/natural": {
+                "key": "7affea7c83578c8f6d2e0d713b43691c18ac055a",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/text/on-natural": {
+                "key": "69ec62314b50045d0c68bc3b1d9fdf0906b11476",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/label": {
+                "key": "0fc01c8752d1ad4af63647f1e15c95159ed5f14d",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/display": {
+                "key": "b0915717f8b7d4e81111392a7f21a747933f0d60",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/display": {
+                "key": "ff74fc0b46b208932a2fd830641816bdac673a36",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/label": {
+                "key": "4ed3ebd43d5785b52b95089651d9a11c464642da",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "space/8": {
+                "key": "a522eed3f8fb0579196e315e33e1ce9ca4795718",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/text/default": {
+                "key": "a8f82fbbe73e6b70668de790dfa26591c4b8eaf1",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/body-m": {
+                "key": "55c366b833c3b224cc75f772329a684077780080",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/body": {
+                "key": "526ac3ab5e53de36b3bc915dd568b7c4171fc46b",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/body": {
+                "key": "2e36d04ea2fd1115d1b93c870146a232a3381a48",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-m": {
+                "key": "169cae9a2b9c0368ac98175aceb6b8be9654a0c0",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              }
+            },
+            "styleKeys": {
+              "Desktop/label": {
+                "key": "57f52c9af8097bf904cacb7b8a4304ce53dce650",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/body-m": {
+                "key": "cc7373a7cdd1cf85590d1b562e192aabd2dd0fcc",
+                "remote": false,
+                "type": "text"
+              }
+            }
+          },
+          "autoLayout": true
         }
       ],
-      "total": 15,
-      "read": 15
+      "total": 19,
+      "read": 19
     },
     {
       "name": "Feedback & overlays",
@@ -19574,14 +20459,1461 @@
             }
           },
           "autoLayout": true
+        },
+        {
+          "page": "Pattern / Detail pages",
+          "name": "Natural hero",
+          "type": "COMPONENT_SET",
+          "id": "278:519",
+          "key": "46b5d92b8dd250bcc7f3694ee9f1fde5fa5d8c10",
+          "published": null,
+          "description": "Natural hero: cabecera de la página Natural formula (wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-hero). Fondo verde natural (surface/natural) con textos en blanco (text/on-natural; blanco sobre verde ~5.5:1, AA). Badge Neutral «New improved formula» (tinta sobre verde; la variante Natural desaparecería sobre el fondo verde). Claim h1 (Title), entradilla (Lead), fila de Chip M (Ready in 3', Real flavour, Full ingredient transparency) e imagen a la derecha (placeholder de packshot e ingredientes). Desktop: texto a la izquierda y 560×480 a la derecha. Mobile: texto arriba e imagen debajo a ancho completo. Props: Title, Lead; el resto son instancias editables. El claim es el de la SPEC ⬜ TODO: validar con el envase.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Title#278:0",
+              "kind": "TEXT",
+              "default": "100% natural. We cut the bullsh*t."
+            },
+            {
+              "name": "Lead#278:3",
+              "kind": "TEXT",
+              "default": "We rebuilt our recipe from scratch: same great taste, only ingredients you can actually recognize."
+            },
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "badge",
+              "component": "Type=Neutral",
+              "componentSet": "Badge",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "chip",
+              "component": "Size=M, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "chip",
+              "component": "Size=M, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            },
+            {
+              "layer": "chip",
+              "component": "Size=M, State=Default",
+              "componentSet": "Chip",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon-leading",
+              "component": "Icon / check",
+              "componentSet": null,
+              "exposedAs": "Icon leading swap#35:27",
+              "toggledBy": "Icon leading#35:22",
+              "visibleByDefault": false
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "paddingLeft: space/64",
+              "paddingTop: space/96",
+              "paddingRight: space/64",
+              "paddingBottom: space/96",
+              "fills: color/surface/natural",
+              "color: color/surface/natural",
+              "itemSpacing: space/64",
+              "itemSpacing: space/24",
+              "paddingLeft: space/8",
+              "paddingTop: space/4",
+              "paddingRight: space/8",
+              "paddingBottom: space/4",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: badge/neutral/bg",
+              "color: badge/neutral/bg",
+              "fills: badge/neutral/text",
+              "fontSize: font/size/mobile/label",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/mobile/label",
+              "color: badge/neutral/text",
+              "fills: color/text/on-natural",
+              "fontSize: font/size/desktop/h1",
+              "lineHeight: font/line-height/desktop/h1",
+              "color: color/text/on-natural",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "itemSpacing: space/8",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "strokeTopWeight: border/width/thin",
+              "strokeBottomWeight: border/width/thin",
+              "strokeLeftWeight: border/width/thin",
+              "strokeRightWeight: border/width/thin",
+              "minHeight: chip/height/m",
+              "fills: chip/bg",
+              "strokes: chip/border",
+              "color: chip/bg",
+              "color: chip/border",
+              "width: icon/size/sm",
+              "height: icon/size/sm",
+              "strokes: chip/text",
+              "color: chip/text",
+              "fills: chip/text",
+              "fontSize: font/size/desktop/body-s",
+              "lineHeight: font/line-height/desktop/body-s",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "fills: color/surface/page",
+              "color: color/surface/page"
+            ],
+            "textStyles": [
+              "Mobile/label",
+              "Desktop/h1",
+              "Desktop/body-l",
+              "Desktop/body-s"
+            ],
+            "variableKeys": {
+              "space/64": {
+                "key": "e743728ff95b159cd962c99e39283d6d2e0da7d6",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/96": {
+                "key": "fe1166dd57c85b3e215b8334ec0f1e4ed2f57acb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/natural": {
+                "key": "7affea7c83578c8f6d2e0d713b43691c18ac055a",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "space/24": {
+                "key": "4187debaf60e6dcf039c36da1a353993eb2949d2",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/8": {
+                "key": "a522eed3f8fb0579196e315e33e1ce9ca4795718",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/4": {
+                "key": "57e91b5c235fde419b0acd5ba8e295d931ed8ef5",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "radius/pill": {
+                "key": "12b235796cc9f8fb56cc69420482be95350b287a",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "badge/neutral/bg": {
+                "key": "e07a09c75f52aad4a61e99fbb169b22b611017c9",
+                "remote": false,
+                "collectionKey": "a66e68ecd6ef4d4034729b8f89465dfa0baa6433",
+                "collectionName": "Components"
+              },
+              "badge/neutral/text": {
+                "key": "5980622a60f43b3bdecaa3cbcbd88f7b707c8fe1",
+                "remote": false,
+                "collectionKey": "a66e68ecd6ef4d4034729b8f89465dfa0baa6433",
+                "collectionName": "Components"
+              },
+              "font/size/mobile/label": {
+                "key": "85260dc18204b571f967e931532351a219911d82",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/display": {
+                "key": "b0915717f8b7d4e81111392a7f21a747933f0d60",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/display": {
+                "key": "ff74fc0b46b208932a2fd830641816bdac673a36",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/mobile/label": {
+                "key": "98f8a4bc5ea8bd8e40a2d52b4557daf83da82bf5",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "color/text/on-natural": {
+                "key": "69ec62314b50045d0c68bc3b1d9fdf0906b11476",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/h1": {
+                "key": "74ba6b8e78402328cea8a898e350aa467f4c2f19",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/h1": {
+                "key": "83ddcbdc90694b6999f18baedb33033bb677a993",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/size/desktop/body-l": {
+                "key": "11d644becdb27077732b31910c2f1dc2e73641e2",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/body": {
+                "key": "526ac3ab5e53de36b3bc915dd568b7c4171fc46b",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/body": {
+                "key": "2e36d04ea2fd1115d1b93c870146a232a3381a48",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-l": {
+                "key": "0ba212b5f200318602392f7106bcb2a89b5699d6",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "space/16": {
+                "key": "7f80708f74de63e48149957e338bdea2eca26adb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "border/width/thin": {
+                "key": "13c3a1d0bafe27c3cbf3bee143e63e154bd3ba09",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "chip/height/m": {
+                "key": "0cb2747613785937a4a7a4508ce7f7c8399c94b0",
+                "remote": false,
+                "collectionKey": "a66e68ecd6ef4d4034729b8f89465dfa0baa6433",
+                "collectionName": "Components"
+              },
+              "chip/bg": {
+                "key": "db2097a793bd66b0c4cf1d69092e42f5f770fb9a",
+                "remote": false,
+                "collectionKey": "a66e68ecd6ef4d4034729b8f89465dfa0baa6433",
+                "collectionName": "Components"
+              },
+              "chip/border": {
+                "key": "8ace4e22e7af26267b3647159475748cee67cedc",
+                "remote": false,
+                "collectionKey": "a66e68ecd6ef4d4034729b8f89465dfa0baa6433",
+                "collectionName": "Components"
+              },
+              "icon/size/sm": {
+                "key": "c9d02e60420585baced26b3685d95f98edeb58f3",
+                "remote": false,
+                "collectionKey": "a66e68ecd6ef4d4034729b8f89465dfa0baa6433",
+                "collectionName": "Components"
+              },
+              "chip/text": {
+                "key": "9fd7e713e095b1a1b2bdf3960affd071bc58e98b",
+                "remote": false,
+                "collectionKey": "a66e68ecd6ef4d4034729b8f89465dfa0baa6433",
+                "collectionName": "Components"
+              },
+              "font/size/desktop/body-s": {
+                "key": "4b712381715f46620eae332bbc6a12973409cb95",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-s": {
+                "key": "7cbc2ec1504d06f6d76d843af678ff0ae1c4acef",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "radius/md": {
+                "key": "dd84512986524c40e4583a9045a43543cdbd30bb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/page": {
+                "key": "6c72e1cd4f29b1cef2aaaf74940b96c674dc2654",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              }
+            },
+            "styleKeys": {
+              "Mobile/label": {
+                "key": "badb943dcab8ab25ae98f98a6d3adb557f5a6039",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/h1": {
+                "key": "1a24f52422bb71b0bbf81c47af381c5077079b05",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/body-l": {
+                "key": "50eeec41463e565fd2c2634884a88225b849071d",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/body-s": {
+                "key": "3a0d37f49f37bcdc29b4889a76b5876a839ec009",
+                "remote": false,
+                "type": "text"
+              }
+            }
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Pattern / Detail pages",
+          "name": "Natural improvement",
+          "type": "COMPONENT_SET",
+          "id": "279:725",
+          "key": "790636ccafa5a96b2add3a2a1934d323fb972fe7",
+          "published": null,
+          "description": "Natural improvement: sección de mejoras de la fórmula natural (página Natural formula; wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-improvement). Fondo crema (surface/page) con textos en tinta (text/default). Título «That's what we call an improvement» y subtítulo; tres bloques con h3: «Replaced ingredients» (4 instancias de Ingredient swap: 4 columnas en desktop y 1 en móvil), «We also removed» (fila de Removed tag) e «Ingredient origins» (texto y Origins map). Props: Title, Subtitle, Replaced title, Removed title, Origins title, Origins text. Ingredientes, motivos y orígenes de ejemplo ⬜ TODO envase (business-rules).",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Title#279:0",
+              "kind": "TEXT",
+              "default": "That's what we call an improvement"
+            },
+            {
+              "name": "Subtitle#279:3",
+              "kind": "TEXT",
+              "default": "Every ingredient we removed has a natural replacement with a clear reason behind it."
+            },
+            {
+              "name": "Replaced title#279:6",
+              "kind": "TEXT",
+              "default": "Replaced ingredients"
+            },
+            {
+              "name": "Removed title#279:9",
+              "kind": "TEXT",
+              "default": "We also removed"
+            },
+            {
+              "name": "Origins title#279:12",
+              "kind": "TEXT",
+              "default": "Ingredient origins"
+            },
+            {
+              "name": "Origins text#279:15",
+              "kind": "TEXT",
+              "default": "The new formula improves the nutritional profile across the board, without adding a single minute to prep time."
+            },
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "ingredient-swap",
+              "component": "Ingredient swap",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "arrow",
+              "component": "Icon / chevron-down",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "ingredient-swap",
+              "component": "Ingredient swap",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "arrow",
+              "component": "Icon / chevron-down",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "ingredient-swap",
+              "component": "Ingredient swap",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "arrow",
+              "component": "Icon / chevron-down",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "ingredient-swap",
+              "component": "Ingredient swap",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "arrow",
+              "component": "Icon / chevron-down",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "removed-tag",
+              "component": "Removed tag",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "removed-tag",
+              "component": "Removed tag",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "removed-tag",
+              "component": "Removed tag",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "removed-tag",
+              "component": "Removed tag",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "icon",
+              "component": "Icon / close",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "origins-map",
+              "component": "Breakpoint=Desktop",
+              "componentSet": "Origins map",
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/64",
+              "paddingLeft: space/64",
+              "paddingTop: space/96",
+              "paddingRight: space/64",
+              "paddingBottom: space/96",
+              "fills: color/surface/page",
+              "color: color/surface/page",
+              "itemSpacing: space/16",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "itemSpacing: space/24",
+              "fontSize: font/size/desktop/h3",
+              "lineHeight: font/line-height/desktop/h3",
+              "itemSpacing: space/8",
+              "paddingLeft: space/16",
+              "paddingTop: space/8",
+              "paddingRight: space/16",
+              "paddingBottom: space/8",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: color/surface/card",
+              "strokes: color/border/subtle",
+              "color: color/surface/card",
+              "color: color/border/subtle",
+              "fills: color/text/secondary",
+              "fontSize: font/size/desktop/body-s",
+              "lineHeight: font/line-height/desktop/body-s",
+              "color: color/text/secondary",
+              "strokes: icon/color/default",
+              "color: icon/color/default",
+              "width: icon/size/md",
+              "height: icon/size/md",
+              "paddingTop: space/16",
+              "paddingBottom: space/16",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "strokes: color/surface/natural",
+              "color: color/surface/natural",
+              "fills: color/text/natural",
+              "color: color/text/natural",
+              "topLeftRadius: radius/sm",
+              "topRightRadius: radius/sm",
+              "bottomLeftRadius: radius/sm",
+              "bottomRightRadius: radius/sm",
+              "fontSize: font/size/desktop/body-m",
+              "lineHeight: font/line-height/desktop/body-m",
+              "fills: color/surface/natural",
+              "fills: color/text/on-natural",
+              "color: color/text/on-natural"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/body-l",
+              "Desktop/h3",
+              "Desktop/body-s",
+              "Desktop/body-m"
+            ],
+            "variableKeys": {
+              "space/64": {
+                "key": "e743728ff95b159cd962c99e39283d6d2e0da7d6",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/96": {
+                "key": "fe1166dd57c85b3e215b8334ec0f1e4ed2f57acb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/page": {
+                "key": "6c72e1cd4f29b1cef2aaaf74940b96c674dc2654",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "space/16": {
+                "key": "7f80708f74de63e48149957e338bdea2eca26adb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/text/default": {
+                "key": "a8f82fbbe73e6b70668de790dfa26591c4b8eaf1",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/h2": {
+                "key": "fa1d20b9d02814a55da9b7c07061f62da4b7f2e8",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/display": {
+                "key": "b0915717f8b7d4e81111392a7f21a747933f0d60",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/display": {
+                "key": "ff74fc0b46b208932a2fd830641816bdac673a36",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/h2": {
+                "key": "fc81585f582d5d92c9b27cb6f0cd220b46fa5c21",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/size/desktop/body-l": {
+                "key": "11d644becdb27077732b31910c2f1dc2e73641e2",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/body": {
+                "key": "526ac3ab5e53de36b3bc915dd568b7c4171fc46b",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/body": {
+                "key": "2e36d04ea2fd1115d1b93c870146a232a3381a48",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-l": {
+                "key": "0ba212b5f200318602392f7106bcb2a89b5699d6",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "space/24": {
+                "key": "4187debaf60e6dcf039c36da1a353993eb2949d2",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "font/size/desktop/h3": {
+                "key": "6a86d8860c7625b02623cf661c4fc2b62b8a72d8",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/h3": {
+                "key": "ac020ed1deeb440ee78adff3ab618ab82f6c4275",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "space/8": {
+                "key": "a522eed3f8fb0579196e315e33e1ce9ca4795718",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "radius/pill": {
+                "key": "12b235796cc9f8fb56cc69420482be95350b287a",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/card": {
+                "key": "0e7b16ec7006a96dcf0ea60237881ba05db243d0",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/border/subtle": {
+                "key": "c341f571ca0c08673ee7729f4d239af5bb008cf9",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/text/secondary": {
+                "key": "c91ea8a60137b60e040a7c72d72fde32170e2726",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/body-s": {
+                "key": "4b712381715f46620eae332bbc6a12973409cb95",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-s": {
+                "key": "7cbc2ec1504d06f6d76d843af678ff0ae1c4acef",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "icon/color/default": {
+                "key": "f254d6ca95ffb5598cfdf521ecc9f96852587ad1",
+                "remote": false,
+                "collectionKey": "a66e68ecd6ef4d4034729b8f89465dfa0baa6433",
+                "collectionName": "Components"
+              },
+              "icon/size/md": {
+                "key": "14991531415270440237c10a21689bdcc6fa02c8",
+                "remote": false,
+                "collectionKey": "a66e68ecd6ef4d4034729b8f89465dfa0baa6433",
+                "collectionName": "Components"
+              },
+              "radius/md": {
+                "key": "dd84512986524c40e4583a9045a43543cdbd30bb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/natural": {
+                "key": "7affea7c83578c8f6d2e0d713b43691c18ac055a",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/text/natural": {
+                "key": "53c3a0a3cddc88fca74765b97f80b8bd5d4b273c",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "radius/sm": {
+                "key": "acb0607507b899a317fcd9a3896259295fc8d3bc",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "font/size/desktop/body-m": {
+                "key": "55c366b833c3b224cc75f772329a684077780080",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-m": {
+                "key": "169cae9a2b9c0368ac98175aceb6b8be9654a0c0",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "color/text/on-natural": {
+                "key": "69ec62314b50045d0c68bc3b1d9fdf0906b11476",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              }
+            },
+            "styleKeys": {
+              "Desktop/h2": {
+                "key": "14ea31aff7c520a88ad582e2701678d1717eddfd",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/body-l": {
+                "key": "50eeec41463e565fd2c2634884a88225b849071d",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/h3": {
+                "key": "efef830a4e380f5c2f54097efcc8b001abd24500",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/body-s": {
+                "key": "3a0d37f49f37bcdc29b4889a76b5876a839ec009",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/body-m": {
+                "key": "cc7373a7cdd1cf85590d1b562e192aabd2dd0fcc",
+                "remote": false,
+                "type": "text"
+              }
+            }
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Pattern / Detail pages",
+          "name": "Natural stats",
+          "type": "COMPONENT_SET",
+          "id": "279:776",
+          "key": "172f908a79c0231b82cde1494df00e28c5bbdda3",
+          "published": null,
+          "description": "Natural stats: bloque de cifras de la página Natural formula (wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-stats). Fondo tinta (surface/inverse) con título y subtítulo en text/on-inverse (amarillo suave, contraste alto). Cuatro Stat figure en fila en desktop y en rejilla 2×2 en móvil. Props: Title, Subtitle. Cifras, etiquetas y textos de ejemplo ⬜ TODO envase (business-rules).",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Title#279:18",
+              "kind": "TEXT",
+              "default": "Eating fast doesn't mean to eat unhealthy"
+            },
+            {
+              "name": "Subtitle#279:21",
+              "kind": "TEXT",
+              "default": "The new formula improves the nutritional profile across the board, without adding a single minute to prep time."
+            },
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "stat-figure",
+              "component": "Stat figure",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "stat-figure",
+              "component": "Stat figure",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "stat-figure",
+              "component": "Stat figure",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "stat-figure",
+              "component": "Stat figure",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "itemSpacing: space/48",
+              "paddingLeft: space/64",
+              "paddingTop: space/96",
+              "paddingRight: space/64",
+              "paddingBottom: space/96",
+              "fills: color/surface/inverse",
+              "color: color/surface/inverse",
+              "itemSpacing: space/16",
+              "fills: color/text/on-inverse",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/on-inverse",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "itemSpacing: space/32",
+              "itemSpacing: space/8",
+              "paddingLeft: space/8",
+              "paddingTop: space/2",
+              "paddingRight: space/8",
+              "paddingBottom: space/2",
+              "fills: color/surface/brand",
+              "color: color/surface/brand",
+              "fills: color/text/default",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/body-s",
+              "lineHeight: font/line-height/desktop/body-s"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/body-l",
+              "Desktop/body-s"
+            ],
+            "variableKeys": {
+              "space/48": {
+                "key": "5350fe0a819a53a1748e1ac27bb01043f11f001d",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/64": {
+                "key": "e743728ff95b159cd962c99e39283d6d2e0da7d6",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/96": {
+                "key": "fe1166dd57c85b3e215b8334ec0f1e4ed2f57acb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/inverse": {
+                "key": "7e6ee90e2bd88818dbe8dcb7e4bffe6c6db29c2c",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "space/16": {
+                "key": "7f80708f74de63e48149957e338bdea2eca26adb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/text/on-inverse": {
+                "key": "9d6c9bf06d3d8c2d4ec09fd65bdcfe6a3cefebe6",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/h2": {
+                "key": "fa1d20b9d02814a55da9b7c07061f62da4b7f2e8",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/display": {
+                "key": "b0915717f8b7d4e81111392a7f21a747933f0d60",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/display": {
+                "key": "ff74fc0b46b208932a2fd830641816bdac673a36",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/h2": {
+                "key": "fc81585f582d5d92c9b27cb6f0cd220b46fa5c21",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/size/desktop/body-l": {
+                "key": "11d644becdb27077732b31910c2f1dc2e73641e2",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/body": {
+                "key": "526ac3ab5e53de36b3bc915dd568b7c4171fc46b",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/body": {
+                "key": "2e36d04ea2fd1115d1b93c870146a232a3381a48",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-l": {
+                "key": "0ba212b5f200318602392f7106bcb2a89b5699d6",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "space/32": {
+                "key": "776a4c5812db3a71256a0265701c0e1c6d37811e",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/8": {
+                "key": "a522eed3f8fb0579196e315e33e1ce9ca4795718",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/2": {
+                "key": "43da6e8533eba5f34c7cfc80d5b8243b5b4f11bb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/brand": {
+                "key": "c5d65ef249c8949366048de419ded94e195e2422",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/text/default": {
+                "key": "a8f82fbbe73e6b70668de790dfa26591c4b8eaf1",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/body-s": {
+                "key": "4b712381715f46620eae332bbc6a12973409cb95",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-s": {
+                "key": "7cbc2ec1504d06f6d76d843af678ff0ae1c4acef",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              }
+            },
+            "styleKeys": {
+              "Desktop/h2": {
+                "key": "14ea31aff7c520a88ad582e2701678d1717eddfd",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/body-l": {
+                "key": "50eeec41463e565fd2c2634884a88225b849071d",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/body-s": {
+                "key": "3a0d37f49f37bcdc29b4889a76b5876a839ec009",
+                "remote": false,
+                "type": "text"
+              }
+            }
+          },
+          "autoLayout": true
+        },
+        {
+          "page": "Pattern / Detail pages",
+          "name": "Natural pillars",
+          "type": "COMPONENT_SET",
+          "id": "279:844",
+          "key": "b8058dcee4c38f1551f1c73451050a661f58ead8",
+          "published": null,
+          "description": "Natural pillars: bloque «Taste you can trust» de la página Natural formula (wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-pillars). Fondo blanco (surface/card, sección Trust). A la izquierda título, subtítulo «Better for people, better for the planet» y lista ordenada de cuatro Pillar item; a la derecha imagen placeholder (560×520 en desktop; en móvil va debajo a ancho completo). Props: Title, Subtitle. Textos de ejemplo y pilares ⬜ TODO envase.",
+          "variantAxes": {
+            "Breakpoint": [
+              "Desktop",
+              "Mobile"
+            ]
+          },
+          "variantCount": 2,
+          "properties": [
+            {
+              "name": "Title#279:24",
+              "kind": "TEXT",
+              "default": "Taste you can trust"
+            },
+            {
+              "name": "Subtitle#279:27",
+              "kind": "TEXT",
+              "default": "Better for people, better for the planet"
+            },
+            {
+              "name": "Breakpoint",
+              "kind": "VARIANT",
+              "default": "Desktop",
+              "values": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          ],
+          "nestedInstances": [
+            {
+              "layer": "pillar-item",
+              "component": "Pillar item",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "pillar-item",
+              "component": "Pillar item",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "pillar-item",
+              "component": "Pillar item",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            },
+            {
+              "layer": "pillar-item",
+              "component": "Pillar item",
+              "componentSet": null,
+              "exposedAs": null,
+              "toggledBy": null,
+              "visibleByDefault": true
+            }
+          ],
+          "bindings": {
+            "variables": [
+              "paddingLeft: space/64",
+              "paddingTop: space/96",
+              "paddingRight: space/64",
+              "paddingBottom: space/96",
+              "fills: color/surface/card",
+              "color: color/surface/card",
+              "itemSpacing: space/64",
+              "itemSpacing: space/48",
+              "itemSpacing: space/16",
+              "fills: color/text/default",
+              "fontSize: font/size/desktop/h2",
+              "fontStyle: font/style/display",
+              "fontFamily: font/family/display",
+              "lineHeight: font/line-height/desktop/h2",
+              "color: color/text/default",
+              "fontSize: font/size/desktop/body-l",
+              "fontStyle: font/style/body",
+              "fontFamily: font/family/body",
+              "lineHeight: font/line-height/desktop/body-l",
+              "itemSpacing: space/24",
+              "topLeftRadius: radius/pill",
+              "topRightRadius: radius/pill",
+              "bottomLeftRadius: radius/pill",
+              "bottomRightRadius: radius/pill",
+              "fills: color/surface/natural",
+              "color: color/surface/natural",
+              "fills: color/text/on-natural",
+              "fontSize: font/size/desktop/label",
+              "lineHeight: font/line-height/desktop/label",
+              "color: color/text/on-natural",
+              "itemSpacing: space/8",
+              "fontSize: font/size/desktop/body-m",
+              "lineHeight: font/line-height/desktop/body-m",
+              "topLeftRadius: radius/md",
+              "topRightRadius: radius/md",
+              "bottomLeftRadius: radius/md",
+              "bottomRightRadius: radius/md",
+              "fills: color/surface/page",
+              "color: color/surface/page"
+            ],
+            "textStyles": [
+              "Desktop/h2",
+              "Desktop/body-l",
+              "Desktop/label",
+              "Desktop/body-m"
+            ],
+            "variableKeys": {
+              "space/64": {
+                "key": "e743728ff95b159cd962c99e39283d6d2e0da7d6",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/96": {
+                "key": "fe1166dd57c85b3e215b8334ec0f1e4ed2f57acb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/card": {
+                "key": "0e7b16ec7006a96dcf0ea60237881ba05db243d0",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "space/48": {
+                "key": "5350fe0a819a53a1748e1ac27bb01043f11f001d",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "space/16": {
+                "key": "7f80708f74de63e48149957e338bdea2eca26adb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/text/default": {
+                "key": "a8f82fbbe73e6b70668de790dfa26591c4b8eaf1",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/h2": {
+                "key": "fa1d20b9d02814a55da9b7c07061f62da4b7f2e8",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/display": {
+                "key": "b0915717f8b7d4e81111392a7f21a747933f0d60",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/display": {
+                "key": "ff74fc0b46b208932a2fd830641816bdac673a36",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/h2": {
+                "key": "fc81585f582d5d92c9b27cb6f0cd220b46fa5c21",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/size/desktop/body-l": {
+                "key": "11d644becdb27077732b31910c2f1dc2e73641e2",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/style/body": {
+                "key": "526ac3ab5e53de36b3bc915dd568b7c4171fc46b",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/family/body": {
+                "key": "2e36d04ea2fd1115d1b93c870146a232a3381a48",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-l": {
+                "key": "0ba212b5f200318602392f7106bcb2a89b5699d6",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "space/24": {
+                "key": "4187debaf60e6dcf039c36da1a353993eb2949d2",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "radius/pill": {
+                "key": "12b235796cc9f8fb56cc69420482be95350b287a",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/natural": {
+                "key": "7affea7c83578c8f6d2e0d713b43691c18ac055a",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "color/text/on-natural": {
+                "key": "69ec62314b50045d0c68bc3b1d9fdf0906b11476",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              },
+              "font/size/desktop/label": {
+                "key": "0fc01c8752d1ad4af63647f1e15c95159ed5f14d",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/label": {
+                "key": "4ed3ebd43d5785b52b95089651d9a11c464642da",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "space/8": {
+                "key": "a522eed3f8fb0579196e315e33e1ce9ca4795718",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "font/size/desktop/body-m": {
+                "key": "55c366b833c3b224cc75f772329a684077780080",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "font/line-height/desktop/body-m": {
+                "key": "169cae9a2b9c0368ac98175aceb6b8be9654a0c0",
+                "remote": false,
+                "collectionKey": "b820912743c29db5cbb5d0f611fe1e83e61ab98c",
+                "collectionName": "Typography"
+              },
+              "radius/md": {
+                "key": "dd84512986524c40e4583a9045a43543cdbd30bb",
+                "remote": false,
+                "collectionKey": "f4693884d6923e3f1d177cfc03b5a6677d186aeb",
+                "collectionName": "Spacing"
+              },
+              "color/surface/page": {
+                "key": "6c72e1cd4f29b1cef2aaaf74940b96c674dc2654",
+                "remote": false,
+                "collectionKey": "44b0985891d2d7469f52e561d7972a75e73fb370",
+                "collectionName": "Semantic"
+              }
+            },
+            "styleKeys": {
+              "Desktop/h2": {
+                "key": "14ea31aff7c520a88ad582e2701678d1717eddfd",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/body-l": {
+                "key": "50eeec41463e565fd2c2634884a88225b849071d",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/label": {
+                "key": "57f52c9af8097bf904cacb7b8a4304ce53dce650",
+                "remote": false,
+                "type": "text"
+              },
+              "Desktop/body-m": {
+                "key": "cc7373a7cdd1cf85590d1b562e192aabd2dd0fcc",
+                "remote": false,
+                "type": "text"
+              }
+            }
+          },
+          "autoLayout": true
         }
       ],
-      "total": 6,
-      "read": 6
+      "total": 10,
+      "read": 10
     }
   ],
   "fileKey": "v4mnn154qUmiB35CCnRfgh",
-  "readAt": "2026-10-22T14:05:48.900Z",
+  "readAt": "2026-10-22T15:20:33.377Z",
   "partialRefresh": {
     "history": [
       {

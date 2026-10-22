@@ -1,7 +1,7 @@
 {
   "title": "Empty state",
   "description": "Empty state de la Recipe library: sin resultados para la búsqueda o filtros. Título centrado (Desktop/h2) «We couldn't find any results for your search» y texto «Try with differen…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -32,8 +32,8 @@
       "type": "COMPONENT",
       "variants": 1,
       "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Empty state de la Recipe library: sin resultados para la búsqueda o filtros. Título centrado (Desktop/h2) «We couldn't find any results for your search» y texto «Try with different ingredients». Debajo, en la pantalla (no dentro del componente), «Our most popular ones» con una rejilla de Recipe card. Uso: Recipe library en estado vacío (wireframe 485:6064 y móvil 486:14260). Clase CSS: .empty-state."
@@ -115,7 +115,7 @@
   "ds": {
     "slug": "empty-state",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "219:1663",
     "contract": "../../../../../../design-system/schemas/components/empty-state.schema.json"
   },

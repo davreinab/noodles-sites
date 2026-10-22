@@ -7,19 +7,29 @@
     "slug": "allergen-table-cell",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T14:07:02Z",
+    "lastSync": "2026-10-22T14:30:04Z",
     "description": "Celda de la tabla de alérgenos (subcomponente de Allergen table). Present=true: el producto contiene el alérgeno; cabecera en amarillo de marca (color/surface/brand) y marca ●. Present=false: no lo contiene; cabecera en superficie neutra (color/surface/page) y marca –. La presencia no depende solo del color: la marca ● o – y el texto oculto contains / does not contain lo indican. Propiedad de texto Name: nombre del alérgeno (en inglés). Se usa solo dentro de Allergen table (modal Allergy detailed table, wireframe UX 490:7469 y 490:11998). Clase CSS: .allergen-table (celda).",
     "figmaPage": "Content",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
-    "anatomyHash": "5338d31c6992",
     "lifecycle": {
       "status": "active",
       "since": null,
       "removeIn": null,
       "replacement": null,
       "reason": null
+    },
+    "anatomyHash": "5338d31c6992",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "5338d31c6992",
+      "variantsChecked": [
+        "Present=true",
+        "Present=false"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {
@@ -65,8 +75,14 @@
   },
   "code": {
     "path": "design-system/css/components.css",
-    "classes": [],
-    "example": null,
+    "classes": [
+      "allergen-table__item",
+      "allergen-table__item--present",
+      "allergen-table__mark",
+      "allergen-table__name",
+      "visually-hidden"
+    ],
+    "example": "<li data-ds=\"allergen-table-cell\" class=\"allergen-table__item allergen-table__item--present\"><span class=\"allergen-table__name\">Gluten</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">●</span><span class=\"visually-hidden\">contains</span></li>\n<li data-ds=\"allergen-table-cell\" class=\"allergen-table__item\"><span class=\"allergen-table__name\">Eggs</span><span class=\"allergen-table__mark\" aria-hidden=\"true\">–</span><span class=\"visually-hidden\">does not contain</span></li>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

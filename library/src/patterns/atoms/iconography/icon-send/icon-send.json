@@ -1,9 +1,15 @@
 {
   "title": "Icon / send",
   "description": "Icono de envío (Lucide send), trazo 2.5, 24×24. Uso: enlace «Share recipe» de la cabecera de la ficha de receta (wireframe 396:6290).",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
-    "contrast": null,
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
     "pending": null,
     "edit": {
       "slug": "icon-send",
@@ -12,9 +18,9 @@
       "nodeId": "208:56",
       "current": {
         "description": "Icono de envío (Lucide send), trazo 2.5, 24×24. Uso: enlace «Share recipe» de la cabecera de la ficha de receta (wireframe 396:6290).",
-        "Propósito": "",
-        "Accesibilidad (rol, nombre, estados y teclado)": "",
-        "Cuándo usar / qué NO hace": ""
+        "Propósito": "Glifo de envío (avión de papel, Lucide «send»).",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Icono decorativo: `aria-hidden=\"true\"`. El nombre lo da el botón que lo contiene.",
+        "Cuándo usar / qué NO hace": "Icono de UI para acciones de envío, en el texto o en un botón de la pantalla que lo incluya. Como acción de enviar solo si el botón contenedor tiene nombre accesible; no aparece en el Share panel. No es un botón ni un enlace: el contenedor pone la interacción."
       },
       "proposed": {},
       "pending": null
@@ -25,9 +31,9 @@
       "page": "Iconography",
       "type": "COMPONENT",
       "variants": 1,
-      "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "lastSync": "2026-10-22 · 14:30 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Icono de envío (Lucide send), trazo 2.5, 24×24. Uso: enlace «Share recipe» de la cabecera de la ficha de receta (wireframe 396:6290)."
@@ -51,39 +57,42 @@
     ],
     "tokenCount": 1,
     "textStyles": [],
-    "classes": [],
+    "classes": [
+      "icon",
+      "icon-send"
+    ],
     "manual": [
       {
         "label": "Propósito",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Glifo de envío (avión de papel, Lucide «send»).",
+        "todo": false,
         "na": false,
         "canNA": false
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Icono decorativo: `aria-hidden=\"true\"`. El nombre lo da el botón que lo contiene.",
+        "todo": false,
         "na": false,
         "canNA": true
       },
       {
         "label": "Cuándo usar / qué NO hace",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Icono de UI para acciones de envío, en el texto o en un botón de la pantalla que lo incluya. Como acción de enviar solo si el botón contenedor tiene nombre accesible; no aparece en el Share panel. No es un botón ni un enlace: el contenedor pone la interacción.",
+        "todo": false,
         "na": false,
         "canNA": false
       }
     ],
-    "manualTodo": 3,
+    "manualTodo": 0,
     "notes": ""
   },
   "ds": {
     "slug": "icon-send",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "208:56",
-    "contract": "../../../../../../../design-system/schemas/components/icon-send.schema.json"
+    "contract": "../../../../../../design-system/schemas/components/icon-send.schema.json"
   },
   "variants": {
     "default": {

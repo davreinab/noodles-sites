@@ -70,6 +70,12 @@
     "step": {
       "Media": {
         "True": ".step--media"
+      },
+      "title": {
+        "true": {
+          "target": ".step__title",
+          "presence": true
+        }
       }
     },
     "nutrition-bar": {
@@ -228,6 +234,9 @@
           "target": ".lang-switch",
           "presence": true
         }
+      },
+      "scrolled": {
+        "true": ".navbar--scrolled"
       }
     },
     "mobile-menu": {
@@ -242,6 +251,56 @@
       "dismissible": {
         "true": {
           "target": ".alert__close",
+          "presence": true
+        }
+      }
+    },
+    "flavour-tile": {
+      "Size": {
+        "Tall": ".flavour-tile--tall"
+      },
+      "badge": {
+        "true": {
+          "target": ".badge",
+          "presence": true
+        }
+      }
+    },
+    "library-head": {
+      "filtered": {
+        "true": {
+          "target": ".library-head__results",
+          "presence": true
+        }
+      }
+    },
+    "product-line": {
+      "surface": {
+        "Dark": ".product-line--dark"
+      },
+      "kind": {
+        "Sauces": ".product-line--sauces"
+      },
+      "header": {
+        "true": {
+          "target": ".product-line__head",
+          "presence": true
+        }
+      }
+    },
+    "anchor-nav-item": {
+      "State": {
+        "Current": "[aria-current=\"true\"]"
+      }
+    },
+    "pagination-item": {
+      "State": {
+        "Current": "[aria-current=\"page\"]",
+        "Disabled": "[disabled]"
+      },
+      "icon": {
+        "true": {
+          "target": ".icon",
           "presence": true
         }
       }
@@ -264,15 +323,54 @@
       "shadow/soft",
       "layout/frame"
     ],
+    "flavour-tile": [
+      "font/size/desktop/caption",
+      "font/line-height/desktop/caption",
+      "product-card/meta"
+    ],
+    "library-hero": [
+      "font/size/desktop/caption",
+      "font/line-height/desktop/caption",
+      "product-card/meta"
+    ],
+    "product-line": [
+      "font/size/desktop/caption",
+      "font/line-height/desktop/caption",
+      "product-card/meta"
+    ],
     "recipe-card": [
       "font/size/desktop/caption",
-      "font/line-height/desktop/caption"
+      "font/line-height/desktop/caption",
+      "space/16"
     ],
     "promo": [
       "color/text/secondary"
     ],
     "banner": [
       "space/16"
+    ],
+    "share-panel": [
+      "radius/lg"
+    ],
+    "product-hero": [
+      "font/size/desktop/caption",
+      "font/line-height/desktop/caption"
+    ],
+    "ingredients": [
+      "color/surface/page",
+      "radius/lg",
+      "space/64"
+    ],
+    "recipe-steps": [
+      "font/size/desktop/caption",
+      "font/line-height/desktop/caption",
+      "step/border",
+      "step/media-bg"
+    ],
+    "allergen-table-cell": [
+      "color/text/secondary",
+      "font/size/desktop/caption",
+      "font/line-height/desktop/caption"
     ]
   },
   "contrastExceptions": [],
@@ -287,6 +385,9 @@
     ],
     "axes": [],
     "components": {
+      "navbar": {
+        "top=true": "Estado por defecto (transparente sobre el contenido, arriba de la página): es el .navbar sin modificador, no tiene clase propia."
+      },
       "select": {
         "open=true": "Lista nativa del navegador: no se puede pintar en una muestra estática."
       },
@@ -301,8 +402,9 @@
   },
   "_notes": {
     "modifiers": "Logo Version=Negative es otro archivo SVG (assets/logos/*-negative.svg) con la misma clase .logo: no hay modificador CSS. Contest card Status=Closed cambia el contenido (Badge Neutral y Link a ganadores), no el estilo. Video player Ratio=9:16 → .video-player--vertical.",
-    "ignoreTokens": "font/style/* son nombres de estilo de Figma («Regular», «Bold»): en CSS los realiza font-family + font-weight, no una variable. color/effect/shadow-ink y shadow/soft van dentro de --elevation-* (box-shadow compuesto), que es lo que consume el CSS. Recipe card: el caption del maestro es el texto de marcador del hueco de imagen («Imagen de la receta»), que en código es la foto. layout/frame es el ancho del lienzo de diseño (1440/768/375), no una medida de CSS: las secciones ocupan el 100 % y el contenido se limita con --layout-content-max. Promo: color/text/secondary es el texto de marcador del hueco del arte de campaña («Arte de la campaña»), que en código es una imagen. Banner: space/16 es el padding del hueco de la imagen en el maestro; en código la pieza ocupa todo el marco.",
-    "excludeAxes": "Además de los ejes por defecto: Checked, Selected y Expanded son estados y en código se expresan con ARIA (aria-checked, aria-pressed/aria-selected, aria-expanded), no con clases modificadoras."
+    "ignoreTokens": "font/style/* son nombres de estilo de Figma («Regular», «Bold»): en CSS los realiza font-family + font-weight, no una variable. color/effect/shadow-ink y shadow/soft van dentro de --elevation-* (box-shadow compuesto), que es lo que consume el CSS. Recipe card: el caption del maestro es el texto de marcador del hueco de imagen («Imagen de la receta»), que en código es la foto. space/16 es el padding del hueco de imagen en el maestro, que solo coloca ese texto de marcador («Recipe image»); en código la foto de receta va a sangre dentro de la tarjeta, sin padding en .recipe-card__media.layout/frame es el ancho del lienzo de diseño (1440/768/375), no una medida de CSS: las secciones ocupan el 100 % y el contenido se limita con --layout-content-max. Promo: color/text/secondary es el texto de marcador del hueco del arte de campaña («Arte de la campaña»), que en código es una imagen. Banner: space/16 es el padding del hueco de la imagen en el maestro; en código la pieza ocupa todo el marco. Share panel: radius/lg es el radio de la tarjeta del maestro (fondo card, padding 24); en web esa tarjeta la pone el modal (.modal, radio md; .modal__body, padding 24) donde se usa el componente, y el componente no la repite para no duplicar el fondo y el padding. Flavour tile, Library hero y Product line: font/size y font/line-height del caption y product-card/meta son el texto de marcador del hueco de imagen («Imagen de producto (3D)» en el maestro); en código ese hueco es la foto del producto, así que no hay texto que pintar con ellos. Recipe steps: step/border y step/media-bg los liga el maestro en las instancias de Step anidadas y los aplica .step__media (no las clases propias de .recipe-steps); el caption es el texto de marcador del hueco de imagen del paso. Allergen table cell: caption y text/secondary son de la capa oculta «contains / does not contain», que en web es texto .visually-hidden sin estilo visible.",
+    "excludeAxes": "Además de los ejes por defecto: Checked, Selected y Expanded son estados y en código se expresan con ARIA (aria-checked, aria-pressed/aria-selected, aria-expanded), no con clases modificadoras.",
+    "ignoreTokensVerificacion": "Product hero: font/size y font/line-height del caption son el texto de marcador «Imagen 3D del producto» del hueco del packshot; en código ese hueco es la imagen. Ingredients: color/surface/page, radius/lg y space/64 los pone el contenedor del bloque (sección a sangre, imagen y rejilla de product-details), no la clase .ingredients, que en el maestro es el hueco de imagen + columna dentro de la sección."
   },
   "excludeAxes": [
     "state",

@@ -22,11 +22,11 @@
     },
     "anatomyHash": "ecea9763c208",
     "verification": {
-      "status": "unverified",
-      "date": null,
-      "figmaVersion": null,
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "ecea9763c208",
       "variantsChecked": [],
-      "by": "agent (Claude)"
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {

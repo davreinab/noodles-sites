@@ -1,9 +1,15 @@
 {
   "title": "Icon / link",
   "description": "Icono de enlace (Lucide link), trazo 2.5, 24×24. Uso: campo «Page link» y botón «Copy link» del Share panel de la ficha de receta (wireframe 396:6290).",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
-    "contrast": null,
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
     "pending": null,
     "edit": {
       "slug": "icon-link",
@@ -12,9 +18,9 @@
       "nodeId": "208:52",
       "current": {
         "description": "Icono de enlace (Lucide link), trazo 2.5, 24×24. Uso: campo «Page link» y botón «Copy link» del Share panel de la ficha de receta (wireframe 396:6290).",
-        "Propósito": "",
-        "Accesibilidad (rol, nombre, estados y teclado)": "",
-        "Cuándo usar / qué NO hace": ""
+        "Propósito": "Glifo de enlace (Lucide «link») del campo «Page link» del Share panel.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Icono decorativo: `aria-hidden=\"true\"`. El nombre lo da el `label` «Page link».",
+        "Cuándo usar / qué NO hace": "Icono de UI dentro de `share-panel__field`, junto a la URL de solo lectura. Como indicador visual de «enlace de la página»; no como botón. No es un botón ni un enlace: el contenedor pone la interacción."
       },
       "proposed": {},
       "pending": null
@@ -25,9 +31,9 @@
       "page": "Iconography",
       "type": "COMPONENT",
       "variants": 1,
-      "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "lastSync": "2026-10-22 · 14:30 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Icono de enlace (Lucide link), trazo 2.5, 24×24. Uso: campo «Page link» y botón «Copy link» del Share panel de la ficha de receta (wireframe 396:6290)."
@@ -51,39 +57,42 @@
     ],
     "tokenCount": 1,
     "textStyles": [],
-    "classes": [],
+    "classes": [
+      "icon",
+      "icon-link"
+    ],
     "manual": [
       {
         "label": "Propósito",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Glifo de enlace (Lucide «link») del campo «Page link» del Share panel.",
+        "todo": false,
         "na": false,
         "canNA": false
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Icono decorativo: `aria-hidden=\"true\"`. El nombre lo da el `label` «Page link».",
+        "todo": false,
         "na": false,
         "canNA": true
       },
       {
         "label": "Cuándo usar / qué NO hace",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Icono de UI dentro de `share-panel__field`, junto a la URL de solo lectura. Como indicador visual de «enlace de la página»; no como botón. No es un botón ni un enlace: el contenedor pone la interacción.",
+        "todo": false,
         "na": false,
         "canNA": false
       }
     ],
-    "manualTodo": 3,
+    "manualTodo": 0,
     "notes": ""
   },
   "ds": {
     "slug": "icon-link",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "208:52",
-    "contract": "../../../../../../../design-system/schemas/components/icon-link.schema.json"
+    "contract": "../../../../../../design-system/schemas/components/icon-link.schema.json"
   },
   "variants": {
     "default": {

@@ -1,7 +1,7 @@
 {
   "title": "Allergen table",
   "description": "Tabla de alérgenos UE (Reg. 1169/2011): contenido del modal «Allergy detailed table». Texto introductorio y rejilla de los 14 alérgenos (Gluten, Crustaceans, Eggs, Fish, Peanuts,…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -31,8 +31,8 @@
       "type": "COMPONENT_SET",
       "variants": 2,
       "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Tabla de alérgenos UE (Reg. 1169/2011): contenido del modal «Allergy detailed table». Texto introductorio y rejilla de los 14 alérgenos (Gluten, Crustaceans, Eggs, Fish, Peanuts, Soy, Milk, Nuts, Celery, Mustard, Sesame, Sulphites, Lupin, Molluscs) con instancias de Allergen table / Cell: presente = cabecera amarilla de marca y ●; ausente = cabecera neutra y –. Breakpoint: Desktop 4 columnas, Mobile 2 columnas. Los ejemplos (Eggs, Fish, Peanuts, Soy, Milk, Celery) son provisionales hasta tener la ficha técnica validada. Se usa en el modal Allergy detailed table (wireframe UX 490:7469 y 490:11998). Clase CSS: .allergen-table."
@@ -229,7 +229,7 @@
   "ds": {
     "slug": "allergen-table",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "193:344",
     "contract": "../../../../../../design-system/schemas/components/allergen-table.schema.json"
   },

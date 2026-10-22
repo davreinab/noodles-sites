@@ -11,10 +11,11 @@
 - **Text styles:** `Desktop/body-m`, `Desktop/caption`
 <!-- ⚙️ GENERATED:end:allergen-table-cell -->
 
-- **Propósito:** ⬜ TODO
-- **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; su elemento raíz lleva data-ds="<slug>"; se copia a `code.example` del schema)_
+- **Propósito:** Celda de un alérgeno dentro de la tabla de alérgenos: nombre del alérgeno y estado (contiene o no contiene), con la marca ● o – y el color de marca solo en «contiene». Es el hijo de `.allergen-table__item`; la tabla la compone.
+- **Ejemplo de código:**
   ```html
-  <!-- ⬜ TODO -->
+  <li data-ds="allergen-table-cell" class="allergen-table__item allergen-table__item--present"><span class="allergen-table__name">Gluten</span><span class="allergen-table__mark" aria-hidden="true">●</span><span class="visually-hidden">contains</span></li>
+  <li data-ds="allergen-table-cell" class="allergen-table__item"><span class="allergen-table__name">Eggs</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden">does not contain</span></li>
   ```
-- **Accesibilidad (rol, nombre, estados y teclado):** ⬜ TODO
-- **Cuándo usar / qué NO hace:** ⬜ TODO
+- **Accesibilidad (rol, nombre, estados y teclado):** Cada celda es un `li` dentro de la lista de la tabla. El estado no depende solo del color: la marca ● / – va oculta a lectores y el texto oculto dice «contains» o «does not contain». Texto tinta sobre brand y sobre page, según el maestro.
+- **Cuándo usar / qué NO hace:** Solo dentro de Allergen table (14 alérgenos UE). No es un control: no tiene interacción.

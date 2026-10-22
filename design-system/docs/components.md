@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 79 componentes sincronizados el 2026-10-22T14:07:02Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 79 componentes sincronizados el 2026-10-22T14:30:04Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -38,12 +38,12 @@
 - [Icon / circle-check](components/icon-circle-check.md) · component · `icon-circle-check` · ✅ criterio completo
 - [Icon / triangle-alert](components/icon-triangle-alert.md) · component · `icon-triangle-alert` · ✅ criterio completo
 - [Icon / message-circle](components/icon-message-circle.md) · component · `icon-message-circle` · ✅ criterio completo
-- [Icon / link](components/icon-link.md) · component · `icon-link` · ⬜ 5 pendientes
-- [Icon / send](components/icon-send.md) · component · `icon-send` · ⬜ 5 pendientes
-- [Icon / trash](components/icon-trash.md) · component · `icon-trash` · ⬜ 5 pendientes
-- [Icon / whatsapp](components/icon-whatsapp.md) · component · `icon-whatsapp` · ⬜ 5 pendientes
-- [Icon / facebook](components/icon-facebook.md) · component · `icon-facebook` · ⬜ 5 pendientes
-- [Icon / telegram](components/icon-telegram.md) · component · `icon-telegram` · ⬜ 5 pendientes
+- [Icon / link](components/icon-link.md) · component · `icon-link` · ✅ criterio completo
+- [Icon / send](components/icon-send.md) · component · `icon-send` · ✅ criterio completo
+- [Icon / trash](components/icon-trash.md) · component · `icon-trash` · ✅ criterio completo
+- [Icon / whatsapp](components/icon-whatsapp.md) · component · `icon-whatsapp` · ✅ criterio completo
+- [Icon / facebook](components/icon-facebook.md) · component · `icon-facebook` · ✅ criterio completo
+- [Icon / telegram](components/icon-telegram.md) · component · `icon-telegram` · ✅ criterio completo
 - [Logo / GB Foods](components/logo-gb-foods.md) · component · `logo-gb-foods` · ✅ criterio completo
 - [Logo / Aiki](components/logo-aiki.md) · component · `logo-aiki` · ✅ criterio completo
 - [Logo / Yatekomo](components/logo-yatekomo.md) · component · `logo-yatekomo` · ✅ criterio completo
@@ -62,9 +62,9 @@
 - [Nav item](components/nav-item.md) · component · `nav-item` · ✅ criterio completo
 - [Tab](components/tab.md) · component · `tab` · ✅ criterio completo
 - [Lang switch](components/lang-switch.md) · component · `lang-switch` · ✅ criterio completo
-- [Anchor nav item](components/anchor-nav-item.md) · component · `anchor-nav-item` · ⬜ 5 pendientes
+- [Anchor nav item](components/anchor-nav-item.md) · component · `anchor-nav-item` · ✅ criterio completo
 - [Anchor nav](components/anchor-nav.md) · component · `anchor-nav` · ✅ criterio completo
-- [Pagination item](components/pagination-item.md) · component · `pagination-item` · ⬜ 5 pendientes
+- [Pagination item](components/pagination-item.md) · component · `pagination-item` · ✅ criterio completo
 - [Pagination](components/pagination.md) · component · `pagination` · ✅ criterio completo
 - [Badge](components/badge.md) · component · `badge` · ✅ criterio completo
 - [Chip](components/chip.md) · component · `chip` · ✅ criterio completo
@@ -81,7 +81,7 @@
 - [Step](components/step.md) · component · `step` · ✅ criterio completo
 - [Timer](components/timer.md) · component · `timer` · ✅ criterio completo
 - [Video player](components/video-player.md) · component · `video-player` · ✅ criterio completo
-- [Allergen table / Cell](components/allergen-table-cell.md) · component · `allergen-table-cell` · ⬜ 5 pendientes
+- [Allergen table / Cell](components/allergen-table-cell.md) · component · `allergen-table-cell` · ✅ criterio completo
 - [Nutrition ring](components/nutrition-ring.md) · component · `nutrition-ring` · ✅ criterio completo
 - [Allergen card](components/allergen-card.md) · component · `allergen-card` · ✅ criterio completo
 - [Allergen table](components/allergen-table.md) · component · `allergen-table` · ✅ criterio completo

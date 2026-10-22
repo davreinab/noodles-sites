@@ -1,7 +1,7 @@
 {
   "title": "Recipe ingredients",
   "description": "Recipe ingredients: bloque de ingredientes de la ficha de receta. Título «Ingredients» con subtítulo, lista de Recipe ingredient (2 columnas en desktop, 1 en mobile; Variant=Brand…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -32,8 +32,8 @@
       "type": "COMPONENT_SET",
       "variants": 2,
       "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Recipe ingredients: bloque de ingredientes de la ficha de receta. Título «Ingredients» con subtítulo, lista de Recipe ingredient (2 columnas en desktop, 1 en mobile; Variant=Brand para los productos del catálogo) y Recipe macros a la derecha (desktop) o debajo (mobile). Fondo blanco (surface/card). Uso: ficha de receta (wireframe desktop 396:6398, 396:6354). Clase CSS: .recipe-ingredients."
@@ -260,7 +260,7 @@
   "ds": {
     "slug": "recipe-ingredients",
     "kind": "pattern",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "222:2116",
     "contract": "../../../../../../design-system/schemas/components/recipe-ingredients.schema.json"
   },

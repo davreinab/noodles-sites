@@ -1,7 +1,7 @@
 {
   "title": "Navbar",
   "description": "Patrón de cabecera (wireframe UX). Desktop: botón menú (Icon button Secondary, abre el Menu a pantalla completa) a la izquierda · logo de marca centrado (enlace a la Home) · CTA B…",
-  "status": "In review",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -19,7 +19,7 @@
       "current": {
         "description": "Patrón de cabecera (wireframe UX). Desktop: botón menú (Icon button Secondary, abre el Menu a pantalla completa) a la izquierda · logo de marca centrado (enlace a la Home) · CTA Button Primary «New 100% Natural Formula» a la derecha · Lang switch oculto salvo en marcas multiidioma. Mobile: botón menú · logo centrado. State=Top: transparente sobre el contenido, arriba de la página. State=Scrolled: al bajar queda fija arriba (layer/sticky) con fondo color/surface/page y borde inferior color/border/default. Sin enlaces de navegación ni buscador en la barra. Accesibilidad: <header> con <nav>; el botón menú lleva aria-expanded y aria-controls. Sin variables propias.",
         "Propósito": "Cabecera de todas las páginas (wireframe UX): botón de menú a la izquierda, logo de marca centrado y, en desktop, el CTA «New 100% Natural Formula». La navegación vive en el menú a pantalla completa.",
-        "Accesibilidad (rol, nombre, estados y teclado)": "Botón de menú con nombre accesible, `aria-expanded` y `aria-controls`; el logo es el enlace a la Home con nombre «Marca, inicio». Tinta sobre crema 17,2:1. Sticky (`--layer-sticky`); se oculta al bajar y reaparece al subir, sin animación con reduce-motion.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Botón de menú con nombre accesible, `aria-expanded` y `aria-controls`; el logo es el enlace a la Home con nombre «Marca, inicio». Tinta sobre crema 17,2:1. Sticky (`--layer-sticky`): transparente arriba; al hacer scroll se queda fija y opaca (R-01.6), sin animación con reduce-motion.",
         "Cuándo usar / qué NO hace": "En todas las páginas. Solo marcas multiidioma muestran el Lang switch (en `.navbar__actions`). No lleva enlaces de navegación ni buscador: van en el Mobile menu."
       },
       "proposed": {},
@@ -31,9 +31,9 @@
       "page": "Pattern / Global",
       "type": "COMPONENT_SET",
       "variants": 4,
-      "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "stale",
-      "verificationLabel": "Caducado"
+      "lastSync": "2026-10-22 · 14:30 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Patrón de cabecera (wireframe UX). Desktop: botón menú (Icon button Secondary, abre el Menu a pantalla completa) a la izquierda · logo de marca centrado (enlace a la Home) · CTA Button Primary «New 100% Natural Formula» a la derecha · Lang switch oculto salvo en marcas multiidioma. Mobile: botón menú · logo centrado. State=Top: transparente sobre el contenido, arriba de la página. State=Scrolled: al bajar queda fija arriba (layer/sticky) con fondo color/surface/page y borde inferior color/border/default. Sin enlaces de navegación ni buscador en la barra. Accesibilidad: <header> con <nav>; el botón menú lleva aria-expanded y aria-controls. Sin variables propias."
@@ -228,6 +228,7 @@
       "lang-switch__option",
       "logo",
       "navbar",
+      "navbar--scrolled",
       "navbar__actions",
       "navbar__inner",
       "navbar__start"
@@ -242,7 +243,7 @@
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "Botón de menú con nombre accesible, `aria-expanded` y `aria-controls`; el logo es el enlace a la Home con nombre «Marca, inicio». Tinta sobre crema 17,2:1. Sticky (`--layer-sticky`); se oculta al bajar y reaparece al subir, sin animación con reduce-motion.",
+        "md": "Botón de menú con nombre accesible, `aria-expanded` y `aria-controls`; el logo es el enlace a la Home con nombre «Marca, inicio». Tinta sobre crema 17,2:1. Sticky (`--layer-sticky`): transparente arriba; al hacer scroll se queda fija y opaca (R-01.6), sin animación con reduce-motion.",
         "todo": false,
         "na": false,
         "canNA": true
@@ -258,21 +259,17 @@
     "manualTodo": 0,
     "notes": "",
     "coverage": {
-      "visible": 1,
+      "visible": 2,
       "total": 2,
-      "missing": [
-        "scrolled=true"
-      ],
-      "unchecked": [
-        "top=true"
-      ],
-      "complete": false
+      "missing": [],
+      "unchecked": [],
+      "complete": true
     }
   },
   "ds": {
     "slug": "navbar",
     "kind": "pattern",
-    "verification": "stale",
+    "verification": "verified",
     "figmaNodeId": "55:116",
     "contract": "../../../../../../design-system/schemas/components/navbar.schema.json"
   },

@@ -28,6 +28,13 @@
   <div class="navbar__actions"><a class="button" href="/formula-natural">New 100% Natural Formula</a><nav data-ds="lang-switch" class="lang-switch" aria-label="Idioma"><a class="lang-switch__option" href="/nl/" hreflang="nl" lang="nl" aria-current="true">NL</a><a class="lang-switch__option" href="/fr/" hreflang="fr" lang="fr">FR</a></nav></div>
   </div>
   </header>
+  <header data-ds="navbar" class="navbar navbar--scrolled">
+  <div class="navbar__inner">
+  <div class="navbar__start"><button class="icon-button icon-button--secondary" type="button" aria-label="Menú" aria-expanded="false" aria-controls="menu"><span class="icon icon-menu" aria-hidden="true"></span></button></div>
+  <a href="/" aria-label="Yatekomo, inicio"><img class="logo" src="../assets/logos/logo-yatekomo-positive.svg" alt="Yatekomo"></a>
+  <div class="navbar__actions"><a class="button" href="/formula-natural">New 100% Natural Formula</a></div>
+  </div>
+  </header>
   ```
-- **Accesibilidad (rol, nombre, estados y teclado):** Botón de menú con nombre accesible, `aria-expanded` y `aria-controls`; el logo es el enlace a la Home con nombre «Marca, inicio». Tinta sobre crema 17,2:1. Sticky (`--layer-sticky`); se oculta al bajar y reaparece al subir, sin animación con reduce-motion.
+- **Accesibilidad (rol, nombre, estados y teclado):** Botón de menú con nombre accesible, `aria-expanded` y `aria-controls`; el logo es el enlace a la Home con nombre «Marca, inicio». Tinta sobre crema 17,2:1. Sticky (`--layer-sticky`): transparente arriba; al hacer scroll se queda fija y opaca (R-01.6), sin animación con reduce-motion.
 - **Cuándo usar / qué NO hace:** En todas las páginas. Solo marcas multiidioma muestran el Lang switch (en `.navbar__actions`). No lleva enlaces de navegación ni buscador: van en el Mobile menu.

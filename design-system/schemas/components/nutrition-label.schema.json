@@ -20,7 +20,16 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "17814f333229"
+    "anatomyHash": "17814f333229",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "17814f333229",
+      "variantsChecked": [
+        "única"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
   },
   "api": {
     "props": [],

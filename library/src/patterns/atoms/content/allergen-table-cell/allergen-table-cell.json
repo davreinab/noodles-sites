@@ -1,9 +1,15 @@
 {
   "title": "Allergen table / Cell",
   "description": "Celda de la tabla de alérgenos (subcomponente de Allergen table). Present=true: el producto contiene el alérgeno; cabecera en amarillo de marca (color/surface/brand) y marca ●. Pr…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
-    "contrast": null,
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
     "pending": null,
     "edit": {
       "slug": "allergen-table-cell",
@@ -12,9 +18,9 @@
       "nodeId": "193:176",
       "current": {
         "description": "Celda de la tabla de alérgenos (subcomponente de Allergen table). Present=true: el producto contiene el alérgeno; cabecera en amarillo de marca (color/surface/brand) y marca ●. Present=false: no lo contiene; cabecera en superficie neutra (color/surface/page) y marca –. La presencia no depende solo del color: la marca ● o – y el texto oculto contains / does not contain lo indican. Propiedad de texto Name: nombre del alérgeno (en inglés). Se usa solo dentro de Allergen table (modal Allergy detailed table, wireframe UX 490:7469 y 490:11998). Clase CSS: .allergen-table (celda).",
-        "Propósito": "",
-        "Accesibilidad (rol, nombre, estados y teclado)": "",
-        "Cuándo usar / qué NO hace": ""
+        "Propósito": "Celda de un alérgeno dentro de la tabla de alérgenos: nombre del alérgeno y estado (contiene o no contiene), con la marca ● o – y el color de marca solo en «contiene». Es el hijo de `.allergen-table__item`; la tabla la compone.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Cada celda es un `li` dentro de la lista de la tabla. El estado no depende solo del color: la marca ● / – va oculta a lectores y el texto oculto dice «contains» o «does not contain». Texto tinta sobre brand y sobre page, según el maestro.",
+        "Cuándo usar / qué NO hace": "Solo dentro de Allergen table (14 alérgenos UE). No es un control: no tiene interacción."
       },
       "proposed": {},
       "pending": null
@@ -25,9 +31,9 @@
       "page": "Content",
       "type": "COMPONENT_SET",
       "variants": 2,
-      "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "lastSync": "2026-10-22 · 14:30 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Celda de la tabla de alérgenos (subcomponente de Allergen table). Present=true: el producto contiene el alérgeno; cabecera en amarillo de marca (color/surface/brand) y marca ●. Present=false: no lo contiene; cabecera en superficie neutra (color/surface/page) y marca –. La presencia no depende solo del color: la marca ● o – y el texto oculto contains / does not contain lo indican. Propiedad de texto Name: nombre del alérgeno (en inglés). Se usa solo dentro de Allergen table (modal Allergy detailed table, wireframe UX 490:7469 y 490:11998). Clase CSS: .allergen-table (celda)."
@@ -95,43 +101,60 @@
       "Desktop/body-m",
       "Desktop/caption"
     ],
-    "classes": [],
+    "classes": [
+      "allergen-table__item",
+      "allergen-table__item--present",
+      "allergen-table__mark",
+      "allergen-table__name",
+      "visually-hidden"
+    ],
     "manual": [
       {
         "label": "Propósito",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Celda de un alérgeno dentro de la tabla de alérgenos: nombre del alérgeno y estado (contiene o no contiene), con la marca ● o – y el color de marca solo en «contiene». Es el hijo de `.allergen-table__item`; la tabla la compone.",
+        "todo": false,
         "na": false,
         "canNA": false
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Cada celda es un `li` dentro de la lista de la tabla. El estado no depende solo del color: la marca ● / – va oculta a lectores y el texto oculto dice «contains» o «does not contain». Texto tinta sobre brand y sobre page, según el maestro.",
+        "todo": false,
         "na": false,
         "canNA": true
       },
       {
         "label": "Cuándo usar / qué NO hace",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Solo dentro de Allergen table (14 alérgenos UE). No es un control: no tiene interacción.",
+        "todo": false,
         "na": false,
         "canNA": false
       }
     ],
-    "manualTodo": 3,
-    "notes": ""
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 1,
+      "total": 1,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
   },
   "ds": {
     "slug": "allergen-table-cell",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "193:176",
-    "contract": "../../../../../../../design-system/schemas/components/allergen-table-cell.schema.json"
+    "contract": "../../../../../../design-system/schemas/components/allergen-table-cell.schema.json"
   },
   "variants": {
     "default": {
       "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
     }
   }
 }

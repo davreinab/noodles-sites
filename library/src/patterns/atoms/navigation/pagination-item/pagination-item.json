@@ -1,9 +1,15 @@
 {
   "title": "Pagination item",
   "description": "Pagination item: botón cuadrado 40×40 con borde (radius/md) para el paginador de la Recipe library. State=Default (número o Previous/Next activos), Current (página actual, relleno…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
-    "contrast": null,
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
     "pending": null,
     "edit": {
       "slug": "pagination-item",
@@ -12,9 +18,9 @@
       "nodeId": "219:1639",
       "current": {
         "description": "Pagination item: botón cuadrado 40×40 con borde (radius/md) para el paginador de la Recipe library. State=Default (número o Previous/Next activos), Current (página actual, relleno tinta con aria-current=page), Disabled (Previous en la primera página). Propiedad Label (número o texto). Uso: Pagination (Recipe library, wireframe 171:3808 y móviles 486:13025 / 265:3948). Clase CSS: .pagination__item (.pagination__item--current, .pagination__item--disabled).",
-        "Propósito": "",
-        "Accesibilidad (rol, nombre, estados y teclado)": "",
-        "Cuándo usar / qué NO hace": ""
+        "Propósito": "Un número, o Previous/Next, dentro del paginador (`.pagination`). Es el enlace o botón de una página: la página actual (`aria-current=\"page\"`), Previous deshabilitado en la primera página (`disabled`), y en móvil solo flecha (`icon`). Lo compone `pagination`; no se usa suelto.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Página actual: `aria-current=\"page\"` (se anuncia como página actual; no se distingue solo por color). Previous en la primera página: `disabled` en el botón, o `aria-disabled=\"true\"` sin `href` si es enlace. Los botones solo con icono llevan `aria-label`. Teclado: Tab y Enter o Espacio.",
+        "Cuándo usar / qué NO hace": "Para cada página o flecha de un `pagination`. No gestiona la paginación por sí solo: el enlace apunta a la página que corresponda."
       },
       "proposed": {},
       "pending": null
@@ -25,9 +31,9 @@
       "page": "Navigation",
       "type": "COMPONENT_SET",
       "variants": 3,
-      "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "lastSync": "2026-10-22 · 14:30 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Pagination item: botón cuadrado 40×40 con borde (radius/md) para el paginador de la Recipe library. State=Default (número o Previous/Next activos), Current (página actual, relleno tinta con aria-current=page), Disabled (Previous en la primera página). Propiedad Label (número o texto). Uso: Pagination (Recipe library, wireframe 171:3808 y móviles 486:13025 / 265:3948). Clase CSS: .pagination__item (.pagination__item--current, .pagination__item--disabled)."
@@ -129,43 +135,63 @@
     "textStyles": [
       "Desktop/label"
     ],
-    "classes": [],
+    "classes": [
+      "icon",
+      "icon-arrow-right",
+      "pagination__link",
+      "pagination__list",
+      "pagination__page",
+      "pagination__text"
+    ],
     "manual": [
       {
         "label": "Propósito",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Un número, o Previous/Next, dentro del paginador (`.pagination`). Es el enlace o botón de una página: la página actual (`aria-current=\"page\"`), Previous deshabilitado en la primera página (`disabled`), y en móvil solo flecha (`icon`). Lo compone `pagination`; no se usa suelto.",
+        "todo": false,
         "na": false,
         "canNA": false
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Página actual: `aria-current=\"page\"` (se anuncia como página actual; no se distingue solo por color). Previous en la primera página: `disabled` en el botón, o `aria-disabled=\"true\"` sin `href` si es enlace. Los botones solo con icono llevan `aria-label`. Teclado: Tab y Enter o Espacio.",
+        "todo": false,
         "na": false,
         "canNA": true
       },
       {
         "label": "Cuándo usar / qué NO hace",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Para cada página o flecha de un `pagination`. No gestiona la paginación por sí solo: el enlace apunta a la página que corresponda.",
+        "todo": false,
         "na": false,
         "canNA": false
       }
     ],
-    "manualTodo": 3,
-    "notes": ""
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 2,
+      "total": 2,
+      "missing": [],
+      "unchecked": [
+        "current=true"
+      ],
+      "complete": true
+    }
   },
   "ds": {
     "slug": "pagination-item",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "219:1639",
-    "contract": "../../../../../../../design-system/schemas/components/pagination-item.schema.json"
+    "contract": "../../../../../../design-system/schemas/components/pagination-item.schema.json"
   },
   "variants": {
     "default": {
       "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
     }
   }
 }

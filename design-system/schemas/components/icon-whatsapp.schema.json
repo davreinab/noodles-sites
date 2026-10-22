@@ -7,19 +7,28 @@
     "slug": "icon-whatsapp",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T14:07:02Z",
+    "lastSync": "2026-10-22T14:30:04Z",
     "description": "Logo de WhatsApp (Simple Icons, CC0), relleno, 24×24. Uso: botón «Share on WhatsApp» del Share panel (wireframe 396:6290).",
     "figmaPage": "Iconography",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "ad172d25695b",
     "lifecycle": {
       "status": "active",
       "since": null,
       "removeIn": null,
       "replacement": null,
       "reason": null
+    },
+    "anatomyHash": "ad172d25695b",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "ad172d25695b",
+      "variantsChecked": [
+        "(componente único, sin variantes)"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {
@@ -41,8 +50,11 @@
   },
   "code": {
     "path": "design-system/css/components.css",
-    "classes": [],
-    "example": null,
+    "classes": [
+      "icon",
+      "icon-whatsapp"
+    ],
+    "example": "<span data-ds=\"icon-whatsapp\" class=\"icon icon-whatsapp\" aria-hidden=\"true\"></span>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

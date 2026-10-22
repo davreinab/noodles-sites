@@ -1,7 +1,7 @@
 {
   "title": "Recipe macros",
   "description": "Recipe macros: resumen nutricional por ración de la receta (Protein, Carbohydrates, Fat) con valor grande (Desktop/h3) y botón Secondary «See allergen table» que abre el modal All…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -32,8 +32,8 @@
       "type": "COMPONENT",
       "variants": 1,
       "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Recipe macros: resumen nutricional por ración de la receta (Protein, Carbohydrates, Fat) con valor grande (Desktop/h3) y botón Secondary «See allergen table» que abre el modal Allergen table. Ubicado a la derecha de Recipe ingredients en desktop y debajo en mobile. Uso: Recipe ingredients (ficha de receta, wireframe 396:6398). Clase CSS: .recipe-macros."
@@ -178,7 +178,7 @@
   "ds": {
     "slug": "recipe-macros",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "222:1907",
     "contract": "../../../../../../design-system/schemas/components/recipe-macros.schema.json"
   },

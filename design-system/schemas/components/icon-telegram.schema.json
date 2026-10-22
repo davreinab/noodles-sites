@@ -7,19 +7,28 @@
     "slug": "icon-telegram",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T14:07:02Z",
+    "lastSync": "2026-10-22T14:30:04Z",
     "description": "Logo de Telegram (Simple Icons, CC0), relleno, 24×24. Uso: botón «Share on Telegram» del Share panel (wireframe 396:6290).",
     "figmaPage": "Iconography",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "c24aa49fcb88",
     "lifecycle": {
       "status": "active",
       "since": null,
       "removeIn": null,
       "replacement": null,
       "reason": null
+    },
+    "anatomyHash": "c24aa49fcb88",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "c24aa49fcb88",
+      "variantsChecked": [
+        "(componente único, sin variantes)"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {
@@ -41,8 +50,11 @@
   },
   "code": {
     "path": "design-system/css/components.css",
-    "classes": [],
-    "example": null,
+    "classes": [
+      "icon",
+      "icon-telegram"
+    ],
+    "example": "<span data-ds=\"icon-telegram\" class=\"icon icon-telegram\" aria-hidden=\"true\"></span>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

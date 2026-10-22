@@ -1,7 +1,7 @@
 {
   "title": "Flavour tile",
   "description": "Flavour tile: tarjeta de sabor de la Product line (cups, bags y salsas). Size=Square: imagen 1:1 (sabores). Size=Tall: imagen 3:4 (salsas). Badge opcional arriba a la izquierda (N…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -25,7 +25,7 @@
       "current": {
         "description": "Flavour tile: tarjeta de sabor de la Product line (cups, bags y salsas). Size=Square: imagen 1:1 (sabores). Size=Tall: imagen 3:4 (salsas). Badge opcional arriba a la izquierda (New, Vegan o Hot!, mediante Badge type) y nombre debajo en body bold (Archivo Bold sobre Desktop/body-m). Toda la tarjeta es un enlace a la ficha del sabor. Estados: Default; Hover (elevation de Product card); Focus (anillo product-card/focus-ring). Uso: Product line del catálogo (wireframe desktop 396:5932 y móvil 396:12565). Clase CSS: .flavour-tile (variante Tall: .flavour-tile--tall). Textos de ejemplo en inglés.",
         "Propósito": "Tarjeta de un sabor (Square, por defecto) o de una salsa (Tall, imagen 3:4) dentro de una línea de Product line. Lleva un badge opcional arriba a la izquierda, dentro de la imagen (New, Vegan o Hot!), y el nombre debajo en body negrita. Toda la tarjeta es el enlace a la ficha del producto. Estados como Product card: hover sube la sombra dura (elevation/2) sobre la imagen; foco, contorno fino.",
-        "Accesibilidad (rol, nombre, estados y teclado)": "Rol: enlace (`a`) que engloba la tarjeta. Su nombre accesible es el texto visible completo, incluido el badge si lo hay («New Chicken»), por eso el badge va antes del nombre en el DOM. La imagen lleva `alt=\"\"` porque el nombre va escrito debajo. No tiene estado seleccionado. Hover: sombra sobre la imagen; el enlace se distingue por su nombre, no solo por el hover. Teclado: Tab alcanza el enlace y Enter abre la ficha. Foco: contorno fino de 2 px alrededor de la tarjeta.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Rol: enlace (`a`) que engloba la tarjeta. Su nombre accesible es el texto visible completo, incluido el badge si lo hay («New Chicken»), por eso el badge va antes del nombre en el DOM. La imagen lleva `alt=\"\"` porque el nombre va escrito debajo. No tiene estado seleccionado. Hover: sombra sobre la imagen; el enlace se distingue por su nombre, no solo por el hover. Teclado: Tab alcanza el enlace y Enter abre la ficha. Foco: contorno fino sobre la imagen (trazo de foco de Product card), no sobre la tarjeta entera.",
         "Cuándo usar / qué NO hace": "Para cada sabor o salsa de una rejilla dentro de Product line (Square en 5 columnas, Tall en 3). No es un botón de compra ni un filtro, y no lleva precio. El texto del badge se lee como parte del nombre; no añadir frases largas."
       },
       "proposed": {},
@@ -37,9 +37,9 @@
       "page": "Cards",
       "type": "COMPONENT_SET",
       "variants": 6,
-      "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "lastSync": "2026-10-22 · 14:30 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Flavour tile: tarjeta de sabor de la Product line (cups, bags y salsas). Size=Square: imagen 1:1 (sabores). Size=Tall: imagen 3:4 (salsas). Badge opcional arriba a la izquierda (New, Vegan o Hot!, mediante Badge type) y nombre debajo en body bold (Archivo Bold sobre Desktop/body-m). Toda la tarjeta es un enlace a la ficha del sabor. Estados: Default; Hover (elevation de Product card); Focus (anillo product-card/focus-ring). Uso: Product line del catálogo (wireframe desktop 396:5932 y móvil 396:12565). Clase CSS: .flavour-tile (variante Tall: .flavour-tile--tall). Textos de ejemplo en inglés."
@@ -168,7 +168,7 @@
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "Rol: enlace (`a`) que engloba la tarjeta. Su nombre accesible es el texto visible completo, incluido el badge si lo hay («New Chicken»), por eso el badge va antes del nombre en el DOM. La imagen lleva `alt=\"\"` porque el nombre va escrito debajo. No tiene estado seleccionado. Hover: sombra sobre la imagen; el enlace se distingue por su nombre, no solo por el hover. Teclado: Tab alcanza el enlace y Enter abre la ficha. Foco: contorno fino de 2 px alrededor de la tarjeta.",
+        "md": "Rol: enlace (`a`) que engloba la tarjeta. Su nombre accesible es el texto visible completo, incluido el badge si lo hay («New Chicken»), por eso el badge va antes del nombre en el DOM. La imagen lleva `alt=\"\"` porque el nombre va escrito debajo. No tiene estado seleccionado. Hover: sombra sobre la imagen; el enlace se distingue por su nombre, no solo por el hover. Teclado: Tab alcanza el enlace y Enter abre la ficha. Foco: contorno fino sobre la imagen (trazo de foco de Product card), no sobre la tarjeta entera.",
         "todo": false,
         "na": false,
         "canNA": true
@@ -184,19 +184,17 @@
     "manualTodo": 0,
     "notes": "",
     "coverage": {
-      "visible": 2,
-      "total": 2,
+      "visible": 3,
+      "total": 3,
       "missing": [],
-      "unchecked": [
-        "badge=true"
-      ],
+      "unchecked": [],
       "complete": true
     }
   },
   "ds": {
     "slug": "flavour-tile",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "209:138",
     "contract": "../../../../../../design-system/schemas/components/flavour-tile.schema.json"
   },

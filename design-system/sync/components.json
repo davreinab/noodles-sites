@@ -18346,7 +18346,7 @@
           "id": "96:113",
           "key": "3a0e1db0e31dd19939513d4571be367b9c29a29f",
           "published": null,
-          "description": "Cabecera de la página de receta: kicker «Receta» · título (h1) · tiempo (timer) y dificultad · descripción · productos usados como Chip M (enlazan a la ficha de producto; lista <ul>) · imagen principal de marca (sin vídeo al principio, regla de negocio). Fondo color/surface/brand. Después van Product details (ingredientes y nutrición de la receta) y Preparation sin Timer con Step Media=True. Desktop: texto a la izquierda; Mobile: imagen arriba. Sin variables propias.",
+          "description": "Cabecera de la página de receta: kicker «Receta» · título (h1) · tiempo (timer) y dificultad · descripción · productos usados como Chip M (enlazan a la ficha de producto; lista <ul>) · imagen principal de marca (sin vídeo al principio, regla de negocio). Fondo color/surface/brand. Después van Product details (ingredientes y nutrición de la receta) y Preparation sin Timer con Step Media=True. Desktop: texto a la izquierda; Mobile: texto arriba e imagen debajo. Sin variables propias.",
           "variantAxes": {
             "Breakpoint": [
               "Desktop",
@@ -19614,6 +19614,30 @@
         "scope": "Hero (88:132)",
         "nodeIds": [
           "88:132"
+        ]
+      },
+      {
+        "at": "2026-10-22T14:28:37.373Z",
+        "what": "refresco puntual de 1 componente(s) de «Content» con NODE_IDS + --merge",
+        "scope": "Step (71:164)",
+        "nodeIds": [
+          "71:164"
+        ]
+      },
+      {
+        "at": "2026-10-22T14:27:43.911Z",
+        "what": "refresco puntual de 1 componente(s) de «Pattern / Libraries» con NODE_IDS + --merge",
+        "scope": "Product line (212:746)",
+        "nodeIds": [
+          "212:746"
+        ]
+      },
+      {
+        "at": "2026-10-22T14:28:38.535Z",
+        "what": "refresco puntual de 1 componente(s) de «Pattern / Detail pages» con NODE_IDS + --merge",
+        "scope": "Recipe hero (96:113)",
+        "nodeIds": [
+          "96:113"
         ]
       }
     ]

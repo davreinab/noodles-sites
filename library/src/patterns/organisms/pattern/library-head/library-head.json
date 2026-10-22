@@ -1,7 +1,7 @@
 {
   "title": "Library head",
   "description": "Library head: cabecera de la Recipe library: título de página («Recipes»), subtítulo («Explore and learn recipes to level up your dishes.»), Search field («Search a recipe or ingr…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -32,8 +32,8 @@
       "type": "COMPONENT_SET",
       "variants": 4,
       "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Library head: cabecera de la Recipe library: título de página («Recipes»), subtítulo («Explore and learn recipes to level up your dishes.»), Search field («Search a recipe or ingredient», sin etiqueta visible: aria-label «Buscar» y role=search) y fila de chips de filtro (All, Less ingredients, Quick recipes, High protein, Single, +2 people, Spicy) con aria-pressed. State=Default: All seleccionado. State=Filtered: un chip seleccionado (Less ingredients), fila «48 results for your search» (48 en negrita) y «Clear filters» con Icon / trash a la derecha. Mobile: chips en fila desplazable. Fondo crema (surface/page). Uso: Recipe library (wireframe desktop 171:3808, estados 483:5711 y 485:6064; móvil 486:13025 y 265:3948). Clase CSS: .library-head (.library-head--filtered)."
@@ -295,12 +295,19 @@
       }
     ],
     "manualTodo": 0,
-    "notes": ""
+    "notes": "",
+    "coverage": {
+      "visible": 1,
+      "total": 1,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
   },
   "ds": {
     "slug": "library-head",
     "kind": "pattern",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "219:1839",
     "contract": "../../../../../../design-system/schemas/components/library-head.schema.json"
   },

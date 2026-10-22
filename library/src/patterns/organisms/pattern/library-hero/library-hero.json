@@ -1,7 +1,7 @@
 {
   "title": "Library hero",
   "description": "Library hero: cabecera a sangre de la Product library (fondo tinta). Título de página («Products»), bloque destacado con Badge New, titular («Discover the brand new Yakisoba Pollo…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -31,9 +31,9 @@
       "page": "Pattern / Libraries",
       "type": "COMPONENT_SET",
       "variants": 2,
-      "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "lastSync": "2026-10-22 · 14:30 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Library hero: cabecera a sangre de la Product library (fondo tinta). Título de página («Products»), bloque destacado con Badge New, titular («Discover the brand new Yakisoba Pollo») y entradilla («100% Natural ingredients with even more asiatic flavour»); a la derecha dos packshots 3D como placeholder (hueco product-card/media-bg, sin fotografía). Breakpoint Desktop: dos columnas; Mobile: apilado. Uso: Product library (wireframe desktop 396:5932, móvil 396:12565). Clase CSS: .library-hero."
@@ -176,7 +176,7 @@
   "ds": {
     "slug": "library-hero",
     "kind": "pattern",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "211:327",
     "contract": "../../../../../../design-system/schemas/components/library-hero.schema.json"
   },

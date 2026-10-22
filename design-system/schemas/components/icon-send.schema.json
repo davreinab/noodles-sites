@@ -7,19 +7,28 @@
     "slug": "icon-send",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T14:07:02Z",
+    "lastSync": "2026-10-22T14:30:04Z",
     "description": "Icono de envío (Lucide send), trazo 2.5, 24×24. Uso: enlace «Share recipe» de la cabecera de la ficha de receta (wireframe 396:6290).",
     "figmaPage": "Iconography",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "e9d51dbe8204",
     "lifecycle": {
       "status": "active",
       "since": null,
       "removeIn": null,
       "replacement": null,
       "reason": null
+    },
+    "anatomyHash": "e9d51dbe8204",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "e9d51dbe8204",
+      "variantsChecked": [
+        "(componente único, sin variantes)"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {
@@ -41,8 +50,11 @@
   },
   "code": {
     "path": "design-system/css/components.css",
-    "classes": [],
-    "example": null,
+    "classes": [
+      "icon",
+      "icon-send"
+    ],
+    "example": "<span data-ds=\"icon-send\" class=\"icon icon-send\" aria-hidden=\"true\"></span>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

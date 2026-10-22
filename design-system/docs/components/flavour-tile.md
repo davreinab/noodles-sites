@@ -23,6 +23,10 @@
   <span class="flavour-tile__media"><img src="../assets/images/placeholder.svg" alt=""><span class="badge badge--hot">Hot!</span></span>
   <span class="flavour-tile__name">Sesame sauce</span>
   </a>
+  <a data-ds="flavour-tile" class="flavour-tile" href="/productos/chicken-rice-noodles">
+  <span class="flavour-tile__media"><img src="../assets/images/placeholder.svg" alt=""></span>
+  <span class="flavour-tile__name">Chicken rice noodles</span>
+  </a>
   ```
-- **Accesibilidad (rol, nombre, estados y teclado):** Rol: enlace (`a`) que engloba la tarjeta. Su nombre accesible es el texto visible completo, incluido el badge si lo hay («New Chicken»), por eso el badge va antes del nombre en el DOM. La imagen lleva `alt=""` porque el nombre va escrito debajo. No tiene estado seleccionado. Hover: sombra sobre la imagen; el enlace se distingue por su nombre, no solo por el hover. Teclado: Tab alcanza el enlace y Enter abre la ficha. Foco: contorno fino de 2 px alrededor de la tarjeta.
+- **Accesibilidad (rol, nombre, estados y teclado):** Rol: enlace (`a`) que engloba la tarjeta. Su nombre accesible es el texto visible completo, incluido el badge si lo hay («New Chicken»), por eso el badge va antes del nombre en el DOM. La imagen lleva `alt=""` porque el nombre va escrito debajo. No tiene estado seleccionado. Hover: sombra sobre la imagen; el enlace se distingue por su nombre, no solo por el hover. Teclado: Tab alcanza el enlace y Enter abre la ficha. Foco: contorno fino sobre la imagen (trazo de foco de Product card), no sobre la tarjeta entera.
 - **Cuándo usar / qué NO hace:** Para cada sabor o salsa de una rejilla dentro de Product line (Square en 5 columnas, Tall en 3). No es un botón de compra ni un filtro, y no lleva precio. El texto del badge se lee como parte del nombre; no añadir frases largas.

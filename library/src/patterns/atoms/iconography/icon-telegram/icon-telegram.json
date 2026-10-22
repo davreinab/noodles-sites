@@ -1,9 +1,15 @@
 {
   "title": "Icon / telegram",
   "description": "Logo de Telegram (Simple Icons, CC0), relleno, 24×24. Uso: botón «Share on Telegram» del Share panel (wireframe 396:6290).",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
-    "contrast": null,
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
     "pending": null,
     "edit": {
       "slug": "icon-telegram",
@@ -12,9 +18,9 @@
       "nodeId": "208:75",
       "current": {
         "description": "Logo de Telegram (Simple Icons, CC0), relleno, 24×24. Uso: botón «Share on Telegram» del Share panel (wireframe 396:6290).",
-        "Propósito": "",
-        "Accesibilidad (rol, nombre, estados y teclado)": "",
-        "Cuándo usar / qué NO hace": ""
+        "Propósito": "Logo de Telegram del botón «Share on Telegram» del Share panel.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Icono decorativo: `aria-hidden=\"true\"`. El nombre accesible lo da el enlace con `aria-label` («Share on Telegram»).",
+        "Cuándo usar / qué NO hace": "Icono de marca. Lo usa `share-panel` dentro de un `icon-button` con `aria-label` («Share on Telegram»). Solo como glifo dentro de un botón con nombre accesible. No es un botón ni un enlace: el contenedor pone la interacción."
       },
       "proposed": {},
       "pending": null
@@ -25,9 +31,9 @@
       "page": "Iconography",
       "type": "COMPONENT",
       "variants": 1,
-      "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "lastSync": "2026-10-22 · 14:30 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Logo de Telegram (Simple Icons, CC0), relleno, 24×24. Uso: botón «Share on Telegram» del Share panel (wireframe 396:6290)."
@@ -51,39 +57,42 @@
     ],
     "tokenCount": 1,
     "textStyles": [],
-    "classes": [],
+    "classes": [
+      "icon",
+      "icon-telegram"
+    ],
     "manual": [
       {
         "label": "Propósito",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Logo de Telegram del botón «Share on Telegram» del Share panel.",
+        "todo": false,
         "na": false,
         "canNA": false
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Icono decorativo: `aria-hidden=\"true\"`. El nombre accesible lo da el enlace con `aria-label` («Share on Telegram»).",
+        "todo": false,
         "na": false,
         "canNA": true
       },
       {
         "label": "Cuándo usar / qué NO hace",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Icono de marca. Lo usa `share-panel` dentro de un `icon-button` con `aria-label` («Share on Telegram»). Solo como glifo dentro de un botón con nombre accesible. No es un botón ni un enlace: el contenedor pone la interacción.",
+        "todo": false,
         "na": false,
         "canNA": false
       }
     ],
-    "manualTodo": 3,
+    "manualTodo": 0,
     "notes": ""
   },
   "ds": {
     "slug": "icon-telegram",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "208:75",
-    "contract": "../../../../../../../design-system/schemas/components/icon-telegram.schema.json"
+    "contract": "../../../../../../design-system/schemas/components/icon-telegram.schema.json"
   },
   "variants": {
     "default": {

@@ -1,7 +1,7 @@
 {
   "title": "Recipe ingredient",
   "description": "Recipe ingredient: línea de ingrediente de la ficha de receta (Ingredients). Cantidad en caption («200 g») y nombre en negrita (Name); se usa con Variant=Default (tarjeta blanca c…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [
@@ -69,8 +69,8 @@
       "type": "COMPONENT_SET",
       "variants": 2,
       "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Recipe ingredient: línea de ingrediente de la ficha de receta (Ingredients). Cantidad en caption («200 g») y nombre en negrita (Name); se usa con Variant=Default (tarjeta blanca con borde) o Variant=Brand (fondo tinta, texto claro y miniatura del envase a la derecha; enlaza a la ficha del producto). Uso: Recipe ingredients (wireframe 396:6398, ficha de receta 396:6292 / 396:6354). Clase CSS: .recipe-ingredient (modificador .recipe-ingredient--brand)."
@@ -193,7 +193,7 @@
   "ds": {
     "slug": "recipe-ingredient",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "222:1906",
     "contract": "../../../../../../design-system/schemas/components/recipe-ingredient.schema.json"
   },

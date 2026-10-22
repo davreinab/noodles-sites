@@ -7,7 +7,7 @@
     "slug": "product-line",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T14:07:02Z",
+    "lastSync": "2026-10-22T14:30:04Z",
     "description": "Product line: bloque de una línea de producto de la Product library (Yatekomo, Yakisoba, Sauces): packshot grande (placeholder 3D, sin fotografía) a la izquierda en Standard y, a la derecha, nombre de línea (h3), descripción, «Find your favourite flavour» (h4) y rejilla de Flavour tile (5 columnas en desktop, 2 en mobile). Surface=Light (crema/blanco) o Dark (tinta) para alternar bandas; Header (opcional) muestra la cabecera de formato («Cups», «Sauces»). Kind=Sauces: sin packshot, rejilla de Flavour tile Tall (3 columnas en desktop; carrusel horizontal en mobile). Uso: Product library (wireframe desktop 396:5932, móvil 396:12565). Clase CSS: .product-line (modificadores .product-line--dark y .product-line--sauces).",
     "figmaPage": "Pattern / Libraries",
     "figmaType": "COMPONENT_SET",
@@ -22,11 +22,18 @@
     },
     "anatomyHash": "c66257572af8",
     "verification": {
-      "status": "unverified",
-      "date": null,
-      "figmaVersion": null,
-      "variantsChecked": [],
-      "by": "agent (Claude)"
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "c66257572af8",
+      "variantsChecked": [
+        "Surface=Light, Breakpoint=Desktop, Kind=Standard",
+        "Surface=Light, Breakpoint=Mobile, Kind=Standard",
+        "Surface=Dark, Breakpoint=Desktop, Kind=Standard",
+        "Surface=Dark, Breakpoint=Mobile, Kind=Standard",
+        "Surface=Light, Breakpoint=Desktop, Kind=Sauces",
+        "Surface=Light, Breakpoint=Mobile, Kind=Sauces"
+      ],
+      "by": "Claude (Haiku + Opus) · revisión de David Reina pendiente"
     }
   },
   "api": {
@@ -123,10 +130,14 @@
     "classes": [
       "badge",
       "badge--hot",
+      "badge--natural",
       "flavour-tile",
+      "flavour-tile--tall",
       "flavour-tile__media",
       "flavour-tile__name",
       "product-line",
+      "product-line--dark",
+      "product-line--sauces",
       "product-line__description",
       "product-line__grid",
       "product-line__head",
@@ -139,7 +150,7 @@
       "section__lead",
       "section__title"
     ],
-    "example": "<section data-ds=\"product-line\" class=\"section product-line\" id=\"cups\" aria-labelledby=\"pl-yatekomo\">\n<div class=\"product-line__head\"><h2 class=\"section__title\">Cups</h2><p class=\"section__lead\">Ready in 3 minutes.</p></div>\n<div class=\"product-line__inner\">\n<div class=\"product-line__pack\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"product-line__info\">\n<h3 class=\"product-line__name\" id=\"pl-yatekomo\">Yatekomo</h3>\n<p class=\"product-line__description\">Take our word for it. Oriental-style noodles, no fuss, ready in 3 minutes.</p>\n<h4 class=\"product-line__subtitle\">Find your favourite flavour</h4>\n<ul class=\"product-line__grid\">\n<li><a class=\"flavour-tile\" href=\"/productos/chicken-yakisoba\"><span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"><span class=\"badge\">New</span></span><span class=\"flavour-tile__name\">Chicken</span></a></li>\n<li><a class=\"flavour-tile\" href=\"/productos/hot-spicy\"><span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"><span class=\"badge badge--hot\">Hot!</span></span><span class=\"flavour-tile__name\">Hot &amp; Spicy</span></a></li>\n</ul>\n</div>\n</div>\n</section>",
+    "example": "<section data-ds=\"product-line\" class=\"section product-line\" id=\"cups\" aria-labelledby=\"pl-yatekomo\">\n<div class=\"product-line__head\"><h2 class=\"section__title\">Cups</h2><p class=\"section__lead\">Ready in 3 minutes.</p></div>\n<div class=\"product-line__inner\">\n<div class=\"product-line__pack\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"product-line__info\">\n<h3 class=\"product-line__name\" id=\"pl-yatekomo\">Yatekomo</h3>\n<p class=\"product-line__description\">Take our word for it. Oriental-style noodles, no fuss, ready in 3 minutes.</p>\n<h4 class=\"product-line__subtitle\">Find your favourite flavour</h4>\n<ul class=\"product-line__grid\">\n<li><a class=\"flavour-tile\" href=\"/productos/chicken-yakisoba\"><span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"><span class=\"badge\">New</span></span><span class=\"flavour-tile__name\">Chicken</span></a></li>\n<li><a class=\"flavour-tile\" href=\"/productos/hot-spicy\"><span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"><span class=\"badge badge--hot\">Hot!</span></span><span class=\"flavour-tile__name\">Hot &amp; Spicy</span></a></li>\n<li><a class=\"flavour-tile\" href=\"/productos/chicken-rice-noodles\"><span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"><span class=\"badge badge--natural\">Natural</span></span><span class=\"flavour-tile__name\">Chicken rice noodles</span></a></li>\n</ul>\n</div>\n</div>\n</section>\n<section data-ds=\"product-line\" class=\"section product-line product-line--dark\" id=\"yakisoba\" aria-labelledby=\"pl-yakisoba\">\n<div class=\"product-line__inner\">\n<div class=\"product-line__pack\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"product-line__info\">\n<h3 class=\"product-line__name\" id=\"pl-yakisoba\">Yakisoba</h3>\n<p class=\"product-line__description\">If you're into saucy flavours, match with our yakisoba.</p>\n<h4 class=\"product-line__subtitle\">Find your favourite flavour</h4>\n<ul class=\"product-line__grid\">\n<li><a class=\"flavour-tile\" href=\"/productos/classic\"><span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></span><span class=\"flavour-tile__name\">Classic</span></a></li>\n<li><a class=\"flavour-tile\" href=\"/productos/chicken\"><span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></span><span class=\"flavour-tile__name\">Chicken</span></a></li>\n</ul>\n</div>\n</div>\n</section>\n<section data-ds=\"product-line\" class=\"section product-line product-line--sauces\" id=\"sauces\" aria-labelledby=\"pl-sauces\">\n<div class=\"product-line__head\"><h2 class=\"section__title\">Sauces</h2><p class=\"section__lead\">The most original way to eat your Yatekomo.</p></div>\n<div class=\"product-line__inner\">\n<ul class=\"product-line__grid\">\n<li><a class=\"flavour-tile flavour-tile--tall\" href=\"/productos/sweet-teriyaki-sauce\"><span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"><span class=\"badge\">New</span></span><span class=\"flavour-tile__name\">Sweet Teriyaki Sauce</span></a></li>\n<li><a class=\"flavour-tile flavour-tile--tall\" href=\"/productos/spicy-yakisoba-sauce\"><span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></span><span class=\"flavour-tile__name\">Spicy Yakisoba Sauce</span></a></li>\n<li><a class=\"flavour-tile flavour-tile--tall\" href=\"/productos/mild-sesame-sauce\"><span class=\"flavour-tile__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></span><span class=\"flavour-tile__name\">Mild Sesame Sauce</span></a></li>\n</ul>\n</div>\n</section>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

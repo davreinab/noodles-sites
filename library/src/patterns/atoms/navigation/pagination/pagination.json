@@ -1,7 +1,7 @@
 {
   "title": "Pagination",
   "description": "Pagination: paginador de la Recipe library que sustituye al botón «Ver más». Previous (deshabilitado en la página 1) · 1 2 3 … 12 13 · Next; página actual en Current (aria-current…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -32,8 +32,8 @@
       "type": "COMPONENT_SET",
       "variants": 2,
       "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Pagination: paginador de la Recipe library que sustituye al botón «Ver más». Previous (deshabilitado en la página 1) · 1 2 3 … 12 13 · Next; página actual en Current (aria-current=page). Breakpoint Mobile: Previous/Next como flechas y «Page 1 of 13». Uso: Library (Recipe library, wireframe 171:3808 y móvil 486:13025). Clase CSS: .pagination (ítems .pagination__item). Nota: en Mobile las flechas son texto (←/→) y no iconos; los iconos chevron/arrow existentes no se han anidado."
@@ -234,7 +234,7 @@
   "ds": {
     "slug": "pagination",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "219:1662",
     "contract": "../../../../../../design-system/schemas/components/pagination.schema.json"
   },

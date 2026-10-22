@@ -1,20 +1,27 @@
 {
   "title": "Nutrition label",
   "description": "Tabla nutricional de la UE (Reg. 1169/2011), no el formato de EE. UU.: contenido del modal «Pack label». Columnas: Per 100 g · Per serving (93.6 g) · %RI*. Filas: Energy (kJ / kca…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
-      "pairs": [],
-      "fail": 0,
-      "untestable": [
+      "pairs": [
         {
           "theme": "light",
           "state": ".nutrition-label",
-          "why": "sin fondo propio: depende de dónde se ponga"
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-default",
+          "bgVar": "--nutrition-bg",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
         }
       ],
+      "fail": 0,
+      "untestable": [],
       "exempt": 0,
-      "label": "Sin parejas medibles"
+      "label": "Cumple AA"
     },
     "pending": null,
     "edit": {
@@ -37,8 +44,8 @@
       "type": "COMPONENT",
       "variants": 1,
       "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Tabla nutricional de la UE (Reg. 1169/2011), no el formato de EE. UU.: contenido del modal «Pack label». Columnas: Per 100 g · Per serving (93.6 g) · %RI*. Filas: Energy (kJ / kcal), Fat, of which saturates, Carbohydrate, of which sugars, Fibre, Protein, Salt; las filas «of which» van sangradas. Filetes gruesos de tinta bajo el título y antes del pie; filetes finos entre filas. Pie: «*Reference intake of an average adult (8,400 kJ / 2,000 kcal).». Valores de ejemplo coherentes, no validados. Se abre desde el enlace «Still curious? View pack label» de Ingredients (wireframe UX 490:11998). Clase CSS: .nutrition-label. Formato UE (Reg. 1169/2011) por decisión de David Reina 2026-10-22; ⬜ TODO confirmar con GB Foods."
@@ -137,7 +144,7 @@
   "ds": {
     "slug": "nutrition-label",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "194:249",
     "contract": "../../../../../../design-system/schemas/components/nutrition-label.schema.json"
   },

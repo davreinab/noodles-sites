@@ -1,9 +1,15 @@
 {
   "title": "Icon / trash",
   "description": "Icono de papelera (Lucide trash-2), trazo 2.5, 24×24. Uso: botón «Clear filters» del estado Filtered de Library head (wireframe 171:3808).",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
-    "contrast": null,
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
     "pending": null,
     "edit": {
       "slug": "icon-trash",
@@ -12,9 +18,9 @@
       "nodeId": "208:63",
       "current": {
         "description": "Icono de papelera (Lucide trash-2), trazo 2.5, 24×24. Uso: botón «Clear filters» del estado Filtered de Library head (wireframe 171:3808).",
-        "Propósito": "",
-        "Accesibilidad (rol, nombre, estados y teclado)": "",
-        "Cuándo usar / qué NO hace": ""
+        "Propósito": "Glifo de papelera (Lucide «trash») para eliminar un elemento.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Icono decorativo: `aria-hidden=\"true\"`. El nombre accesible lo da el botón que lo contiene.",
+        "Cuándo usar / qué NO hace": "Icono de UI para acciones de borrado en un botón de icono de la pantalla que lo incluya; no aparece en el Share panel. Como acción de borrar solo dentro de un botón con nombre accesible (p. ej. `aria-label` «Eliminar»). No es un botón ni un enlace: el contenedor pone la interacción."
       },
       "proposed": {},
       "pending": null
@@ -25,9 +31,9 @@
       "page": "Iconography",
       "type": "COMPONENT",
       "variants": 1,
-      "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "lastSync": "2026-10-22 · 14:30 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Icono de papelera (Lucide trash-2), trazo 2.5, 24×24. Uso: botón «Clear filters» del estado Filtered de Library head (wireframe 171:3808)."
@@ -51,39 +57,42 @@
     ],
     "tokenCount": 1,
     "textStyles": [],
-    "classes": [],
+    "classes": [
+      "icon",
+      "icon-trash"
+    ],
     "manual": [
       {
         "label": "Propósito",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Glifo de papelera (Lucide «trash») para eliminar un elemento.",
+        "todo": false,
         "na": false,
         "canNA": false
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Icono decorativo: `aria-hidden=\"true\"`. El nombre accesible lo da el botón que lo contiene.",
+        "todo": false,
         "na": false,
         "canNA": true
       },
       {
         "label": "Cuándo usar / qué NO hace",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Icono de UI para acciones de borrado en un botón de icono de la pantalla que lo incluya; no aparece en el Share panel. Como acción de borrar solo dentro de un botón con nombre accesible (p. ej. `aria-label` «Eliminar»). No es un botón ni un enlace: el contenedor pone la interacción.",
+        "todo": false,
         "na": false,
         "canNA": false
       }
     ],
-    "manualTodo": 3,
+    "manualTodo": 0,
     "notes": ""
   },
   "ds": {
     "slug": "icon-trash",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "208:63",
-    "contract": "../../../../../../../design-system/schemas/components/icon-trash.schema.json"
+    "contract": "../../../../../../design-system/schemas/components/icon-trash.schema.json"
   },
   "variants": {
     "default": {

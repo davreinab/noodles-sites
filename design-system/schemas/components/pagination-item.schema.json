@@ -7,19 +7,30 @@
     "slug": "pagination-item",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T14:07:02Z",
+    "lastSync": "2026-10-22T14:30:04Z",
     "description": "Pagination item: botón cuadrado 40×40 con borde (radius/md) para el paginador de la Recipe library. State=Default (número o Previous/Next activos), Current (página actual, relleno tinta con aria-current=page), Disabled (Previous en la primera página). Propiedad Label (número o texto). Uso: Pagination (Recipe library, wireframe 171:3808 y móviles 486:13025 / 265:3948). Clase CSS: .pagination__item (.pagination__item--current, .pagination__item--disabled).",
     "figmaPage": "Navigation",
     "figmaType": "COMPONENT_SET",
     "variantCount": 3,
     "autoLayout": true,
-    "anatomyHash": "6a3820109267",
     "lifecycle": {
       "status": "active",
       "since": null,
       "removeIn": null,
       "replacement": null,
       "reason": null
+    },
+    "anatomyHash": "6a3820109267",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "6a3820109267",
+      "variantsChecked": [
+        "State=Default",
+        "State=Current",
+        "State=Disabled"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {
@@ -87,8 +98,15 @@
   },
   "code": {
     "path": "design-system/css/components.css",
-    "classes": [],
-    "example": null,
+    "classes": [
+      "icon",
+      "icon-arrow-right",
+      "pagination__link",
+      "pagination__list",
+      "pagination__page",
+      "pagination__text"
+    ],
+    "example": "<ul data-ds=\"pagination-item\" class=\"pagination__list\">\n<li><a class=\"pagination__link pagination__page\" href=\"?page=2\">2</a></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=1\" aria-current=\"page\">1</a></li>\n<li><button class=\"pagination__link\" type=\"button\" disabled aria-label=\"Previous page\"><span class=\"pagination__text\">Previous</span></button></li>\n<li><a class=\"pagination__link\" href=\"?page=2\" aria-label=\"Next page\"><span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a></li>\n</ul>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

@@ -25,8 +25,33 @@
   <ul class="product-line__grid">
   <li><a class="flavour-tile" href="/productos/chicken-yakisoba"><span class="flavour-tile__media"><img src="../assets/images/placeholder.svg" alt=""><span class="badge">New</span></span><span class="flavour-tile__name">Chicken</span></a></li>
   <li><a class="flavour-tile" href="/productos/hot-spicy"><span class="flavour-tile__media"><img src="../assets/images/placeholder.svg" alt=""><span class="badge badge--hot">Hot!</span></span><span class="flavour-tile__name">Hot &amp; Spicy</span></a></li>
+  <li><a class="flavour-tile" href="/productos/chicken-rice-noodles"><span class="flavour-tile__media"><img src="../assets/images/placeholder.svg" alt=""><span class="badge badge--natural">Natural</span></span><span class="flavour-tile__name">Chicken rice noodles</span></a></li>
   </ul>
   </div>
+  </div>
+  </section>
+  <section data-ds="product-line" class="section product-line product-line--dark" id="yakisoba" aria-labelledby="pl-yakisoba">
+  <div class="product-line__inner">
+  <div class="product-line__pack"><img src="../assets/images/placeholder.svg" alt=""></div>
+  <div class="product-line__info">
+  <h3 class="product-line__name" id="pl-yakisoba">Yakisoba</h3>
+  <p class="product-line__description">If you're into saucy flavours, match with our yakisoba.</p>
+  <h4 class="product-line__subtitle">Find your favourite flavour</h4>
+  <ul class="product-line__grid">
+  <li><a class="flavour-tile" href="/productos/classic"><span class="flavour-tile__media"><img src="../assets/images/placeholder.svg" alt=""></span><span class="flavour-tile__name">Classic</span></a></li>
+  <li><a class="flavour-tile" href="/productos/chicken"><span class="flavour-tile__media"><img src="../assets/images/placeholder.svg" alt=""></span><span class="flavour-tile__name">Chicken</span></a></li>
+  </ul>
+  </div>
+  </div>
+  </section>
+  <section data-ds="product-line" class="section product-line product-line--sauces" id="sauces" aria-labelledby="pl-sauces">
+  <div class="product-line__head"><h2 class="section__title">Sauces</h2><p class="section__lead">The most original way to eat your Yatekomo.</p></div>
+  <div class="product-line__inner">
+  <ul class="product-line__grid">
+  <li><a class="flavour-tile flavour-tile--tall" href="/productos/sweet-teriyaki-sauce"><span class="flavour-tile__media"><img src="../assets/images/placeholder.svg" alt=""><span class="badge">New</span></span><span class="flavour-tile__name">Sweet Teriyaki Sauce</span></a></li>
+  <li><a class="flavour-tile flavour-tile--tall" href="/productos/spicy-yakisoba-sauce"><span class="flavour-tile__media"><img src="../assets/images/placeholder.svg" alt=""></span><span class="flavour-tile__name">Spicy Yakisoba Sauce</span></a></li>
+  <li><a class="flavour-tile flavour-tile--tall" href="/productos/mild-sesame-sauce"><span class="flavour-tile__media"><img src="../assets/images/placeholder.svg" alt=""></span><span class="flavour-tile__name">Mild Sesame Sauce</span></a></li>
+  </ul>
   </div>
   </section>
   ```

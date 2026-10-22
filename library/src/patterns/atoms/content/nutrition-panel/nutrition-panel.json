@@ -1,7 +1,7 @@
 {
   "title": "Nutrition panel",
   "description": "Panel de nutrición de la página de producto y de receta: título (h3) · base (por 100 g, % IR) · 7 Nutrition bar (energía, grasas, saturadas, hidratos, azúcares, proteínas, sal; Hi…",
-  "status": "In review",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -32,8 +32,8 @@
       "type": "COMPONENT",
       "variants": 1,
       "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "stale",
-      "verificationLabel": "Caducado"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Panel de nutrición de la página de producto y de receta: título (h3) · base (por 100 g, % IR) · 7 Nutrition bar (energía, grasas, saturadas, hidratos, azúcares, proteínas, sal; Highlight en los claims del pack) · alérgenos en negrita · nota de validación. Accesible como lista de pares nutriente/valor (o <table> con <caption>); las barras son aria-hidden. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods."
@@ -220,7 +220,7 @@
   "ds": {
     "slug": "nutrition-panel",
     "kind": "component",
-    "verification": "stale",
+    "verification": "verified",
     "figmaNodeId": "71:75",
     "contract": "../../../../../../design-system/schemas/components/nutrition-panel.schema.json"
   },

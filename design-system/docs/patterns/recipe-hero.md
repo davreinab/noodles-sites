@@ -1,8 +1,8 @@
-### Recipe hero   ⚙️ synced: 2026-10-22T14:07:02Z
+### Recipe hero   ⚙️ synced: 2026-10-22T14:30:04Z
 
 <!-- ⚙️ GENERATED:start:recipe-hero -->
-- **Figma:** `96:113` · página «Pattern / Detail pages» · COMPONENT_SET · 2 variantes · última sync 2026-10-22T14:07:02Z
-- **Descripción (Figma):** Cabecera de la página de receta: kicker «Receta» · título (h1) · tiempo (timer) y dificultad · descripción · productos usados como Chip M (enlazan a la ficha de producto; lista <ul>) · imagen principal de marca (sin vídeo al principio, regla de negocio). Fondo color/surface/brand. Después van Product details (ingredientes y nutrición de la receta) y Preparation sin Timer con Step Media=True. Desktop: texto a la izquierda; Mobile: imagen arriba. Sin variables propias.
+- **Figma:** `96:113` · página «Pattern / Detail pages» · COMPONENT_SET · 2 variantes · última sync 2026-10-22T14:30:04Z
+- **Descripción (Figma):** Cabecera de la página de receta: kicker «Receta» · título (h1) · tiempo (timer) y dificultad · descripción · productos usados como Chip M (enlazan a la ficha de producto; lista <ul>) · imagen principal de marca (sin vídeo al principio, regla de negocio). Fondo color/surface/brand. Después van Product details (ingredientes y nutrición de la receta) y Preparation sin Timer con Step Media=True. Desktop: texto a la izquierda; Mobile: texto arriba e imagen debajo. Sin variables propias.
 - **Anatomía:** `arrow` → Icon / arrow-left, `Chip` → Size=S, State=Default, `icon-leading` → Icon / check, `Chip` → Size=S, State=Default, `icon-leading` → Icon / check, `Chip` → Size=M, State=Default, `icon-leading` → Icon / check, `Chip` → Size=M, State=Default, `icon-leading` → Icon / check, `icon-send` → Icon / send
 - **API:** `breakpoint`: Desktop, Mobile (por defecto Desktop)
 - **Nombres en Figma:** `breakpoint` ← `Breakpoint`

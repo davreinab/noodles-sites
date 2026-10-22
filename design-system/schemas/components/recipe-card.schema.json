@@ -7,7 +7,7 @@
     "slug": "recipe-card",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T14:07:02Z",
+    "lastSync": "2026-10-22T14:30:04Z",
     "description": "Card de receta (Recipe library, Home, página de producto). Anatomía (wireframe UX): media vertical 4:5 (380×475, imagen de marca; sin vídeo al principio) · meta encima del nombre: People («2 people») · icono timer + Time («20 minutes») · nombre de la receta (h3, Title) · chips de producto Chip S (enlazan a la ficha; ejemplo «Cup Oriental», «Sauce Sesame»). Hover: elevation; Focus: anillo. Clase CSS: .recipe-card. Uso: Recipe library (wireframe 171:3808 y estados 483:5711 / 485:6064).",
     "figmaPage": "Cards",
     "figmaType": "COMPONENT_SET",
@@ -22,18 +22,15 @@
     },
     "anatomyHash": "43c144c11a7e",
     "verification": {
-      "status": "stale",
-      "date": "2026-10-08",
-      "figmaVersion": "b2dba44cfe3e",
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "43c144c11a7e",
       "variantsChecked": [
         "State=Default",
         "State=Hover",
         "State=Focus"
       ],
-      "by": "agent (Claude)",
-      "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)",
-      "staleSince": "2026-10-22T14:07:02Z",
-      "reason": "la anatomía, las variantes, los tokens ligados o la key del maestro cambiaron desde la verificación"
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {
@@ -128,7 +125,7 @@
       "recipe-card__products",
       "recipe-card__title"
     ],
-    "example": "<article data-ds=\"recipe-card\" class=\"recipe-card\">\n<div class=\"recipe-card__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"recipe-card__body\">\n<p class=\"recipe-card__meta\"><span class=\"icon icon-timer\" aria-hidden=\"true\"></span>2 people · 20 minutes</p>\n<h3 class=\"recipe-card__title\"><a class=\"recipe-card__link\" href=\"/recetas/spicy-noodle-salad\">Spicy Noodle Salad with almond and mint</a></h3>\n<ul class=\"recipe-card__products\" aria-label=\"Products used in this recipe\"><li><a class=\"chip\" href=\"/productos/cup-oriental\">Cup Oriental</a></li></ul>\n</div>\n</article>",
+    "example": "<article data-ds=\"recipe-card\" class=\"recipe-card\">\n<div class=\"recipe-card__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"recipe-card__body\">\n<p class=\"recipe-card__meta\">2 people · <span class=\"icon icon-timer\" aria-hidden=\"true\"></span>20 minutes</p>\n<h3 class=\"recipe-card__title\"><a class=\"recipe-card__link\" href=\"/recetas/spicy-noodle-salad\">Spicy Noodle Salad with almond and mint</a></h3>\n<ul class=\"recipe-card__products\" aria-label=\"Products used in this recipe\"><li><a class=\"chip\" href=\"/productos/cup-oriental\">Cup Oriental</a></li></ul>\n</div>\n</article>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

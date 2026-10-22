@@ -9,10 +9,10 @@
 - **Tokens que consume:** `icon/color/default`
 <!-- ⚙️ GENERATED:end:icon-whatsapp -->
 
-- **Propósito:** ⬜ TODO
-- **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; su elemento raíz lleva data-ds="<slug>"; se copia a `code.example` del schema)_
+- **Propósito:** Logo de WhatsApp del botón «Share on WhatsApp» del Share panel.
+- **Ejemplo de código:** Glifo sobre la máscara `.icon`; el color lo toma de `color` (currentColor).
   ```html
-  <!-- ⬜ TODO -->
+  <span data-ds="icon-whatsapp" class="icon icon-whatsapp" aria-hidden="true"></span>
   ```
-- **Accesibilidad (rol, nombre, estados y teclado):** ⬜ TODO
-- **Cuándo usar / qué NO hace:** ⬜ TODO
+- **Accesibilidad (rol, nombre, estados y teclado):** Icono decorativo: `aria-hidden="true"`. El nombre accesible lo da el enlace con `aria-label` («Share on WhatsApp»).
+- **Cuándo usar / qué NO hace:** Icono de marca. Lo usa `share-panel` dentro de un `icon-button` con `aria-label` («Share on WhatsApp»). Solo como glifo dentro de un botón con nombre accesible. No es un botón ni un enlace: el contenedor pone la interacción.

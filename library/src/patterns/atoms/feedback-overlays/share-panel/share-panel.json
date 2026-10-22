@@ -1,7 +1,7 @@
 {
   "title": "Share panel",
   "description": "Share panel: contenido del modal «Share» de la ficha de receta. «Share on your socials» con Icon button Secondary M de marca (WhatsApp, Instagram, Facebook, TikTok, X, Telegram; c…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -32,8 +32,8 @@
       "type": "COMPONENT_SET",
       "variants": 2,
       "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Share panel: contenido del modal «Share» de la ficha de receta. «Share on your socials» con Icon button Secondary M de marca (WhatsApp, Instagram, Facebook, TikTok, X, Telegram; cada uno con aria-label «Share on …» en código); «Page link» con campo de solo lectura (Icon / link + URL) y botón Secondary «Copy link» (feedback «Link copied» en aria-live). Breakpoint Mobile: campo y botón apilados. Uso: modal Share de la ficha de receta (wireframe modal-share-desktop.png / modal-share-mobile.png; Recipe hero «Share recipe»). Clase CSS: .share-panel."
@@ -286,7 +286,7 @@
   "ds": {
     "slug": "share-panel",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "222:2027",
     "contract": "../../../../../../design-system/schemas/components/share-panel.schema.json"
   },

@@ -12,7 +12,17 @@
 <span class="flavour-tile__name">Chicken</span>
 </a></div><figcaption>size=Tall</figcaption></figure>
 </div></section>
-<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">No se han podido pintar: badge=true (no hay clase ni atributo declarados para ella: declara su selector en modifiers). La galería clona el elemento raíz del ejemplo y solo cambia sus clases: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
+<section><h3>badge (con y sin)</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><a data-ds="flavour-tile" class="flavour-tile" href="/productos/chicken-yakisoba">
+<span class="flavour-tile__media"><img src="/assets/ds/images/placeholder.svg" alt=""><span class="badge">New</span></span>
+<span class="flavour-tile__name">Chicken</span>
+</a></div><figcaption>badge=true</figcaption></figure>
+<figure><div class="ds-gallery__stage"><a data-ds="flavour-tile" class="flavour-tile" href="/productos/chicken-yakisoba">
+<span class="flavour-tile__media"><img src="/assets/ds/images/placeholder.svg" alt=""></span>
+<span class="flavour-tile__name">Chicken</span>
+</a></div><figcaption>badge=false</figcaption></figure>
+</div></section>
+<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">La galería clona el elemento raíz del ejemplo y solo cambia sus clases y atributos: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
 </div>{% endraw %}
 {% else %}
 {% raw %}<a data-ds="flavour-tile" class="flavour-tile" href="/productos/chicken-yakisoba">
@@ -22,6 +32,10 @@
 <a data-ds="flavour-tile" class="flavour-tile flavour-tile--tall" href="/productos/sesame-sauce">
 <span class="flavour-tile__media"><img src="/assets/ds/images/placeholder.svg" alt=""><span class="badge badge--hot">Hot!</span></span>
 <span class="flavour-tile__name">Sesame sauce</span>
+</a>
+<a data-ds="flavour-tile" class="flavour-tile" href="/productos/chicken-rice-noodles">
+<span class="flavour-tile__media"><img src="/assets/ds/images/placeholder.svg" alt=""></span>
+<span class="flavour-tile__name">Chicken rice noodles</span>
 </a>{% endraw %}
 {% endif %}
 {% endmacro %}

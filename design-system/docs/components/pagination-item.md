@@ -11,10 +11,15 @@
 - **Text styles:** `Desktop/label`
 <!-- ⚙️ GENERATED:end:pagination-item -->
 
-- **Propósito:** ⬜ TODO
-- **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; su elemento raíz lleva data-ds="<slug>"; se copia a `code.example` del schema)_
+- **Propósito:** Un número, o Previous/Next, dentro del paginador (`.pagination`). Es el enlace o botón de una página: la página actual (`aria-current="page"`), Previous deshabilitado en la primera página (`disabled`), y en móvil solo flecha (`icon`). Lo compone `pagination`; no se usa suelto.
+- **Ejemplo de código:**
   ```html
-  <!-- ⬜ TODO -->
+  <ul data-ds="pagination-item" class="pagination__list">
+  <li><a class="pagination__link pagination__page" href="?page=2">2</a></li>
+  <li><a class="pagination__link pagination__page" href="?page=1" aria-current="page">1</a></li>
+  <li><button class="pagination__link" type="button" disabled aria-label="Previous page"><span class="pagination__text">Previous</span></button></li>
+  <li><a class="pagination__link" href="?page=2" aria-label="Next page"><span class="icon icon-arrow-right" aria-hidden="true"></span></a></li>
+  </ul>
   ```
-- **Accesibilidad (rol, nombre, estados y teclado):** ⬜ TODO
-- **Cuándo usar / qué NO hace:** ⬜ TODO
+- **Accesibilidad (rol, nombre, estados y teclado):** Página actual: `aria-current="page"` (se anuncia como página actual; no se distingue solo por color). Previous en la primera página: `disabled` en el botón, o `aria-disabled="true"` sin `href` si es enlace. Los botones solo con icono llevan `aria-label`. Teclado: Tab y Enter o Espacio.
+- **Cuándo usar / qué NO hace:** Para cada página o flecha de un `pagination`. No gestiona la paginación por sí solo: el enlace apunta a la página que corresponda.

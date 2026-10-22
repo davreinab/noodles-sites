@@ -22,11 +22,14 @@
     },
     "anatomyHash": "64fcfef85e98",
     "verification": {
-      "status": "unverified",
-      "date": null,
-      "figmaVersion": null,
-      "variantsChecked": [],
-      "by": "agent (Claude)"
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "64fcfef85e98",
+      "variantsChecked": [
+        "Variant=Default",
+        "Variant=Brand"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {

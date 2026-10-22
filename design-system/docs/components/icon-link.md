@@ -9,10 +9,10 @@
 - **Tokens que consume:** `icon/color/default`
 <!-- ⚙️ GENERATED:end:icon-link -->
 
-- **Propósito:** ⬜ TODO
-- **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; su elemento raíz lleva data-ds="<slug>"; se copia a `code.example` del schema)_
+- **Propósito:** Glifo de enlace (Lucide «link») del campo «Page link» del Share panel.
+- **Ejemplo de código:** Glifo sobre la máscara `.icon`; el color lo toma de `color` (currentColor).
   ```html
-  <!-- ⬜ TODO -->
+  <span data-ds="icon-link" class="icon icon-link" aria-hidden="true"></span>
   ```
-- **Accesibilidad (rol, nombre, estados y teclado):** ⬜ TODO
-- **Cuándo usar / qué NO hace:** ⬜ TODO
+- **Accesibilidad (rol, nombre, estados y teclado):** Icono decorativo: `aria-hidden="true"`. El nombre lo da el `label` «Page link».
+- **Cuándo usar / qué NO hace:** Icono de UI dentro de `share-panel__field`, junto a la URL de solo lectura. Como indicador visual de «enlace de la página»; no como botón. No es un botón ni un enlace: el contenedor pone la interacción.

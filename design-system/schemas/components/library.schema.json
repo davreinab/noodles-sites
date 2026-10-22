@@ -7,7 +7,7 @@
     "slug": "library",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T14:07:02Z",
+    "lastSync": "2026-10-22T14:30:04Z",
     "description": "Library (Recipe library): cabecera Library head (título «Recipes», subtítulo, Search field, chips de filtro y estado Filtered con «48 results for your search» y «Clear filters»), rejilla de Recipe card (Desktop 4 columnas de 310 px con gutter 24 y space/48 entre filas; Mobile 1 columna) y Pagination (Previous · 1 2 3 … 12 13 · Next) en lugar del botón «Ver más». Solo recetas: la Product library usa Library hero y Product line (Pattern / Libraries). Sin variables propias.",
     "figmaPage": "Pattern / Libraries",
     "figmaType": "COMPONENT_SET",
@@ -22,16 +22,14 @@
     },
     "anatomyHash": "e028ca5ac7c3",
     "verification": {
-      "status": "stale",
+      "status": "verified",
       "date": "2026-10-22",
-      "figmaVersion": "e641caa78440",
+      "figmaVersion": "e028ca5ac7c3",
       "variantsChecked": [
         "Breakpoint=Desktop",
         "Breakpoint=Mobile"
       ],
-      "by": "agent (Claude Haiku, revisado)",
-      "staleSince": "2026-10-22T14:07:02Z",
-      "reason": "la anatomía, las variantes, los tokens ligados o la key del maestro cambiaron desde la verificación"
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {
@@ -147,7 +145,7 @@
       "recipe-card__products",
       "recipe-card__title"
     ],
-    "example": "<section data-ds=\"library\" class=\"library\" aria-label=\"Recipes\">\n<ul class=\"library__grid\">\n<li><article class=\"recipe-card\">\n<div class=\"recipe-card__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"recipe-card__body\">\n<p class=\"recipe-card__meta\"><span class=\"icon icon-timer\" aria-hidden=\"true\"></span>2 people · 20 minutes</p>\n<h3 class=\"recipe-card__title\"><a class=\"recipe-card__link\" href=\"/recetas/spicy-noodle-salad\">Spicy Noodle Salad with almond and mint</a></h3>\n<ul class=\"recipe-card__products\" aria-label=\"Products used in this recipe\"><li><a class=\"chip\" href=\"/productos/cup-oriental\">Cup Oriental</a></li></ul>\n</div>\n</article></li>\n</ul>\n<div class=\"library__more\"><nav class=\"pagination\" aria-label=\"Pagination\">\n<ul class=\"pagination__list\">\n<li><button class=\"pagination__link\" type=\"button\" disabled aria-label=\"Previous page\"><span class=\"icon icon-arrow-left\" aria-hidden=\"true\"></span><span class=\"pagination__text\">Previous</span></button></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=1\" aria-current=\"page\">1</a></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=2\">2</a></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=3\">3</a></li>\n<li><span class=\"pagination__ellipsis\" aria-hidden=\"true\">…</span></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=13\">13</a></li>\n<li><a class=\"pagination__link\" href=\"?page=2\" aria-label=\"Next page\"><span class=\"pagination__text\">Next</span><span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a></li>\n</ul>\n<p class=\"pagination__status\">Page 1 of 13</p>\n</nav></div>\n</section>",
+    "example": "<section data-ds=\"library\" class=\"library\" aria-label=\"Recipes\">\n<ul class=\"library__grid\">\n<li><article class=\"recipe-card\">\n<div class=\"recipe-card__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"recipe-card__body\">\n<p class=\"recipe-card__meta\">2 people · <span class=\"icon icon-timer\" aria-hidden=\"true\"></span>20 minutes</p>\n<h3 class=\"recipe-card__title\"><a class=\"recipe-card__link\" href=\"/recetas/spicy-noodle-salad\">Spicy Noodle Salad with almond and mint</a></h3>\n<ul class=\"recipe-card__products\" aria-label=\"Products used in this recipe\"><li><a class=\"chip\" href=\"/productos/cup-oriental\">Cup Oriental</a></li></ul>\n</div>\n</article></li>\n</ul>\n<div class=\"library__more\"><nav class=\"pagination\" aria-label=\"Pagination\">\n<ul class=\"pagination__list\">\n<li><button class=\"pagination__link\" type=\"button\" disabled aria-label=\"Previous page\"><span class=\"icon icon-arrow-left\" aria-hidden=\"true\"></span><span class=\"pagination__text\">Previous</span></button></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=1\" aria-current=\"page\">1</a></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=2\">2</a></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=3\">3</a></li>\n<li><span class=\"pagination__ellipsis\" aria-hidden=\"true\">…</span></li>\n<li><a class=\"pagination__link pagination__page\" href=\"?page=13\">13</a></li>\n<li><a class=\"pagination__link\" href=\"?page=2\" aria-label=\"Next page\"><span class=\"pagination__text\">Next</span><span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a></li>\n</ul>\n<p class=\"pagination__status\">Page 1 of 13</p>\n</nav></div>\n</section>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

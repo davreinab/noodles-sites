@@ -1,7 +1,7 @@
 {
   "title": "Product line",
   "description": "Product line: bloque de una línea de producto de la Product library (Yatekomo, Yakisoba, Sauces): packshot grande (placeholder 3D, sin fotografía) a la izquierda en Standard y, a…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [
@@ -56,9 +56,9 @@
       "page": "Pattern / Libraries",
       "type": "COMPONENT_SET",
       "variants": 6,
-      "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "lastSync": "2026-10-22 · 14:30 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Product line: bloque de una línea de producto de la Product library (Yatekomo, Yakisoba, Sauces): packshot grande (placeholder 3D, sin fotografía) a la izquierda en Standard y, a la derecha, nombre de línea (h3), descripción, «Find your favourite flavour» (h4) y rejilla de Flavour tile (5 columnas en desktop, 2 en mobile). Surface=Light (crema/blanco) o Dark (tinta) para alternar bandas; Header (opcional) muestra la cabecera de formato («Cups», «Sauces»). Kind=Sauces: sin packshot, rejilla de Flavour tile Tall (3 columnas en desktop; carrusel horizontal en mobile). Uso: Product library (wireframe desktop 396:5932, móvil 396:12565). Clase CSS: .product-line (modificadores .product-line--dark y .product-line--sauces)."
@@ -286,10 +286,14 @@
     "classes": [
       "badge",
       "badge--hot",
+      "badge--natural",
       "flavour-tile",
+      "flavour-tile--tall",
       "flavour-tile__media",
       "flavour-tile__name",
       "product-line",
+      "product-line--dark",
+      "product-line--sauces",
       "product-line__description",
       "product-line__grid",
       "product-line__head",
@@ -328,22 +332,17 @@
     "manualTodo": 0,
     "notes": "",
     "coverage": {
-      "visible": 2,
-      "total": 4,
-      "missing": [
-        "surface=Dark",
-        "kind=Sauces"
-      ],
-      "unchecked": [
-        "header=true"
-      ],
-      "complete": false
+      "visible": 5,
+      "total": 5,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
     }
   },
   "ds": {
     "slug": "product-line",
     "kind": "pattern",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "212:746",
     "contract": "../../../../../../design-system/schemas/components/product-line.schema.json"
   },

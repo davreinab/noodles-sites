@@ -1,7 +1,7 @@
 {
   "title": "Step",
   "description": "Paso numerado de preparación (punto 7 de la SPEC, wireframe UX 396:6073 en el archivo 1YhsCqdqYCHlK4Y82IY5G3). Tarjeta sobre fondo color/surface/inverse: fondo color/surface/card…",
-  "status": "In review",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -32,8 +32,8 @@
       "type": "COMPONENT_SET",
       "variants": 2,
       "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "stale",
-      "verificationLabel": "Caducado"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Paso numerado de preparación (punto 7 de la SPEC, wireframe UX 396:6073 en el archivo 1YhsCqdqYCHlK4Y82IY5G3). Tarjeta sobre fondo color/surface/inverse: fondo color/surface/card (superficie opaca), radio md, padding 24. Número grande en display, sin círculo (step/number-text); texto en negrita (step/text). Media=True: añade la media (imagen o vídeo) bajo el texto. Anatomía: número · contenido (texto + media opcional)."
@@ -174,19 +174,17 @@
     "manualTodo": 0,
     "notes": "",
     "coverage": {
-      "visible": 1,
-      "total": 1,
+      "visible": 2,
+      "total": 2,
       "missing": [],
-      "unchecked": [
-        "title=true"
-      ],
+      "unchecked": [],
       "complete": true
     }
   },
   "ds": {
     "slug": "step",
     "kind": "component",
-    "verification": "stale",
+    "verification": "verified",
     "figmaNodeId": "71:164",
     "contract": "../../../../../../design-system/schemas/components/step.schema.json"
   },

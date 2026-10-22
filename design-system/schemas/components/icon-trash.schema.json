@@ -7,19 +7,28 @@
     "slug": "icon-trash",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T14:07:02Z",
+    "lastSync": "2026-10-22T14:30:04Z",
     "description": "Icono de papelera (Lucide trash-2), trazo 2.5, 24×24. Uso: botón «Clear filters» del estado Filtered de Library head (wireframe 171:3808).",
     "figmaPage": "Iconography",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "fd1476f9c582",
     "lifecycle": {
       "status": "active",
       "since": null,
       "removeIn": null,
       "replacement": null,
       "reason": null
+    },
+    "anatomyHash": "fd1476f9c582",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "fd1476f9c582",
+      "variantsChecked": [
+        "(componente único, sin variantes)"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {
@@ -41,8 +50,11 @@
   },
   "code": {
     "path": "design-system/css/components.css",
-    "classes": [],
-    "example": null,
+    "classes": [
+      "icon",
+      "icon-trash"
+    ],
+    "example": "<span data-ds=\"icon-trash\" class=\"icon icon-trash\" aria-hidden=\"true\"></span>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

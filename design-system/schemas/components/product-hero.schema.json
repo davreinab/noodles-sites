@@ -7,7 +7,7 @@
     "slug": "product-hero",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T14:07:02Z",
+    "lastSync": "2026-10-22T14:30:04Z",
     "description": "Cabecera de la página de producto (punto 5 de la SPEC, wireframe UX 396:6073 en el archivo 1YhsCqdqYCHlK4Y82IY5G3). Fondo color/surface/inverse y textos on-inverse. Enlace de vuelta «All Cups» (Link Standalone Surface=Dark con icono arrow-left) · Badge New · nombre (display, mayúsculas) · descripción (body L) · fila de 2 Chip («100% natural ingredients», «Ready in 3'»). Media: frame «media» con rectángulo de imagen (color/surface/card) y frame «packshot» encima con el envase 3D. Breakpoint=Desktop: texto a la izquierda y media a la derecha. Breakpoint=Mobile: texto arriba y media debajo. Sin galería de miniaturas, lista de highlights ni acciones.",
     "figmaPage": "Pattern / Detail pages",
     "figmaType": "COMPONENT_SET",
@@ -22,16 +22,14 @@
     },
     "anatomyHash": "21c029eecf28",
     "verification": {
-      "status": "stale",
+      "status": "verified",
       "date": "2026-10-22",
-      "figmaVersion": "4020cfd96191",
+      "figmaVersion": "21c029eecf28",
       "variantsChecked": [
         "Breakpoint=Desktop",
         "Breakpoint=Mobile"
       ],
-      "by": "agent (Claude Haiku, revisado)",
-      "staleSince": "2026-10-22T14:07:02Z",
-      "reason": "la anatomía, las variantes, los tokens ligados o la key del maestro cambiaron desde la verificación"
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {
@@ -109,6 +107,7 @@
     "classes": [
       "badge",
       "chip",
+      "chip--m",
       "icon",
       "icon-arrow-left",
       "link",
@@ -129,7 +128,7 @@
       "section",
       "section__inner"
     ],
-    "example": "<section data-ds=\"product-hero\" class=\"section product-hero\" aria-labelledby=\"ph-title\">\n<div class=\"section__inner\">\n<div class=\"product-hero__grid\">\n<div class=\"product-hero__info\">\n<a class=\"link link--dark link--standalone product-hero__back\" href=\"#cups\">All cups <span class=\"icon icon-arrow-left\" aria-hidden=\"true\"></span></a>\n<div class=\"product-hero__tags\"><span class=\"badge\">New</span></div>\n<h1 class=\"page-title product-hero__title\" id=\"ph-title\">Yakisoba chicken</h1>\n<p class=\"product-hero__description\">Your usual chicken, with oriental yakisoba sauce.</p>\n<ul class=\"product-hero__chips\"><li class=\"chip\">100% natural ingredients</li><li class=\"chip\">Ready in 3'</li></ul>\n</div>\n<div class=\"product-hero__media\">\n<img class=\"product-hero__photo\" src=\"assets/images/placeholder.svg\" alt=\"\">\n<img class=\"product-hero__pack\" src=\"assets/images/placeholder.svg\" alt=\"Yakisoba chicken cup\">\n</div>\n</div>\n</div>\n</section>",
+    "example": "<section data-ds=\"product-hero\" class=\"section product-hero\" aria-labelledby=\"ph-title\">\n<div class=\"section__inner\">\n<div class=\"product-hero__grid\">\n<div class=\"product-hero__info\">\n<a class=\"link link--dark link--standalone product-hero__back\" href=\"#cups\">All cups <span class=\"icon icon-arrow-left\" aria-hidden=\"true\"></span></a>\n<div class=\"product-hero__tags\"><span class=\"badge\">New</span></div>\n<h1 class=\"page-title product-hero__title\" id=\"ph-title\">Yakisoba chicken</h1>\n<p class=\"product-hero__description\">Your usual chicken, with oriental yakisoba sauce.</p>\n<ul class=\"product-hero__chips\"><li class=\"chip chip--m\">100% natural ingredients</li><li class=\"chip chip--m\">Ready in 3'</li></ul>\n</div>\n<div class=\"product-hero__media\">\n<img class=\"product-hero__photo\" src=\"assets/images/placeholder.svg\" alt=\"\">\n<img class=\"product-hero__pack\" src=\"assets/images/placeholder.svg\" alt=\"Yakisoba chicken cup\">\n</div>\n</div>\n</div>\n</section>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

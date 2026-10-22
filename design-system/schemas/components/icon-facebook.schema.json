@@ -7,19 +7,28 @@
     "slug": "icon-facebook",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T14:07:02Z",
+    "lastSync": "2026-10-22T14:30:04Z",
     "description": "Logo de Facebook (Simple Icons, CC0), relleno, 24×24. Uso: botón «Share on Facebook» del Share panel (wireframe 396:6290).",
     "figmaPage": "Iconography",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
-    "anatomyHash": "2089b747616d",
     "lifecycle": {
       "status": "active",
       "since": null,
       "removeIn": null,
       "replacement": null,
       "reason": null
+    },
+    "anatomyHash": "2089b747616d",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "2089b747616d",
+      "variantsChecked": [
+        "(componente único, sin variantes)"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {
@@ -41,8 +50,11 @@
   },
   "code": {
     "path": "design-system/css/components.css",
-    "classes": [],
-    "example": null,
+    "classes": [
+      "icon",
+      "icon-facebook"
+    ],
+    "example": "<span data-ds=\"icon-facebook\" class=\"icon icon-facebook\" aria-hidden=\"true\"></span>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

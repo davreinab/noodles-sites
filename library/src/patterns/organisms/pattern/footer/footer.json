@@ -1,7 +1,7 @@
 {
   "title": "Footer",
   "description": "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de…",
-  "status": "In review",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [
@@ -45,8 +45,8 @@
       "type": "COMPONENT_SET",
       "variants": 2,
       "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "stale",
-      "verificationLabel": "Caducado"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de sugerencias («Do you have any ideas, complaints or cravings?» + texto + Button Primary «Send suggestions» con external-link: abre el formulario externo de Calidad) · franja legal por país (Legal notice, Privacy policy, Cookies policy, Legal basis, Contest rules, Contact) y © GBFoods. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Menu. Desktop: logo y enlaces a la izquierda, caja de sugerencias a la derecha; Mobile: la caja arriba. Sin variables propias. Caja de sugerencias con estilo ticket (borde superior dentado, sombra elevation/3, giro -0.6°), como en la landing."
@@ -405,7 +405,7 @@
   "ds": {
     "slug": "footer",
     "kind": "pattern",
-    "verification": "stale",
+    "verification": "verified",
     "figmaNodeId": "56:167",
     "contract": "../../../../../../design-system/schemas/components/footer.schema.json"
   },

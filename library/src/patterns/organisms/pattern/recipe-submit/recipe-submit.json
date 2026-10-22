@@ -1,7 +1,7 @@
 {
   "title": "Recipe submit",
   "description": "Recipe submit: bloque de captación de recetas de usuarios (fondo surface/card, blanco). Título «Do you have your own recipes with Yatekomo?», subtítulo, y a la derecha Textarea («…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -32,8 +32,8 @@
       "type": "COMPONENT_SET",
       "variants": 2,
       "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Recipe submit: bloque de captación de recetas de usuarios (fondo surface/card, blanco). Título «Do you have your own recipes with Yatekomo?», subtítulo, y a la derecha Textarea («Tell us your recipe», ayuda «List the ingredients with their quantities and the time of each step») y Button Primary M «Send my recipe». Breakpoint Mobile: apilado. Uso: Recipe library, entre el banner y el footer (wireframe 171:3808 y móvil 486:13025). Clase CSS: .recipe-submit. Nota: el subtítulo es provisional (la SPEC no lo fija)."
@@ -218,7 +218,7 @@
   "ds": {
     "slug": "recipe-submit",
     "kind": "pattern",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "219:1911",
     "contract": "../../../../../../design-system/schemas/components/recipe-submit.schema.json"
   },

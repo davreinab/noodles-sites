@@ -1,9 +1,15 @@
 {
   "title": "Anchor nav item",
   "description": "Anchor nav item: elemento de la barra de anclas del catálogo; miniatura del envase (hueco product-card/media-bg) + etiqueta en píldora Anton (Desktop/h3). State=Current marca la s…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
-    "contrast": null,
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
     "pending": null,
     "edit": {
       "slug": "anchor-nav-item",
@@ -12,9 +18,9 @@
       "nodeId": "210:57",
       "current": {
         "description": "Anchor nav item: elemento de la barra de anclas del catálogo; miniatura del envase (hueco product-card/media-bg) + etiqueta en píldora Anton (Desktop/h3). State=Current marca la sección visible (aria-current en código; chip seleccionado). Propiedad Label = nombre del formato (Cups, Bags, Sauces). Uso: Anchor nav (Product library, wireframe desktop 396:5932 y móvil 396:12565). Clase CSS: .anchor-nav__item.",
-        "Propósito": "",
-        "Accesibilidad (rol, nombre, estados y teclado)": "",
-        "Cuándo usar / qué NO hace": ""
+        "Propósito": "Un ítem de la barra de anclas (`.anchor-nav`): miniatura del envase y etiqueta en píldora que lleva a una sección del catálogo. State=Current marca la sección visible. Lo compone `anchor-nav`; no se usa suelto.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Es un enlace (`a`) a un ancla; su nombre es el texto de la etiqueta («Cups»). La miniatura es `alt=\"\"` porque es decorativa. Current lleva `aria-current=\"true\"` y el relleno de la píldora (chip seleccionado) solo lo refuerza. Teclado: Tab y Enter siguen el ancla. Foco: contorno de 2 px.",
+        "Cuándo usar / qué NO hace": "Solo dentro de `anchor-nav`. No es un botón de filtro ni una pestaña: desplaza a la sección, no cambia contenido."
       },
       "proposed": {},
       "pending": null
@@ -25,9 +31,9 @@
       "page": "Navigation",
       "type": "COMPONENT_SET",
       "variants": 2,
-      "lastSync": "2026-10-22 · 14:07 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "lastSync": "2026-10-22 · 14:30 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Anchor nav item: elemento de la barra de anclas del catálogo; miniatura del envase (hueco product-card/media-bg) + etiqueta en píldora Anton (Desktop/h3). State=Current marca la sección visible (aria-current en código; chip seleccionado). Propiedad Label = nombre del formato (Cups, Bags, Sauces). Uso: Anchor nav (Product library, wireframe desktop 396:5932 y móvil 396:12565). Clase CSS: .anchor-nav__item."
@@ -98,43 +104,51 @@
     "textStyles": [
       "Desktop/h3"
     ],
-    "classes": [],
+    "classes": [
+      "anchor-nav__item",
+      "anchor-nav__label",
+      "anchor-nav__thumb"
+    ],
     "manual": [
       {
         "label": "Propósito",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Un ítem de la barra de anclas (`.anchor-nav`): miniatura del envase y etiqueta en píldora que lleva a una sección del catálogo. State=Current marca la sección visible. Lo compone `anchor-nav`; no se usa suelto.",
+        "todo": false,
         "na": false,
         "canNA": false
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Es un enlace (`a`) a un ancla; su nombre es el texto de la etiqueta («Cups»). La miniatura es `alt=\"\"` porque es decorativa. Current lleva `aria-current=\"true\"` y el relleno de la píldora (chip seleccionado) solo lo refuerza. Teclado: Tab y Enter siguen el ancla. Foco: contorno de 2 px.",
+        "todo": false,
         "na": false,
         "canNA": true
       },
       {
         "label": "Cuándo usar / qué NO hace",
-        "md": "⬜ TODO",
-        "todo": true,
+        "md": "Solo dentro de `anchor-nav`. No es un botón de filtro ni una pestaña: desplaza a la sección, no cambia contenido.",
+        "todo": false,
         "na": false,
         "canNA": false
       }
     ],
-    "manualTodo": 3,
+    "manualTodo": 0,
     "notes": ""
   },
   "ds": {
     "slug": "anchor-nav-item",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "210:57",
-    "contract": "../../../../../../../design-system/schemas/components/anchor-nav-item.schema.json"
+    "contract": "../../../../../../design-system/schemas/components/anchor-nav-item.schema.json"
   },
   "variants": {
     "default": {
       "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
     }
   }
 }

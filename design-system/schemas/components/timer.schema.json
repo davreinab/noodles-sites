@@ -7,7 +7,7 @@
     "slug": "timer",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T14:07:02Z",
+    "lastSync": "2026-10-22T14:30:04Z",
     "description": "Temporizador de preparación de 3 minutos (punto 8 de la SPEC, wireframe UX 396:6073 en el archivo 1YhsCqdqYCHlK4Y82IY5G3). Tarjeta con fondo color/surface/card, borde fino (timer/border), radio md. Contenido: título «Not a second more!», subtítulo «Use our timer to prepare your Yatekomo», tiempo grande en display (timer/time) con etiqueta de estado, barra lineal de progreso (pista timer/track y relleno timer/progress; sustituye al anillo) y botones: Start como Button Secondary con icono play, y Reset como link (Layout=Default) o como Icon button con icono rotate-ccw (Layout=Compact). Ejes: State=Idle, Running, Paused, Done · Layout=Default (desktop, 560 px) y Compact (mobile, 327 px: fila tiempo · Start · reset).",
     "figmaPage": "Content",
     "figmaType": "COMPONENT_SET",
@@ -22,18 +22,20 @@
     },
     "anatomyHash": "d7cc13acada4",
     "verification": {
-      "status": "stale",
+      "status": "verified",
       "date": "2026-10-22",
-      "figmaVersion": "9acecbdad42a",
+      "figmaVersion": "d7cc13acada4",
       "variantsChecked": [
-        "State=Idle",
-        "State=Running",
-        "State=Paused",
-        "State=Done"
+        "State=Idle, Layout=Default",
+        "State=Running, Layout=Default",
+        "State=Paused, Layout=Default",
+        "State=Done, Layout=Default",
+        "State=Idle, Layout=Compact",
+        "State=Running, Layout=Compact",
+        "State=Paused, Layout=Compact",
+        "State=Done, Layout=Compact"
       ],
-      "by": "agent (Claude Haiku, revisado)",
-      "staleSince": "2026-10-22T14:07:02Z",
-      "reason": "la anatomía, las variantes, los tokens ligados o la key del maestro cambiaron desde la verificación"
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {
@@ -123,6 +125,7 @@
       "icon-play",
       "icon-rotate-ccw",
       "timer",
+      "timer--compact",
       "timer__bar",
       "timer__controls",
       "timer__label",
@@ -133,7 +136,7 @@
       "timer__title",
       "visually-hidden"
     ],
-    "example": "<section data-ds=\"timer\" class=\"timer\" data-state=\"running\" aria-labelledby=\"timer-title\">\n<h3 class=\"timer__title\" id=\"timer-title\">Not a second more!</h3>\n<p class=\"timer__subtitle\">Use our timer to prepare your Yatekomo.</p>\n<span class=\"timer__time\" role=\"timer\">1:48</span>\n<p class=\"timer__label\">Remaining</p>\n<progress class=\"timer__bar\" max=\"100\" value=\"60\" aria-label=\"Time remaining\"></progress>\n<div class=\"timer__controls\">\n<button class=\"button button--secondary\" type=\"button\"><span class=\"icon icon-pause\" aria-hidden=\"true\"></span>Pause</button>\n<button class=\"timer__reset\" type=\"button\"><span>Reset</span><span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></button>\n<button class=\"icon-button icon-button--secondary timer__reset-icon\" type=\"button\" aria-label=\"Reset\"><span class=\"icon icon-rotate-ccw\" aria-hidden=\"true\"></span></button>\n</div>\n<p class=\"visually-hidden\" aria-live=\"polite\"></p>\n</section>\n<section data-ds=\"timer\" class=\"timer\" data-state=\"idle\" aria-labelledby=\"timer-title-ready\">\n<h3 class=\"timer__title\" id=\"timer-title-ready\">Not a second more!</h3>\n<p class=\"timer__subtitle\">Use our timer to prepare your Yatekomo.</p>\n<span class=\"timer__time\" role=\"timer\">3:00</span>\n<p class=\"timer__label\">Ready</p>\n<progress class=\"timer__bar\" max=\"100\" value=\"100\" aria-label=\"Time remaining\"></progress>\n<div class=\"timer__controls\">\n<button class=\"button button--secondary\" type=\"button\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span>Start</button>\n</div>\n<p class=\"visually-hidden\" aria-live=\"polite\"></p>\n</section>\n<section data-ds=\"timer\" class=\"timer\" data-state=\"paused\" aria-labelledby=\"timer-title-paused\">\n<h3 class=\"timer__title\" id=\"timer-title-paused\">Not a second more!</h3>\n<p class=\"timer__subtitle\">Use our timer to prepare your Yatekomo.</p>\n<span class=\"timer__time\" role=\"timer\">1:48</span>\n<p class=\"timer__label\">Paused</p>\n<progress class=\"timer__bar\" max=\"100\" value=\"60\" aria-label=\"Time remaining\"></progress>\n<div class=\"timer__controls\">\n<button class=\"button button--secondary\" type=\"button\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span>Resume</button>\n<button class=\"timer__reset\" type=\"button\"><span>Reset</span><span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></button>\n<button class=\"icon-button icon-button--secondary timer__reset-icon\" type=\"button\" aria-label=\"Reset\"><span class=\"icon icon-rotate-ccw\" aria-hidden=\"true\"></span></button>\n</div>\n<p class=\"visually-hidden\" aria-live=\"polite\">Paused</p>\n</section>\n<section data-ds=\"timer\" class=\"timer\" data-state=\"done\" aria-labelledby=\"timer-title-done\">\n<h3 class=\"timer__title\" id=\"timer-title-done\">Not a second more!</h3>\n<p class=\"timer__subtitle\">Use our timer to prepare your Yatekomo.</p>\n<span class=\"timer__time\" role=\"timer\">0:00</span>\n<p class=\"timer__label\">Done!</p>\n<progress class=\"timer__bar\" max=\"100\" value=\"100\" aria-label=\"Time remaining\"></progress>\n<div class=\"timer__controls\">\n<button class=\"timer__reset\" type=\"button\"><span>Reset</span><span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></button>\n<button class=\"icon-button icon-button--secondary timer__reset-icon\" type=\"button\" aria-label=\"Reset\"><span class=\"icon icon-rotate-ccw\" aria-hidden=\"true\"></span></button>\n</div>\n<p class=\"visually-hidden\" aria-live=\"polite\">Done!</p>\n</section>",
+    "example": "<section data-ds=\"timer\" class=\"timer\" data-state=\"running\" aria-labelledby=\"timer-title\">\n<h3 class=\"timer__title\" id=\"timer-title\">Not a second more!</h3>\n<p class=\"timer__subtitle\">Use our timer to prepare your Yatekomo.</p>\n<span class=\"timer__time\" role=\"timer\">1:48</span>\n<p class=\"timer__label\">Remaining</p>\n<progress class=\"timer__bar\" max=\"100\" value=\"60\" aria-label=\"Time remaining\"></progress>\n<div class=\"timer__controls\">\n<button class=\"button button--secondary\" type=\"button\"><span class=\"icon icon-pause\" aria-hidden=\"true\"></span>Pause</button>\n<button class=\"timer__reset\" type=\"button\"><span>Reset</span><span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></button>\n<button class=\"icon-button icon-button--secondary timer__reset-icon\" type=\"button\" aria-label=\"Reset\"><span class=\"icon icon-rotate-ccw\" aria-hidden=\"true\"></span></button>\n</div>\n<p class=\"visually-hidden\" aria-live=\"polite\"></p>\n</section>\n<section data-ds=\"timer\" class=\"timer\" data-state=\"idle\" aria-labelledby=\"timer-title-ready\">\n<h3 class=\"timer__title\" id=\"timer-title-ready\">Not a second more!</h3>\n<p class=\"timer__subtitle\">Use our timer to prepare your Yatekomo.</p>\n<span class=\"timer__time\" role=\"timer\">3:00</span>\n<p class=\"timer__label\">Ready</p>\n<progress class=\"timer__bar\" max=\"100\" value=\"100\" aria-label=\"Time remaining\"></progress>\n<div class=\"timer__controls\">\n<button class=\"button button--secondary\" type=\"button\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span>Start</button>\n</div>\n<p class=\"visually-hidden\" aria-live=\"polite\"></p>\n</section>\n<section data-ds=\"timer\" class=\"timer timer--compact\" data-state=\"paused\" aria-labelledby=\"timer-title-compact\">\n<h3 class=\"timer__title\" id=\"timer-title-compact\">Not a second more!</h3>\n<p class=\"timer__subtitle\">Use our timer to prepare your Yatekomo.</p>\n<span class=\"timer__time\" role=\"timer\">1:48</span>\n<div class=\"timer__controls\">\n<button class=\"button button--secondary\" type=\"button\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span>Resume</button>\n<button class=\"icon-button icon-button--secondary timer__reset-icon\" type=\"button\" aria-label=\"Reset\"><span class=\"icon icon-rotate-ccw\" aria-hidden=\"true\"></span></button>\n<button class=\"timer__reset\" type=\"button\"><span>Reset</span><span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></button>\n</div>\n<p class=\"timer__label\">Paused</p>\n<progress class=\"timer__bar\" max=\"100\" value=\"60\" aria-label=\"Time remaining\"></progress>\n<p class=\"visually-hidden\" aria-live=\"polite\"></p>\n</section>\n<section data-ds=\"timer\" class=\"timer\" data-state=\"paused\" aria-labelledby=\"timer-title-paused\">\n<h3 class=\"timer__title\" id=\"timer-title-paused\">Not a second more!</h3>\n<p class=\"timer__subtitle\">Use our timer to prepare your Yatekomo.</p>\n<span class=\"timer__time\" role=\"timer\">1:48</span>\n<p class=\"timer__label\">Paused</p>\n<progress class=\"timer__bar\" max=\"100\" value=\"60\" aria-label=\"Time remaining\"></progress>\n<div class=\"timer__controls\">\n<button class=\"button button--secondary\" type=\"button\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span>Resume</button>\n<button class=\"timer__reset\" type=\"button\"><span>Reset</span><span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></button>\n<button class=\"icon-button icon-button--secondary timer__reset-icon\" type=\"button\" aria-label=\"Reset\"><span class=\"icon icon-rotate-ccw\" aria-hidden=\"true\"></span></button>\n</div>\n<p class=\"visually-hidden\" aria-live=\"polite\">Paused</p>\n</section>\n<section data-ds=\"timer\" class=\"timer\" data-state=\"done\" aria-labelledby=\"timer-title-done\">\n<h3 class=\"timer__title\" id=\"timer-title-done\">Not a second more!</h3>\n<p class=\"timer__subtitle\">Use our timer to prepare your Yatekomo.</p>\n<span class=\"timer__time\" role=\"timer\">0:00</span>\n<p class=\"timer__label\">Done!</p>\n<progress class=\"timer__bar\" max=\"100\" value=\"100\" aria-label=\"Time remaining\"></progress>\n<div class=\"timer__controls\">\n<button class=\"timer__reset\" type=\"button\"><span>Reset</span><span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></button>\n<button class=\"icon-button icon-button--secondary timer__reset-icon\" type=\"button\" aria-label=\"Reset\"><span class=\"icon icon-rotate-ccw\" aria-hidden=\"true\"></span></button>\n</div>\n<p class=\"visually-hidden\" aria-live=\"polite\">Done!</p>\n</section>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

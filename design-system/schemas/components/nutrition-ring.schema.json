@@ -20,7 +20,19 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "e234173409a1"
+    "anatomyHash": "e234173409a1",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "e234173409a1",
+      "variantsChecked": [
+        "Variant=Default, Breakpoint=Desktop",
+        "Variant=Highlight, Breakpoint=Desktop",
+        "Variant=Default, Breakpoint=Mobile",
+        "Variant=Highlight, Breakpoint=Mobile"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
   },
   "api": {
     "props": [

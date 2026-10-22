@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-22T14:07:02Z",
+  "lastSync": "2026-10-22T14:30:04Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -639,7 +639,10 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "icon",
+          "icon-link"
+        ]
       }
     },
     {
@@ -661,7 +664,10 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "icon",
+          "icon-send"
+        ]
       }
     },
     {
@@ -683,7 +689,10 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "icon",
+          "icon-trash"
+        ]
       }
     },
     {
@@ -705,7 +714,10 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "icon",
+          "icon-whatsapp"
+        ]
       }
     },
     {
@@ -727,7 +739,10 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "icon",
+          "icon-facebook"
+        ]
       }
     },
     {
@@ -749,7 +764,10 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "icon",
+          "icon-telegram"
+        ]
       }
     },
     {
@@ -1295,7 +1313,11 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "anchor-nav__item",
+          "anchor-nav__label",
+          "anchor-nav__thumb"
+        ]
       }
     },
     {
@@ -1350,7 +1372,14 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "icon",
+          "icon-arrow-right",
+          "pagination__link",
+          "pagination__list",
+          "pagination__page",
+          "pagination__text"
+        ]
       }
     },
     {
@@ -1868,6 +1897,7 @@
           "icon-play",
           "icon-rotate-ccw",
           "timer",
+          "timer--compact",
           "timer__bar",
           "timer__controls",
           "timer__label",
@@ -1934,7 +1964,13 @@
       },
       "codeSource": {
         "path": "design-system/css/components.css",
-        "classes": []
+        "classes": [
+          "allergen-table__item",
+          "allergen-table__item--present",
+          "allergen-table__mark",
+          "allergen-table__name",
+          "visually-hidden"
+        ]
       }
     },
     {
@@ -2379,6 +2415,7 @@
           "lang-switch__option",
           "logo",
           "navbar",
+          "navbar--scrolled",
           "navbar__actions",
           "navbar__inner",
           "navbar__start"
@@ -3015,10 +3052,14 @@
         "classes": [
           "badge",
           "badge--hot",
+          "badge--natural",
           "flavour-tile",
+          "flavour-tile--tall",
           "flavour-tile__media",
           "flavour-tile__name",
           "product-line",
+          "product-line--dark",
+          "product-line--sauces",
           "product-line__description",
           "product-line__grid",
           "product-line__head",
@@ -3152,6 +3193,7 @@
         "classes": [
           "badge",
           "chip",
+          "chip--m",
           "icon",
           "icon-arrow-left",
           "link",

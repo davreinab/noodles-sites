@@ -1,0 +1,8 @@
+{% macro render(data) %}
+{% if data.view == "todas" %}
+<p class="ds-gallery__note" style="font:14px/1.5 system-ui;color:#1f1f1f;max-width:70ch">No se han podido pintar: current=true (no hay clase ni atributo declarados para ella: declara su selector en modifiers).</p>
+{% else %}
+{% raw %}<a data-ds="anchor-nav-item" class="anchor-nav__item" href="#cups" aria-current="true"><img class="anchor-nav__thumb" src="/assets/ds/images/placeholder.svg" alt=""><span class="anchor-nav__label">Cups</span></a>
+<a data-ds="anchor-nav-item" class="anchor-nav__item" href="#bags"><img class="anchor-nav__thumb" src="/assets/ds/images/placeholder.svg" alt=""><span class="anchor-nav__label">Bags</span></a>{% endraw %}
+{% endif %}
+{% endmacro %}

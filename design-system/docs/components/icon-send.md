@@ -9,10 +9,10 @@
 - **Tokens que consume:** `icon/color/default`
 <!-- ⚙️ GENERATED:end:icon-send -->
 
-- **Propósito:** ⬜ TODO
-- **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; su elemento raíz lleva data-ds="<slug>"; se copia a `code.example` del schema)_
+- **Propósito:** Glifo de envío (avión de papel, Lucide «send»).
+- **Ejemplo de código:** Glifo sobre la máscara `.icon`; el color lo toma de `color` (currentColor).
   ```html
-  <!-- ⬜ TODO -->
+  <span data-ds="icon-send" class="icon icon-send" aria-hidden="true"></span>
   ```
-- **Accesibilidad (rol, nombre, estados y teclado):** ⬜ TODO
-- **Cuándo usar / qué NO hace:** ⬜ TODO
+- **Accesibilidad (rol, nombre, estados y teclado):** Icono decorativo: `aria-hidden="true"`. El nombre lo da el botón que lo contiene.
+- **Cuándo usar / qué NO hace:** Icono de UI para acciones de envío, en el texto o en un botón de la pantalla que lo incluya. Como acción de enviar solo si el botón contenedor tiene nombre accesible; no aparece en el Share panel. No es un botón ni un enlace: el contenedor pone la interacción.

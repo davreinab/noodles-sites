@@ -11,10 +11,11 @@
 - **Text styles:** `Desktop/h3`
 <!-- ⚙️ GENERATED:end:anchor-nav-item -->
 
-- **Propósito:** ⬜ TODO
-- **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; su elemento raíz lleva data-ds="<slug>"; se copia a `code.example` del schema)_
+- **Propósito:** Un ítem de la barra de anclas (`.anchor-nav`): miniatura del envase y etiqueta en píldora que lleva a una sección del catálogo. State=Current marca la sección visible. Lo compone `anchor-nav`; no se usa suelto.
+- **Ejemplo de código:**
   ```html
-  <!-- ⬜ TODO -->
+  <a data-ds="anchor-nav-item" class="anchor-nav__item" href="#cups" aria-current="true"><img class="anchor-nav__thumb" src="../assets/images/placeholder.svg" alt=""><span class="anchor-nav__label">Cups</span></a>
+  <a data-ds="anchor-nav-item" class="anchor-nav__item" href="#bags"><img class="anchor-nav__thumb" src="../assets/images/placeholder.svg" alt=""><span class="anchor-nav__label">Bags</span></a>
   ```
-- **Accesibilidad (rol, nombre, estados y teclado):** ⬜ TODO
-- **Cuándo usar / qué NO hace:** ⬜ TODO
+- **Accesibilidad (rol, nombre, estados y teclado):** Es un enlace (`a`) a un ancla; su nombre es el texto de la etiqueta («Cups»). La miniatura es `alt=""` porque es decorativa. Current lleva `aria-current="true"` y el relleno de la píldora (chip seleccionado) solo lo refuerza. Teclado: Tab y Enter siguen el ancla. Foco: contorno de 2 px.
+- **Cuándo usar / qué NO hace:** Solo dentro de `anchor-nav`. No es un botón de filtro ni una pestaña: desplaza a la sección, no cambia contenido.

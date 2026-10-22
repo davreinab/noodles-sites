@@ -22,16 +22,14 @@
     },
     "anatomyHash": "d0c2cf54ff84",
     "verification": {
-      "status": "stale",
+      "status": "verified",
       "date": "2026-10-22",
-      "figmaVersion": "7d3cdee35b0d",
+      "figmaVersion": "d0c2cf54ff84",
       "variantsChecked": [
         "Level=Main",
         "Level=Secondary"
       ],
-      "by": "agent (Claude Haiku, revisado)",
-      "staleSince": "2026-10-22T14:07:02Z",
-      "reason": "la anatomía, las variantes, los tokens ligados o la key del maestro cambiaron desde la verificación"
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {

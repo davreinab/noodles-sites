@@ -20,7 +20,16 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "a060d66f0c83"
+    "anatomyHash": "a060d66f0c83",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "a060d66f0c83",
+      "variantsChecked": [
+        "trazo SVG exportado del maestro = assets/icons/triangle-alert.svg"
+      ],
+      "by": "agent (Claude Haiku, revisado)"
+    }
   },
   "api": {
     "props": [],

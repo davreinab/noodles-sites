@@ -20,7 +20,16 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "2fcbf57894e4"
+    "anatomyHash": "2fcbf57894e4",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "2fcbf57894e4",
+      "variantsChecked": [
+        "trazo SVG exportado del maestro = assets/icons/rotate-ccw.svg"
+      ],
+      "by": "agent (Claude Haiku, revisado)"
+    }
   },
   "api": {
     "props": [],

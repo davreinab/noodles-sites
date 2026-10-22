@@ -20,7 +20,17 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "e641caa78440"
+    "anatomyHash": "e641caa78440",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "e641caa78440",
+      "variantsChecked": [
+        "Breakpoint=Desktop",
+        "Breakpoint=Mobile"
+      ],
+      "by": "agent (Claude Haiku, revisado)"
+    }
   },
   "api": {
     "props": [

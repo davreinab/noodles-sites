@@ -1,7 +1,7 @@
 {
   "title": "Preparation",
   "description": "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en <ol> · Timer de 3…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -32,8 +32,8 @@
       "type": "COMPONENT_SET",
       "variants": 2,
       "lastSync": "2026-10-22 · 09:38 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en <ol> · Timer de 3 minutos. El texto de los pasos sale del envase. Desktop: pasos a la izquierda; vídeo y temporizador a la derecha (560 px). Mobile: vídeo arriba, pasos y temporizador al final (al alcance mientras se cocina). En la Recipe page se reutiliza sin el Timer y con Step Media=True. Sin variables propias."
@@ -267,7 +267,7 @@
   "ds": {
     "slug": "preparation",
     "kind": "pattern",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "95:1158",
     "contract": "../../../../../../design-system/schemas/components/preparation.schema.json"
   },

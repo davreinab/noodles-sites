@@ -7,7 +7,7 @@
     "slug": "select",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T09:38:13Z",
+    "lastSync": "2026-10-22T09:55:34Z",
     "description": "Selector de una opción: país o idioma (Aiki NL/FR), filtros. Open muestra el menú (elevation/3) con la opción activa en amarillo de marca. En código se recomienda <select> nativo o un listbox accesible (teclado: flechas, Enter, Esc). Error con borde, icono y mensaje. Valor y opciones se editan en la instancia.",
     "figmaPage": "Forms",
     "figmaType": "COMPONENT_SET",
@@ -20,7 +20,21 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "cd5ef9a2da26"
+    "anatomyHash": "cd5ef9a2da26",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "cd5ef9a2da26",
+      "variantsChecked": [
+        "State=Default",
+        "State=Hover",
+        "State=Focus",
+        "State=Open",
+        "State=Error",
+        "State=Disabled"
+      ],
+      "by": "agent (Claude Haiku, revisado)"
+    }
   },
   "api": {
     "props": [
@@ -125,11 +139,12 @@
       "field__control",
       "field__error",
       "field__label",
+      "field__required",
       "field__select",
       "icon",
       "icon-circle-alert"
     ],
-    "example": "<div data-ds=\"select\" class=\"field\">\n<label class=\"field__label\" for=\"pais\">País</label>\n<div class=\"field__select\">\n<select class=\"field__control\" id=\"pais\" name=\"pais\" aria-invalid=\"true\" aria-describedby=\"pais-error\">\n<option value=\"\">Elige una opción</option>\n<option value=\"es\">España</option>\n<option value=\"fr\">Francia</option>\n</select>\n</div>\n<p class=\"field__error\" id=\"pais-error\"><span class=\"icon icon-circle-alert\" aria-hidden=\"true\"></span>Elige un país</p>\n</div>",
+    "example": "<div data-ds=\"select\" class=\"field\">\n<label class=\"field__label\" for=\"pais\">País<span class=\"field__required\" aria-hidden=\"true\">*</span></label>\n<div class=\"field__select\">\n<select class=\"field__control\" id=\"pais\" name=\"pais\" required aria-invalid=\"true\" aria-describedby=\"pais-error\">\n<option value=\"\">Elige una opción</option>\n<option value=\"es\">España</option>\n<option value=\"fr\">Francia</option>\n</select>\n</div>\n<p class=\"field__error\" id=\"pais-error\"><span class=\"icon icon-circle-alert\" aria-hidden=\"true\"></span>Elige un país</p>\n</div>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

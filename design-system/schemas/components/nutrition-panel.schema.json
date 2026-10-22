@@ -7,7 +7,7 @@
     "slug": "nutrition-panel",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T09:38:13Z",
+    "lastSync": "2026-10-22T09:54:10Z",
     "description": "Panel de nutrición de la página de producto y de receta: título (h3) · base (por 100 g, % IR) · 7 Nutrition bar (energía, grasas, saturadas, hidratos, azúcares, proteínas, sal; Highlight en los claims del pack) · alérgenos en negrita · nota de validación. Accesible como lista de pares nutriente/valor (o <table> con <caption>); las barras son aria-hidden. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods.",
     "figmaPage": "Content",
     "figmaType": "COMPONENT",
@@ -20,7 +20,16 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "4b06f681cd92"
+    "anatomyHash": "4b06f681cd92",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "4b06f681cd92",
+      "variantsChecked": [
+        "única"
+      ],
+      "by": "agent (Claude Haiku, revisado)"
+    }
   },
   "api": {
     "props": [],
@@ -85,11 +94,12 @@
       "nutrition-panel",
       "nutrition-panel__allergens",
       "nutrition-panel__base",
+      "nutrition-panel__header",
       "nutrition-panel__list",
       "nutrition-panel__note",
       "nutrition-panel__title"
     ],
-    "example": "<section data-ds=\"nutrition-panel\" class=\"nutrition-panel\" aria-labelledby=\"nut-title\">\n<h3 class=\"nutrition-panel__title\" id=\"nut-title\">Nutrición</h3>\n<p class=\"nutrition-panel__base\">Por 100 g · % de la ingesta de referencia de un adulto medio (8.400 kJ / 2.000 kcal).</p>\n<ul class=\"nutrition-panel__list\">\n<li class=\"nutrition-bar\"><div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Grasas</span><span class=\"nutrition-bar__amount\"><span class=\"nutrition-bar__value\">16 g</span><span class=\"nutrition-bar__percent\">23 % IR</span></span></div><meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"23\" aria-hidden=\"true\"></meter></li>\n<li class=\"nutrition-bar nutrition-bar--highlight\"><div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Sal</span><span class=\"nutrition-bar__amount\"><span class=\"badge badge--natural\">−20 %</span><span class=\"nutrition-bar__value\">1,9 g</span><span class=\"nutrition-bar__percent\">32 % IR</span></span></div><meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"32\" aria-hidden=\"true\"></meter></li>\n</ul>\n<p class=\"nutrition-panel__allergens\"><strong>Alérgenos:</strong> contiene <strong>trigo</strong> y <strong>soja</strong>.</p>\n<p class=\"nutrition-panel__note\">Valores validados por el equipo de Nutrición de GB Foods.</p>\n</section>",
+    "example": "<section data-ds=\"nutrition-panel\" class=\"nutrition-panel\" aria-labelledby=\"nut-title\">\n<div class=\"nutrition-panel__header\">\n<h3 class=\"nutrition-panel__title\" id=\"nut-title\">Nutrición</h3>\n<p class=\"nutrition-panel__base\">Por 100 g · % de la ingesta de referencia de un adulto medio (8.400 kJ / 2.000 kcal).</p>\n</div>\n<ul class=\"nutrition-panel__list\">\n<li class=\"nutrition-bar\"><div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Grasas</span><span class=\"nutrition-bar__amount\"><span class=\"nutrition-bar__value\">16 g</span><span class=\"nutrition-bar__percent\">23 % IR</span></span></div><meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"23\" aria-hidden=\"true\"></meter></li>\n<li class=\"nutrition-bar nutrition-bar--highlight\"><div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Sal</span><span class=\"nutrition-bar__amount\"><span class=\"badge badge--natural\">−20 %</span><span class=\"nutrition-bar__value\">1,9 g</span><span class=\"nutrition-bar__percent\">32 % IR</span></span></div><meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"32\" aria-hidden=\"true\"></meter></li>\n</ul>\n<p class=\"nutrition-panel__allergens\"><strong>Alérgenos:</strong> contiene <strong>trigo</strong> y <strong>soja</strong>.</p>\n<p class=\"nutrition-panel__note\">Valores validados por el equipo de Nutrición de GB Foods.</p>\n</section>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,

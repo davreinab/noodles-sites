@@ -20,7 +20,16 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "026d3815c3cb"
+    "anatomyHash": "026d3815c3cb",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "026d3815c3cb",
+      "variantsChecked": [
+        "trazo SVG exportado del maestro = assets/icons/circle-alert.svg"
+      ],
+      "by": "agent (Claude Haiku, revisado)"
+    }
   },
   "api": {
     "props": [],

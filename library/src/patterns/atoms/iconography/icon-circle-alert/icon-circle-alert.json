@@ -1,7 +1,7 @@
 {
   "title": "Icon / circle-alert",
   "description": "Aviso o error: mensajes de error de formulario, alertas. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -32,8 +32,8 @@
       "type": "COMPONENT",
       "variants": 1,
       "lastSync": "2026-10-22 · 09:38 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Aviso o error: mensajes de error de formulario, alertas. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*"
@@ -91,7 +91,7 @@
   "ds": {
     "slug": "icon-circle-alert",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "46:78",
     "contract": "../../../../../../design-system/schemas/components/icon-circle-alert.schema.json"
   },

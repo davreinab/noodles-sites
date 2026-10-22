@@ -1,7 +1,7 @@
 {
   "title": "Search field",
   "description": "Campo de búsqueda (resultados en modal). Sin etiqueta visible: requiere aria-label («Buscar») y role=\"search\" en el formulario. Lupa delante; con texto aparece el botón borrar (ar…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [
@@ -51,8 +51,8 @@
       "type": "COMPONENT_SET",
       "variants": 4,
       "lastSync": "2026-10-22 · 09:38 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Campo de búsqueda (resultados en modal). Sin etiqueta visible: requiere aria-label («Buscar») y role=\"search\" en el formulario. Lupa delante; con texto aparece el botón borrar (aria-label «Borrar búsqueda»). Forma pill para distinguirlo de los campos de formulario. El valor se edita en la instancia."
@@ -197,7 +197,7 @@
   "ds": {
     "slug": "search-field",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "48:177",
     "contract": "../../../../../../design-system/schemas/components/search-field.schema.json"
   },

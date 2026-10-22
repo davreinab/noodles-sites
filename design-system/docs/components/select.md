@@ -16,9 +16,9 @@
 - **Ejemplo de código:**
   ```html
   <div data-ds="select" class="field">
-  <label class="field__label" for="pais">País</label>
+  <label class="field__label" for="pais">País<span class="field__required" aria-hidden="true">*</span></label>
   <div class="field__select">
-  <select class="field__control" id="pais" name="pais" aria-invalid="true" aria-describedby="pais-error">
+  <select class="field__control" id="pais" name="pais" required aria-invalid="true" aria-describedby="pais-error">
   <option value="">Elige una opción</option>
   <option value="es">España</option>
   <option value="fr">Francia</option>

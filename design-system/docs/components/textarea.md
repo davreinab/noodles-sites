@@ -16,8 +16,8 @@
 - **Ejemplo de código:**
   ```html
   <div data-ds="textarea" class="field">
-  <label class="field__label" for="mensaje">Mensaje</label>
-  <textarea class="field__control field__control--textarea" id="mensaje" name="mensaje" placeholder="Escribe aquí" aria-describedby="mensaje-ayuda"></textarea>
+  <label class="field__label" for="mensaje">Mensaje<span class="field__required" aria-hidden="true">*</span></label>
+  <textarea class="field__control field__control--textarea" id="mensaje" name="mensaje" placeholder="Escribe aquí" required aria-describedby="mensaje-ayuda"></textarea>
   <p class="field__helper" id="mensaje-ayuda">Máximo 500 caracteres</p>
   </div>
   <div data-ds="textarea" class="field">

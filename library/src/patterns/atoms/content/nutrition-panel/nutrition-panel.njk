@@ -1,7 +1,9 @@
 {% macro render(data) %}
 {% raw %}<section data-ds="nutrition-panel" class="nutrition-panel" aria-labelledby="nut-title">
+<div class="nutrition-panel__header">
 <h3 class="nutrition-panel__title" id="nut-title">Nutrición</h3>
 <p class="nutrition-panel__base">Por 100 g · % de la ingesta de referencia de un adulto medio (8.400 kJ / 2.000 kcal).</p>
+</div>
 <ul class="nutrition-panel__list">
 <li class="nutrition-bar"><div class="nutrition-bar__row"><span class="nutrition-bar__label">Grasas</span><span class="nutrition-bar__amount"><span class="nutrition-bar__value">16 g</span><span class="nutrition-bar__percent">23 % IR</span></span></div><meter class="nutrition-bar__meter" min="0" max="100" value="23" aria-hidden="true"></meter></li>
 <li class="nutrition-bar nutrition-bar--highlight"><div class="nutrition-bar__row"><span class="nutrition-bar__label">Sal</span><span class="nutrition-bar__amount"><span class="badge badge--natural">−20 %</span><span class="nutrition-bar__value">1,9 g</span><span class="nutrition-bar__percent">32 % IR</span></span></div><meter class="nutrition-bar__meter" min="0" max="100" value="32" aria-hidden="true"></meter></li>

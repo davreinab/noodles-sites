@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-22T09:38:13Z",
+  "lastSync": "2026-10-22T09:55:34Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -965,6 +965,7 @@
           "field__error",
           "field__helper",
           "field__label",
+          "field__required",
           "icon",
           "icon-circle-alert"
         ]
@@ -997,6 +998,7 @@
           "field__control",
           "field__error",
           "field__label",
+          "field__required",
           "field__select",
           "icon",
           "icon-circle-alert"
@@ -1507,6 +1509,7 @@
           "nutrition-panel",
           "nutrition-panel__allergens",
           "nutrition-panel__base",
+          "nutrition-panel__header",
           "nutrition-panel__list",
           "nutrition-panel__note",
           "nutrition-panel__title"

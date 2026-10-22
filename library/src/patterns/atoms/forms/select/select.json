@@ -1,7 +1,7 @@
 {
   "title": "Select",
   "description": "Selector de una opción: país o idioma (Aiki NL/FR), filtros. Open muestra el menú (elevation/3) con la opción activa en amarillo de marca. En código se recomienda <select> nativo…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -31,9 +31,9 @@
       "page": "Forms",
       "type": "COMPONENT_SET",
       "variants": 6,
-      "lastSync": "2026-10-22 · 09:38 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "lastSync": "2026-10-22 · 09:55 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Selector de una opción: país o idioma (Aiki NL/FR), filtros. Open muestra el menú (elevation/3) con la opción activa en amarillo de marca. En código se recomienda <select> nativo o un listbox accesible (teclado: flechas, Enter, Esc). Error con borde, icono y mensaje. Valor y opciones se editan en la instancia."
@@ -186,6 +186,7 @@
       "field__control",
       "field__error",
       "field__label",
+      "field__required",
       "field__select",
       "icon",
       "icon-circle-alert"
@@ -219,7 +220,7 @@
   "ds": {
     "slug": "select",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "48:141",
     "contract": "../../../../../../design-system/schemas/components/select.schema.json"
   },

@@ -9,8 +9,8 @@
   "contracts": 77,
   "contractsWithCss": 77,
   "verification": {
-    "verified": 44,
-    "unverified": 33,
+    "verified": 77,
+    "unverified": 0,
     "stale": 0,
     "internal": 0
   },

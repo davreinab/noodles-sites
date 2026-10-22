@@ -20,7 +20,16 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "09f11d52202f"
+    "anatomyHash": "09f11d52202f",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "09f11d52202f",
+      "variantsChecked": [
+        "trazo SVG exportado del maestro = assets/icons/chevron-down.svg"
+      ],
+      "by": "agent (Claude Haiku, revisado)"
+    }
   },
   "api": {
     "props": [],

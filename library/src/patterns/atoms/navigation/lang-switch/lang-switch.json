@@ -1,7 +1,7 @@
 {
   "title": "Lang switch",
   "description": "Selector de idioma de dos opciones (p. ej. NL | FR en Aiki). Solo en marcas multiidioma. La opción activa en tinta. En código: enlaces a la versión de idioma con hreflang y aria-c…",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -32,8 +32,8 @@
       "type": "COMPONENT_SET",
       "variants": 2,
       "lastSync": "2026-10-22 · 09:38 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Selector de idioma de dos opciones (p. ej. NL | FR en Aiki). Solo en marcas multiidioma. La opción activa en tinta. En código: enlaces a la versión de idioma con hreflang y aria-current en la activa; cada opción con lang=\"nl\"/\"fr\"."
@@ -150,7 +150,7 @@
   "ds": {
     "slug": "lang-switch",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "54:71",
     "contract": "../../../../../../design-system/schemas/components/lang-switch.schema.json"
   },

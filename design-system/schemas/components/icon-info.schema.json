@@ -20,7 +20,16 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "8d9359b1661b"
+    "anatomyHash": "8d9359b1661b",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-22",
+      "figmaVersion": "8d9359b1661b",
+      "variantsChecked": [
+        "trazo SVG exportado del maestro = assets/icons/info.svg"
+      ],
+      "by": "agent (Claude Haiku, revisado)"
+    }
   },
   "api": {
     "props": [],

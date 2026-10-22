@@ -62,7 +62,7 @@
 <div class="sc-root">
   <header class="sc-header">
     <h1 class="sc-header__title">GB Noodles · Microsites · Design System</h1>
-    <span class="sc-header__meta" data-sc-last-sync>última sync 2026-10-22T09:38:13Z</span>
+    <span class="sc-header__meta" data-sc-last-sync>última sync 2026-10-22T09:55:34Z</span>
     <span class="sc-header__spacer"></span>
     <button class="sc-btn" type="button" data-sc-theme-toggle aria-pressed="false">Tema oscuro</button>
   </header>
@@ -183,8 +183,8 @@
 &lt;p class=&quot;field__error&quot; id=&quot;email-error&quot;&gt;&lt;span class=&quot;icon icon-circle-alert&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Este campo es obligatorio&lt;/p&gt;
 &lt;/div&gt;</pre></div>
 <div class="sc-card" id="sc-textarea"><div class="sc-card__head"><h3>Textarea</h3><span class="sc-tag">6 variantes · 47:247 · icono</span></div><div class="sc-demo"><div data-ds="textarea" class="field">
-<label class="field__label" for="mensaje">Mensaje</label>
-<textarea class="field__control field__control--textarea" id="mensaje" name="mensaje" placeholder="Escribe aquí" aria-describedby="mensaje-ayuda"></textarea>
+<label class="field__label" for="mensaje">Mensaje<span class="field__required" aria-hidden="true">*</span></label>
+<textarea class="field__control field__control--textarea" id="mensaje" name="mensaje" placeholder="Escribe aquí" required aria-describedby="mensaje-ayuda"></textarea>
 <p class="field__helper" id="mensaje-ayuda">Máximo 500 caracteres</p>
 </div>
 <div data-ds="textarea" class="field">
@@ -192,8 +192,8 @@
 <textarea class="field__control field__control--textarea" id="respuesta" aria-invalid="true" aria-describedby="respuesta-error"></textarea>
 <p class="field__error" id="respuesta-error"><span class="icon icon-circle-alert" aria-hidden="true"></span>Este campo es obligatorio</p>
 </div></div><pre class="sc-code">&lt;div data-ds=&quot;textarea&quot; class=&quot;field&quot;&gt;
-&lt;label class=&quot;field__label&quot; for=&quot;mensaje&quot;&gt;Mensaje&lt;/label&gt;
-&lt;textarea class=&quot;field__control field__control--textarea&quot; id=&quot;mensaje&quot; name=&quot;mensaje&quot; placeholder=&quot;Escribe aquí&quot; aria-describedby=&quot;mensaje-ayuda&quot;&gt;&lt;/textarea&gt;
+&lt;label class=&quot;field__label&quot; for=&quot;mensaje&quot;&gt;Mensaje&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+&lt;textarea class=&quot;field__control field__control--textarea&quot; id=&quot;mensaje&quot; name=&quot;mensaje&quot; placeholder=&quot;Escribe aquí&quot; required aria-describedby=&quot;mensaje-ayuda&quot;&gt;&lt;/textarea&gt;
 &lt;p class=&quot;field__helper&quot; id=&quot;mensaje-ayuda&quot;&gt;Máximo 500 caracteres&lt;/p&gt;
 &lt;/div&gt;
 &lt;div data-ds=&quot;textarea&quot; class=&quot;field&quot;&gt;
@@ -202,9 +202,9 @@
 &lt;p class=&quot;field__error&quot; id=&quot;respuesta-error&quot;&gt;&lt;span class=&quot;icon icon-circle-alert&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Este campo es obligatorio&lt;/p&gt;
 &lt;/div&gt;</pre></div>
 <div class="sc-card" id="sc-select"><div class="sc-card__head"><h3>Select</h3><span class="sc-tag">6 variantes · 48:141 · icono</span></div><div class="sc-demo"><div data-ds="select" class="field">
-<label class="field__label" for="pais">País</label>
+<label class="field__label" for="pais">País<span class="field__required" aria-hidden="true">*</span></label>
 <div class="field__select">
-<select class="field__control" id="pais" name="pais" aria-invalid="true" aria-describedby="pais-error">
+<select class="field__control" id="pais" name="pais" required aria-invalid="true" aria-describedby="pais-error">
 <option value="">Elige una opción</option>
 <option value="es">España</option>
 <option value="fr">Francia</option>
@@ -212,9 +212,9 @@
 </div>
 <p class="field__error" id="pais-error"><span class="icon icon-circle-alert" aria-hidden="true"></span>Elige un país</p>
 </div></div><pre class="sc-code">&lt;div data-ds=&quot;select&quot; class=&quot;field&quot;&gt;
-&lt;label class=&quot;field__label&quot; for=&quot;pais&quot;&gt;País&lt;/label&gt;
+&lt;label class=&quot;field__label&quot; for=&quot;pais&quot;&gt;País&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
 &lt;div class=&quot;field__select&quot;&gt;
-&lt;select class=&quot;field__control&quot; id=&quot;pais&quot; name=&quot;pais&quot; aria-invalid=&quot;true&quot; aria-describedby=&quot;pais-error&quot;&gt;
+&lt;select class=&quot;field__control&quot; id=&quot;pais&quot; name=&quot;pais&quot; required aria-invalid=&quot;true&quot; aria-describedby=&quot;pais-error&quot;&gt;
 &lt;option value=&quot;&quot;&gt;Elige una opción&lt;/option&gt;
 &lt;option value=&quot;es&quot;&gt;España&lt;/option&gt;
 &lt;option value=&quot;fr&quot;&gt;Francia&lt;/option&gt;
@@ -398,8 +398,10 @@
 &lt;meter class=&quot;nutrition-bar__meter&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;32&quot; aria-hidden=&quot;true&quot;&gt;&lt;/meter&gt;
 &lt;/li&gt;</pre></div>
 <div class="sc-card" id="sc-nutrition-panel"><div class="sc-card__head"><h3>Nutrition panel</h3><span class="sc-tag">1 variantes · 71:75</span></div><div class="sc-demo"><section data-ds="nutrition-panel" class="nutrition-panel" aria-labelledby="nut-title">
+<div class="nutrition-panel__header">
 <h3 class="nutrition-panel__title" id="nut-title">Nutrición</h3>
 <p class="nutrition-panel__base">Por 100 g · % de la ingesta de referencia de un adulto medio (8.400 kJ / 2.000 kcal).</p>
+</div>
 <ul class="nutrition-panel__list">
 <li class="nutrition-bar"><div class="nutrition-bar__row"><span class="nutrition-bar__label">Grasas</span><span class="nutrition-bar__amount"><span class="nutrition-bar__value">16 g</span><span class="nutrition-bar__percent">23 % IR</span></span></div><meter class="nutrition-bar__meter" min="0" max="100" value="23" aria-hidden="true"></meter></li>
 <li class="nutrition-bar nutrition-bar--highlight"><div class="nutrition-bar__row"><span class="nutrition-bar__label">Sal</span><span class="nutrition-bar__amount"><span class="badge badge--natural">−20 %</span><span class="nutrition-bar__value">1,9 g</span><span class="nutrition-bar__percent">32 % IR</span></span></div><meter class="nutrition-bar__meter" min="0" max="100" value="32" aria-hidden="true"></meter></li>
@@ -407,8 +409,10 @@
 <p class="nutrition-panel__allergens"><strong>Alérgenos:</strong> contiene <strong>trigo</strong> y <strong>soja</strong>.</p>
 <p class="nutrition-panel__note">Valores validados por el equipo de Nutrición de GB Foods.</p>
 </section></div><pre class="sc-code">&lt;section data-ds=&quot;nutrition-panel&quot; class=&quot;nutrition-panel&quot; aria-labelledby=&quot;nut-title&quot;&gt;
+&lt;div class=&quot;nutrition-panel__header&quot;&gt;
 &lt;h3 class=&quot;nutrition-panel__title&quot; id=&quot;nut-title&quot;&gt;Nutrición&lt;/h3&gt;
 &lt;p class=&quot;nutrition-panel__base&quot;&gt;Por 100 g · % de la ingesta de referencia de un adulto medio (8.400 kJ / 2.000 kcal).&lt;/p&gt;
+&lt;/div&gt;
 &lt;ul class=&quot;nutrition-panel__list&quot;&gt;
 &lt;li class=&quot;nutrition-bar&quot;&gt;&lt;div class=&quot;nutrition-bar__row&quot;&gt;&lt;span class=&quot;nutrition-bar__label&quot;&gt;Grasas&lt;/span&gt;&lt;span class=&quot;nutrition-bar__amount&quot;&gt;&lt;span class=&quot;nutrition-bar__value&quot;&gt;16 g&lt;/span&gt;&lt;span class=&quot;nutrition-bar__percent&quot;&gt;23 % IR&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;meter class=&quot;nutrition-bar__meter&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;23&quot; aria-hidden=&quot;true&quot;&gt;&lt;/meter&gt;&lt;/li&gt;
 &lt;li class=&quot;nutrition-bar nutrition-bar--highlight&quot;&gt;&lt;div class=&quot;nutrition-bar__row&quot;&gt;&lt;span class=&quot;nutrition-bar__label&quot;&gt;Sal&lt;/span&gt;&lt;span class=&quot;nutrition-bar__amount&quot;&gt;&lt;span class=&quot;badge badge--natural&quot;&gt;−20 %&lt;/span&gt;&lt;span class=&quot;nutrition-bar__value&quot;&gt;1,9 g&lt;/span&gt;&lt;span class=&quot;nutrition-bar__percent&quot;&gt;32 % IR&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;meter class=&quot;nutrition-bar__meter&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;32&quot; aria-hidden=&quot;true&quot;&gt;&lt;/meter&gt;&lt;/li&gt;

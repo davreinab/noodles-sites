@@ -1,7 +1,7 @@
 {
   "title": "Logo / Daisuki",
   "description": "Logo Daisuki. Positivo vectorial; negativo en PNG. No se recolorea.",
-  "status": "Draft",
+  "status": "Ready",
   "sheet": {
     "contrast": {
       "pairs": [],
@@ -32,8 +32,8 @@
       "type": "COMPONENT_SET",
       "variants": 2,
       "lastSync": "2026-10-22 · 09:38 UTC",
-      "verification": "unverified",
-      "verificationLabel": "Sin verificar"
+      "verification": "verified",
+      "verificationLabel": "Verificado"
     },
     "description": [
       "Logo Daisuki. Positivo vectorial; negativo en PNG. No se recolorea."
@@ -100,7 +100,7 @@
   "ds": {
     "slug": "logo-daisuki",
     "kind": "component",
-    "verification": "unverified",
+    "verification": "verified",
     "figmaNodeId": "21:177",
     "contract": "../../../../../../design-system/schemas/components/logo-daisuki.schema.json"
   },

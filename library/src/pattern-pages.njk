@@ -1,0 +1,96 @@
+---
+pagination:
+  data: patterns.list
+  size: 1
+  alias: pattern
+permalink: "{{ pattern.url }}"
+layout: viewer.njk
+---
+{% set first = pattern.variants[0] %}
+<header class="pl-head pl-head--{{ pattern.level }}">
+  <p class="pl-head__level"><span class="pl-dot pl-lvl-{{ pattern.level }}" aria-hidden="true"></span>{{ pattern.levelLabel }}</p>
+  <div class="pl-head__row">
+    <h1>{{ pattern.title }}</h1>
+    {% if pattern.status %}<span class="pl-status pl-status--{{ pattern.statusKey }}"{% if pattern.inheritedFrom %} title="Own status: {{ pattern.ownStatus }}. Lowered by {{ pattern.inheritedFrom.title }} ({{ pattern.inheritedFrom.status }})."{% endif %}>{{ pattern.status }}</span>{% endif %}
+    {% if pattern.inheritedFrom %}<span class="pl-head__inherit">Own status {{ pattern.ownStatus }}; lowered by <a href="{{ pattern.inheritedFrom.url }}">{{ pattern.inheritedFrom.title }}</a> ({{ pattern.inheritedFrom.status }})</span>{% endif %}
+  </div>
+  {% if pattern.description %}<p class="pl-head__desc">{{ pattern.description }}</p>{% endif %}
+</header>
+
+<div class="pl-toolbar">
+  <nav class="pl-variants" aria-label="Variants">
+    {% for v in pattern.variants %}
+    <a href="{{ v.previewUrl }}" data-variant-link="{{ v.key }}" aria-current="{{ 'true' if loop.first else 'false' }}">{{ v.title }}</a>
+    {% endfor %}
+  </nav>
+  <div class="pl-widths" role="group" aria-label="Preview width">
+    <button type="button" data-set-width="full" aria-pressed="true">Full</button>
+    <button type="button" data-set-width="1280" aria-pressed="false">1280</button>
+    <button type="button" data-set-width="768" aria-pressed="false">768</button>
+    <button type="button" data-set-width="375" aria-pressed="false">375</button>
+    <output class="pl-widths__readout" data-width aria-live="polite"></output>
+  </div>
+  <a class="pl-open" href="{{ first.previewUrl }}" target="_blank" rel="noopener" data-open>Open in new tab</a>
+</div>
+
+<div class="pl-stage pl-stage--{{ pattern.level }}">
+  <div class="pl-frame" data-frame-wrap>
+    <iframe src="{{ first.previewUrl }}" title="Preview of {{ pattern.title }}" data-frame></iframe>
+  </div>
+  <p class="pl-stage__hint">Drag the bottom-right corner to try any width.</p>
+</div>
+
+<section class="pl-code" aria-label="Code">
+  <div class="pl-tabs" role="tablist">
+    <button type="button" role="tab" id="tab-html" aria-controls="panel-html" aria-selected="true">HTML</button>
+    <button type="button" role="tab" id="tab-tpl" aria-controls="panel-tpl" aria-selected="false" tabindex="-1">Template</button>
+    <button type="button" role="tab" id="tab-data" aria-controls="panel-data" aria-selected="false" tabindex="-1">Data</button>
+    <button type="button" role="tab" id="tab-rel" aria-controls="panel-rel" aria-selected="false" tabindex="-1">Relations <span class="pl-tabs__count">{{ (pattern.uses | length) + (pattern.usedBy | length) + (pattern.dataRefs | length) }}</span></button>
+  </div>
+
+  <div class="pl-panel" role="tabpanel" id="panel-html" aria-labelledby="tab-html">
+    <div class="pl-panel__bar"><p>Compiled HTML, ready to integrate.</p><button type="button" class="pl-copy" data-copy="panel-html">Copy</button></div>
+    {% for v in pattern.variants %}
+    <pre data-variant-panel="{{ v.key }}"{% if not loop.first %} hidden{% endif %}><code>{{ v.html | escape }}</code></pre>
+    {% endfor %}
+  </div>
+
+  <div class="pl-panel" role="tabpanel" id="panel-tpl" aria-labelledby="tab-tpl" hidden>
+    <div class="pl-panel__bar"><p>To use it in another template:</p><button type="button" class="pl-copy" data-copy="panel-tpl">Copy</button></div>
+    <pre class="pl-pre--usage"><code>{{ pattern.usage | escape }}</code></pre>
+    <div class="pl-panel__bar"><p><code>src/patterns/{{ pattern.templatePath }}</code></p></div>
+    <pre><code>{{ pattern.source | escape }}</code></pre>
+  </div>
+
+  <div class="pl-panel" role="tabpanel" id="panel-data" aria-labelledby="tab-data" hidden>
+    <div class="pl-panel__bar"><p>Data for the selected variant, after <code>defaults</code> and <code>$ref</code> are resolved.</p><button type="button" class="pl-copy" data-copy="panel-data">Copy</button></div>
+    {% for v in pattern.variants %}
+    <pre data-variant-panel="{{ v.key }}"{% if not loop.first %} hidden{% endif %}><code>{{ v.dataJson | escape }}</code></pre>
+    {% endfor %}
+  </div>
+
+  <div class="pl-panel pl-rel" role="tabpanel" id="panel-rel" aria-labelledby="tab-rel" hidden>
+    <div>
+      <h2>Uses</h2>
+      {% if pattern.uses.length %}
+      <ul>{% for r in pattern.uses %}<li><span class="pl-dot pl-lvl-{{ r.level }}" aria-hidden="true"></span><a href="{{ r.url }}">{{ r.title }}</a> <span class="pl-rel__lvl">{{ r.levelLabel }}</span></li>{% endfor %}</ul>
+      {% else %}<p class="pl-muted">Does not use other patterns.</p>{% endif %}
+      {% if pattern.missing.length %}<p class="pl-warn">Imports templates that do not exist: {{ pattern.missing | join(", ") }}</p>{% endif %}
+    </div>
+    {% if pattern.dataRefs.length %}
+    <div>
+      <h2>Data from</h2>
+      <ul>{% for r in pattern.dataRefs %}{% if r.type == "pattern" %}<li><span class="pl-dot pl-lvl-{{ r.level }}" aria-hidden="true"></span><a href="{{ r.url }}">{{ r.title }}</a> <span class="pl-rel__lvl">{{ r.levelLabel }}</span></li>{% else %}<li><code>{{ r.path }}</code> <span class="pl-rel__lvl">Shared file</span></li>{% endif %}{% endfor %}</ul>
+    </div>
+    {% endif %}
+    <div>
+      <h2>Used in</h2>
+      {% if pattern.usedBy.length %}
+      <ul>{% for r in pattern.usedBy %}<li><span class="pl-dot pl-lvl-{{ r.level }}" aria-hidden="true"></span><a href="{{ r.url }}">{{ r.title }}</a> <span class="pl-rel__lvl">{{ r.levelLabel }}</span></li>{% endfor %}</ul>
+      {% else %}<p class="pl-muted">No pattern uses it yet.</p>{% endif %}
+    </div>
+  </div>
+</section>
+
+{% if pattern.sheet %}{% include "sheet.njk" %}
+{% elif pattern.docHtml %}<section class="pl-docs"><h2>Documentation</h2>{{ pattern.docHtml | safe }}</section>{% endif %}

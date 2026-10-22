@@ -1,0 +1,182 @@
+{
+  "title": "Nutrition bar",
+  "description": "Barra de un nutriente: nombre · valor por 100 g (negrita) · % de ingesta de referencia (IR) y barra cuyo relleno mide ese % del ancho de la pista. Highlight=True: relleno verde na…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "nutrition-bar",
+      "name": "Nutrition bar",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "71:74",
+      "current": {
+        "description": "Barra de un nutriente: nombre · valor por 100 g (negrita) · % de ingesta de referencia (IR) y barra cuyo relleno mide ese % del ancho de la pista. Highlight=True: relleno verde natural y Badge Natural con el claim del envase (−20 % sal, −80 % grasas saturadas). La barra es decorativa (aria-hidden): el dato accesible es el texto, así que el valor y el % siempre se escriben. Relleno ≥3:1 sobre la pista. Los valores los valida el equipo de Nutrición de GB Foods. En Figma, el % se fija con el padding derecho de «track» (padding-right = ancho × (1 − %)); en código, width: <%> del relleno.",
+        "Propósito": "Fila de un nutriente: nombre, valor por 100 g, porcentaje de la ingesta de referencia y una barra que lo representa. Highlight para los claims del envase, con el claim junto al valor.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Nombre y valor en tinta sobre blanco 18,7:1; % IR en gris cálido sobre blanco 5,9:1. Relleno de tinta sobre pista arena 13,7:1 y verde sobre arena 4,0:1 (≥ 3:1). La barra es decorativa (`aria-hidden`): el dato accesible es el texto (valor y % siempre escritos). La barra es un `<meter>` nativo (valor = % IR) oculto al lector; sin estilos inline.",
+        "Cuándo usar / qué NO hace": "Solo dentro de Nutrition panel. Los valores los valida el equipo de Nutrición de GB Foods; el claim de Highlight debe coincidir con el envase."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "71:74",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=71-74",
+      "page": "Content",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Barra de un nutriente: nombre · valor por 100 g (negrita) · % de ingesta de referencia (IR) y barra cuyo relleno mide ese % del ancho de la pista. Highlight=True: relleno verde natural y Badge Natural con el claim del envase (−20 % sal, −80 % grasas saturadas). La barra es decorativa (aria-hidden): el dato accesible es el texto, así que el valor y el % siempre se escriben. Relleno ≥3:1 sobre la pista. Los valores los valida el equipo de Nutrición de GB Foods. En Figma, el % se fija con el padding derecho de «track» (padding-right = ancho × (1 − %)); en código, width: <%> del relleno."
+    ],
+    "props": [
+      {
+        "name": "nutrient",
+        "type": "string",
+        "values": [],
+        "default": "Proteínas",
+        "figma": "Nutrient#71:0"
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "values": [],
+        "default": "10 g",
+        "figma": "Value#71:3"
+      },
+      {
+        "name": "percent",
+        "type": "string",
+        "values": [],
+        "default": "20 % IR",
+        "figma": "Percent#71:6"
+      },
+      {
+        "name": "highlight",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "Highlight"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "nutrition",
+        "items": [
+          "nutrition/fill",
+          "nutrition/label",
+          "nutrition/meta",
+          "nutrition/track",
+          "nutrition/value"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/4",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 15,
+    "textStyles": [
+      "Desktop/body-m",
+      "Desktop/caption"
+    ],
+    "classes": [
+      "badge",
+      "badge--natural",
+      "nutrition-bar",
+      "nutrition-bar--highlight",
+      "nutrition-bar__amount",
+      "nutrition-bar__label",
+      "nutrition-bar__meter",
+      "nutrition-bar__percent",
+      "nutrition-bar__row",
+      "nutrition-bar__value"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Fila de un nutriente: nombre, valor por 100 g, porcentaje de la ingesta de referencia y una barra que lo representa. Highlight para los claims del envase, con el claim junto al valor.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Nombre y valor en tinta sobre blanco 18,7:1; % IR en gris cálido sobre blanco 5,9:1. Relleno de tinta sobre pista arena 13,7:1 y verde sobre arena 4,0:1 (≥ 3:1). La barra es decorativa (`aria-hidden`): el dato accesible es el texto (valor y % siempre escritos). La barra es un `<meter>` nativo (valor = % IR) oculto al lector; sin estilos inline.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo dentro de Nutrition panel. Los valores los valida el equipo de Nutrición de GB Foods; el claim de Highlight debe coincidir con el envase.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 1,
+      "total": 1,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "nutrition-bar",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "71:74",
+    "contract": "../../../../../../design-system/schemas/components/nutrition-bar.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

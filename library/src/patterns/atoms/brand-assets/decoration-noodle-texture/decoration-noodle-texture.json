@@ -1,0 +1,142 @@
+{
+  "title": "Decoration / Noodle texture",
+  "description": "Trama de fideos de fondo (como en las landings): los 5 fideos de Decoration / Noodle en tono Texture (decoration/noodle/texture: ámbar opaco, el naranja al 50 % sobre amarillo), e…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "decoration-noodle-texture",
+      "name": "Decoration / Noodle texture",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "157:50",
+      "current": {
+        "description": "Trama de fideos de fondo (como en las landings): los 5 fideos de Decoration / Noodle en tono Texture (decoration/noodle/texture: ámbar opaco, el naranja al 50 % sobre amarillo), en fila. Va a sangre por la derecha del módulo, detrás del contenido y más alta que él (se corta arriba y abajo). Solo sobre color/surface/brand; el texto encima es tinta (contraste con el ámbar ≥ 9:1). Decorativa: aria-hidden, sin interacción.",
+        "Propósito": "Trama de fideos de fondo, como en los módulos amarillos de las landings: los cinco fideos de marca en tono Texture (ámbar), en fila, a sangre por la derecha del módulo y detrás del contenido.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Decorativa: `aria-hidden=\"true\"`, sin foco ni interacción. El ámbar es opaco (`--decoration-noodle-texture`, naranja al 50 % sobre amarillo resuelto como color, regla 7): la tinta encima mantiene 9,5:1, así que el texto puede pasar por delante.",
+        "Cuándo usar / qué NO hace": "Solo en secciones con fondo `color/surface/brand` (amarillo): en la Home, Promo y Where to buy. La sección recorta la trama (overflow) y pone su contenido encima. No va sobre crema, blanco, verde ni tinta, ni se usa como separador."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "157:50",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=157-50",
+      "page": "Brand assets",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Trama de fideos de fondo (como en las landings): los 5 fideos de Decoration / Noodle en tono Texture (decoration/noodle/texture: ámbar opaco, el naranja al 50 % sobre amarillo), en fila. Va a sangre por la derecha del módulo, detrás del contenido y más alta que él (se corta arriba y abajo). Solo sobre color/surface/brand; el texto encima es tinta (contraste con el ámbar ≥ 9:1). Decorativa: aria-hidden, sin interacción."
+    ],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "noodle",
+        "component": "decoration-noodle",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "noodle",
+        "component": "decoration-noodle",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "noodle",
+        "component": "decoration-noodle",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "noodle",
+        "component": "decoration-noodle",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "noodle",
+        "component": "decoration-noodle",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "decoration",
+        "items": [
+          "decoration/noodle/texture"
+        ]
+      }
+    ],
+    "tokenCount": 1,
+    "textStyles": [],
+    "classes": [
+      "decoration-noodle",
+      "decoration-noodle--2",
+      "decoration-noodle--3",
+      "decoration-noodle--4",
+      "decoration-noodle--5",
+      "decoration-noodle--texture",
+      "decoration-noodle-texture",
+      "promo",
+      "section",
+      "section__inner",
+      "section__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Trama de fideos de fondo, como en los módulos amarillos de las landings: los cinco fideos de marca en tono Texture (ámbar), en fila, a sangre por la derecha del módulo y detrás del contenido.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Decorativa: `aria-hidden=\"true\"`, sin foco ni interacción. El ámbar es opaco (`--decoration-noodle-texture`, naranja al 50 % sobre amarillo resuelto como color, regla 7): la tinta encima mantiene 9,5:1, así que el texto puede pasar por delante.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en secciones con fondo `color/surface/brand` (amarillo): en la Home, Promo y Where to buy. La sección recorta la trama (overflow) y pone su contenido encima. No va sobre crema, blanco, verde ni tinta, ni se usa como separador.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "decoration-noodle-texture",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "157:50",
+    "contract": "../../../../../../design-system/schemas/components/decoration-noodle-texture.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{% macro render(data) %}
+{% raw %}<footer data-ds="footer" class="footer">
+<div class="footer__main">
+<div class="footer__brand"><img class="logo" src="/assets/ds/logos/logo-yatekomo-negative.svg" alt="Yatekomo"></div>
+<nav class="footer__column" aria-label="Pie">
+<ul class="footer__links"><li><a class="link link--dark" href="/productos">Products</a></li><li><a class="link link--dark" href="/recetas">Recipes</a></li></ul>
+</nav>
+<div class="footer__ticket">
+<div class="footer__ticket-copy"><h2 class="footer__ticket-title">Do you have any ideas, complaints or cravings?</h2><p class="footer__ticket-text">Cut to the chase and tell us what you think.</p></div>
+<a class="button" href="https://calidad.example.org" target="_blank" rel="noopener">Send suggestions <span class="icon icon-external-link" aria-hidden="true"></span><span class="visually-hidden"> (abre en una pestaña nueva)</span></a>
+</div>
+</div>
+<div class="footer__legal"><a class="link link--dark" href="/aviso-legal">Legal notice</a><a class="link link--dark" href="/privacidad">Privacy policy</a><span>© GBFoods</span></div>
+</footer>{% endraw %}
+{% endmacro %}

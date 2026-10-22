@@ -1,70 +1,50 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:ingredient-item",
+  "contractVersion": "2",
   "meta": {
     "name": "Ingredient item",
     "slug": "ingredient-item",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Fila de ingrediente. Level=Main: ingrediente principal con porcentaje en pill (ingredient/percent-bg, verde natural) y filete inferior decorativo. Level=Secondary: el resto de ingredientes en texto corrido. Regla de negocio: los alérgenos van SIEMPRE en negrita (&lt;strong&gt;, Archivo Bold), también dentro del nombre. El texto no es propiedad para conservar la negrita: se edita en la instancia. Los datos salen del envase; los mostrados son de ejemplo.",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Fila de ingrediente. Level=Main: ingrediente principal con porcentaje en pill (ingredient/percent-bg, verde natural) y filete inferior decorativo. Level=Secondary: el resto de ingredientes en texto corrido. Regla de negocio: los alérgenos van SIEMPRE en negrita (<strong>, Archivo Bold), también dentro del nombre. El texto no es propiedad para conservar la negrita: se edita en la instancia. Los datos salen del envase; los mostrados son de ejemplo.",
     "figmaPage": "Content",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "7d3cdee35b0d"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/ingredient-item.md",
-      "section": "Ingredient item"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "70:58",
-      "componentKey": "e6b7175c2deb532c3692ed1530968aa69ae4379c"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "ingredient-item",
-        "ingredient-item--secondary",
-        "ingredient-item__percent"
-      ],
-      "example": "<li class=\"ingredient-item\">Fideos de <strong>trigo</strong><span class=\"ingredient-item__percent\">52 %</span></li>\n<li class=\"ingredient-item ingredient-item--secondary\">Otros: sal, especias, salsa de <strong>soja</strong> (<strong>soja</strong>, <strong>trigo</strong>), ajo y cebolla.</li>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Percent#70:0",
-        "kind": "TEXT",
-        "default": "52 %"
+        "name": "percent",
+        "type": "string",
+        "default": "52 %",
+        "figma": "Percent#70:0"
       },
       {
-        "name": "Level",
-        "kind": "VARIANT",
-        "default": "Main",
+        "name": "level",
+        "type": "enum",
         "values": [
           "Main",
           "Secondary"
-        ]
+        ],
+        "default": "Main",
+        "figma": "Level"
       }
     ],
-    "variants": {
-      "Level": [
-        "Main",
-        "Secondary"
-      ]
-    },
-    "states": [],
-    "defaults": {
-      "Level": "Main"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -72,8 +52,7 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "border/width/thin",
       "font/family/body",
       "font/family/display",
@@ -91,8 +70,37 @@
       "space/16",
       "space/4",
       "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "ingredient-item",
+      "ingredient-item--secondary",
+      "ingredient-item__percent"
     ],
-    "variablesUsed": [
+    "example": "<li data-ds=\"ingredient-item\" class=\"ingredient-item\">Fideos de <strong>trigo</strong><span class=\"ingredient-item__percent\">52 %</span></li>\n<li data-ds=\"ingredient-item\" class=\"ingredient-item ingredient-item--secondary\">Otros: sal, especias, salsa de <strong>soja</strong> (<strong>soja</strong>, <strong>trigo</strong>), ajo y cebolla.</li>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "70:58",
+    "componentKey": "e6b7175c2deb532c3692ed1530968aa69ae4379c",
+    "propertyNames": {
+      "percent": "Percent#70:0",
+      "level": "Level"
+    },
+    "variantAxes": {
+      "Level": [
+        "Main",
+        "Secondary"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [
       "itemSpacing: space/16",
       "paddingTop: space/16",
       "paddingBottom: space/16",
@@ -125,46 +133,14 @@
     ],
     "textStyles": [
       "Desktop/label"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-l",
-        "font/line-height/desktop/label",
-        "font/size/desktop/body-l",
-        "font/size/desktop/label",
-        "font/style/body",
-        "font/style/display",
-        "ingredient/divider",
-        "ingredient/percent-bg",
-        "ingredient/percent-text",
-        "ingredient/text"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/ingredient-item.md",
+    "section": "Ingredient item"
   },
-  "compatibility": {},
   "relations": {
     "uses": [],
-    "usedBy": [
-      "ingredients",
-      "product-details"
-    ],
     "related": []
   }
 }

@@ -1,0 +1,213 @@
+{
+  "title": "Search field",
+  "description": "Campo de búsqueda (resultados en modal). Sin etiqueta visible: requiere aria-label («Buscar») y role=\"search\" en el formulario. Lupa delante; con texto aparece el botón borrar (ar…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".search-field",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--field-icon",
+          "bgVar": "--field-bg",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".search-field .icon",
+          "why": "color que no se puede resolver con tokens.css"
+        }
+      ],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "search-field",
+      "name": "Search field",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "48:177",
+      "current": {
+        "description": "Campo de búsqueda (resultados en modal). Sin etiqueta visible: requiere aria-label («Buscar») y role=\"search\" en el formulario. Lupa delante; con texto aparece el botón borrar (aria-label «Borrar búsqueda»). Forma pill para distinguirlo de los campos de formulario. El valor se edita en la instancia.",
+        "Propósito": "Buscador de recetas y productos en píldora: lupa, campo y botón de borrar cuando hay texto.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Texto tinta sobre blanco 18,7:1; placeholder gris cálido sobre blanco 5,9:1; iconos y borde tinta (≥ 3:1). Rol: `<form role=\"search\">` con `<input type=\"search\">` y etiqueta (oculta visualmente porque el placeholder no cuenta como nombre). Borrar es un `<button>` con `aria-label` y devuelve el foco al campo. Los resultados se anuncian («N resultados») con aria-live. Foco: el contorno rodea la píldora entera (`:focus-within`).",
+        "Cuándo usar / qué NO hace": "Para buscar en la web (Navbar y página de resultados). No filtra el catálogo (eso es Product filter) y no se usa como campo de formulario genérico."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "48:177",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=48-177",
+      "page": "Forms",
+      "type": "COMPONENT_SET",
+      "variants": 4,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Campo de búsqueda (resultados en modal). Sin etiqueta visible: requiere aria-label («Buscar») y role=\"search\" en el formulario. Lupa delante; con texto aparece el botón borrar (aria-label «Borrar búsqueda»). Forma pill para distinguirlo de los campos de formulario. El valor se edita en la instancia."
+    ],
+    "props": [
+      {
+        "name": "iconLeading",
+        "type": "icon",
+        "values": [],
+        "default": "Icon / search",
+        "figma": "Icon leading#51:0"
+      },
+      {
+        "name": "clearIcon",
+        "type": "icon",
+        "values": [],
+        "default": "Icon / close",
+        "figma": "Clear icon#51:5"
+      },
+      {
+        "name": "filled",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Filled"
+      }
+    ],
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "iconLeading",
+        "clearIcon"
+      ],
+      "defaults": [
+        "Icon / search",
+        "Icon / close"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "icon-search",
+        "component": "icon-search",
+        "exposedAs": "Icon leading#51:0",
+        "hidden": false
+      },
+      {
+        "layer": "icon-clear",
+        "component": "icon-close",
+        "exposedAs": "Clear icon#51:5",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "field",
+        "items": [
+          "field/bg",
+          "field/border",
+          "field/icon",
+          "field/placeholder"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/body-m",
+          "font/size/desktop/body-m",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/md"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 13,
+    "textStyles": [
+      "Desktop/body-m"
+    ],
+    "classes": [
+      "icon",
+      "icon-close",
+      "icon-search",
+      "search-field",
+      "search-field__clear",
+      "search-field__input",
+      "visually-hidden"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Buscador de recetas y productos en píldora: lupa, campo y botón de borrar cuando hay texto.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Texto tinta sobre blanco 18,7:1; placeholder gris cálido sobre blanco 5,9:1; iconos y borde tinta (≥ 3:1). Rol: `<form role=\"search\">` con `<input type=\"search\">` y etiqueta (oculta visualmente porque el placeholder no cuenta como nombre). Borrar es un `<button>` con `aria-label` y devuelve el foco al campo. Los resultados se anuncian («N resultados») con aria-live. Foco: el contorno rodea la píldora entera (`:focus-within`).",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Para buscar en la web (Navbar y página de resultados). No filtra el catálogo (eso es Product filter) y no se usa como campo de formulario genérico.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "search-field",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "48:177",
+    "contract": "../../../../../../design-system/schemas/components/search-field.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

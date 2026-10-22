@@ -1,113 +1,44 @@
 {
   "$schema": "../_component.schema.json",
   "id": "pattern:recipe-hero",
+  "contractVersion": "2",
   "meta": {
     "name": "Recipe hero",
     "slug": "recipe-hero",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Cabecera de la página de receta: kicker «Receta» · título (h1) · tiempo (timer) y dificultad · descripción · productos usados como Chip M (enlazan a la ficha de producto; lista &lt;ul&gt;) · imagen principal de marca (sin vídeo al principio, regla de negocio). Fondo color/surface/brand. Después van Product details (ingredientes y nutrición de la receta) y Preparation sin Timer con Step Media=True. Desktop: texto a la izquierda; Mobile: imagen arriba. Sin variables propias.",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Cabecera de la página de receta: kicker «Receta» · título (h1) · tiempo (timer) y dificultad · descripción · productos usados como Chip M (enlazan a la ficha de producto; lista <ul>) · imagen principal de marca (sin vídeo al principio, regla de negocio). Fondo color/surface/brand. Después van Product details (ingredientes y nutrición de la receta) y Preparation sin Timer con Step Media=True. Desktop: texto a la izquierda; Mobile: imagen arriba. Sin variables propias.",
     "figmaPage": "Pattern / Detail pages",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "056dbba062f8"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/patterns/recipe-hero.md",
-      "section": "Recipe hero"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "96:113",
-      "componentKey": "3a0e1db0e31dd19939513d4571be367b9c29a29f"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "chip",
-        "chip--m",
-        "icon",
-        "icon-circle-check",
-        "icon-timer",
-        "media-frame",
-        "page-title",
-        "recipe-hero",
-        "recipe-hero__description",
-        "recipe-hero__grid",
-        "recipe-hero__info",
-        "recipe-hero__kicker",
-        "recipe-hero__media",
-        "recipe-hero__meta",
-        "recipe-hero__products",
-        "recipe-hero__products-label",
-        "section",
-        "section__inner"
-      ],
-      "example": "<section class=\"section recipe-hero\" aria-labelledby=\"rh-title\">\n<div class=\"section__inner\">\n<div class=\"recipe-hero__grid\">\n<div class=\"recipe-hero__info\">\n<span class=\"recipe-hero__kicker\">Receta</span>\n<h1 class=\"page-title\" id=\"rh-title\">Ramen picante</h1>\n<ul class=\"recipe-hero__meta\"><li><span class=\"icon icon-timer\" aria-hidden=\"true\"></span>10 min</li><li><span class=\"icon icon-circle-check\" aria-hidden=\"true\"></span>Fácil</li></ul>\n<p class=\"recipe-hero__description\">Para quién es y por qué apetece.</p>\n<h2 class=\"recipe-hero__products-label\">Productos que usa</h2>\n<ul class=\"recipe-hero__products\"><li><a class=\"chip chip--m\" href=\"/productos/yatekomo-pollo\">Yatekomo Pollo</a></li></ul>\n</div>\n<div class=\"media-frame recipe-hero__media\"><img src=\"/media/receta-ramen.jpg\" alt=\"Ramen picante servido en un cuenco\"></div>\n</div>\n</div>\n</section>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Breakpoint",
-        "kind": "VARIANT",
-        "default": "Desktop",
+        "name": "breakpoint",
+        "type": "enum",
         "values": [
           "Desktop",
           "Mobile"
-        ]
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
       }
     ],
-    "variants": {
-      "Breakpoint": [
-        "Desktop",
-        "Mobile"
-      ]
-    },
-    "states": [],
-    "defaults": {
-      "Breakpoint": "Desktop"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [
-      {
-        "layer": "icon",
-        "component": "Icon / timer",
-        "componentSlug": "icon-timer",
-        "exposedAs": null,
-        "toggledBy": null,
-        "visibleByDefault": true
-      },
-      {
-        "layer": "icon",
-        "component": "Icon / circle-check",
-        "componentSlug": "icon-circle-check",
-        "exposedAs": null,
-        "toggledBy": null,
-        "visibleByDefault": true
-      },
-      {
-        "layer": "product-chip",
-        "component": "Size=M, State=Default",
-        "componentSlug": "chip",
-        "exposedAs": null,
-        "toggledBy": null,
-        "visibleByDefault": true
-      },
-      {
-        "layer": "icon-leading",
-        "component": "Icon / check",
-        "componentSlug": "icon-check",
-        "exposedAs": "Icon leading swap#35:27",
-        "toggledBy": "Icon leading#35:22",
-        "visibleByDefault": false
-      }
-    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": true,
       "swapProperties": [],
@@ -118,8 +49,7 @@
         "icon"
       ]
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "border/width/thin",
       "chip/bg",
       "chip/border",
@@ -155,8 +85,84 @@
       "space/24",
       "space/64",
       "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "chip",
+      "chip--m",
+      "icon",
+      "icon-circle-check",
+      "icon-timer",
+      "media-frame",
+      "page-title",
+      "recipe-hero",
+      "recipe-hero__description",
+      "recipe-hero__grid",
+      "recipe-hero__info",
+      "recipe-hero__kicker",
+      "recipe-hero__media",
+      "recipe-hero__meta",
+      "recipe-hero__products",
+      "recipe-hero__products-label",
+      "section",
+      "section__inner"
     ],
-    "variablesUsed": [
+    "example": "<section data-ds=\"recipe-hero\" class=\"section recipe-hero\" aria-labelledby=\"rh-title\">\n<div class=\"section__inner\">\n<div class=\"recipe-hero__grid\">\n<div class=\"recipe-hero__info\">\n<span class=\"recipe-hero__kicker\">Receta</span>\n<h1 class=\"page-title\" id=\"rh-title\">Ramen picante</h1>\n<ul class=\"recipe-hero__meta\"><li><span class=\"icon icon-timer\" aria-hidden=\"true\"></span>10 min</li><li><span class=\"icon icon-circle-check\" aria-hidden=\"true\"></span>Fácil</li></ul>\n<p class=\"recipe-hero__description\">Para quién es y por qué apetece.</p>\n<h2 class=\"recipe-hero__products-label\">Productos que usa</h2>\n<ul class=\"recipe-hero__products\"><li><a class=\"chip chip--m\" href=\"/productos/yatekomo-pollo\">Yatekomo Pollo</a></li></ul>\n</div>\n<div class=\"media-frame recipe-hero__media\"><img src=\"/media/receta-ramen.jpg\" alt=\"Ramen picante servido en un cuenco\"></div>\n</div>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "96:113",
+    "componentKey": "3a0e1db0e31dd19939513d4571be367b9c29a29f",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "icon",
+        "component": "Icon / timer",
+        "componentSlug": "icon-timer",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / circle-check",
+        "componentSlug": "icon-circle-check",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "product-chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
       "paddingLeft: layout/margin",
       "paddingTop: layout/section-y",
       "paddingRight: layout/margin",
@@ -228,50 +234,12 @@
       "Desktop/body-l",
       "Desktop/label",
       "Desktop/body-s"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "chip/bg",
-        "chip/border",
-        "chip/text",
-        "color/border/default",
-        "color/surface/brand",
-        "color/surface/page",
-        "color/text/default",
-        "color/text/secondary",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-l",
-        "font/line-height/desktop/body-s",
-        "font/line-height/desktop/caption",
-        "font/line-height/desktop/h1",
-        "font/line-height/desktop/label",
-        "font/size/desktop/body-l",
-        "font/size/desktop/body-s",
-        "font/size/desktop/caption",
-        "font/size/desktop/h1",
-        "font/size/desktop/label",
-        "font/style/body",
-        "font/style/display"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/patterns/recipe-hero.md",
+    "section": "Recipe hero"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "chip",
@@ -279,7 +247,6 @@
       "icon-circle-check",
       "icon-timer"
     ],
-    "usedBy": [],
     "related": []
   }
 }

@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:badge",
+  "contractVersion": "2",
   "meta": {
     "name": "Badge",
     "slug": "badge",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Etiqueta corta en Anton mayúsculas. New: «Nuevo» (rojo pack). Natural: claims de naturalidad (verde 356). Neutral: formato o línea (Cup, Bag, Sauce). No es interactivo; no usar como botón.",
     "figmaPage": "Tags & chips",
     "figmaType": "COMPONENT_SET",
     "variantCount": 3,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "91ef4cf862ea",
     "verification": {
       "status": "verified",
@@ -24,59 +32,30 @@
       "by": "agent (Claude)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/badge.md",
-      "section": "Badge"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "35:167",
-      "componentKey": "eebdab1901e53a08ad4395e2546b9459e90433e1"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "badge",
-        "badge--natural",
-        "badge--neutral"
-      ],
-      "example": "<span class=\"badge\">Nuevo</span>\n<span class=\"badge badge--natural\">100 % natural</span>\n<span class=\"badge badge--neutral\">Finalizado</span>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Label#35:13",
-        "kind": "TEXT",
-        "default": "Nuevo"
+        "name": "label",
+        "type": "string",
+        "default": "Nuevo",
+        "figma": "Label#35:13"
       },
       {
-        "name": "Type",
-        "kind": "VARIANT",
-        "default": "New",
+        "name": "type",
+        "type": "enum",
         "values": [
           "New",
           "Natural",
           "Neutral"
-        ]
+        ],
+        "default": "New",
+        "figma": "Type"
       }
     ],
-    "variants": {
-      "Type": [
-        "New",
-        "Natural",
-        "Neutral"
-      ]
-    },
-    "states": [],
-    "defaults": {
-      "Type": "New"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -84,8 +63,7 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "badge/new/bg",
       "badge/new/text",
       "font/family/display",
@@ -95,8 +73,38 @@
       "radius/pill",
       "space/4",
       "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "badge",
+      "badge--natural",
+      "badge--neutral"
     ],
-    "variablesUsed": [
+    "example": "<span data-ds=\"badge\" class=\"badge\">Nuevo</span>\n<span data-ds=\"badge\" class=\"badge badge--natural\">100 % natural</span>\n<span data-ds=\"badge\" class=\"badge badge--neutral\">Finalizado</span>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "35:167",
+    "componentKey": "eebdab1901e53a08ad4395e2546b9459e90433e1",
+    "propertyNames": {
+      "label": "Label#35:13",
+      "type": "Type"
+    },
+    "variantAxes": {
+      "Type": [
+        "New",
+        "Natural",
+        "Neutral"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [
       "paddingLeft: space/8",
       "paddingTop: space/4",
       "paddingRight: space/8",
@@ -116,47 +124,14 @@
     ],
     "textStyles": [
       "Mobile/label"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "badge/new/bg",
-        "badge/new/text",
-        "font/family/display",
-        "font/line-height/mobile/label",
-        "font/size/mobile/label",
-        "font/style/display"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/badge.md",
+    "section": "Badge"
   },
-  "compatibility": {},
   "relations": {
     "uses": [],
-    "usedBy": [
-      "category-card",
-      "contest-card",
-      "hero",
-      "library",
-      "nutrition-panel",
-      "product-card",
-      "product-categories",
-      "product-details",
-      "product-hero"
-    ],
     "related": []
   }
 }

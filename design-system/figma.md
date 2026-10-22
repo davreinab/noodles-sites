@@ -4,7 +4,7 @@
 > hacerlo**: en qué orden, con qué llamadas y con qué errores conocidos de la API. Sin él, dos
 > agentes pueden cumplir todas las reglas y entregar estructuras distintas.
 >
-> Se lee **antes de escribir nada en Figma**, junto a `design.md § Reglas duras en Figma`.
+> Se lee **antes de escribir nada en Figma**, junto a `guides/reglas-figma.md`.
 
 **Vía única:** el MCP oficial de Figma. `use_figma` ejecuta código en el contexto del archivo y
 da acceso a toda la API de plugin. Las comprobaciones previas (identidad, acceso a las fuentes)
@@ -230,7 +230,7 @@ y ahí acaba. Migrar cambia la API de los componentes, así que exige la decisi�
 y una propuesta aprobada en `proposals/` antes de tocar el archivo.
 
 **1. Detectar candidatos (solo lectura).** Dos síntomas, y la auditoría los reporta como
-hallazgo `assisted` (`design.md § Auditoría del DS en Figma`):
+hallazgo `assisted` (`guides/auditoria-figma.md`):
 
 - una propiedad de variante cuyos valores son tipos de contenido (`Contenido=Imagen`,
   `Contenido=Lista`, `Contenido=Datos`);
@@ -339,7 +339,7 @@ siguen vivas pero huérfanas: conservan el aspecto y pierden el vínculo. Para r
    textos, imágenes y tamaño: se leen antes del cambio y se vuelven a aplicar después, porque el swap
    no garantiza mantenerlos todos.
 4. **Verificar después**: la instancia reenlazada se compara con el maestro nuevo (sección
-   «Verificación contra el maestro» de `design.md`) y el contrato vuelve a `verified` solo si cuadra.
+   `guides/verificacion.md`) y el contrato vuelve a `verified` solo si cuadra.
 5. **Avisar antes de tocar** de todo lo que no cuadre (variantes ausentes, textos que se perderían,
    tamaños distintos). Reenlazar es escribir en Figma: entra en el techo de autonomía como cualquier
    otra escritura y nunca se hace en lote sin aprobación.

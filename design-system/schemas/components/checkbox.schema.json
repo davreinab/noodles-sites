@@ -1,117 +1,73 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:checkbox",
+  "contractVersion": "2",
   "meta": {
     "name": "Checkbox",
     "slug": "checkbox",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Casilla de verificación: consentimiento GDPR y aceptación de bases legales de concursos. Toda la fila (caja + etiqueta) es clicable; área táctil mínima 44 px en código. Marcada: tinta con check crema (el estado se ve por la forma, no solo por color). Error: borde rojo; el mensaje va en el formulario con aria-describedby. Nunca premarcada en consentimientos.",
     "figmaPage": "Forms",
     "figmaType": "COMPONENT_SET",
     "variantCount": 10,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "4376e37701a2"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/checkbox.md",
-      "section": "Checkbox"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "47:302",
-      "componentKey": "019d976f87c48e719a6babc92907a38292bd0706"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "checkbox",
-        "checkbox__input",
-        "checkbox__label",
-        "link"
-      ],
-      "example": "<label class=\"checkbox\">\n<input class=\"checkbox__input\" type=\"checkbox\" name=\"bases\" required>\n<span class=\"checkbox__label\">Acepto las <a class=\"link\" href=\"/bases\">bases legales</a></span>\n</label>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Label#47:42",
-        "kind": "TEXT",
-        "default": "Acepto las bases legales"
+        "name": "label",
+        "type": "string",
+        "default": "Acepto las bases legales",
+        "figma": "Label#47:42"
       },
       {
-        "name": "Check icon#50:7",
-        "kind": "INSTANCE_SWAP",
-        "default": "21:56",
-        "defaultComponent": "Icon / check",
-        "preferredValues": []
+        "name": "checkIcon",
+        "type": "icon",
+        "default": "Icon / check",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Check icon#50:7"
       },
       {
-        "name": "Checked",
-        "kind": "VARIANT",
-        "default": "False",
-        "values": [
-          "False",
-          "True"
-        ]
+        "name": "checked",
+        "type": "boolean",
+        "default": false,
+        "figma": "Checked"
       },
       {
-        "name": "State",
-        "kind": "VARIANT",
-        "default": "Default",
-        "values": [
-          "Default",
-          "Hover",
-          "Focus",
-          "Error",
-          "Disabled"
-        ]
+        "name": "error",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Error"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Disabled"
       }
     ],
-    "variants": {
-      "Checked": [
-        "False",
-        "True"
-      ],
-      "State": [
-        "Default",
-        "Hover",
-        "Focus",
-        "Error",
-        "Disabled"
-      ]
-    },
-    "states": [
-      "Default",
+    "cssStates": [
       "Hover",
-      "Focus",
-      "Error",
-      "Disabled"
+      "Focus"
     ],
-    "defaults": {
-      "Checked": "False",
-      "State": "Default"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [
-      {
-        "layer": "check",
-        "component": "Icon / check",
-        "componentSlug": "icon-check",
-        "exposedAs": "Check icon#50:7",
-        "toggledBy": null,
-        "visibleByDefault": false
-      }
-    ],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": true,
       "swapProperties": [
-        "Check icon#50:7"
+        "checkIcon"
       ],
       "defaultIcons": [
         "Icon / check"
@@ -119,8 +75,7 @@
       "compatible": "any Icon / * via INSTANCE_SWAP",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "border/width/thin",
       "checkbox/box-bg",
       "checkbox/box-border",
@@ -134,8 +89,57 @@
       "icon/size/sm",
       "radius/sm",
       "space/16"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "checkbox",
+      "checkbox__input",
+      "checkbox__label",
+      "link"
     ],
-    "variablesUsed": [
+    "example": "<label data-ds=\"checkbox\" class=\"checkbox\">\n<input class=\"checkbox__input\" type=\"checkbox\" name=\"bases\" required>\n<span class=\"checkbox__label\">Acepto las <a class=\"link\" href=\"/bases\">bases legales</a></span>\n</label>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "47:302",
+    "componentKey": "019d976f87c48e719a6babc92907a38292bd0706",
+    "propertyNames": {
+      "label": "Label#47:42",
+      "checkIcon": "Check icon#50:7",
+      "checked": "Checked",
+      "error": "State=Error",
+      "disabled": "State=Disabled"
+    },
+    "variantAxes": {
+      "Checked": [
+        "False",
+        "True"
+      ],
+      "State": [
+        "Default",
+        "Hover",
+        "Focus",
+        "Error",
+        "Disabled"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "check",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Check icon#50:7",
+        "toggledBy": null,
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
       "itemSpacing: space/16",
       "width: icon/size/md",
       "height: icon/size/md",
@@ -164,41 +168,16 @@
     ],
     "textStyles": [
       "Desktop/body-m"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "checkbox/box-bg",
-        "checkbox/box-border",
-        "checkbox/check",
-        "checkbox/label",
-        "font/family/body",
-        "font/line-height/desktop/body-m",
-        "font/size/desktop/body-m",
-        "font/style/body"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/checkbox.md",
+    "section": "Checkbox"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "icon-check"
     ],
-    "usedBy": [],
     "related": []
   }
 }

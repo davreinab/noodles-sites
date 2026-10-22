@@ -1,86 +1,33 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:nutrition-panel",
+  "contractVersion": "2",
   "meta": {
     "name": "Nutrition panel",
     "slug": "nutrition-panel",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Panel de nutrición de la página de producto y de receta: título (h3) · base (por 100 g, % IR) · 7 Nutrition bar (energía, grasas, saturadas, hidratos, azúcares, proteínas, sal; Highlight en los claims del pack) · alérgenos en negrita · nota de validación. Accesible como lista de pares nutriente/valor (o &lt;table&gt; con &lt;caption&gt;); las barras son aria-hidden. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods.",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Panel de nutrición de la página de producto y de receta: título (h3) · base (por 100 g, % IR) · 7 Nutrition bar (energía, grasas, saturadas, hidratos, azúcares, proteínas, sal; Highlight en los claims del pack) · alérgenos en negrita · nota de validación. Accesible como lista de pares nutriente/valor (o <table> con <caption>); las barras son aria-hidden. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods.",
     "figmaPage": "Content",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "4b06f681cd92"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/nutrition-panel.md",
-      "section": "Nutrition panel"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "71:75",
-      "componentKey": "e4ac3846bf2a2bbad26af80ef2406be1042e8eee"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "badge",
-        "badge--natural",
-        "nutrition-bar",
-        "nutrition-bar--highlight",
-        "nutrition-bar__amount",
-        "nutrition-bar__label",
-        "nutrition-bar__meter",
-        "nutrition-bar__percent",
-        "nutrition-bar__row",
-        "nutrition-bar__value",
-        "nutrition-panel",
-        "nutrition-panel__allergens",
-        "nutrition-panel__base",
-        "nutrition-panel__list",
-        "nutrition-panel__note",
-        "nutrition-panel__title"
-      ],
-      "example": "<section class=\"nutrition-panel\" aria-labelledby=\"nut-title\">\n<h3 class=\"nutrition-panel__title\" id=\"nut-title\">Nutrición</h3>\n<p class=\"nutrition-panel__base\">Por 100 g · % de la ingesta de referencia de un adulto medio (8.400 kJ / 2.000 kcal).</p>\n<ul class=\"nutrition-panel__list\">\n<li class=\"nutrition-bar\"><div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Grasas</span><span class=\"nutrition-bar__amount\"><span class=\"nutrition-bar__value\">16 g</span><span class=\"nutrition-bar__percent\">23 % IR</span></span></div><meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"23\" aria-hidden=\"true\"></meter></li>\n<li class=\"nutrition-bar nutrition-bar--highlight\"><div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Sal</span><span class=\"nutrition-bar__amount\"><span class=\"badge badge--natural\">−20 %</span><span class=\"nutrition-bar__value\">1,9 g</span><span class=\"nutrition-bar__percent\">32 % IR</span></span></div><meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"32\" aria-hidden=\"true\"></meter></li>\n</ul>\n<p class=\"nutrition-panel__allergens\"><strong>Alérgenos:</strong> contiene <strong>trigo</strong> y <strong>soja</strong>.</p>\n<p class=\"nutrition-panel__note\">Valores validados por el equipo de Nutrición de GB Foods.</p>\n</section>"
-    }
-  },
   "api": {
-    "properties": [],
-    "variants": {},
-    "states": [],
-    "defaults": {},
-    "invalidCombinations": [],
-    "nestedInstances": [
-      {
-        "layer": "nutrition-bar",
-        "component": "Highlight=False",
-        "componentSlug": "nutrition-bar",
-        "exposedAs": null,
-        "toggledBy": null,
-        "visibleByDefault": true
-      },
-      {
-        "layer": "nutrition-bar",
-        "component": "Highlight=True",
-        "componentSlug": "nutrition-bar",
-        "exposedAs": null,
-        "toggledBy": null,
-        "visibleByDefault": true
-      },
-      {
-        "layer": "claim",
-        "component": "Type=Natural",
-        "componentSlug": "badge",
-        "exposedAs": null,
-        "toggledBy": null,
-        "visibleByDefault": true
-      }
-    ],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -88,8 +35,7 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "badge/natural/bg",
       "badge/natural/text",
       "border/width/thin",
@@ -121,8 +67,67 @@
       "space/32",
       "space/4",
       "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "badge",
+      "badge--natural",
+      "nutrition-bar",
+      "nutrition-bar--highlight",
+      "nutrition-bar__amount",
+      "nutrition-bar__label",
+      "nutrition-bar__meter",
+      "nutrition-bar__percent",
+      "nutrition-bar__row",
+      "nutrition-bar__value",
+      "nutrition-panel",
+      "nutrition-panel__allergens",
+      "nutrition-panel__base",
+      "nutrition-panel__list",
+      "nutrition-panel__note",
+      "nutrition-panel__title"
     ],
-    "variablesUsed": [
+    "example": "<section data-ds=\"nutrition-panel\" class=\"nutrition-panel\" aria-labelledby=\"nut-title\">\n<h3 class=\"nutrition-panel__title\" id=\"nut-title\">Nutrición</h3>\n<p class=\"nutrition-panel__base\">Por 100 g · % de la ingesta de referencia de un adulto medio (8.400 kJ / 2.000 kcal).</p>\n<ul class=\"nutrition-panel__list\">\n<li class=\"nutrition-bar\"><div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Grasas</span><span class=\"nutrition-bar__amount\"><span class=\"nutrition-bar__value\">16 g</span><span class=\"nutrition-bar__percent\">23 % IR</span></span></div><meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"23\" aria-hidden=\"true\"></meter></li>\n<li class=\"nutrition-bar nutrition-bar--highlight\"><div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Sal</span><span class=\"nutrition-bar__amount\"><span class=\"badge badge--natural\">−20 %</span><span class=\"nutrition-bar__value\">1,9 g</span><span class=\"nutrition-bar__percent\">32 % IR</span></span></div><meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"32\" aria-hidden=\"true\"></meter></li>\n</ul>\n<p class=\"nutrition-panel__allergens\"><strong>Alérgenos:</strong> contiene <strong>trigo</strong> y <strong>soja</strong>.</p>\n<p class=\"nutrition-panel__note\">Valores validados por el equipo de Nutrición de GB Foods.</p>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "71:75",
+    "componentKey": "e4ac3846bf2a2bbad26af80ef2406be1042e8eee",
+    "propertyNames": {},
+    "variantAxes": {},
+    "nestedInstances": [
+      {
+        "layer": "nutrition-bar",
+        "component": "Highlight=False",
+        "componentSlug": "nutrition-bar",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "nutrition-bar",
+        "component": "Highlight=True",
+        "componentSlug": "nutrition-bar",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "claim",
+        "component": "Type=Natural",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
       "itemSpacing: space/24",
       "paddingLeft: space/32",
       "paddingTop: space/32",
@@ -189,58 +194,16 @@
       "Desktop/caption",
       "Desktop/body-m",
       "Mobile/label"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "badge/natural/bg",
-        "badge/natural/text",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-m",
-        "font/line-height/desktop/caption",
-        "font/line-height/desktop/h3",
-        "font/line-height/mobile/label",
-        "font/size/desktop/body-m",
-        "font/size/desktop/caption",
-        "font/size/desktop/h3",
-        "font/size/mobile/label",
-        "font/style/body",
-        "font/style/display",
-        "nutrition/allergen",
-        "nutrition/bg",
-        "nutrition/border",
-        "nutrition/fill",
-        "nutrition/fill-highlight",
-        "nutrition/label",
-        "nutrition/meta",
-        "nutrition/track",
-        "nutrition/value"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/nutrition-panel.md",
+    "section": "Nutrition panel"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "badge",
       "nutrition-bar"
-    ],
-    "usedBy": [
-      "product-details"
     ],
     "related": []
   }

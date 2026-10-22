@@ -1,0 +1,285 @@
+{
+  "title": "Alert",
+  "description": "Mensaje de estado. Type=Info · Success · Alert · Error, cada uno con su icono fijo (info, circle-check, triangle-alert, circle-alert) y su título: el tipo nunca se comunica solo p…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".alert",
+          "fg": "#0b4482",
+          "bg": "#e5eef9",
+          "fgVar": "--alert-info-text",
+          "bgVar": "--alert-info-bg",
+          "ratio": 8.29,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".alert.alert--success",
+          "fg": "#005c26",
+          "bg": "#e3f3e9",
+          "fgVar": "--alert-success-text",
+          "bgVar": "--alert-success-bg",
+          "ratio": 7.14,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".alert.alert--alert",
+          "fg": "#6b4100",
+          "bg": "#ffefc2",
+          "fgVar": "--alert-alert-text",
+          "bgVar": "--alert-alert-bg",
+          "ratio": 7.72,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".alert.alert--error",
+          "fg": "#a3160e",
+          "bg": "#fde8e7",
+          "fgVar": "--alert-error-text",
+          "bgVar": "--alert-error-bg",
+          "ratio": 6.67,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "alert",
+      "name": "Alert",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "80:138",
+      "current": {
+        "description": "Mensaje de estado. Type=Info · Success · Alert · Error, cada uno con su icono fijo (info, circle-check, triangle-alert, circle-alert) y su título: el tipo nunca se comunica solo por color. Layout=Inline: dentro del contenido (formulario, concurso cerrado), radius/sm. Layout=Toast: flotante y temporal en layer/toast, elevation/3, abajo centrado en móvil y abajo a la derecha en desktop; se cierra solo a los 6 s salvo Error, que espera al usuario (y la pausa al pasar el ratón o con el foco). Accesibilidad: Info/Success con role=\"status\" (aria-live polite); Alert/Error con role=\"alert\". Cerrar es un <button aria-label=\"Cerrar aviso\">. El título se edita en la instancia (no es propiedad para no perder el título de cada tipo).",
+        "Propósito": "Mensaje de estado. Inline va dentro del contenido (formularios, concurso cerrado); Toast flota y desaparece solo, salvo los errores.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Texto sobre fondo de estado: Info 8,3:1, Success 7,1:1, Alert 7,7:1, Error 6,7:1. Iconos y borde (≥ 3:1): Info 5,1:1, Success 4,8:1, Alert 4,7:1, Error 4,9:1. Cada tipo tiene icono y título propios: no depende del color. Rol: Info y Success con `role=\"status\"` (educado); Alert y Error con `role=\"alert\"`. El toast se cierra a los 6 s salvo Error, y se pausa con el ratón encima o con foco. Cerrar es un botón con nombre.",
+        "Cuándo usar / qué NO hace": "Para comunicar el resultado de una acción o un estado de la página. No sustituye a la validación de campo (mensaje bajo el Field) ni a un Modal. No se apilan más de tres toasts."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "80:138",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=80-138",
+      "page": "Feedback & overlays",
+      "type": "COMPONENT_SET",
+      "variants": 8,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Mensaje de estado. Type=Info · Success · Alert · Error, cada uno con su icono fijo (info, circle-check, triangle-alert, circle-alert) y su título: el tipo nunca se comunica solo por color. Layout=Inline: dentro del contenido (formulario, concurso cerrado), radius/sm. Layout=Toast: flotante y temporal en layer/toast, elevation/3, abajo centrado en móvil y abajo a la derecha en desktop; se cierra solo a los 6 s salvo Error, que espera al usuario (y la pausa al pasar el ratón o con el foco). Accesibilidad: Info/Success con role=\"status\" (aria-live polite); Alert/Error con role=\"alert\". Cerrar es un <button aria-label=\"Cerrar aviso\">. El título se edita en la instancia (no es propiedad para no perder el título de cada tipo)."
+    ],
+    "props": [
+      {
+        "name": "body",
+        "type": "string",
+        "values": [],
+        "default": "Texto de ejemplo con el detalle del mensaje.",
+        "figma": "Body#80:9"
+      },
+      {
+        "name": "dismissible",
+        "type": "boolean",
+        "values": [],
+        "default": "true",
+        "figma": "Dismissible#80:18"
+      },
+      {
+        "name": "closeIcon",
+        "type": "icon",
+        "values": [],
+        "default": "Icon / close",
+        "figma": "Close icon#80:36"
+      },
+      {
+        "name": "type",
+        "type": "enum",
+        "values": [
+          "Info",
+          "Success",
+          "Alert",
+          "Error"
+        ],
+        "default": "Info",
+        "figma": "Type"
+      },
+      {
+        "name": "layout",
+        "type": "enum",
+        "values": [
+          "Inline",
+          "Toast"
+        ],
+        "default": "Inline",
+        "figma": "Layout"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "closeIcon"
+      ],
+      "defaults": [
+        "Icon / close"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "icon-status",
+        "component": "icon-info",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-close",
+        "component": "icon-close",
+        "exposedAs": "Close icon#80:36",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "alert",
+        "items": [
+          "alert/close",
+          "alert/info/bg",
+          "alert/info/border",
+          "alert/info/icon",
+          "alert/info/text"
+        ]
+      },
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-s",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/md",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/sm"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/4"
+        ]
+      }
+    ],
+    "tokenCount": 20,
+    "textStyles": [
+      "Desktop/label",
+      "Desktop/body-s"
+    ],
+    "classes": [
+      "alert",
+      "alert--alert",
+      "alert--error",
+      "alert--success",
+      "alert--toast",
+      "alert__body",
+      "alert__close",
+      "alert__content",
+      "alert__title",
+      "icon",
+      "icon-circle-alert",
+      "icon-circle-check",
+      "icon-close",
+      "icon-info",
+      "icon-triangle-alert"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Mensaje de estado. Inline va dentro del contenido (formularios, concurso cerrado); Toast flota y desaparece solo, salvo los errores.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Texto sobre fondo de estado: Info 8,3:1, Success 7,1:1, Alert 7,7:1, Error 6,7:1. Iconos y borde (≥ 3:1): Info 5,1:1, Success 4,8:1, Alert 4,7:1, Error 4,9:1. Cada tipo tiene icono y título propios: no depende del color. Rol: Info y Success con `role=\"status\"` (educado); Alert y Error con `role=\"alert\"`. El toast se cierra a los 6 s salvo Error, y se pausa con el ratón encima o con foco. Cerrar es un botón con nombre.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Para comunicar el resultado de una acción o un estado de la página. No sustituye a la validación de campo (mensaje bajo el Field) ni a un Modal. No se apilan más de tres toasts.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 6,
+      "total": 6,
+      "missing": [],
+      "unchecked": [
+        "dismissible=true"
+      ],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "alert",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "80:138",
+    "contract": "../../../../../../design-system/schemas/components/alert.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

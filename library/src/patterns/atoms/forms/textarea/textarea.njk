@@ -1,0 +1,16 @@
+{% macro render(data) %}
+{% if data.view == "todas" %}
+<p class="ds-gallery__note" style="font:14px/1.5 system-ui;color:#1f1f1f;max-width:70ch">Sin clase conocida (no se puede comprobar): required=true, helper=true, filled=true, error=true, disabled=true.</p>
+{% else %}
+{% raw %}<div data-ds="textarea" class="field">
+<label class="field__label" for="mensaje">Mensaje</label>
+<textarea class="field__control field__control--textarea" id="mensaje" name="mensaje" placeholder="Escribe aquí" aria-describedby="mensaje-ayuda"></textarea>
+<p class="field__helper" id="mensaje-ayuda">Máximo 500 caracteres</p>
+</div>
+<div data-ds="textarea" class="field">
+<label class="field__label" for="respuesta">Respuesta</label>
+<textarea class="field__control field__control--textarea" id="respuesta" aria-invalid="true" aria-describedby="respuesta-error"></textarea>
+<p class="field__error" id="respuesta-error"><span class="icon icon-circle-alert" aria-hidden="true"></span>Este campo es obligatorio</p>
+</div>{% endraw %}
+{% endif %}
+{% endmacro %}

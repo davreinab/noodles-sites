@@ -1,0 +1,11 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="ingredients" class="ingredients" aria-labelledby="ing-title">
+<h3 class="ingredients__title" id="ing-title">Ingredientes</h3>
+<ul class="ingredients__list">
+<li class="ingredient-item">Fideos de <strong>trigo</strong><span class="ingredient-item__percent">52 %</span></li>
+<li class="ingredient-item ingredient-item--secondary">Otros: sal, especias, salsa de <strong>soja</strong>, ajo y cebolla.</li>
+</ul>
+<p class="ingredients__note">Datos del envase.</p>
+<a class="link link--standalone" href="#etiqueta" aria-haspopup="dialog">Ver etiqueta del envase <span class="icon icon-arrow-right" aria-hidden="true"></span></a>
+</section>{% endraw %}
+{% endmacro %}

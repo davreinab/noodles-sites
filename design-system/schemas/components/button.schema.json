@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:button",
+  "contractVersion": "2",
   "meta": {
     "name": "Button",
     "slug": "button",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Botón de acción. Hierarchy: Primary (acción principal, 1 por vista), Secondary (alternativa), Inverse (sobre fondos oscuros). Size M (48) por defecto; L (64) para hero y CTA destacados. Label en Anton mayúsculas. Iconos opcionales delante/detrás (INSTANCE_SWAP). Focus: anillo exterior visible. Disabled sin opacidad (colores propios). Norma de botones (2026-10-07): misma altura en la misma talla para Button e Icon button (M 48, L 64) y el texto siempre en una sola línea: no se parte; si no cabe, se acorta el texto, nunca se pasa a dos líneas.",
     "figmaPage": "Buttons & links",
     "figmaType": "COMPONENT_SET",
     "variantCount": 24,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "5272b0debffb",
     "verification": {
       "status": "verified",
@@ -26,53 +34,31 @@
       "by": "agent (Claude)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/button.md",
-      "section": "Button"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "33:295",
-      "componentKey": "012371b0017ccbcb3ebc14b5b04bfcb7f2fb5e5c"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "button",
-        "button--inverse",
-        "button--l",
-        "button--secondary",
-        "icon",
-        "icon-arrow-right"
-      ],
-      "example": "<button class=\"button\" type=\"button\">Dónde comprar</button>\n<a class=\"button button--secondary\" href=\"/recetas\">Ver recetas <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a>\n<button class=\"button button--inverse button--l\" type=\"button\">Participar</button>\n<button class=\"button\" type=\"button\" aria-disabled=\"true\">No disponible</button>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Label#33:0",
-        "kind": "TEXT",
-        "default": "Botón"
+        "name": "label",
+        "type": "string",
+        "default": "Botón",
+        "figma": "Label#33:0"
       },
       {
-        "name": "Icon leading#33:25",
-        "kind": "BOOLEAN",
-        "default": false
+        "name": "iconLeading",
+        "type": "boolean",
+        "default": false,
+        "figma": "Icon leading#33:25"
       },
       {
-        "name": "Icon trailing#33:50",
-        "kind": "BOOLEAN",
-        "default": false
+        "name": "iconTrailing",
+        "type": "boolean",
+        "default": false,
+        "figma": "Icon trailing#33:50"
       },
       {
-        "name": "Icon leading swap#33:75",
-        "kind": "INSTANCE_SWAP",
-        "default": "30:52",
-        "defaultComponent": "Icon / arrow-right",
+        "name": "iconLeadingSwap",
+        "type": "icon",
+        "default": "Icon / arrow-right",
+        "nullable": true,
         "preferredValues": [
           {
             "type": "COMPONENT",
@@ -106,13 +92,14 @@
             "type": "COMPONENT",
             "key": "c77b85be20a1147b5f7d128f48a8dc25bfe43f83"
           }
-        ]
+        ],
+        "figma": "Icon leading swap#33:75"
       },
       {
-        "name": "Icon trailing swap#33:100",
-        "kind": "INSTANCE_SWAP",
-        "default": "30:52",
-        "defaultComponent": "Icon / arrow-right",
+        "name": "iconTrailingSwap",
+        "type": "icon",
+        "default": "Icon / arrow-right",
+        "nullable": true,
         "preferredValues": [
           {
             "type": "COMPONENT",
@@ -146,40 +133,104 @@
             "type": "COMPONENT",
             "key": "c77b85be20a1147b5f7d128f48a8dc25bfe43f83"
           }
-        ]
+        ],
+        "figma": "Icon trailing swap#33:100"
       },
       {
-        "name": "Hierarchy",
-        "kind": "VARIANT",
-        "default": "Primary",
+        "name": "hierarchy",
+        "type": "enum",
         "values": [
           "Primary",
           "Secondary",
           "Inverse"
-        ]
+        ],
+        "default": "Primary",
+        "figma": "Hierarchy"
       },
       {
-        "name": "Size",
-        "kind": "VARIANT",
-        "default": "M",
+        "name": "size",
+        "type": "enum",
         "values": [
           "M",
           "L"
-        ]
+        ],
+        "default": "M",
+        "figma": "Size"
       },
       {
-        "name": "State",
-        "kind": "VARIANT",
-        "default": "Default",
-        "values": [
-          "Default",
-          "Hover",
-          "Focus",
-          "Disabled"
-        ]
+        "name": "disabled",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Disabled"
       }
     ],
-    "variants": {
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "iconLeadingSwap",
+        "iconTrailingSwap"
+      ],
+      "defaultIcons": [
+        "Icon / arrow-right",
+        "Icon / arrow-right"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thick",
+      "button/primary/bg",
+      "button/primary/border",
+      "button/primary/text",
+      "font/family/display",
+      "font/line-height/desktop/label",
+      "font/size/desktop/label",
+      "font/style/display",
+      "icon/size/sm",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "button",
+      "button--inverse",
+      "button--l",
+      "button--secondary",
+      "icon",
+      "icon-arrow-right"
+    ],
+    "example": "<button data-ds=\"button\" class=\"button\" type=\"button\">Dónde comprar</button>\n<a data-ds=\"button\" class=\"button button--secondary\" href=\"/recetas\">Ver recetas <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a>\n<button data-ds=\"button\" class=\"button button--inverse button--l\" type=\"button\">Participar</button>\n<button data-ds=\"button\" class=\"button\" type=\"button\" aria-disabled=\"true\">No disponible</button>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "33:295",
+    "componentKey": "012371b0017ccbcb3ebc14b5b04bfcb7f2fb5e5c",
+    "propertyNames": {
+      "label": "Label#33:0",
+      "iconLeading": "Icon leading#33:25",
+      "iconTrailing": "Icon trailing#33:50",
+      "iconLeadingSwap": "Icon leading swap#33:75",
+      "iconTrailingSwap": "Icon trailing swap#33:100",
+      "hierarchy": "Hierarchy",
+      "size": "Size",
+      "disabled": "State=Disabled"
+    },
+    "variantAxes": {
       "Hierarchy": [
         "Primary",
         "Secondary",
@@ -196,18 +247,6 @@
         "Disabled"
       ]
     },
-    "states": [
-      "Default",
-      "Hover",
-      "Focus",
-      "Disabled"
-    ],
-    "defaults": {
-      "Hierarchy": "Primary",
-      "Size": "M",
-      "State": "Default"
-    },
-    "invalidCombinations": [],
     "nestedInstances": [
       {
         "layer": "icon-leading",
@@ -226,36 +265,7 @@
         "visibleByDefault": false
       }
     ],
-    "icons": {
-      "hasIcon": true,
-      "swapProperties": [
-        "Icon leading swap#33:75",
-        "Icon trailing swap#33:100"
-      ],
-      "defaultIcons": [
-        "Icon / arrow-right",
-        "Icon / arrow-right"
-      ],
-      "compatible": "any Icon / * via INSTANCE_SWAP",
-      "unexposedIconLayers": []
-    },
-    "slots": [],
-    "tokensUsed": [
-      "border/width/thick",
-      "button/primary/bg",
-      "button/primary/border",
-      "button/primary/text",
-      "font/family/display",
-      "font/line-height/desktop/label",
-      "font/size/desktop/label",
-      "font/style/display",
-      "icon/size/sm",
-      "radius/pill",
-      "space/16",
-      "space/24",
-      "space/8"
-    ],
-    "variablesUsed": [
+    "variableBindings": [
       "itemSpacing: space/8",
       "paddingLeft: space/24",
       "paddingTop: space/16",
@@ -285,52 +295,15 @@
     ],
     "textStyles": [
       "Desktop/label"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "button/primary/bg",
-        "button/primary/border",
-        "button/primary/text",
-        "font/family/display",
-        "font/line-height/desktop/label",
-        "font/size/desktop/label",
-        "font/style/display"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/button.md",
+    "section": "Button"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "icon-arrow-right"
-    ],
-    "usedBy": [
-      "contest-card",
-      "footer",
-      "hero",
-      "library",
-      "modal",
-      "natural-formula",
-      "navbar",
-      "preparation",
-      "product-hero",
-      "promo",
-      "recipes",
-      "timer"
     ],
     "related": []
   }

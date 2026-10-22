@@ -1,0 +1,4 @@
+/* ⚙️ GENERADO por scripts/ds-library.py. El design system entra entero, sin copiarlo:
+   tokens.css (variables y tema oscuro) y components.css (el único CSS del DS). Nada se parte ni se duplica. */
+@import "../../../../design-system/tokens/tokens.css";
+@import "../../../../design-system/css/components.css";

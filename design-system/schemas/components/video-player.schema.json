@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:video-player",
+  "contractVersion": "2",
   "meta": {
     "name": "Video player",
     "slug": "video-player",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Reproductor de vídeo como fachada. State=Poster: póster de marca (sin imagen generada con IA), botón play de 80 px (video/play-bg, borde grueso) y duración. State=Playing: al pulsar se sustituye por el reproductor real (iframe de YouTube con youtube-nocookie o &lt;video&gt; MP4) con sus controles nativos; no se carga nada de terceros antes del clic (privacidad y rendimiento). Ratio=16:9 (preparación, promo de Home, concursos) y 9:16 (recetas en vídeo vertical). Accesibilidad: el play es un &lt;button&gt; con nombre «Reproducir vídeo: &lt;título&gt; (0:45)»; foco con anillo video/focus-ring amarillo sobre el póster oscuro; subtítulos obligatorios si el vídeo tiene voz; sin autoplay con sonido; el GIF de preparación usa este mismo componente en MP4 silencioso en bucle con botón de pausa.",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Reproductor de vídeo como fachada. State=Poster: póster de marca (sin imagen generada con IA), botón play de 80 px (video/play-bg, borde grueso) y duración. State=Playing: al pulsar se sustituye por el reproductor real (iframe de YouTube con youtube-nocookie o <video> MP4) con sus controles nativos; no se carga nada de terceros antes del clic (privacidad y rendimiento). Ratio=16:9 (preparación, promo de Home, concursos) y 9:16 (recetas en vídeo vertical). Accesibilidad: el play es un <button> con nombre «Reproducir vídeo: <título> (0:45)»; foco con anillo video/focus-ring amarillo sobre el póster oscuro; subtítulos obligatorios si el vídeo tiene voz; sin autoplay con sonido; el GIF de preparación usa este mismo componente en MP4 silencioso en bucle con botón de pausa.",
     "figmaPage": "Content",
     "figmaType": "COMPONENT_SET",
     "variantCount": 4,
     "autoLayout": false,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "7663dd7eebf5",
     "verification": {
       "status": "verified",
@@ -23,99 +31,53 @@
       "by": "agent (Claude)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/video-player.md",
-      "section": "Video player"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "83:70",
-      "componentKey": "7b062bb96aa6895c0502782396d3415a40d08445"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "icon",
-        "icon-play",
-        "video-player",
-        "video-player--vertical",
-        "video-player__duration",
-        "video-player__play",
-        "video-player__poster",
-        "video-player__title"
-      ],
-      "example": "<div class=\"video-player\">\n<img class=\"video-player__poster\" src=\"/media/promo-poster.jpg\" alt=\"\">\n<button class=\"video-player__play\" type=\"button\" aria-label=\"Reproducir vídeo: Gana un viaje a Tokio (0:45)\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span></button>\n<span class=\"video-player__duration\" aria-hidden=\"true\">0:45</span>\n</div>\n<div class=\"video-player video-player--vertical\"><span class=\"video-player__title\">Receta en vídeo</span></div>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Duration#83:0",
-        "kind": "TEXT",
-        "default": "0:45"
+        "name": "duration",
+        "type": "string",
+        "default": "0:45",
+        "figma": "Duration#83:0"
       },
       {
-        "name": "Play icon#83:5",
-        "kind": "INSTANCE_SWAP",
-        "default": "30:79",
-        "defaultComponent": "Icon / play",
-        "preferredValues": []
+        "name": "playIcon",
+        "type": "icon",
+        "default": "Icon / play",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Play icon#83:5"
       },
       {
-        "name": "Ratio",
-        "kind": "VARIANT",
-        "default": "16:9",
+        "name": "ratio",
+        "type": "enum",
         "values": [
           "16:9",
           "9:16"
-        ]
+        ],
+        "default": "16:9",
+        "figma": "Ratio"
       },
       {
-        "name": "State",
-        "kind": "VARIANT",
-        "default": "Poster",
-        "values": [
-          "Poster",
-          "Playing"
-        ]
-      }
-    ],
-    "variants": {
-      "Ratio": [
-        "16:9",
-        "9:16"
-      ],
-      "State": [
-        "Poster",
-        "Playing"
-      ]
-    },
-    "states": [
-      "Poster",
-      "Playing"
-    ],
-    "defaults": {
-      "Ratio": "16:9",
-      "State": "Poster"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [
+        "name": "poster",
+        "type": "boolean",
+        "default": true,
+        "figma": "State=Poster"
+      },
       {
-        "layer": "icon-play",
-        "component": "Icon / play",
-        "componentSlug": "icon-play",
-        "exposedAs": "Play icon#83:5",
-        "toggledBy": null,
-        "visibleByDefault": true
+        "name": "playing",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Playing"
       }
     ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": true,
       "swapProperties": [
-        "Play icon#83:5"
+        "playIcon"
       ],
       "defaultIcons": [
         "Icon / play"
@@ -123,8 +85,7 @@
       "compatible": "any Icon / * via INSTANCE_SWAP",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "border/width/thick",
       "border/width/thin",
       "font/family/body",
@@ -146,8 +107,58 @@
       "video/play-bg",
       "video/play-icon",
       "video/poster-bg"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "icon",
+      "icon-play",
+      "video-player",
+      "video-player--vertical",
+      "video-player__duration",
+      "video-player__play",
+      "video-player__poster",
+      "video-player__title"
     ],
-    "variablesUsed": [
+    "example": "<div data-ds=\"video-player\" class=\"video-player\">\n<img class=\"video-player__poster\" src=\"/media/promo-poster.jpg\" alt=\"\">\n<button class=\"video-player__play\" type=\"button\" aria-label=\"Reproducir vídeo: Gana un viaje a Tokio (0:45)\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span></button>\n<span class=\"video-player__duration\" aria-hidden=\"true\">0:45</span>\n</div>\n<div data-ds=\"video-player\" class=\"video-player video-player--vertical\"><span class=\"video-player__title\">Receta en vídeo</span></div>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "83:70",
+    "componentKey": "7b062bb96aa6895c0502782396d3415a40d08445",
+    "propertyNames": {
+      "duration": "Duration#83:0",
+      "playIcon": "Play icon#83:5",
+      "ratio": "Ratio",
+      "poster": "State=Poster",
+      "playing": "State=Playing"
+    },
+    "variantAxes": {
+      "Ratio": [
+        "16:9",
+        "9:16"
+      ],
+      "State": [
+        "Poster",
+        "Playing"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "icon-play",
+        "component": "Icon / play",
+        "componentSlug": "icon-play",
+        "exposedAs": "Play icon#83:5",
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
       "topLeftRadius: radius/md",
       "topRightRadius: radius/md",
       "bottomLeftRadius: radius/md",
@@ -194,49 +205,15 @@
     "textStyles": [
       "Desktop/caption",
       "Desktop/label"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/caption",
-        "font/line-height/desktop/label",
-        "font/size/desktop/caption",
-        "font/size/desktop/label",
-        "font/style/body",
-        "font/style/display",
-        "video/border",
-        "video/meta-bg",
-        "video/meta-text",
-        "video/play-bg",
-        "video/play-icon",
-        "video/poster-bg"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/video-player.md",
+    "section": "Video player"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "icon-play"
-    ],
-    "usedBy": [
-      "preparation",
-      "promo"
     ],
     "related": []
   }

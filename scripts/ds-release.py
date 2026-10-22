@@ -15,7 +15,14 @@ Por defecto solo informa. Con --apply sube la versión en agent-manifest.json, e
 entrada en CHANGELOG.md y guarda la nueva línea base.
 
 Uso:  python3 scripts/ds-release.py [--root .] [--apply] [--as major|minor|patch]
-      --as  fuerza el salto cuando el criterio humano manda sobre el automático.
+      --as     fuerza el salto cuando el criterio humano manda sobre el automático.
+      python3 scripts/ds-release.py --check     # estado (borrador o publicado) y propuestas que faltan
+
+Borrador y publicado: mientras no exista una publicación (la línea base está vacía) el design system es un
+BORRADOR y se edita sin propuestas. La primera `--apply` fija la línea base y lo declara publicado. Desde ahí,
+cambiar o retirar algo que ya estaba publicado exige una propuesta aprobada (`proposals/`, estado approved o
+applied) que lo cite en `affectedResources`. Añadir algo nuevo no la necesita. `--check` lo comprueba contra la
+línea base; `proposalsEnforcement` en agent-manifest.json decide si falta una propuesta es aviso (por defecto) o error.
 Sin dependencias externas: solo biblioteca estándar.
 """
 
@@ -54,15 +61,24 @@ def fingerprint(ds):
                 continue
             sch = jload(os.path.join(cdir, f)) or {}
             api = sch.get("api") or {}
+            descripcion = ((sch.get("meta") or {}).get("description") or "").strip()
             variantes = api.get("variants") or {}
             if isinstance(variantes, dict):
                 variantes = {k: sorted(v or []) for k, v in variantes.items()}
-            comps[f[:-len(".schema.json")]] = {
-                "variants": variantes,
-                "states": sorted(api.get("states") or []),
-                "properties": sorted(p.get("name") for p in (api.get("properties") or []) if p.get("name")),
-            }
-    return {"tokens": tokens, "components": comps}
+            if isinstance(api.get("props"), list):
+                # contrato 12.0.0: props con tipo; los enum llevan valores
+                comps[f[:-len(".schema.json")]] = {
+                    "props": {p["name"]: {"type": p.get("type"), "values": sorted(p.get("values") or [])} for p in api["props"] if p.get("name")},
+                    "cssStates": sorted(api.get("cssStates") or []),
+                    "description": descripcion,
+                }
+            else:
+                comps[f[:-len(".schema.json")]] = {
+                    "variants": variantes,
+                    "states": sorted(api.get("states") or []),
+                    "properties": sorted(p.get("name") for p in (api.get("properties") or []) if p.get("name")),
+                }
+    return {"tokens": tokens, "components": comps, "fingerprintVersion": 2}
 
 
 def diff(base, now):
@@ -80,11 +96,35 @@ def diff(base, now):
             cambiados.append("token `%s`" % k)
 
     bc, nc = base.get("components") or {}, now.get("components") or {}
+    if any("props" in v for v in nc.values()) and any("variants" in v for v in bc.values()):
+        # la línea base es de un contrato anterior a la 12.0.0: sus claves no son comparables con las de ahora.
+        # Se comparan solo los tokens; los componentes se dan por iguales y la próxima publicación reescribe la base.
+        print("[AVISO] la línea base tiene contratos con la forma anterior a la 12.0.0: los componentes no se comparan "
+              "esta vez (no es un cambio del DS, es un cambio de formato). Publica con --apply para renovar la línea base.")
+        bc = {k: nc[k] for k in nc}
     for k in sorted(set(bc) - set(nc)):
         quitados.append("componente `%s`" % k)
     for k in sorted(set(nc) - set(bc)):
         anadidos.append("componente `%s`" % k)
     for k in sorted(set(bc) & set(nc)):
+        if "props" in nc[k] or "props" in bc[k]:
+            bp, np_ = bc[k].get("props") or {}, nc[k].get("props") or {}
+            quitados += ["prop `%s` de `%s`" % (v, k) for v in sorted(set(bp) - set(np_))]
+            anadidos += ["prop `%s` en `%s`" % (v, k) for v in sorted(set(np_) - set(bp))]
+            for pn in sorted(set(bp) & set(np_)):
+                if bp[pn].get("type") != np_[pn].get("type"):
+                    quitados.append("prop `%s` de `%s` cambia de tipo (%s → %s)" % (pn, k, bp[pn].get("type"), np_[pn].get("type")))
+                fuera = sorted(set(bp[pn].get("values") or []) - set(np_[pn].get("values") or []))
+                dentro = sorted(set(np_[pn].get("values") or []) - set(bp[pn].get("values") or []))
+                quitados += ["valor `%s` de `%s.%s`" % (v, k, pn) for v in fuera]
+                anadidos += ["valor `%s` en `%s.%s`" % (v, k, pn) for v in dentro]
+            fuera = sorted(set(bc[k].get("cssStates") or []) - set(nc[k].get("cssStates") or []))
+            dentro = sorted(set(nc[k].get("cssStates") or []) - set(bc[k].get("cssStates") or []))
+            quitados += ["estado de CSS `%s` de `%s`" % (v, k) for v in fuera]
+            anadidos += ["estado de CSS `%s` en `%s`" % (v, k) for v in dentro]
+            if "description" in bc[k] and bc[k].get("description") != nc[k].get("description"):
+                cambiados.append("descripción de `%s`" % k)
+            continue
         for campo, etiqueta in (("states", "estado"), ("properties", "propiedad")):
             fuera = sorted(set(bc[k].get(campo) or []) - set(nc[k].get(campo) or []))
             dentro = sorted(set(nc[k].get(campo) or []) - set(bc[k].get(campo) or []))
@@ -103,6 +143,73 @@ def diff(base, now):
 
     nivel = "major" if quitados else "minor" if anadidos else "patch" if cambiados else "none"
     return nivel, {"quitados": quitados, "anadidos": anadidos, "cambiados": cambiados}
+
+
+def recurso(item):
+    """El recurso al que se refiere una línea del diff: la ruta del token, o el componente (último nombre entre
+    comillas, sin el sufijo «.prop»)."""
+    nombres = item.split("`")[1::2]
+    if not nombres:
+        return ""
+    return nombres[0] if item.startswith("token") else nombres[-1].split(".")[0]
+
+
+def propuestas_aprobadas(ds):
+    """affectedResources de las propuestas que autorizan cambios: estado approved o applied, en la raíz o en aplicadas/."""
+    out = []
+    pdir = os.path.join(ds, "proposals")
+    for d in (pdir, os.path.join(pdir, "aplicadas")):
+        if not os.path.isdir(d):
+            continue
+        for f in sorted(os.listdir(d)):
+            if not f.endswith(".json") or f.startswith("_"):
+                continue
+            pr = jload(os.path.join(d, f)) or {}
+            if pr.get("status") in ("approved", "applied"):
+                out.append((f, [str(r) for r in pr.get("affectedResources") or []]))
+    return out
+
+
+def cubierto(item, aprobadas):
+    r = recurso(item)
+    if not r:
+        return None
+    for f, recs in aprobadas:
+        for x in recs:
+            x = x.replace("component:", "").replace("token:", "").strip("` ")
+            if x == r or x.endswith("/" + r) or x.startswith(r + "/") or x.startswith(r + "."):
+                return f
+    return None
+
+
+def comprobar(ds, man, ahora, base):
+    """Estado del ciclo de vida y propuestas que faltan. Devuelve el código de salida."""
+    estado_base = (base or {}).get("state") or {}
+    if base is None or not (estado_base.get("tokens") or estado_base.get("components")):
+        print("Estado: BORRADOR. El design system nunca se ha publicado: se edita sin propuestas.")
+        print("La primera `python3 scripts/ds-release.py --apply` fija la línea base y lo declara publicado.")
+        return 0
+    nivel, d = diff(estado_base, ahora)
+    print("Estado: PUBLICADO (versión %s, línea base del %s)." % (base.get("version"), base.get("releasedAt")))
+    pendientes = d["quitados"] + d["cambiados"]
+    if not pendientes:
+        print("Nada de lo ya publicado ha cambiado desde la línea base%s." % (
+            "; hay %d cosas nuevas, que no necesitan propuesta" % len(d["anadidos"]) if d["anadidos"] else ""))
+        return 0
+    aprobadas = propuestas_aprobadas(ds)
+    sin = [x for x in pendientes if not cubierto(x, aprobadas)]
+    for x in pendientes:
+        f = cubierto(x, aprobadas)
+        print("  %s %s%s" % ("✓" if f else "✗", x, "  → " + f if f else "  → falta propuesta aprobada que lo cite en affectedResources"))
+    modo = (man.get("proposalsEnforcement") or "warn").lower()
+    if not sin:
+        return 0
+    tag = "[ERROR]" if modo == "error" else "[AVISO]"
+    print("%s %d cambio(s) de lo ya publicado sin propuesta aprobada. Escribe la propuesta en design-system/proposals/ "
+          "(estado approved o applied) y cita el recurso en affectedResources." % (tag, len(sin)))
+    if modo != "error":
+        print("(proposalsEnforcement es «warn»; ponlo en «error» en agent-manifest.json para que falle el commit)")
+    return 1 if modo == "error" else 0
 
 
 def bump(version, nivel):
@@ -135,6 +242,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=".")
     ap.add_argument("--apply", action="store_true", help="sube la versión, escribe el CHANGELOG y guarda la línea base")
+    ap.add_argument("--check", action="store_true", help="solo comprueba: borrador o publicado, y propuestas que faltan")
     ap.add_argument("--as", dest="forzado", choices=["major", "minor", "patch"], default=None)
     a = ap.parse_args()
     root = os.path.abspath(a.root)
@@ -147,7 +255,12 @@ def main():
     ahora = fingerprint(ds)
     bpath = os.path.join(ds, "reports", "release-baseline.json")
     base = jload(bpath)
-    primera = base is None
+    if a.check:
+        return comprobar(ds, man, ahora, base)
+    estado_base = (base or {}).get("state") or {}
+    primera = base is None or not (estado_base.get("tokens") or estado_base.get("components"))
+    if primera and base is not None:
+        print("El design system nunca se ha publicado (la línea base está vacía): --apply hará la primera publicación.")
 
     if primera:
         nivel, d = ("minor" if (ahora["tokens"] or ahora["components"]) else "none"),\
@@ -173,8 +286,19 @@ def main():
         if d[clave]:
             print("  %s (%d): %s%s" % (etiqueta, len(d[clave]), "; ".join(d[clave][:5]),
                                        " …" if len(d[clave]) > 5 else ""))
+    legacy = (not primera and any("props" in v for v in (ahora.get("components") or {}).values())
+              and any("variants" in v for v in ((base.get("state") or {}).get("components") or {}).values()))
     if nivel == "none":
-        print("Nada que publicar.")
+        if legacy and a.apply:
+            # misma versión: solo se renueva la línea base al formato 12.0.0 para que las próximas comparaciones sean reales
+            os.makedirs(os.path.dirname(bpath), exist_ok=True)
+            with open(bpath, "w", encoding="utf-8") as fh:
+                fh.write(json.dumps({"version": actual, "releasedAt": base.get("releasedAt"),
+                                     "note": "Línea base de la última publicación. La escribe scripts/ds-release.py --apply.",
+                                     "state": ahora}, ensure_ascii=False, indent=2) + "\n")
+            print("Línea base renovada al formato 12.0.0 (misma versión %s): nada que publicar." % actual)
+            return 0
+        print("Nada que publicar." + ("  (línea base en formato anterior: publica con --apply para renovarla)" if legacy else ""))
         return 0
     print("Versión propuesta: %s" % nueva)
 

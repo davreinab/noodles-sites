@@ -1,0 +1,235 @@
+{
+  "title": "Select",
+  "description": "Selector de una opción: país o idioma (Aiki NL/FR), filtros. Open muestra el menú (elevation/3) con la opción activa en amarillo de marca. En código se recomienda <select> nativo…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "select",
+      "name": "Select",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "48:141",
+      "current": {
+        "description": "Selector de una opción: país o idioma (Aiki NL/FR), filtros. Open muestra el menú (elevation/3) con la opción activa en amarillo de marca. En código se recomienda <select> nativo o un listbox accesible (teclado: flechas, Enter, Esc). Error con borde, icono y mensaje. Valor y opciones se editan en la instancia.",
+        "Propósito": "Desplegable de una opción (país, tipo de consulta). Se implementa con el `<select>` nativo y su apariencia propia; el chevron es decorativo.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Texto tinta sobre blanco 18,7:1; placeholder y ayuda en gris cálido sobre blanco 5,9:1; etiqueta tinta sobre crema 17,2:1; borde de tinta sobre crema 17,2:1 (≥ 3:1 de límite de control). Error: borde y mensaje en `--field-border-error`/`--field-error-text` (rojo de estado, verificado en la fase 2) con icono circle-alert y texto, nunca solo color. Desactivado: gris cálido sobre arena 4,3:1 (exento). Chevron (`--field-icon`, tinta) decorativo. Rol: `<select>` nativo, que da gratis el teclado (flechas, letras, Enter, Esc) y la lista accesible en móvil; por eso el estado Open del maestro es solo referencia visual y no se reconstruye un listbox propio. Nombre por `<label for>`.",
+        "Cuándo usar / qué NO hace": "Para elegir una opción entre cinco o más. Con dos a cuatro opciones visibles, mejor Chip o casillas. No se usa para navegar entre páginas."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "48:141",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=48-141",
+      "page": "Forms",
+      "type": "COMPONENT_SET",
+      "variants": 6,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Selector de una opción: país o idioma (Aiki NL/FR), filtros. Open muestra el menú (elevation/3) con la opción activa en amarillo de marca. En código se recomienda <select> nativo o un listbox accesible (teclado: flechas, Enter, Esc). Error con borde, icono y mensaje. Valor y opciones se editan en la instancia."
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "values": [],
+        "default": "País",
+        "figma": "Label#48:0"
+      },
+      {
+        "name": "required",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "Required#48:7"
+      },
+      {
+        "name": "icon",
+        "type": "icon",
+        "values": [],
+        "default": "Icon / chevron-down",
+        "figma": "Icon#50:18"
+      },
+      {
+        "name": "errorIcon",
+        "type": "icon",
+        "values": [],
+        "default": "Icon / circle-alert",
+        "figma": "Error icon#50:25"
+      },
+      {
+        "name": "open",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Open"
+      },
+      {
+        "name": "error",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Error"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Disabled"
+      }
+    ],
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "icon",
+        "errorIcon"
+      ],
+      "defaults": [
+        "Icon / chevron-down",
+        "Icon / circle-alert"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "icon-chevron",
+        "component": "icon-chevron-down",
+        "exposedAs": "Icon#50:18",
+        "hidden": false
+      },
+      {
+        "layer": "icon-error",
+        "component": "icon-circle-alert",
+        "exposedAs": "Error icon#50:25",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "field",
+        "items": [
+          "field/bg",
+          "field/border",
+          "field/error-text",
+          "field/helper",
+          "field/icon",
+          "field/label",
+          "field/placeholder"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/md",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/sm"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/4",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 24,
+    "textStyles": [
+      "Desktop/label",
+      "Desktop/body-m",
+      "Desktop/caption"
+    ],
+    "classes": [
+      "field",
+      "field__control",
+      "field__error",
+      "field__label",
+      "field__select",
+      "icon",
+      "icon-circle-alert"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Desplegable de una opción (país, tipo de consulta). Se implementa con el `<select>` nativo y su apariencia propia; el chevron es decorativo.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Texto tinta sobre blanco 18,7:1; placeholder y ayuda en gris cálido sobre blanco 5,9:1; etiqueta tinta sobre crema 17,2:1; borde de tinta sobre crema 17,2:1 (≥ 3:1 de límite de control). Error: borde y mensaje en `--field-border-error`/`--field-error-text` (rojo de estado, verificado en la fase 2) con icono circle-alert y texto, nunca solo color. Desactivado: gris cálido sobre arena 4,3:1 (exento). Chevron (`--field-icon`, tinta) decorativo. Rol: `<select>` nativo, que da gratis el teclado (flechas, letras, Enter, Esc) y la lista accesible en móvil; por eso el estado Open del maestro es solo referencia visual y no se reconstruye un listbox propio. Nombre por `<label for>`.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Para elegir una opción entre cinco o más. Con dos a cuatro opciones visibles, mejor Chip o casillas. No se usa para navegar entre páginas.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "select",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "48:141",
+    "contract": "../../../../../../design-system/schemas/components/select.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

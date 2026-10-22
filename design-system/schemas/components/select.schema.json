@@ -1,130 +1,88 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:select",
+  "contractVersion": "2",
   "meta": {
     "name": "Select",
     "slug": "select",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Selector de una opción: país o idioma (Aiki NL/FR), filtros. Open muestra el menú (elevation/3) con la opción activa en amarillo de marca. En código se recomienda &lt;select&gt; nativo o un listbox accesible (teclado: flechas, Enter, Esc). Error con borde, icono y mensaje. Valor y opciones se editan en la instancia.",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Selector de una opción: país o idioma (Aiki NL/FR), filtros. Open muestra el menú (elevation/3) con la opción activa en amarillo de marca. En código se recomienda <select> nativo o un listbox accesible (teclado: flechas, Enter, Esc). Error con borde, icono y mensaje. Valor y opciones se editan en la instancia.",
     "figmaPage": "Forms",
     "figmaType": "COMPONENT_SET",
     "variantCount": 6,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "cd5ef9a2da26"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/select.md",
-      "section": "Select"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "48:141",
-      "componentKey": "b9c1e64d9a63408cd0ff96e3898c30fd50f74f23"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "field",
-        "field__control",
-        "field__error",
-        "field__label",
-        "field__select",
-        "icon",
-        "icon-circle-alert"
-      ],
-      "example": "<div class=\"field\">\n<label class=\"field__label\" for=\"pais\">País</label>\n<div class=\"field__select\">\n<select class=\"field__control\" id=\"pais\" name=\"pais\" aria-invalid=\"true\" aria-describedby=\"pais-error\">\n<option value=\"\">Elige una opción</option>\n<option value=\"es\">España</option>\n<option value=\"fr\">Francia</option>\n</select>\n</div>\n<p class=\"field__error\" id=\"pais-error\"><span class=\"icon icon-circle-alert\" aria-hidden=\"true\"></span>Elige un país</p>\n</div>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Label#48:0",
-        "kind": "TEXT",
-        "default": "País"
+        "name": "label",
+        "type": "string",
+        "default": "País",
+        "figma": "Label#48:0"
       },
       {
-        "name": "Required#48:7",
-        "kind": "BOOLEAN",
-        "default": false
+        "name": "required",
+        "type": "boolean",
+        "default": false,
+        "figma": "Required#48:7"
       },
       {
-        "name": "Icon#50:18",
-        "kind": "INSTANCE_SWAP",
-        "default": "21:59",
-        "defaultComponent": "Icon / chevron-down",
-        "preferredValues": []
+        "name": "icon",
+        "type": "icon",
+        "default": "Icon / chevron-down",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Icon#50:18"
       },
       {
-        "name": "Error icon#50:25",
-        "kind": "INSTANCE_SWAP",
-        "default": "46:78",
-        "defaultComponent": "Icon / circle-alert",
-        "preferredValues": []
+        "name": "errorIcon",
+        "type": "icon",
+        "default": "Icon / circle-alert",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Error icon#50:25"
       },
       {
-        "name": "State",
-        "kind": "VARIANT",
-        "default": "Default",
-        "values": [
-          "Default",
-          "Hover",
-          "Focus",
-          "Open",
-          "Error",
-          "Disabled"
-        ]
+        "name": "open",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Open"
+      },
+      {
+        "name": "error",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Error"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Disabled"
       }
     ],
-    "variants": {
-      "State": [
-        "Default",
-        "Hover",
-        "Focus",
-        "Open",
-        "Error",
-        "Disabled"
-      ]
-    },
-    "states": [
-      "Default",
+    "cssStates": [
       "Hover",
-      "Focus",
-      "Open",
-      "Error",
-      "Disabled"
+      "Focus"
     ],
-    "defaults": {
-      "State": "Default"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [
-      {
-        "layer": "icon-chevron",
-        "component": "Icon / chevron-down",
-        "componentSlug": "icon-chevron-down",
-        "exposedAs": "Icon#50:18",
-        "toggledBy": null,
-        "visibleByDefault": true
-      },
-      {
-        "layer": "icon-error",
-        "component": "Icon / circle-alert",
-        "componentSlug": "icon-circle-alert",
-        "exposedAs": "Error icon#50:25",
-        "toggledBy": null,
-        "visibleByDefault": false
-      }
-    ],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": true,
       "swapProperties": [
-        "Icon#50:18",
-        "Error icon#50:25"
+        "icon",
+        "errorIcon"
       ],
       "defaultIcons": [
         "Icon / chevron-down",
@@ -133,8 +91,7 @@
       "compatible": "any Icon / * via INSTANCE_SWAP",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "border/width/thin",
       "field/bg",
       "field/border",
@@ -159,8 +116,67 @@
       "space/16",
       "space/4",
       "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "field",
+      "field__control",
+      "field__error",
+      "field__label",
+      "field__select",
+      "icon",
+      "icon-circle-alert"
     ],
-    "variablesUsed": [
+    "example": "<div data-ds=\"select\" class=\"field\">\n<label class=\"field__label\" for=\"pais\">País</label>\n<div class=\"field__select\">\n<select class=\"field__control\" id=\"pais\" name=\"pais\" aria-invalid=\"true\" aria-describedby=\"pais-error\">\n<option value=\"\">Elige una opción</option>\n<option value=\"es\">España</option>\n<option value=\"fr\">Francia</option>\n</select>\n</div>\n<p class=\"field__error\" id=\"pais-error\"><span class=\"icon icon-circle-alert\" aria-hidden=\"true\"></span>Elige un país</p>\n</div>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "48:141",
+    "componentKey": "b9c1e64d9a63408cd0ff96e3898c30fd50f74f23",
+    "propertyNames": {
+      "label": "Label#48:0",
+      "required": "Required#48:7",
+      "icon": "Icon#50:18",
+      "errorIcon": "Error icon#50:25",
+      "open": "State=Open",
+      "error": "State=Error",
+      "disabled": "State=Disabled"
+    },
+    "variantAxes": {
+      "State": [
+        "Default",
+        "Hover",
+        "Focus",
+        "Open",
+        "Error",
+        "Disabled"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "icon-chevron",
+        "component": "Icon / chevron-down",
+        "componentSlug": "icon-chevron-down",
+        "exposedAs": "Icon#50:18",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#50:25",
+        "toggledBy": null,
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
       "itemSpacing: space/8",
       "itemSpacing: space/4",
       "fills: field/label",
@@ -209,51 +225,17 @@
       "Desktop/label",
       "Desktop/body-m",
       "Desktop/caption"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "field/bg",
-        "field/border",
-        "field/error-text",
-        "field/helper",
-        "field/icon",
-        "field/label",
-        "field/placeholder",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-m",
-        "font/line-height/desktop/caption",
-        "font/line-height/desktop/label",
-        "font/size/desktop/body-m",
-        "font/size/desktop/caption",
-        "font/size/desktop/label",
-        "font/style/body",
-        "font/style/display"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/select.md",
+    "section": "Select"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "icon-chevron-down",
       "icon-circle-alert"
     ],
-    "usedBy": [],
     "related": []
   }
 }

@@ -1,0 +1,207 @@
+{
+  "title": "Ingredients",
+  "description": "Bloque de ingredientes de la página de producto y de receta: título (h3) · ingredientes principales (Ingredient item Main, con %) · resto (Ingredient item Secondary) · Link «Ver e…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "ingredients",
+      "name": "Ingredients",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "70:59",
+      "current": {
+        "description": "Bloque de ingredientes de la página de producto y de receta: título (h3) · ingredientes principales (Ingredient item Main, con %) · resto (Ingredient item Secondary) · Link «Ver etiqueta del envase» que abre el modal con la foto de la etiqueta (fase 5). Lista semántica <ul>; alérgenos en <strong>. Sin variables propias de bloque: usa ingredient/*.",
+        "Propósito": "Bloque de ingredientes de la página de producto y de receta: título, ingredientes principales con porcentaje, el resto en texto corrido y enlace a la etiqueta del envase.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Título y texto en tinta sobre blanco 18,7:1; nota en gris cálido sobre blanco 5,9:1. Rol: sección con encabezado y lista `<ul>`. El enlace abre el Modal L con la foto de la etiqueta (`aria-haspopup=\"dialog\"`); la foto lleva un `alt` que remite a la lista («Etiqueta del envase; ingredientes detallados en la lista»).",
+        "Cuándo usar / qué NO hace": "En Product details (producto y receta). No sustituye al panel de nutrición ni muestra alérgenos sueltos: los alérgenos se marcan dentro del texto."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "70:59",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=70-59",
+      "page": "Content",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Bloque de ingredientes de la página de producto y de receta: título (h3) · ingredientes principales (Ingredient item Main, con %) · resto (Ingredient item Secondary) · Link «Ver etiqueta del envase» que abre el modal con la foto de la etiqueta (fase 5). Lista semántica <ul>; alérgenos en <strong>. Sin variables propias de bloque: usa ingredient/*."
+    ],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "ingredient-main",
+        "component": "ingredient-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "ingredient-main",
+        "component": "ingredient-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "ingredient-main",
+        "component": "ingredient-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "ingredient-secondary",
+        "component": "ingredient-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "label-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-l",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h3",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-l",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/size/desktop/h3",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "ingredient",
+        "items": [
+          "ingredient/divider",
+          "ingredient/meta",
+          "ingredient/percent-bg",
+          "ingredient/percent-text",
+          "ingredient/text"
+        ]
+      },
+      {
+        "group": "link",
+        "items": [
+          "link/default"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/4",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 26,
+    "textStyles": [
+      "Desktop/h3",
+      "Desktop/label",
+      "Desktop/caption"
+    ],
+    "classes": [
+      "icon",
+      "icon-arrow-right",
+      "ingredient-item",
+      "ingredient-item--secondary",
+      "ingredient-item__percent",
+      "ingredients",
+      "ingredients__list",
+      "ingredients__note",
+      "ingredients__title",
+      "link",
+      "link--standalone"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Bloque de ingredientes de la página de producto y de receta: título, ingredientes principales con porcentaje, el resto en texto corrido y enlace a la etiqueta del envase.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Título y texto en tinta sobre blanco 18,7:1; nota en gris cálido sobre blanco 5,9:1. Rol: sección con encabezado y lista `<ul>`. El enlace abre el Modal L con la foto de la etiqueta (`aria-haspopup=\"dialog\"`); la foto lleva un `alt` que remite a la lista («Etiqueta del envase; ingredientes detallados en la lista»).",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En Product details (producto y receta). No sustituye al panel de nutrición ni muestra alérgenos sueltos: los alérgenos se marcan dentro del texto.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "ingredients",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "70:59",
+    "contract": "../../../../../../design-system/schemas/components/ingredients.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

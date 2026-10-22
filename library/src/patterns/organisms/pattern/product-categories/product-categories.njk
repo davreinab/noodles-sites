@@ -1,0 +1,11 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="product-categories" class="section product-categories" aria-labelledby="pc-title">
+<div class="section__inner">
+<div class="section__header"><h2 class="section__title" id="pc-title">Our products</h2><p class="section__lead">Products and flavors for every taste. Find your match!</p></div>
+<ul class="product-categories__grid">
+<li><a class="category-card" href="/productos?tipo=cups"><img class="category-card__media" src="/assets/ds/images/placeholder.svg" alt=""><span class="category-card__name">Cups</span></a></li>
+<li><a class="category-card" href="/productos?tipo=sauces"><img class="category-card__media" src="/assets/ds/images/placeholder.svg" alt=""><span class="badge">New</span><span class="category-card__name">Sauces</span></a></li>
+</ul>
+</div>
+</section>{% endraw %}
+{% endmacro %}

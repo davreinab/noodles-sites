@@ -1,0 +1,294 @@
+{
+  "title": "Product details",
+  "description": "Sección de ingredientes y nutrición (página de producto; en la receta se usa con los valores de la receta): título (h2) · Ingredients (lista jerarquizada, alérgenos en negrita, Li…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "product-details",
+      "name": "Product details",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "94:329",
+      "current": {
+        "description": "Sección de ingredientes y nutrición (página de producto; en la receta se usa con los valores de la receta): título (h2) · Ingredients (lista jerarquizada, alérgenos en negrita, Link «Ver etiqueta del envase» que abre Modal L con la imagen de la etiqueta) · Nutrition panel (barras proporcionales al % IR, alérgenos y nota de validación). Ancla destino de «Ver ingredientes» del Product hero. Desktop: dos columnas iguales; Mobile: ingredientes y después nutrición. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods. Sin variables propias.",
+        "Propósito": "Sección de ingredientes y nutrición de la página de producto (y de receta).",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Título tinta sobre blanco 18,7:1; el resto, los pares de Ingredients y Nutrition panel. Es el ancla de «Ver ingredientes». En móvil, ingredientes y después nutrición, en el orden de lectura.",
+        "Cuándo usar / qué NO hace": "En las páginas de producto y receta. Los valores de ejemplo no se publican: los valida Nutrición de GB Foods."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "94:329",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=94-329",
+      "page": "Pattern / Detail pages",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Sección de ingredientes y nutrición (página de producto; en la receta se usa con los valores de la receta): título (h2) · Ingredients (lista jerarquizada, alérgenos en negrita, Link «Ver etiqueta del envase» que abre Modal L con la imagen de la etiqueta) · Nutrition panel (barras proporcionales al % IR, alérgenos y nota de validación). Ancla destino de «Ver ingredientes» del Product hero. Desktop: dos columnas iguales; Mobile: ingredientes y después nutrición. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods. Sin variables propias."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "ingredients",
+        "component": "ingredients",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "ingredient-main",
+        "component": "ingredient-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "ingredient-secondary",
+        "component": "ingredient-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "label-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": false
+      },
+      {
+        "layer": "nutrition-panel",
+        "component": "nutrition-panel",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "nutrition-bar",
+        "component": "nutrition-bar",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "nutrition-bar",
+        "component": "nutrition-bar",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "claim",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "badge",
+        "items": [
+          "badge/natural/bg",
+          "badge/natural/text"
+        ]
+      },
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/surface/card",
+          "color/text/default"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-l",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h2",
+          "font/line-height/desktop/h3",
+          "font/line-height/desktop/label",
+          "font/line-height/mobile/label",
+          "font/size/desktop/body-l",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/size/desktop/h2",
+          "font/size/desktop/h3",
+          "font/size/desktop/label",
+          "font/size/mobile/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "ingredient",
+        "items": [
+          "ingredient/divider",
+          "ingredient/meta",
+          "ingredient/percent-bg",
+          "ingredient/percent-text",
+          "ingredient/text"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/frame",
+          "layout/margin",
+          "layout/section-y"
+        ]
+      },
+      {
+        "group": "link",
+        "items": [
+          "link/default"
+        ]
+      },
+      {
+        "group": "nutrition",
+        "items": [
+          "nutrition/allergen",
+          "nutrition/bg",
+          "nutrition/border",
+          "nutrition/fill",
+          "nutrition/fill-highlight",
+          "nutrition/label",
+          "nutrition/meta",
+          "nutrition/track",
+          "nutrition/value"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/32",
+          "space/4",
+          "space/48",
+          "space/64",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 51,
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/h3",
+      "Desktop/label",
+      "Desktop/caption",
+      "Desktop/body-m",
+      "Mobile/label"
+    ],
+    "classes": [
+      "badge",
+      "badge--natural",
+      "ingredient-item",
+      "ingredient-item__percent",
+      "ingredients",
+      "ingredients__list",
+      "nutrition-bar",
+      "nutrition-bar--highlight",
+      "nutrition-bar__amount",
+      "nutrition-bar__label",
+      "nutrition-bar__meter",
+      "nutrition-bar__percent",
+      "nutrition-bar__row",
+      "nutrition-bar__value",
+      "nutrition-panel",
+      "nutrition-panel__list",
+      "product-details",
+      "product-details__grid",
+      "section",
+      "section__inner",
+      "section__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Sección de ingredientes y nutrición de la página de producto (y de receta).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Título tinta sobre blanco 18,7:1; el resto, los pares de Ingredients y Nutrition panel. Es el ancla de «Ver ingredientes». En móvil, ingredientes y después nutrición, en el orden de lectura.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En las páginas de producto y receta. Los valores de ejemplo no se publican: los valida Nutrición de GB Foods.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "product-details",
+    "kind": "pattern",
+    "verification": "unverified",
+    "figmaNodeId": "94:329",
+    "contract": "../../../../../../design-system/schemas/components/product-details.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

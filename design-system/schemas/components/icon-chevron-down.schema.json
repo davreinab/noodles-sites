@@ -1,47 +1,33 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:icon-chevron-down",
+  "contractVersion": "2",
   "meta": {
     "name": "Icon / chevron-down",
     "slug": "icon-chevron-down",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Chevron del selector de idioma (landings), escalado a 24. Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
     "figmaPage": "Iconography",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "09f11d52202f"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/icon-chevron-down.md",
-      "section": "Icon / chevron-down"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "21:59",
-      "componentKey": "e2009c34315efc931be8bdf585dbe9f67039fef2"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "icon",
-        "icon-chevron-down"
-      ],
-      "example": "<span class=\"icon icon-chevron-down\" aria-hidden=\"true\"></span>"
-    }
-  },
   "api": {
-    "properties": [],
-    "variants": {},
-    "states": [],
-    "defaults": {},
-    "invalidCombinations": [],
-    "nestedInstances": [],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -49,45 +35,44 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "icon/color/default",
       "icon/size/md"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "icon",
+      "icon-chevron-down"
     ],
-    "variablesUsed": [
+    "example": "<span data-ds=\"icon-chevron-down\" class=\"icon icon-chevron-down\" aria-hidden=\"true\"></span>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "21:59",
+    "componentKey": "e2009c34315efc931be8bdf585dbe9f67039fef2",
+    "propertyNames": {},
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
       "width: icon/size/md",
       "height: icon/size/md",
       "strokes: icon/color/default",
       "color: icon/color/default"
     ],
-    "textStyles": [],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "icon/color/default"
-      ]
-    }
+    "textStyles": []
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/icon-chevron-down.md",
+    "section": "Icon / chevron-down"
   },
-  "compatibility": {},
   "relations": {
     "uses": [],
-    "usedBy": [
-      "select"
-    ],
     "related": []
   }
 }

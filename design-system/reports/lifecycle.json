@@ -1,6 +1,6 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": "2026-10-07",
+  "generatedAt": "2026-10-22",
   "note": "Informe de scripts/ds-lifecycle.py. No editar a mano.",
   "policy": {
     "minNoticeDays": 180,
@@ -24,9 +24,11 @@
     "badge",
     "banner",
     "button",
+    "category-card",
     "checkbox",
     "chip",
     "contest-card",
+    "decoration-noodle-texture",
     "decoration-noodle",
     "faq",
     "footer",
@@ -77,7 +79,7 @@
     "nutrition-panel",
     "preparation",
     "product-card",
-    "product-carousel",
+    "product-categories",
     "product-details",
     "product-filter",
     "product-hero",

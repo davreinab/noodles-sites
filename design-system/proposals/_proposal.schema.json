@@ -3,19 +3,92 @@
   "$id": "./_proposal.schema.json",
   "title": "GB Noodles · Microsites design-system proposal",
   "type": "object",
-  "required": ["id", "status", "summary", "evidence", "impact", "requiredApprover"],
+  "required": [
+    "id",
+    "status",
+    "summary",
+    "evidence",
+    "impact",
+    "requiredApprover"
+  ],
   "properties": {
-    "id": { "type": "string" },
-    "status": { "enum": ["draft", "approved", "rejected", "applied"] },
-    "summary": { "type": "string" },
-    "evidence": { "type": "array", "items": { "type": "object" } },
-    "affectedResources": { "type": "array", "items": { "type": "string" } },
-    "proposedChange": { "type": "object" },
-    "impact": { "type": "object" },
-    "accessibility": { "type": "object" },
-    "migration": { "type": ["object", "null"] },
-    "requiredApprover": { "type": "string" },
-    "decision": { "type": ["object", "null"] }
+    "id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "approved",
+        "rejected",
+        "applied"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "affectedResources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "proposedChange": {
+      "type": "object"
+    },
+    "impact": {
+      "type": "object"
+    },
+    "accessibility": {
+      "type": "object"
+    },
+    "migration": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "requiredApprover": {
+      "type": "string"
+    },
+    "decision": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Se rellena al aprobar o rechazar. Forma: {status, by, at, note, appliedAt?}. Los proyectos anteriores a la 11.6.0 pueden tener la forma antigua {approvedBy, approvedAt, …}; scripts/proposals-index.py la lee sin migrarla.",
+      "properties": {
+        "status": {
+          "enum": [
+            "approved",
+            "rejected"
+          ],
+          "description": "Lo decidido."
+        },
+        "by": {
+          "type": "string",
+          "description": "Persona que decide (nombre y, si aplica, organización)."
+        },
+        "at": {
+          "type": "string",
+          "description": "Fecha de la decisión, YYYY-MM-DD."
+        },
+        "note": {
+          "type": "string",
+          "description": "Por qué, o dónde se dijo (sesión, canal)."
+        },
+        "appliedAt": {
+          "type": "string",
+          "description": "Cuándo quedó en Figma y sincronizado (status: applied)."
+        }
+      },
+      "additionalProperties": true
+    }
   },
   "additionalProperties": false
 }

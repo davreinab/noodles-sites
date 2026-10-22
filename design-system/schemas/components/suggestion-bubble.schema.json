@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:suggestion-bubble",
+  "contractVersion": "2",
   "meta": {
     "name": "Suggestion bubble",
     "slug": "suggestion-bubble",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Botón flotante (suggestion box / Babelbox) hacia el formulario externo de Calidad. Fijo abajo a la derecha (layout/margin desde los bordes), layer/floating; no tapa el CTA del Mobile menu ni el Toast (que sube por encima). Expanded=True al cargar: icono + «Sugerencias» + external-link; al hacer scroll pasa a Expanded=False (solo icono, 56 px) y respeta prefers-reduced-motion. Es un &lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt; con nombre accesible «Sugerencias (abre en una pestaña nueva)» también en la versión plegada. Hover: fondo amarillo de marca y elevation/2; Focus: anillo suggestion/focus-ring.",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Botón flotante (suggestion box / Babelbox) hacia el formulario externo de Calidad. Fijo abajo a la derecha (layout/margin desde los bordes), layer/floating; no tapa el CTA del Mobile menu ni el Toast (que sube por encima). Expanded=True al cargar: icono + «Sugerencias» + external-link; al hacer scroll pasa a Expanded=False (solo icono, 56 px) y respeta prefers-reduced-motion. Es un <a target=\"_blank\" rel=\"noopener\"> con nombre accesible «Sugerencias (abre en una pestaña nueva)» también en la versión plegada. Hover: fondo amarillo de marca y elevation/2; Focus: anillo suggestion/focus-ring.",
     "figmaPage": "Feedback & overlays",
     "figmaType": "COMPONENT_SET",
     "variantCount": 6,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "d9b37ef7c0be",
     "verification": {
       "status": "verified",
@@ -24,65 +32,92 @@
       "by": "agent (Claude)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/suggestion-bubble.md",
-      "section": "Suggestion bubble"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "81:87",
-      "componentKey": "8af0be536c04b3ab802eee8e4fff4b6931fb9001"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "icon",
-        "icon-external-link",
-        "icon-message-circle",
-        "suggestion-bubble",
-        "suggestion-bubble__label"
-      ],
-      "example": "<a class=\"suggestion-bubble\" href=\"https://calidad.example.org\" target=\"_blank\" rel=\"noopener\" aria-label=\"Sugerencias (abre en una pestaña nueva)\">\n<span class=\"icon icon-message-circle\" aria-hidden=\"true\"></span>\n<span class=\"suggestion-bubble__label\">Sugerencias</span>\n<span class=\"icon icon-external-link\" aria-hidden=\"true\"></span>\n</a>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Label#81:0",
-        "kind": "TEXT",
-        "default": "Sugerencias"
+        "name": "label",
+        "type": "string",
+        "default": "Sugerencias",
+        "figma": "Label#81:0"
       },
       {
-        "name": "Icon#81:7",
-        "kind": "INSTANCE_SWAP",
-        "default": "76:73",
-        "defaultComponent": "Icon / message-circle",
-        "preferredValues": []
+        "name": "icon",
+        "type": "icon",
+        "default": "Icon / message-circle",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Icon#81:7"
       },
       {
-        "name": "Expanded",
-        "kind": "VARIANT",
-        "default": "True",
-        "values": [
-          "True",
-          "False"
-        ]
-      },
-      {
-        "name": "State",
-        "kind": "VARIANT",
-        "default": "Default",
-        "values": [
-          "Default",
-          "Hover",
-          "Focus"
-        ]
+        "name": "expanded",
+        "type": "boolean",
+        "default": true,
+        "figma": "Expanded"
       }
     ],
-    "variants": {
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "icon"
+      ],
+      "defaultIcons": [
+        "Icon / message-circle"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": [
+        "icon-external"
+      ]
+    },
+    "tokens": [
+      "border/width/thin",
+      "color/effect/shadow-ink",
+      "font/family/display",
+      "font/line-height/desktop/label",
+      "font/size/desktop/label",
+      "font/style/display",
+      "icon/size/md",
+      "icon/size/sm",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/8",
+      "suggestion/bg",
+      "suggestion/border",
+      "suggestion/text"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "icon",
+      "icon-external-link",
+      "icon-message-circle",
+      "suggestion-bubble",
+      "suggestion-bubble__label"
+    ],
+    "example": "<a data-ds=\"suggestion-bubble\" class=\"suggestion-bubble\" href=\"https://calidad.example.org\" target=\"_blank\" rel=\"noopener\" aria-label=\"Sugerencias (abre en una pestaña nueva)\">\n<span class=\"icon icon-message-circle\" aria-hidden=\"true\"></span>\n<span class=\"suggestion-bubble__label\">Sugerencias</span>\n<span class=\"icon icon-external-link\" aria-hidden=\"true\"></span>\n</a>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "81:87",
+    "componentKey": "8af0be536c04b3ab802eee8e4fff4b6931fb9001",
+    "propertyNames": {
+      "label": "Label#81:0",
+      "icon": "Icon#81:7",
+      "expanded": "Expanded"
+    },
+    "variantAxes": {
       "Expanded": [
         "True",
         "False"
@@ -93,16 +128,6 @@
         "Focus"
       ]
     },
-    "states": [
-      "Default",
-      "Hover",
-      "Focus"
-    ],
-    "defaults": {
-      "Expanded": "True",
-      "State": "Default"
-    },
-    "invalidCombinations": [],
     "nestedInstances": [
       {
         "layer": "icon",
@@ -121,38 +146,7 @@
         "visibleByDefault": true
       }
     ],
-    "icons": {
-      "hasIcon": true,
-      "swapProperties": [
-        "Icon#81:7"
-      ],
-      "defaultIcons": [
-        "Icon / message-circle"
-      ],
-      "compatible": "any Icon / * via INSTANCE_SWAP",
-      "unexposedIconLayers": [
-        "icon-external"
-      ]
-    },
-    "slots": [],
-    "tokensUsed": [
-      "border/width/thin",
-      "color/effect/shadow-ink",
-      "font/family/display",
-      "font/line-height/desktop/label",
-      "font/size/desktop/label",
-      "font/style/display",
-      "icon/size/md",
-      "icon/size/sm",
-      "radius/pill",
-      "space/16",
-      "space/24",
-      "space/8",
-      "suggestion/bg",
-      "suggestion/border",
-      "suggestion/text"
-    ],
-    "variablesUsed": [
+    "variableBindings": [
       "itemSpacing: space/8",
       "paddingLeft: space/24",
       "paddingTop: space/16",
@@ -185,42 +179,17 @@
     ],
     "textStyles": [
       "Desktop/label"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "color/effect/shadow-ink",
-        "font/family/display",
-        "font/line-height/desktop/label",
-        "font/size/desktop/label",
-        "font/style/display",
-        "suggestion/bg",
-        "suggestion/border",
-        "suggestion/text"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/suggestion-bubble.md",
+    "section": "Suggestion bubble"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "icon-external-link",
       "icon-message-circle"
     ],
-    "usedBy": [],
     "related": []
   }
 }

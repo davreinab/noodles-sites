@@ -1,129 +1,80 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:alert",
+  "contractVersion": "2",
   "meta": {
     "name": "Alert",
     "slug": "alert",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Mensaje de estado. Type=Info · Success · Alert · Error, cada uno con su icono fijo (info, circle-check, triangle-alert, circle-alert) y su título: el tipo nunca se comunica solo por color. Layout=Inline: dentro del contenido (formulario, concurso cerrado), radius/sm. Layout=Toast: flotante y temporal en layer/toast, elevation/3, abajo centrado en móvil y abajo a la derecha en desktop; se cierra solo a los 6 s salvo Error, que espera al usuario (y la pausa al pasar el ratón o con el foco). Accesibilidad: Info/Success con role=&quot;status&quot; (aria-live polite); Alert/Error con role=&quot;alert&quot;. Cerrar es un &lt;button aria-label=&quot;Cerrar aviso&quot;&gt;. El título se edita en la instancia (no es propiedad para no perder el título de cada tipo).",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Mensaje de estado. Type=Info · Success · Alert · Error, cada uno con su icono fijo (info, circle-check, triangle-alert, circle-alert) y su título: el tipo nunca se comunica solo por color. Layout=Inline: dentro del contenido (formulario, concurso cerrado), radius/sm. Layout=Toast: flotante y temporal en layer/toast, elevation/3, abajo centrado en móvil y abajo a la derecha en desktop; se cierra solo a los 6 s salvo Error, que espera al usuario (y la pausa al pasar el ratón o con el foco). Accesibilidad: Info/Success con role=\"status\" (aria-live polite); Alert/Error con role=\"alert\". Cerrar es un <button aria-label=\"Cerrar aviso\">. El título se edita en la instancia (no es propiedad para no perder el título de cada tipo).",
     "figmaPage": "Feedback & overlays",
     "figmaType": "COMPONENT_SET",
     "variantCount": 8,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "2f59c341f4b9"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/alert.md",
-      "section": "Alert"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "80:138",
-      "componentKey": "b856e1a34892ef622f087a595ef6261b03a43b04"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "alert",
-        "alert--error",
-        "alert--toast",
-        "alert__body",
-        "alert__close",
-        "alert__content",
-        "alert__title",
-        "icon",
-        "icon-circle-alert",
-        "icon-close",
-        "icon-info"
-      ],
-      "example": "<div class=\"alert\" role=\"status\">\n<span class=\"icon icon-info\" aria-hidden=\"true\"></span>\n<div class=\"alert__content\"><p class=\"alert__title\">Información</p><p class=\"alert__body\">El concurso abre el 1 de noviembre.</p></div>\n<button class=\"alert__close\" type=\"button\" aria-label=\"Cerrar aviso\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span></button>\n</div>\n<div class=\"alert alert--error alert--toast\" role=\"alert\">\n<span class=\"icon icon-circle-alert\" aria-hidden=\"true\"></span>\n<div class=\"alert__content\"><p class=\"alert__title\">Algo ha fallado</p><p class=\"alert__body\">No hemos podido cargar el contenido.</p></div>\n</div>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Body#80:9",
-        "kind": "TEXT",
-        "default": "Texto de ejemplo con el detalle del mensaje."
+        "name": "body",
+        "type": "string",
+        "default": "Texto de ejemplo con el detalle del mensaje.",
+        "figma": "Body#80:9"
       },
       {
-        "name": "Dismissible#80:18",
-        "kind": "BOOLEAN",
-        "default": true
+        "name": "dismissible",
+        "type": "boolean",
+        "default": true,
+        "figma": "Dismissible#80:18"
       },
       {
-        "name": "Close icon#80:36",
-        "kind": "INSTANCE_SWAP",
-        "default": "30:60",
-        "defaultComponent": "Icon / close",
-        "preferredValues": []
+        "name": "closeIcon",
+        "type": "icon",
+        "default": "Icon / close",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Close icon#80:36"
       },
       {
-        "name": "Type",
-        "kind": "VARIANT",
-        "default": "Info",
+        "name": "type",
+        "type": "enum",
         "values": [
           "Info",
           "Success",
           "Alert",
           "Error"
-        ]
+        ],
+        "default": "Info",
+        "figma": "Type"
       },
       {
-        "name": "Layout",
-        "kind": "VARIANT",
-        "default": "Inline",
+        "name": "layout",
+        "type": "enum",
         "values": [
           "Inline",
           "Toast"
-        ]
+        ],
+        "default": "Inline",
+        "figma": "Layout"
       }
     ],
-    "variants": {
-      "Type": [
-        "Info",
-        "Success",
-        "Alert",
-        "Error"
-      ],
-      "Layout": [
-        "Inline",
-        "Toast"
-      ]
-    },
-    "states": [],
-    "defaults": {
-      "Type": "Info",
-      "Layout": "Inline"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [
-      {
-        "layer": "icon-status",
-        "component": "Icon / info",
-        "componentSlug": "icon-info",
-        "exposedAs": null,
-        "toggledBy": null,
-        "visibleByDefault": true
-      },
-      {
-        "layer": "icon-close",
-        "component": "Icon / close",
-        "componentSlug": "icon-close",
-        "exposedAs": "Close icon#80:36",
-        "toggledBy": "Dismissible#80:18",
-        "visibleByDefault": true
-      }
-    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": true,
       "swapProperties": [
-        "Close icon#80:36"
+        "closeIcon"
       ],
       "defaultIcons": [
         "Icon / close"
@@ -133,8 +84,7 @@
         "icon-status"
       ]
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "alert/close",
       "alert/info/bg",
       "alert/info/border",
@@ -155,8 +105,75 @@
       "space/16",
       "space/24",
       "space/4"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "alert",
+      "alert--alert",
+      "alert--error",
+      "alert--success",
+      "alert--toast",
+      "alert__body",
+      "alert__close",
+      "alert__content",
+      "alert__title",
+      "icon",
+      "icon-circle-alert",
+      "icon-circle-check",
+      "icon-close",
+      "icon-info",
+      "icon-triangle-alert"
     ],
-    "variablesUsed": [
+    "example": "<div data-ds=\"alert\" class=\"alert\" role=\"status\">\n<span class=\"icon icon-info\" aria-hidden=\"true\"></span>\n<div class=\"alert__content\"><p class=\"alert__title\">Información</p><p class=\"alert__body\">El concurso abre el 1 de noviembre.</p></div>\n<button class=\"alert__close\" type=\"button\" aria-label=\"Cerrar aviso\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span></button>\n</div>\n<div data-ds=\"alert\" class=\"alert alert--error alert--toast\" role=\"alert\">\n<span class=\"icon icon-circle-alert\" aria-hidden=\"true\"></span>\n<div class=\"alert__content\"><p class=\"alert__title\">Algo ha fallado</p><p class=\"alert__body\">No hemos podido cargar el contenido.</p></div>\n</div>\n<div data-ds=\"alert\" class=\"alert alert--success\" role=\"status\">\n<span class=\"icon icon-circle-check\" aria-hidden=\"true\"></span>\n<div class=\"alert__content\"><p class=\"alert__title\">Participación enviada</p><p class=\"alert__body\">Te avisaremos por correo si ganas.</p></div>\n</div>\n<div data-ds=\"alert\" class=\"alert alert--alert\" role=\"status\">\n<span class=\"icon icon-triangle-alert\" aria-hidden=\"true\"></span>\n<div class=\"alert__content\"><p class=\"alert__title\">Quedan pocas horas</p><p class=\"alert__body\">El concurso cierra hoy a las 23:59.</p></div>\n</div>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "80:138",
+    "componentKey": "b856e1a34892ef622f087a595ef6261b03a43b04",
+    "propertyNames": {
+      "body": "Body#80:9",
+      "dismissible": "Dismissible#80:18",
+      "closeIcon": "Close icon#80:36",
+      "type": "Type",
+      "layout": "Layout"
+    },
+    "variantAxes": {
+      "Type": [
+        "Info",
+        "Success",
+        "Alert",
+        "Error"
+      ],
+      "Layout": [
+        "Inline",
+        "Toast"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "icon-status",
+        "component": "Icon / info",
+        "componentSlug": "icon-info",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-close",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": "Close icon#80:36",
+        "toggledBy": "Dismissible#80:18",
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
       "itemSpacing: space/16",
       "paddingLeft: space/24",
       "paddingTop: space/16",
@@ -197,47 +214,17 @@
     "textStyles": [
       "Desktop/label",
       "Desktop/body-s"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "alert/close",
-        "alert/info/bg",
-        "alert/info/border",
-        "alert/info/icon",
-        "alert/info/text",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-s",
-        "font/line-height/desktop/label",
-        "font/size/desktop/body-s",
-        "font/size/desktop/label",
-        "font/style/body",
-        "font/style/display"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/alert.md",
+    "section": "Alert"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "icon-close",
       "icon-info"
     ],
-    "usedBy": [],
     "related": []
   }
 }

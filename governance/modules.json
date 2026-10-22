@@ -86,7 +86,11 @@
         "scripts/ds-lifecycle.py",
         "scripts/ds-release.py",
         "scripts/ds-coverage.py",
-        "scripts/tokens-dtcg.py"
+        "scripts/tokens-dtcg.py",
+        "scripts/proposals-index.py",
+        "scripts/ds-library.py",
+        "scripts/ds-library.config.json",
+        "library/"
       ],
       "enables": [
         "Tokens y componentes sincronizados desde Figma, contratos, catálogo visual, auditorías y pantallas"

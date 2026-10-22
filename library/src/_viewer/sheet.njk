@@ -1,0 +1,196 @@
+{# Ficha del componente en modo tablero. Datos: pattern.sheet (scripts/ds-library.py, desde el contrato y la ficha). #}
+{# Formulario de edición: el mismo para la descripción y para cada campo del criterio de diseño.
+   Nunca escribe el texto: crea o actualiza la propuesta pendiente del componente. #}
+{% macro editForm() %}
+<form class="pl-edit-form" data-edit-form hidden>
+  <label class="pl-edit-form__field" data-edit-textfield>
+    <span>Texto propuesto</span>
+    <textarea name="text" rows="8"></textarea>
+  </label>
+  <label class="pl-edit-form__field">
+    <span data-edit-reason-label>Por qué cambia</span>
+    <textarea name="reason" rows="3" required placeholder="Qué problema resuelve o de dónde sale el cambio"></textarea>
+  </label>
+  <label class="pl-edit-form__field">
+    <span>Quién aprueba</span>
+    <input name="approver" type="text" required placeholder="Nombre de una persona">
+  </label>
+  <p class="pl-edit-form__hint" data-edit-hint></p>
+  <div class="pl-edit-form__actions">
+    <button type="submit" class="pl-edit pl-edit--primary" data-edit-submit>Guardar propuesta</button>
+    <button type="button" class="pl-edit" data-edit-cancel>Cancelar</button>
+  </div>
+  <p class="pl-edit-form__status" data-edit-status role="status" aria-live="polite"></p>
+</form>
+{% endmacro %}
+{% set sh = pattern.sheet %}
+<section class="pl-sheet" aria-label="Ficha del componente">
+
+  <dl class="pl-kpis">
+    <div class="pl-kpi">
+      <dt>Figma</dt>
+      <dd>{% if sh.figma.url %}<a href="{{ sh.figma.url }}" target="_blank" rel="noopener"><code>{{ sh.figma.nodeId }}</code></a>{% else %}<code>{{ sh.figma.nodeId or "—" }}</code>{% endif %}</dd>
+    </div>
+    <div class="pl-kpi"><dt>Página</dt><dd>{{ sh.figma.page or "—" }}</dd></div>
+    <div class="pl-kpi"><dt>Tipo</dt><dd>{{ "Conjunto de variantes" if sh.figma.type == "COMPONENT_SET" else ("Componente" if sh.figma.type == "COMPONENT" else (sh.figma.type or "—")) }}</dd></div>
+    <div class="pl-kpi"><dt>Variantes</dt><dd class="pl-kpi__num">{{ sh.figma.variants if sh.figma.variants !== null else "—" }}</dd></div>
+    <div class="pl-kpi pl-kpi--{{ sh.figma.verification }}"><dt>Contra el maestro</dt><dd><span class="pl-pill pl-pill--{{ sh.figma.verification }}">{{ sh.figma.verificationLabel }}</span></dd></div>
+    <div class="pl-kpi"><dt>Última sync</dt><dd>{{ sh.figma.lastSync or "—" }}</dd></div>
+    <div class="pl-kpi"><dt>Contraste AA</dt><dd>{% if sh.contrast %}<span class="pl-pill pl-pill--{{ 'fail' if sh.contrast.fail else ('verified' if sh.contrast.pairs.length else 'none') }}">{{ sh.contrast.label }}</span>{% else %}<span class="pl-muted">Sin CSS todavía</span>{% endif %}</dd></div>
+  </dl>
+
+  {% if sh.coverage and not sh.coverage.complete %}
+  <p class="pl-coverage">Este ejemplo muestra <b>{{ sh.coverage.visible }} de {{ sh.coverage.total }}</b> variantes de Figma: faltan {{ sh.coverage.missing | join(", ") }}.{% if sh.figma.url %} <a href="{{ sh.figma.url }}" target="_blank" rel="noopener">Ver en Figma</a>.{% endif %} La pestaña «Todas las variantes» enseña las que se pueden generar.</p>
+  {% endif %}
+
+  <div class="pl-sheet__grid">
+
+    <article class="pl-card" data-edit-block="description">
+      <h2 class="pl-card__title">
+        Descripción <span class="pl-card__src">desde Figma</span>
+        {% if sh.pending and sh.pending.description %}<span class="pl-pill pl-pill--pending">{{ sh.pending.statusLabel }}</span>{% endif %}
+        {% if sh.pending and sh.pending.descriptionByAI %}<span class="pl-pill pl-pill--ai">Borrador de la IA</span>{% endif %}
+        <button type="button" class="pl-edit" data-edit-open hidden>Editar</button>
+      </h2>
+      <div data-edit-view>
+        {% if sh.pending and sh.pending.description %}
+        {% for p in sh.pending.description %}<p>{{ p }}</p>{% endfor %}
+        <details class="pl-current">
+          <summary>Texto actual en Figma</summary>
+          {% if sh.description.length %}{% for p in sh.description %}<p>{{ p }}</p>{% endfor %}{% else %}<p class="pl-muted">Sin descripción en Figma.</p>{% endif %}
+        </details>
+        {% elif sh.description.length %}{% for p in sh.description %}<p>{{ p }}</p>{% endfor %}
+        {% else %}<p class="pl-muted">Sin descripción en Figma.</p>{% endif %}
+      </div>
+      {{ editForm() }}
+    </article>
+
+    <article class="pl-card">
+      <h2 class="pl-card__title">Criterio de diseño {% if sh.manualTodo %}<span class="pl-pill pl-pill--todo">{{ sh.manualTodo }} por escribir</span>{% endif %}</h2>
+      {% if sh.manual.length %}
+      <dl class="pl-fields">
+        {% for f in sh.manual %}
+        <div class="pl-field{% if (f.todo or f.na) and not f.proposedHtml %} pl-field--todo{% endif %}{% if f.proposedHtml %} pl-field--pending{% endif %}" data-edit-block="{{ f.label }}">
+          <dt>
+            <span>{{ f.label }}</span>
+            {% if f.proposedHtml %}<span class="pl-pill pl-pill--pending">{{ sh.pending.statusLabel }}</span>{% endif %}
+            {% if f.proposedByAI %}<span class="pl-pill pl-pill--ai">Borrador de la IA</span>{% endif %}
+            {% if f.na and not f.proposedHtml %}<span class="pl-pill pl-pill--none">No aplica</span>{% endif %}
+            <span class="pl-field__actions">
+              <button type="button" class="pl-edit pl-edit--small" data-edit-open hidden>Editar</button>
+              {% if f.canNA and not f.na and not f.proposedNA %}<button type="button" class="pl-edit pl-edit--small" data-edit-na hidden>No aplica</button>{% endif %}
+            </span>
+          </dt>
+          <dd data-edit-view>
+            {% if f.proposedHtml %}
+            {{ f.proposedHtml | safe }}
+            <details class="pl-current"><summary>Texto actual en la ficha</summary>{% if f.todo %}<p class="pl-muted">Sin escribir.</p>{% else %}{{ f.html | safe }}{% endif %}</details>
+            {% elif f.todo %}<span class="pl-muted">Por escribir</span>
+            {% else %}{{ f.html | safe }}{% endif %}
+          </dd>
+          <dd>{{ editForm() }}</dd>
+        </div>
+        {% endfor %}
+      </dl>
+      {% else %}<p class="pl-muted">La ficha aún no tiene criterio escrito a mano.</p>{% endif %}
+      {% if sh.pending %}
+      <p class="pl-proposal-note">Cambios de texto propuestos en <code>{{ sh.pending.file }}</code> · aprueba {{ sh.pending.approver or "por decidir" }}. Hasta que se aprueben y se apliquen, el texto vigente es el actual.</p>
+      {% endif %}
+    </article>
+
+    <article class="pl-card pl-card--wide">
+      <h2 class="pl-card__title">Propiedades <span class="pl-card__count">{{ sh.props.length }}</span></h2>
+      {% if sh.props.length %}
+      <div class="pl-table-wrap">
+        <table class="pl-table">
+          <thead><tr><th scope="col">Propiedad</th><th scope="col">Tipo</th><th scope="col">Valores</th><th scope="col">Por defecto</th><th scope="col">Nombre en Figma</th></tr></thead>
+          <tbody>
+            {% for p in sh.props %}
+            <tr>
+              <th scope="row"><code>{{ p.name }}</code></th>
+              <td><span class="pl-type pl-type--{{ p.type }}">{{ p.type }}</span></td>
+              <td>{% if p.values.length %}<span class="pl-chips">{% for v in p.values %}<span class="pl-chip{% if v == p.default %} pl-chip--on{% endif %}">{{ v }}</span>{% endfor %}</span>{% else %}<span class="pl-muted">—</span>{% endif %}</td>
+              <td>{% if p.default !== "" %}<code>{{ p.default }}</code>{% else %}<span class="pl-muted">—</span>{% endif %}</td>
+              <td>{% if p.figma %}<code class="pl-figma-name">{{ p.figma }}</code>{% else %}<span class="pl-muted">igual</span>{% endif %}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% else %}<p class="pl-muted">No expone propiedades.</p>{% endif %}
+      {% if sh.cssStates.length or sh.events.length or sh.slots.length %}
+      <dl class="pl-inline">
+        {% if sh.cssStates.length %}<div><dt>Estados de CSS</dt><dd class="pl-chips">{% for x in sh.cssStates %}<span class="pl-chip">{{ x }}</span>{% endfor %}</dd></div>{% endif %}
+        {% if sh.events.length %}<div><dt>Eventos</dt><dd class="pl-chips">{% for x in sh.events %}<span class="pl-chip">{{ x.name or x }}</span>{% endfor %}</dd></div>{% endif %}
+        {% if sh.slots.length %}<div><dt>Slots</dt><dd class="pl-chips">{% for x in sh.slots %}<span class="pl-chip">{{ x.name or x }}</span>{% endfor %}</dd></div>{% endif %}
+      </dl>
+      {% endif %}
+    </article>
+
+    <article class="pl-card">
+      <h2 class="pl-card__title">Tokens que consume <span class="pl-card__count">{{ sh.tokenCount }}</span></h2>
+      {% if sh.tokens.length %}
+      <dl class="pl-groups">
+        {% for g in sh.tokens %}
+        <div><dt>{{ g.group }}</dt><dd class="pl-chips">{% for t in g.items %}<code class="pl-chip pl-chip--code">{{ t }}</code>{% endfor %}</dd></div>
+        {% endfor %}
+      </dl>
+      {% else %}<p class="pl-muted">No liga variables.</p>{% endif %}
+      {% if sh.textStyles.length %}
+      <h3 class="pl-card__sub">Estilos de texto</h3>
+      <p class="pl-chips">{% for t in sh.textStyles %}<code class="pl-chip pl-chip--code">{{ t }}</code>{% endfor %}</p>
+      {% endif %}
+    </article>
+
+    <article class="pl-card">
+      <h2 class="pl-card__title">Anatomía</h2>
+      {% if sh.nested.length %}
+      <ul class="pl-anatomy">
+        {% for n in sh.nested %}
+        <li><code>{{ n.layer }}</code><span class="pl-anatomy__arrow" aria-hidden="true">→</span>{{ n.component }}{% if n.exposedAs %} <span class="pl-chip">prop {{ n.exposedAs }}</span>{% endif %}{% if n.hidden %} <span class="pl-chip pl-chip--muted">oculta por defecto</span>{% endif %}</li>
+        {% endfor %}
+      </ul>
+      {% else %}<p class="pl-muted">Sin instancias anidadas.</p>{% endif %}
+      <dl class="pl-inline">
+        <div><dt>Iconos intercambiables</dt><dd>{% if sh.icons.swap.length %}<span class="pl-chips">{% for x in sh.icons.swap %}<code class="pl-chip pl-chip--code">{{ x }}</code>{% endfor %}</span>{% if sh.icons.defaults.length %} <span class="pl-muted">por defecto {{ sh.icons.defaults | join(", ") }}</span>{% endif %}{% else %}<span class="pl-muted">No</span>{% endif %}</dd></div>
+        {% if sh.classes.length %}<div><dt>Clases CSS</dt><dd class="pl-chips">{% for c in sh.classes %}<code class="pl-chip pl-chip--code">.{{ c }}</code>{% endfor %}</dd></div>{% endif %}
+      </dl>
+    </article>
+
+    {% if sh.contrast %}
+    <article class="pl-card pl-card--wide">
+      <h2 class="pl-card__title">Contraste AA <span class="pl-card__src">calculado desde el CSS y los tokens</span><span class="pl-card__count">{{ sh.contrast.pairs.length }}</span></h2>
+      {% if sh.contrast.pairs.length %}
+      <div class="pl-table-wrap">
+        <table class="pl-table pl-contrast">
+          <thead><tr><th scope="col">Estado</th><th scope="col">Texto</th><th scope="col">Fondo</th><th scope="col">Contraste</th><th scope="col">Resultado</th></tr></thead>
+          <tbody>
+            {% for x in sh.contrast.pairs %}
+            <tr{% if not x.pass %} class="pl-contrast--fail"{% endif %}>
+              <th scope="row"><code>{{ x.state }}</code>{% if x.theme == "dark" %} <span class="pl-chip">oscuro</span>{% endif %}</th>
+              <td><span class="pl-swatch" style="background:{{ x.fg }}" aria-hidden="true"></span><code>{{ x.fgVar or x.fg }}</code></td>
+              <td><span class="pl-swatch" style="background:{{ x.bg }}" aria-hidden="true"></span><code>{{ x.bgVar or x.bg }}</code></td>
+              <td class="pl-contrast__ratio"><span class="pl-sample" style="color:{{ x.fg }};background:{{ x.bg }}">Aa</span><span><strong>{{ x.ratio }}:1</strong><span class="pl-muted">mín. {{ x.need }}:1{% if x.large %} · grande{% endif %}</span></span></td>
+              <td><span class="pl-pill pl-pill--{{ 'verified' if x.pass else 'fail' }}">{{ "Cumple" if x.pass else "No cumple" }}</span></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% else %}<p class="pl-muted">Ningún estado de su CSS tiene texto y fondo propios que se puedan medir.</p>{% endif %}
+      {% if sh.contrast.untestable.length or sh.contrast.exempt %}
+      <p class="pl-proposal-note pl-proposal-note--neutral">{% if sh.contrast.untestable.length %}{{ sh.contrast.untestable.length }} estado{{ "s" if sh.contrast.untestable.length > 1 }} sin fondo propio o con fondo transparente: su contraste depende de dónde se ponga y hay que comprobarlo en la pantalla.{% endif %}{% if sh.contrast.exempt %} {{ sh.contrast.exempt }} estado{{ "s" if sh.contrast.exempt > 1 }} deshabilitado{{ "s" if sh.contrast.exempt > 1 }}, exento{{ "s" if sh.contrast.exempt > 1 }} por WCAG.{% endif %}</p>
+      {% endif %}
+    </article>
+    {% endif %}
+
+    {% if sh.notesHtml %}
+    <article class="pl-card pl-card--wide pl-docs-inline">
+      <h2 class="pl-card__title">Notas de la ficha</h2>
+      {{ sh.notesHtml | safe }}
+    </article>
+    {% endif %}
+
+  </div>
+  <script type="application/json" data-edit-data>{{ sh.edit | dump | replace("<", "\\u003c") | safe }}</script>
+</section>

@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:nav-item",
+  "contractVersion": "2",
   "meta": {
     "name": "Nav item",
     "slug": "nav-item",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Enlace de navegación principal. Bar: navbar de escritorio (Anton 16), fondo amarillo en hover y subrayado grueso en la sección activa. Menu: menú móvil a pantalla completa (Anton 32, crema sobre tinta; activo en amarillo con subrayado). La sección activa nunca se marca solo por color (subrayado) y lleva aria-current=&quot;page&quot;. El texto se edita en la instancia.",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Enlace de navegación principal. Bar: navbar de escritorio (Anton 16), fondo amarillo en hover y subrayado grueso en la sección activa. Menu: menú móvil a pantalla completa (Anton 32, crema sobre tinta; activo en amarillo con subrayado). La sección activa nunca se marca solo por color (subrayado) y lleva aria-current=\"page\". El texto se edita en la instancia.",
     "figmaPage": "Navigation",
     "figmaType": "COMPONENT_SET",
     "variantCount": 8,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "536b44cf1c53",
     "verification": {
       "status": "verified",
@@ -26,74 +34,27 @@
       "by": "agent (Claude)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/nav-item.md",
-      "section": "Nav item"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "53:102",
-      "componentKey": "3f75ba3d4f9f1a9a27063a5271b43c040a8cf909"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "nav-item",
-        "nav-item--menu"
-      ],
-      "example": "<nav aria-label=\"Principal\">\n<a class=\"nav-item\" href=\"/productos\" aria-current=\"page\">Productos</a>\n<a class=\"nav-item\" href=\"/recetas\">Recetas</a>\n</nav>\n<a class=\"nav-item nav-item--menu\" href=\"/recetas\">Recetas</a>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Type",
-        "kind": "VARIANT",
-        "default": "Bar",
+        "name": "type",
+        "type": "enum",
         "values": [
           "Bar",
           "Menu"
-        ]
-      },
-      {
-        "name": "State",
-        "kind": "VARIANT",
-        "default": "Default",
-        "values": [
-          "Default",
-          "Hover",
-          "Active",
-          "Focus"
-        ]
+        ],
+        "default": "Bar",
+        "figma": "Type"
       }
     ],
-    "variants": {
-      "Type": [
-        "Bar",
-        "Menu"
-      ],
-      "State": [
-        "Default",
-        "Hover",
-        "Active",
-        "Focus"
-      ]
-    },
-    "states": [
-      "Default",
+    "cssStates": [
       "Hover",
       "Active",
       "Focus"
     ],
-    "defaults": {
-      "Type": "Bar",
-      "State": "Default"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -101,8 +62,7 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "border/width/thick",
       "font/family/display",
       "font/line-height/desktop/label",
@@ -114,8 +74,41 @@
       "space/16",
       "space/4",
       "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "nav-item",
+      "nav-item--menu"
     ],
-    "variablesUsed": [
+    "example": "<nav data-ds=\"nav-item\" aria-label=\"Principal\">\n<a class=\"nav-item\" href=\"/productos\" aria-current=\"page\">Productos</a>\n<a class=\"nav-item\" href=\"/recetas\">Recetas</a>\n</nav>\n<a data-ds=\"nav-item\" class=\"nav-item nav-item--menu\" href=\"/recetas\">Recetas</a>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "53:102",
+    "componentKey": "3f75ba3d4f9f1a9a27063a5271b43c040a8cf909",
+    "propertyNames": {
+      "type": "Type"
+    },
+    "variantAxes": {
+      "Type": [
+        "Bar",
+        "Menu"
+      ],
+      "State": [
+        "Default",
+        "Hover",
+        "Active",
+        "Focus"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [
       "itemSpacing: space/4",
       "paddingLeft: space/16",
       "paddingTop: space/8",
@@ -137,39 +130,14 @@
     ],
     "textStyles": [
       "Desktop/label"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "font/family/display",
-        "font/line-height/desktop/label",
-        "font/size/desktop/label",
-        "font/style/display",
-        "nav-item/indicator",
-        "nav-item/text"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/nav-item.md",
+    "section": "Nav item"
   },
-  "compatibility": {},
   "relations": {
     "uses": [],
-    "usedBy": [
-      "mobile-menu"
-    ],
     "related": []
   }
 }

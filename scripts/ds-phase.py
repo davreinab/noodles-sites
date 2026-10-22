@@ -74,9 +74,14 @@ class Proyecto:
         return True, "la estructura está"
 
     def fuentes_figma_registradas(self):
+        """Hay de dónde leer: fuentes de Figma registradas, o (modo repo) design-system/source/tokens.json."""
+        if self.manifest.get("sourceMode") == "repo":
+            ok = os.path.isfile(os.path.join(self.ds, "source", "tokens.json"))
+            return (ok, "fuente en el repo (design-system/source/)" if ok else
+                    "modo repo sin design-system/source/tokens.json: ejecuta ds-source.py --init (y, si hay prototipos en UI/, ds-extract.py)")
         f = self.manifest.get("figmaSources")
         return (bool(f), "fuentes registradas" if f else
-                "no hay ninguna fuente de Figma en agent-manifest.json")
+                "no hay ninguna fuente de Figma en agent-manifest.json (o declara sourceMode: repo para diseñar sin Figma)")
 
     def tokens_sincronizados(self):
         n = sum(1 for _ in self._todos_los_tokens())

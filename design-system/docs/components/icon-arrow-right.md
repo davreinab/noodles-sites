@@ -1,19 +1,18 @@
-### Icon / arrow-right   ⚙️ synced: 2026-10-08T11:52:41Z
+### Icon / arrow-right   ⚙️ synced: 2026-10-22T09:37:04Z
 
 <!-- ⚙️ GENERATED:start:icon-arrow-right -->
-- **Figma:** `30:52` · página «Iconography» · COMPONENT · 1 variantes · última sync 2026-10-08T11:52:41Z
+- **Figma:** `30:52` · página «Iconography» · COMPONENT · 1 variantes · última sync 2026-10-22T09:37:04Z
 - **Descripción (Figma):** Flecha derecha: avanzar, CTA con dirección, slider. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*
 - **Anatomía:** sin instancias anidadas
-- **Propiedades de componente:** ninguna
+- **API:** sin propiedades
 - **Iconos / instancias anidadas:** ninguno
 - **Tokens que consume:** `icon/color/default`, `icon/size/md`
-- **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `icon/color/default`
 <!-- ⚙️ GENERATED:end:icon-arrow-right -->
 
 - **Propósito:** Glifo de interfaz: flecha derecha: avanzar, CTA con dirección, slider.
 - **Ejemplo de código:**
   ```html
-  <span class="icon icon-arrow-right" aria-hidden="true"></span>
+  <span data-ds="icon-arrow-right" class="icon icon-arrow-right" aria-hidden="true"></span>
   ```
-- **Accesibilidad (pares AA verificados):** Decorativo por defecto (`aria-hidden="true"`): el significado lo da el texto o el nombre accesible del control. Color `--icon-color-default` (tinta) sobre página 17,2:1 y sobre card 18,7:1; `--icon-color-inverse` (crema) sobre tinta 17,2:1; todos ≥ 3:1 de elemento gráfico. Dentro de un componente hereda su color (`currentColor`), así que el par válido es el del componente. Tamaños `--icon-size-sm/md/lg/xl` con `.icon--sm/--lg/--xl`.
+- **Accesibilidad (rol, nombre, estados y teclado):** Decorativo por defecto (`aria-hidden="true"`): el significado lo da el texto o el nombre accesible del control. Color `--icon-color-default` (tinta) sobre página 17,2:1 y sobre card 18,7:1; `--icon-color-inverse` (crema) sobre tinta 17,2:1; todos ≥ 3:1 de elemento gráfico. Dentro de un componente hereda su color (`currentColor`), así que el par válido es el del componente. Tamaños `--icon-size-sm/md/lg/xl` con `.icon--sm/--lg/--xl`.
 - **Cuándo usar / qué NO hace:** Dentro de otro componente (Button, Icon button, Link, Chip, Alert…) o junto a un texto que dice lo mismo. Un icono solo no transmite información: si no hay texto visible, el control que lo contiene lleva `aria-label`. No se recolorea con valores sueltos ni se cambia el trazo (2,5 fijo).

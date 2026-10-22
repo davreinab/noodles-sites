@@ -1,85 +1,143 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:contest-card",
+  "contractVersion": "2",
   "meta": {
     "name": "Contest card",
     "slug": "contest-card",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Card de concurso (Contest library, módulo de Home). Status=Active: Badge Natural «En curso» y Button Primary «Participar» (si el concurso es externo o iframe de agencia, activar Icon trailing con external-link y abrir en pestaña nueva avisándolo). Status=Closed: Badge Neutral «Finalizado» y Link «Ver ganadores». Las bases legales (Link inline) aparecen siempre: es obligatorio publicarlas. La card no es enlace en bloque: tiene dos acciones. Desktop 448 px; en móvil FILL.",
     "figmaPage": "Cards",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "77f9f8040971"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/contest-card.md",
-      "section": "Contest card"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "68:95",
-      "componentKey": "7b5e6b2dfcb5031d66af607e1f0bc75e16b40931"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "badge",
-        "badge--natural",
-        "button",
-        "contest-card",
-        "contest-card__actions",
-        "contest-card__body",
-        "contest-card__caption",
-        "contest-card__dates",
-        "contest-card__media",
-        "contest-card__title",
-        "icon",
-        "icon-external-link",
-        "link",
-        "visually-hidden"
-      ],
-      "example": "<article class=\"contest-card\">\n<div class=\"contest-card__media\">\n<span class=\"badge badge--natural\">En curso</span>\n<span class=\"contest-card__caption\">Imagen de la campaña</span>\n</div>\n<div class=\"contest-card__body\">\n<h3 class=\"contest-card__title\">Gana un viaje a Tokio</h3>\n<p class=\"contest-card__dates\">Del 1 al 30 de noviembre de 2026</p>\n<div class=\"contest-card__actions\">\n<a class=\"button\" href=\"https://concursos.example.org/tokio\" target=\"_blank\" rel=\"noopener\">Participar <span class=\"icon icon-external-link\" aria-hidden=\"true\"></span><span class=\"visually-hidden\"> (abre en una pestaña nueva)</span></a>\n<a class=\"link\" href=\"/concursos/tokio/bases\">Bases legales</a>\n</div>\n</div>\n</article>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Title#68:0",
-        "kind": "TEXT",
-        "default": "Nombre del concurso"
+        "name": "title",
+        "type": "string",
+        "default": "Nombre del concurso",
+        "figma": "Title#68:0"
       },
       {
-        "name": "Dates#68:3",
-        "kind": "TEXT",
-        "default": "Del 1 al 30 de noviembre de 2026"
+        "name": "dates",
+        "type": "string",
+        "default": "Del 1 al 30 de noviembre de 2026",
+        "figma": "Dates#68:3"
       },
       {
-        "name": "Status",
-        "kind": "VARIANT",
-        "default": "Active",
+        "name": "status",
+        "type": "enum",
         "values": [
           "Active",
           "Closed"
-        ]
+        ],
+        "default": "Active",
+        "figma": "Status"
       }
     ],
-    "variants": {
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "badge/natural/bg",
+      "badge/natural/text",
+      "border/width/thick",
+      "border/width/thin",
+      "button/primary/bg",
+      "button/primary/border",
+      "button/primary/text",
+      "color/effect/shadow-ink",
+      "contest-card/bg",
+      "contest-card/border",
+      "contest-card/media-bg",
+      "contest-card/meta",
+      "contest-card/title",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h3",
+      "font/line-height/desktop/label",
+      "font/line-height/mobile/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/body-s",
+      "font/size/desktop/caption",
+      "font/size/desktop/h3",
+      "font/size/desktop/label",
+      "font/size/mobile/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "link/default",
+      "radius/md",
+      "radius/none",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/4",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "badge",
+      "badge--natural",
+      "button",
+      "contest-card",
+      "contest-card__actions",
+      "contest-card__body",
+      "contest-card__caption",
+      "contest-card__dates",
+      "contest-card__media",
+      "contest-card__title",
+      "icon",
+      "icon-external-link",
+      "link",
+      "visually-hidden"
+    ],
+    "example": "<article data-ds=\"contest-card\" class=\"contest-card\">\n<div class=\"contest-card__media\">\n<span class=\"badge badge--natural\">En curso</span>\n<span class=\"contest-card__caption\">Imagen de la campaña</span>\n</div>\n<div class=\"contest-card__body\">\n<h3 class=\"contest-card__title\">Gana un viaje a Tokio</h3>\n<p class=\"contest-card__dates\">Del 1 al 30 de noviembre de 2026</p>\n<div class=\"contest-card__actions\">\n<a class=\"button\" href=\"https://concursos.example.org/tokio\" target=\"_blank\" rel=\"noopener\">Participar <span class=\"icon icon-external-link\" aria-hidden=\"true\"></span><span class=\"visually-hidden\"> (abre en una pestaña nueva)</span></a>\n<a class=\"link\" href=\"/concursos/tokio/bases\">Bases legales</a>\n</div>\n</div>\n</article>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "68:95",
+    "componentKey": "7b5e6b2dfcb5031d66af607e1f0bc75e16b40931",
+    "propertyNames": {
+      "title": "Title#68:0",
+      "dates": "Dates#68:3",
+      "status": "Status"
+    },
+    "variantAxes": {
       "Status": [
         "Active",
         "Closed"
       ]
     },
-    "states": [],
-    "defaults": {
-      "Status": "Active"
-    },
-    "invalidCombinations": [],
     "nestedInstances": [
       {
         "layer": "status",
@@ -130,55 +188,7 @@
         "visibleByDefault": false
       }
     ],
-    "icons": {
-      "hasIcon": true,
-      "swapProperties": [],
-      "defaultIcons": [],
-      "compatible": "unknown",
-      "unexposedIconLayers": []
-    },
-    "slots": [],
-    "tokensUsed": [
-      "badge/natural/bg",
-      "badge/natural/text",
-      "border/width/thick",
-      "border/width/thin",
-      "button/primary/bg",
-      "button/primary/border",
-      "button/primary/text",
-      "color/effect/shadow-ink",
-      "contest-card/bg",
-      "contest-card/border",
-      "contest-card/media-bg",
-      "contest-card/meta",
-      "contest-card/title",
-      "font/family/body",
-      "font/family/display",
-      "font/line-height/desktop/body-m",
-      "font/line-height/desktop/body-s",
-      "font/line-height/desktop/caption",
-      "font/line-height/desktop/h3",
-      "font/line-height/desktop/label",
-      "font/line-height/mobile/label",
-      "font/size/desktop/body-m",
-      "font/size/desktop/body-s",
-      "font/size/desktop/caption",
-      "font/size/desktop/h3",
-      "font/size/desktop/label",
-      "font/size/mobile/label",
-      "font/style/body",
-      "font/style/display",
-      "icon/size/sm",
-      "link/default",
-      "radius/md",
-      "radius/none",
-      "radius/pill",
-      "space/16",
-      "space/24",
-      "space/4",
-      "space/8"
-    ],
-    "variablesUsed": [
+    "variableBindings": [
       "topLeftRadius: radius/md",
       "topRightRadius: radius/md",
       "bottomLeftRadius: radius/md",
@@ -266,56 +276,12 @@
       "Desktop/body-s",
       "Desktop/label",
       "Desktop/body-m"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "badge/natural/bg",
-        "badge/natural/text",
-        "button/primary/bg",
-        "button/primary/border",
-        "button/primary/text",
-        "color/effect/shadow-ink",
-        "contest-card/bg",
-        "contest-card/border",
-        "contest-card/media-bg",
-        "contest-card/meta",
-        "contest-card/title",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-m",
-        "font/line-height/desktop/body-s",
-        "font/line-height/desktop/caption",
-        "font/line-height/desktop/h3",
-        "font/line-height/desktop/label",
-        "font/line-height/mobile/label",
-        "font/size/desktop/body-m",
-        "font/size/desktop/body-s",
-        "font/size/desktop/caption",
-        "font/size/desktop/h3",
-        "font/size/desktop/label",
-        "font/size/mobile/label",
-        "font/style/body",
-        "font/style/display",
-        "link/default"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/contest-card.md",
+    "section": "Contest card"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "badge",
@@ -323,7 +289,6 @@
       "icon-arrow-right",
       "link"
     ],
-    "usedBy": [],
     "related": []
   }
 }

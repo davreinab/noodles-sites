@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:icon-close",
+  "contractVersion": "2",
   "meta": {
     "name": "Icon / close",
     "slug": "icon-close",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Cerrar: modales, menú móvil. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
     "figmaPage": "Iconography",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "7c51cd7af59f",
     "verification": {
       "status": "verified",
@@ -23,34 +31,12 @@
       "by": "agent (Claude)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/icon-close.md",
-      "section": "Icon / close"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "30:60",
-      "componentKey": "d3bd670f4a53fb5af9503f3797584ad997f049a8"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "icon",
-        "icon-close"
-      ],
-      "example": "<span class=\"icon icon-close\" aria-hidden=\"true\"></span>"
-    }
-  },
   "api": {
-    "properties": [],
-    "variants": {},
-    "states": [],
-    "defaults": {},
-    "invalidCombinations": [],
-    "nestedInstances": [],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -58,49 +44,44 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "icon/color/default",
       "icon/size/md"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "icon",
+      "icon-close"
     ],
-    "variablesUsed": [
+    "example": "<span data-ds=\"icon-close\" class=\"icon icon-close\" aria-hidden=\"true\"></span>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "30:60",
+    "componentKey": "d3bd670f4a53fb5af9503f3797584ad997f049a8",
+    "propertyNames": {},
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
       "width: icon/size/md",
       "height: icon/size/md",
       "strokes: icon/color/default",
       "color: icon/color/default"
     ],
-    "textStyles": [],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "icon/color/default"
-      ]
-    }
+    "textStyles": []
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/icon-close.md",
+    "section": "Icon / close"
   },
-  "compatibility": {},
   "relations": {
     "uses": [],
-    "usedBy": [
-      "alert",
-      "icon-button",
-      "mobile-menu",
-      "modal",
-      "search-field"
-    ],
     "related": []
   }
 }

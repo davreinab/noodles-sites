@@ -1,82 +1,149 @@
 {
   "$schema": "../_component.schema.json",
   "id": "pattern:product-details",
+  "contractVersion": "2",
   "meta": {
     "name": "Product details",
     "slug": "product-details",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Sección de ingredientes y nutrición (página de producto; en la receta se usa con los valores de la receta): título (h2) · Ingredients (lista jerarquizada, alérgenos en negrita, Link «Ver etiqueta del envase» que abre Modal L con la imagen de la etiqueta) · Nutrition panel (barras proporcionales al % IR, alérgenos y nota de validación). Ancla destino de «Ver ingredientes» del Product hero. Desktop: dos columnas iguales; Mobile: ingredientes y después nutrición. Valores de ejemplo hasta tener los validados por Nutrición de GB Foods. Sin variables propias.",
     "figmaPage": "Pattern / Detail pages",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "cd581b39827a"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/patterns/product-details.md",
-      "section": "Product details"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "94:329",
-      "componentKey": "cd2e86ee82d6c917a9fae7407ee52cd96b557eed"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "badge",
-        "badge--natural",
-        "ingredient-item",
-        "ingredient-item__percent",
-        "ingredients",
-        "ingredients__list",
-        "nutrition-bar",
-        "nutrition-bar--highlight",
-        "nutrition-bar__amount",
-        "nutrition-bar__label",
-        "nutrition-bar__meter",
-        "nutrition-bar__percent",
-        "nutrition-bar__row",
-        "nutrition-bar__value",
-        "nutrition-panel",
-        "nutrition-panel__list",
-        "product-details",
-        "product-details__grid",
-        "section",
-        "section__inner",
-        "section__title"
-      ],
-      "example": "<section class=\"section product-details\" id=\"ingredientes\" aria-labelledby=\"pd-title\">\n<div class=\"section__inner\">\n<h2 class=\"section__title\" id=\"pd-title\">Ingredientes y nutrición</h2>\n<div class=\"product-details__grid\">\n<section class=\"ingredients\" aria-label=\"Ingredientes\"><ul class=\"ingredients__list\"><li class=\"ingredient-item\">Fideos de <strong>trigo</strong><span class=\"ingredient-item__percent\">52 %</span></li></ul></section>\n<section class=\"nutrition-panel\" aria-label=\"Nutrición\"><ul class=\"nutrition-panel__list\"><li class=\"nutrition-bar nutrition-bar--highlight\"><div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Sal</span><span class=\"nutrition-bar__amount\"><span class=\"badge badge--natural\">−20 %</span><span class=\"nutrition-bar__value\">1,9 g</span><span class=\"nutrition-bar__percent\">32 % IR</span></span></div><meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"32\" aria-hidden=\"true\"></meter></li></ul></section>\n</div>\n</div>\n</section>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Breakpoint",
-        "kind": "VARIANT",
-        "default": "Desktop",
+        "name": "breakpoint",
+        "type": "enum",
         "values": [
           "Desktop",
           "Mobile"
-        ]
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
       }
     ],
-    "variants": {
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "badge/natural/bg",
+      "badge/natural/text",
+      "border/width/thin",
+      "color/surface/card",
+      "color/text/default",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/h3",
+      "font/line-height/desktop/label",
+      "font/line-height/mobile/label",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/h2",
+      "font/size/desktop/h3",
+      "font/size/desktop/label",
+      "font/size/mobile/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "ingredient/divider",
+      "ingredient/meta",
+      "ingredient/percent-bg",
+      "ingredient/percent-text",
+      "ingredient/text",
+      "layout/frame",
+      "layout/margin",
+      "layout/section-y",
+      "link/default",
+      "nutrition/allergen",
+      "nutrition/bg",
+      "nutrition/border",
+      "nutrition/fill",
+      "nutrition/fill-highlight",
+      "nutrition/label",
+      "nutrition/meta",
+      "nutrition/track",
+      "nutrition/value",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/32",
+      "space/4",
+      "space/48",
+      "space/64",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "badge",
+      "badge--natural",
+      "ingredient-item",
+      "ingredient-item__percent",
+      "ingredients",
+      "ingredients__list",
+      "nutrition-bar",
+      "nutrition-bar--highlight",
+      "nutrition-bar__amount",
+      "nutrition-bar__label",
+      "nutrition-bar__meter",
+      "nutrition-bar__percent",
+      "nutrition-bar__row",
+      "nutrition-bar__value",
+      "nutrition-panel",
+      "nutrition-panel__list",
+      "product-details",
+      "product-details__grid",
+      "section",
+      "section__inner",
+      "section__title"
+    ],
+    "example": "<section data-ds=\"product-details\" class=\"section product-details\" id=\"ingredientes\" aria-labelledby=\"pd-title\">\n<div class=\"section__inner\">\n<h2 class=\"section__title\" id=\"pd-title\">Ingredientes y nutrición</h2>\n<div class=\"product-details__grid\">\n<section class=\"ingredients\" aria-label=\"Ingredientes\"><ul class=\"ingredients__list\"><li class=\"ingredient-item\">Fideos de <strong>trigo</strong><span class=\"ingredient-item__percent\">52 %</span></li></ul></section>\n<section class=\"nutrition-panel\" aria-label=\"Nutrición\"><ul class=\"nutrition-panel__list\"><li class=\"nutrition-bar nutrition-bar--highlight\"><div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Sal</span><span class=\"nutrition-bar__amount\"><span class=\"badge badge--natural\">−20 %</span><span class=\"nutrition-bar__value\">1,9 g</span><span class=\"nutrition-bar__percent\">32 % IR</span></span></div><meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"32\" aria-hidden=\"true\"></meter></li></ul></section>\n</div>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "94:329",
+    "componentKey": "cd2e86ee82d6c917a9fae7407ee52cd96b557eed",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
       "Breakpoint": [
         "Desktop",
         "Mobile"
       ]
     },
-    "states": [],
-    "defaults": {
-      "Breakpoint": "Desktop"
-    },
-    "invalidCombinations": [],
     "nestedInstances": [
       {
         "layer": "ingredients",
@@ -151,68 +218,7 @@
         "visibleByDefault": true
       }
     ],
-    "icons": {
-      "hasIcon": true,
-      "swapProperties": [],
-      "defaultIcons": [],
-      "compatible": "unknown",
-      "unexposedIconLayers": []
-    },
-    "slots": [],
-    "tokensUsed": [
-      "badge/natural/bg",
-      "badge/natural/text",
-      "border/width/thin",
-      "color/surface/card",
-      "color/text/default",
-      "font/family/body",
-      "font/family/display",
-      "font/line-height/desktop/body-l",
-      "font/line-height/desktop/body-m",
-      "font/line-height/desktop/caption",
-      "font/line-height/desktop/h2",
-      "font/line-height/desktop/h3",
-      "font/line-height/desktop/label",
-      "font/line-height/mobile/label",
-      "font/size/desktop/body-l",
-      "font/size/desktop/body-m",
-      "font/size/desktop/caption",
-      "font/size/desktop/h2",
-      "font/size/desktop/h3",
-      "font/size/desktop/label",
-      "font/size/mobile/label",
-      "font/style/body",
-      "font/style/display",
-      "icon/size/sm",
-      "ingredient/divider",
-      "ingredient/meta",
-      "ingredient/percent-bg",
-      "ingredient/percent-text",
-      "ingredient/text",
-      "layout/frame",
-      "layout/margin",
-      "layout/section-y",
-      "link/default",
-      "nutrition/allergen",
-      "nutrition/bg",
-      "nutrition/border",
-      "nutrition/fill",
-      "nutrition/fill-highlight",
-      "nutrition/label",
-      "nutrition/meta",
-      "nutrition/track",
-      "nutrition/value",
-      "radius/md",
-      "radius/pill",
-      "space/16",
-      "space/24",
-      "space/32",
-      "space/4",
-      "space/48",
-      "space/64",
-      "space/8"
-    ],
-    "variablesUsed": [
+    "variableBindings": [
       "itemSpacing: space/48",
       "paddingLeft: layout/margin",
       "paddingTop: layout/section-y",
@@ -316,65 +322,12 @@
       "Desktop/caption",
       "Desktop/body-m",
       "Mobile/label"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "badge/natural/bg",
-        "badge/natural/text",
-        "color/surface/card",
-        "color/text/default",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-l",
-        "font/line-height/desktop/body-m",
-        "font/line-height/desktop/caption",
-        "font/line-height/desktop/h2",
-        "font/line-height/desktop/h3",
-        "font/line-height/desktop/label",
-        "font/line-height/mobile/label",
-        "font/size/desktop/body-l",
-        "font/size/desktop/body-m",
-        "font/size/desktop/caption",
-        "font/size/desktop/h2",
-        "font/size/desktop/h3",
-        "font/size/desktop/label",
-        "font/size/mobile/label",
-        "font/style/body",
-        "font/style/display",
-        "ingredient/divider",
-        "ingredient/meta",
-        "ingredient/percent-bg",
-        "ingredient/percent-text",
-        "ingredient/text",
-        "link/default",
-        "nutrition/allergen",
-        "nutrition/bg",
-        "nutrition/border",
-        "nutrition/fill",
-        "nutrition/fill-highlight",
-        "nutrition/label",
-        "nutrition/meta",
-        "nutrition/track",
-        "nutrition/value"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/patterns/product-details.md",
+    "section": "Product details"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "badge",
@@ -385,7 +338,6 @@
       "nutrition-bar",
       "nutrition-panel"
     ],
-    "usedBy": [],
     "related": []
   }
 }

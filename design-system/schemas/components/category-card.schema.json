@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:category-card",
+  "contractVersion": "2",
   "meta": {
     "name": "Category card",
     "slug": "category-card",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Card de categoría de producto (Home · «Our products»: Cups, Bags, Sauces). Anatomía (wireframe UX): imagen de la categoría a sangre (fondo) · Badge New opcional arriba a la izquierda · nombre de la categoría en display h3 sobre placa color/surface/inverse abajo a la izquierda (texto color/text/on-inverse, 17:1). Toda la card es un enlace a la Product library filtrada por ese tipo. Hover: elevation/2; Focus: borde grueso. Desktop 392 px cuadrada; en móvil FILL (343). Sin variables propias.",
     "figmaPage": "Cards",
     "figmaType": "COMPONENT_SET",
     "variantCount": 3,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "01c4256dcfcd",
     "verification": {
       "status": "verified",
@@ -26,78 +34,28 @@
       "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/category-card.md",
-      "section": "Category card"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "147:1353",
-      "componentKey": "bf00e7dd5888d2bce0451a38f38a9607a8ad8b8a"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "badge",
-        "category-card",
-        "category-card__media",
-        "category-card__name"
-      ],
-      "example": "<a class=\"category-card\" href=\"/productos?tipo=cups\">\n<img class=\"category-card__media\" src=\"/media/cups.png\" alt=\"\">\n<span class=\"badge\">New</span>\n<span class=\"category-card__name\">Cups</span>\n</a>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Name#147:0",
-        "kind": "TEXT",
-        "default": "Cups"
+        "name": "name",
+        "type": "string",
+        "default": "Cups",
+        "figma": "Name#147:0"
       },
       {
-        "name": "Badge#147:4",
-        "kind": "BOOLEAN",
-        "default": false
-      },
-      {
-        "name": "State",
-        "kind": "VARIANT",
-        "default": "Default",
-        "values": [
-          "Default",
-          "Hover",
-          "Focus"
-        ]
+        "name": "badge",
+        "type": "boolean",
+        "default": false,
+        "figma": "Badge#147:4"
       }
     ],
-    "variants": {
-      "State": [
-        "Default",
-        "Hover",
-        "Focus"
-      ]
-    },
-    "states": [
-      "Default",
+    "cssStates": [
       "Hover",
       "Focus"
     ],
-    "defaults": {
-      "State": "Default"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [
-      {
-        "layer": "badge",
-        "component": "Type=New",
-        "componentSlug": "badge",
-        "exposedAs": null,
-        "toggledBy": "Badge#147:4",
-        "visibleByDefault": false
-      }
-    ],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -105,8 +63,7 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "badge/new/bg",
       "badge/new/text",
       "border/width/thin",
@@ -126,8 +83,48 @@
       "space/16",
       "space/4",
       "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "badge",
+      "category-card",
+      "category-card__media",
+      "category-card__name"
     ],
-    "variablesUsed": [
+    "example": "<a data-ds=\"category-card\" class=\"category-card\" href=\"/productos?tipo=cups\">\n<img class=\"category-card__media\" src=\"/media/cups.png\" alt=\"\">\n<span class=\"badge\">New</span>\n<span class=\"category-card__name\">Cups</span>\n</a>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "147:1353",
+    "componentKey": "bf00e7dd5888d2bce0451a38f38a9607a8ad8b8a",
+    "propertyNames": {
+      "name": "Name#147:0",
+      "badge": "Badge#147:4"
+    },
+    "variantAxes": {
+      "State": [
+        "Default",
+        "Hover",
+        "Focus"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "badge",
+        "component": "Type=New",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": "Badge#147:4",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
       "paddingLeft: space/16",
       "paddingTop: space/16",
       "paddingRight: space/16",
@@ -173,47 +170,15 @@
     "textStyles": [
       "Mobile/label",
       "Desktop/h3"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "badge/new/bg",
-        "badge/new/text",
-        "color/border/default",
-        "color/effect/shadow-ink",
-        "color/surface/card",
-        "color/surface/inverse",
-        "color/text/on-inverse",
-        "font/family/display",
-        "font/line-height/desktop/h3",
-        "font/line-height/mobile/label",
-        "font/size/desktop/h3",
-        "font/size/mobile/label",
-        "font/style/display"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/category-card.md",
+    "section": "Category card"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "badge"
-    ],
-    "usedBy": [
-      "product-categories"
     ],
     "related": []
   }

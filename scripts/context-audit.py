@@ -239,7 +239,7 @@ def main():
     by_prop = {}
     for x in errors:
         by_prop[x["property"]] = by_prop.get(x["property"], 0) + 1
-    report = {"root": root, "errors": len(errors), "warnings": len(warns), "errorsByProperty": by_prop,
+    report = {"root": ".", "errors": len(errors), "warnings": len(warns), "errorsByProperty": by_prop,
               "docsChecked": len(audit.docs_activos), "docsSkipped": audit.omitidos, "findings": findings}
     if args.out:
         out_path = os.path.join(root, args.out)

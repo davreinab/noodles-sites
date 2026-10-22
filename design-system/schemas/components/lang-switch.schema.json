@@ -1,74 +1,56 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:lang-switch",
+  "contractVersion": "2",
   "meta": {
     "name": "Lang switch",
     "slug": "lang-switch",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Selector de idioma de dos opciones (p. ej. NL | FR en Aiki). Solo en marcas multiidioma. La opción activa en tinta. En código: enlaces a la versión de idioma con hreflang y aria-current en la activa; cada opción con lang=&quot;nl&quot;/&quot;fr&quot;.",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Selector de idioma de dos opciones (p. ej. NL | FR en Aiki). Solo en marcas multiidioma. La opción activa en tinta. En código: enlaces a la versión de idioma con hreflang y aria-current en la activa; cada opción con lang=\"nl\"/\"fr\".",
     "figmaPage": "Navigation",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "035734fd55f4"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/lang-switch.md",
-      "section": "Lang switch"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "54:71",
-      "componentKey": "6edfbbb312dd0b16359a2c22789d0cfe11c92952"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "lang-switch",
-        "lang-switch__option"
-      ],
-      "example": "<nav class=\"lang-switch\" aria-label=\"Idioma\">\n<a class=\"lang-switch__option\" href=\"/nl/\" hreflang=\"nl\" lang=\"nl\" aria-current=\"true\">NL</a>\n<a class=\"lang-switch__option\" href=\"/fr/\" hreflang=\"fr\" lang=\"fr\">FR</a>\n</nav>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "First label#54:5",
-        "kind": "TEXT",
-        "default": "NL"
+        "name": "firstLabel",
+        "type": "string",
+        "default": "NL",
+        "figma": "First label#54:5"
       },
       {
-        "name": "Second label#54:8",
-        "kind": "TEXT",
-        "default": "FR"
+        "name": "secondLabel",
+        "type": "string",
+        "default": "FR",
+        "figma": "Second label#54:8"
       },
       {
-        "name": "Selected",
-        "kind": "VARIANT",
-        "default": "First",
+        "name": "selected",
+        "type": "enum",
         "values": [
           "First",
           "Second"
-        ]
+        ],
+        "default": "First",
+        "figma": "Selected"
       }
     ],
-    "variants": {
-      "Selected": [
-        "First",
-        "Second"
-      ]
-    },
-    "states": [],
-    "defaults": {
-      "Selected": "First"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -76,8 +58,7 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "border/width/thin",
       "font/family/display",
       "font/line-height/desktop/label",
@@ -92,8 +73,37 @@
       "space/16",
       "space/4",
       "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "lang-switch",
+      "lang-switch__option"
     ],
-    "variablesUsed": [
+    "example": "<nav data-ds=\"lang-switch\" class=\"lang-switch\" aria-label=\"Idioma\">\n<a class=\"lang-switch__option\" href=\"/nl/\" hreflang=\"nl\" lang=\"nl\" aria-current=\"true\">NL</a>\n<a class=\"lang-switch__option\" href=\"/fr/\" hreflang=\"fr\" lang=\"fr\">FR</a>\n</nav>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "54:71",
+    "componentKey": "6edfbbb312dd0b16359a2c22789d0cfe11c92952",
+    "propertyNames": {
+      "firstLabel": "First label#54:5",
+      "secondLabel": "Second label#54:8",
+      "selected": "Selected"
+    },
+    "variantAxes": {
+      "Selected": [
+        "First",
+        "Second"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [
       "itemSpacing: space/4",
       "paddingLeft: space/4",
       "paddingTop: space/4",
@@ -128,43 +138,14 @@
     ],
     "textStyles": [
       "Desktop/label"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "font/family/display",
-        "font/line-height/desktop/label",
-        "font/size/desktop/label",
-        "font/style/display",
-        "lang-switch/bg",
-        "lang-switch/bg-selected",
-        "lang-switch/border",
-        "lang-switch/text",
-        "lang-switch/text-selected"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/lang-switch.md",
+    "section": "Lang switch"
   },
-  "compatibility": {},
   "relations": {
     "uses": [],
-    "usedBy": [
-      "mobile-menu",
-      "navbar"
-    ],
     "related": []
   }
 }

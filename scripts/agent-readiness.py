@@ -136,7 +136,11 @@ class Rater:
             if falta:
                 bad.append("%s: sin %s" % (slug, ", ".join(falta))); continue
             api = sch.get("api") or {}
-            if not isinstance(api.get("variants"), (dict, list)) or not isinstance(api.get("states"), list):
+            if isinstance(api.get("props"), list):
+                malas = [p.get("name") for p in api["props"] if not isinstance(p, dict) or not p.get("name") or p.get("type") not in ("string", "boolean", "enum", "number", "icon", "slot", "unknown") or (p.get("type") == "enum" and not p.get("values"))]
+                if malas or not isinstance(api.get("cssStates"), list):
+                    bad.append("%s: props sin tipo cerrado (%s)" % (slug, ", ".join(str(m) for m in malas[:3]) or "cssStates"))
+            elif not isinstance(api.get("variants"), (dict, list)) or not isinstance(api.get("states"), list):
                 bad.append("%s: variantes o estados sin lista cerrada" % slug)
         if bad:
             return NO_CUMPLE, "%d contratos incompletos (p. ej. %s)" % (len(bad), bad[0])
@@ -150,7 +154,7 @@ class Rater:
             return PENDIENTE, "css/components.css vacío o inexistente"
         bad = []
         for slug, sch in self.schemas.items():
-            code = ((sch or {}).get("source") or {}).get("code") or {}
+            code = (sch or {}).get("code") or ((sch or {}).get("source") or {}).get("code") or {}
             if not code.get("example"):
                 bad.append("%s: sin ejemplo de código" % slug); continue
             huerfanas = [c for c in (code.get("classes") or []) if not re.search(r"[.\s,{]" + re.escape(c) + r"\b", css)]

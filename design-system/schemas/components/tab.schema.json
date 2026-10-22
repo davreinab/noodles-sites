@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:tab",
+  "contractVersion": "2",
   "meta": {
     "name": "Tab",
     "slug": "tab",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Pestaña del primer nivel del filtro de productos (Cups / Bags / Sauces). Selected en tinta con texto crema. En código: role=&quot;tablist&quot; / role=&quot;tab&quot; con aria-selected y flechas izquierda/derecha para moverse. Alto 48 (mínimo táctil).",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Pestaña del primer nivel del filtro de productos (Cups / Bags / Sauces). Selected en tinta con texto crema. En código: role=\"tablist\" / role=\"tab\" con aria-selected y flechas izquierda/derecha para moverse. Alto 48 (mínimo táctil).",
     "figmaPage": "Navigation",
     "figmaType": "COMPONENT_SET",
     "variantCount": 4,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "05b4c7a60a71",
     "verification": {
       "status": "verified",
@@ -24,64 +32,28 @@
       "by": "agent (Claude)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/tab.md",
-      "section": "Tab"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "54:58",
-      "componentKey": "c5ace94961371155da8361436894be193e75847c"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "tab"
-      ],
-      "example": "<div role=\"tablist\" aria-label=\"Tipo de producto\">\n<button class=\"tab\" role=\"tab\" aria-selected=\"true\" aria-controls=\"panel-cups\" id=\"tab-cups\">Cups</button>\n<button class=\"tab\" role=\"tab\" aria-selected=\"false\" aria-controls=\"panel-bags\" id=\"tab-bags\" tabindex=\"-1\">Bags</button>\n</div>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Label#54:0",
-        "kind": "TEXT",
-        "default": "Cups"
+        "name": "label",
+        "type": "string",
+        "default": "Cups",
+        "figma": "Label#54:0"
       },
       {
-        "name": "State",
-        "kind": "VARIANT",
-        "default": "Default",
-        "values": [
-          "Default",
-          "Hover",
-          "Selected",
-          "Focus"
-        ]
+        "name": "selected",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Selected"
       }
     ],
-    "variants": {
-      "State": [
-        "Default",
-        "Hover",
-        "Selected",
-        "Focus"
-      ]
-    },
-    "states": [
-      "Default",
+    "cssStates": [
       "Hover",
-      "Selected",
       "Focus"
     ],
-    "defaults": {
-      "State": "Default"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -89,8 +61,7 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "border/width/thin",
       "font/family/display",
       "font/line-height/desktop/label",
@@ -102,8 +73,37 @@
       "tab/bg",
       "tab/border",
       "tab/text"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "tab"
     ],
-    "variablesUsed": [
+    "example": "<div data-ds=\"tab\" role=\"tablist\" aria-label=\"Tipo de producto\">\n<button class=\"tab\" role=\"tab\" aria-selected=\"true\" aria-controls=\"panel-cups\" id=\"tab-cups\">Cups</button>\n<button class=\"tab\" role=\"tab\" aria-selected=\"false\" aria-controls=\"panel-bags\" id=\"tab-bags\" tabindex=\"-1\">Bags</button>\n</div>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "54:58",
+    "componentKey": "c5ace94961371155da8361436894be193e75847c",
+    "propertyNames": {
+      "label": "Label#54:0",
+      "selected": "State=Selected"
+    },
+    "variantAxes": {
+      "State": [
+        "Default",
+        "Hover",
+        "Selected",
+        "Focus"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [
       "paddingLeft: space/24",
       "paddingTop: space/16",
       "paddingRight: space/24",
@@ -129,41 +129,14 @@
     ],
     "textStyles": [
       "Desktop/label"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "font/family/display",
-        "font/line-height/desktop/label",
-        "font/size/desktop/label",
-        "font/style/display",
-        "tab/bg",
-        "tab/border",
-        "tab/text"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/tab.md",
+    "section": "Tab"
   },
-  "compatibility": {},
   "relations": {
     "uses": [],
-    "usedBy": [
-      "library",
-      "product-filter"
-    ],
     "related": []
   }
 }

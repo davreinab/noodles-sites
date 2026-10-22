@@ -30,6 +30,26 @@ Reglas:
 - **Un volcado a medias se declara.** Mientras falten fuentes o páginas acordadas, el resumen
   al usuario dice cuáles y el paso queda abierto. Los artefactos generados con un volcado
   parcial describen solo lo leído; no se presentan como el DS completo.
+- **Un componente suelto se refresca con `NODE_IDS`** en el script de lectura (`design.md § Sync`,
+  paso 3): el trozo lleva `part.refresh` y `ds-sync.py --merge` sustituye solo esos componentes por
+  id en su página, anotándolo en `partialRefresh.history`. No se edita la entrada del volcado a mano.
+- **Una variable suelta se refresca con `VARIABLE_IDS` o `VARIABLE_NAMES`** en el script de variables:
+  lee solo esas, `--merge` las sustituye o añade por id en `variables.json` y resuelve sus alias contra
+  el volcado completo; avisa de las que no existen en Figma. Una variable nueva cuesta una llamada.
+- **Sync incremental: primero pregunta qué ha cambiado.** El «script de huellas de variables» (`design.md`
+  § Sync) devuelve en una llamada `[id, huella]` de cada variable; se guarda en `parts/fingerprints-001.json`
+  y `python3 scripts/ds-sync.py --variables-diff` lo compara con `variables.json`: dice las cambiadas, las
+  nuevas y las desaparecidas, imprime la línea `VARIABLE_IDS` para el refresco puntual y prepara la retirada
+  de las desaparecidas (`part.removed`, la aplica `--merge`). Sin cambios, no hay nada que releer. La
+  relectura completa queda para la primera vez.
+- **Librerías ligadas.** `library-audit/<fileKey>-<NNN>.json` es la salida del «script de auditoría de
+  librerías ligadas» (`design.md § Sync`, 3c): qué componentes ligan variables o estilos de una librería
+  que no es la Foundations declarada. El sync abre un hallazgo crítico por componente mientras esté ahí;
+  se vuelve a ejecutar tras arreglarlo en Figma (Swap library).
+- **Un volcado de variables a medias no llega a los artefactos.** `--merge` exige la cadena entera
+  (trozo 0 … `nextOffset: null`, `read == total`): a medias, error sin escribir (o, si el merge viene de
+  un refresco de componentes, aparta esos trozos y conserva `variables.json`). Y `ds-sync.py` se niega a
+  escribir un `tokens.css` con más de un 10 % menos de tokens que el actual salvo `--allow-fewer-tokens`.
 - **Los artefactos no se editan a mano.** Si algo sale mal, se corrige el volcado (releyendo
   Figma) o se abre un hallazgo; nunca el resultado.
 - Formato exacto de cada archivo: cabecera de los scripts de lectura en `design.md § Sync` y

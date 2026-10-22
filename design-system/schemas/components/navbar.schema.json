@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "pattern:navbar",
+  "contractVersion": "2",
   "meta": {
     "name": "Navbar",
     "slug": "navbar",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Patrón de cabecera (wireframe UX). Desktop: botón menú (Icon button Secondary, abre el Menu a pantalla completa) a la izquierda · logo de marca centrado (enlace a la Home) · CTA Button Primary «New 100% Natural Formula» a la derecha (lleva a la Natural formula page) · Lang switch oculto salvo en marcas multiidioma. Mobile: botón menú · logo centrado. Sin enlaces de navegación ni buscador en la barra: la navegación vive en el Menu. Comportamiento: sticky (layer/sticky); se oculta al hacer scroll hacia abajo y reaparece al subir; respeta prefers-reduced-motion. Accesibilidad: &lt;header&gt; con &lt;nav&gt;; el botón menú lleva aria-expanded y aria-controls. Fondo color/surface/page con borde inferior color/border/default. Sin variables propias.",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Patrón de cabecera (wireframe UX). Desktop: botón menú (Icon button Secondary, abre el Menu a pantalla completa) a la izquierda · logo de marca centrado (enlace a la Home) · CTA Button Primary «New 100% Natural Formula» a la derecha (lleva a la Natural formula page) · Lang switch oculto salvo en marcas multiidioma. Mobile: botón menú · logo centrado. Sin enlaces de navegación ni buscador en la barra: la navegación vive en el Menu. Comportamiento: sticky (layer/sticky); se oculta al hacer scroll hacia abajo y reaparece al subir; respeta prefers-reduced-motion. Accesibilidad: <header> con <nav>; el botón menú lleva aria-expanded y aria-controls. Fondo color/surface/page con borde inferior color/border/default. Sin variables propias.",
     "figmaPage": "Pattern / Global",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "afbf13ea7495",
     "verification": {
       "status": "verified",
@@ -25,70 +33,115 @@
       "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/patterns/navbar.md",
-      "section": "Navbar"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "55:116",
-      "componentKey": "5c42eb9d9261bf9933740f4f293126121318d0bc"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "button",
-        "icon",
-        "icon-button",
-        "icon-button--secondary",
-        "icon-menu",
-        "logo",
-        "navbar",
-        "navbar__actions",
-        "navbar__inner",
-        "navbar__start"
-      ],
-      "example": "<header class=\"navbar\">\n<div class=\"navbar__inner\">\n<div class=\"navbar__start\"><button class=\"icon-button icon-button--secondary\" type=\"button\" aria-label=\"Menú\" aria-expanded=\"false\" aria-controls=\"menu\"><span class=\"icon icon-menu\" aria-hidden=\"true\"></span></button></div>\n<a href=\"/\" aria-label=\"Yatekomo, inicio\"><img class=\"logo\" src=\"../assets/logos/logo-yatekomo-positive.svg\" alt=\"Yatekomo\"></a>\n<div class=\"navbar__actions\"><a class=\"button\" href=\"/formula-natural\">New 100% Natural Formula</a></div>\n</div>\n</header>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Logo#55:0",
-        "kind": "INSTANCE_SWAP",
-        "default": "21:167",
-        "defaultComponent": "Version=Positive",
-        "preferredValues": []
+        "name": "logo",
+        "type": "icon",
+        "default": "Version=Positive",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Logo#55:0"
       },
       {
-        "name": "Lang switch#55:3",
-        "kind": "BOOLEAN",
-        "default": false
+        "name": "langSwitch",
+        "type": "boolean",
+        "default": false,
+        "figma": "Lang switch#55:3"
       },
       {
-        "name": "Breakpoint",
-        "kind": "VARIANT",
-        "default": "Desktop",
+        "name": "breakpoint",
+        "type": "enum",
         "values": [
           "Desktop",
           "Mobile"
-        ]
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
       }
     ],
-    "variants": {
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "logo"
+      ],
+      "defaultIcons": [
+        "Version=Positive"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thick",
+      "border/width/thin",
+      "button/primary/bg",
+      "button/primary/border",
+      "button/primary/text",
+      "button/secondary/border",
+      "button/secondary/text",
+      "color/border/default",
+      "color/surface/page",
+      "font/family/display",
+      "font/line-height/desktop/label",
+      "font/size/desktop/label",
+      "font/style/display",
+      "icon-button/size/m",
+      "icon/color/default",
+      "icon/size/md",
+      "icon/size/sm",
+      "lang-switch/bg",
+      "lang-switch/bg-selected",
+      "lang-switch/border",
+      "lang-switch/text",
+      "lang-switch/text-selected",
+      "layout/frame",
+      "layout/margin",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/4",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "button",
+      "icon",
+      "icon-button",
+      "icon-button--secondary",
+      "icon-menu",
+      "logo",
+      "navbar",
+      "navbar__actions",
+      "navbar__inner",
+      "navbar__start"
+    ],
+    "example": "<header data-ds=\"navbar\" class=\"navbar\">\n<div class=\"navbar__inner\">\n<div class=\"navbar__start\"><button class=\"icon-button icon-button--secondary\" type=\"button\" aria-label=\"Menú\" aria-expanded=\"false\" aria-controls=\"menu\"><span class=\"icon icon-menu\" aria-hidden=\"true\"></span></button></div>\n<a href=\"/\" aria-label=\"Yatekomo, inicio\"><img class=\"logo\" src=\"../assets/logos/logo-yatekomo-positive.svg\" alt=\"Yatekomo\"></a>\n<div class=\"navbar__actions\"><a class=\"button\" href=\"/formula-natural\">New 100% Natural Formula</a></div>\n</div>\n</header>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "55:116",
+    "componentKey": "5c42eb9d9261bf9933740f4f293126121318d0bc",
+    "propertyNames": {
+      "logo": "Logo#55:0",
+      "langSwitch": "Lang switch#55:3",
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
       "Breakpoint": [
         "Desktop",
         "Mobile"
       ]
     },
-    "states": [],
-    "defaults": {
-      "Breakpoint": "Desktop"
-    },
-    "invalidCombinations": [],
     "nestedInstances": [
       {
         "layer": "menu",
@@ -147,50 +200,7 @@
         "visibleByDefault": false
       }
     ],
-    "icons": {
-      "hasIcon": true,
-      "swapProperties": [
-        "Logo#55:0"
-      ],
-      "defaultIcons": [
-        "Version=Positive"
-      ],
-      "compatible": "any Icon / * via INSTANCE_SWAP",
-      "unexposedIconLayers": []
-    },
-    "slots": [],
-    "tokensUsed": [
-      "border/width/thick",
-      "border/width/thin",
-      "button/primary/bg",
-      "button/primary/border",
-      "button/primary/text",
-      "button/secondary/border",
-      "button/secondary/text",
-      "color/border/default",
-      "color/surface/page",
-      "font/family/display",
-      "font/line-height/desktop/label",
-      "font/size/desktop/label",
-      "font/style/display",
-      "icon-button/size/m",
-      "icon/color/default",
-      "icon/size/md",
-      "icon/size/sm",
-      "lang-switch/bg",
-      "lang-switch/bg-selected",
-      "lang-switch/border",
-      "lang-switch/text",
-      "lang-switch/text-selected",
-      "layout/frame",
-      "layout/margin",
-      "radius/pill",
-      "space/16",
-      "space/24",
-      "space/4",
-      "space/8"
-    ],
-    "variablesUsed": [
+    "variableBindings": [
       "itemSpacing: space/24",
       "paddingLeft: layout/margin",
       "paddingTop: space/16",
@@ -262,45 +272,12 @@
     ],
     "textStyles": [
       "Desktop/label"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "button/primary/bg",
-        "button/primary/border",
-        "button/primary/text",
-        "button/secondary/border",
-        "button/secondary/text",
-        "color/border/default",
-        "color/surface/page",
-        "font/family/display",
-        "font/line-height/desktop/label",
-        "font/size/desktop/label",
-        "font/style/display",
-        "icon/color/default",
-        "lang-switch/bg",
-        "lang-switch/bg-selected",
-        "lang-switch/border",
-        "lang-switch/text",
-        "lang-switch/text-selected"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/patterns/navbar.md",
+    "section": "Navbar"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "button",
@@ -310,7 +287,6 @@
       "lang-switch",
       "logo-yatekomo"
     ],
-    "usedBy": [],
     "related": []
   }
 }

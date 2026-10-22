@@ -1,74 +1,115 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:search-field",
+  "contractVersion": "2",
   "meta": {
     "name": "Search field",
     "slug": "search-field",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Campo de búsqueda (resultados en modal). Sin etiqueta visible: requiere aria-label («Buscar») y role=&quot;search&quot; en el formulario. Lupa delante; con texto aparece el botón borrar (aria-label «Borrar búsqueda»). Forma pill para distinguirlo de los campos de formulario. El valor se edita en la instancia.",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Campo de búsqueda (resultados en modal). Sin etiqueta visible: requiere aria-label («Buscar») y role=\"search\" en el formulario. Lupa delante; con texto aparece el botón borrar (aria-label «Borrar búsqueda»). Forma pill para distinguirlo de los campos de formulario. El valor se edita en la instancia.",
     "figmaPage": "Forms",
     "figmaType": "COMPONENT_SET",
     "variantCount": 4,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "19c5719a95a1"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/search-field.md",
-      "section": "Search field"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "48:177",
-      "componentKey": "c01b161ae311de0b659632a1ab7ea759d3218267"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "icon",
-        "icon-close",
-        "icon-search",
-        "search-field",
-        "search-field__clear",
-        "search-field__input",
-        "visually-hidden"
-      ],
-      "example": "<form class=\"search-field\" role=\"search\" action=\"/buscar\">\n<span class=\"icon icon-search\" aria-hidden=\"true\"></span>\n<label class=\"visually-hidden\" for=\"q\">Buscar recetas y productos</label>\n<input class=\"search-field__input\" id=\"q\" name=\"q\" type=\"search\" placeholder=\"Buscar recetas y productos\">\n<button class=\"search-field__clear\" type=\"button\" aria-label=\"Borrar búsqueda\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span></button>\n</form>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Icon leading#51:0",
-        "kind": "INSTANCE_SWAP",
-        "default": "30:76",
-        "defaultComponent": "Icon / search",
-        "preferredValues": []
+        "name": "iconLeading",
+        "type": "icon",
+        "default": "Icon / search",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Icon leading#51:0"
       },
       {
-        "name": "Clear icon#51:5",
-        "kind": "INSTANCE_SWAP",
-        "default": "30:60",
-        "defaultComponent": "Icon / close",
-        "preferredValues": []
+        "name": "clearIcon",
+        "type": "icon",
+        "default": "Icon / close",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Clear icon#51:5"
       },
       {
-        "name": "State",
-        "kind": "VARIANT",
-        "default": "Default",
-        "values": [
-          "Default",
-          "Hover",
-          "Focus",
-          "Filled"
-        ]
+        "name": "filled",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Filled"
       }
     ],
-    "variants": {
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "iconLeading",
+        "clearIcon"
+      ],
+      "defaultIcons": [
+        "Icon / search",
+        "Icon / close"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thin",
+      "field/bg",
+      "field/border",
+      "field/icon",
+      "field/placeholder",
+      "font/family/body",
+      "font/line-height/desktop/body-m",
+      "font/size/desktop/body-m",
+      "font/style/body",
+      "icon/size/md",
+      "radius/pill",
+      "space/16",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "icon",
+      "icon-close",
+      "icon-search",
+      "search-field",
+      "search-field__clear",
+      "search-field__input",
+      "visually-hidden"
+    ],
+    "example": "<form data-ds=\"search-field\" class=\"search-field\" role=\"search\" action=\"/buscar\">\n<span class=\"icon icon-search\" aria-hidden=\"true\"></span>\n<label class=\"visually-hidden\" for=\"q\">Buscar recetas y productos</label>\n<input class=\"search-field__input\" id=\"q\" name=\"q\" type=\"search\" placeholder=\"Buscar recetas y productos\">\n<button class=\"search-field__clear\" type=\"button\" aria-label=\"Borrar búsqueda\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span></button>\n</form>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "48:177",
+    "componentKey": "c01b161ae311de0b659632a1ab7ea759d3218267",
+    "propertyNames": {
+      "iconLeading": "Icon leading#51:0",
+      "clearIcon": "Clear icon#51:5",
+      "filled": "State=Filled"
+    },
+    "variantAxes": {
       "State": [
         "Default",
         "Hover",
@@ -76,16 +117,6 @@
         "Filled"
       ]
     },
-    "states": [
-      "Default",
-      "Hover",
-      "Focus",
-      "Filled"
-    ],
-    "defaults": {
-      "State": "Default"
-    },
-    "invalidCombinations": [],
     "nestedInstances": [
       {
         "layer": "icon-search",
@@ -104,36 +135,7 @@
         "visibleByDefault": false
       }
     ],
-    "icons": {
-      "hasIcon": true,
-      "swapProperties": [
-        "Icon leading#51:0",
-        "Clear icon#51:5"
-      ],
-      "defaultIcons": [
-        "Icon / search",
-        "Icon / close"
-      ],
-      "compatible": "any Icon / * via INSTANCE_SWAP",
-      "unexposedIconLayers": []
-    },
-    "slots": [],
-    "tokensUsed": [
-      "border/width/thin",
-      "field/bg",
-      "field/border",
-      "field/icon",
-      "field/placeholder",
-      "font/family/body",
-      "font/line-height/desktop/body-m",
-      "font/size/desktop/body-m",
-      "font/style/body",
-      "icon/size/md",
-      "radius/pill",
-      "space/16",
-      "space/8"
-    ],
-    "variablesUsed": [
+    "variableBindings": [
       "itemSpacing: space/8",
       "paddingLeft: space/16",
       "paddingTop: space/16",
@@ -164,42 +166,17 @@
     ],
     "textStyles": [
       "Desktop/body-m"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "field/bg",
-        "field/border",
-        "field/icon",
-        "field/placeholder",
-        "font/family/body",
-        "font/line-height/desktop/body-m",
-        "font/size/desktop/body-m",
-        "font/style/body"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/search-field.md",
+    "section": "Search field"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "icon-close",
       "icon-search"
     ],
-    "usedBy": [],
     "related": []
   }
 }

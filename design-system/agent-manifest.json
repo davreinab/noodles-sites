@@ -5,9 +5,11 @@
   "versionedAt": null,
   "maturityStage": 1,
   "targetMaturityStage": 2,
-  "lastSync": "2026-10-08T11:52:41Z",
+  "lastSync": "2026-10-22T09:38:13Z",
   "adoptionMode": "new",
   "structuralStandardsEnforced": true,
+  "sourceMode": "figma",
+  "proposalsEnforcement": "warn",
   "figmaSources": [
     {
       "name": "DS - Noodles",
@@ -65,12 +67,15 @@
     "agentReadinessRubric": "./schemas/governance/agent-readiness.json",
     "tokenAuditReport": "./reports/token-audit.json",
     "dsFidelity": "../scripts/ds-fidelity.py",
-    "fidelityReport": "./reports/fidelity.json"
+    "fidelityReport": "./reports/fidelity.json",
+    "library": "../library/",
+    "libraryGenerator": "../scripts/ds-library.py"
   },
   "retrieval": {
     "rule": "Load only the requested resource and its declared dependencies.",
     "componentContract": "./schemas/components/<component-slug>.schema.json",
-    "componentCriteria": "Purpose, accessibility, when to use and what it does not do live only in the .md section named by the contract's source.docs (file + section). The schema does not duplicate them.",
+    "componentCriteria": "Purpose, accessibility, when to use and what it does not do live only in the .md file named by the contract's docs (file + section). The schema does not duplicate them.",
+    "contractShape": "Contract version 2: api (framework-neutral props with type and default, cssStates, events, slots, exclusive, icons, tokens) · code (HTML binding: classes, example with data-ds, classByProp, stateAnatomy) · figma (traceability: keys and propertyNames map) · docs (criteria pointer). Generators for a framework read api + code; validators read figma.",
     "tokenLookup": "Use the exact token path in tokens.json",
     "fullSystemLoad": false,
     "requiresCustomMcp": false

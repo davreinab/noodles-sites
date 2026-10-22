@@ -7,9 +7,12 @@ pipelines:
         script:
           - python3 scripts/token-audit.py --out design-system/reports/token-audit.json
           - python3 scripts/ds-fidelity.py --out design-system/reports/fidelity.json
+          - python3 scripts/proposals-index.py --check
+          - python3 scripts/ds-library.py --check
           - python3 scripts/context-audit.py --out context/reports/context-audit.json
           - python3 scripts/research-index.py --check
           - python3 scripts/research-index.py --dir analytics --check
+          - '[ -f scripts/project-checks.txt ] && while IFS= read -r c || [ -n "$c" ]; do case "$c" in ""|\#*) continue;; esac; sh -c "$c" || exit 1; done < scripts/project-checks.txt || true'
   pull-requests:
     '**':
       - step:
@@ -17,6 +20,9 @@ pipelines:
           script:
             - python3 scripts/token-audit.py --out design-system/reports/token-audit.json
             - python3 scripts/ds-fidelity.py --out design-system/reports/fidelity.json
+            - python3 scripts/proposals-index.py --check
+            - python3 scripts/ds-library.py --check
             - python3 scripts/context-audit.py --out context/reports/context-audit.json
             - python3 scripts/research-index.py --check
             - python3 scripts/research-index.py --dir analytics --check
+            - '[ -f scripts/project-checks.txt ] && while IFS= read -r c || [ -n "$c" ]; do case "$c" in ""|\#*) continue;; esac; sh -c "$c" || exit 1; done < scripts/project-checks.txt || true'

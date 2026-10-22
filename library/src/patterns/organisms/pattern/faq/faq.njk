@@ -1,0 +1,11 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="faq" class="section faq" aria-labelledby="faq-title">
+<div class="section__inner">
+<div class="faq__grid">
+<div class="section__header"><h2 class="section__title" id="faq-title">Are you wondering how, too? We’ll tell you</h2><p class="section__lead">These are the questions we're asked most often, so you won't be left wondering</p></div>
+<ul class="faq__list"><li><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" aria-expanded="false" aria-controls="q1">How is it prepared?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="q1" hidden>Respuesta.</div></div></li></ul>
+<p class="faq__more">Still curious? <a class="link link--standalone" href="/faqs">See all FAQS <span class="icon icon-arrow-right" aria-hidden="true"></span></a></p>
+</div>
+</div>
+</section>{% endraw %}
+{% endmacro %}

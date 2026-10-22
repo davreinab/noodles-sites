@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:decoration-noodle-texture",
+  "contractVersion": "2",
   "meta": {
     "name": "Decoration / Noodle texture",
     "slug": "decoration-noodle-texture",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Trama de fideos de fondo (como en las landings): los 5 fideos de Decoration / Noodle en tono Texture (decoration/noodle/texture: ámbar opaco, el naranja al 50 % sobre amarillo), en fila. Va a sangre por la derecha del módulo, detrás del contenido y más alta que él (se corta arriba y abajo). Solo sobre color/surface/brand; el texto encima es tinta (contraste con el ámbar ≥ 9:1). Decorativa: aria-hidden, sin interacción.",
     "figmaPage": "Brand assets",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "0a10a06d3514",
     "verification": {
       "status": "verified",
@@ -23,42 +31,50 @@
       "by": "agent (Claude)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/decoration-noodle-texture.md",
-      "section": "Decoration / Noodle texture"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "157:50",
-      "componentKey": "d56b442c19fd1a4d1c46ae77e260338306946af6"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "decoration-noodle",
-        "decoration-noodle--2",
-        "decoration-noodle--3",
-        "decoration-noodle--4",
-        "decoration-noodle--5",
-        "decoration-noodle--texture",
-        "decoration-noodle-texture",
-        "promo",
-        "section",
-        "section__inner",
-        "section__title"
-      ],
-      "example": "<section class=\"section promo\" aria-labelledby=\"pr-title\">\n<div class=\"decoration-noodle-texture\" aria-hidden=\"true\"><span class=\"decoration-noodle decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--3 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--5 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--2 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--4 decoration-noodle--texture\"></span></div>\n<div class=\"section__inner\"><h2 class=\"section__title\" id=\"pr-title\">Título</h2></div>\n</section>"
-    }
-  },
   "api": {
-    "properties": [],
-    "variants": {},
-    "states": [],
-    "defaults": {},
-    "invalidCombinations": [],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "decoration/noodle/texture"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "decoration-noodle",
+      "decoration-noodle--2",
+      "decoration-noodle--3",
+      "decoration-noodle--4",
+      "decoration-noodle--5",
+      "decoration-noodle--texture",
+      "decoration-noodle-texture",
+      "promo",
+      "section",
+      "section__inner",
+      "section__title"
+    ],
+    "example": "<section data-ds=\"decoration-noodle-texture\" class=\"section promo\" aria-labelledby=\"pr-title\">\n<div class=\"decoration-noodle-texture\" aria-hidden=\"true\"><span class=\"decoration-noodle decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--3 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--5 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--2 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--4 decoration-noodle--texture\"></span></div>\n<div class=\"section__inner\"><h2 class=\"section__title\" id=\"pr-title\">Título</h2></div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "157:50",
+    "componentKey": "d56b442c19fd1a4d1c46ae77e260338306946af6",
+    "propertyNames": {},
+    "variantAxes": {},
     "nestedInstances": [
       {
         "layer": "noodle",
@@ -101,49 +117,19 @@
         "visibleByDefault": true
       }
     ],
-    "icons": {
-      "hasIcon": false,
-      "swapProperties": [],
-      "defaultIcons": [],
-      "compatible": "none",
-      "unexposedIconLayers": []
-    },
-    "slots": [],
-    "tokensUsed": [
-      "decoration/noodle/texture"
-    ],
-    "variablesUsed": [
+    "variableBindings": [
       "fills: decoration/noodle/texture",
       "color: decoration/noodle/texture"
     ],
-    "textStyles": [],
-    "theming": {
-      "brandAware": false,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": []
-    }
+    "textStyles": []
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/decoration-noodle-texture.md",
+    "section": "Decoration / Noodle texture"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "decoration-noodle"
-    ],
-    "usedBy": [
-      "promo",
-      "where-to-buy"
     ],
     "related": []
   }

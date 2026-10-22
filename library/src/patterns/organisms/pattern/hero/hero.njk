@@ -1,0 +1,18 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="hero" class="section hero" aria-roledescription="carrusel" aria-label="Destacados">
+<span class="decoration-noodle hero__noodle" aria-hidden="true"></span>
+<div class="section__inner">
+<div class="hero__slide">
+<div class="hero__content">
+<h1 class="hero__title">Welcome to the new era</h1>
+<div class="hero__slide-content" role="group" aria-roledescription="slide" aria-label="1 de 3">
+<div class="hero__slide-copy"><span class="badge">New</span><h2 class="hero__slide-title">Do you like to cook? Check out our new bags</h2><p class="hero__lead">Same amount, super convenient for your recipes</p></div>
+<a class="button button--l" href="/productos/bags">Discover flavours</a>
+<div class="hero__controls"><button class="icon-button icon-button--secondary" type="button" aria-label="Slide anterior"><span class="icon icon-arrow-left" aria-hidden="true"></span></button><div class="hero__dots"><button class="hero__dot" type="button" aria-current="true" aria-label="Slide 1"></button><button class="hero__dot" type="button" aria-label="Slide 2"></button></div><button class="icon-button icon-button--secondary" type="button" aria-label="Slide siguiente"><span class="icon icon-arrow-right" aria-hidden="true"></span></button></div>
+</div>
+</div>
+<picture class="hero__media"><source media="(max-width: 768px)" srcset="/media/hero-1-mobile.png"><img src="/assets/ds/images/placeholder.svg" alt="Cups de Yatekomo"></picture>
+</div>
+</div>
+</section>{% endraw %}
+{% endmacro %}

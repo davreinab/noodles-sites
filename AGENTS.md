@@ -30,9 +30,10 @@ terminal ni la estructura interna del repo. Por eso:
 | «apunta esto» / contexto nuevo | `context/AGENTS.md § Distribución`: cada dato a su archivo; research siempre como nota nueva + índice | Dónde quedó cada cosa |
 | «¿cuál es…?» / «¿qué dice el contexto sobre…?» | Abre el documento que indica `context/AGENTS.md § Enrutado`. Si el dato está en `⬜ TODO`, en `🚫 No existe` o no aparece, no lo deduzcas | «No lo sé, no está en el contexto» + dónde debería estar y qué haría falta |
 | «hazme <pantalla / flujo / requisito / texto>» | Antes de empezar, comprueba en `context/` los datos de los que depende. Si falta alguno, para y avisa (`context/AGENTS.md` regla 1d) | «No se puede completar porque falta <dato> (<documento>)». Opciones: aportarlo ahora o hacer solo la parte que no depende de él, con el hueco marcado |
+| «cambia <estado o contenido> de <componente> en <pantalla>» (una pantalla que ya existe) | Abre la ficha del componente (`design-system/docs/*/<slug>.md`) y aplica el ejemplo completo de ese estado. No copies el marcado de otra instancia de la misma pantalla: puede ser otro caso del componente | Qué ficha has seguido y qué cambia en el marcado |
 | «esto ya te lo dije» / segunda corrección de lo mismo | Regla «Correcciones repetidas» de abajo: se escribe en esa sesión | Dónde quedó escrito y que no se volverá a preguntar |
 | «esto cambió respecto a la propuesta» / «esto ya no entra» / «hemos acordado que…» | `context/proposal-agreements.md § Cómo se cambia lo acordado`. **Pregunta siempre quién lo acordó y dónde antes de escribir nada**; si no hay acuerdo todavía, márcalo como pendiente de negociar, no lo apliques (regla 1e) | Qué cambió, dónde quedó registrado y qué documentos hay que revisar |
-| «sincroniza el design system» / «cambió Figma» | `design-system/design.md § Sync desde Figma` | Qué tokens y componentes cambiaron, qué se regeneró, qué queda pendiente |
+| «sincroniza el design system» / «cambió Figma» | `design-system/guides/sync-figma.md` | Qué tokens y componentes cambiaron, qué se regeneró, qué queda pendiente |
 | «¿cómo debería verse?» / «dale estilo» | Lee `UX/direction/DESIGN.md` primero. Si está en `⬜ TODO`, pide referencias en vez de inventar | Qué dirección aplicaste y de qué referencia sale |
 | «¿por qué hiciste esto?» | Cita la regla o el archivo de origen (`design.md` regla N, `patterns.md § Decisiones recurrentes`, `specs.md` R-xx) | La regla, en una frase, y dónde vive |
 
@@ -132,6 +133,19 @@ comportamiento de paneles y escalera de capas. Toda decisión de layout es una c
 esa sección, no una elección propia. Si la regla que necesitas no está escrita, se añade
 allí primero (y su medida nace como token en Figma) y después se usa.
 
+**Para ver el design system entero**, con cada componente en vista previa, su ficha y su estado de
+verificación: `cd library && npm install && npm start` (Node.js solo para verlo). Lo que hay en
+`library/src/patterns/` es generado desde `design-system/` por `scripts/ds-library.py`: no se edita.
+
+**Al editar una pantalla que ya existe**, antes de cambiar el estado de un componente (relleno,
+error, deshabilitado, seleccionado…) o su contenido, abre su ficha en `design-system/docs/*/<slug>.md`
+y aplica la anatomía completa de ese estado: la del «Ejemplo de código» y la descripción de Figma
+del bloque generado. No copies el marcado de otra instancia de la misma pantalla, aunque parezca
+igual: puede ser otro caso del componente (dos campos del mismo buscador pueden ser casos distintos:
+uno solo texto, otro con un badge de código además del nombre). Un marcado con clases válidas pero incompleto para su estado
+pasa las auditorías de forma; `ds-fidelity.py` solo lo detecta si el contrato declara esa anatomía
+en `code.stateAnatomy`.
+
 **Antes de cada commit**, el hook `.githooks/pre-commit` ejecuta las verificaciones de los
 módulos activos —valores crudos y estructura del DS, secciones obligatorias de `context/`, e
 índices de research y analítica— y rechaza el commit si alguna falla. Las ejecuta todas aunque
@@ -151,7 +165,9 @@ python3 scripts/research-index.py --check
 ```
 
 Si falla, corrige el valor crudo (en Figma → sync, o en la clase de `components.css`), el
-archivo mal colocado o el índice; nunca el script, el hook ni su configuración. Saltar el
+archivo mal colocado o el índice; nunca el script, el hook ni su configuración. Si el proyecto
+necesita comprobaciones propias, van como órdenes en `scripts/project-checks.txt` (una por línea):
+el hook y la CI las ejecutan, y una actualización de la skill no toca ese archivo. Saltar el
 hook con `--no-verify` exige anotar el motivo en el mensaje de commit. Las plantillas de CI
 de `ci/` ejecutan lo mismo en el remoto; se activan solo cuando el equipo lo pide. Las excepciones justificadas (hairlines de borde,
 utilidades de accesibilidad) ya están en `scripts/token-audit.config.json`; añadir una

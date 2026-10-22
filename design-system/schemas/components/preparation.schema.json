@@ -1,79 +1,147 @@
 {
   "$schema": "../_component.schema.json",
   "id": "pattern:preparation",
+  "contractVersion": "2",
   "meta": {
     "name": "Preparation",
     "slug": "preparation",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en &lt;ol&gt; · Timer de 3 minutos. El texto de los pasos sale del envase. Desktop: pasos a la izquierda; vídeo y temporizador a la derecha (560 px). Mobile: vídeo arriba, pasos y temporizador al final (al alcance mientras se cocina). En la Recipe page se reutiliza sin el Timer y con Step Media=True. Sin variables propias.",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en <ol> · Timer de 3 minutos. El texto de los pasos sale del envase. Desktop: pasos a la izquierda; vídeo y temporizador a la derecha (560 px). Mobile: vídeo arriba, pasos y temporizador al final (al alcance mientras se cocina). En la Recipe page se reutiliza sin el Timer y con Step Media=True. Sin variables propias.",
     "figmaPage": "Pattern / Detail pages",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "9030e8548574"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/patterns/preparation.md",
-      "section": "Preparation"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "95:1158",
-      "componentKey": "61aca79da0059db4a6979d5a5b6cacc96282cf8c"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "button",
-        "icon",
-        "icon-play",
-        "preparation",
-        "preparation__grid",
-        "preparation__media",
-        "section",
-        "section__inner",
-        "section__title",
-        "step",
-        "step__content",
-        "step__number",
-        "step__text",
-        "steps",
-        "timer",
-        "timer__controls",
-        "video-player",
-        "video-player__play"
-      ],
-      "example": "<section class=\"section preparation\" aria-labelledby=\"prep-title\">\n<div class=\"section__inner\">\n<h2 class=\"section__title\" id=\"prep-title\">Preparación</h2>\n<div class=\"preparation__grid\">\n<ol class=\"steps\"><li class=\"step\"><span class=\"step__number\" aria-hidden=\"true\">1</span><div class=\"step__content\"><p class=\"step__text\">Abre la tapa hasta la mitad.</p></div></li></ol>\n<div class=\"preparation__media\">\n<div class=\"video-player\"><button class=\"video-player__play\" type=\"button\" aria-label=\"Ver la preparación (0:30)\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span></button></div>\n<section class=\"timer\" data-state=\"idle\" aria-label=\"Temporizador\"><div class=\"timer__controls\"><button class=\"button\" type=\"button\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span>Empezar</button></div></section>\n</div>\n</div>\n</div>\n</section>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Breakpoint",
-        "kind": "VARIANT",
-        "default": "Desktop",
+        "name": "breakpoint",
+        "type": "enum",
         "values": [
           "Desktop",
           "Mobile"
-        ]
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
       }
     ],
-    "variants": {
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thick",
+      "border/width/thin",
+      "button/primary/bg",
+      "button/primary/border",
+      "button/primary/text",
+      "color/surface/page",
+      "color/text/default",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/h3",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-l",
+      "font/size/desktop/caption",
+      "font/size/desktop/h2",
+      "font/size/desktop/h3",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/lg",
+      "icon/size/sm",
+      "layout/frame",
+      "layout/margin",
+      "layout/section-y",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/32",
+      "space/4",
+      "space/48",
+      "space/56",
+      "space/64",
+      "space/8",
+      "step/border",
+      "step/number-bg",
+      "step/number-text",
+      "step/text",
+      "timer/bg",
+      "timer/border",
+      "timer/label",
+      "timer/progress",
+      "timer/time",
+      "timer/track",
+      "video/border",
+      "video/meta-bg",
+      "video/meta-text",
+      "video/play-bg",
+      "video/play-icon",
+      "video/poster-bg"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "button",
+      "icon",
+      "icon-play",
+      "preparation",
+      "preparation__grid",
+      "preparation__media",
+      "section",
+      "section__inner",
+      "section__title",
+      "step",
+      "step__content",
+      "step__number",
+      "step__text",
+      "steps",
+      "timer",
+      "timer__controls",
+      "video-player",
+      "video-player__play"
+    ],
+    "example": "<section data-ds=\"preparation\" class=\"section preparation\" aria-labelledby=\"prep-title\">\n<div class=\"section__inner\">\n<h2 class=\"section__title\" id=\"prep-title\">Preparación</h2>\n<div class=\"preparation__grid\">\n<ol class=\"steps\"><li class=\"step\"><span class=\"step__number\" aria-hidden=\"true\">1</span><div class=\"step__content\"><p class=\"step__text\">Abre la tapa hasta la mitad.</p></div></li></ol>\n<div class=\"preparation__media\">\n<div class=\"video-player\"><button class=\"video-player__play\" type=\"button\" aria-label=\"Ver la preparación (0:30)\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span></button></div>\n<section class=\"timer\" data-state=\"idle\" aria-label=\"Temporizador\"><div class=\"timer__controls\"><button class=\"button\" type=\"button\"><span class=\"icon icon-play\" aria-hidden=\"true\"></span>Empezar</button></div></section>\n</div>\n</div>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "95:1158",
+    "componentKey": "61aca79da0059db4a6979d5a5b6cacc96282cf8c",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
       "Breakpoint": [
         "Desktop",
         "Mobile"
       ]
     },
-    "states": [],
-    "defaults": {
-      "Breakpoint": "Desktop"
-    },
-    "invalidCombinations": [],
     "nestedInstances": [
       {
         "layer": "step",
@@ -132,69 +200,7 @@
         "visibleByDefault": false
       }
     ],
-    "icons": {
-      "hasIcon": true,
-      "swapProperties": [],
-      "defaultIcons": [],
-      "compatible": "unknown",
-      "unexposedIconLayers": []
-    },
-    "slots": [],
-    "tokensUsed": [
-      "border/width/thick",
-      "border/width/thin",
-      "button/primary/bg",
-      "button/primary/border",
-      "button/primary/text",
-      "color/surface/page",
-      "color/text/default",
-      "font/family/body",
-      "font/family/display",
-      "font/line-height/desktop/body-l",
-      "font/line-height/desktop/caption",
-      "font/line-height/desktop/h2",
-      "font/line-height/desktop/h3",
-      "font/line-height/desktop/label",
-      "font/size/desktop/body-l",
-      "font/size/desktop/caption",
-      "font/size/desktop/h2",
-      "font/size/desktop/h3",
-      "font/size/desktop/label",
-      "font/style/body",
-      "font/style/display",
-      "icon/size/lg",
-      "icon/size/sm",
-      "layout/frame",
-      "layout/margin",
-      "layout/section-y",
-      "radius/md",
-      "radius/pill",
-      "space/16",
-      "space/24",
-      "space/32",
-      "space/4",
-      "space/48",
-      "space/56",
-      "space/64",
-      "space/8",
-      "step/border",
-      "step/number-bg",
-      "step/number-text",
-      "step/text",
-      "timer/bg",
-      "timer/border",
-      "timer/label",
-      "timer/progress",
-      "timer/time",
-      "timer/track",
-      "video/border",
-      "video/meta-bg",
-      "video/meta-text",
-      "video/play-bg",
-      "video/play-icon",
-      "video/poster-bg"
-    ],
-    "variablesUsed": [
+    "variableBindings": [
       "itemSpacing: space/48",
       "paddingLeft: layout/margin",
       "paddingTop: layout/section-y",
@@ -306,63 +312,12 @@
       "Desktop/body-l",
       "Desktop/caption",
       "Desktop/label"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "button/primary/bg",
-        "button/primary/border",
-        "button/primary/text",
-        "color/surface/page",
-        "color/text/default",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-l",
-        "font/line-height/desktop/caption",
-        "font/line-height/desktop/h2",
-        "font/line-height/desktop/h3",
-        "font/line-height/desktop/label",
-        "font/size/desktop/body-l",
-        "font/size/desktop/caption",
-        "font/size/desktop/h2",
-        "font/size/desktop/h3",
-        "font/size/desktop/label",
-        "font/style/body",
-        "font/style/display",
-        "step/border",
-        "step/number-bg",
-        "step/number-text",
-        "step/text",
-        "timer/bg",
-        "timer/border",
-        "timer/label",
-        "timer/progress",
-        "timer/time",
-        "timer/track",
-        "video/border",
-        "video/meta-bg",
-        "video/meta-text",
-        "video/play-bg",
-        "video/play-icon",
-        "video/poster-bg"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/patterns/preparation.md",
+    "section": "Preparation"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "button",
@@ -372,7 +327,6 @@
       "timer",
       "video-player"
     ],
-    "usedBy": [],
     "related": []
   }
 }

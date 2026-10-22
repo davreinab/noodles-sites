@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "pattern:product-categories",
+  "contractVersion": "2",
   "meta": {
     "name": "Product categories",
     "slug": "product-categories",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Productos de la Home (wireframe UX «Our products»): título (h2) + entradilla · 3 Category card, una por tipo de producto (Cups, Bags, Sauces; solo tipos con productos) que llevan a la Product library filtrada. Badge New en la categoría con novedad. Desktop: 3 columnas iguales (gutter layout/gutter); Mobile: apiladas a todo el ancho. Sustituye al antiguo Product carousel (pestañas + Product card). Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "cafbfda620ad",
     "verification": {
       "status": "verified",
@@ -25,59 +33,100 @@
       "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/patterns/product-categories.md",
-      "section": "Product categories"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "91:837",
-      "componentKey": "12272bd4c32330984ee62c5ad3e3424bfceb18b4"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "badge",
-        "category-card",
-        "category-card__media",
-        "category-card__name",
-        "product-categories",
-        "product-categories__grid",
-        "section",
-        "section__header",
-        "section__inner",
-        "section__lead",
-        "section__title"
-      ],
-      "example": "<section class=\"section product-categories\" aria-labelledby=\"pc-title\">\n<div class=\"section__inner\">\n<div class=\"section__header\"><h2 class=\"section__title\" id=\"pc-title\">Our products</h2><p class=\"section__lead\">Products and flavors for every taste. Find your match!</p></div>\n<ul class=\"product-categories__grid\">\n<li><a class=\"category-card\" href=\"/productos?tipo=cups\"><img class=\"category-card__media\" src=\"/media/cups.png\" alt=\"\"><span class=\"category-card__name\">Cups</span></a></li>\n<li><a class=\"category-card\" href=\"/productos?tipo=sauces\"><img class=\"category-card__media\" src=\"/media/sauces.png\" alt=\"\"><span class=\"badge\">New</span><span class=\"category-card__name\">Sauces</span></a></li>\n</ul>\n</div>\n</section>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Breakpoint",
-        "kind": "VARIANT",
-        "default": "Desktop",
+        "name": "breakpoint",
+        "type": "enum",
         "values": [
           "Desktop",
           "Mobile"
-        ]
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
       }
     ],
-    "variants": {
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "badge/new/bg",
+      "badge/new/text",
+      "border/width/thin",
+      "color/border/default",
+      "color/effect/shadow-ink",
+      "color/surface/card",
+      "color/surface/inverse",
+      "color/surface/page",
+      "color/text/default",
+      "color/text/on-inverse",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/h3",
+      "font/line-height/mobile/label",
+      "font/size/desktop/body-l",
+      "font/size/desktop/h2",
+      "font/size/desktop/h3",
+      "font/size/mobile/label",
+      "font/style/body",
+      "font/style/display",
+      "layout/frame",
+      "layout/gutter",
+      "layout/margin",
+      "layout/section-y",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/32",
+      "space/4",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "badge",
+      "category-card",
+      "category-card__media",
+      "category-card__name",
+      "product-categories",
+      "product-categories__grid",
+      "section",
+      "section__header",
+      "section__inner",
+      "section__lead",
+      "section__title"
+    ],
+    "example": "<section data-ds=\"product-categories\" class=\"section product-categories\" aria-labelledby=\"pc-title\">\n<div class=\"section__inner\">\n<div class=\"section__header\"><h2 class=\"section__title\" id=\"pc-title\">Our products</h2><p class=\"section__lead\">Products and flavors for every taste. Find your match!</p></div>\n<ul class=\"product-categories__grid\">\n<li><a class=\"category-card\" href=\"/productos?tipo=cups\"><img class=\"category-card__media\" src=\"/media/cups.png\" alt=\"\"><span class=\"category-card__name\">Cups</span></a></li>\n<li><a class=\"category-card\" href=\"/productos?tipo=sauces\"><img class=\"category-card__media\" src=\"/media/sauces.png\" alt=\"\"><span class=\"badge\">New</span><span class=\"category-card__name\">Sauces</span></a></li>\n</ul>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "91:837",
+    "componentKey": "12272bd4c32330984ee62c5ad3e3424bfceb18b4",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
       "Breakpoint": [
         "Desktop",
         "Mobile"
       ]
     },
-    "states": [],
-    "defaults": {
-      "Breakpoint": "Desktop"
-    },
-    "invalidCombinations": [],
     "nestedInstances": [
       {
         "layer": "category-card",
@@ -128,50 +177,7 @@
         "visibleByDefault": true
       }
     ],
-    "icons": {
-      "hasIcon": false,
-      "swapProperties": [],
-      "defaultIcons": [],
-      "compatible": "none",
-      "unexposedIconLayers": []
-    },
-    "slots": [],
-    "tokensUsed": [
-      "badge/new/bg",
-      "badge/new/text",
-      "border/width/thin",
-      "color/border/default",
-      "color/effect/shadow-ink",
-      "color/surface/card",
-      "color/surface/inverse",
-      "color/surface/page",
-      "color/text/default",
-      "color/text/on-inverse",
-      "color/text/secondary",
-      "font/family/body",
-      "font/family/display",
-      "font/line-height/desktop/body-l",
-      "font/line-height/desktop/h2",
-      "font/line-height/desktop/h3",
-      "font/line-height/mobile/label",
-      "font/size/desktop/body-l",
-      "font/size/desktop/h2",
-      "font/size/desktop/h3",
-      "font/size/mobile/label",
-      "font/style/body",
-      "font/style/display",
-      "layout/frame",
-      "layout/gutter",
-      "layout/margin",
-      "layout/section-y",
-      "radius/md",
-      "radius/pill",
-      "space/16",
-      "space/32",
-      "space/4",
-      "space/8"
-    ],
-    "variablesUsed": [
+    "variableBindings": [
       "itemSpacing: space/32",
       "paddingLeft: layout/margin",
       "paddingTop: layout/section-y",
@@ -239,56 +245,17 @@
       "Desktop/body-l",
       "Mobile/label",
       "Desktop/h3"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "badge/new/bg",
-        "badge/new/text",
-        "color/border/default",
-        "color/effect/shadow-ink",
-        "color/surface/card",
-        "color/surface/inverse",
-        "color/surface/page",
-        "color/text/default",
-        "color/text/on-inverse",
-        "color/text/secondary",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-l",
-        "font/line-height/desktop/h2",
-        "font/line-height/desktop/h3",
-        "font/line-height/mobile/label",
-        "font/size/desktop/body-l",
-        "font/size/desktop/h2",
-        "font/size/desktop/h3",
-        "font/size/mobile/label",
-        "font/style/body",
-        "font/style/display"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/patterns/product-categories.md",
+    "section": "Product categories"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "badge",
       "category-card"
     ],
-    "usedBy": [],
     "related": []
   }
 }

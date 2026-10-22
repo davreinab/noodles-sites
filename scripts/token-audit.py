@@ -31,6 +31,13 @@ Qué comprueba:
      (renombrarlo es quitarlo); una referencia que no es encabezado, como subcadena. Los
      documentos funcionales de context/ los audita su propio script hermano,
      scripts/context-audit.py: cada uno falla por lo suyo.
+  3b. Overrides del DS (UI/overrides/<id>.css, desde la 12.4.0): el CSS de una propuesta de cambio que
+     aún no está en Figma, enlazado solo desde las pantallas donde se prueba. WARN mientras la
+     propuesta esté draft o approved (esas pantallas no siguen exactamente al DS); ERROR si no hay
+     propuesta con ese id, si ya está applied o rejected (el archivo sobra) o si el override va dentro
+     de una página como <style data-ds-override>. Su CSS se audita con las mismas reglas.
+  4b. Referencias al contrato anterior a la 12.0.0 (source.docs, api.properties, behavior.stateAnatomy…)
+     en los .md escritos a mano: WARN con la línea; una mención histórica se exime en allow.lines.
   5. Transparencias (regla 7 de design.md): en tokens.css, un token de color con alfa < 1
      (rgba/hsla con alfa, `rgb(... / a)`, hex de 4 u 8 dígitos) es ERROR salvo que pertenezca a
      una familia translúcida por naturaleza (config → translucent.allowPrefixes: elevación,
@@ -54,6 +61,17 @@ LENGTH_RE = re.compile(r"(?<![\w.-])(-?\d*\.?\d+)(px|rem|em)\b")
 DURATION_RE = re.compile(r"(?<![\w.-])(-?\d*\.?\d+)(ms|s)\b")
 NUMBER_RE = re.compile(r"-?\d*\.?\d+")
 VAR_RE = re.compile(r"var\(\s*(--[\w-]+)")
+# Un var() entero, con su cierre y su fallback (un nivel de anidamiento por pasada; se aplica hasta agotar).
+# Sirve para quitar los tokens de un valor y juzgar solo lo que queda: VAR_RE deja el «)» suelto y una
+# sombra «var(--elevation-m)» pasaba por sombra cruda.
+VAR_FULL_RE = re.compile(r"var\(\s*--[\w-]+\s*(?:,\s*(?:[^()]|\([^()]*\))*)?\)")
+
+
+def strip_vars(value):
+    prev = None
+    while prev != value:
+        prev, value = value, VAR_FULL_RE.sub("", value)
+    return value
 DECL_RE = re.compile(r"([a-zA-Z-]+)\s*:\s*([^;{}]+)")
 TOKEN_DEF_RE = re.compile(r"(--[\w-]+)\s*:\s*([^;]+);")
 STYLE_ATTR_RE = re.compile(r'style\s*=\s*"([^"]*)"', re.I)
@@ -119,8 +137,13 @@ def load_config(cfg_path):
         "families": DEFAULT_FAMILIES,
         "structure": {
             "design-system": ["design.md", "figma.md", "agent-manifest.json", "CHANGELOG.md", "docs", "tokens", "css",
-                              "assets", "schemas", "reports", "proposals", "showcase", "sync"],
-            "design-system/sync": ["README.md", "variables.json", "components.json", "icons.json", "parts"],
+                              "assets", "schemas", "reports", "proposals", "showcase", "sync", "source", "guides"],
+            "design-system/guides": ["*.md"],
+            "design-system/source": ["README.md", "tokens.json", "components", "_borrador"],
+            "design-system/source/components": ["*.json", ".gitkeep"],
+            "design-system/source/_borrador": ["*.json", "components", "README.md"],
+            "design-system/source/_borrador/components": ["*.json"],
+            "design-system/sync": ["README.md", "variables.json", "components.json", "icons.json", "parts", "library-audit"],
             "design-system/sync/parts": ["*.json"],
             "design-system/docs": ["tokens.md", "components.md", "patterns.md", "assets.md", "components", "patterns"],
             "design-system/docs/components": ["*.md"],
@@ -128,13 +151,15 @@ def load_config(cfg_path):
             "design-system/tokens": ["tokens.json", "tokens.css", "w3c"],
             "design-system/tokens/w3c": ["README.md", "manifest.json", "*.tokens.json"],
             "design-system/css": ["components.css"],
-            "design-system/assets": ["icons", "fonts"],
+            "design-system/assets": ["icons", "fonts", "images"],
             "design-system/schemas": ["README.md", "_component.schema.json", "index.json", "relationships.json",
                                       "governance", "components"],
             "design-system/schemas/governance": ["policies.json", "constraints.json",
                                                  "maturity.json", "agent-readiness.json", "lifecycle.json"],
             "design-system/showcase": ["index.html"],
-            "design-system/proposals": ["README.md", "_proposal.schema.json", "*.proposal.json"],
+            "design-system/proposals": ["README.md", "_proposal.schema.json", "*.proposal.json", "aplicadas", "rechazadas"],
+            "design-system/proposals/aplicadas": ["*.proposal.json", ".gitkeep"],
+            "design-system/proposals/rechazadas": ["*.proposal.json", ".gitkeep"],
             "design-system/schemas/components": ["*.schema.json"],
             "design-system/reports": ["*.json", "*.md"]
         },
@@ -176,7 +201,9 @@ def load_config(cfg_path):
 
 
 def strip_comments(css):
-    return re.sub(r"/\*.*?\*/", lambda m: " " * len(m.group(0)), css, flags=re.S)
+    # Se conservan los saltos de línea del comentario: si no, todo lo que viene detrás de un comentario
+    # de varias líneas queda desplazado y allow.lines deja de apuntar a la línea real.
+    return re.sub(r"/\*.*?\*/", lambda m: re.sub(r"[^\n]", " ", m.group(0)), css, flags=re.S)
 
 
 def norm_hex(h):
@@ -331,7 +358,7 @@ class Audit:
             return
         if value.strip() in allow["values"]:
             return
-        stripped = VAR_RE.sub("", value)
+        stripped = strip_vars(value)
         severity = "warn" if prop in cfg["warnOnly"]["properties"] else "error"
         fam_name, fam_prefixes = family_for(prop, selector, cfg["families"])
 
@@ -350,7 +377,7 @@ class Audit:
                              "solo válida para transiciones de aparición")
             except ValueError:
                 pass
-        if prop == "box-shadow" and re.sub(r"[()\s,]", "", stripped):  # quitar var() deja paréntesis sueltos: no cuentan
+        if prop == "box-shadow" and stripped.strip():
             fam = T.has_family(cfg["families"]["elevation"])
             self.add("error" if fam else "warn", file, line, prop, value,
                      "usa var(--elevation-*)" if fam else "no existen tokens de elevación: créalos en Figma (effect styles) y sincroniza")
@@ -385,6 +412,11 @@ class Audit:
             self.add("error", file, line, prop, value, "usa var(--weight-*) o la variable --font-<estilo>-weight de su estilo de texto")
 
     def css(self, text, file, base_line=1):
+        # Un «*/» fuera de comentario delata un comentario que se cerró antes de tiempo (texto con «*/»
+        # dentro, p. ej. «Error-*/Valid»): el navegador descarta la regla siguiente sin avisar.
+        for m in re.finditer(r"\*/", strip_comments(text)):
+            self.add("warn", file, base_line + text[:m.start()].count("\n"), "comentario", "*/",
+                     "cierre de comentario suelto: un comentario anterior contiene «*/» y se cerró antes de tiempo; la regla que sigue no se aplica")
         for _, selector, in_root, decls in iter_rules(text, base_line):
             if in_root:
                 continue
@@ -437,6 +469,12 @@ class Audit:
             if is_showcase and "data-showcase-chrome" in m.group(1):
                 self.showcase_chrome(m.group(2), rel, line, prefix)
                 continue
+            ov = re.search(r'data-ds-override\s*=\s*["\']([^"\']+)["\']', m.group(1))
+            if ov:
+                self.add("error", rel, line, "<style data-ds-override>", ov.group(1),
+                         f"un override del DS no va dentro de la página: escríbelo en UI/overrides/{ov.group(1)}.css y enlázalo con <link>")
+                self.ds_override(ov.group(1), m.group(2), rel, line)
+                continue
             self.add("error", rel, line, "<style>", "bloque de estilos en página",
                      "regla 1b: cero estilos locales — mueve las reglas a css/components.css y documenta la clase"
                      + (" (en el showcase, el chrome va en <style data-showcase-chrome>)" if is_showcase else ""))
@@ -455,6 +493,36 @@ class Audit:
                 if dm:
                     self.value(dm.group(1).lower(), dm.group(2).strip(), "", rel, line, ctx="inline")
 
+    # ── 3b. overrides del DS: un cambio que aún no está en Figma, probado aparte ──────
+    def proposal_status(self, pid):
+        """Estado de la propuesta <pid> buscándola en proposals/ y en sus carpetas por estado."""
+        import glob as _glob
+        for p in _glob.glob(os.path.join(self.root, "design-system", "proposals", "**", f"{pid}.proposal.json"), recursive=True):
+            try:
+                return json.load(open(p, encoding="utf-8")).get("status") or "unknown"
+            except Exception:
+                return "invalid"
+        return None
+
+    def ds_override(self, pid, css_text, rel, line=1):
+        """UI/overrides/<id>.css: el CSS de una propuesta de cambio del DS que todavía no está en Figma,
+        enlazado solo desde las pantallas donde se prueba. Vive mientras la propuesta esté pendiente;
+        cuando se aplica (y se sincroniza) o se rechaza, el archivo sobra. Su CSS cumple las mismas
+        reglas que el resto: valores con tokens."""
+        status = self.proposal_status(pid)
+        if status is None:
+            self.add("error", rel, line, "override", pid,
+                     "override sin propuesta: crea design-system/proposals/%s.proposal.json o borra el archivo" % pid)
+        elif status in ("applied", "rejected"):
+            self.add("error", rel, line, "override", pid,
+                     "la propuesta ya está %s: el override sobra, bórralo (si está applied, el cambio ya viene de Figma por el sync)" % status)
+        elif status in ("draft", "approved"):
+            self.add("warn", rel, line, "override", pid,
+                     "override vivo (propuesta %s): las pantallas que lo enlazan no siguen exactamente al DS hasta que la propuesta se aplique en Figma" % status)
+        else:
+            self.add("error", rel, line, "override", pid, "la propuesta tiene un estado desconocido o no parsea")
+        self.css(css_text, rel, base_line=line)
+
     # ── 4. secciones obligatorias ────────────────────────────────────────────
     def docs(self):
         for rel, needles in (self.cfg.get("docs") or {}).items():
@@ -469,6 +537,32 @@ class Audit:
                              "sección o referencia obligatoria ausente: restaura la plantilla de la skill (no la borres al editar)")
 
     # ── 5. transparencias en tokens ──────────────────────────────────────────
+    # ── 4b. referencias al contrato anterior a la 12.0.0 en documentos manuales ──────
+    LEGACY_KEYS = re.compile(r"\b(source\.(docs|code|figma)(\.[a-zA-Z]+)?|behavior\.stateAnatomy|api\.(properties|nestedInstances|tokensUsed|variants|states|defaults|invalidCombinations|variablesUsed)|relations\.usedBy)\b")
+
+    def legacy_contract_keys(self):
+        """Desde la 12.0.0 el contrato tiene cuatro capas (api · code · figma · docs). Una mención a
+        source.docs, api.properties o behavior.stateAnatomy en un .md escrito a mano apunta a un campo que
+        ya no existe. Aviso, no error: la línea exacta se añade a allow.lines si es una mención histórica."""
+        import glob as _glob
+        files = ["design-system/design.md", "AGENTS.md", "design-system/docs/patterns.md", "design-system/docs/components.md"]
+        files += sorted(os.path.relpath(p, self.root) for p in _glob.glob(os.path.join(self.root, "design-system", "docs", "*", "*.md")))
+        files += sorted(os.path.relpath(p, self.root) for p in _glob.glob(os.path.join(self.root, "design-system", "guides", "*.md")))
+        for rel in files:
+            path = os.path.join(self.root, rel)
+            if not os.path.exists(path):
+                continue
+            dentro_generado = False
+            for i, line in enumerate(open(path, encoding="utf-8").read().splitlines(), 1):
+                if "GENERATED:start" in line: dentro_generado = True
+                if "GENERATED:end" in line: dentro_generado = False
+                if dentro_generado or f"{rel}:{i}" in self.cfg["allow"]["lines"]:
+                    continue
+                m = self.LEGACY_KEYS.search(line)
+                if m:
+                    self.add("warn", rel, i, "contrato-11x", m.group(0),
+                             "campo del contrato anterior a la 12.0.0: ahora es docs / code / figma / api.props (o code.stateAnatomy). Corrige el texto o, si es una mención histórica, añade la línea a allow.lines")
+
     def translucent(self):
         """Regla 7: los tokens de color son opacos. Alfa < 1 solo en familias translúcidas por naturaleza."""
         rel = self.cfg["tokensFile"]
@@ -559,11 +653,14 @@ def main():
         audit.add("warn", cfg["tokensFile"], 0, "tokens", "vacío", "tokens.css sin tokens: pendiente del primer sync desde Figma")
     audit.structure()
     audit.docs()
+    audit.legacy_contract_keys()
     audit.translucent()
     for f in expand(root, cfg["cssFiles"]):
         audit.css(open(f, encoding="utf-8").read(), os.path.relpath(f, root))
     for f in expand(root, cfg["htmlFiles"]):
         audit.html(f, os.path.relpath(f, root))
+    for f in sorted(glob.glob(os.path.join(root, "UI", "overrides", "*.css"))):
+        audit.ds_override(os.path.basename(f)[:-4], open(f, encoding="utf-8").read(), os.path.relpath(f, root))
 
     findings = sorted(audit.findings, key=lambda x: (x["file"], x["line"]))
     errors = [x for x in findings if x["severity"] == "error"]
@@ -571,7 +668,7 @@ def main():
     by_prop = {}
     for x in errors:
         by_prop[x["property"]] = by_prop.get(x["property"], 0) + 1
-    report = {"root": root, "errors": len(errors), "warnings": len(warns), "errorsByProperty": by_prop,
+    report = {"root": ".", "errors": len(errors), "warnings": len(warns), "errorsByProperty": by_prop,
               "tokensKnown": len(tokens.names), "findings": findings}
     if args.out:
         out_path = os.path.join(root, args.out)

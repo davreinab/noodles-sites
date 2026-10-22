@@ -6,7 +6,7 @@
 # ni los scripts. Saltarlo con `--no-verify` exige anotar el motivo en el mensaje de commit.
 #
 # Las verificaciones de los módulos activos se ejecutan TODAS, aunque una falle: el commit se
-# rechaza al final con el recuento. Son cinco: token-audit y ds-fidelity (design-system),
+# rechaza al final con el recuento. Son siete (más las propias del proyecto, si las hay): token-audit, ds-fidelity, proposals-index y ds-library (design-system),
 # context-audit (siempre), y los índices de research y de analítica (investigacion). Así se ve todo lo que hay que arreglar en una sola pasada, en vez
 # de descubrirlo de uno en uno (cada script audita una materia distinta y son independientes).
 set -u
@@ -30,6 +30,14 @@ if "$PY" scripts/ds-module.py --is-active design-system >/dev/null 2>&1; then
   "$PY" scripts/token-audit.py || failed="$failed token-audit"
   echo "pre-commit · fidelidad de los contratos a su maestro de Figma (DS)"
   "$PY" scripts/ds-fidelity.py || failed="$failed ds-fidelity"
+  echo "pre-commit · propuestas en la carpeta de su estado e índice al día (DS)"
+  "$PY" scripts/proposals-index.py --check || failed="$failed proposals-index"
+  echo "pre-commit · presupuesto de lectura (DS, solo avisa)"
+  "$PY" scripts/ds-budget.py || true
+  echo "pre-commit · cambios de lo ya publicado con su propuesta aprobada (DS)"
+  "$PY" scripts/ds-release.py --check || failed="$failed ds-release"
+  echo "pre-commit · catálogo navegable (library/) al día con el design system (DS)"
+  "$PY" scripts/ds-library.py --check || failed="$failed ds-library"
 fi
 
 echo "pre-commit · secciones obligatorias de context/"
@@ -43,6 +51,17 @@ fi
 if "$PY" scripts/ds-module.py --is-active investigacion >/dev/null 2>&1; then
   echo "pre-commit · índice de analítica"
   "$PY" scripts/research-index.py --dir analytics --check || failed="$failed analytics-index"
+fi
+
+# Comprobaciones propias del proyecto: una orden por línea en scripts/project-checks.txt (líneas vacías
+# y «#» se ignoran). Ese archivo es del proyecto, no de la plantilla: una actualización de la skill
+# sustituye este hook pero nunca lo toca, así lo que el proyecto añada sigue vigilándose.
+if [ -f scripts/project-checks.txt ]; then
+  while IFS= read -r check || [ -n "$check" ]; do
+    case "$check" in ''|\#*) continue ;; esac
+    echo "pre-commit · proyecto: $check"
+    sh -c "$check" || failed="$failed $(printf '%s' "$check" | cut -c1-40)"
+  done < scripts/project-checks.txt
 fi
 
 if [ -n "$failed" ]; then

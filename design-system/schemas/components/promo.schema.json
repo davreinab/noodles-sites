@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "pattern:promo",
+  "contractVersion": "2",
   "meta": {
     "name": "Promo",
     "slug": "promo",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Módulo de promoción o concurso de la Home (wireframe UX): arte de la campaña (PNG recortado, de marca) · título (h2) · texto con los premios · Button Primary L «I want to participate» · Link de bases legales (obligatorio por regla de negocio, aunque el wireframe no lo dibuja) · Video player 16:9 (fachada) o imagen grande de la campaña. Fondo color/surface/brand (amarillo) con la trama de fideos (Decoration / Noodle texture) a sangre por la derecha, detrás del contenido, como el módulo natural de las landings. Se oculta entero si no hay promoción activa (regla de negocio); si el concurso es iframe de agencia, el CTA lleva external-link y el iframe necesita revisión de protección de datos. Desktop: texto a la izquierda y vídeo a la derecha; Mobile: vídeo arriba. Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "3975c2436ea1",
     "verification": {
       "status": "verified",
@@ -24,69 +32,120 @@
       "by": "agent (Claude)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/patterns/promo.md",
-      "section": "Promo"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "91:113",
-      "componentKey": "c30835356fb592621ba20388988656c950b59fe7"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "button",
-        "button--l",
-        "decoration-noodle",
-        "decoration-noodle--2",
-        "decoration-noodle--3",
-        "decoration-noodle--4",
-        "decoration-noodle--5",
-        "decoration-noodle--texture",
-        "decoration-noodle-texture",
-        "link",
-        "promo",
-        "promo__actions",
-        "promo__art",
-        "promo__body",
-        "promo__content",
-        "promo__grid",
-        "promo__media",
-        "section",
-        "section__inner",
-        "section__title",
-        "video-player"
-      ],
-      "example": "<section class=\"section promo\" aria-labelledby=\"pr-title\">\n<div class=\"decoration-noodle-texture\" aria-hidden=\"true\"><span class=\"decoration-noodle decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--3 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--5 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--2 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--4 decoration-noodle--texture\"></span></div>\n<div class=\"section__inner\">\n<div class=\"promo__grid\">\n<div class=\"promo__content\">\n<figure class=\"promo__art\"><img src=\"/media/campana-arte.png\" alt=\"Conoce a Marc Cucurella. Participa y podrás ganar más premios\"></figure>\n<h2 class=\"section__title\" id=\"pr-title\">Enter Yatekomo’s new giveaway and win prizes</h2>\n<p class=\"promo__body\">Official Spanish National Team jerseys and soccer balls signed by Marc Cucurella.</p>\n<div class=\"promo__actions\"><a class=\"button button--l\" href=\"/concursos/cucurella\">I want to participate</a><a class=\"link\" href=\"/concursos/cucurella/bases\">Bases legales</a></div>\n</div>\n<div class=\"promo__media\"><div class=\"video-player\"><img src=\"/media/poster.jpg\" alt=\"\"></div></div>\n</div>\n</div>\n</section>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Breakpoint",
-        "kind": "VARIANT",
-        "default": "Desktop",
+        "name": "breakpoint",
+        "type": "enum",
         "values": [
           "Desktop",
           "Mobile"
-        ]
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
       }
     ],
-    "variants": {
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thick",
+      "border/width/thin",
+      "button/primary/bg",
+      "button/primary/border",
+      "button/primary/text",
+      "color/surface/brand",
+      "color/text/default",
+      "color/text/secondary",
+      "decoration/noodle/texture",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/h2",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/lg",
+      "icon/size/sm",
+      "layout/frame",
+      "layout/margin",
+      "layout/section-y",
+      "link/default",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/32",
+      "space/4",
+      "space/64",
+      "space/8",
+      "video/border",
+      "video/meta-bg",
+      "video/meta-text",
+      "video/play-bg",
+      "video/play-icon",
+      "video/poster-bg"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "button",
+      "button--l",
+      "decoration-noodle",
+      "decoration-noodle--2",
+      "decoration-noodle--3",
+      "decoration-noodle--4",
+      "decoration-noodle--5",
+      "decoration-noodle--texture",
+      "decoration-noodle-texture",
+      "link",
+      "promo",
+      "promo__actions",
+      "promo__art",
+      "promo__body",
+      "promo__content",
+      "promo__grid",
+      "promo__media",
+      "section",
+      "section__inner",
+      "section__title",
+      "video-player"
+    ],
+    "example": "<section data-ds=\"promo\" class=\"section promo\" aria-labelledby=\"pr-title\">\n<div class=\"decoration-noodle-texture\" aria-hidden=\"true\"><span class=\"decoration-noodle decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--3 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--5 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--2 decoration-noodle--texture\"></span><span class=\"decoration-noodle decoration-noodle--4 decoration-noodle--texture\"></span></div>\n<div class=\"section__inner\">\n<div class=\"promo__grid\">\n<div class=\"promo__content\">\n<figure class=\"promo__art\"><img src=\"/media/campana-arte.png\" alt=\"Conoce a Marc Cucurella. Participa y podrás ganar más premios\"></figure>\n<h2 class=\"section__title\" id=\"pr-title\">Enter Yatekomo’s new giveaway and win prizes</h2>\n<p class=\"promo__body\">Official Spanish National Team jerseys and soccer balls signed by Marc Cucurella.</p>\n<div class=\"promo__actions\"><a class=\"button button--l\" href=\"/concursos/cucurella\">I want to participate</a><a class=\"link\" href=\"/concursos/cucurella/bases\">Bases legales</a></div>\n</div>\n<div class=\"promo__media\"><div class=\"video-player\"><img src=\"/media/poster.jpg\" alt=\"\"></div></div>\n</div>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "91:113",
+    "componentKey": "c30835356fb592621ba20388988656c950b59fe7",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
       "Breakpoint": [
         "Desktop",
         "Mobile"
       ]
     },
-    "states": [],
-    "defaults": {
-      "Breakpoint": "Desktop"
-    },
-    "invalidCombinations": [],
     "nestedInstances": [
       {
         "layer": "noodle-texture",
@@ -193,60 +252,7 @@
         "visibleByDefault": true
       }
     ],
-    "icons": {
-      "hasIcon": true,
-      "swapProperties": [],
-      "defaultIcons": [],
-      "compatible": "unknown",
-      "unexposedIconLayers": []
-    },
-    "slots": [],
-    "tokensUsed": [
-      "border/width/thick",
-      "border/width/thin",
-      "button/primary/bg",
-      "button/primary/border",
-      "button/primary/text",
-      "color/surface/brand",
-      "color/text/default",
-      "color/text/secondary",
-      "decoration/noodle/texture",
-      "font/family/body",
-      "font/family/display",
-      "font/line-height/desktop/body-l",
-      "font/line-height/desktop/body-m",
-      "font/line-height/desktop/caption",
-      "font/line-height/desktop/h2",
-      "font/line-height/desktop/label",
-      "font/size/desktop/body-l",
-      "font/size/desktop/body-m",
-      "font/size/desktop/caption",
-      "font/size/desktop/h2",
-      "font/size/desktop/label",
-      "font/style/body",
-      "font/style/display",
-      "icon/size/lg",
-      "icon/size/sm",
-      "layout/frame",
-      "layout/margin",
-      "layout/section-y",
-      "link/default",
-      "radius/md",
-      "radius/pill",
-      "space/16",
-      "space/24",
-      "space/32",
-      "space/4",
-      "space/64",
-      "space/8",
-      "video/border",
-      "video/meta-bg",
-      "video/meta-text",
-      "video/play-bg",
-      "video/play-icon",
-      "video/poster-bg"
-    ],
-    "variablesUsed": [
+    "variableBindings": [
       "paddingLeft: layout/margin",
       "paddingTop: layout/section-y",
       "paddingRight: layout/margin",
@@ -335,55 +341,12 @@
       "Desktop/body-l",
       "Desktop/label",
       "Desktop/body-m"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "button/primary/bg",
-        "button/primary/border",
-        "button/primary/text",
-        "color/surface/brand",
-        "color/text/default",
-        "color/text/secondary",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-l",
-        "font/line-height/desktop/body-m",
-        "font/line-height/desktop/caption",
-        "font/line-height/desktop/h2",
-        "font/line-height/desktop/label",
-        "font/size/desktop/body-l",
-        "font/size/desktop/body-m",
-        "font/size/desktop/caption",
-        "font/size/desktop/h2",
-        "font/size/desktop/label",
-        "font/style/body",
-        "font/style/display",
-        "link/default",
-        "video/border",
-        "video/meta-bg",
-        "video/meta-text",
-        "video/play-bg",
-        "video/play-icon",
-        "video/poster-bg"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/patterns/promo.md",
+    "section": "Promo"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "button",
@@ -394,7 +357,6 @@
       "link",
       "video-player"
     ],
-    "usedBy": [],
     "related": []
   }
 }

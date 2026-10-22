@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-08T11:52:41Z",
+  "lastSync": "2026-10-22T09:38:13Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -764,6 +764,8 @@
           "decoration-noodle",
           "decoration-noodle--2",
           "decoration-noodle--3",
+          "decoration-noodle--4",
+          "decoration-noodle--5",
           "decoration-noodle--accent",
           "decoration-noodle--texture"
         ]
@@ -860,8 +862,10 @@
         "path": "design-system/css/components.css",
         "classes": [
           "icon",
+          "icon-arrow-right",
           "icon-button",
           "icon-button--inverse",
+          "icon-button--l",
           "icon-button--secondary",
           "icon-close",
           "icon-search"
@@ -1672,6 +1676,7 @@
           "icon-button--secondary",
           "icon-close",
           "modal",
+          "modal--full",
           "modal--l",
           "modal-slot",
           "modal__body",
@@ -1705,7 +1710,9 @@
         "path": "design-system/css/components.css",
         "classes": [
           "alert",
+          "alert--alert",
           "alert--error",
+          "alert--success",
           "alert--toast",
           "alert__body",
           "alert__close",
@@ -1713,8 +1720,10 @@
           "alert__title",
           "icon",
           "icon-circle-alert",
+          "icon-circle-check",
           "icon-close",
-          "icon-info"
+          "icon-info",
+          "icon-triangle-alert"
         ]
       }
     },

@@ -10,6 +10,7 @@
     "design-system/assets": [
       "icons",
       "fonts",
+      "images",
       "logos",
       "decoration"
     ],
@@ -19,7 +20,8 @@
       "components.json",
       "icons.json",
       "fonts.json",
-      "parts"
+      "parts",
+      "library-audit"
     ]
   }
 }

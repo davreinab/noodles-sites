@@ -32,11 +32,47 @@ no vacío; los que no la tienen ya los señala agent-readiness con `runnable-pat
      `.<clase-base>--<eje>`.
   3. example-class-missing · Cada clase del «Ejemplo de código» (`source.code.example`) existe como
      selector en el CSS. example-external-image · El ejemplo no carga imágenes de fuera (http/https):
-     lo que no sale de Figma no es del DS.
-  4. screen-uses-unverified · Una pantalla de UI/ que usa clases de un contrato `unverified` o `stale`
-     recibe un aviso con la lista «pantalla → componentes». El estado vive en `meta.verification` de
+     lo que no sale de Figma no es del DS. example-placeholder-ellipsis · El ejemplo no usa «…» o «...»
+     como contenido de un elemento (es un marcador y la vista previa queda vacía), salvo en un elemento
+     marcado como elipsis real: clase que contenga «ellipsis», «dots» o «more», o una de las que el
+     proyecto declare en `ellipsisClasses` de la config.
+  3b. variant-not-in-example · Cada valor de cada eje de variante y cada propiedad booleana del contrato
+     sale en el «Ejemplo de código» (resumen «N de M»). La clase de cada valor sale de code.classByProp,
+     de `modifiers` o de la convención `.<base>--<valor>`; si ninguna existe, variant-coverage-unchecked
+     (info). No cuentan los estados de pseudoclase (`coverageIgnore.values`), los ejes de `excludeAxes`
+     ni lo declarado en `coverageIgnore.components.<slug>` con su justificación.
+  4. screen-uses-unverified · Una pantalla de UI/ que usa un contrato `unverified` o `stale` recibe un
+     aviso con la lista «pantalla → componentes». Usa = lleva data-ds="<slug>" o alguna clase propia del
+     contrato (su slug como bloque BEM); no cuentan las clases de los componentes que su ejemplo compone. El estado vive en `meta.verification` de
      cada schema (lo escribe quien verifica, siguiendo el protocolo de design.md; lo caduca ds-sync
      cuando cambia el maestro). Sin bloque, el contrato cuenta como `unverified`.
+  6. example-without-data-ds (nota, no aviso) · El elemento raíz del «Ejemplo de código» lleva
+     data-ds="<slug>": es la marca que permite seguir el hilo pantalla → contrato → maestro de Figma, y la
+     que un futuro validador de desarrollo necesitará. Severidad `info` por defecto.
+  7. contrast-below-aa · El texto de cada componente cumple WCAG 2.1 AA (4,5:1; 3:1 si es grande) en
+     cada estado que su CSS escribe, en claro y, si existe, en oscuro. Se calcula desde el CSS y tokens.css
+     (scripts/ds_contrast.py: cascada de modificadores y pseudoclases, variables locales incluidas). Exentos:
+     estados deshabilitados. No comprobables (se cuentan, no se inventan): fondo propio ausente,
+     transparente o semitransparente. AVISO por defecto (12.8.1): mide y avisa en cada commit sin parar a
+     nadie, porque el arreglo suele ser un color de marca que se decide en Figma. Un proyecto que quiera
+     bloquear lo sube a error en la config (severity). Entonces, mientras se arregla un color, una pareja
+     puede declararse en contrastExceptions [{component, state, proposal}] atada a una propuesta: con la
+     propuesta pendiente baja a aviso; aplicada, rechazada o inexistente, vuelve a error.
+  5. screen-state-anatomy · Un componente puede tener clases válidas en una pantalla y aun así estar
+     incompleto para su estado: un campo de búsqueda «relleno» que debe llevar un badge con el código
+     además del nombre, montado copiando otro campo del mismo buscador que es solo texto, pasa todas
+     las demás comprobaciones.
+     Quien verifica un contrato declara en `behavior.stateAnatomy` del schema (bloque manual que ds-sync
+     conserva) los casos en que un estado cambia la ESTRUCTURA y no solo el estilo:
+         { "id": "location-filled-with-code",
+           "when": ".search-form__field--location .search-field .search-field__value",
+           "require": [".code-badge.code-badge--large .code-badge__code"],
+           "why": "El campo de ubicación relleno muestra el código como badge además del nombre (Figma show-code)." }
+     `when` localiza el caso en la pantalla; cada `require` debe existir DENTRO del elemento que casa;
+     `why` es la frase del aviso. Selectores mínimos: clases compuestas (`.a.b`), etiqueta opcional
+     (`span.a`) y descendiente con espacio; nada más, y sin dependencias (html.parser). Cada fallo da
+     pantalla, línea aproximada, componente, id de la regla y su `why`. Sin contratos con
+     `stateAnatomy` no hay nada que comprobar y no falla.
 
 Al final resume cuántos contratos están verified / unverified / stale. Esta auditoría no abre Figma: la
 verificación contra el maestro, variante a variante, la hace una persona o un agente por MCP y queda
@@ -51,6 +87,14 @@ import os
 import re
 import sys
 
+import ds_common as dcom  # una sola definición de «interno» para toda la skill
+
+try:  # cobertura de variantes (módulo compartido con ds-library)
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import ds_variants as dv
+except ImportError:
+    dv = None
+
 DEFAULT_CONFIG = {
     "cssFile": "design-system/css/components.css",
     "tokensJson": "design-system/tokens/tokens.json",
@@ -61,10 +105,19 @@ DEFAULT_CONFIG = {
         "variant-without-css": "warn",
         "example-class-missing": "warn",
         "example-external-image": "warn",
-        "screen-uses-unverified": "warn"
+        "example-placeholder-ellipsis": "warn",
+        "variant-not-in-example": "warn",
+        "variant-coverage-unchecked": "info",
+        "screen-uses-unverified": "warn",
+        "screen-uses-internal": "warn",
+        "screen-state-anatomy": "warn",
+        "example-without-data-ds": "info",
+        "contrast-below-aa": "warn"
     },
+    "contrastExceptions": [],
     "modifierPattern": ".{base}--{value}",
     "excludeAxes": ["state", "estado", "device", "divice", "viewport", "breakpoint", "platform", "responsive", "theme", "mode"],
+    "coverageIgnore": {"values": ["hover", "focus", "focused", "pressed", "press", "active"], "axes": [], "components": {}},
     "ignoreTokenFamilies": ["paragraph-spacing"],
     "skipTokensInheritedFromChildren": True,
     "booleanValues": ["yes", "true", "on", "si", "sí"],
@@ -127,6 +180,82 @@ def css_var_fallback(path):
     return "--" + re.sub(r"-{2,}", "-", p).strip("-")
 
 
+# ── HTML: árbol mínimo con html.parser y emparejador de selectores (.a.b, tag.a, descendiente) ──
+from html.parser import HTMLParser
+
+VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
+
+
+class Node:
+    __slots__ = ("tag", "classes", "parent", "children", "line")
+
+    def __init__(self, tag, classes, parent, line):
+        self.tag, self.classes, self.parent, self.children, self.line = tag, classes, parent, [], line
+
+
+class Tree(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.root = Node("#root", set(), None, 0)
+        self.cur = self.root
+        self.all = []
+
+    def handle_starttag(self, tag, attrs):
+        classes = set((dict(attrs).get("class") or "").split())
+        n = Node(tag, classes, self.cur, self.getpos()[0])
+        self.cur.children.append(n)
+        self.all.append(n)
+        if tag not in VOID:
+            self.cur = n
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+        if tag not in VOID:
+            self.cur = self.cur.parent
+
+    def handle_endtag(self, tag):
+        n = self.cur
+        while n is not None and n.tag != tag:
+            n = n.parent
+        if n is not None and n.parent is not None:
+            self.cur = n.parent
+
+
+def parse_simple(compound):
+    """'span.a.b' → ('span', {'a','b'}); '.a' → (None, {'a'})."""
+    parts = compound.split(".")
+    tag = parts[0] or None
+    return tag, {c for c in parts[1:] if c}
+
+
+def matches_simple(node, simple):
+    tag, classes = simple
+    return (tag is None or node.tag == tag) and classes <= node.classes
+
+
+def matches_selector(node, selector):
+    """Descendiente con espacio: el último simple casa con node y los anteriores con algún ancestro, en orden."""
+    simples = [parse_simple(p) for p in selector.split() if p]
+    if not simples or not matches_simple(node, simples[-1]):
+        return False
+    anc, i = node.parent, len(simples) - 2
+    while i >= 0 and anc is not None and anc.tag != "#root":
+        if matches_simple(anc, simples[i]):
+            i -= 1
+        anc = anc.parent
+    return i < 0
+
+
+def descendants(node):
+    for ch in node.children:
+        yield ch
+        yield from descendants(ch)
+
+
+def select(root_nodes, selector):
+    return [n for n in root_nodes if matches_selector(n, selector)]
+
+
 # ── CSS: reglas planas (selector, declaraciones), atravesando @media y similares ─────────────
 def css_rules(css):
     css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
@@ -159,6 +288,7 @@ class Audit:
     def __init__(self, cfg, root):
         self.cfg, self.root = cfg, root
         self.findings, self._seen = [], set()
+        self.int_cfg = dcom.load_config(os.path.dirname(os.path.abspath(__file__)))
         css_path = os.path.join(root, cfg["cssFile"])
         self.css_rel = cfg["cssFile"]
         self.css = read(css_path, "") or ""
@@ -191,20 +321,43 @@ class Audit:
             return
         self._seen.add(key)
         sev = (self.cfg.get("severity") or {}).get(code, "warn")
-        sev = "error" if sev == "error" else "warn"
+        sev = sev if sev in ("error", "warn", "info") else "warn"
         self.findings.append({"severity": sev, "code": code, "file": file, "line": line, "property": prop,
                               "value": value, "suggestion": msg})
 
     # ── helpers por contrato ───────────────────────────────────────────────────
     @staticmethod
+    def code_of(sch):
+        return sch.get("code") or (sch.get("source") or {}).get("code") or {}
+
+    @staticmethod
     def classes_of(sch):
-        return [c for c in ((sch.get("source") or {}).get("code") or {}).get("classes") or [] if c]
+        return [c for c in Audit.code_of(sch).get("classes") or [] if c]
+
+    @staticmethod
+    def enum_props(sch):
+        """Ejes de variante como props enum (12.0.0) o, en un schema anterior, api.variants + api.defaults."""
+        api = sch.get("api") or {}
+        if isinstance(api.get("props"), list):
+            return [(p["name"], p.get("values") or [], p.get("default"), p.get("figma") or "") for p in api["props"]
+                    if p.get("type") == "enum" and p.get("name")] + \
+                   [(p["name"], ["yes"], None, p.get("figma") or "") for p in api["props"]
+                    if p.get("type") == "boolean" and p.get("name") and not str(p.get("figma") or "").startswith(("state=", "estado="))]
+        out = []
+        for axis, values in (api.get("variants") or {}).items():
+            out.append((axis, values, (api.get("defaults") or {}).get(axis, values[0] if values else None), axis))
+        return out
 
     def tokens_of_slug(self, slug):
         for s in self.schemas:
             if s["meta"].get("slug") == slug:
-                return (s.get("api") or {}).get("tokensUsed") or []
+                api_ = s.get("api") or {}
+                return (api_.get("tokens") if isinstance(api_.get("tokens"), list) else api_.get("tokensUsed")) or []
         return []
+
+    def interno(self, sch):
+        """Motivo de interno del contrato (ds_common.py) o None: una pieza de trabajo de Figma no se verifica."""
+        return dcom.interno_de(sch, self.int_cfg)
 
     @staticmethod
     def status_of(sch):
@@ -244,7 +397,8 @@ class Audit:
             # lo que liga un hijo (icono, badge…) lo realiza el CSS del hijo, no el del padre
             for child in (sch.get("relations") or {}).get("uses") or []:
                 inherited |= set(self.tokens_of_slug(child))
-        for path in (sch.get("api") or {}).get("tokensUsed") or []:
+        api_ = sch.get("api") or {}
+        for path in (api_.get("tokens") if isinstance(api_.get("tokens"), list) else api_.get("tokensUsed")) or []:
             if path in ignore or path.split("/")[0].lower() in families or path in inherited:
                 continue
             var = self.var_by_path.get(path) or css_var_fallback(path)
@@ -258,9 +412,6 @@ class Audit:
     def variants(self, sch):
         classes = self.classes_of(sch)
         slug = sch["meta"].get("slug", "")
-        api = sch.get("api") or {}
-        variants = api.get("variants") or {}
-        defaults = api.get("defaults") or {}
         simples = [c for c in classes if "--" not in c]
         propias = [c for c in simples if c == slug or c.startswith(slug + "-") or slug.startswith(c)]
         bases = (propias or simples or classes)[:]
@@ -268,11 +419,11 @@ class Audit:
         mods_cfg = (self.cfg.get("modifiers") or {}).get(slug) or {}
         excluded = {a.lower() for a in self.cfg.get("excludeAxes") or []}
         booleans = {b.lower() for b in self.cfg.get("booleanValues") or []}
-        for axis, values in variants.items():
-            if axis.lower() in excluded or not values:
+        for axis, values, default_v, figma_axis in self.enum_props(sch):
+            if axis.lower() in excluded or figma_axis.lower() in excluded or not values:
                 continue
-            default = str(defaults.get(axis, values[0]))
-            axis_cfg = mods_cfg.get(axis)
+            default = str(default_v if default_v is not None else values[0])
+            axis_cfg = mods_cfg.get(axis) or mods_cfg.get(figma_axis)
             for value in values:
                 value = str(value)
                 if value == default:
@@ -287,6 +438,8 @@ class Audit:
                         candidates.append(pattern.format(base=b, axis=slug_value(axis), value=slug_value(value)))
                         if value.lower() in booleans:
                             candidates.append(pattern.format(base=b, axis=slug_value(axis), value=slug_value(axis)))
+                            if figma_axis and figma_axis != axis:
+                                candidates.append(pattern.format(base=b, axis=slug_value(figma_axis), value=slug_value(figma_axis)))
                 if any(self._selector_exists(c) for c in candidates):
                     continue
                 self.add("variant-without-css", sch["_file"], 0, slug, f"{axis}={value}",
@@ -301,10 +454,32 @@ class Audit:
             return cls in self.css_classes
         return candidate in self.selectors
 
+    # ── 2b. variantes del contrato que el ejemplo no muestra ───────────────────
+    def coverage(self, sch):
+        """Cada valor de cada eje de variante y cada propiedad booleana del contrato debería salir en el «Ejemplo de
+        código»: es lo que la library enseña, y una muestra parcial es una muestra sesgada. La lógica vive en
+        ds_variants.py (la misma que pinta la nota y la galería de la ficha)."""
+        if dv is None:
+            return
+        slug = sch["meta"].get("slug", "")
+        ex = self.code_of(sch).get("example") or ""
+        a = dv.analyze(sch, ex, self.css_classes, self.cfg)
+        if not a:
+            return
+        if a["missing"]:
+            ver = " El contrato figura como verificado: la verificación no está completa hasta cubrirlo o justificarlo." if self.status_of(sch) == "verified" else ""
+            self.add("variant-not-in-example", sch["_file"], 0, slug, f"{a['visible']} de {a['total']}",
+                     f"el «Ejemplo de código» muestra {a['visible']} de {a['total']} variantes de Figma; faltan: {', '.join(a['missing'])}. "
+                     f"Añádelas al ejemplo (o, si no deben mostrarse, decláralas con su motivo en ds-fidelity.config.json → coverageIgnore.components.{slug}).{ver}")
+        if a["unchecked"]:
+            self.add("variant-coverage-unchecked", sch["_file"], 0, slug, str(len(a["unchecked"])),
+                     f"no se puede comprobar la cobertura de {len(a['unchecked'])} variante(s) ({', '.join(a['unchecked'][:8])}{' …' if len(a['unchecked']) > 8 else ''}): "
+                     f"ni el contrato ni el CSS dicen qué clase las representa: decláralo en ds-fidelity.config.json → modifiers.{slug} ({{\"propiedad\": {{\"valor\": \".clase\"}}}}); no hace falta tocar el schema")
+
     # ── 3. ejemplo frente a CSS ────────────────────────────────────────────────
     def example(self, sch):
         slug = sch["meta"].get("slug", "")
-        ex = ((sch.get("source") or {}).get("code") or {}).get("example") or ""
+        ex = self.code_of(sch).get("example") or ""
         if not ex.strip():
             return
         import fnmatch
@@ -318,16 +493,44 @@ class Audit:
             if cls not in self.css_classes:
                 self.add("example-class-missing", sch["_file"], 0, slug, cls,
                          f"el «Ejemplo de código» usa .{cls} y no existe en {self.css_rel}: el ejemplo describe otra cosa que el CSS; actualiza uno de los dos tras verificar el maestro")
+        if f'data-ds="{slug}"' not in ex and "data-ds='" + slug + "'" not in ex:
+            self.add("example-without-data-ds", sch["_file"], 0, slug, "data-ds",
+                     f"el elemento raíz del «Ejemplo de código» no lleva data-ds=\"{slug}\": sin esa marca una pantalla no dice qué contrato (y qué maestro de Figma) es cada bloque")
+        # «…» o «...» como contenido de un elemento es un marcador de «aquí va algo», no contenido: la vista previa lo
+        # pinta como un punto vacío. Vale si el elemento es una elipsis real (clase o atributo «ellipsis»).
+        # Elipsis real: clase o atributo que lo diga («ellipsis», «dots», «more», o lo que el proyecto declare en
+        # ellipsisClasses, p. ej. «pagination-item--more»).
+        elip_pats = ["*ellipsis*", "*dots*", "*more*"] + list(self.cfg.get("ellipsisClasses") or [])
+        for m in re.finditer(r"<([a-zA-Z][\w-]*)([^>]*)>\s*(…|\.\.\.)\s*</\1>", ex):
+            clases = re.findall(r'class\s*=\s*"([^"]*)"', m.group(2))
+            toks = [t for c in clases for t in c.split()]
+            if any(fnmatch.fnmatch(t, p) for t in toks for p in elip_pats) or "ellipsis" in m.group(2).lower():
+                continue
+            self.add("example-placeholder-ellipsis", sch["_file"], 0, slug, m.group(0)[:60],
+                     "el «Ejemplo de código» usa «…» como contenido de un elemento: parece un marcador y la vista previa queda vacía; escribe un contenido de ejemplo real, o marca el elemento con la clase o el atributo «ellipsis» si es una elipsis de verdad (p. ej. la de una paginación)")
         for url in re.findall(r"""(?:src\s*=\s*["']|url\(\s*["']?)(https?://[^"')\s]+)""", ex):
             self.add("example-external-image", sch["_file"], 0, slug, url,
                      "el ejemplo carga una imagen de fuera; lo que no sale de Figma no es del DS: usa design-system/assets/ o un placeholder del propio DS")
 
     # ── 4. pantallas que usan contratos sin verificar ──────────────────────────
+    @staticmethod
+    def own_classes(sch):
+        """Las clases que son del propio contrato (su slug como bloque BEM), no las de los componentes que su
+        ejemplo compone: un ejemplo de tarjeta con un botón no convierte al botón en uso de la tarjeta."""
+        slug = sch["meta"].get("slug", "")
+        return [c for c in Audit.classes_of(sch) if c == slug or c.startswith(slug + "__") or c.startswith(slug + "--")]
+
     def screens(self):
-        # Una clase pertenece al contrato cuyo slug es su bloque (.link, .link--dark → link). Los
-        # ejemplos de otros contratos también la listan, pero solo la reutilizan; y las clases de
-        # base sin contrato propio (.icon, .section, .visually-hidden) no se atribuyen a nadie.
-        status_by_slug = {s["meta"].get("slug", ""): self.status_of(s) for s in self.schemas}
+        """Una pantalla usa un contrato si lleva data-ds="<slug>" o alguna clase propia del contrato."""
+        by_class, by_slug, internos = {}, {}, {}
+        for s in self.schemas:
+            st = self.status_of(s); slug = s["meta"].get("slug", "")
+            if self.interno(s):
+                internos[slug] = self.interno(s)
+                st = "interno"
+            by_slug[slug] = st
+            for c in self.own_classes(s):
+                by_class.setdefault(c, (slug, st))
         files = []
         for pat in self.cfg.get("screens") or []:
             files.extend(sorted(glob.glob(os.path.join(self.root, pat), recursive=True)))
@@ -336,27 +539,119 @@ class Audit:
             used = set()
             for attr in re.findall(r'class\s*=\s*"([^"]*)"', html):
                 used.update(attr.split())
-            pend = {}
+            pend, usa_internos = {}, {}
+            for slug in re.findall(r'data-ds\s*=\s*["\']([^"\']+)["\']', html):
+                if slug in internos:
+                    usa_internos[slug] = internos[slug]
+                elif slug in by_slug and by_slug[slug] != "verified":
+                    pend[slug] = by_slug[slug]
             for c in used:
-                block = re.split(r"__|--", c)[0]
-                if status_by_slug.get(block, "verified") != "verified":
-                    pend[block] = status_by_slug[block]
+                if c in by_class:
+                    slug, st = by_class[c]
+                    if st == "interno":
+                        usa_internos[slug] = internos.get(slug, "")
+                    elif st != "verified":
+                        pend[slug] = st
+            if usa_internos:
+                rel = os.path.relpath(f, self.root)
+                lista = ", ".join(f"{k} ({v})" for k, v in sorted(usa_internos.items()))
+                self.add("screen-uses-internal", rel, 0, "pantalla", f"{len(usa_internos)} piezas internas",
+                         f"usa una pieza interna de Figma, que no forma parte del sistema compartido y no debería estar en una pantalla: {lista}. Sustitúyela por el componente compartido que corresponda")
             if pend:
                 rel = os.path.relpath(f, self.root)
                 lista = ", ".join(f"{k} ({v})" for k, v in sorted(pend.items()))
                 self.add("screen-uses-unverified", rel, 0, "pantalla", f"{len(pend)} contratos sin verificar", 
-                         f"usa componentes cuyo contrato no está verificado contra su maestro de Figma: {lista}. Protocolo en design.md § Verificación contra el maestro")
+                         f"usa componentes cuyo contrato no está verificado contra su maestro de Figma: {lista}. Protocolo en guides/verificacion.md")
+
+    # ── 5. anatomía obligatoria por estado dentro de las pantallas ─────────────
+    def state_anatomy(self):
+        rules = []
+        for s in self.schemas:
+            for r in (self.code_of(s).get("stateAnatomy") or (s.get("behavior") or {}).get("stateAnatomy") or []):
+                if isinstance(r, dict) and r.get("when") and r.get("require"):
+                    rules.append((s["meta"].get("slug", ""), r))
+        self.state_rules = len(rules)
+        if not rules:
+            return
+        files = []
+        for pat in self.cfg.get("screens") or []:
+            files.extend(sorted(glob.glob(os.path.join(self.root, pat), recursive=True)))
+        for f in files:
+            tree = Tree()
+            try:
+                tree.feed(read(f, "") or "")
+            except Exception:
+                continue
+            rel = os.path.relpath(f, self.root)
+            for slug, r in rules:
+                reqs = r["require"] if isinstance(r["require"], list) else [r["require"]]
+                for hit in select(tree.all, r["when"]):
+                    inside = list(descendants(hit))
+                    falta = [q for q in reqs if not select(inside, q)]
+                    if falta:
+                        self.add("screen-state-anatomy", rel, hit.line, slug, r.get("id") or r["when"],
+                                 f"{r.get('why') or 'anatomía incompleta para este estado'} Falta dentro de «{r['when']}»: {', '.join(falta)}. "
+                                 f"Abre la ficha del componente y aplica el ejemplo completo de ese estado; no copies el marcado de otra instancia")
+
+    # ── 7. contraste AA del texto, desde el CSS ────────────────────────────────
+    def proposal_status(self, pid):
+        for p in glob.glob(os.path.join(self.root, "design-system", "proposals", "**", f"{pid}.proposal.json"), recursive=True):
+            d = jload(p)
+            return (d or {}).get("status") or "invalid"
+        return None
+
+    def contrast(self, sch):
+        try:
+            sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+            import ds_contrast as dc
+        except ImportError:
+            return
+        if not hasattr(self, "_themes"):
+            tokens_css = read(os.path.join(self.root, self.cfg["tokensJson"]).replace(".json", ".css"), "") or ""
+            self._themes = dc.theme_vars(tokens_css)
+            self._crules = dc.css_rules(self.css)
+            self.contrast_counts = {"pairs": 0, "fail": 0, "untestable": 0, "excepted": 0}
+        slug = sch["meta"].get("slug", "")
+        res = dc.component_pairs(slug, self._crules, self._themes)
+        m = re.search(r"^\s*\." + re.escape(slug) + r"(?![\w-])[^{]*\{", self.css, re.M)
+        linea = self.css.count("\n", 0, m.start()) + 1 if m else self.line_of_class(slug)
+        self.contrast_counts["pairs"] += len(res["pairs"])
+        self.contrast_counts["untestable"] += len(res["untestable"])
+        excepciones = {(e.get("component"), e.get("state")): e.get("proposal") for e in self.cfg.get("contrastExceptions") or []}
+        for x in res["pairs"]:
+            if x["pass"]:
+                continue
+            self.contrast_counts["fail"] += 1
+            tema = "" if x["theme"] == "light" else " (modo oscuro)"
+            msg = (f"texto {x['fg']} ({x['fgVar'] or 'color'}) sobre {x['bg']} ({x['bgVar'] or 'fondo'}): {x['ratio']}:1, "
+                   f"AA pide {x['need']}:1{tema}. Cambia la pareja de tokens en Figma (con propuesta) y sincroniza")
+            pid = excepciones.get((slug, x["state"]))
+            st = self.proposal_status(pid) if pid else None
+            if pid and st in ("draft", "approved"):
+                self.contrast_counts["excepted"] += 1
+                self.add("contrast-below-aa", self.css_rel, linea, slug, x["state"],
+                         msg + f" · excepción temporal mientras la propuesta {pid} esté pendiente")
+                self.findings[-1]["severity"] = "warn"
+            else:
+                extra = (f" · la excepción apunta a la propuesta {pid}, que está {st or 'sin crear'}: ya no cubre" if pid else "")
+                self.add("contrast-below-aa", self.css_rel, linea, slug, x["state"], msg + extra)
 
     def run(self):
         for s in self.schemas:
-            if not self.classes_of(s):
+            if self.interno(s) or not self.classes_of(s):
                 continue
             self.tokens(s)
             self.variants(s)
+            self.coverage(s)
             self.example(s)
+            self.contrast(s)
         self.screens()
-        counts = {"verified": 0, "unverified": 0, "stale": 0}
+        self.state_anatomy()
+        counts = {"verified": 0, "unverified": 0, "stale": 0, "internal": 0}
         for s in self.schemas:
+            if self.interno(s):
+                counts["internal"] += 1  # no se verifican: no tienen CSS ni se construyen
+                continue
             counts[self.status_of(s)] += 1
         return counts
 
@@ -380,11 +675,12 @@ def main():
     findings = sorted(audit.findings, key=lambda x: (x["file"], x["code"], x["property"], x["value"]))
     errors = [x for x in findings if x["severity"] == "error"]
     warns = [x for x in findings if x["severity"] == "warn"]
+    infos = [x for x in findings if x["severity"] == "info"]
     by_code = {}
     for x in findings:
         by_code[x["code"]] = by_code.get(x["code"], 0) + 1
-    con_css = sum(1 for s in audit.schemas if Audit.classes_of(s))
-    report = {"root": root, "errors": len(errors), "warnings": len(warns), "byCheck": by_code,
+    con_css = sum(1 for s in audit.schemas if Audit.classes_of(s) and not audit.interno(s))
+    report = {"root": ".", "errors": len(errors), "warnings": len(warns), "infos": len(infos), "byCheck": by_code,
               "contracts": len(audit.schemas), "contractsWithCss": con_css, "verification": counts, "findings": findings}
     if args.out:
         out_path = os.path.join(root, args.out)
@@ -398,12 +694,22 @@ def main():
             print("Sin contratos en schemas/components/: nada que medir todavía (pendiente del primer sync desde Figma).")
         for x in findings:
             print(f"{x['file']}:{x['line']}: [{x['severity'].upper()}] {x['code']} · {x['property']}: {x['value']} → {x['suggestion']}")
-        print(f"\n{len(errors)} errores · {len(warns)} avisos · {len(audit.schemas)} contratos, {con_css} con CSS")
+        print(f"\n{len(errors)} errores · {len(warns)} avisos · {len(infos)} notas · {len(audit.schemas)} contratos "
+              f"({counts['internal']} internos, no se verifican), {con_css} con CSS")
         print(f"Verificación contra el maestro: {counts['verified']} verified · {counts['unverified']} unverified · {counts['stale']} stale")
+        if getattr(audit, "state_rules", 0):
+            print(f"Anatomía por estado: {audit.state_rules} reglas declaradas en behavior.stateAnatomy, comprobadas en las pantallas de UI/")
+        elif audit.schemas:
+            print("Anatomía por estado: ningún contrato declara behavior.stateAnatomy; nada que comprobar en las pantallas")
+        cc = getattr(audit, "contrast_counts", None)
+        if cc:
+            print(f"Contraste AA: {cc['pairs']} parejas texto/fondo medidas · {cc['fail']} por debajo"
+                  + (f" ({cc['excepted']} con excepción temporal atada a propuesta)" if cc["excepted"] else "")
+                  + f" · {cc['untestable']} no comprobables (sin fondo propio o transparente)")
         if by_code:
             print("Avisos por comprobación: " + ", ".join(f"{k} {v}" for k, v in sorted(by_code.items(), key=lambda kv: -kv[1])))
         if errors:
-            print("Corrige el CSS o la ficha a partir del maestro de Figma (protocolo en design.md § Verificación contra el maestro); nunca el script ni su config.")
+            print("Corrige el CSS o la ficha a partir del maestro de Figma (protocolo en guides/verificacion.md); nunca el script ni su config.")
         print("Esta auditoría no abre Figma: solo contrasta los artefactos con lo que el contrato declara y con la verificación registrada.")
         if args.out:
             print(f"Informe guardado en {args.out}")

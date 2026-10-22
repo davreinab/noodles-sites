@@ -1,0 +1,116 @@
+{
+  "title": "Logo / Daisuki",
+  "description": "Logo Daisuki. Positivo vectorial; negativo en PNG. No se recolorea.",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "logo-daisuki",
+      "name": "Logo / Daisuki",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "21:177",
+      "current": {
+        "description": "Logo Daisuki. Positivo vectorial; negativo en PNG. No se recolorea.",
+        "Propósito": "Logotipo de Daisuki en versión positiva (sobre fondos claros) y negativa (sobre tinta). Identifica la web de la marca en la Navbar, el Mobile menu y el Footer.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Imagen con `alt` igual al nombre de la marca. Si es el enlace a la Home, el enlace se nombra con el logo («Daisuki») y no se añade «logo» ni «inicio» al alt. El logo no se evalúa como texto, pero se usa siempre sobre el fondo para el que está hecho: positivo sobre crema o blanco, negativo sobre tinta.",
+        "Cuándo usar / qué NO hace": "Archivo exportado tal cual del maestro (assets/logos); no se recrea, no se recolorea, no se deforma ni se genera con IA. Alto por defecto `--space-80`; se escala manteniendo la proporción."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "21:177",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=21-177",
+      "page": "Brand assets",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Logo Daisuki. Positivo vectorial; negativo en PNG. No se recolorea."
+    ],
+    "props": [
+      {
+        "name": "version",
+        "type": "enum",
+        "values": [
+          "Positive",
+          "Negative"
+        ],
+        "default": "Positive",
+        "figma": "Version"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [],
+    "tokenCount": 0,
+    "textStyles": [],
+    "classes": [
+      "logo"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Logotipo de Daisuki en versión positiva (sobre fondos claros) y negativa (sobre tinta). Identifica la web de la marca en la Navbar, el Mobile menu y el Footer.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Imagen con `alt` igual al nombre de la marca. Si es el enlace a la Home, el enlace se nombra con el logo («Daisuki») y no se añade «logo» ni «inicio» al alt. El logo no se evalúa como texto, pero se usa siempre sobre el fondo para el que está hecho: positivo sobre crema o blanco, negativo sobre tinta.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Archivo exportado tal cual del maestro (assets/logos); no se recrea, no se recolorea, no se deforma ni se genera con IA. Alto por defecto `--space-80`; se escala manteniendo la proporción.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 2,
+      "total": 2,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "logo-daisuki",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "21:177",
+    "contract": "../../../../../../design-system/schemas/components/logo-daisuki.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

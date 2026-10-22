@@ -1,6 +1,6 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": "2026-10-08T11:52:41Z",
+  "generatedAt": "2026-10-22T09:38:13Z",
   "adoptionMode": "new",
   "sourcesCompared": [
     "figma",
@@ -141,7 +141,9 @@
   "inputs": {
     "variables": true,
     "components": true,
-    "icons": true
+    "icons": true,
+    "libraryAudit": {}
   },
-  "generatedBy": "scripts/ds-sync.py"
+  "generatedBy": "scripts/ds-sync.py",
+  "internals": []
 }

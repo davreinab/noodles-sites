@@ -1,120 +1,85 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:input",
+  "contractVersion": "2",
   "meta": {
     "name": "Input",
     "slug": "input",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Campo de texto de una línea (formularios de concursos con estructura propia). Etiqueta siempre visible (no se sustituye por el placeholder). Error: borde rojo + icono + mensaje (nunca solo color); el mensaje se asocia al campo con aria-describedby. Required muestra asterisco y requiere aria-required. El valor y el texto de ayuda se editan en la instancia.",
     "figmaPage": "Forms",
     "figmaType": "COMPONENT_SET",
     "variantCount": 6,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "a18c12c7b556"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/input.md",
-      "section": "Input"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "47:122",
-      "componentKey": "4caacf54a1a2596158676b9e05fe80a3a9270c0d"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "field",
-        "field__control",
-        "field__error",
-        "field__helper",
-        "field__label",
-        "field__required",
-        "icon",
-        "icon-circle-alert"
-      ],
-      "example": "<div class=\"field\">\n<label class=\"field__label\" for=\"nombre\">Nombre<span class=\"field__required\" aria-hidden=\"true\">*</span></label>\n<input class=\"field__control\" id=\"nombre\" name=\"nombre\" type=\"text\" placeholder=\"Escribe aquí\" required aria-describedby=\"nombre-ayuda\">\n<p class=\"field__helper\" id=\"nombre-ayuda\">Texto de ayuda</p>\n</div>\n<div class=\"field\">\n<label class=\"field__label\" for=\"email\">Email</label>\n<input class=\"field__control\" id=\"email\" type=\"email\" aria-invalid=\"true\" aria-describedby=\"email-error\">\n<p class=\"field__error\" id=\"email-error\"><span class=\"icon icon-circle-alert\" aria-hidden=\"true\"></span>Este campo es obligatorio</p>\n</div>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Label#47:0",
-        "kind": "TEXT",
-        "default": "Nombre"
+        "name": "label",
+        "type": "string",
+        "default": "Nombre",
+        "figma": "Label#47:0"
       },
       {
-        "name": "Required#47:7",
-        "kind": "BOOLEAN",
-        "default": false
+        "name": "required",
+        "type": "boolean",
+        "default": false,
+        "figma": "Required#47:7"
       },
       {
-        "name": "Helper#47:14",
-        "kind": "BOOLEAN",
-        "default": true
+        "name": "helper",
+        "type": "boolean",
+        "default": true,
+        "figma": "Helper#47:14"
       },
       {
-        "name": "Error icon#49:0",
-        "kind": "INSTANCE_SWAP",
-        "default": "46:78",
-        "defaultComponent": "Icon / circle-alert",
-        "preferredValues": []
+        "name": "errorIcon",
+        "type": "icon",
+        "default": "Icon / circle-alert",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Error icon#49:0"
       },
       {
-        "name": "State",
-        "kind": "VARIANT",
-        "default": "Default",
-        "values": [
-          "Default",
-          "Hover",
-          "Focus",
-          "Filled",
-          "Error",
-          "Disabled"
-        ]
+        "name": "filled",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Filled"
+      },
+      {
+        "name": "error",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Error"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Disabled"
       }
     ],
-    "variants": {
-      "State": [
-        "Default",
-        "Hover",
-        "Focus",
-        "Filled",
-        "Error",
-        "Disabled"
-      ]
-    },
-    "states": [
-      "Default",
+    "cssStates": [
       "Hover",
-      "Focus",
-      "Filled",
-      "Error",
-      "Disabled"
+      "Focus"
     ],
-    "defaults": {
-      "State": "Default"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [
-      {
-        "layer": "icon-error",
-        "component": "Icon / circle-alert",
-        "componentSlug": "icon-circle-alert",
-        "exposedAs": "Error icon#49:0",
-        "toggledBy": null,
-        "visibleByDefault": false
-      }
-    ],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": true,
       "swapProperties": [
-        "Error icon#49:0"
+        "errorIcon"
       ],
       "defaultIcons": [
         "Icon / circle-alert"
@@ -122,8 +87,7 @@
       "compatible": "any Icon / * via INSTANCE_SWAP",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "border/width/thin",
       "field/bg",
       "field/border",
@@ -146,8 +110,60 @@
       "space/16",
       "space/4",
       "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "field",
+      "field__control",
+      "field__error",
+      "field__helper",
+      "field__label",
+      "field__required",
+      "icon",
+      "icon-circle-alert"
     ],
-    "variablesUsed": [
+    "example": "<div data-ds=\"input\" class=\"field\">\n<label class=\"field__label\" for=\"nombre\">Nombre<span class=\"field__required\" aria-hidden=\"true\">*</span></label>\n<input class=\"field__control\" id=\"nombre\" name=\"nombre\" type=\"text\" placeholder=\"Escribe aquí\" required aria-describedby=\"nombre-ayuda\">\n<p class=\"field__helper\" id=\"nombre-ayuda\">Texto de ayuda</p>\n</div>\n<div data-ds=\"input\" class=\"field\">\n<label class=\"field__label\" for=\"email\">Email</label>\n<input class=\"field__control\" id=\"email\" type=\"email\" aria-invalid=\"true\" aria-describedby=\"email-error\">\n<p class=\"field__error\" id=\"email-error\"><span class=\"icon icon-circle-alert\" aria-hidden=\"true\"></span>Este campo es obligatorio</p>\n</div>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "47:122",
+    "componentKey": "4caacf54a1a2596158676b9e05fe80a3a9270c0d",
+    "propertyNames": {
+      "label": "Label#47:0",
+      "required": "Required#47:7",
+      "helper": "Helper#47:14",
+      "errorIcon": "Error icon#49:0",
+      "filled": "State=Filled",
+      "error": "State=Error",
+      "disabled": "State=Disabled"
+    },
+    "variantAxes": {
+      "State": [
+        "Default",
+        "Hover",
+        "Focus",
+        "Filled",
+        "Error",
+        "Disabled"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
       "itemSpacing: space/8",
       "itemSpacing: space/4",
       "fills: field/label",
@@ -192,49 +208,16 @@
       "Desktop/label",
       "Desktop/body-m",
       "Desktop/caption"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "field/bg",
-        "field/border",
-        "field/error-text",
-        "field/helper",
-        "field/label",
-        "field/placeholder",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-m",
-        "font/line-height/desktop/caption",
-        "font/line-height/desktop/label",
-        "font/size/desktop/body-m",
-        "font/size/desktop/caption",
-        "font/size/desktop/label",
-        "font/style/body",
-        "font/style/display"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/input.md",
+    "section": "Input"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "icon-circle-alert"
     ],
-    "usedBy": [],
     "related": []
   }
 }

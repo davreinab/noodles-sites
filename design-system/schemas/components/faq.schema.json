@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "pattern:faq",
+  "contractVersion": "2",
   "meta": {
     "name": "FAQ",
     "slug": "faq",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Bloque de FAQ (Home, Natural formula y página FAQS; wireframe UX): título (h2) + entradilla · lista de Accordion item (space/16; uno abierto a la vez) · «Still curious?» + Link «See all FAQS» a la página FAQS (desktop al pie de la columna del título; mobile debajo de la lista). En la página FAQS se repite por categorías sin el enlace. SEO/AEO: las respuestas están en el HTML y la página lleva datos estructurados FAQPage; las respuestas las valida GB Foods. Desktop: cabecera a la izquierda (400 px) y lista a la derecha; Mobile: apilado. Fondo color/surface/card (blanco): en la Home va tras el Banner crema y no puede haber dos fondos crema seguidos. Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "54f36b1529fe",
     "verification": {
       "status": "verified",
@@ -24,66 +32,106 @@
       "by": "agent (Claude)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/patterns/faq.md",
-      "section": "FAQ"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "92:960",
-      "componentKey": "d6393b085d0e5c126d1891ef1a1477660af75433"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "accordion-item",
-        "accordion-item__button",
-        "accordion-item__heading",
-        "accordion-item__panel",
-        "faq",
-        "faq__grid",
-        "faq__list",
-        "faq__more",
-        "icon",
-        "icon-arrow-right",
-        "icon-plus",
-        "link",
-        "link--standalone",
-        "section",
-        "section__header",
-        "section__inner",
-        "section__lead",
-        "section__title"
-      ],
-      "example": "<section class=\"section faq\" aria-labelledby=\"faq-title\">\n<div class=\"section__inner\">\n<div class=\"faq__grid\">\n<div class=\"section__header\"><h2 class=\"section__title\" id=\"faq-title\">Are you wondering how, too? We’ll tell you</h2><p class=\"section__lead\">These are the questions we're asked most often, so you won't be left wondering</p></div>\n<ul class=\"faq__list\"><li><div class=\"accordion-item\"><h3 class=\"accordion-item__heading\"><button class=\"accordion-item__button\" type=\"button\" aria-expanded=\"false\" aria-controls=\"q1\">How is it prepared?<span class=\"icon icon-plus\" aria-hidden=\"true\"></span></button></h3><div class=\"accordion-item__panel\" id=\"q1\" hidden>Respuesta.</div></div></li></ul>\n<p class=\"faq__more\">Still curious? <a class=\"link link--standalone\" href=\"/faqs\">See all FAQS <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a></p>\n</div>\n</div>\n</section>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Breakpoint",
-        "kind": "VARIANT",
-        "default": "Desktop",
+        "name": "breakpoint",
+        "type": "enum",
         "values": [
           "Desktop",
           "Mobile"
-        ]
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
       }
     ],
-    "variants": {
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "accordion/answer",
+      "accordion/bg",
+      "accordion/border",
+      "accordion/icon",
+      "accordion/question",
+      "border/width/thin",
+      "color/surface/card",
+      "color/text/default",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
+      "font/size/desktop/h2",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/md",
+      "icon/size/sm",
+      "layout/frame",
+      "layout/margin",
+      "layout/section-y",
+      "link/default",
+      "radius/md",
+      "space/16",
+      "space/24",
+      "space/64",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "accordion-item",
+      "accordion-item__button",
+      "accordion-item__heading",
+      "accordion-item__panel",
+      "faq",
+      "faq__grid",
+      "faq__list",
+      "faq__more",
+      "icon",
+      "icon-arrow-right",
+      "icon-plus",
+      "link",
+      "link--standalone",
+      "section",
+      "section__header",
+      "section__inner",
+      "section__lead",
+      "section__title"
+    ],
+    "example": "<section data-ds=\"faq\" class=\"section faq\" aria-labelledby=\"faq-title\">\n<div class=\"section__inner\">\n<div class=\"faq__grid\">\n<div class=\"section__header\"><h2 class=\"section__title\" id=\"faq-title\">Are you wondering how, too? We’ll tell you</h2><p class=\"section__lead\">These are the questions we're asked most often, so you won't be left wondering</p></div>\n<ul class=\"faq__list\"><li><div class=\"accordion-item\"><h3 class=\"accordion-item__heading\"><button class=\"accordion-item__button\" type=\"button\" aria-expanded=\"false\" aria-controls=\"q1\">How is it prepared?<span class=\"icon icon-plus\" aria-hidden=\"true\"></span></button></h3><div class=\"accordion-item__panel\" id=\"q1\" hidden>Respuesta.</div></div></li></ul>\n<p class=\"faq__more\">Still curious? <a class=\"link link--standalone\" href=\"/faqs\">See all FAQS <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a></p>\n</div>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "92:960",
+    "componentKey": "d6393b085d0e5c126d1891ef1a1477660af75433",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
       "Breakpoint": [
         "Desktop",
         "Mobile"
       ]
     },
-    "states": [],
-    "defaults": {
-      "Breakpoint": "Desktop"
-    },
-    "invalidCombinations": [],
     "nestedInstances": [
       {
         "layer": "link",
@@ -166,49 +214,7 @@
         "visibleByDefault": true
       }
     ],
-    "icons": {
-      "hasIcon": true,
-      "swapProperties": [],
-      "defaultIcons": [],
-      "compatible": "unknown",
-      "unexposedIconLayers": []
-    },
-    "slots": [],
-    "tokensUsed": [
-      "accordion/answer",
-      "accordion/bg",
-      "accordion/border",
-      "accordion/icon",
-      "accordion/question",
-      "border/width/thin",
-      "color/surface/card",
-      "color/text/default",
-      "color/text/secondary",
-      "font/family/body",
-      "font/family/display",
-      "font/line-height/desktop/body-l",
-      "font/line-height/desktop/body-m",
-      "font/line-height/desktop/h2",
-      "font/line-height/desktop/label",
-      "font/size/desktop/body-l",
-      "font/size/desktop/body-m",
-      "font/size/desktop/h2",
-      "font/size/desktop/label",
-      "font/style/body",
-      "font/style/display",
-      "icon/size/md",
-      "icon/size/sm",
-      "layout/frame",
-      "layout/margin",
-      "layout/section-y",
-      "link/default",
-      "radius/md",
-      "space/16",
-      "space/24",
-      "space/64",
-      "space/8"
-    ],
-    "variablesUsed": [
+    "variableBindings": [
       "paddingLeft: layout/margin",
       "paddingTop: layout/section-y",
       "paddingRight: layout/margin",
@@ -270,49 +276,12 @@
       "Desktop/body-l",
       "Desktop/body-m",
       "Desktop/label"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "accordion/answer",
-        "accordion/bg",
-        "accordion/border",
-        "accordion/icon",
-        "accordion/question",
-        "color/surface/card",
-        "color/text/default",
-        "color/text/secondary",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-l",
-        "font/line-height/desktop/body-m",
-        "font/line-height/desktop/h2",
-        "font/line-height/desktop/label",
-        "font/size/desktop/body-l",
-        "font/size/desktop/body-m",
-        "font/size/desktop/h2",
-        "font/size/desktop/label",
-        "font/style/body",
-        "font/style/display",
-        "link/default"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/patterns/faq.md",
+    "section": "FAQ"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "accordion-item",
@@ -321,7 +290,6 @@
       "icon-plus",
       "link"
     ],
-    "usedBy": [],
     "related": []
   }
 }

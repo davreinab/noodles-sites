@@ -1,0 +1,226 @@
+{
+  "title": "Input",
+  "description": "Campo de texto de una línea (formularios de concursos con estructura propia). Etiqueta siempre visible (no se sustituye por el placeholder). Error: borde rojo + icono + mensaje (n…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "input",
+      "name": "Input",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "47:122",
+      "current": {
+        "description": "Campo de texto de una línea (formularios de concursos con estructura propia). Etiqueta siempre visible (no se sustituye por el placeholder). Error: borde rojo + icono + mensaje (nunca solo color); el mensaje se asocia al campo con aria-describedby. Required muestra asterisco y requiere aria-required. El valor y el texto de ayuda se editan en la instancia.",
+        "Propósito": "Campo de texto de una línea de los formularios (concursos, contacto propio si lo hubiera). Etiqueta en Anton, ayuda o error debajo.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Texto tinta sobre blanco 18,7:1; placeholder y ayuda en gris cálido sobre blanco 5,9:1; etiqueta tinta sobre crema 17,2:1; borde de tinta sobre crema 17,2:1 (≥ 3:1 de límite de control). Error: borde y mensaje en `--field-border-error`/`--field-error-text` (rojo de estado, verificado en la fase 2) con icono circle-alert y texto, nunca solo color. Desactivado: gris cálido sobre arena 4,3:1 (exento). Rol: `<input>` nativo con `<label for>` (nombre); la ayuda y el error se enlazan con `aria-describedby` y el error marca `aria-invalid=\"true\"`. El asterisco de obligatorio es visual: el campo lleva `required`. El placeholder no sustituye a la etiqueta. Foco: contorno de 2 px pegado; el hover engorda el borde por dentro sin mover el layout.",
+        "Cuándo usar / qué NO hace": "Para datos de una línea (nombre, email, código). Textos largos: Textarea. Opciones cerradas: Select o Checkbox. Búsqueda: Search field. No se usa sin etiqueta visible."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "47:122",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=47-122",
+      "page": "Forms",
+      "type": "COMPONENT_SET",
+      "variants": 6,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Campo de texto de una línea (formularios de concursos con estructura propia). Etiqueta siempre visible (no se sustituye por el placeholder). Error: borde rojo + icono + mensaje (nunca solo color); el mensaje se asocia al campo con aria-describedby. Required muestra asterisco y requiere aria-required. El valor y el texto de ayuda se editan en la instancia."
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "values": [],
+        "default": "Nombre",
+        "figma": "Label#47:0"
+      },
+      {
+        "name": "required",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "Required#47:7"
+      },
+      {
+        "name": "helper",
+        "type": "boolean",
+        "values": [],
+        "default": "true",
+        "figma": "Helper#47:14"
+      },
+      {
+        "name": "errorIcon",
+        "type": "icon",
+        "values": [],
+        "default": "Icon / circle-alert",
+        "figma": "Error icon#49:0"
+      },
+      {
+        "name": "filled",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Filled"
+      },
+      {
+        "name": "error",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Error"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Disabled"
+      }
+    ],
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "errorIcon"
+      ],
+      "defaults": [
+        "Icon / circle-alert"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "icon-error",
+        "component": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "field",
+        "items": [
+          "field/bg",
+          "field/border",
+          "field/error-text",
+          "field/helper",
+          "field/label",
+          "field/placeholder"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/sm"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/4",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 22,
+    "textStyles": [
+      "Desktop/label",
+      "Desktop/body-m",
+      "Desktop/caption"
+    ],
+    "classes": [
+      "field",
+      "field__control",
+      "field__error",
+      "field__helper",
+      "field__label",
+      "field__required",
+      "icon",
+      "icon-circle-alert"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Campo de texto de una línea de los formularios (concursos, contacto propio si lo hubiera). Etiqueta en Anton, ayuda o error debajo.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Texto tinta sobre blanco 18,7:1; placeholder y ayuda en gris cálido sobre blanco 5,9:1; etiqueta tinta sobre crema 17,2:1; borde de tinta sobre crema 17,2:1 (≥ 3:1 de límite de control). Error: borde y mensaje en `--field-border-error`/`--field-error-text` (rojo de estado, verificado en la fase 2) con icono circle-alert y texto, nunca solo color. Desactivado: gris cálido sobre arena 4,3:1 (exento). Rol: `<input>` nativo con `<label for>` (nombre); la ayuda y el error se enlazan con `aria-describedby` y el error marca `aria-invalid=\"true\"`. El asterisco de obligatorio es visual: el campo lleva `required`. El placeholder no sustituye a la etiqueta. Foco: contorno de 2 px pegado; el hover engorda el borde por dentro sin mover el layout.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Para datos de una línea (nombre, email, código). Textos largos: Textarea. Opciones cerradas: Select o Checkbox. Búsqueda: Search field. No se usa sin etiqueta visible.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "input",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "47:122",
+    "contract": "../../../../../../design-system/schemas/components/input.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

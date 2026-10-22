@@ -1,0 +1,8 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="library" class="library" aria-labelledby="lib-title">
+<div class="library__header"><h1 class="page-title" id="lib-title">Productos</h1><p class="section__lead">Introducción de la librería.</p></div>
+<div class="product-filter"><div class="product-filter__group"><span class="product-filter__label">Tipo</span><div class="product-filter__options" role="tablist"><button class="tab" role="tab" aria-selected="true">Cups</button></div></div></div>
+<ul class="library__grid"><li><a class="product-card" href="/productos/yatekomo-pollo"><div class="product-card__body"><h3 class="product-card__name">Yatekomo Pollo</h3></div></a></li></ul>
+<div class="library__more"><button class="button button--secondary" type="button">Ver más productos</button></div>
+</section>{% endraw %}
+{% endmacro %}

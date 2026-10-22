@@ -1,0 +1,162 @@
+{
+  "title": "Lang switch",
+  "description": "Selector de idioma de dos opciones (p. ej. NL | FR en Aiki). Solo en marcas multiidioma. La opción activa en tinta. En código: enlaces a la versión de idioma con hreflang y aria-c…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "lang-switch",
+      "name": "Lang switch",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "54:71",
+      "current": {
+        "description": "Selector de idioma de dos opciones (p. ej. NL | FR en Aiki). Solo en marcas multiidioma. La opción activa en tinta. En código: enlaces a la versión de idioma con hreflang y aria-current en la activa; cada opción con lang=\"nl\"/\"fr\".",
+        "Propósito": "Selector de idioma de dos opciones (NL | FR) para las marcas multiidioma, como Aïki en Bélgica. Va en la Navbar y en el Mobile menu.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Reposo: tinta sobre blanco 18,7:1; seleccionado: crema sobre tinta 17,2:1 y `aria-current`, así que no depende solo del color. Rol: dos enlaces a la versión de la página en cada idioma, con `hreflang` y `lang`; nombre accesible del grupo «Idioma». Foco: contorno de 2 px pegado. Alto de 40 px (32 de opción + 4 de marco): por debajo de 44, compensado por la separación con los vecinos (≥ 24 px).",
+        "Cuándo usar / qué NO hace": "Solo en marcas con dos idiomas. Cambia de idioma conservando la página; no es un desplegable de países ni se muestra en marcas monolingües."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "54:71",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=54-71",
+      "page": "Navigation",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Selector de idioma de dos opciones (p. ej. NL | FR en Aiki). Solo en marcas multiidioma. La opción activa en tinta. En código: enlaces a la versión de idioma con hreflang y aria-current en la activa; cada opción con lang=\"nl\"/\"fr\"."
+    ],
+    "props": [
+      {
+        "name": "firstLabel",
+        "type": "string",
+        "values": [],
+        "default": "NL",
+        "figma": "First label#54:5"
+      },
+      {
+        "name": "secondLabel",
+        "type": "string",
+        "values": [],
+        "default": "FR",
+        "figma": "Second label#54:8"
+      },
+      {
+        "name": "selected",
+        "type": "enum",
+        "values": [
+          "First",
+          "Second"
+        ],
+        "default": "First",
+        "figma": "Selected"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/display",
+          "font/line-height/desktop/label",
+          "font/size/desktop/label",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "lang-switch",
+        "items": [
+          "lang-switch/bg",
+          "lang-switch/bg-selected",
+          "lang-switch/border",
+          "lang-switch/text",
+          "lang-switch/text-selected"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/4",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 14,
+    "textStyles": [
+      "Desktop/label"
+    ],
+    "classes": [
+      "lang-switch",
+      "lang-switch__option"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Selector de idioma de dos opciones (NL | FR) para las marcas multiidioma, como Aïki en Bélgica. Va en la Navbar y en el Mobile menu.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Reposo: tinta sobre blanco 18,7:1; seleccionado: crema sobre tinta 17,2:1 y `aria-current`, así que no depende solo del color. Rol: dos enlaces a la versión de la página en cada idioma, con `hreflang` y `lang`; nombre accesible del grupo «Idioma». Foco: contorno de 2 px pegado. Alto de 40 px (32 de opción + 4 de marco): por debajo de 44, compensado por la separación con los vecinos (≥ 24 px).",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en marcas con dos idiomas. Cambia de idioma conservando la página; no es un desplegable de países ni se muestra en marcas monolingües.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "lang-switch",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "54:71",
+    "contract": "../../../../../../design-system/schemas/components/lang-switch.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

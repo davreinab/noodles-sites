@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:icon-minus",
+  "contractVersion": "2",
   "meta": {
     "name": "Icon / minus",
     "slug": "icon-minus",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Menos: cerrar acordeón FAQ. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
     "figmaPage": "Iconography",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "d05c9c92f515",
     "verification": {
       "status": "verified",
@@ -23,34 +31,12 @@
       "by": "agent (Claude)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/icon-minus.md",
-      "section": "Icon / minus"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "30:72",
-      "componentKey": "7b0a8d21bb43ff027cb883c53aaea1da88fb144d"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "icon",
-        "icon-minus"
-      ],
-      "example": "<span class=\"icon icon-minus\" aria-hidden=\"true\"></span>"
-    }
-  },
   "api": {
-    "properties": [],
-    "variants": {},
-    "states": [],
-    "defaults": {},
-    "invalidCombinations": [],
-    "nestedInstances": [],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -58,45 +44,44 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "icon/color/default",
       "icon/size/md"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "icon",
+      "icon-minus"
     ],
-    "variablesUsed": [
+    "example": "<span data-ds=\"icon-minus\" class=\"icon icon-minus\" aria-hidden=\"true\"></span>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "30:72",
+    "componentKey": "7b0a8d21bb43ff027cb883c53aaea1da88fb144d",
+    "propertyNames": {},
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
       "width: icon/size/md",
       "height: icon/size/md",
       "strokes: icon/color/default",
       "color: icon/color/default"
     ],
-    "textStyles": [],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "icon/color/default"
-      ]
-    }
+    "textStyles": []
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/icon-minus.md",
+    "section": "Icon / minus"
   },
-  "compatibility": {},
   "relations": {
     "uses": [],
-    "usedBy": [
-      "faq"
-    ],
     "related": []
   }
 }

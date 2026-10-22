@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if pattern %}{{ pattern.title }} – {% elif viewAll %}All {{ viewAll.title }} – {% endif %}{{ site.name }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/viewer/viewer.css">
+  <style>{% for st in patterns.statuses %}.pl-status--{{ st.key }}{background:{{ st.bg }};color:{{ st.fg }}}{% endfor %}</style>
+</head>
+<body class="pl">
+  {% macro navTree(nodes, currentUrl, parent) %}
+  <ul class="pl-tree">
+    {# «View all» solo cuando hay algo que ver todo junto: con un único patrón es ruido. #}
+    {% if parent and parent.count > 1 %}<li data-tree-all><a class="pl-tree__all" href="{{ parent.url }}"{% if parent.url == currentUrl %} aria-current="page"{% endif %}>View all</a></li>{% endif %}
+    {% for node in nodes %}
+    {% if node.type == "group" %}
+    <li class="pl-tree__group" data-tree-group>
+      <details{% if currentUrl.indexOf(node.url) === 0 %} open{% endif %}>
+        <summary>{{ node.title }} <span class="pl-nav__count">{{ node.count }}</span></summary>
+        {{ navTree(node.children, currentUrl, node) }}
+      </details>
+    </li>
+    {% else %}
+    <li data-tree-item><a href="{{ node.item.url }}"{% if node.item.url == currentUrl %} aria-current="page"{% endif %}>{{ node.item.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+  {% endmacro %}
+  <a class="pl-skip" href="#content">Skip to content</a>
+  <div class="pl-shell">
+    <aside class="pl-nav" data-nav>
+      <div class="pl-nav__top">
+        <a class="pl-nav__home" href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>{{ site.name }}</a>
+        <label class="pl-search">
+          <span class="pl-visually-hidden">Search patterns</span>
+          <input type="search" placeholder="Search patterns" data-search autocomplete="off">
+        </label>
+      </div>
+      {% for level in patterns.levels %}
+      <section class="pl-nav__group" data-level-group>
+        <h2 class="pl-nav__level"><a href="{{ level.url }}"{% if level.url == page.url %} aria-current="page"{% endif %}><span class="pl-dot pl-lvl-{{ level.key }}" aria-hidden="true"></span>{{ level.label }}</a> <span class="pl-nav__count">{{ level.items | length }}</span></h2>
+        {{ navTree(level.tree, page.url) }}
+      </section>
+      {% endfor %}
+      <p class="pl-nav__empty" data-search-empty hidden>No patterns match your search.</p>
+    </aside>
+    <main class="pl-main" id="content">
+      {{ content | safe }}
+    </main>
+  </div>
+  <script src="/assets/viewer/viewer.js"></script>
+  {% if pattern and pattern.sheet %}<script type="module" src="/assets/viewer/proposal-ui.js"></script>{% endif %}
+</body>
+</html>

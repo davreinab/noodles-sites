@@ -1,0 +1,7 @@
+{
+  "_nota": "Presupuesto de lectura en tokens aproximados (caracteres / 3,6). ds-budget.py avisa al pasarse; con --strict falla. Súbelo solo con una razón escrita.",
+  "agentsMd": 5000,
+  "designMd": { "figma": 8000, "repo": 8000 },
+  "guide": 14000,
+  "ficha": 3000
+}

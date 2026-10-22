@@ -1,0 +1,180 @@
+{
+  "title": "Step",
+  "description": "Paso numerado de preparación (página de producto, junto al temporizador de 3 minutos de la fase 5) o de receta. Anatomía: número en círculo (Anton, step/number-bg amarillo de marc…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "step",
+      "name": "Step",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "71:164",
+      "current": {
+        "description": "Paso numerado de preparación (página de producto, junto al temporizador de 3 minutos de la fase 5) o de receta. Anatomía: número en círculo (Anton, step/number-bg amarillo de marca, 56 px) · texto (body-l) · media opcional (Media=True: imagen o GIF 16:9; el GIF respeta prefers-reduced-motion y lleva pausa). Se usa dentro de <ol>: el número visual es decorativo (aria-hidden) porque la lista ya lo anuncia. Se apilan con space/32.",
+        "Propósito": "Paso numerado de la preparación de producto o de una receta, con imagen o GIF opcional.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Número tinta sobre amarillo 12,3:1; texto tinta sobre crema 17,2:1. Rol: `<li>` dentro de `<ol>`, que ya anuncia la posición; por eso el número visual es `aria-hidden`. La imagen describe el gesto en su `alt`; un GIF va como MP4 silencioso en bucle con botón de pausa y se detiene con prefers-reduced-motion.",
+        "Cuándo usar / qué NO hace": "En Preparation (producto) y en la receta. El texto sale del envase o de la receta; no se mezcla con el Timer (va al lado)."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "71:164",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=71-164",
+      "page": "Content",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Paso numerado de preparación (página de producto, junto al temporizador de 3 minutos de la fase 5) o de receta. Anatomía: número en círculo (Anton, step/number-bg amarillo de marca, 56 px) · texto (body-l) · media opcional (Media=True: imagen o GIF 16:9; el GIF respeta prefers-reduced-motion y lleva pausa). Se usa dentro de <ol>: el número visual es decorativo (aria-hidden) porque la lista ya lo anuncia. Se apilan con space/32."
+    ],
+    "props": [
+      {
+        "name": "number",
+        "type": "string",
+        "values": [],
+        "default": "1",
+        "figma": "Number#71:9"
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "values": [],
+        "default": "Abre la tapa hasta la mitad y añade agua hirviendo hasta la línea interior.",
+        "figma": "Text#71:12"
+      },
+      {
+        "name": "media",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "Media"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-l",
+          "font/line-height/desktop/h3",
+          "font/size/desktop/body-l",
+          "font/size/desktop/h3",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/56",
+          "space/8"
+        ]
+      },
+      {
+        "group": "step",
+        "items": [
+          "step/border",
+          "step/number-bg",
+          "step/number-text",
+          "step/text"
+        ]
+      }
+    ],
+    "tokenCount": 18,
+    "textStyles": [
+      "Desktop/h3",
+      "Desktop/body-l"
+    ],
+    "classes": [
+      "step",
+      "step--media",
+      "step__content",
+      "step__media",
+      "step__number",
+      "step__text",
+      "steps"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Paso numerado de la preparación de producto o de una receta, con imagen o GIF opcional.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Número tinta sobre amarillo 12,3:1; texto tinta sobre crema 17,2:1. Rol: `<li>` dentro de `<ol>`, que ya anuncia la posición; por eso el número visual es `aria-hidden`. La imagen describe el gesto en su `alt`; un GIF va como MP4 silencioso en bucle con botón de pausa y se detiene con prefers-reduced-motion.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En Preparation (producto) y en la receta. El texto sale del envase o de la receta; no se mezcla con el Timer (va al lado).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 1,
+      "total": 1,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "step",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "71:164",
+    "contract": "../../../../../../design-system/schemas/components/step.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

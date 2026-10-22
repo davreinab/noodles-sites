@@ -1,0 +1,179 @@
+{
+  "title": "Decoration / Noodle",
+  "description": "Fideo decorativo de marca (5 trazos). Tone=Brand usa decoration/noodle/brand, Tone=Accent decoration/noodle/accent y Tone=Texture decoration/noodle/texture (ámbar opaco, solo dent…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".decoration-noodle",
+          "why": "color que no se puede resolver con tokens.css"
+        },
+        {
+          "theme": "light",
+          "state": ".decoration-noodle.decoration-noodle--2",
+          "why": "color que no se puede resolver con tokens.css"
+        },
+        {
+          "theme": "light",
+          "state": ".decoration-noodle.decoration-noodle--3",
+          "why": "color que no se puede resolver con tokens.css"
+        },
+        {
+          "theme": "light",
+          "state": ".decoration-noodle.decoration-noodle--4",
+          "why": "color que no se puede resolver con tokens.css"
+        },
+        {
+          "theme": "light",
+          "state": ".decoration-noodle.decoration-noodle--5",
+          "why": "color que no se puede resolver con tokens.css"
+        },
+        {
+          "theme": "light",
+          "state": ".decoration-noodle.decoration-noodle--accent",
+          "why": "color que no se puede resolver con tokens.css"
+        },
+        {
+          "theme": "light",
+          "state": ".decoration-noodle.decoration-noodle--texture",
+          "why": "color que no se puede resolver con tokens.css"
+        }
+      ],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "decoration-noodle",
+      "name": "Decoration / Noodle",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "21:165",
+      "current": {
+        "description": "Fideo decorativo de marca (5 trazos). Tone=Brand usa decoration/noodle/brand, Tone=Accent decoration/noodle/accent y Tone=Texture decoration/noodle/texture (ámbar opaco, solo dentro de Decoration / Noodle texture); cambian con el modo de marca. Escalable; solo decorativo (aria-hidden).",
+        "Propósito": "Fideo decorativo de las landings: aporta el gesto de marca en bordes de hero y secciones. Cinco formas (Shape 1–5) y tres tonos (Brand amarillo, Accent naranja, Texture ámbar para la trama de fondo).",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Puramente decorativo: `aria-hidden=\"true\"`, sin foco ni interacción (`pointer-events: none`). No necesita contraste propio, y solo pasa por detrás de un texto cuando ese texto también cumple sobre el color del fideo (tinta sobre amarillo, 12,3:1, como en el Hero); con cualquier otro texto, no.",
+        "Cuándo usar / qué NO hace": "Como adorno en los márgenes de Hero, Banner o secciones de marca, a sangre. No lleva información, no se anima sin respetar `prefers-reduced-motion` y no se usa como separador ni como icono. El alto lo da el contenedor; el ancho sale de la proporción de cada forma."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "21:165",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=21-165",
+      "page": "Brand assets",
+      "type": "COMPONENT_SET",
+      "variants": 15,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Fideo decorativo de marca (5 trazos). Tone=Brand usa decoration/noodle/brand, Tone=Accent decoration/noodle/accent y Tone=Texture decoration/noodle/texture (ámbar opaco, solo dentro de Decoration / Noodle texture); cambian con el modo de marca. Escalable; solo decorativo (aria-hidden)."
+    ],
+    "props": [
+      {
+        "name": "shape",
+        "type": "enum",
+        "values": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "1"
+        ],
+        "default": "1",
+        "figma": "Shape"
+      },
+      {
+        "name": "tone",
+        "type": "enum",
+        "values": [
+          "Brand",
+          "Accent",
+          "Texture"
+        ],
+        "default": "Brand",
+        "figma": "Tone"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "decoration",
+        "items": [
+          "decoration/noodle/brand"
+        ]
+      }
+    ],
+    "tokenCount": 1,
+    "textStyles": [],
+    "classes": [
+      "decoration-noodle",
+      "decoration-noodle--2",
+      "decoration-noodle--3",
+      "decoration-noodle--4",
+      "decoration-noodle--5",
+      "decoration-noodle--accent",
+      "decoration-noodle--texture"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Fideo decorativo de las landings: aporta el gesto de marca en bordes de hero y secciones. Cinco formas (Shape 1–5) y tres tonos (Brand amarillo, Accent naranja, Texture ámbar para la trama de fondo).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Puramente decorativo: `aria-hidden=\"true\"`, sin foco ni interacción (`pointer-events: none`). No necesita contraste propio, y solo pasa por detrás de un texto cuando ese texto también cumple sobre el color del fideo (tinta sobre amarillo, 12,3:1, como en el Hero); con cualquier otro texto, no.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Como adorno en los márgenes de Hero, Banner o secciones de marca, a sangre. No lleva información, no se anima sin respetar `prefers-reduced-motion` y no se usa como separador ni como icono. El alto lo da el contenedor; el ancho sale de la proporción de cada forma.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 8,
+      "total": 8,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "decoration-noodle",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "21:165",
+    "contract": "../../../../../../design-system/schemas/components/decoration-noodle.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

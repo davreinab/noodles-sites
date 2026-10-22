@@ -1,63 +1,44 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:logo-daisuki",
+  "contractVersion": "2",
   "meta": {
     "name": "Logo / Daisuki",
     "slug": "logo-daisuki",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Logo Daisuki. Positivo vectorial; negativo en PNG. No se recolorea.",
     "figmaPage": "Brand assets",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": false,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "ba1c2f6d9620"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/logo-daisuki.md",
-      "section": "Logo / Daisuki"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "21:177",
-      "componentKey": "30803ac1ce186c84e08da72754a3e71cecb64a13"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "logo"
-      ],
-      "example": "<img class=\"logo\" src=\"../assets/logos/logo-daisuki-positive.svg\" alt=\"Daisuki\">\n<img class=\"logo\" src=\"../assets/logos/logo-daisuki-negative.svg\" alt=\"Daisuki\">"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Version",
-        "kind": "VARIANT",
-        "default": "Positive",
+        "name": "version",
+        "type": "enum",
         "values": [
           "Positive",
           "Negative"
-        ]
+        ],
+        "default": "Positive",
+        "figma": "Version"
       }
     ],
-    "variants": {
-      "Version": [
-        "Positive",
-        "Negative"
-      ]
-    },
-    "states": [],
-    "defaults": {
-      "Version": "Positive"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -65,33 +46,42 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [],
-    "variablesUsed": [],
-    "textStyles": [],
-    "theming": {
-      "brandAware": false,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": []
-    }
+    "tokens": []
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "logo"
+    ],
+    "example": "<img data-ds=\"logo-daisuki\" class=\"logo\" src=\"../assets/logos/logo-daisuki-positive.svg\" alt=\"Daisuki\">\n<img data-ds=\"logo-daisuki\" class=\"logo\" src=\"../assets/logos/logo-daisuki-negative.svg\" alt=\"Daisuki\">",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
   },
-  "compatibility": {},
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "21:177",
+    "componentKey": "30803ac1ce186c84e08da72754a3e71cecb64a13",
+    "propertyNames": {
+      "version": "Version"
+    },
+    "variantAxes": {
+      "Version": [
+        "Positive",
+        "Negative"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [],
+    "textStyles": []
+  },
+  "docs": {
+    "file": "design-system/docs/components/logo-daisuki.md",
+    "section": "Logo / Daisuki"
+  },
   "relations": {
     "uses": [],
-    "usedBy": [],
     "related": []
   }
 }

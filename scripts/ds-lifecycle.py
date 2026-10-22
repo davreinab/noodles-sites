@@ -114,7 +114,7 @@ class Lifecycle:
         if e["kind"] == "class":
             return [e["id"].lstrip(".")]
         _, sch = self.schemas.get(e["id"], (None, None))
-        code = ((sch or {}).get("source") or {}).get("code") or {}
+        code = (sch or {}).get("code") or ((sch or {}).get("source") or {}).get("code") or {}
         return list(code.get("classes") or []) or [e["id"]]
 
     def scan(self):

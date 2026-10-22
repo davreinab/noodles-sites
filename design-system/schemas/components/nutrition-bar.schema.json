@@ -1,87 +1,58 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:nutrition-bar",
+  "contractVersion": "2",
   "meta": {
     "name": "Nutrition bar",
     "slug": "nutrition-bar",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Barra de un nutriente: nombre · valor por 100 g (negrita) · % de ingesta de referencia (IR) y barra cuyo relleno mide ese % del ancho de la pista. Highlight=True: relleno verde natural y Badge Natural con el claim del envase (−20 % sal, −80 % grasas saturadas). La barra es decorativa (aria-hidden): el dato accesible es el texto, así que el valor y el % siempre se escriben. Relleno ≥3:1 sobre la pista. Los valores los valida el equipo de Nutrición de GB Foods. En Figma, el % se fija con el padding derecho de «track» (padding-right = ancho × (1 − %)); en código, width: &lt;%&gt; del relleno.",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Barra de un nutriente: nombre · valor por 100 g (negrita) · % de ingesta de referencia (IR) y barra cuyo relleno mide ese % del ancho de la pista. Highlight=True: relleno verde natural y Badge Natural con el claim del envase (−20 % sal, −80 % grasas saturadas). La barra es decorativa (aria-hidden): el dato accesible es el texto, así que el valor y el % siempre se escriben. Relleno ≥3:1 sobre la pista. Los valores los valida el equipo de Nutrición de GB Foods. En Figma, el % se fija con el padding derecho de «track» (padding-right = ancho × (1 − %)); en código, width: <%> del relleno.",
     "figmaPage": "Content",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "6ca5b7d326a3"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/nutrition-bar.md",
-      "section": "Nutrition bar"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "71:74",
-      "componentKey": "ff606ae2d0525b1487a81643313c9e5841352795"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "badge",
-        "badge--natural",
-        "nutrition-bar",
-        "nutrition-bar--highlight",
-        "nutrition-bar__amount",
-        "nutrition-bar__label",
-        "nutrition-bar__meter",
-        "nutrition-bar__percent",
-        "nutrition-bar__row",
-        "nutrition-bar__value"
-      ],
-      "example": "<li class=\"nutrition-bar\">\n<div class=\"nutrition-bar__row\">\n<span class=\"nutrition-bar__label\">Proteínas</span>\n<span class=\"nutrition-bar__amount\"><span class=\"nutrition-bar__value\">10 g</span><span class=\"nutrition-bar__percent\">20 % IR</span></span>\n</div>\n<meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"20\" aria-hidden=\"true\"></meter>\n</li>\n<li class=\"nutrition-bar nutrition-bar--highlight\">\n<div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Sal</span><span class=\"nutrition-bar__amount\"><span class=\"badge badge--natural\">−20 %</span><span class=\"nutrition-bar__value\">1,9 g</span><span class=\"nutrition-bar__percent\">32 % IR</span></span></div>\n<meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"32\" aria-hidden=\"true\"></meter>\n</li>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Nutrient#71:0",
-        "kind": "TEXT",
-        "default": "Proteínas"
+        "name": "nutrient",
+        "type": "string",
+        "default": "Proteínas",
+        "figma": "Nutrient#71:0"
       },
       {
-        "name": "Value#71:3",
-        "kind": "TEXT",
-        "default": "10 g"
+        "name": "value",
+        "type": "string",
+        "default": "10 g",
+        "figma": "Value#71:3"
       },
       {
-        "name": "Percent#71:6",
-        "kind": "TEXT",
-        "default": "20 % IR"
+        "name": "percent",
+        "type": "string",
+        "default": "20 % IR",
+        "figma": "Percent#71:6"
       },
       {
-        "name": "Highlight",
-        "kind": "VARIANT",
-        "default": "False",
-        "values": [
-          "False",
-          "True"
-        ]
+        "name": "highlight",
+        "type": "boolean",
+        "default": false,
+        "figma": "Highlight"
       }
     ],
-    "variants": {
-      "Highlight": [
-        "False",
-        "True"
-      ]
-    },
-    "states": [],
-    "defaults": {
-      "Highlight": "False"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -89,8 +60,7 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "font/family/body",
       "font/line-height/desktop/body-m",
       "font/line-height/desktop/caption",
@@ -106,8 +76,46 @@
       "space/16",
       "space/4",
       "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "badge",
+      "badge--natural",
+      "nutrition-bar",
+      "nutrition-bar--highlight",
+      "nutrition-bar__amount",
+      "nutrition-bar__label",
+      "nutrition-bar__meter",
+      "nutrition-bar__percent",
+      "nutrition-bar__row",
+      "nutrition-bar__value"
     ],
-    "variablesUsed": [
+    "example": "<li data-ds=\"nutrition-bar\" class=\"nutrition-bar\">\n<div class=\"nutrition-bar__row\">\n<span class=\"nutrition-bar__label\">Proteínas</span>\n<span class=\"nutrition-bar__amount\"><span class=\"nutrition-bar__value\">10 g</span><span class=\"nutrition-bar__percent\">20 % IR</span></span>\n</div>\n<meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"20\" aria-hidden=\"true\"></meter>\n</li>\n<li data-ds=\"nutrition-bar\" class=\"nutrition-bar nutrition-bar--highlight\">\n<div class=\"nutrition-bar__row\"><span class=\"nutrition-bar__label\">Sal</span><span class=\"nutrition-bar__amount\"><span class=\"badge badge--natural\">−20 %</span><span class=\"nutrition-bar__value\">1,9 g</span><span class=\"nutrition-bar__percent\">32 % IR</span></span></div>\n<meter class=\"nutrition-bar__meter\" min=\"0\" max=\"100\" value=\"32\" aria-hidden=\"true\"></meter>\n</li>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "71:74",
+    "componentKey": "ff606ae2d0525b1487a81643313c9e5841352795",
+    "propertyNames": {
+      "nutrient": "Nutrient#71:0",
+      "value": "Value#71:3",
+      "percent": "Percent#71:6",
+      "highlight": "Highlight"
+    },
+    "variantAxes": {
+      "Highlight": [
+        "False",
+        "True"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [
       "itemSpacing: space/8",
       "itemSpacing: space/16",
       "counterAxisSpacing: space/4",
@@ -136,45 +144,14 @@
     "textStyles": [
       "Desktop/body-m",
       "Desktop/caption"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "font/family/body",
-        "font/line-height/desktop/body-m",
-        "font/line-height/desktop/caption",
-        "font/size/desktop/body-m",
-        "font/size/desktop/caption",
-        "font/style/body",
-        "nutrition/fill",
-        "nutrition/label",
-        "nutrition/meta",
-        "nutrition/track",
-        "nutrition/value"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/nutrition-bar.md",
+    "section": "Nutrition bar"
   },
-  "compatibility": {},
   "relations": {
     "uses": [],
-    "usedBy": [
-      "nutrition-panel",
-      "product-details"
-    ],
     "related": []
   }
 }

@@ -1,0 +1,43 @@
+---
+pagination:
+  data: patterns.viewAll
+  size: 1
+  alias: viewAll
+permalink: "{{ viewAll.url }}"
+layout: viewer.njk
+eleventyExcludeFromCollections: true
+---
+{% macro renderNodes(nodes, depth) %}
+{% for node in nodes %}
+{% if node.type == "group" %}
+<section class="pl-all__group">
+  <h{{ depth }} class="pl-all__group-title"><a href="{{ node.url }}">{{ node.title }}</a> <span class="pl-nav__count">{{ node.count }}</span></h{{ depth }}>
+  {{ renderNodes(node.children, depth + 1) }}
+</section>
+{% else %}
+{% set p = node.item %}
+<article class="pl-all__pattern" id="{{ p.id | replace('/', '-') }}">
+  <header class="pl-all__pattern-head">
+    <h{{ depth }}><a href="{{ p.url }}">{{ p.title }}</a></h{{ depth }}>
+    {% if p.status %}<span class="pl-status pl-status--{{ p.statusKey }}"{% if p.inheritedFrom %} title="Own status: {{ p.ownStatus }}. Lowered by {{ p.inheritedFrom.title }} ({{ p.inheritedFrom.status }})."{% endif %}>{{ p.status }}</span>{% endif %}
+  </header>
+  {% if p.description %}<p class="pl-muted pl-all__desc">{{ p.description }}</p>{% endif %}
+  {% for v in p.variants %}
+  <figure class="pl-all__variant pl-stage pl-stage--{{ p.level }}">
+    <figcaption>{{ v.title }} <a href="{{ p.url }}?v={{ v.key }}">Details</a></figcaption>
+    <div class="pl-frame pl-frame--static"><iframe src="{{ v.previewUrl }}" title="{{ p.title }} – {{ v.title }}" loading="lazy" data-fit></iframe></div>
+  </figure>
+  {% endfor %}
+  {% if p.docHtml %}<div class="pl-docs">{{ p.docHtml | safe }}</div>{% endif %}
+</article>
+{% endif %}
+{% endfor %}
+{% endmacro %}
+
+<header class="pl-head pl-head--{{ viewAll.level }}">
+  <p class="pl-head__level"><span class="pl-dot pl-lvl-{{ viewAll.level }}" aria-hidden="true"></span>{{ viewAll.levelLabel }}{% for c in viewAll.crumbs %} / <a href="{{ c.url }}">{{ c.title }}</a>{% endfor %}</p>
+  <div class="pl-head__row"><h1>All {{ viewAll.title }}</h1></div>
+  <p class="pl-head__desc">{{ viewAll.count }} pattern{{ "s" if viewAll.count != 1 }}{% if viewAll.description %}. {{ viewAll.description }}{% endif %}</p>
+</header>
+
+{{ renderNodes(viewAll.nodes, 2) }}

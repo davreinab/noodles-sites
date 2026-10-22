@@ -1,0 +1,229 @@
+{
+  "title": "Suggestion bubble",
+  "description": "Botón flotante (suggestion box / Babelbox) hacia el formulario externo de Calidad. Fijo abajo a la derecha (layout/margin desde los bordes), layer/floating; no tapa el CTA del Mob…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".suggestion-bubble",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--suggestion-text",
+          "bgVar": "--suggestion-bg",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".suggestion-bubble:hover",
+          "fg": "#121212",
+          "bg": "#ffcb05",
+          "fgVar": "--suggestion-text-hover",
+          "bgVar": "--suggestion-bg-hover",
+          "ratio": 12.31,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".suggestion-bubble .icon",
+          "why": "color que no se puede resolver con tokens.css"
+        },
+        {
+          "theme": "light",
+          "state": ".suggestion-bubble:hover .icon",
+          "why": "color que no se puede resolver con tokens.css"
+        }
+      ],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "suggestion-bubble",
+      "name": "Suggestion bubble",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "81:87",
+      "current": {
+        "description": "Botón flotante (suggestion box / Babelbox) hacia el formulario externo de Calidad. Fijo abajo a la derecha (layout/margin desde los bordes), layer/floating; no tapa el CTA del Mobile menu ni el Toast (que sube por encima). Expanded=True al cargar: icono + «Sugerencias» + external-link; al hacer scroll pasa a Expanded=False (solo icono, 56 px) y respeta prefers-reduced-motion. Es un <a target=\"_blank\" rel=\"noopener\"> con nombre accesible «Sugerencias (abre en una pestaña nueva)» también en la versión plegada. Hover: fondo amarillo de marca y elevation/2; Focus: anillo suggestion/focus-ring.",
+        "Propósito": "Botón flotante hacia el formulario externo de Calidad (suggestion box). Abierto al cargar; se pliega a solo icono al hacer scroll.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Crema sobre tinta 17,2:1; hover tinta sobre amarillo 12,3:1. Rol: `<a>` externo con nombre accesible fijo en `aria-label`, así que sigue nombrado cuando está plegado (`.suggestion-bubble--collapsed`). Foco: contorno de 2 px pegado; en tinta sobre tinta se lee como el componente 2 px más grande contra la página. No tapa contenido esencial: fijo abajo a la derecha (`--layout-margin`) en `--layer-floating`; el plegado respeta reduce-motion.",
+        "Cuándo usar / qué NO hace": "Una por página, siempre el mismo destino (Calidad). No es un chat ni el contacto general (formulario de GB Foods en el Footer)."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "81:87",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=81-87",
+      "page": "Feedback & overlays",
+      "type": "COMPONENT_SET",
+      "variants": 6,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Botón flotante (suggestion box / Babelbox) hacia el formulario externo de Calidad. Fijo abajo a la derecha (layout/margin desde los bordes), layer/floating; no tapa el CTA del Mobile menu ni el Toast (que sube por encima). Expanded=True al cargar: icono + «Sugerencias» + external-link; al hacer scroll pasa a Expanded=False (solo icono, 56 px) y respeta prefers-reduced-motion. Es un <a target=\"_blank\" rel=\"noopener\"> con nombre accesible «Sugerencias (abre en una pestaña nueva)» también en la versión plegada. Hover: fondo amarillo de marca y elevation/2; Focus: anillo suggestion/focus-ring."
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "values": [],
+        "default": "Sugerencias",
+        "figma": "Label#81:0"
+      },
+      {
+        "name": "icon",
+        "type": "icon",
+        "values": [],
+        "default": "Icon / message-circle",
+        "figma": "Icon#81:7"
+      },
+      {
+        "name": "expanded",
+        "type": "boolean",
+        "values": [],
+        "default": "true",
+        "figma": "Expanded"
+      }
+    ],
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "icon"
+      ],
+      "defaults": [
+        "Icon / message-circle"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "icon",
+        "component": "icon-message-circle",
+        "exposedAs": "Icon#81:7",
+        "hidden": false
+      },
+      {
+        "layer": "icon-external",
+        "component": "icon-external-link",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/effect/shadow-ink"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/display",
+          "font/line-height/desktop/label",
+          "font/size/desktop/label",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/md",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/8"
+        ]
+      },
+      {
+        "group": "suggestion",
+        "items": [
+          "suggestion/bg",
+          "suggestion/border",
+          "suggestion/text"
+        ]
+      }
+    ],
+    "tokenCount": 15,
+    "textStyles": [
+      "Desktop/label"
+    ],
+    "classes": [
+      "icon",
+      "icon-external-link",
+      "icon-message-circle",
+      "suggestion-bubble",
+      "suggestion-bubble__label"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Botón flotante hacia el formulario externo de Calidad (suggestion box). Abierto al cargar; se pliega a solo icono al hacer scroll.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Crema sobre tinta 17,2:1; hover tinta sobre amarillo 12,3:1. Rol: `<a>` externo con nombre accesible fijo en `aria-label`, así que sigue nombrado cuando está plegado (`.suggestion-bubble--collapsed`). Foco: contorno de 2 px pegado; en tinta sobre tinta se lee como el componente 2 px más grande contra la página. No tapa contenido esencial: fijo abajo a la derecha (`--layout-margin`) en `--layer-floating`; el plegado respeta reduce-motion.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Una por página, siempre el mismo destino (Calidad). No es un chat ni el contacto general (formulario de GB Foods en el Footer).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "suggestion-bubble",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "81:87",
+    "contract": "../../../../../../design-system/schemas/components/suggestion-bubble.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

@@ -1,47 +1,33 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:icon-triangle-alert",
+  "contractVersion": "2",
   "meta": {
     "name": "Icon / triangle-alert",
     "slug": "icon-triangle-alert",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Advertencia: Alert y Toast de tipo Alert. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
     "figmaPage": "Iconography",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": false,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "a060d66f0c83"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/icon-triangle-alert.md",
-      "section": "Icon / triangle-alert"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "76:70",
-      "componentKey": "1c8eb3b4f8aee5e87cf959fa23fe3f7f8e5af231"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "icon",
-        "icon-triangle-alert"
-      ],
-      "example": "<span class=\"icon icon-triangle-alert\" aria-hidden=\"true\"></span>"
-    }
-  },
   "api": {
-    "properties": [],
-    "variants": {},
-    "states": [],
-    "defaults": {},
-    "invalidCombinations": [],
-    "nestedInstances": [],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -49,43 +35,44 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "icon/color/default",
       "icon/size/md"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "icon",
+      "icon-triangle-alert"
     ],
-    "variablesUsed": [
+    "example": "<span data-ds=\"icon-triangle-alert\" class=\"icon icon-triangle-alert\" aria-hidden=\"true\"></span>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "76:70",
+    "componentKey": "1c8eb3b4f8aee5e87cf959fa23fe3f7f8e5af231",
+    "propertyNames": {},
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
       "width: icon/size/md",
       "height: icon/size/md",
       "strokes: icon/color/default",
       "color: icon/color/default"
     ],
-    "textStyles": [],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "icon/color/default"
-      ]
-    }
+    "textStyles": []
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/icon-triangle-alert.md",
+    "section": "Icon / triangle-alert"
   },
-  "compatibility": {},
   "relations": {
     "uses": [],
-    "usedBy": [],
     "related": []
   }
 }

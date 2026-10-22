@@ -1,0 +1,203 @@
+{
+  "title": "Checkbox",
+  "description": "Casilla de verificación: consentimiento GDPR y aceptación de bases legales de concursos. Toda la fila (caja + etiqueta) es clicable; área táctil mínima 44 px en código. Marcada: t…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".checkbox",
+          "why": "sin fondo propio: depende de dónde se ponga"
+        }
+      ],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "checkbox",
+      "name": "Checkbox",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "47:302",
+      "current": {
+        "description": "Casilla de verificación: consentimiento GDPR y aceptación de bases legales de concursos. Toda la fila (caja + etiqueta) es clicable; área táctil mínima 44 px en código. Marcada: tinta con check crema (el estado se ve por la forma, no solo por color). Error: borde rojo; el mensaje va en el formulario con aria-describedby. Nunca premarcada en consentimientos.",
+        "Propósito": "Casilla de verificación con etiqueta: aceptar bases legales y privacidad, o elegir opciones independientes.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Caja: borde de tinta sobre blanco 18,7:1 (≥ 3:1). Marcada: check crema sobre tinta 17,2:1; el estado se ve por el check, no solo por el relleno. Hover: fondo amarillo 12,3:1 con borde de tinta. Etiqueta tinta sobre crema 17,2:1. Rol: `<input type=\"checkbox\">` nativo dentro de `<label>` (toda la etiqueta es clicable). Teclado: Espacio. Error: `aria-invalid=\"true\"` y mensaje enlazado. Foco: contorno de 2 px pegado a la caja de 24 px; el área clicable incluye la etiqueta.",
+        "Cuándo usar / qué NO hace": "Para consentimientos y opciones que se pueden marcar a la vez. No es un interruptor de ajuste inmediato ni un filtro de catálogo (eso es Chip). Las casillas de consentimiento nunca van marcadas por defecto."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "47:302",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=47-302",
+      "page": "Forms",
+      "type": "COMPONENT_SET",
+      "variants": 10,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Casilla de verificación: consentimiento GDPR y aceptación de bases legales de concursos. Toda la fila (caja + etiqueta) es clicable; área táctil mínima 44 px en código. Marcada: tinta con check crema (el estado se ve por la forma, no solo por color). Error: borde rojo; el mensaje va en el formulario con aria-describedby. Nunca premarcada en consentimientos."
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "values": [],
+        "default": "Acepto las bases legales",
+        "figma": "Label#47:42"
+      },
+      {
+        "name": "checkIcon",
+        "type": "icon",
+        "values": [],
+        "default": "Icon / check",
+        "figma": "Check icon#50:7"
+      },
+      {
+        "name": "checked",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "Checked"
+      },
+      {
+        "name": "error",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Error"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Disabled"
+      }
+    ],
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "checkIcon"
+      ],
+      "defaults": [
+        "Icon / check"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "check",
+        "component": "icon-check",
+        "exposedAs": "Check icon#50:7",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "checkbox",
+        "items": [
+          "checkbox/box-bg",
+          "checkbox/box-border",
+          "checkbox/check",
+          "checkbox/label"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/body-m",
+          "font/size/desktop/body-m",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/md",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/sm"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16"
+        ]
+      }
+    ],
+    "tokenCount": 13,
+    "textStyles": [
+      "Desktop/body-m"
+    ],
+    "classes": [
+      "checkbox",
+      "checkbox__input",
+      "checkbox__label",
+      "link"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Casilla de verificación con etiqueta: aceptar bases legales y privacidad, o elegir opciones independientes.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Caja: borde de tinta sobre blanco 18,7:1 (≥ 3:1). Marcada: check crema sobre tinta 17,2:1; el estado se ve por el check, no solo por el relleno. Hover: fondo amarillo 12,3:1 con borde de tinta. Etiqueta tinta sobre crema 17,2:1. Rol: `<input type=\"checkbox\">` nativo dentro de `<label>` (toda la etiqueta es clicable). Teclado: Espacio. Error: `aria-invalid=\"true\"` y mensaje enlazado. Foco: contorno de 2 px pegado a la caja de 24 px; el área clicable incluye la etiqueta.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Para consentimientos y opciones que se pueden marcar a la vez. No es un interruptor de ajuste inmediato ni un filtro de catálogo (eso es Chip). Las casillas de consentimiento nunca van marcadas por defecto.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "checkbox",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "47:302",
+    "contract": "../../../../../../design-system/schemas/components/checkbox.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

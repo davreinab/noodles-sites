@@ -15,9 +15,20 @@ jobs:
         run: python3 scripts/token-audit.py --out design-system/reports/token-audit.json
       - name: Fidelidad de los contratos a su maestro de Figma (DS)
         run: python3 scripts/ds-fidelity.py --out design-system/reports/fidelity.json
+      - name: Propuestas en la carpeta de su estado e índice al día (DS)
+        run: python3 scripts/proposals-index.py --check
+      - name: Catálogo navegable (library/) al día con el design system (DS)
+        run: python3 scripts/ds-library.py --check
       - name: Secciones obligatorias de context/
         run: python3 scripts/context-audit.py --out context/reports/context-audit.json
       - name: Índice de research al día
         run: python3 scripts/research-index.py --check
       - name: Índice de analítica al día
         run: python3 scripts/research-index.py --dir analytics --check
+      - name: Comprobaciones propias del proyecto (scripts/project-checks.txt)
+        run: |
+          [ -f scripts/project-checks.txt ] || exit 0
+          while IFS= read -r check || [ -n "$check" ]; do
+            case "$check" in ''|\#*) continue ;; esac
+            echo "+ $check"; sh -c "$check"
+          done < scripts/project-checks.txt

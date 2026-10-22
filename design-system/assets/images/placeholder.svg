@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Imagen de ejemplo">
+  <!-- Placeholder neutro para las fotos de los «Ejemplo de código»: las fotos reales son de las pantallas (UI/), no del design system. -->
+  <rect width="1600" height="900" fill="#e6e8eb"/>
+  <g fill="none" stroke="#9aa3ad" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="560" y="300" width="480" height="300" rx="24"/>
+    <path d="M620 540 L740 410 L860 520 L920 460 L980 540"/>
+    <circle cx="900" cy="380" r="36"/>
+  </g>
+</svg>

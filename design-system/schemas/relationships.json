@@ -638,5 +638,221 @@
       "type": "uses"
     }
   ],
-  "lastSync": "2026-10-08T11:52:41Z"
+  "lastSync": "2026-10-22T09:37:04Z",
+  "usedBy": {
+    "decoration-noodle": [
+      "decoration-noodle-texture",
+      "hero",
+      "promo",
+      "where-to-buy"
+    ],
+    "icon-arrow-right": [
+      "button",
+      "link",
+      "product-card",
+      "contest-card",
+      "ingredients",
+      "timer",
+      "modal",
+      "navbar",
+      "footer",
+      "hero",
+      "promo",
+      "natural-formula",
+      "recipes",
+      "faq",
+      "library",
+      "product-hero",
+      "product-details",
+      "preparation"
+    ],
+    "icon-close": [
+      "icon-button",
+      "search-field",
+      "modal",
+      "alert",
+      "mobile-menu"
+    ],
+    "icon-circle-alert": [
+      "input",
+      "textarea",
+      "select"
+    ],
+    "icon-chevron-down": [
+      "select"
+    ],
+    "icon-check": [
+      "checkbox",
+      "chip",
+      "recipe-card",
+      "recipes",
+      "library",
+      "product-filter",
+      "product-hero",
+      "recipe-hero"
+    ],
+    "icon-search": [
+      "search-field"
+    ],
+    "badge": [
+      "product-card",
+      "contest-card",
+      "category-card",
+      "nutrition-panel",
+      "hero",
+      "product-categories",
+      "library",
+      "product-hero",
+      "product-details"
+    ],
+    "link": [
+      "product-card",
+      "contest-card",
+      "ingredients",
+      "footer",
+      "promo",
+      "faq",
+      "library",
+      "product-hero",
+      "product-details"
+    ],
+    "chip": [
+      "recipe-card",
+      "recipes",
+      "library",
+      "product-filter",
+      "recipe-hero"
+    ],
+    "icon-timer": [
+      "recipe-card",
+      "recipes",
+      "recipe-hero"
+    ],
+    "button": [
+      "contest-card",
+      "timer",
+      "modal",
+      "navbar",
+      "footer",
+      "hero",
+      "promo",
+      "natural-formula",
+      "recipes",
+      "library",
+      "product-hero",
+      "preparation"
+    ],
+    "icon-plus": [
+      "accordion-item",
+      "faq"
+    ],
+    "ingredient-item": [
+      "ingredients",
+      "product-details"
+    ],
+    "nutrition-bar": [
+      "nutrition-panel",
+      "product-details"
+    ],
+    "icon-play": [
+      "timer",
+      "video-player",
+      "promo",
+      "preparation"
+    ],
+    "icon-button": [
+      "modal",
+      "navbar",
+      "mobile-menu",
+      "hero"
+    ],
+    "modal-slot": [
+      "modal"
+    ],
+    "icon-info": [
+      "alert"
+    ],
+    "icon-external-link": [
+      "suggestion-bubble",
+      "footer"
+    ],
+    "icon-message-circle": [
+      "suggestion-bubble"
+    ],
+    "icon-menu": [
+      "navbar"
+    ],
+    "lang-switch": [
+      "navbar",
+      "mobile-menu"
+    ],
+    "logo-yatekomo": [
+      "navbar",
+      "mobile-menu",
+      "footer"
+    ],
+    "icon-instagram": [
+      "mobile-menu"
+    ],
+    "icon-tiktok": [
+      "mobile-menu"
+    ],
+    "icon-x": [
+      "mobile-menu"
+    ],
+    "icon-youtube": [
+      "mobile-menu"
+    ],
+    "nav-item": [
+      "mobile-menu"
+    ],
+    "icon-arrow-left": [
+      "hero"
+    ],
+    "decoration-noodle-texture": [
+      "promo",
+      "where-to-buy"
+    ],
+    "video-player": [
+      "promo",
+      "preparation"
+    ],
+    "category-card": [
+      "product-categories"
+    ],
+    "recipe-card": [
+      "recipes"
+    ],
+    "accordion-item": [
+      "faq"
+    ],
+    "icon-minus": [
+      "faq"
+    ],
+    "product-card": [
+      "library"
+    ],
+    "product-filter": [
+      "library"
+    ],
+    "tab": [
+      "library",
+      "product-filter"
+    ],
+    "ingredients": [
+      "product-details"
+    ],
+    "nutrition-panel": [
+      "product-details"
+    ],
+    "step": [
+      "preparation"
+    ],
+    "timer": [
+      "preparation"
+    ],
+    "icon-circle-check": [
+      "recipe-hero"
+    ]
+  }
 }

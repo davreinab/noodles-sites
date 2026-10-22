@@ -1,14 +1,223 @@
 /* ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO.
    Design system: GB Noodles · Microsites · fileKey: v4mnn154qUmiB35CCnRfgh
-   Última sync: 2026-10-08T11:52:41Z · modo de adopción: new
+   Última sync: 2026-10-22T09:37:04Z · modo de adopción: new
    Se regenera con el protocolo de sync de design.md. */
 
 :root {
+  /* ---- Components ---- */
+  --accordion-bg: var(--color-surface-card); /* accordion: Fondo */
+  --accordion-bg-hover: var(--color-surface-brand); /* accordion: Fondo en hover */
+  --accordion-border: var(--color-border-default); /* accordion: Borde */
+  --accordion-question: var(--color-text-default); /* accordion: Pregunta */
+  --accordion-answer: var(--color-text-default); /* accordion: Respuesta */
+  --accordion-icon: var(--color-text-default); /* accordion: Icono plus/minus */
+  --accordion-focus-ring: var(--color-border-default); /* accordion: Anillo de foco */
+  --alert-close: var(--color-text-default); /* alert: Icono cerrar */
+  --alert-alert-bg: var(--color-status-alert-bg); /* alert: Fondo (alert) */
+  --alert-alert-text: var(--color-status-alert-text); /* alert: Texto (alert) */
+  --alert-alert-icon: var(--color-status-alert-icon); /* alert: Icono (alert) */
+  --alert-alert-border: var(--color-status-alert-border); /* alert: Borde (alert) */
+  --alert-error-bg: var(--color-status-error-bg); /* alert: Fondo (error) */
+  --alert-error-text: var(--color-status-error-text); /* alert: Texto (error) */
+  --alert-error-icon: var(--color-status-error-icon); /* alert: Icono (error) */
+  --alert-error-border: var(--color-status-error-border); /* alert: Borde (error) */
+  --alert-info-bg: var(--color-status-info-bg); /* alert: Fondo (info) */
+  --alert-info-text: var(--color-status-info-text); /* alert: Texto (info) */
+  --alert-info-icon: var(--color-status-info-icon); /* alert: Icono (info) */
+  --alert-info-border: var(--color-status-info-border); /* alert: Borde (info) */
+  --alert-success-bg: var(--color-status-success-bg); /* alert: Fondo (success) */
+  --alert-success-text: var(--color-status-success-text); /* alert: Texto (success) */
+  --alert-success-icon: var(--color-status-success-icon); /* alert: Icono (success) */
+  --alert-success-border: var(--color-status-success-border); /* alert: Borde (success) */
+  --badge-natural-bg: var(--color-surface-natural); /* badge natural: Fondo */
+  --badge-natural-text: var(--color-text-on-natural); /* badge natural: Texto e icono */
+  --badge-neutral-bg: var(--color-surface-inverse); /* badge neutral: Fondo */
+  --badge-neutral-text: var(--color-text-on-inverse); /* badge neutral: Texto e icono */
+  --badge-new-bg: var(--color-surface-badge-new); /* badge new: Fondo */
+  --badge-new-text: var(--color-text-on-badge); /* badge new: Texto e icono */
+  --button-disabled-bg: var(--color-surface-disabled); /* button disabled: Fondo */
+  --button-disabled-text: var(--color-text-disabled); /* button disabled: Texto e icono */
+  --button-disabled-border: var(--color-surface-disabled); /* button disabled: Borde */
+  --button-inverse-bg: var(--color-text-on-inverse); /* button inverse: Fondo */
+  --button-inverse-text: var(--color-text-default); /* button inverse: Texto e icono */
+  --button-inverse-border: var(--color-text-on-inverse); /* button inverse: Borde */
+  --button-inverse-bg-hover: var(--color-surface-brand); /* button inverse: Fondo en hover */
+  --button-inverse-text-hover: var(--color-text-default); /* button inverse: Texto e icono en hover */
+  --button-inverse-border-hover: var(--color-surface-brand); /* button inverse: Borde en hover */
+  --button-inverse-focus-ring: var(--color-text-brand-on-inverse); /* button inverse: Anillo de foco */
+  --button-primary-bg: var(--color-surface-inverse); /* button primary: Fondo */
+  --button-primary-text: var(--color-text-on-inverse); /* button primary: Texto e icono */
+  --button-primary-border: var(--color-border-default); /* button primary: Borde */
+  --button-primary-bg-hover: var(--color-surface-accent); /* button primary: Fondo en hover */
+  --button-primary-text-hover: var(--color-text-default); /* button primary: Texto e icono en hover */
+  --button-primary-border-hover: var(--color-border-default); /* button primary: Borde en hover */
+  --button-primary-focus-ring: var(--color-border-default); /* button primary: Anillo de foco */
+  --button-secondary-text: var(--color-text-default); /* button secondary: Texto e icono */
+  --button-secondary-border: var(--color-border-default); /* button secondary: Borde */
+  --button-secondary-bg-hover: var(--color-surface-inverse); /* button secondary: Fondo en hover */
+  --button-secondary-text-hover: var(--color-text-on-inverse); /* button secondary: Texto e icono en hover */
+  --button-secondary-border-hover: var(--color-border-default); /* button secondary: Borde en hover */
+  --button-secondary-focus-ring: var(--color-border-default); /* button secondary: Anillo de foco */
+  --checkbox-box-bg: var(--color-surface-card); /* checkbox: Fondo de la caja */
+  --checkbox-box-bg-hover: var(--color-surface-brand); /* checkbox: Fondo de la caja en hover */
+  --checkbox-box-border: var(--color-border-default); /* checkbox: Borde de la caja */
+  --checkbox-box-bg-checked: var(--color-surface-inverse); /* checkbox: Fondo de la caja marcada */
+  --checkbox-check: var(--color-text-on-inverse); /* checkbox: Check sobre la caja marcada */
+  --checkbox-label: var(--color-text-default); /* checkbox: Etiqueta */
+  --checkbox-focus-ring: var(--color-border-default); /* checkbox: Anillo de foco */
+  --checkbox-bg-disabled: var(--color-surface-disabled); /* checkbox: Fondo desactivado */
+  --checkbox-text-disabled: var(--color-text-disabled); /* checkbox: Etiqueta y check desactivados */
+  --checkbox-border-error: var(--color-status-error-border); /* checkbox: Borde con error */
+  --chip-bg: var(--color-surface-card); /* chip: Fondo */
+  --chip-text: var(--color-text-default); /* chip: Texto e icono */
+  --chip-border: var(--color-border-default); /* chip: Borde */
+  --chip-bg-hover: var(--color-surface-brand); /* chip: Fondo en hover */
+  --chip-bg-selected: var(--color-surface-inverse); /* chip: Fondo seleccionado */
+  --chip-text-selected: var(--color-text-on-inverse); /* chip: Texto seleccionado */
+  --chip-bg-disabled: var(--color-surface-disabled); /* chip: Fondo desactivado */
+  --chip-text-disabled: var(--color-text-disabled); /* chip: Texto desactivado */
+  --chip-height-s: 36px; /* chip: Altura mínima talla S (36px). Filtros densos y productos dentro de receta */
+  --chip-height-m: 40px; /* chip: Altura mínima talla M (40px). Filtros principales y uso táctil preferente */
+  --contest-card-bg: var(--color-surface-card); /* contest-card: Fondo */
+  --contest-card-border: var(--color-border-default); /* contest-card: Borde */
+  --contest-card-title: var(--color-text-default); /* contest-card: Título del concurso */
+  --contest-card-meta: var(--color-text-secondary); /* contest-card: Fechas y bases */
+  --contest-card-media-bg: var(--color-surface-page); /* contest-card: Fondo del hueco de imagen */
+  --decoration-noodle-brand: var(--color-surface-brand); /* Fideo decorativo en color de marca */
+  --decoration-noodle-accent: var(--color-surface-accent); /* Fideo decorativo en color de acento */
+  --decoration-noodle-texture: var(--color-yatekomo-amber); /* decoration-noodle: Fideo de la trama de fondo (ámbar opaco = naranja al 50 % sobre amarillo, como en las landings). Solo sobre color/surface/brand. */
+  --field-bg: var(--color-surface-card); /* field: Fondo del campo */
+  --field-bg-disabled: var(--color-surface-disabled); /* field: Fondo del campo desactivado */
+  --field-border: var(--color-border-default); /* field: Borde del campo */
+  --field-border-error: var(--color-status-error-border); /* field: Borde del campo con error */
+  --field-border-disabled: var(--color-surface-disabled); /* field: Borde del campo desactivado */
+  --field-focus-ring: var(--color-border-default); /* field: Anillo de foco del campo */
+  --field-text: var(--color-text-default); /* field: Valor escrito */
+  --field-placeholder: var(--color-text-secondary); /* field: Placeholder */
+  --field-label: var(--color-text-default); /* field: Etiqueta del campo */
+  --field-helper: var(--color-text-secondary); /* field: Texto de ayuda */
+  --field-error-text: var(--color-status-error-text); /* field: Mensaje e icono de error */
+  --field-text-disabled: var(--color-text-disabled); /* field: Texto desactivado */
+  --field-icon: var(--color-text-default); /* field: Iconos del campo (lupa, chevron, borrar) */
+  --field-menu-bg: var(--color-surface-card); /* field: Fondo del menú desplegable */
+  --field-option-hover-bg: var(--color-surface-brand); /* field: Fondo de la opción en hover */
+  --icon-button-size-m: 48px; /* icon-button: Lado de la talla M (48px), igual que la altura de Button M */
+  --icon-button-size-l: 64px; /* icon-button: Lado de la talla L (64px), igual que la altura de Button L */
+  --icon-color-default: var(--color-text-default); /* Color de icono por defecto (sobre page, brand, card) */
+  --icon-color-inverse: var(--color-text-on-inverse); /* Color de icono sobre surface/inverse */
+  --icon-size-sm: 16px; /* 16px. Iconos inline en texto y etiquetas */
+  --icon-size-md: 24px; /* 24px. Tamaño por defecto de icono */
+  --icon-size-lg: 32px; /* 32px. Iconos destacados (checks de producto, sociales) */
+  --icon-size-xl: 40px; /* 40px. Iconos grandes de bloque */
+  --ingredient-text: var(--color-text-default); /* ingredient: Nombre del ingrediente y texto corrido (alérgenos en negrita) */
+  --ingredient-percent-bg: var(--color-surface-natural); /* ingredient: Fondo del porcentaje */
+  --ingredient-percent-text: var(--color-text-on-natural); /* ingredient: Texto del porcentaje */
+  --ingredient-divider: var(--color-border-subtle); /* ingredient: Filete entre ingredientes principales (decorativo) */
+  --ingredient-meta: var(--color-text-secondary); /* ingredient: Notas y texto secundario */
+  --lang-switch-bg: var(--color-surface-card); /* lang-switch: Fondo */
+  --lang-switch-bg-selected: var(--color-surface-inverse); /* lang-switch: Fondo de la opción seleccionada */
+  --lang-switch-text: var(--color-text-default); /* lang-switch: Texto */
+  --lang-switch-text-selected: var(--color-text-on-inverse); /* lang-switch: Texto de la opción seleccionada */
+  --lang-switch-border: var(--color-border-default); /* lang-switch: Borde */
+  --link-default: var(--color-text-default); /* link: Color en reposo */
+  --link-hover: var(--color-text-natural); /* link: Color en hover */
+  --link-inverse: var(--color-text-on-inverse); /* link: Sobre fondo oscuro */
+  --link-inverse-hover: var(--color-text-brand-on-inverse); /* link: Hover sobre fondo oscuro */
+  --link-focus-ring: var(--color-border-default); /* link: Anillo de foco */
+  --link-inverse-focus-ring: var(--color-text-brand-on-inverse); /* link: Anillo de foco sobre fondo oscuro */
+  --modal-bg: var(--color-surface-card); /* modal: Fondo del diálogo */
+  --modal-border: var(--color-border-default); /* modal: Borde del diálogo */
+  --modal-title: var(--color-text-default); /* modal: Título */
+  --modal-text: var(--color-text-default); /* modal: Texto del cuerpo */
+  --modal-overlay: var(--color-surface-overlay); /* modal: Velo detrás del diálogo (translúcido) */
+  --modal-slot-bg: var(--color-surface-page); /* modal: Fondo del hueco de contenido (imagen de etiqueta, resultados) */
+  --modal-width-m: 560px; /* modal: Ancho del diálogo M (560px): alérgenos, resultado de concurso */
+  --modal-width-l: 880px; /* modal: Ancho del diálogo L (880px): etiqueta del envase, resultados de búsqueda */
+  --nav-item-text: var(--color-text-default); /* nav-item: Texto del enlace de navegación */
+  --nav-item-text-active: var(--color-text-default); /* nav-item: Texto del enlace activo */
+  --nav-item-indicator: var(--color-border-default); /* nav-item: Subrayado de la sección activa */
+  --nav-item-hover-bg: var(--color-surface-brand); /* nav-item: Fondo en hover */
+  --nav-item-focus-ring: var(--color-border-default); /* nav-item: Anillo de foco */
+  --nav-item-menu-text: var(--color-text-on-inverse); /* nav-item: Texto en el menú móvil */
+  --nav-item-menu-text-active: var(--color-text-brand-on-inverse); /* nav-item: Texto activo en el menú móvil */
+  --nav-item-menu-focus-ring: var(--color-text-brand-on-inverse); /* nav-item: Anillo de foco en el menú móvil */
+  --nutrition-label: var(--color-text-default); /* nutrition: Nombre del nutriente */
+  --nutrition-value: var(--color-text-default); /* nutrition: Valor por 100 g */
+  --nutrition-meta: var(--color-text-secondary); /* nutrition: % de ingesta de referencia y notas */
+  --nutrition-track: var(--color-border-subtle); /* nutrition: Pista de la barra (decorativa) */
+  --nutrition-fill: var(--color-surface-inverse); /* nutrition: Relleno de la barra (≥3:1 sobre la pista) */
+  --nutrition-fill-highlight: var(--color-surface-natural); /* nutrition: Relleno destacado para claims (≥3:1 sobre la pista) */
+  --nutrition-allergen: var(--color-text-default); /* nutrition: Línea de alérgenos (en negrita) */
+  --nutrition-bg: var(--color-surface-card); /* nutrition: Fondo del panel */
+  --nutrition-border: var(--color-border-default); /* nutrition: Borde del panel */
+  --product-card-bg: var(--color-surface-card); /* product-card: Fondo */
+  --product-card-border: var(--color-border-default); /* product-card: Borde */
+  --product-card-title: var(--color-text-default); /* product-card: Nombre del producto */
+  --product-card-meta: var(--color-text-secondary); /* product-card: Línea y texto secundario */
+  --product-card-media-bg: var(--color-surface-page); /* product-card: Fondo del hueco de imagen */
+  --product-card-focus-ring: var(--color-border-default); /* product-card: Anillo de foco */
+  --recipe-card-bg: var(--color-surface-card); /* recipe-card: Fondo */
+  --recipe-card-border: var(--color-border-default); /* recipe-card: Borde */
+  --recipe-card-title: var(--color-text-default); /* recipe-card: Título de la receta */
+  --recipe-card-meta: var(--color-text-secondary); /* recipe-card: Tiempo y metadatos (texto e icono) */
+  --recipe-card-media-bg: var(--color-surface-page); /* recipe-card: Fondo del hueco de imagen */
+  --recipe-card-focus-ring: var(--color-border-default); /* recipe-card: Anillo de foco */
+  --step-number-bg: var(--color-surface-brand); /* step: Fondo del número */
+  --step-number-text: var(--color-text-default); /* step: Número del paso */
+  --step-text: var(--color-text-default); /* step: Texto del paso */
+  --step-media-bg: var(--color-surface-page); /* step: Fondo del hueco de imagen o GIF */
+  --step-border: var(--color-border-default); /* step: Borde del número y del media */
+  --suggestion-bg: var(--color-surface-inverse); /* suggestion: Fondo */
+  --suggestion-bg-hover: var(--color-surface-brand); /* suggestion: Fondo en hover */
+  --suggestion-text: var(--color-text-on-inverse); /* suggestion: Texto e icono */
+  --suggestion-text-hover: var(--color-text-default); /* suggestion: Texto e icono en hover */
+  --suggestion-border: var(--color-border-default); /* suggestion: Borde */
+  --suggestion-focus-ring: var(--color-border-default); /* suggestion: Anillo de foco */
+  --tab-bg: var(--color-surface-card); /* tab: Fondo */
+  --tab-bg-hover: var(--color-surface-brand); /* tab: Fondo en hover */
+  --tab-bg-selected: var(--color-surface-inverse); /* tab: Fondo seleccionado */
+  --tab-text: var(--color-text-default); /* tab: Texto */
+  --tab-text-selected: var(--color-text-on-inverse); /* tab: Texto seleccionado */
+  --tab-border: var(--color-border-default); /* tab: Borde */
+  --tab-focus-ring: var(--color-border-default); /* tab: Anillo de foco */
+  --timer-bg: var(--color-surface-card); /* timer: Fondo */
+  --timer-border: var(--color-border-default); /* timer: Borde */
+  --timer-track: var(--color-border-subtle); /* timer: Pista del anillo (decorativa) */
+  --timer-progress: var(--color-surface-inverse); /* timer: Progreso del anillo (≥3:1 sobre la pista) */
+  --timer-progress-done: var(--color-surface-natural); /* timer: Anillo completo al terminar */
+  --timer-time: var(--color-text-default); /* timer: Tiempo restante */
+  --timer-label: var(--color-text-secondary); /* timer: Etiqueta y ayuda */
+  --timer-done-text: var(--color-text-natural); /* timer: Mensaje e icono de terminado */
+  --video-poster-bg: var(--color-surface-inverse); /* video: Fondo del póster hasta tener imagen */
+  --video-border: var(--color-border-default); /* video: Borde */
+  --video-play-bg: var(--color-surface-brand); /* video: Fondo del botón play */
+  --video-play-icon: var(--color-text-default); /* video: Icono play */
+  --video-meta-bg: var(--color-surface-inverse); /* video: Fondo de la duración */
+  --video-meta-text: var(--color-text-on-inverse); /* video: Texto de la duración y del póster */
+  --video-focus-ring: var(--color-text-brand-on-inverse); /* video: Anillo de foco del play (amarillo sobre póster oscuro) */
+  /* ---- Layer ---- */
+  --layer-base: 0; /* z-index 0. Contenido normal de la página */
+  --layer-raised: 10; /* z-index 10. Contenido por encima de imágenes dentro de una sección (copy del hero, banderas) */
+  --layer-sticky: 100; /* z-index 100. Navbar que se oculta al bajar y reaparece al subir */
+  --layer-floating: 200; /* z-index 200. Suggestion bubble flotante */
+  --layer-overlay: 300; /* z-index 300. Velo (scrim) detrás de modales */
+  --layer-modal: 400; /* z-index 400. Modales: etiqueta del envase, alérgenos, resultados */
+  --layer-toast: 500; /* z-index 500. Avisos temporales por encima de todo */
+  /* ---- Layout ---- */
+  --layout-columns: 12; /* Número de columnas del grid */
+  --layout-margin: 64px; /* Margen lateral de página */
+  --layout-gutter: 24px; /* Separación entre columnas */
+  --layout-content-max: 1280px; /* Ancho máximo del contenido */
+  --layout-frame: 1440px; /* Ancho del frame de diseño de referencia */
+  --layout-section-y: 96px; /* Padding vertical entre secciones */
+  --layout-reading: 720px; /* Ancho máximo de la columna de lectura (720 px): legales, respuestas del FAQ, textos largos de Natural formula. Es un máximo: en móvil manda el ancho de la columna. */
+  /* ---- Motion ---- */
+  --motion-duration-fast: 150ms; /* Microinteracciones: hover, foco */
+  --motion-duration-base: 250ms; /* Transiciones por defecto */
+  --motion-duration-slow: 400ms; /* Entradas de modales y paneles */
+  --motion-easing-standard: cubic-bezier(0.2, 0, 0, 1); /* Easing por defecto */
+  --motion-easing-emphasized: cubic-bezier(0.3, 1.3, 0.4, 1); /* Con rebote: momentos de marca */
   /* ---- Primitive ---- */
-  --color-yatekomo-yellow: #ffcb05; /* Amarillo de marca Yatekomo. Primitivo: no se consume en componentes. */
-  --color-yatekomo-yellow-soft: #fff5d9; /* Crema de fondo Yatekomo. Primitivo: no se consume en componentes. */
-  --color-yatekomo-orange: #e8890c; /* Naranja de acento Yatekomo. Primitivo: no se consume en componentes. */
-  --color-yatekomo-green: #007a33; /* Verde Pantone 356 C del claim natural. Primitivo: no se consume en componentes. */
   --color-neutral-ink-900: #121212; /* Tinta: texto y fondos oscuros. Primitivo: no se consume en componentes. */
   --color-neutral-ink-600: #6b6455; /* Gris cálido de texto secundario. Primitivo: no se consume en componentes. */
   --color-neutral-sand-200: #e4dcc8; /* Filete decorativo sobre crema. Primitivo: no se consume en componentes. */
@@ -25,10 +234,34 @@
   --color-status-info-50: #e5eef9; /* Fondo de información. Primitivo: no se consume en componentes. */
   --color-status-info-700: #1f63b5; /* Icono y borde de información. Primitivo: no se consume en componentes. */
   --color-status-info-900: #0b4482; /* Texto de información. Primitivo: no se consume en componentes. */
-  --shadow-ink-20: rgba(18, 18, 18, 0.2); /* Tinta al 20%. Translúcido permitido solo en sombras de elevación */
-  --overlay-ink-70: rgba(18, 18, 18, 0.7); /* Tinta al 70 %. Translúcido permitido solo en velos (overlay) de modales y paneles. Primitivo: no se consume en componentes. */
+  --color-yatekomo-yellow: #ffcb05; /* Amarillo de marca Yatekomo. Primitivo: no se consume en componentes. */
+  --color-yatekomo-yellow-soft: #fff5d9; /* Crema de fondo Yatekomo. Primitivo: no se consume en componentes. */
+  --color-yatekomo-orange: #e8890c; /* Naranja de acento Yatekomo. Primitivo: no se consume en componentes. */
+  --color-yatekomo-green: #007a33; /* Verde Pantone 356 C del claim natural. Primitivo: no se consume en componentes. */
   --color-yatekomo-amber: #f4aa09; /* Ámbar de la trama de fideos: el naranja de marca al 50 % sobre el amarillo, resuelto como color opaco (regla 7, sin transparencias). Primitivo: no se consume en componentes. */
+  --overlay-ink-70: rgba(18, 18, 18, 0.7); /* Tinta al 70 %. Translúcido permitido solo en velos (overlay) de modales y paneles. Primitivo: no se consume en componentes. */
+  --shadow-ink-20: rgba(18, 18, 18, 0.2); /* Tinta al 20%. Translúcido permitido solo en sombras de elevación */
   /* ---- Semantic ---- */
+  --color-border-default: var(--color-neutral-ink-900); /* Borde de componentes (botón ghost, formularios) */
+  --color-border-subtle: var(--color-neutral-sand-200); /* Filete decorativo de tablas. NO para límites de controles (1.3:1) */
+  --color-effect-shadow-brand: var(--color-yatekomo-yellow); /* Color de sombra dura de marca */
+  --color-effect-shadow-ink: var(--color-neutral-ink-900); /* Color de sombra dura neutra */
+  --color-status-alert-bg: var(--color-status-alert-50); /* Fondo de mensaje de alert */
+  --color-status-alert-text: var(--color-status-alert-900); /* Texto de alert sobre su bg (≥6.6:1) */
+  --color-status-alert-icon: var(--color-status-alert-700); /* Icono de alert (≥4.7:1 sobre bg y page) */
+  --color-status-alert-border: var(--color-status-alert-700); /* Borde de alert (≥4.7:1) */
+  --color-status-error-bg: var(--color-status-error-50); /* Fondo de mensaje de error */
+  --color-status-error-text: var(--color-status-error-900); /* Texto de error sobre su bg (≥6.6:1) */
+  --color-status-error-icon: var(--color-status-error-700); /* Icono de error (≥4.7:1 sobre bg y page) */
+  --color-status-error-border: var(--color-status-error-700); /* Borde de error (≥4.7:1) */
+  --color-status-info-bg: var(--color-status-info-50); /* Fondo de mensaje de info */
+  --color-status-info-text: var(--color-status-info-900); /* Texto de info sobre su bg (≥6.6:1) */
+  --color-status-info-icon: var(--color-status-info-700); /* Icono de info (≥4.7:1 sobre bg y page) */
+  --color-status-info-border: var(--color-status-info-700); /* Borde de info (≥4.7:1) */
+  --color-status-success-bg: var(--color-status-success-50); /* Fondo de mensaje de success */
+  --color-status-success-text: var(--color-status-success-900); /* Texto de success sobre su bg (≥6.6:1) */
+  --color-status-success-icon: var(--color-yatekomo-green); /* Icono de success (≥4.7:1 sobre bg y page) */
+  --color-status-success-border: var(--color-yatekomo-green); /* Borde de success (≥4.7:1) */
   --color-surface-page: var(--color-yatekomo-yellow-soft); /* Fondo base de página */
   --color-surface-brand: var(--color-yatekomo-yellow); /* Fondo de marca (amarillo común a todas las marcas) */
   --color-surface-card: var(--color-neutral-white); /* Fondo de card clara */
@@ -36,6 +269,8 @@
   --color-surface-natural: var(--color-yatekomo-green); /* Fondo del claim natural; texto encima: color/text/on-natural */
   --color-surface-accent: var(--color-yatekomo-orange); /* Acento decorativo. Texto encima solo color/text/default */
   --color-surface-badge-new: var(--color-red-600); /* Pill NUEVO; texto encima: color/text/on-badge */
+  --color-surface-disabled: var(--color-neutral-sand-200); /* Fondo de control desactivado */
+  --color-surface-overlay: var(--overlay-ink-70); /* Velo detrás de modales y del menú móvil (layer/overlay). Única superficie translúcida; nunca lleva texto encima. */
   --color-text-default: var(--color-neutral-ink-900); /* Texto principal (≥12:1 sobre page, brand y card) */
   --color-text-secondary: var(--color-neutral-ink-600); /* Texto secundario. Solo sobre page o card (5.4:1); NO sobre brand (3.85:1) */
   --color-text-on-inverse: var(--color-yatekomo-yellow-soft); /* Texto sobre surface/inverse (17:1) */
@@ -43,230 +278,16 @@
   --color-text-on-natural: var(--color-neutral-white); /* Texto sobre surface/natural (5.5:1) */
   --color-text-natural: var(--color-yatekomo-green); /* Texto verde natural sobre page (5.0:1). Sobre brand solo texto grande (3.6:1) */
   --color-text-on-badge: var(--color-neutral-white); /* Texto sobre surface/badge-new (4.7:1) */
-  --color-border-default: var(--color-neutral-ink-900); /* Borde de componentes (botón ghost, formularios) */
-  --color-border-subtle: var(--color-neutral-sand-200); /* Filete decorativo de tablas. NO para límites de controles (1.3:1) */
-  --color-effect-shadow-brand: var(--color-yatekomo-yellow); /* Color de sombra dura de marca */
-  --color-effect-shadow-ink: var(--color-neutral-ink-900); /* Color de sombra dura neutra */
-  --color-status-error-bg: var(--color-status-error-50); /* Fondo de mensaje de error */
-  --color-status-error-text: var(--color-status-error-900); /* Texto de error sobre su bg (≥6.6:1) */
-  --color-status-error-icon: var(--color-status-error-700); /* Icono de error (≥4.7:1 sobre bg y page) */
-  --color-status-error-border: var(--color-status-error-700); /* Borde de error (≥4.7:1) */
-  --color-status-success-bg: var(--color-status-success-50); /* Fondo de mensaje de success */
-  --color-status-success-text: var(--color-status-success-900); /* Texto de success sobre su bg (≥6.6:1) */
-  --color-status-success-icon: var(--color-yatekomo-green); /* Icono de success (≥4.7:1 sobre bg y page) */
-  --color-status-success-border: var(--color-yatekomo-green); /* Borde de success (≥4.7:1) */
-  --color-status-alert-bg: var(--color-status-alert-50); /* Fondo de mensaje de alert */
-  --color-status-alert-text: var(--color-status-alert-900); /* Texto de alert sobre su bg (≥6.6:1) */
-  --color-status-alert-icon: var(--color-status-alert-700); /* Icono de alert (≥4.7:1 sobre bg y page) */
-  --color-status-alert-border: var(--color-status-alert-700); /* Borde de alert (≥4.7:1) */
-  --color-status-info-bg: var(--color-status-info-50); /* Fondo de mensaje de info */
-  --color-status-info-text: var(--color-status-info-900); /* Texto de info sobre su bg (≥6.6:1) */
-  --color-status-info-icon: var(--color-status-info-700); /* Icono de info (≥4.7:1 sobre bg y page) */
-  --color-status-info-border: var(--color-status-info-700); /* Borde de info (≥4.7:1) */
-  --shadow-soft: var(--shadow-ink-20); /* Color de la sombra suave (elevation/3) */
-  --color-surface-disabled: var(--color-neutral-sand-200); /* Fondo de control desactivado */
   --color-text-disabled: var(--color-neutral-ink-600); /* Texto o icono de control desactivado (4.3:1 sobre surface/disabled) */
-  --color-surface-overlay: var(--overlay-ink-70); /* Velo detrás de modales y del menú móvil (layer/overlay). Única superficie translúcida; nunca lleva texto encima. */
-  /* ---- Components ---- */
-  --icon-size-sm: 16px; /* 16px. Iconos inline en texto y etiquetas */
-  --icon-size-md: 24px; /* 24px. Tamaño por defecto de icono */
-  --icon-size-lg: 32px; /* 32px. Iconos destacados (checks de producto, sociales) */
-  --icon-size-xl: 40px; /* 40px. Iconos grandes de bloque */
-  --icon-color-default: var(--color-text-default); /* Color de icono por defecto (sobre page, brand, card) */
-  --icon-color-inverse: var(--color-text-on-inverse); /* Color de icono sobre surface/inverse */
-  --decoration-noodle-brand: var(--color-surface-brand); /* Fideo decorativo en color de marca */
-  --decoration-noodle-accent: var(--color-surface-accent); /* Fideo decorativo en color de acento */
-  --button-primary-bg: var(--color-surface-inverse); /* button primary: Fondo */
-  --button-primary-text: var(--color-text-on-inverse); /* button primary: Texto e icono */
-  --button-primary-border: var(--color-border-default); /* button primary: Borde */
-  --button-primary-bg-hover: var(--color-surface-accent); /* button primary: Fondo en hover */
-  --button-primary-text-hover: var(--color-text-default); /* button primary: Texto e icono en hover */
-  --button-primary-border-hover: var(--color-border-default); /* button primary: Borde en hover */
-  --button-primary-focus-ring: var(--color-border-default); /* button primary: Anillo de foco */
-  --button-secondary-text: var(--color-text-default); /* button secondary: Texto e icono */
-  --button-secondary-border: var(--color-border-default); /* button secondary: Borde */
-  --button-secondary-bg-hover: var(--color-surface-inverse); /* button secondary: Fondo en hover */
-  --button-secondary-text-hover: var(--color-text-on-inverse); /* button secondary: Texto e icono en hover */
-  --button-secondary-border-hover: var(--color-border-default); /* button secondary: Borde en hover */
-  --button-secondary-focus-ring: var(--color-border-default); /* button secondary: Anillo de foco */
-  --button-inverse-bg: var(--color-text-on-inverse); /* button inverse: Fondo */
-  --button-inverse-text: var(--color-text-default); /* button inverse: Texto e icono */
-  --button-inverse-border: var(--color-text-on-inverse); /* button inverse: Borde */
-  --button-inverse-bg-hover: var(--color-surface-brand); /* button inverse: Fondo en hover */
-  --button-inverse-text-hover: var(--color-text-default); /* button inverse: Texto e icono en hover */
-  --button-inverse-border-hover: var(--color-surface-brand); /* button inverse: Borde en hover */
-  --button-inverse-focus-ring: var(--color-text-brand-on-inverse); /* button inverse: Anillo de foco */
-  --button-disabled-bg: var(--color-surface-disabled); /* button disabled: Fondo */
-  --button-disabled-text: var(--color-text-disabled); /* button disabled: Texto e icono */
-  --button-disabled-border: var(--color-surface-disabled); /* button disabled: Borde */
-  --link-default: var(--color-text-default); /* link: Color en reposo */
-  --link-hover: var(--color-text-natural); /* link: Color en hover */
-  --link-inverse: var(--color-text-on-inverse); /* link: Sobre fondo oscuro */
-  --link-inverse-hover: var(--color-text-brand-on-inverse); /* link: Hover sobre fondo oscuro */
-  --badge-new-bg: var(--color-surface-badge-new); /* badge new: Fondo */
-  --badge-new-text: var(--color-text-on-badge); /* badge new: Texto e icono */
-  --badge-natural-bg: var(--color-surface-natural); /* badge natural: Fondo */
-  --badge-natural-text: var(--color-text-on-natural); /* badge natural: Texto e icono */
-  --badge-neutral-bg: var(--color-surface-inverse); /* badge neutral: Fondo */
-  --badge-neutral-text: var(--color-text-on-inverse); /* badge neutral: Texto e icono */
-  --chip-bg: var(--color-surface-card); /* chip: Fondo */
-  --chip-text: var(--color-text-default); /* chip: Texto e icono */
-  --chip-border: var(--color-border-default); /* chip: Borde */
-  --chip-bg-hover: var(--color-surface-brand); /* chip: Fondo en hover */
-  --chip-bg-selected: var(--color-surface-inverse); /* chip: Fondo seleccionado */
-  --chip-text-selected: var(--color-text-on-inverse); /* chip: Texto seleccionado */
-  --chip-bg-disabled: var(--color-surface-disabled); /* chip: Fondo desactivado */
-  --chip-text-disabled: var(--color-text-disabled); /* chip: Texto desactivado */
-  --link-focus-ring: var(--color-border-default); /* link: Anillo de foco */
-  --link-inverse-focus-ring: var(--color-text-brand-on-inverse); /* link: Anillo de foco sobre fondo oscuro */
-  --field-bg: var(--color-surface-card); /* field: Fondo del campo */
-  --field-bg-disabled: var(--color-surface-disabled); /* field: Fondo del campo desactivado */
-  --field-border: var(--color-border-default); /* field: Borde del campo */
-  --field-border-error: var(--color-status-error-border); /* field: Borde del campo con error */
-  --field-border-disabled: var(--color-surface-disabled); /* field: Borde del campo desactivado */
-  --field-focus-ring: var(--color-border-default); /* field: Anillo de foco del campo */
-  --field-text: var(--color-text-default); /* field: Valor escrito */
-  --field-placeholder: var(--color-text-secondary); /* field: Placeholder */
-  --field-label: var(--color-text-default); /* field: Etiqueta del campo */
-  --field-helper: var(--color-text-secondary); /* field: Texto de ayuda */
-  --field-error-text: var(--color-status-error-text); /* field: Mensaje e icono de error */
-  --field-text-disabled: var(--color-text-disabled); /* field: Texto desactivado */
-  --field-icon: var(--color-text-default); /* field: Iconos del campo (lupa, chevron, borrar) */
-  --field-menu-bg: var(--color-surface-card); /* field: Fondo del menú desplegable */
-  --field-option-hover-bg: var(--color-surface-brand); /* field: Fondo de la opción en hover */
-  --checkbox-box-bg: var(--color-surface-card); /* checkbox: Fondo de la caja */
-  --checkbox-box-bg-hover: var(--color-surface-brand); /* checkbox: Fondo de la caja en hover */
-  --checkbox-box-border: var(--color-border-default); /* checkbox: Borde de la caja */
-  --checkbox-box-bg-checked: var(--color-surface-inverse); /* checkbox: Fondo de la caja marcada */
-  --checkbox-check: var(--color-text-on-inverse); /* checkbox: Check sobre la caja marcada */
-  --checkbox-label: var(--color-text-default); /* checkbox: Etiqueta */
-  --checkbox-focus-ring: var(--color-border-default); /* checkbox: Anillo de foco */
-  --checkbox-bg-disabled: var(--color-surface-disabled); /* checkbox: Fondo desactivado */
-  --checkbox-text-disabled: var(--color-text-disabled); /* checkbox: Etiqueta y check desactivados */
-  --checkbox-border-error: var(--color-status-error-border); /* checkbox: Borde con error */
-  --nav-item-text: var(--color-text-default); /* nav-item: Texto del enlace de navegación */
-  --nav-item-text-active: var(--color-text-default); /* nav-item: Texto del enlace activo */
-  --nav-item-indicator: var(--color-border-default); /* nav-item: Subrayado de la sección activa */
-  --nav-item-hover-bg: var(--color-surface-brand); /* nav-item: Fondo en hover */
-  --nav-item-focus-ring: var(--color-border-default); /* nav-item: Anillo de foco */
-  --nav-item-menu-text: var(--color-text-on-inverse); /* nav-item: Texto en el menú móvil */
-  --nav-item-menu-text-active: var(--color-text-brand-on-inverse); /* nav-item: Texto activo en el menú móvil */
-  --nav-item-menu-focus-ring: var(--color-text-brand-on-inverse); /* nav-item: Anillo de foco en el menú móvil */
-  --tab-bg: var(--color-surface-card); /* tab: Fondo */
-  --tab-bg-hover: var(--color-surface-brand); /* tab: Fondo en hover */
-  --tab-bg-selected: var(--color-surface-inverse); /* tab: Fondo seleccionado */
-  --tab-text: var(--color-text-default); /* tab: Texto */
-  --tab-text-selected: var(--color-text-on-inverse); /* tab: Texto seleccionado */
-  --tab-border: var(--color-border-default); /* tab: Borde */
-  --tab-focus-ring: var(--color-border-default); /* tab: Anillo de foco */
-  --lang-switch-bg: var(--color-surface-card); /* lang-switch: Fondo */
-  --lang-switch-bg-selected: var(--color-surface-inverse); /* lang-switch: Fondo de la opción seleccionada */
-  --lang-switch-text: var(--color-text-default); /* lang-switch: Texto */
-  --lang-switch-text-selected: var(--color-text-on-inverse); /* lang-switch: Texto de la opción seleccionada */
-  --lang-switch-border: var(--color-border-default); /* lang-switch: Borde */
-  --chip-height-s: 36px; /* chip: Altura mínima talla S (36px). Filtros densos y productos dentro de receta */
-  --chip-height-m: 40px; /* chip: Altura mínima talla M (40px). Filtros principales y uso táctil preferente */
-  --product-card-bg: var(--color-surface-card); /* product-card: Fondo */
-  --product-card-border: var(--color-border-default); /* product-card: Borde */
-  --product-card-title: var(--color-text-default); /* product-card: Nombre del producto */
-  --product-card-meta: var(--color-text-secondary); /* product-card: Línea y texto secundario */
-  --product-card-media-bg: var(--color-surface-page); /* product-card: Fondo del hueco de imagen */
-  --product-card-focus-ring: var(--color-border-default); /* product-card: Anillo de foco */
-  --recipe-card-bg: var(--color-surface-card); /* recipe-card: Fondo */
-  --recipe-card-border: var(--color-border-default); /* recipe-card: Borde */
-  --recipe-card-title: var(--color-text-default); /* recipe-card: Título de la receta */
-  --recipe-card-meta: var(--color-text-secondary); /* recipe-card: Tiempo y metadatos (texto e icono) */
-  --recipe-card-media-bg: var(--color-surface-page); /* recipe-card: Fondo del hueco de imagen */
-  --recipe-card-focus-ring: var(--color-border-default); /* recipe-card: Anillo de foco */
-  --contest-card-bg: var(--color-surface-card); /* contest-card: Fondo */
-  --contest-card-border: var(--color-border-default); /* contest-card: Borde */
-  --contest-card-title: var(--color-text-default); /* contest-card: Título del concurso */
-  --contest-card-meta: var(--color-text-secondary); /* contest-card: Fechas y bases */
-  --contest-card-media-bg: var(--color-surface-page); /* contest-card: Fondo del hueco de imagen */
-  --accordion-bg: var(--color-surface-card); /* accordion: Fondo */
-  --accordion-bg-hover: var(--color-surface-brand); /* accordion: Fondo en hover */
-  --accordion-border: var(--color-border-default); /* accordion: Borde */
-  --accordion-question: var(--color-text-default); /* accordion: Pregunta */
-  --accordion-answer: var(--color-text-default); /* accordion: Respuesta */
-  --accordion-icon: var(--color-text-default); /* accordion: Icono plus/minus */
-  --accordion-focus-ring: var(--color-border-default); /* accordion: Anillo de foco */
-  --ingredient-text: var(--color-text-default); /* ingredient: Nombre del ingrediente y texto corrido (alérgenos en negrita) */
-  --ingredient-percent-bg: var(--color-surface-natural); /* ingredient: Fondo del porcentaje */
-  --ingredient-percent-text: var(--color-text-on-natural); /* ingredient: Texto del porcentaje */
-  --ingredient-divider: var(--color-border-subtle); /* ingredient: Filete entre ingredientes principales (decorativo) */
-  --nutrition-label: var(--color-text-default); /* nutrition: Nombre del nutriente */
-  --nutrition-value: var(--color-text-default); /* nutrition: Valor por 100 g */
-  --nutrition-meta: var(--color-text-secondary); /* nutrition: % de ingesta de referencia y notas */
-  --nutrition-track: var(--color-border-subtle); /* nutrition: Pista de la barra (decorativa) */
-  --nutrition-fill: var(--color-surface-inverse); /* nutrition: Relleno de la barra (≥3:1 sobre la pista) */
-  --nutrition-fill-highlight: var(--color-surface-natural); /* nutrition: Relleno destacado para claims (≥3:1 sobre la pista) */
-  --nutrition-allergen: var(--color-text-default); /* nutrition: Línea de alérgenos (en negrita) */
-  --step-number-bg: var(--color-surface-brand); /* step: Fondo del número */
-  --step-number-text: var(--color-text-default); /* step: Número del paso */
-  --step-text: var(--color-text-default); /* step: Texto del paso */
-  --step-media-bg: var(--color-surface-page); /* step: Fondo del hueco de imagen o GIF */
-  --step-border: var(--color-border-default); /* step: Borde del número y del media */
-  --ingredient-meta: var(--color-text-secondary); /* ingredient: Notas y texto secundario */
-  --nutrition-bg: var(--color-surface-card); /* nutrition: Fondo del panel */
-  --nutrition-border: var(--color-border-default); /* nutrition: Borde del panel */
-  --modal-bg: var(--color-surface-card); /* modal: Fondo del diálogo */
-  --modal-border: var(--color-border-default); /* modal: Borde del diálogo */
-  --modal-title: var(--color-text-default); /* modal: Título */
-  --modal-text: var(--color-text-default); /* modal: Texto del cuerpo */
-  --modal-overlay: var(--color-surface-overlay); /* modal: Velo detrás del diálogo (translúcido) */
-  --modal-slot-bg: var(--color-surface-page); /* modal: Fondo del hueco de contenido (imagen de etiqueta, resultados) */
-  --suggestion-bg: var(--color-surface-inverse); /* suggestion: Fondo */
-  --suggestion-bg-hover: var(--color-surface-brand); /* suggestion: Fondo en hover */
-  --suggestion-text: var(--color-text-on-inverse); /* suggestion: Texto e icono */
-  --suggestion-text-hover: var(--color-text-default); /* suggestion: Texto e icono en hover */
-  --suggestion-border: var(--color-border-default); /* suggestion: Borde */
-  --suggestion-focus-ring: var(--color-border-default); /* suggestion: Anillo de foco */
-  --timer-bg: var(--color-surface-card); /* timer: Fondo */
-  --timer-border: var(--color-border-default); /* timer: Borde */
-  --timer-track: var(--color-border-subtle); /* timer: Pista del anillo (decorativa) */
-  --timer-progress: var(--color-surface-inverse); /* timer: Progreso del anillo (≥3:1 sobre la pista) */
-  --timer-progress-done: var(--color-surface-natural); /* timer: Anillo completo al terminar */
-  --timer-time: var(--color-text-default); /* timer: Tiempo restante */
-  --timer-label: var(--color-text-secondary); /* timer: Etiqueta y ayuda */
-  --timer-done-text: var(--color-text-natural); /* timer: Mensaje e icono de terminado */
-  --video-poster-bg: var(--color-surface-inverse); /* video: Fondo del póster hasta tener imagen */
-  --video-border: var(--color-border-default); /* video: Borde */
-  --video-play-bg: var(--color-surface-brand); /* video: Fondo del botón play */
-  --video-play-icon: var(--color-text-default); /* video: Icono play */
-  --video-meta-bg: var(--color-surface-inverse); /* video: Fondo de la duración */
-  --video-meta-text: var(--color-text-on-inverse); /* video: Texto de la duración y del póster */
-  --video-focus-ring: var(--color-text-brand-on-inverse); /* video: Anillo de foco del play (amarillo sobre póster oscuro) */
-  --alert-info-bg: var(--color-status-info-bg); /* alert: Fondo (info) */
-  --alert-info-text: var(--color-status-info-text); /* alert: Texto (info) */
-  --alert-info-icon: var(--color-status-info-icon); /* alert: Icono (info) */
-  --alert-info-border: var(--color-status-info-border); /* alert: Borde (info) */
-  --alert-success-bg: var(--color-status-success-bg); /* alert: Fondo (success) */
-  --alert-success-text: var(--color-status-success-text); /* alert: Texto (success) */
-  --alert-success-icon: var(--color-status-success-icon); /* alert: Icono (success) */
-  --alert-success-border: var(--color-status-success-border); /* alert: Borde (success) */
-  --alert-alert-bg: var(--color-status-alert-bg); /* alert: Fondo (alert) */
-  --alert-alert-text: var(--color-status-alert-text); /* alert: Texto (alert) */
-  --alert-alert-icon: var(--color-status-alert-icon); /* alert: Icono (alert) */
-  --alert-alert-border: var(--color-status-alert-border); /* alert: Borde (alert) */
-  --alert-error-bg: var(--color-status-error-bg); /* alert: Fondo (error) */
-  --alert-error-text: var(--color-status-error-text); /* alert: Texto (error) */
-  --alert-error-icon: var(--color-status-error-icon); /* alert: Icono (error) */
-  --alert-error-border: var(--color-status-error-border); /* alert: Borde (error) */
-  --alert-close: var(--color-text-default); /* alert: Icono cerrar */
-  --modal-width-m: 560px; /* modal: Ancho del diálogo M (560px): alérgenos, resultado de concurso */
-  --modal-width-l: 880px; /* modal: Ancho del diálogo L (880px): etiqueta del envase, resultados de búsqueda */
-  --icon-button-size-m: 48px; /* icon-button: Lado de la talla M (48px), igual que la altura de Button M */
-  --icon-button-size-l: 64px; /* icon-button: Lado de la talla L (64px), igual que la altura de Button L */
-  --decoration-noodle-texture: var(--color-yatekomo-amber); /* decoration-noodle: Fideo de la trama de fondo (ámbar opaco = naranja al 50 % sobre amarillo, como en las landings). Solo sobre color/surface/brand. */
-  /* ---- Layer ---- */
-  --layer-base: 0; /* z-index 0. Contenido normal de la página */
-  --layer-raised: 10; /* z-index 10. Contenido por encima de imágenes dentro de una sección (copy del hero, banderas) */
-  --layer-sticky: 100; /* z-index 100. Navbar que se oculta al bajar y reaparece al subir */
-  --layer-floating: 200; /* z-index 200. Suggestion bubble flotante */
-  --layer-overlay: 300; /* z-index 300. Velo (scrim) detrás de modales */
-  --layer-modal: 400; /* z-index 400. Modales: etiqueta del envase, alérgenos, resultados */
-  --layer-toast: 500; /* z-index 500. Avisos temporales por encima de todo */
+  --shadow-soft: var(--shadow-ink-20); /* Color de la sombra suave (elevation/3) */
   /* ---- Spacing ---- */
+  --border-width-thin: 2px; /* Hairline: separadores, inputs en reposo */
+  --border-width-thick: 4px; /* Borde de marca: botón secundario, foco, cards destacadas */
+  --radius-none: 0; /* Sin radio */
+  --radius-sm: 8px; /* Inputs, chips, etiquetas */
+  --radius-md: 16px; /* Cards y media */
+  --radius-lg: 24px; /* Bloques y módulos grandes */
+  --radius-pill: 999px; /* Botones y pills (totalmente redondeado) */
   --space-2: 2px; /* 2px · excepción del grid (hairline/micro) */
   --space-4: 4px; /* 4px · excepción del grid (hairline/micro) */
   --space-8: 8px; /* 8px · grid de 8 */
@@ -280,75 +301,78 @@
   --space-80: 80px; /* 80px · grid de 8 */
   --space-96: 96px; /* 96px · grid de 8 */
   --space-128: 128px; /* 128px · grid de 8 */
-  --radius-none: 0; /* Sin radio */
-  --radius-sm: 8px; /* Inputs, chips, etiquetas */
-  --radius-md: 16px; /* Cards y media */
-  --radius-lg: 24px; /* Bloques y módulos grandes */
-  --radius-pill: 999px; /* Botones y pills (totalmente redondeado) */
-  --border-width-thin: 2px; /* Hairline: separadores, inputs en reposo */
-  --border-width-thick: 4px; /* Borde de marca: botón secundario, foco, cards destacadas */
-  /* ---- Layout ---- */
-  --layout-columns: 12; /* Número de columnas del grid */
-  --layout-margin: 64px; /* Margen lateral de página */
-  --layout-gutter: 24px; /* Separación entre columnas */
-  --layout-content-max: 1280px; /* Ancho máximo del contenido */
-  --layout-frame: 1440px; /* Ancho del frame de diseño de referencia */
-  --layout-section-y: 96px; /* Padding vertical entre secciones */
-  --layout-reading: 720px; /* Ancho máximo de la columna de lectura (720 px): legales, respuestas del FAQ, textos largos de Natural formula. Es un máximo: en móvil manda el ancho de la columna. */
   /* ---- Typography ---- */
   --font-family-display: Anton; /* Display: titulares, labels de botón. Siempre mayúsculas. Provisional hasta resolver licencia/fuente con acentos */
   --font-family-body: Archivo; /* Texto corrido, formularios, navegación */
+  --font-line-height-desktop-display: 96px; /* display desktop: interlineado 1.0 */
+  --font-line-height-desktop-h1: 68px; /* h1 desktop: interlineado 1.05 */
+  --font-line-height-desktop-h2: 52px; /* h2 desktop: interlineado 1.1 */
+  --font-line-height-desktop-h3: 36px; /* h3 desktop: interlineado 1.15 */
+  --font-line-height-desktop-label: 16px; /* label desktop: interlineado 1.0 */
+  --font-line-height-desktop-body-l: 32px; /* body-l desktop: interlineado 1.5 */
+  --font-line-height-desktop-body-m: 24px; /* body-m desktop: interlineado 1.5 */
+  --font-line-height-desktop-body-s: 20px; /* body-s desktop: interlineado 1.5 */
+  --font-line-height-desktop-caption: 16px; /* caption desktop: interlineado 1.4 */
+  --font-line-height-mobile-display: 56px; /* display mobile: interlineado 1.0 */
+  --font-line-height-mobile-h1: 40px; /* h1 mobile: interlineado 1.05 */
+  --font-line-height-mobile-h2: 36px; /* h2 mobile: interlineado 1.1 */
+  --font-line-height-mobile-h3: 28px; /* h3 mobile: interlineado 1.15 */
+  --font-line-height-mobile-label: 16px; /* label mobile: interlineado 1.0 */
+  --font-line-height-mobile-body-l: 28px; /* body-l mobile: interlineado 1.5 */
+  --font-line-height-mobile-body-m: 24px; /* body-m mobile: interlineado 1.5 */
+  --font-line-height-mobile-body-s: 20px; /* body-s mobile: interlineado 1.5 */
+  --font-line-height-mobile-caption: 16px; /* caption mobile: interlineado 1.4 */
+  --font-size-desktop-display: 96px; /* display desktop: 96px */
+  --font-size-desktop-h1: 64px; /* h1 desktop: 64px */
+  --font-size-desktop-h2: 48px; /* h2 desktop: 48px */
+  --font-size-desktop-h3: 32px; /* h3 desktop: 32px */
+  --font-size-desktop-label: 16px; /* label desktop: 16px */
+  --font-size-desktop-body-l: 20px; /* body-l desktop: 20px */
+  --font-size-desktop-body-m: 16px; /* body-m desktop: 16px */
+  --font-size-desktop-body-s: 14px; /* body-s desktop: 14px */
+  --font-size-desktop-caption: 12px; /* caption desktop: 12px */
+  --font-size-mobile-display: 56px; /* display mobile: 56px */
+  --font-size-mobile-h1: 40px; /* h1 mobile: 40px */
+  --font-size-mobile-h2: 32px; /* h2 mobile: 32px */
+  --font-size-mobile-h3: 24px; /* h3 mobile: 24px */
+  --font-size-mobile-label: 14px; /* label mobile: 14px */
+  --font-size-mobile-body-l: 18px; /* body-l mobile: 18px */
+  --font-size-mobile-body-m: 16px; /* body-m mobile: 16px */
+  --font-size-mobile-body-s: 14px; /* body-s mobile: 14px */
+  --font-size-mobile-caption: 12px; /* caption mobile: 12px */
   --font-style-display: Regular; /* Anton solo tiene Regular */
   --font-style-body: Regular; /* Cuerpo regular */
   --font-style-body-strong: Bold; /* Cuerpo en negrita (alérgenos, énfasis) */
-  --font-size-desktop-display: 96px; /* display desktop: 96px */
-  --font-line-height-desktop-display: 96px; /* display desktop: interlineado 1.0 */
-  --font-size-mobile-display: 56px; /* display mobile: 56px */
-  --font-line-height-mobile-display: 56px; /* display mobile: interlineado 1.0 */
-  --font-size-desktop-h1: 64px; /* h1 desktop: 64px */
-  --font-line-height-desktop-h1: 68px; /* h1 desktop: interlineado 1.05 */
-  --font-size-mobile-h1: 40px; /* h1 mobile: 40px */
-  --font-line-height-mobile-h1: 40px; /* h1 mobile: interlineado 1.05 */
-  --font-size-desktop-h2: 48px; /* h2 desktop: 48px */
-  --font-line-height-desktop-h2: 52px; /* h2 desktop: interlineado 1.1 */
-  --font-size-mobile-h2: 32px; /* h2 mobile: 32px */
-  --font-line-height-mobile-h2: 36px; /* h2 mobile: interlineado 1.1 */
-  --font-size-desktop-h3: 32px; /* h3 desktop: 32px */
-  --font-line-height-desktop-h3: 36px; /* h3 desktop: interlineado 1.15 */
-  --font-size-mobile-h3: 24px; /* h3 mobile: 24px */
-  --font-line-height-mobile-h3: 28px; /* h3 mobile: interlineado 1.15 */
-  --font-size-desktop-label: 16px; /* label desktop: 16px */
-  --font-line-height-desktop-label: 16px; /* label desktop: interlineado 1.0 */
-  --font-size-mobile-label: 14px; /* label mobile: 14px */
-  --font-line-height-mobile-label: 16px; /* label mobile: interlineado 1.0 */
-  --font-size-desktop-body-l: 20px; /* body-l desktop: 20px */
-  --font-line-height-desktop-body-l: 32px; /* body-l desktop: interlineado 1.5 */
-  --font-size-mobile-body-l: 18px; /* body-l mobile: 18px */
-  --font-line-height-mobile-body-l: 28px; /* body-l mobile: interlineado 1.5 */
-  --font-size-desktop-body-m: 16px; /* body-m desktop: 16px */
-  --font-line-height-desktop-body-m: 24px; /* body-m desktop: interlineado 1.5 */
-  --font-size-mobile-body-m: 16px; /* body-m mobile: 16px */
-  --font-line-height-mobile-body-m: 24px; /* body-m mobile: interlineado 1.5 */
-  --font-size-desktop-body-s: 14px; /* body-s desktop: 14px */
-  --font-line-height-desktop-body-s: 20px; /* body-s desktop: interlineado 1.5 */
-  --font-size-mobile-body-s: 14px; /* body-s mobile: 14px */
-  --font-line-height-mobile-body-s: 20px; /* body-s mobile: interlineado 1.5 */
-  --font-size-desktop-caption: 12px; /* caption desktop: 12px */
-  --font-line-height-desktop-caption: 16px; /* caption desktop: interlineado 1.4 */
-  --font-size-mobile-caption: 12px; /* caption mobile: 12px */
-  --font-line-height-mobile-caption: 16px; /* caption mobile: interlineado 1.4 */
-  /* ---- Motion ---- */
-  --motion-duration-fast: 150ms; /* Microinteracciones: hover, foco */
-  --motion-duration-base: 250ms; /* Transiciones por defecto */
-  --motion-duration-slow: 400ms; /* Entradas de modales y paneles */
-  --motion-easing-standard: cubic-bezier(0.2, 0, 0, 1); /* Easing por defecto */
-  --motion-easing-emphasized: cubic-bezier(0.3, 1.3, 0.4, 1); /* Con rebote: momentos de marca */
   /* ---- Elevation (effect styles) ---- */
   --elevation-0: none; /* elevation/0 */
   --elevation-1: 4px 4px 0px 0px #121212; /* elevation/1 */
   --elevation-2: 8px 8px 0px 0px #121212; /* elevation/2 */
   --elevation-3: 0px 8px 24px 0px rgba(18, 18, 18, 0.2); /* elevation/3 */
   /* ---- Tipografía (text styles) ---- */
+  /* Desktop/body-l */
+  --font-desktop-body-l-family: "Archivo";
+  --font-desktop-body-l-size: var(--font-size-desktop-body-l);
+  --font-desktop-body-l-weight: 400;
+  --font-desktop-body-l-line-height: 32px;
+  --font-desktop-body-l-letter-spacing: 0;
+  /* Desktop/body-m */
+  --font-desktop-body-m-family: "Archivo";
+  --font-desktop-body-m-size: var(--font-size-desktop-body-m);
+  --font-desktop-body-m-weight: 400;
+  --font-desktop-body-m-line-height: 24px;
+  --font-desktop-body-m-letter-spacing: 0;
+  /* Desktop/body-s */
+  --font-desktop-body-s-family: "Archivo";
+  --font-desktop-body-s-size: var(--font-size-desktop-body-s);
+  --font-desktop-body-s-weight: 400;
+  --font-desktop-body-s-line-height: 20px;
+  --font-desktop-body-s-letter-spacing: 0;
+  /* Desktop/caption */
+  --font-desktop-caption-family: "Archivo";
+  --font-desktop-caption-size: var(--font-size-desktop-caption);
+  --font-desktop-caption-weight: 400;
+  --font-desktop-caption-line-height: 16px;
+  --font-desktop-caption-letter-spacing: 0;
   /* Desktop/display */
   --font-desktop-display-family: "Anton";
   --font-desktop-display-size: var(--font-size-desktop-display);
@@ -379,30 +403,30 @@
   --font-desktop-label-weight: 400;
   --font-desktop-label-line-height: 16px;
   --font-desktop-label-letter-spacing: 0;
-  /* Desktop/body-l */
-  --font-desktop-body-l-family: "Archivo";
-  --font-desktop-body-l-size: var(--font-size-desktop-body-l);
-  --font-desktop-body-l-weight: 400;
-  --font-desktop-body-l-line-height: 32px;
-  --font-desktop-body-l-letter-spacing: 0;
-  /* Desktop/body-m */
-  --font-desktop-body-m-family: "Archivo";
-  --font-desktop-body-m-size: var(--font-size-desktop-body-m);
-  --font-desktop-body-m-weight: 400;
-  --font-desktop-body-m-line-height: 24px;
-  --font-desktop-body-m-letter-spacing: 0;
-  /* Desktop/body-s */
-  --font-desktop-body-s-family: "Archivo";
-  --font-desktop-body-s-size: var(--font-size-desktop-body-s);
-  --font-desktop-body-s-weight: 400;
-  --font-desktop-body-s-line-height: 20px;
-  --font-desktop-body-s-letter-spacing: 0;
-  /* Desktop/caption */
-  --font-desktop-caption-family: "Archivo";
-  --font-desktop-caption-size: var(--font-size-desktop-caption);
-  --font-desktop-caption-weight: 400;
-  --font-desktop-caption-line-height: 16px;
-  --font-desktop-caption-letter-spacing: 0;
+  /* Mobile/body-l */
+  --font-mobile-body-l-family: "Archivo";
+  --font-mobile-body-l-size: var(--font-size-mobile-body-l);
+  --font-mobile-body-l-weight: 400;
+  --font-mobile-body-l-line-height: 28px;
+  --font-mobile-body-l-letter-spacing: 0;
+  /* Mobile/body-m */
+  --font-mobile-body-m-family: "Archivo";
+  --font-mobile-body-m-size: var(--font-size-mobile-body-m);
+  --font-mobile-body-m-weight: 400;
+  --font-mobile-body-m-line-height: 24px;
+  --font-mobile-body-m-letter-spacing: 0;
+  /* Mobile/body-s */
+  --font-mobile-body-s-family: "Archivo";
+  --font-mobile-body-s-size: var(--font-size-mobile-body-s);
+  --font-mobile-body-s-weight: 400;
+  --font-mobile-body-s-line-height: 20px;
+  --font-mobile-body-s-letter-spacing: 0;
+  /* Mobile/caption */
+  --font-mobile-caption-family: "Archivo";
+  --font-mobile-caption-size: var(--font-size-mobile-caption);
+  --font-mobile-caption-weight: 400;
+  --font-mobile-caption-line-height: 16px;
+  --font-mobile-caption-letter-spacing: 0;
   /* Mobile/display */
   --font-mobile-display-family: "Anton";
   --font-mobile-display-size: var(--font-size-mobile-display);
@@ -433,30 +457,6 @@
   --font-mobile-label-weight: 400;
   --font-mobile-label-line-height: 16px;
   --font-mobile-label-letter-spacing: 0;
-  /* Mobile/body-l */
-  --font-mobile-body-l-family: "Archivo";
-  --font-mobile-body-l-size: var(--font-size-mobile-body-l);
-  --font-mobile-body-l-weight: 400;
-  --font-mobile-body-l-line-height: 28px;
-  --font-mobile-body-l-letter-spacing: 0;
-  /* Mobile/body-m */
-  --font-mobile-body-m-family: "Archivo";
-  --font-mobile-body-m-size: var(--font-size-mobile-body-m);
-  --font-mobile-body-m-weight: 400;
-  --font-mobile-body-m-line-height: 24px;
-  --font-mobile-body-m-letter-spacing: 0;
-  /* Mobile/body-s */
-  --font-mobile-body-s-family: "Archivo";
-  --font-mobile-body-s-size: var(--font-size-mobile-body-s);
-  --font-mobile-body-s-weight: 400;
-  --font-mobile-body-s-line-height: 20px;
-  --font-mobile-body-s-letter-spacing: 0;
-  /* Mobile/caption */
-  --font-mobile-caption-family: "Archivo";
-  --font-mobile-caption-size: var(--font-size-mobile-caption);
-  --font-mobile-caption-weight: 400;
-  --font-mobile-caption-line-height: 16px;
-  --font-mobile-caption-letter-spacing: 0;
 }
 
 :root[data-theme="dark"] {
@@ -480,20 +480,4 @@
     --layout-frame: 375px;
     --layout-section-y: 64px;
   }
-}
-
-[data-brand="saikebon"] { /* marca Saikebon · solo lo que difiere de Yatekomo · el atributo va en <html> */
-  /* sin diferencias con Yatekomo en Figma todavía */
-}
-
-[data-brand="aiki"] { /* marca Aiki · solo lo que difiere de Yatekomo · el atributo va en <html> */
-  /* sin diferencias con Yatekomo en Figma todavía */
-}
-
-[data-brand="daisuki"] { /* marca Daisuki · solo lo que difiere de Yatekomo · el atributo va en <html> */
-  /* sin diferencias con Yatekomo en Figma todavía */
-}
-
-[data-brand="de"] { /* marca DE · solo lo que difiere de Yatekomo · el atributo va en <html> */
-  /* sin diferencias con Yatekomo en Figma todavía */
 }

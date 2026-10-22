@@ -1,0 +1,217 @@
+{
+  "title": "Where to buy",
+  "description": "Dónde comprar (Home, página de producto; wireframe UX): antetítulo «Where to buy?» + título (h2, estilo h3) «You can find us at these shops» · fila de logos de distribuidores del…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "where-to-buy",
+      "name": "Where to buy",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "92:990",
+      "current": {
+        "description": "Dónde comprar (Home, página de producto; wireframe UX): antetítulo «Where to buy?» + título (h2, estilo h3) «You can find us at these shops» · fila de logos de distribuidores del país. Cada logo es un enlace externo (<a target=\"_blank\" rel=\"noopener\">) con el logo como imagen y nombre accesible «<Distribuidor> (abre en una pestaña nueva)»; sin tarjeta: el logo va directo sobre color/surface/brand, con la trama de fideos (Decoration / Noodle texture) a sangre por la derecha, detrás. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: texto a la izquierda y logos a la derecha; Mobile: texto arriba y logos en fila con scroll horizontal. Sin variables propias.",
+        "Propósito": "Dónde comprar (wireframe UX): antetítulo, título y logos de los distribuidores del país, cada uno enlace externo.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Tinta sobre amarillo 12,3:1 y sobre el ámbar de la trama ≥ 9:1 (la trama es decorativa, `aria-hidden`). Cada logo es un enlace externo con nombre «Distribuidor (abre en una pestaña nueva)» y foco visible. En móvil la fila se desplaza en horizontal con teclado.",
+        "Cuándo usar / qué NO hace": "En la Home y en la ficha de producto. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean)."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "92:990",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=92-990",
+      "page": "Pattern / Home",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Dónde comprar (Home, página de producto; wireframe UX): antetítulo «Where to buy?» + título (h2, estilo h3) «You can find us at these shops» · fila de logos de distribuidores del país. Cada logo es un enlace externo (<a target=\"_blank\" rel=\"noopener\">) con el logo como imagen y nombre accesible «<Distribuidor> (abre en una pestaña nueva)»; sin tarjeta: el logo va directo sobre color/surface/brand, con la trama de fideos (Decoration / Noodle texture) a sangre por la derecha, detrás. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: texto a la izquierda y logos a la derecha; Mobile: texto arriba y logos en fila con scroll horizontal. Sin variables propias."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "noodle-texture",
+        "component": "decoration-noodle-texture",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "noodle",
+        "component": "decoration-noodle",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "noodle",
+        "component": "decoration-noodle",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "noodle",
+        "component": "decoration-noodle",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "noodle",
+        "component": "decoration-noodle",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "noodle",
+        "component": "decoration-noodle",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/surface/brand",
+          "color/text/default",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "decoration",
+        "items": [
+          "decoration/noodle/texture"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h3",
+          "font/size/desktop/caption",
+          "font/size/desktop/h3",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/frame",
+          "layout/gutter",
+          "layout/margin",
+          "layout/section-y"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/32",
+          "space/4",
+          "space/64"
+        ]
+      }
+    ],
+    "tokenCount": 21,
+    "textStyles": [
+      "Desktop/caption",
+      "Desktop/h3"
+    ],
+    "classes": [
+      "decoration-noodle",
+      "decoration-noodle--2",
+      "decoration-noodle--3",
+      "decoration-noodle--4",
+      "decoration-noodle--5",
+      "decoration-noodle--texture",
+      "decoration-noodle-texture",
+      "section",
+      "section__inner",
+      "where-to-buy",
+      "where-to-buy__grid",
+      "where-to-buy__kicker",
+      "where-to-buy__list",
+      "where-to-buy__retailer",
+      "where-to-buy__text",
+      "where-to-buy__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Dónde comprar (wireframe UX): antetítulo, título y logos de los distribuidores del país, cada uno enlace externo.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Tinta sobre amarillo 12,3:1 y sobre el ámbar de la trama ≥ 9:1 (la trama es decorativa, `aria-hidden`). Cada logo es un enlace externo con nombre «Distribuidor (abre en una pestaña nueva)» y foco visible. En móvil la fila se desplaza en horizontal con teclado.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En la Home y en la ficha de producto. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "where-to-buy",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "92:990",
+    "contract": "../../../../../../design-system/schemas/components/where-to-buy.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

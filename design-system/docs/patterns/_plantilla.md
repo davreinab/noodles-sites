@@ -10,9 +10,9 @@
 <!-- ⚙️ GENERATED:end:<slug> -->
 
 - **Propósito:** ⬜ TODO
-- **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; se copia a `source.code.example` del schema)_
+- **Ejemplo de código:** ⬜ TODO _(snippet HTML mínimo con las clases reales de `components.css`; su elemento raíz lleva data-ds="<slug>"; se copia a `code.example` del schema)_
   ```html
   <!-- ⬜ TODO -->
   ```
-- **Accesibilidad (pares AA verificados):** ⬜ TODO
+- **Accesibilidad (rol, nombre, estados y teclado):** ⬜ TODO
 - **Cuándo usar / qué NO hace:** ⬜ TODO

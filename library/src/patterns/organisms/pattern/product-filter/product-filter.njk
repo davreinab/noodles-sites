@@ -1,0 +1,12 @@
+{% macro render(data) %}
+{% raw %}<div data-ds="product-filter" class="product-filter">
+<div class="product-filter__group">
+<span class="product-filter__label" id="f-tipo">Tipo</span>
+<div class="product-filter__options" role="tablist" aria-labelledby="f-tipo"><button class="tab" role="tab" aria-selected="true">Cups</button><button class="tab" role="tab" aria-selected="false" tabindex="-1">Bags</button></div>
+</div>
+<fieldset class="product-filter__group">
+<legend class="product-filter__label">Línea</legend>
+<div class="product-filter__options"><button class="chip" type="button" aria-pressed="true"><span class="icon icon-check" aria-hidden="true"></span>Original</button><button class="chip" type="button" aria-pressed="false">Yakisoba</button></div>
+</fieldset>
+</div>{% endraw %}
+{% endmacro %}

@@ -1,0 +1,276 @@
+{
+  "title": "Contest card",
+  "description": "Card de concurso (Contest library, módulo de Home). Status=Active: Badge Natural «En curso» y Button Primary «Participar» (si el concurso es externo o iframe de agencia, activar I…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "contest-card",
+      "name": "Contest card",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "68:95",
+      "current": {
+        "description": "Card de concurso (Contest library, módulo de Home). Status=Active: Badge Natural «En curso» y Button Primary «Participar» (si el concurso es externo o iframe de agencia, activar Icon trailing con external-link y abrir en pestaña nueva avisándolo). Status=Closed: Badge Neutral «Finalizado» y Link «Ver ganadores». Las bases legales (Link inline) aparecen siempre: es obligatorio publicarlas. La card no es enlace en bloque: tiene dos acciones. Desktop 448 px; en móvil FILL.",
+        "Propósito": "Card de concurso con estado (En curso o Finalizado), fechas, acción y bases legales. No es un enlace en bloque: tiene dos acciones.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Título tinta sobre blanco 18,7:1; fechas gris cálido sobre blanco 5,9:1; estado en Badge (blanco sobre verde 5,5:1 o crema sobre tinta 17,2:1) con la palabra, no solo color. Rol: `<article>` con encabezado y dos enlaces. Si el concurso es externo o un iframe de agencia, el botón lo avisa (icono y texto oculto). Teclado: Tab por las dos acciones. Foco: el de Button y Link.",
+        "Cuándo usar / qué NO hace": "En la Contest library y en la Home. Closed cambia el contenido (Badge Neutral «Finalizado» y Link «Ver ganadores»), no el estilo. Las bases legales aparecen siempre (es obligatorio publicarlas)."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "68:95",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=68-95",
+      "page": "Cards",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Card de concurso (Contest library, módulo de Home). Status=Active: Badge Natural «En curso» y Button Primary «Participar» (si el concurso es externo o iframe de agencia, activar Icon trailing con external-link y abrir en pestaña nueva avisándolo). Status=Closed: Badge Neutral «Finalizado» y Link «Ver ganadores». Las bases legales (Link inline) aparecen siempre: es obligatorio publicarlas. La card no es enlace en bloque: tiene dos acciones. Desktop 448 px; en móvil FILL."
+    ],
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "values": [],
+        "default": "Nombre del concurso",
+        "figma": "Title#68:0"
+      },
+      {
+        "name": "dates",
+        "type": "string",
+        "values": [],
+        "default": "Del 1 al 30 de noviembre de 2026",
+        "figma": "Dates#68:3"
+      },
+      {
+        "name": "status",
+        "type": "enum",
+        "values": [
+          "Active",
+          "Closed"
+        ],
+        "default": "Active",
+        "figma": "Status"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "status",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "cta",
+        "component": "button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "hidden": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "hidden": true
+      },
+      {
+        "layer": "rules-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "badge",
+        "items": [
+          "badge/natural/bg",
+          "badge/natural/text"
+        ]
+      },
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick",
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "button",
+        "items": [
+          "button/primary/bg",
+          "button/primary/border",
+          "button/primary/text"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/effect/shadow-ink"
+        ]
+      },
+      {
+        "group": "contest-card",
+        "items": [
+          "contest-card/bg",
+          "contest-card/border",
+          "contest-card/media-bg",
+          "contest-card/meta",
+          "contest-card/title"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h3",
+          "font/line-height/desktop/label",
+          "font/line-height/mobile/label",
+          "font/size/desktop/body-m",
+          "font/size/desktop/body-s",
+          "font/size/desktop/caption",
+          "font/size/desktop/h3",
+          "font/size/desktop/label",
+          "font/size/mobile/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "link",
+        "items": [
+          "link/default"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/none",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/4",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 38,
+    "textStyles": [
+      "Mobile/label",
+      "Desktop/caption",
+      "Desktop/h3",
+      "Desktop/body-s",
+      "Desktop/label",
+      "Desktop/body-m"
+    ],
+    "classes": [
+      "badge",
+      "badge--natural",
+      "button",
+      "contest-card",
+      "contest-card__actions",
+      "contest-card__body",
+      "contest-card__caption",
+      "contest-card__dates",
+      "contest-card__media",
+      "contest-card__title",
+      "icon",
+      "icon-external-link",
+      "link",
+      "visually-hidden"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Card de concurso con estado (En curso o Finalizado), fechas, acción y bases legales. No es un enlace en bloque: tiene dos acciones.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Título tinta sobre blanco 18,7:1; fechas gris cálido sobre blanco 5,9:1; estado en Badge (blanco sobre verde 5,5:1 o crema sobre tinta 17,2:1) con la palabra, no solo color. Rol: `<article>` con encabezado y dos enlaces. Si el concurso es externo o un iframe de agencia, el botón lo avisa (icono y texto oculto). Teclado: Tab por las dos acciones. Foco: el de Button y Link.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En la Contest library y en la Home. Closed cambia el contenido (Badge Neutral «Finalizado» y Link «Ver ganadores»), no el estilo. Las bases legales aparecen siempre (es obligatorio publicarlas).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 1,
+      "total": 1,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "contest-card",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "68:95",
+    "contract": "../../../../../../design-system/schemas/components/contest-card.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

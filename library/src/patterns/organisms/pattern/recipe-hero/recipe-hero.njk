@@ -1,0 +1,17 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="recipe-hero" class="section recipe-hero" aria-labelledby="rh-title">
+<div class="section__inner">
+<div class="recipe-hero__grid">
+<div class="recipe-hero__info">
+<span class="recipe-hero__kicker">Receta</span>
+<h1 class="page-title" id="rh-title">Ramen picante</h1>
+<ul class="recipe-hero__meta"><li><span class="icon icon-timer" aria-hidden="true"></span>10 min</li><li><span class="icon icon-circle-check" aria-hidden="true"></span>Fácil</li></ul>
+<p class="recipe-hero__description">Para quién es y por qué apetece.</p>
+<h2 class="recipe-hero__products-label">Productos que usa</h2>
+<ul class="recipe-hero__products"><li><a class="chip chip--m" href="/productos/yatekomo-pollo">Yatekomo Pollo</a></li></ul>
+</div>
+<div class="media-frame recipe-hero__media"><img src="/assets/ds/images/placeholder.svg" alt="Ramen picante servido en un cuenco"></div>
+</div>
+</div>
+</section>{% endraw %}
+{% endmacro %}

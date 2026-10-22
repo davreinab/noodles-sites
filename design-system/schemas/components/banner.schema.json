@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "pattern:banner",
+  "contractVersion": "2",
   "meta": {
     "name": "Banner",
     "slug": "banner",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Banner de campaña de la Home (wireframe UX): una pieza gráfica de campaña a todo el ancho del contenido, dentro de un marco con borde de tinta, radius/lg y elevation/2. La imagen lleva el mensaje; el banner entero es un enlace a la campaña y su texto alternativo repite lo que dice la pieza. Se oculta si no hay campaña. No es un carrusel. Sin variables propias.",
     "figmaPage": "Pattern / Home",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "fbb3a4b300dc",
     "verification": {
       "status": "verified",
@@ -25,53 +33,23 @@
       "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/patterns/banner.md",
-      "section": "Banner"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "92:884",
-      "componentKey": "72865521a6dda59926e98e33656d07b8716406c8"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "banner",
-        "banner__box",
-        "section",
-        "section__inner"
-      ],
-      "example": "<section class=\"section banner\" aria-label=\"Campaña\">\n<div class=\"section__inner\">\n<a class=\"banner__box\" href=\"/concursos/cucurella\"><img src=\"/media/banner-campana.jpg\" alt=\"Conoce a Marc Cucurella. Participa y podrás ganar más premios\"></a>\n</div>\n</section>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Breakpoint",
-        "kind": "VARIANT",
-        "default": "Desktop",
+        "name": "breakpoint",
+        "type": "enum",
         "values": [
           "Desktop",
           "Mobile"
-        ]
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
       }
     ],
-    "variants": {
-      "Breakpoint": [
-        "Desktop",
-        "Mobile"
-      ]
-    },
-    "states": [],
-    "defaults": {
-      "Breakpoint": "Desktop"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -79,8 +57,7 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "border/width/thin",
       "color/border/default",
       "color/effect/shadow-ink",
@@ -97,8 +74,37 @@
       "radius/none",
       "space/16",
       "space/48"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "banner",
+      "banner__box",
+      "section",
+      "section__inner"
     ],
-    "variablesUsed": [
+    "example": "<section data-ds=\"banner\" class=\"section banner\" aria-label=\"Campaña\">\n<div class=\"section__inner\">\n<a class=\"banner__box\" href=\"/concursos/cucurella\"><img src=\"/media/banner-campana.jpg\" alt=\"Conoce a Marc Cucurella. Participa y podrás ganar más premios\"></a>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "92:884",
+    "componentKey": "72865521a6dda59926e98e33656d07b8716406c8",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [
       "paddingLeft: layout/margin",
       "paddingTop: layout/section-y",
       "paddingRight: layout/margin",
@@ -135,39 +141,14 @@
     ],
     "textStyles": [
       "Desktop/caption"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "color/border/default",
-        "color/effect/shadow-ink",
-        "color/surface/page",
-        "color/text/secondary",
-        "font/family/body",
-        "font/line-height/desktop/caption",
-        "font/size/desktop/caption",
-        "font/style/body"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/patterns/banner.md",
+    "section": "Banner"
   },
-  "compatibility": {},
   "relations": {
     "uses": [],
-    "usedBy": [],
     "related": []
   }
 }

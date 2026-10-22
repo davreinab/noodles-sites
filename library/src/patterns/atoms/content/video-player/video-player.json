@@ -1,0 +1,220 @@
+{
+  "title": "Video player",
+  "description": "Reproductor de vídeo como fachada. State=Poster: póster de marca (sin imagen generada con IA), botón play de 80 px (video/play-bg, borde grueso) y duración. State=Playing: al puls…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "video-player",
+      "name": "Video player",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "83:70",
+      "current": {
+        "description": "Reproductor de vídeo como fachada. State=Poster: póster de marca (sin imagen generada con IA), botón play de 80 px (video/play-bg, borde grueso) y duración. State=Playing: al pulsar se sustituye por el reproductor real (iframe de YouTube con youtube-nocookie o <video> MP4) con sus controles nativos; no se carga nada de terceros antes del clic (privacidad y rendimiento). Ratio=16:9 (preparación, promo de Home, concursos) y 9:16 (recetas en vídeo vertical). Accesibilidad: el play es un <button> con nombre «Reproducir vídeo: <título> (0:45)»; foco con anillo video/focus-ring amarillo sobre el póster oscuro; subtítulos obligatorios si el vídeo tiene voz; sin autoplay con sonido; el GIF de preparación usa este mismo componente en MP4 silencioso en bucle con botón de pausa.",
+        "Propósito": "Reproductor como fachada: póster de marca, botón de play y duración. Al pulsar se carga el vídeo real (YouTube sin cookies o MP4) con sus controles nativos. 16:9 por defecto; 9:16 para recetas en vertical.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Play: tinta sobre amarillo 12,3:1 (icono, ≥ 3:1); duración crema sobre tinta 17,2:1. Rol: el play es un `<button>` con nombre que incluye el título y la duración; al activarlo se sustituye por el iframe o `<video controls>` y el foco pasa al reproductor. Foco del play: contorno de 2 px pegado en amarillo (12,3:1 sobre el póster oscuro). Subtítulos obligatorios si hay voz; sin autoplay con sonido. No se carga nada de terceros antes del clic (privacidad).",
+        "Cuándo usar / qué NO hace": "Para vídeo de preparación, promo de la Home y recetas en vertical. El póster es de marca, sin imágenes generadas con IA. No se usa para GIF decorativos sin control de pausa."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "83:70",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=83-70",
+      "page": "Content",
+      "type": "COMPONENT_SET",
+      "variants": 4,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Reproductor de vídeo como fachada. State=Poster: póster de marca (sin imagen generada con IA), botón play de 80 px (video/play-bg, borde grueso) y duración. State=Playing: al pulsar se sustituye por el reproductor real (iframe de YouTube con youtube-nocookie o <video> MP4) con sus controles nativos; no se carga nada de terceros antes del clic (privacidad y rendimiento). Ratio=16:9 (preparación, promo de Home, concursos) y 9:16 (recetas en vídeo vertical). Accesibilidad: el play es un <button> con nombre «Reproducir vídeo: <título> (0:45)»; foco con anillo video/focus-ring amarillo sobre el póster oscuro; subtítulos obligatorios si el vídeo tiene voz; sin autoplay con sonido; el GIF de preparación usa este mismo componente en MP4 silencioso en bucle con botón de pausa."
+    ],
+    "props": [
+      {
+        "name": "duration",
+        "type": "string",
+        "values": [],
+        "default": "0:45",
+        "figma": "Duration#83:0"
+      },
+      {
+        "name": "playIcon",
+        "type": "icon",
+        "values": [],
+        "default": "Icon / play",
+        "figma": "Play icon#83:5"
+      },
+      {
+        "name": "ratio",
+        "type": "enum",
+        "values": [
+          "16:9",
+          "9:16"
+        ],
+        "default": "16:9",
+        "figma": "Ratio"
+      },
+      {
+        "name": "poster",
+        "type": "boolean",
+        "values": [],
+        "default": "true",
+        "figma": "State=Poster"
+      },
+      {
+        "name": "playing",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Playing"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "playIcon"
+      ],
+      "defaults": [
+        "Icon / play"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "icon-play",
+        "component": "icon-play",
+        "exposedAs": "Play icon#83:5",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick",
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/label",
+          "font/size/desktop/caption",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/lg"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/4",
+          "space/8"
+        ]
+      },
+      {
+        "group": "video",
+        "items": [
+          "video/border",
+          "video/meta-bg",
+          "video/meta-text",
+          "video/play-bg",
+          "video/play-icon",
+          "video/poster-bg"
+        ]
+      }
+    ],
+    "tokenCount": 21,
+    "textStyles": [
+      "Desktop/caption",
+      "Desktop/label"
+    ],
+    "classes": [
+      "icon",
+      "icon-play",
+      "video-player",
+      "video-player--vertical",
+      "video-player__duration",
+      "video-player__play",
+      "video-player__poster",
+      "video-player__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Reproductor como fachada: póster de marca, botón de play y duración. Al pulsar se carga el vídeo real (YouTube sin cookies o MP4) con sus controles nativos. 16:9 por defecto; 9:16 para recetas en vertical.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Play: tinta sobre amarillo 12,3:1 (icono, ≥ 3:1); duración crema sobre tinta 17,2:1. Rol: el play es un `<button>` con nombre que incluye el título y la duración; al activarlo se sustituye por el iframe o `<video controls>` y el foco pasa al reproductor. Foco del play: contorno de 2 px pegado en amarillo (12,3:1 sobre el póster oscuro). Subtítulos obligatorios si hay voz; sin autoplay con sonido. No se carga nada de terceros antes del clic (privacidad).",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Para vídeo de preparación, promo de la Home y recetas en vertical. El póster es de marca, sin imágenes generadas con IA. No se usa para GIF decorativos sin control de pausa.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 2,
+      "total": 2,
+      "missing": [],
+      "unchecked": [
+        "poster=true",
+        "playing=true"
+      ],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "video-player",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "83:70",
+    "contract": "../../../../../../design-system/schemas/components/video-player.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

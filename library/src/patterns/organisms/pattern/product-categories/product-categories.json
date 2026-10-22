@@ -1,0 +1,226 @@
+{
+  "title": "Product categories",
+  "description": "Productos de la Home (wireframe UX «Our products»): título (h2) + entradilla · 3 Category card, una por tipo de producto (Cups, Bags, Sauces; solo tipos con productos) que llevan…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "product-categories",
+      "name": "Product categories",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "91:837",
+      "current": {
+        "description": "Productos de la Home (wireframe UX «Our products»): título (h2) + entradilla · 3 Category card, una por tipo de producto (Cups, Bags, Sauces; solo tipos con productos) que llevan a la Product library filtrada. Badge New en la categoría con novedad. Desktop: 3 columnas iguales (gutter layout/gutter); Mobile: apiladas a todo el ancho. Sustituye al antiguo Product carousel (pestañas + Product card). Sin variables propias.",
+        "Propósito": "Productos de la Home (wireframe UX «Our products»): título, entradilla y una Category card por tipo de producto (Cups, Bags, Sauces) que lleva a la Product library filtrada.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Título tinta sobre crema 17,2:1; el resto, los pares de Category card. La lista es un `<ul>` y cada card, un único enlace con el nombre de la categoría como texto.",
+        "Cuándo usar / qué NO hace": "En la Home. Solo se muestran tipos con productos (regla de negocio). Sustituye al antiguo Product carousel (pestañas + Product card): las fichas de producto viven en la Product library."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "91:837",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=91-837",
+      "page": "Pattern / Home",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Productos de la Home (wireframe UX «Our products»): título (h2) + entradilla · 3 Category card, una por tipo de producto (Cups, Bags, Sauces; solo tipos con productos) que llevan a la Product library filtrada. Badge New en la categoría con novedad. Desktop: 3 columnas iguales (gutter layout/gutter); Mobile: apiladas a todo el ancho. Sustituye al antiguo Product carousel (pestañas + Product card). Sin variables propias."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "category-card",
+        "component": "category-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "badge",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": true
+      },
+      {
+        "layer": "category-card",
+        "component": "category-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "badge",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": true
+      },
+      {
+        "layer": "category-card",
+        "component": "category-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "badge",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "badge",
+        "items": [
+          "badge/new/bg",
+          "badge/new/text"
+        ]
+      },
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/border/default",
+          "color/effect/shadow-ink",
+          "color/surface/card",
+          "color/surface/inverse",
+          "color/surface/page",
+          "color/text/default",
+          "color/text/on-inverse",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-l",
+          "font/line-height/desktop/h2",
+          "font/line-height/desktop/h3",
+          "font/line-height/mobile/label",
+          "font/size/desktop/body-l",
+          "font/size/desktop/h2",
+          "font/size/desktop/h3",
+          "font/size/mobile/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/frame",
+          "layout/gutter",
+          "layout/margin",
+          "layout/section-y"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/32",
+          "space/4",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 33,
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-l",
+      "Mobile/label",
+      "Desktop/h3"
+    ],
+    "classes": [
+      "badge",
+      "category-card",
+      "category-card__media",
+      "category-card__name",
+      "product-categories",
+      "product-categories__grid",
+      "section",
+      "section__header",
+      "section__inner",
+      "section__lead",
+      "section__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Productos de la Home (wireframe UX «Our products»): título, entradilla y una Category card por tipo de producto (Cups, Bags, Sauces) que lleva a la Product library filtrada.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Título tinta sobre crema 17,2:1; el resto, los pares de Category card. La lista es un `<ul>` y cada card, un único enlace con el nombre de la categoría como texto.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En la Home. Solo se muestran tipos con productos (regla de negocio). Sustituye al antiguo Product carousel (pestañas + Product card): las fichas de producto viven en la Product library.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "product-categories",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "91:837",
+    "contract": "../../../../../../design-system/schemas/components/product-categories.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

@@ -1,69 +1,115 @@
 {
   "$schema": "../_component.schema.json",
   "id": "pattern:product-filter",
+  "contractVersion": "2",
   "meta": {
     "name": "Product filter",
     "slug": "product-filter",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias.",
     "figmaPage": "Pattern / Libraries",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "a3b10e506568"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/patterns/product-filter.md",
-      "section": "Product filter"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "55:253",
-      "componentKey": "3b96938d2949d5b37f2f01a0b01056524046be55"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "chip",
-        "icon",
-        "icon-check",
-        "product-filter",
-        "product-filter__group",
-        "product-filter__label",
-        "product-filter__options",
-        "tab"
-      ],
-      "example": "<div class=\"product-filter\">\n<div class=\"product-filter__group\">\n<span class=\"product-filter__label\" id=\"f-tipo\">Tipo</span>\n<div class=\"product-filter__options\" role=\"tablist\" aria-labelledby=\"f-tipo\"><button class=\"tab\" role=\"tab\" aria-selected=\"true\">Cups</button><button class=\"tab\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Bags</button></div>\n</div>\n<fieldset class=\"product-filter__group\">\n<legend class=\"product-filter__label\">Línea</legend>\n<div class=\"product-filter__options\"><button class=\"chip\" type=\"button\" aria-pressed=\"true\"><span class=\"icon icon-check\" aria-hidden=\"true\"></span>Original</button><button class=\"chip\" type=\"button\" aria-pressed=\"false\">Yakisoba</button></div>\n</fieldset>\n</div>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Breakpoint",
-        "kind": "VARIANT",
-        "default": "Desktop",
+        "name": "breakpoint",
+        "type": "enum",
         "values": [
           "Desktop",
           "Mobile"
-        ]
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
       }
     ],
-    "variants": {
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thin",
+      "chip/bg",
+      "chip/bg-selected",
+      "chip/border",
+      "chip/height/s",
+      "chip/text",
+      "chip/text-selected",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-s",
+      "font/size/desktop/caption",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "layout/frame",
+      "layout/margin",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/8",
+      "tab/bg",
+      "tab/bg-selected",
+      "tab/border",
+      "tab/text",
+      "tab/text-selected"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "chip",
+      "icon",
+      "icon-check",
+      "product-filter",
+      "product-filter__group",
+      "product-filter__label",
+      "product-filter__options",
+      "tab"
+    ],
+    "example": "<div data-ds=\"product-filter\" class=\"product-filter\">\n<div class=\"product-filter__group\">\n<span class=\"product-filter__label\" id=\"f-tipo\">Tipo</span>\n<div class=\"product-filter__options\" role=\"tablist\" aria-labelledby=\"f-tipo\"><button class=\"tab\" role=\"tab\" aria-selected=\"true\">Cups</button><button class=\"tab\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Bags</button></div>\n</div>\n<fieldset class=\"product-filter__group\">\n<legend class=\"product-filter__label\">Línea</legend>\n<div class=\"product-filter__options\"><button class=\"chip\" type=\"button\" aria-pressed=\"true\"><span class=\"icon icon-check\" aria-hidden=\"true\"></span>Original</button><button class=\"chip\" type=\"button\" aria-pressed=\"false\">Yakisoba</button></div>\n</fieldset>\n</div>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "55:253",
+    "componentKey": "3b96938d2949d5b37f2f01a0b01056524046be55",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
       "Breakpoint": [
         "Desktop",
         "Mobile"
       ]
     },
-    "states": [],
-    "defaults": {
-      "Breakpoint": "Desktop"
-    },
-    "invalidCombinations": [],
     "nestedInstances": [
       {
         "layer": "tab",
@@ -202,47 +248,7 @@
         "visibleByDefault": false
       }
     ],
-    "icons": {
-      "hasIcon": true,
-      "swapProperties": [],
-      "defaultIcons": [],
-      "compatible": "unknown",
-      "unexposedIconLayers": []
-    },
-    "slots": [],
-    "tokensUsed": [
-      "border/width/thin",
-      "chip/bg",
-      "chip/bg-selected",
-      "chip/border",
-      "chip/height/s",
-      "chip/text",
-      "chip/text-selected",
-      "color/text/secondary",
-      "font/family/body",
-      "font/family/display",
-      "font/line-height/desktop/body-s",
-      "font/line-height/desktop/caption",
-      "font/line-height/desktop/label",
-      "font/size/desktop/body-s",
-      "font/size/desktop/caption",
-      "font/size/desktop/label",
-      "font/style/body",
-      "font/style/display",
-      "icon/size/sm",
-      "layout/frame",
-      "layout/margin",
-      "radius/pill",
-      "space/16",
-      "space/24",
-      "space/8",
-      "tab/bg",
-      "tab/bg-selected",
-      "tab/border",
-      "tab/text",
-      "tab/text-selected"
-    ],
-    "variablesUsed": [
+    "variableBindings": [
       "itemSpacing: space/24",
       "paddingLeft: layout/margin",
       "paddingTop: space/24",
@@ -309,57 +315,17 @@
       "Desktop/caption",
       "Desktop/label",
       "Desktop/body-s"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "chip/bg",
-        "chip/bg-selected",
-        "chip/border",
-        "chip/text",
-        "chip/text-selected",
-        "color/text/secondary",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-s",
-        "font/line-height/desktop/caption",
-        "font/line-height/desktop/label",
-        "font/size/desktop/body-s",
-        "font/size/desktop/caption",
-        "font/size/desktop/label",
-        "font/style/body",
-        "font/style/display",
-        "tab/bg",
-        "tab/bg-selected",
-        "tab/border",
-        "tab/text",
-        "tab/text-selected"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/patterns/product-filter.md",
+    "section": "Product filter"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "chip",
       "icon-check",
       "tab"
-    ],
-    "usedBy": [
-      "library"
     ],
     "related": []
   }

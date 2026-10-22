@@ -1,120 +1,85 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:textarea",
+  "contractVersion": "2",
   "meta": {
     "name": "Textarea",
     "slug": "textarea",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Campo de texto multilínea (comentarios, respuestas de concurso). Etiqueta siempre visible (no se sustituye por el placeholder). Error: borde rojo + icono + mensaje (nunca solo color); el mensaje se asocia con aria-describedby. Required muestra asterisco y requiere aria-required. El valor y el texto de ayuda se editan en la instancia.",
     "figmaPage": "Forms",
     "figmaType": "COMPONENT_SET",
     "variantCount": 6,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "77dd6f137b65"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/textarea.md",
-      "section": "Textarea"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "47:247",
-      "componentKey": "8cff3c483306a361a731640fbe517d514b09b85f"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "field",
-        "field__control",
-        "field__control--textarea",
-        "field__error",
-        "field__helper",
-        "field__label",
-        "icon",
-        "icon-circle-alert"
-      ],
-      "example": "<div class=\"field\">\n<label class=\"field__label\" for=\"mensaje\">Mensaje</label>\n<textarea class=\"field__control field__control--textarea\" id=\"mensaje\" name=\"mensaje\" placeholder=\"Escribe aquí\" aria-describedby=\"mensaje-ayuda\"></textarea>\n<p class=\"field__helper\" id=\"mensaje-ayuda\">Máximo 500 caracteres</p>\n</div>\n<div class=\"field\">\n<label class=\"field__label\" for=\"respuesta\">Respuesta</label>\n<textarea class=\"field__control field__control--textarea\" id=\"respuesta\" aria-invalid=\"true\" aria-describedby=\"respuesta-error\"></textarea>\n<p class=\"field__error\" id=\"respuesta-error\"><span class=\"icon icon-circle-alert\" aria-hidden=\"true\"></span>Este campo es obligatorio</p>\n</div>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Label#47:21",
-        "kind": "TEXT",
-        "default": "Mensaje"
+        "name": "label",
+        "type": "string",
+        "default": "Mensaje",
+        "figma": "Label#47:21"
       },
       {
-        "name": "Required#47:28",
-        "kind": "BOOLEAN",
-        "default": false
+        "name": "required",
+        "type": "boolean",
+        "default": false,
+        "figma": "Required#47:28"
       },
       {
-        "name": "Helper#47:35",
-        "kind": "BOOLEAN",
-        "default": true
+        "name": "helper",
+        "type": "boolean",
+        "default": true,
+        "figma": "Helper#47:35"
       },
       {
-        "name": "Error icon#50:0",
-        "kind": "INSTANCE_SWAP",
-        "default": "46:78",
-        "defaultComponent": "Icon / circle-alert",
-        "preferredValues": []
+        "name": "errorIcon",
+        "type": "icon",
+        "default": "Icon / circle-alert",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Error icon#50:0"
       },
       {
-        "name": "State",
-        "kind": "VARIANT",
-        "default": "Default",
-        "values": [
-          "Default",
-          "Hover",
-          "Focus",
-          "Filled",
-          "Error",
-          "Disabled"
-        ]
+        "name": "filled",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Filled"
+      },
+      {
+        "name": "error",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Error"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Disabled"
       }
     ],
-    "variants": {
-      "State": [
-        "Default",
-        "Hover",
-        "Focus",
-        "Filled",
-        "Error",
-        "Disabled"
-      ]
-    },
-    "states": [
-      "Default",
+    "cssStates": [
       "Hover",
-      "Focus",
-      "Filled",
-      "Error",
-      "Disabled"
+      "Focus"
     ],
-    "defaults": {
-      "State": "Default"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [
-      {
-        "layer": "icon-error",
-        "component": "Icon / circle-alert",
-        "componentSlug": "icon-circle-alert",
-        "exposedAs": "Error icon#50:0",
-        "toggledBy": null,
-        "visibleByDefault": false
-      }
-    ],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": true,
       "swapProperties": [
-        "Error icon#50:0"
+        "errorIcon"
       ],
       "defaultIcons": [
         "Icon / circle-alert"
@@ -122,8 +87,7 @@
       "compatible": "any Icon / * via INSTANCE_SWAP",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "border/width/thin",
       "field/bg",
       "field/border",
@@ -147,8 +111,60 @@
       "space/16",
       "space/4",
       "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "field",
+      "field__control",
+      "field__control--textarea",
+      "field__error",
+      "field__helper",
+      "field__label",
+      "icon",
+      "icon-circle-alert"
     ],
-    "variablesUsed": [
+    "example": "<div data-ds=\"textarea\" class=\"field\">\n<label class=\"field__label\" for=\"mensaje\">Mensaje</label>\n<textarea class=\"field__control field__control--textarea\" id=\"mensaje\" name=\"mensaje\" placeholder=\"Escribe aquí\" aria-describedby=\"mensaje-ayuda\"></textarea>\n<p class=\"field__helper\" id=\"mensaje-ayuda\">Máximo 500 caracteres</p>\n</div>\n<div data-ds=\"textarea\" class=\"field\">\n<label class=\"field__label\" for=\"respuesta\">Respuesta</label>\n<textarea class=\"field__control field__control--textarea\" id=\"respuesta\" aria-invalid=\"true\" aria-describedby=\"respuesta-error\"></textarea>\n<p class=\"field__error\" id=\"respuesta-error\"><span class=\"icon icon-circle-alert\" aria-hidden=\"true\"></span>Este campo es obligatorio</p>\n</div>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "47:247",
+    "componentKey": "8cff3c483306a361a731640fbe517d514b09b85f",
+    "propertyNames": {
+      "label": "Label#47:21",
+      "required": "Required#47:28",
+      "helper": "Helper#47:35",
+      "errorIcon": "Error icon#50:0",
+      "filled": "State=Filled",
+      "error": "State=Error",
+      "disabled": "State=Disabled"
+    },
+    "variantAxes": {
+      "State": [
+        "Default",
+        "Hover",
+        "Focus",
+        "Filled",
+        "Error",
+        "Disabled"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#50:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
       "itemSpacing: space/8",
       "itemSpacing: space/4",
       "fills: field/label",
@@ -194,49 +210,16 @@
       "Desktop/label",
       "Desktop/body-m",
       "Desktop/caption"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "field/bg",
-        "field/border",
-        "field/error-text",
-        "field/helper",
-        "field/label",
-        "field/placeholder",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-m",
-        "font/line-height/desktop/caption",
-        "font/line-height/desktop/label",
-        "font/size/desktop/body-m",
-        "font/size/desktop/caption",
-        "font/size/desktop/label",
-        "font/style/body",
-        "font/style/display"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/textarea.md",
+    "section": "Textarea"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "icon-circle-alert"
     ],
-    "usedBy": [],
     "related": []
   }
 }

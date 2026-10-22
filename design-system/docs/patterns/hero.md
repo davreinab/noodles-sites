@@ -1,21 +1,20 @@
-### Hero   ⚙️ synced: 2026-10-08T11:52:41Z
+### Hero   ⚙️ synced: 2026-10-22T09:37:04Z
 
 <!-- ⚙️ GENERATED:start:hero -->
-- **Figma:** `88:132` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:52:41Z
+- **Figma:** `88:132` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-22T09:37:04Z
 - **Descripción (Figma):** Patrón hero de la Home (wireframe UX). Claim fijo «Welcome to the new era» (h1, display) fuera del slider · slider de máximo 3 slides (regla de negocio; el wireframe dibuja 5 puntos: pendiente de confirmar): cada slide = Badge New · título (h2, estilo h3) · subtítulo · Button Primary L a la acción de la slide · controles anterior / puntos / siguiente bajo el botón. Imagen de producto o campaña de marca, sin IA, sin marco (packshot recortado sobre el fondo). Fondo color/surface/page (crema), como el hero de las landings; fideo de marca (Decoration / Noodle, Shape=1, Tone=Brand) a sangre por la izquierda (centrado en Mobile), detrás del contenido, que en código se dibuja de arriba abajo al cargar y queda quieto (sin animación con prefers-reduced-motion). Accesibilidad: carrusel con aria-roledescription=«carrusel», cada slide «1 de 3», sin autoplay; flechas con nombre «Slide anterior/siguiente»; el punto activo va relleno (forma, no solo color). Desktop: texto a la izquierda e imagen a la derecha; Mobile: texto arriba e imagen debajo. Sin variables propias.
 - **Anatomía:** `noodle` → Shape=1, Tone=Brand, `badge` → Type=New, `cta` → Hierarchy=Primary, Size=L, State=Default, `icon-leading` → Icon / arrow-right, `icon-trailing` → Icon / arrow-right, `prev` → Hierarchy=Secondary, Size=M, State=Default, `icon` → Icon / arrow-left, `next` → Hierarchy=Secondary, Size=M, State=Default, `icon` → Icon / arrow-right
-- **Breakpoint:** Desktop, Mobile
-- **Propiedades de componente:** `Breakpoint` (VARIANT, por defecto Desktop)
+- **API:** `breakpoint`: Desktop, Mobile (por defecto Desktop)
+- **Nombres en Figma:** `breakpoint` ← `Breakpoint`
 - **Iconos / instancias anidadas:** sí · swap: ninguna (⚠️ no expuesto) · por defecto: unknown
 - **Tokens que consume:** `badge/new/bg`, `badge/new/text`, `border/width/thick`, `border/width/thin`, `button/primary/bg`, `button/primary/border`, `button/primary/text`, `button/secondary/border`, `button/secondary/text`, `color/border/default`, `color/surface/page`, `color/text/default`, `decoration/noodle/brand`, `font/family/body`, `font/family/display`, `font/line-height/desktop/body-l`, `font/line-height/desktop/display`, `font/line-height/desktop/h3`, `font/line-height/desktop/label`, `font/line-height/mobile/label`, `font/size/desktop/body-l`, `font/size/desktop/display`, `font/size/desktop/h3`, `font/size/desktop/label`, `font/size/mobile/label`, `font/style/body`, `font/style/display`, `icon-button/size/m`, `icon/size/md`, `icon/size/sm`, `layout/frame`, `layout/margin`, `layout/section-y`, `radius/none`, `radius/pill`, `space/16`, `space/24`, `space/32`, `space/4`, `space/48`, `space/64`, `space/8`
 - **Text styles:** `Desktop/display`, `Mobile/label`, `Desktop/h3`, `Desktop/body-l`, `Desktop/label`
-- **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `badge/new/bg`, `badge/new/text`, `button/primary/bg`, `button/primary/border`, `button/primary/text`, `button/secondary/border`, `button/secondary/text`, `color/border/default`, `color/surface/page`, `color/text/default`, `decoration/noodle/brand`, `font/family/body`, `font/family/display`, `font/line-height/desktop/body-l`, `font/line-height/desktop/display`, `font/line-height/desktop/h3`, `font/line-height/desktop/label`, `font/line-height/mobile/label`, `font/size/desktop/body-l`, `font/size/desktop/display`, `font/size/desktop/h3`, `font/size/desktop/label`, `font/size/mobile/label`, `font/style/body`, `font/style/display`
 <!-- ⚙️ GENERATED:end:hero -->
 
 - **Propósito:** Hero de la Home (wireframe UX): claim fijo «Welcome to the new era» y slider de máximo tres slides (NEW · título · subtítulo · CTA · controles), con el estilo de las landings (crema, fideo con draw-in, packshot sin marco).
 - **Ejemplo de código:**
   ```html
-  <section class="section hero" aria-roledescription="carrusel" aria-label="Destacados">
+  <section data-ds="hero" class="section hero" aria-roledescription="carrusel" aria-label="Destacados">
   <span class="decoration-noodle hero__noodle" aria-hidden="true"></span>
   <div class="section__inner">
   <div class="hero__slide">
@@ -32,5 +31,5 @@
   </div>
   </section>
   ```
-- **Accesibilidad (pares AA verificados):** Claim y texto en tinta sobre crema y sobre el fideo amarillo (12,3:1), así que el fideo puede pasar por detrás del texto. El fideo es decorativo (`aria-hidden`), se dibuja una vez y no se anima con reduce-motion. Carrusel con `aria-roledescription`, slide «n de 3», sin autoplay; flechas y puntos son botones con nombre; el punto activo va relleno. El único `h1` de la Home es el claim.
+- **Accesibilidad (rol, nombre, estados y teclado):** Claim y texto en tinta sobre crema y sobre el fideo amarillo (12,3:1), así que el fideo puede pasar por detrás del texto. El fideo es decorativo (`aria-hidden`), se dibuja una vez y no se anima con reduce-motion. Carrusel con `aria-roledescription`, slide «n de 3», sin autoplay; flechas y puntos son botones con nombre; el punto activo va relleno. El único `h1` de la Home es el claim.
 - **Cuándo usar / qué NO hace:** Solo en la Home, arriba. Máximo tres slides (regla de negocio; el wireframe dibuja cinco puntos: pendiente de confirmar). La imagen es de marca, sin IA, y va sin marco. No se usa como banner intermedio (Banner).

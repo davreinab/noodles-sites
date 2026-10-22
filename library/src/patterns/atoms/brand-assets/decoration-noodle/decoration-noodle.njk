@@ -1,0 +1,26 @@
+{% macro render(data) %}
+{% if data.view == "todas" %}
+{% raw %}<div class="ds-gallery">
+<style>.ds-gallery{font:14px/1.4 system-ui,sans-serif;color:#1f1f1f}.ds-gallery h3{font:600 12px/1.3 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;color:#4a4a4a}.ds-gallery section{margin:0 0 32px}.ds-gallery__row{display:flex;flex-wrap:wrap;align-items:center;gap:24px 32px}.ds-gallery figure{margin:0;display:flex;flex-direction:column;gap:8px;align-items:flex-start}.ds-gallery figcaption{font:12px/1.3 ui-monospace,monospace;color:#4a4a4a}.ds-gallery__stage{padding:8px;min-width:48px;min-height:32px;outline:1px dashed #bebebe;outline-offset:0}</style>
+<section><h3>shape</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><span data-ds="decoration-noodle" class="decoration-noodle decoration-noodle--2" aria-hidden="true"></span></div><figcaption>shape=2</figcaption></figure>
+<figure><div class="ds-gallery__stage"><span data-ds="decoration-noodle" class="decoration-noodle decoration-noodle--3" aria-hidden="true"></span></div><figcaption>shape=3</figcaption></figure>
+<figure><div class="ds-gallery__stage"><span data-ds="decoration-noodle" class="decoration-noodle decoration-noodle--4" aria-hidden="true"></span></div><figcaption>shape=4</figcaption></figure>
+<figure><div class="ds-gallery__stage"><span data-ds="decoration-noodle" class="decoration-noodle decoration-noodle--5" aria-hidden="true"></span></div><figcaption>shape=5</figcaption></figure>
+<figure><div class="ds-gallery__stage"><span data-ds="decoration-noodle" class="decoration-noodle" aria-hidden="true"></span></div><figcaption>shape=1</figcaption></figure>
+</div></section>
+<section><h3>tone</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><span data-ds="decoration-noodle" class="decoration-noodle" aria-hidden="true"></span></div><figcaption>tone=Brand</figcaption></figure>
+<figure><div class="ds-gallery__stage"><span data-ds="decoration-noodle" class="decoration-noodle decoration-noodle--accent" aria-hidden="true"></span></div><figcaption>tone=Accent</figcaption></figure>
+<figure><div class="ds-gallery__stage"><span data-ds="decoration-noodle" class="decoration-noodle decoration-noodle--texture" aria-hidden="true"></span></div><figcaption>tone=Texture</figcaption></figure>
+</div></section>
+<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">La galería clona el elemento raíz del ejemplo y solo cambia sus clases: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
+</div>{% endraw %}
+{% else %}
+{% raw %}<span data-ds="decoration-noodle" class="decoration-noodle" aria-hidden="true"></span>
+<span data-ds="decoration-noodle" class="decoration-noodle decoration-noodle--3 decoration-noodle--accent" aria-hidden="true"></span>
+<span data-ds="decoration-noodle" class="decoration-noodle decoration-noodle--2 decoration-noodle--texture" aria-hidden="true"></span>
+<span data-ds="decoration-noodle" class="decoration-noodle decoration-noodle--4" aria-hidden="true"></span>
+<span data-ds="decoration-noodle" class="decoration-noodle decoration-noodle--5 decoration-noodle--accent" aria-hidden="true"></span>{% endraw %}
+{% endif %}
+{% endmacro %}

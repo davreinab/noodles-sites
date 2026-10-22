@@ -1,0 +1,103 @@
+{
+  "title": "Icon / external-link",
+  "description": "Enlace externo: contacto, concursos externos, formulario de Calidad. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "icon-external-link",
+      "name": "Icon / external-link",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "30:89",
+      "current": {
+        "description": "Enlace externo: contacto, concursos externos, formulario de Calidad. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*",
+        "Propósito": "Glifo de interfaz: enlace externo: contacto, concursos externos, formulario de Calidad.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Decorativo por defecto (`aria-hidden=\"true\"`): el significado lo da el texto o el nombre accesible del control. Color `--icon-color-default` (tinta) sobre página 17,2:1 y sobre card 18,7:1; `--icon-color-inverse` (crema) sobre tinta 17,2:1; todos ≥ 3:1 de elemento gráfico. Dentro de un componente hereda su color (`currentColor`), así que el par válido es el del componente. Tamaños `--icon-size-sm/md/lg/xl` con `.icon--sm/--lg/--xl`.",
+        "Cuándo usar / qué NO hace": "Dentro de otro componente (Button, Icon button, Link, Chip, Alert…) o junto a un texto que dice lo mismo. Un icono solo no transmite información: si no hay texto visible, el control que lo contiene lleva `aria-label`. No se recolorea con valores sueltos ni se cambia el trazo (2,5 fijo)."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "30:89",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=30-89",
+      "page": "Iconography",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Enlace externo: contacto, concursos externos, formulario de Calidad. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Color: icon/color/*. Tamaño: icon/size/*"
+    ],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default",
+          "icon/size/md"
+        ]
+      }
+    ],
+    "tokenCount": 2,
+    "textStyles": [],
+    "classes": [
+      "icon",
+      "icon-external-link"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Glifo de interfaz: enlace externo: contacto, concursos externos, formulario de Calidad.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Decorativo por defecto (`aria-hidden=\"true\"`): el significado lo da el texto o el nombre accesible del control. Color `--icon-color-default` (tinta) sobre página 17,2:1 y sobre card 18,7:1; `--icon-color-inverse` (crema) sobre tinta 17,2:1; todos ≥ 3:1 de elemento gráfico. Dentro de un componente hereda su color (`currentColor`), así que el par válido es el del componente. Tamaños `--icon-size-sm/md/lg/xl` con `.icon--sm/--lg/--xl`.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Dentro de otro componente (Button, Icon button, Link, Chip, Alert…) o junto a un texto que dice lo mismo. Un icono solo no transmite información: si no hay texto visible, el control que lo contiene lleva `aria-label`. No se recolorea con valores sueltos ni se cambia el trazo (2,5 fijo).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "icon-external-link",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "30:89",
+    "contract": "../../../../../../design-system/schemas/components/icon-external-link.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "title": "Modal / Slot",
+  "description": "Hueco de contenido del Modal. Se sustituye con la propiedad «Content» por la instancia real (imagen de la etiqueta, texto de alérgenos, resultado de concurso, lista de resultados)…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".modal-slot",
+          "fg": "#121212",
+          "bg": "#fff5d9",
+          "fgVar": "--modal-text",
+          "bgVar": "--modal-slot-bg",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "modal-slot",
+      "name": "Modal / Slot",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "79:52",
+      "current": {
+        "description": "Hueco de contenido del Modal. Se sustituye con la propiedad «Content» por la instancia real (imagen de la etiqueta, texto de alérgenos, resultado de concurso, lista de resultados). No se usa fuera del Modal.",
+        "Propósito": "Hueco de contenido del Modal en Figma: se sustituye por la instancia real (imagen de la etiqueta, texto de alérgenos, resultado de concurso, lista de resultados).",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Texto de marcador en tinta sobre crema 17,2:1. En producción no aparece: el hueco lo ocupa el contenido real, que trae su propia accesibilidad.",
+        "Cuándo usar / qué NO hace": "Solo dentro de Modal y solo como marcador de diseño. No es un componente de contenido."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "79:52",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=79-52",
+      "page": "Feedback & overlays",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Hueco de contenido del Modal. Se sustituye con la propiedad «Content» por la instancia real (imagen de la etiqueta, texto de alérgenos, resultado de concurso, lista de resultados). No se usa fuera del Modal."
+    ],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/caption",
+          "font/size/desktop/caption",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "modal",
+        "items": [
+          "modal/slot-bg",
+          "modal/text"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/sm"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/24"
+        ]
+      }
+    ],
+    "tokenCount": 8,
+    "textStyles": [
+      "Desktop/caption"
+    ],
+    "classes": [
+      "modal-slot"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Hueco de contenido del Modal en Figma: se sustituye por la instancia real (imagen de la etiqueta, texto de alérgenos, resultado de concurso, lista de resultados).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Texto de marcador en tinta sobre crema 17,2:1. En producción no aparece: el hueco lo ocupa el contenido real, que trae su propia accesibilidad.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo dentro de Modal y solo como marcador de diseño. No es un componente de contenido.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "modal-slot",
+    "kind": "component",
+    "verification": "unverified",
+    "figmaNodeId": "79:52",
+    "contract": "../../../../../../design-system/schemas/components/modal-slot.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

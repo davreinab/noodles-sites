@@ -1,63 +1,44 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:logo-saikebon",
+  "contractVersion": "2",
   "meta": {
     "name": "Logo / Saikebon",
     "slug": "logo-saikebon",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Logo Saikebon. Solo PNG: pedir vectoriales originales. No se recolorea.",
     "figmaPage": "Brand assets",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": false,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "1a237fae7aa8"
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/logo-saikebon.md",
-      "section": "Logo / Saikebon"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "21:173",
-      "componentKey": "66508fbf0a0578766e1291488caf8c8686e269a9"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "logo"
-      ],
-      "example": "<img class=\"logo\" src=\"../assets/logos/logo-saikebon-positive.svg\" alt=\"Saikebon\">\n<img class=\"logo\" src=\"../assets/logos/logo-saikebon-negative.svg\" alt=\"Saikebon\">"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Version",
-        "kind": "VARIANT",
-        "default": "Positive",
+        "name": "version",
+        "type": "enum",
         "values": [
           "Positive",
           "Negative"
-        ]
+        ],
+        "default": "Positive",
+        "figma": "Version"
       }
     ],
-    "variants": {
-      "Version": [
-        "Positive",
-        "Negative"
-      ]
-    },
-    "states": [],
-    "defaults": {
-      "Version": "Positive"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": false,
       "swapProperties": [],
@@ -65,33 +46,42 @@
       "compatible": "none",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [],
-    "variablesUsed": [],
-    "textStyles": [],
-    "theming": {
-      "brandAware": false,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": []
-    }
+    "tokens": []
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "logo"
+    ],
+    "example": "<img data-ds=\"logo-saikebon\" class=\"logo\" src=\"../assets/logos/logo-saikebon-positive.svg\" alt=\"Saikebon\">\n<img data-ds=\"logo-saikebon\" class=\"logo\" src=\"../assets/logos/logo-saikebon-negative.svg\" alt=\"Saikebon\">",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
   },
-  "compatibility": {},
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "21:173",
+    "componentKey": "66508fbf0a0578766e1291488caf8c8686e269a9",
+    "propertyNames": {
+      "version": "Version"
+    },
+    "variantAxes": {
+      "Version": [
+        "Positive",
+        "Negative"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [],
+    "textStyles": []
+  },
+  "docs": {
+    "file": "design-system/docs/components/logo-saikebon.md",
+    "section": "Logo / Saikebon"
+  },
   "relations": {
     "uses": [],
-    "usedBy": [],
     "related": []
   }
 }

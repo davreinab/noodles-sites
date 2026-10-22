@@ -1,0 +1,279 @@
+{
+  "title": "Preparation",
+  "description": "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en <ol> · Timer de 3…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "preparation",
+      "name": "Preparation",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "95:1158",
+      "current": {
+        "description": "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en <ol> · Timer de 3 minutos. El texto de los pasos sale del envase. Desktop: pasos a la izquierda; vídeo y temporizador a la derecha (560 px). Mobile: vídeo arriba, pasos y temporizador al final (al alcance mientras se cocina). En la Recipe page se reutiliza sin el Timer y con Step Media=True. Sin variables propias.",
+        "Propósito": "Preparación de la página de producto: pasos numerados, vídeo o GIF de preparación y temporizador de 3 minutos.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Título tinta sobre crema 17,2:1; el resto, los pares de Step, Video player y Timer. Pasos en `<ol>`; el vídeo no arranca solo; el temporizador anuncia solo el último minuto y el final.",
+        "Cuándo usar / qué NO hace": "En la página de producto. En la receta se reutiliza sin Timer y con Step con media."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "95:1158",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=95-1158",
+      "page": "Pattern / Detail pages",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en <ol> · Timer de 3 minutos. El texto de los pasos sale del envase. Desktop: pasos a la izquierda; vídeo y temporizador a la derecha (560 px). Mobile: vídeo arriba, pasos y temporizador al final (al alcance mientras se cocina). En la Recipe page se reutiliza sin el Timer y con Step Media=True. Sin variables propias."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "step",
+        "component": "step",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "video",
+        "component": "video-player",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-play",
+        "component": "icon-play",
+        "exposedAs": "Play icon#83:5",
+        "hidden": false
+      },
+      {
+        "layer": "timer",
+        "component": "timer",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "action",
+        "component": "button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-play",
+        "exposedAs": "Icon leading swap#33:75",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick",
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "button",
+        "items": [
+          "button/primary/bg",
+          "button/primary/border",
+          "button/primary/text"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/surface/page",
+          "color/text/default"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-l",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h2",
+          "font/line-height/desktop/h3",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-l",
+          "font/size/desktop/caption",
+          "font/size/desktop/h2",
+          "font/size/desktop/h3",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/lg",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/frame",
+          "layout/margin",
+          "layout/section-y"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/32",
+          "space/4",
+          "space/48",
+          "space/56",
+          "space/64",
+          "space/8"
+        ]
+      },
+      {
+        "group": "step",
+        "items": [
+          "step/border",
+          "step/number-bg",
+          "step/number-text",
+          "step/text"
+        ]
+      },
+      {
+        "group": "timer",
+        "items": [
+          "timer/bg",
+          "timer/border",
+          "timer/label",
+          "timer/progress",
+          "timer/time",
+          "timer/track"
+        ]
+      },
+      {
+        "group": "video",
+        "items": [
+          "video/border",
+          "video/meta-bg",
+          "video/meta-text",
+          "video/play-bg",
+          "video/play-icon",
+          "video/poster-bg"
+        ]
+      }
+    ],
+    "tokenCount": 52,
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/h3",
+      "Desktop/body-l",
+      "Desktop/caption",
+      "Desktop/label"
+    ],
+    "classes": [
+      "button",
+      "icon",
+      "icon-play",
+      "preparation",
+      "preparation__grid",
+      "preparation__media",
+      "section",
+      "section__inner",
+      "section__title",
+      "step",
+      "step__content",
+      "step__number",
+      "step__text",
+      "steps",
+      "timer",
+      "timer__controls",
+      "video-player",
+      "video-player__play"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Preparación de la página de producto: pasos numerados, vídeo o GIF de preparación y temporizador de 3 minutos.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Título tinta sobre crema 17,2:1; el resto, los pares de Step, Video player y Timer. Pasos en `<ol>`; el vídeo no arranca solo; el temporizador anuncia solo el último minuto y el final.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En la página de producto. En la receta se reutiliza sin Timer y con Step con media.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "preparation",
+    "kind": "pattern",
+    "verification": "unverified",
+    "figmaNodeId": "95:1158",
+    "contract": "../../../../../../design-system/schemas/components/preparation.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

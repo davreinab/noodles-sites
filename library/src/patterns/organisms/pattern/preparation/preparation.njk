@@ -1,0 +1,14 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="preparation" class="section preparation" aria-labelledby="prep-title">
+<div class="section__inner">
+<h2 class="section__title" id="prep-title">Preparación</h2>
+<div class="preparation__grid">
+<ol class="steps"><li class="step"><span class="step__number" aria-hidden="true">1</span><div class="step__content"><p class="step__text">Abre la tapa hasta la mitad.</p></div></li></ol>
+<div class="preparation__media">
+<div class="video-player"><button class="video-player__play" type="button" aria-label="Ver la preparación (0:30)"><span class="icon icon-play" aria-hidden="true"></span></button></div>
+<section class="timer" data-state="idle" aria-label="Temporizador"><div class="timer__controls"><button class="button" type="button"><span class="icon icon-play" aria-hidden="true"></span>Empezar</button></div></section>
+</div>
+</div>
+</div>
+</section>{% endraw %}
+{% endmacro %}

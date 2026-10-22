@@ -1,0 +1,17 @@
+{% macro render(data) %}
+{% if data.view == "todas" %}
+<p class="ds-gallery__note" style="font:14px/1.5 system-ui;color:#1f1f1f;max-width:70ch">Sin clase conocida (no se puede comprobar): required=true, open=true, error=true, disabled=true.</p>
+{% else %}
+{% raw %}<div data-ds="select" class="field">
+<label class="field__label" for="pais">País</label>
+<div class="field__select">
+<select class="field__control" id="pais" name="pais" aria-invalid="true" aria-describedby="pais-error">
+<option value="">Elige una opción</option>
+<option value="es">España</option>
+<option value="fr">Francia</option>
+</select>
+</div>
+<p class="field__error" id="pais-error"><span class="icon icon-circle-alert" aria-hidden="true"></span>Elige un país</p>
+</div>{% endraw %}
+{% endif %}
+{% endmacro %}

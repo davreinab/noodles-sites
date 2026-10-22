@@ -83,9 +83,15 @@ Cada ficha nace con el bloque generado y cuatro campos de criterio en `⬜ TODO`
 - **Propósito:** para qué sirve y qué problema resuelve.
 - **Ejemplo de código:** snippet HTML mínimo con las clases reales de `components.css`, en su variante
   por defecto; una línea por variante o estado relevante si cambia el markup. Es la referencia que
-  copian pantallas y agentes, y el sync lo copia al schema (`source.code.example`).
-- **Accesibilidad (pares AA verificados):** los pares texto/fondo comprobados en claro y oscuro; el
-  *rol* (button, textbox, checkbox, dialog… o «decorativo»); *de dónde sale su nombre* (texto visible,
+  copian pantallas y agentes, y el sync lo copia al schema (`code.example`). Su elemento raíz
+  lleva `data-ds="<slug>"`: la marca que une pantalla, contrato y maestro de Figma. Los iconos con
+  su ruta real (`../assets/icons/<nombre>.svg`) y las fotos siempre con
+  `../assets/images/placeholder.svg`, nunca fotos de `UI/`: el catálogo da error si un icono no
+  existe y muestra el placeholder si una foto no es del DS.
+- **Accesibilidad (rol, nombre, estados y teclado):** lo que el color no cubre. El contraste AA no se
+  escribe aquí: es obligatorio siempre, lo mide `ds-fidelity` desde el CSS (`contrast-below-aa`) y la
+  library lo enseña en la ficha. Si el componente es decorativo o solo informativo, «No aplica.» y el
+  motivo. La IA puede proponer un borrador (`guides/accesibilidad.md`). Aquí va el *rol* (button, textbox, checkbox, dialog… o «decorativo»); *de dónde sale su nombre* (texto visible,
   etiqueta asociada o atributo explícito: un icono sin texto siempre necesita nombre explícito); *qué se
   anuncia al cambiar de estado* (seleccionado, expandido, inválido, ocupado… un estado que solo se ve
   por color no existe para quien no ve); *teclado* (qué teclas lo operan; si no se puede usar sin

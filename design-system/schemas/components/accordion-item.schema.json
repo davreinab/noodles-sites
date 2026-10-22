@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:accordion-item",
+  "contractVersion": "2",
   "meta": {
     "name": "Accordion item",
     "slug": "accordion-item",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
-    "description": "Ítem de acordeón para FAQ (página FAQS indexada, Natural formula, Home). Cabecera = &lt;button aria-expanded aria-controls&gt; dentro de un encabezado (h3); la respuesta es una región ligada a la cabecera. Enter/Espacio abren y cierran; los items no son independientes (solo uno abierto a la vez). Icono plus (cerrado) / minus (abierto), swaps Icon collapsed / Icon expanded. Para SEO/AEO la respuesta está en el HTML aunque esté cerrada (FAQPage schema). Hover: accordion/bg-hover; Focus: anillo accordion/focus-ring. Ancho FILL de la columna de lectura.",
+    "lastSync": "2026-10-22T09:38:13Z",
+    "description": "Ítem de acordeón para FAQ (página FAQS indexada, Natural formula, Home). Cabecera = <button aria-expanded aria-controls> dentro de un encabezado (h3); la respuesta es una región ligada a la cabecera. Enter/Espacio abren y cierran; los items no son independientes (solo uno abierto a la vez). Icono plus (cerrado) / minus (abierto), swaps Icon collapsed / Icon expanded. Para SEO/AEO la respuesta está en el HTML aunque esté cerrada (FAQPage schema). Hover: accordion/bg-hover; Focus: anillo accordion/focus-ring. Ancho FILL de la columna de lectura.",
     "figmaPage": "Content",
     "figmaType": "COMPONENT_SET",
     "variantCount": 6,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "997e42acb572",
     "verification": {
       "status": "verified",
@@ -24,113 +32,55 @@
       "by": "agent (Claude)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/accordion-item.md",
-      "section": "Accordion item"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "69:93",
-      "componentKey": "a4e5b613eac408392e35f1632bb3d3e4486823c5"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "accordion-item",
-        "accordion-item__button",
-        "accordion-item__heading",
-        "accordion-item__panel",
-        "icon",
-        "icon-plus"
-      ],
-      "example": "<div class=\"accordion-item\">\n<h3 class=\"accordion-item__heading\">\n<button class=\"accordion-item__button\" type=\"button\" aria-expanded=\"true\" aria-controls=\"faq-1\">¿Por qué decimos que es 100 % natural?<span class=\"icon icon-plus\" aria-hidden=\"true\"></span></button>\n</h3>\n<div class=\"accordion-item__panel\" id=\"faq-1\" role=\"region\" aria-labelledby=\"faq-1-btn\">Todos los ingredientes son de origen natural, sin aditivos ni conservantes.</div>\n</div>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Question#69:0",
-        "kind": "TEXT",
-        "default": "¿Por qué decimos que es 100 % natural?"
+        "name": "question",
+        "type": "string",
+        "default": "¿Por qué decimos que es 100 % natural?",
+        "figma": "Question#69:0"
       },
       {
-        "name": "Answer#69:7",
-        "kind": "TEXT",
-        "default": "Respuesta de ejemplo: todos los ingredientes son de origen natural, sin aditivos ni conservantes. El texto definitivo lo valida GB Foods y va alineado con el envase."
+        "name": "answer",
+        "type": "string",
+        "default": "Respuesta de ejemplo: todos los ingredientes son de origen natural, sin aditivos ni conservantes. El texto definitivo lo valida GB Foods y va alineado con el envase.",
+        "figma": "Answer#69:7"
       },
       {
-        "name": "Icon collapsed#69:14",
-        "kind": "INSTANCE_SWAP",
-        "default": "30:69",
-        "defaultComponent": "Icon / plus",
-        "preferredValues": []
+        "name": "iconCollapsed",
+        "type": "icon",
+        "default": "Icon / plus",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Icon collapsed#69:14"
       },
       {
-        "name": "Icon expanded#69:21",
-        "kind": "INSTANCE_SWAP",
-        "default": "30:72",
-        "defaultComponent": "Icon / minus",
-        "preferredValues": []
+        "name": "iconExpanded",
+        "type": "icon",
+        "default": "Icon / minus",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Icon expanded#69:21"
       },
       {
-        "name": "Expanded",
-        "kind": "VARIANT",
-        "default": "False",
-        "values": [
-          "False",
-          "True"
-        ]
-      },
-      {
-        "name": "State",
-        "kind": "VARIANT",
-        "default": "Default",
-        "values": [
-          "Default",
-          "Hover",
-          "Focus"
-        ]
+        "name": "expanded",
+        "type": "boolean",
+        "default": false,
+        "figma": "Expanded"
       }
     ],
-    "variants": {
-      "Expanded": [
-        "False",
-        "True"
-      ],
-      "State": [
-        "Default",
-        "Hover",
-        "Focus"
-      ]
-    },
-    "states": [
-      "Default",
+    "cssStates": [
       "Hover",
       "Focus"
     ],
-    "defaults": {
-      "Expanded": "False",
-      "State": "Default"
-    },
-    "invalidCombinations": [],
-    "nestedInstances": [
-      {
-        "layer": "icon-collapsed",
-        "component": "Icon / plus",
-        "componentSlug": "icon-plus",
-        "exposedAs": "Icon collapsed#69:14",
-        "toggledBy": null,
-        "visibleByDefault": true
-      }
-    ],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
     "icons": {
       "hasIcon": true,
       "swapProperties": [
-        "Icon collapsed#69:14",
-        "Icon expanded#69:21"
+        "iconCollapsed",
+        "iconExpanded"
       ],
       "defaultIcons": [
         "Icon / plus",
@@ -139,8 +89,7 @@
       "compatible": "any Icon / * via INSTANCE_SWAP",
       "unexposedIconLayers": []
     },
-    "slots": [],
-    "tokensUsed": [
+    "tokens": [
       "accordion/bg",
       "accordion/border",
       "accordion/icon",
@@ -154,8 +103,57 @@
       "radius/md",
       "space/16",
       "space/24"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "accordion-item",
+      "accordion-item__button",
+      "accordion-item__heading",
+      "accordion-item__panel",
+      "icon",
+      "icon-plus"
     ],
-    "variablesUsed": [
+    "example": "<div data-ds=\"accordion-item\" class=\"accordion-item\">\n<h3 class=\"accordion-item__heading\">\n<button class=\"accordion-item__button\" type=\"button\" aria-expanded=\"true\" aria-controls=\"faq-1\">¿Por qué decimos que es 100 % natural?<span class=\"icon icon-plus\" aria-hidden=\"true\"></span></button>\n</h3>\n<div class=\"accordion-item__panel\" id=\"faq-1\" role=\"region\" aria-labelledby=\"faq-1-btn\">Todos los ingredientes son de origen natural, sin aditivos ni conservantes.</div>\n</div>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "69:93",
+    "componentKey": "a4e5b613eac408392e35f1632bb3d3e4486823c5",
+    "propertyNames": {
+      "question": "Question#69:0",
+      "answer": "Answer#69:7",
+      "iconCollapsed": "Icon collapsed#69:14",
+      "iconExpanded": "Icon expanded#69:21",
+      "expanded": "Expanded"
+    },
+    "variantAxes": {
+      "Expanded": [
+        "False",
+        "True"
+      ],
+      "State": [
+        "Default",
+        "Hover",
+        "Focus"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
       "topLeftRadius: radius/md",
       "topRightRadius: radius/md",
       "bottomLeftRadius: radius/md",
@@ -186,42 +184,15 @@
     ],
     "textStyles": [
       "Desktop/body-l"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "accordion/bg",
-        "accordion/border",
-        "accordion/icon",
-        "accordion/question",
-        "font/family/body",
-        "font/line-height/desktop/body-l",
-        "font/size/desktop/body-l",
-        "font/style/body"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/accordion-item.md",
+    "section": "Accordion item"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "icon-plus"
-    ],
-    "usedBy": [
-      "faq"
     ],
     "related": []
   }

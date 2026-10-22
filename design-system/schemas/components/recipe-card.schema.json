@@ -1,17 +1,25 @@
 {
   "$schema": "../_component.schema.json",
   "id": "component:recipe-card",
+  "contractVersion": "2",
   "meta": {
     "name": "Recipe card",
     "slug": "recipe-card",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-08T11:52:41Z",
+    "lastSync": "2026-10-22T09:38:13Z",
     "description": "Card de receta (Recipe library, Home, página de producto). Anatomía (wireframe UX): media vertical 288:415 (imagen de marca; sin vídeo al principio) · tiempo (icono timer + texto, recipe-card/meta) · título (h3) · productos usados como Chip S (enlazan a la ficha de producto). Sin enlace «Ver receta»: el título es el enlace y su área se estira a toda la card; los Chip son enlaces propios y quedan por encima. Comensales: sin definir (falta información). Hover: elevation/2; Focus: anillo recipe-card/focus-ring. Desktop 384 px; en móvil FILL.",
     "figmaPage": "Cards",
     "figmaType": "COMPONENT_SET",
     "variantCount": 3,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "b2dba44cfe3e",
     "verification": {
       "status": "verified",
@@ -26,81 +34,114 @@
       "source": "wireframe UX 1YhsCqdqYCHlK4Y82IY5G3 (Home 396:5700 · 97:636)"
     }
   },
-  "source": {
-    "docs": {
-      "file": "design-system/docs/components/recipe-card.md",
-      "section": "Recipe card"
-    },
-    "figma": {
-      "fileKey": "v4mnn154qUmiB35CCnRfgh",
-      "nodeId": "67:133",
-      "componentKey": "ab4aa74b8fa80116dab895add61a6a81ffa67d8a"
-    },
-    "code": {
-      "package": null,
-      "import": null,
-      "path": "design-system/css/components.css",
-      "classes": [
-        "chip",
-        "icon",
-        "icon-timer",
-        "recipe-card",
-        "recipe-card__body",
-        "recipe-card__link",
-        "recipe-card__media",
-        "recipe-card__meta",
-        "recipe-card__products",
-        "recipe-card__title"
-      ],
-      "example": "<article class=\"recipe-card\">\n<div class=\"recipe-card__media\"><img src=\"/media/receta.jpg\" alt=\"\"></div>\n<div class=\"recipe-card__body\">\n<p class=\"recipe-card__meta\"><span class=\"icon icon-timer\" aria-hidden=\"true\"></span>20 minutes</p>\n<h3 class=\"recipe-card__title\"><a class=\"recipe-card__link\" href=\"/recetas/spicy-noodle-salad\">Spicy Noodle Salad with almond and mint</a></h3>\n<ul class=\"recipe-card__products\" aria-label=\"Productos de la receta\"><li><a class=\"chip\" href=\"/productos/cup-oriental\">Cup Oriental</a></li></ul>\n</div>\n</article>"
-    }
-  },
   "api": {
-    "properties": [
+    "props": [
       {
-        "name": "Title#67:0",
-        "kind": "TEXT",
-        "default": "Nombre de la receta"
+        "name": "title",
+        "type": "string",
+        "default": "Nombre de la receta",
+        "figma": "Title#67:0"
       },
       {
-        "name": "Time#67:4",
-        "kind": "TEXT",
-        "default": "10 min"
+        "name": "time",
+        "type": "string",
+        "default": "10 min",
+        "figma": "Time#67:4"
       },
       {
-        "name": "Time icon#67:8",
-        "kind": "INSTANCE_SWAP",
-        "default": "30:84",
-        "defaultComponent": "Icon / timer",
-        "preferredValues": []
-      },
-      {
-        "name": "State",
-        "kind": "VARIANT",
-        "default": "Default",
-        "values": [
-          "Default",
-          "Hover",
-          "Focus"
-        ]
+        "name": "timeIcon",
+        "type": "icon",
+        "default": "Icon / timer",
+        "nullable": true,
+        "preferredValues": [],
+        "figma": "Time icon#67:8"
       }
     ],
-    "variants": {
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [
+        "timeIcon"
+      ],
+      "defaultIcons": [
+        "Icon / timer"
+      ],
+      "compatible": "any Icon / * via INSTANCE_SWAP",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thin",
+      "chip/bg",
+      "chip/border",
+      "chip/height/s",
+      "chip/text",
+      "color/effect/shadow-ink",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h3",
+      "font/size/desktop/body-s",
+      "font/size/desktop/caption",
+      "font/size/desktop/h3",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "radius/md",
+      "radius/none",
+      "radius/pill",
+      "recipe-card/bg",
+      "recipe-card/border",
+      "recipe-card/media-bg",
+      "recipe-card/meta",
+      "recipe-card/title",
+      "space/16",
+      "space/24",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "chip",
+      "icon",
+      "icon-timer",
+      "recipe-card",
+      "recipe-card__body",
+      "recipe-card__link",
+      "recipe-card__media",
+      "recipe-card__meta",
+      "recipe-card__products",
+      "recipe-card__title"
+    ],
+    "example": "<article data-ds=\"recipe-card\" class=\"recipe-card\">\n<div class=\"recipe-card__media\"><img src=\"/media/receta.jpg\" alt=\"\"></div>\n<div class=\"recipe-card__body\">\n<p class=\"recipe-card__meta\"><span class=\"icon icon-timer\" aria-hidden=\"true\"></span>20 minutes</p>\n<h3 class=\"recipe-card__title\"><a class=\"recipe-card__link\" href=\"/recetas/spicy-noodle-salad\">Spicy Noodle Salad with almond and mint</a></h3>\n<ul class=\"recipe-card__products\" aria-label=\"Productos de la receta\"><li><a class=\"chip\" href=\"/productos/cup-oriental\">Cup Oriental</a></li></ul>\n</div>\n</article>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "67:133",
+    "componentKey": "ab4aa74b8fa80116dab895add61a6a81ffa67d8a",
+    "propertyNames": {
+      "title": "Title#67:0",
+      "time": "Time#67:4",
+      "timeIcon": "Time icon#67:8"
+    },
+    "variantAxes": {
       "State": [
         "Default",
         "Hover",
         "Focus"
       ]
     },
-    "states": [
-      "Default",
-      "Hover",
-      "Focus"
-    ],
-    "defaults": {
-      "State": "Default"
-    },
-    "invalidCombinations": [],
     "nestedInstances": [
       {
         "layer": "icon-time",
@@ -143,49 +184,7 @@
         "visibleByDefault": false
       }
     ],
-    "icons": {
-      "hasIcon": true,
-      "swapProperties": [
-        "Time icon#67:8"
-      ],
-      "defaultIcons": [
-        "Icon / timer"
-      ],
-      "compatible": "any Icon / * via INSTANCE_SWAP",
-      "unexposedIconLayers": []
-    },
-    "slots": [],
-    "tokensUsed": [
-      "border/width/thin",
-      "chip/bg",
-      "chip/border",
-      "chip/height/s",
-      "chip/text",
-      "color/effect/shadow-ink",
-      "font/family/body",
-      "font/family/display",
-      "font/line-height/desktop/body-s",
-      "font/line-height/desktop/caption",
-      "font/line-height/desktop/h3",
-      "font/size/desktop/body-s",
-      "font/size/desktop/caption",
-      "font/size/desktop/h3",
-      "font/style/body",
-      "font/style/display",
-      "icon/size/sm",
-      "radius/md",
-      "radius/none",
-      "radius/pill",
-      "recipe-card/bg",
-      "recipe-card/border",
-      "recipe-card/media-bg",
-      "recipe-card/meta",
-      "recipe-card/title",
-      "space/16",
-      "space/24",
-      "space/8"
-    ],
-    "variablesUsed": [
+    "variableBindings": [
       "topLeftRadius: radius/md",
       "topRightRadius: radius/md",
       "bottomLeftRadius: radius/md",
@@ -252,55 +251,17 @@
       "Desktop/caption",
       "Desktop/body-s",
       "Desktop/h3"
-    ],
-    "theming": {
-      "brandAware": true,
-      "attribute": "data-brand",
-      "brands": [
-        "yatekomo",
-        "saikebon",
-        "aiki",
-        "daisuki",
-        "de"
-      ],
-      "defaultBrand": "yatekomo",
-      "brandTokens": [
-        "chip/bg",
-        "chip/border",
-        "chip/text",
-        "color/effect/shadow-ink",
-        "font/family/body",
-        "font/family/display",
-        "font/line-height/desktop/body-s",
-        "font/line-height/desktop/caption",
-        "font/line-height/desktop/h3",
-        "font/size/desktop/body-s",
-        "font/size/desktop/caption",
-        "font/size/desktop/h3",
-        "font/style/body",
-        "font/style/display",
-        "recipe-card/bg",
-        "recipe-card/border",
-        "recipe-card/media-bg",
-        "recipe-card/meta",
-        "recipe-card/title"
-      ]
-    }
+    ]
   },
-  "behavior": {
-    "responsive": [],
-    "content": [],
-    "interactions": []
+  "docs": {
+    "file": "design-system/docs/components/recipe-card.md",
+    "section": "Recipe card"
   },
-  "compatibility": {},
   "relations": {
     "uses": [
       "chip",
       "icon-check",
       "icon-timer"
-    ],
-    "usedBy": [
-      "recipes"
     ],
     "related": []
   }

@@ -1,0 +1,103 @@
+{
+  "title": "Icon / youtube",
+  "description": "Red social: YouTube. Color: icon/color/*. Tamaño: icon/size/*",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "icon-youtube",
+      "name": "Icon / youtube",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "21:71",
+      "current": {
+        "description": "Red social: YouTube. Color: icon/color/*. Tamaño: icon/size/*",
+        "Propósito": "Glifo de la red social YouTube para el footer (enlace a su perfil). Red social: YouTube.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Decorativo por defecto (`aria-hidden=\"true\"`): el significado lo da el texto o el nombre accesible del control. Color `--icon-color-default` (tinta) sobre página 17,2:1 y sobre card 18,7:1; `--icon-color-inverse` (crema) sobre tinta 17,2:1; todos ≥ 3:1 de elemento gráfico. Dentro de un componente hereda su color (`currentColor`), así que el par válido es el del componente. Tamaños `--icon-size-sm/md/lg/xl` con `.icon--sm/--lg/--xl`.",
+        "Cuándo usar / qué NO hace": "Solo como enlace a los perfiles oficiales de la marca (Footer, Social 1–4). No se usa como decoración ni para compartir contenido; el enlace lleva nombre accesible con el nombre de la red."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "21:71",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=21-71",
+      "page": "Iconography",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Red social: YouTube. Color: icon/color/*. Tamaño: icon/size/*"
+    ],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default",
+          "icon/size/md"
+        ]
+      }
+    ],
+    "tokenCount": 2,
+    "textStyles": [],
+    "classes": [
+      "icon",
+      "icon-youtube"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Glifo de la red social YouTube para el footer (enlace a su perfil). Red social: YouTube.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Decorativo por defecto (`aria-hidden=\"true\"`): el significado lo da el texto o el nombre accesible del control. Color `--icon-color-default` (tinta) sobre página 17,2:1 y sobre card 18,7:1; `--icon-color-inverse` (crema) sobre tinta 17,2:1; todos ≥ 3:1 de elemento gráfico. Dentro de un componente hereda su color (`currentColor`), así que el par válido es el del componente. Tamaños `--icon-size-sm/md/lg/xl` con `.icon--sm/--lg/--xl`.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo como enlace a los perfiles oficiales de la marca (Footer, Social 1–4). No se usa como decoración ni para compartir contenido; el enlace lleva nombre accesible con el nombre de la red.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "icon-youtube",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "21:71",
+    "contract": "../../../../../../design-system/schemas/components/icon-youtube.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

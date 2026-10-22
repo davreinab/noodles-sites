@@ -1,0 +1,11 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="recipes" class="section recipes" aria-labelledby="rc-title">
+<div class="section__inner">
+<div class="section__header"><h2 class="section__title" id="rc-title">We haven’t forgotten you, keen cook</h2><p class="section__lead">Explore and learn recipes to glow up your meals</p></div>
+<a class="button button--secondary button--l recipes__cta" href="/recetas">See all recipes</a>
+<ul class="carousel">
+<li><article class="recipe-card"><div class="recipe-card__body"><p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p><h3 class="recipe-card__title"><a class="recipe-card__link" href="/recetas/spicy-noodle-salad">Spicy Noodle Salad with almond and mint</a></h3></div></article></li>
+</ul>
+</div>
+</section>{% endraw %}
+{% endmacro %}

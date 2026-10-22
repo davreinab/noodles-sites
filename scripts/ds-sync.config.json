@@ -23,6 +23,21 @@
   "cssPrefixByCollection": {},
   "primitiveCollections": [],
   "fontFamilyMap": {},
+  "cssStates": [
+    "hover",
+    "press",
+    "pressed",
+    "focus",
+    "focused",
+    "active"
+  ],
+  "restStateValues": [
+    "default",
+    "enabled",
+    "rest",
+    "normal",
+    "idle"
+  ],
   "brandModes": {
     "collections": [
       "Semantic",

@@ -1,0 +1,179 @@
+{
+  "title": "Category card",
+  "description": "Card de categoría de producto (Home · «Our products»: Cups, Bags, Sauces). Anatomía (wireframe UX): imagen de la categoría a sangre (fondo) · Badge New opcional arriba a la izquie…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "category-card",
+      "name": "Category card",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "147:1353",
+      "current": {
+        "description": "Card de categoría de producto (Home · «Our products»: Cups, Bags, Sauces). Anatomía (wireframe UX): imagen de la categoría a sangre (fondo) · Badge New opcional arriba a la izquierda · nombre de la categoría en display h3 sobre placa color/surface/inverse abajo a la izquierda (texto color/text/on-inverse, 17:1). Toda la card es un enlace a la Product library filtrada por ese tipo. Hover: elevation/2; Focus: borde grueso. Desktop 392 px cuadrada; en móvil FILL (343). Sin variables propias.",
+        "Propósito": "Card de categoría de producto (wireframe UX): imagen de la categoría a sangre, Badge New opcional y el nombre sobre una placa de tinta. Lleva a la Product library filtrada por ese tipo.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Nombre crema sobre tinta 17:1, legible sobre cualquier foto porque va en su placa. La imagen es decorativa (`alt=\"\"`): el nombre da el destino. Toda la card es un único enlace con foco visible; hover y foco no dependen solo del color (sombra y contorno).",
+        "Cuándo usar / qué NO hace": "En «Our products» de la Home, una por tipo con productos. No muestra productos sueltos (eso es Product card) ni lleva más texto que el nombre."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "147:1353",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=147-1353",
+      "page": "Cards",
+      "type": "COMPONENT_SET",
+      "variants": 3,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Card de categoría de producto (Home · «Our products»: Cups, Bags, Sauces). Anatomía (wireframe UX): imagen de la categoría a sangre (fondo) · Badge New opcional arriba a la izquierda · nombre de la categoría en display h3 sobre placa color/surface/inverse abajo a la izquierda (texto color/text/on-inverse, 17:1). Toda la card es un enlace a la Product library filtrada por ese tipo. Hover: elevation/2; Focus: borde grueso. Desktop 392 px cuadrada; en móvil FILL (343). Sin variables propias."
+    ],
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "values": [],
+        "default": "Cups",
+        "figma": "Name#147:0"
+      },
+      {
+        "name": "badge",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "Badge#147:4"
+      }
+    ],
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "badge",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "badge",
+        "items": [
+          "badge/new/bg",
+          "badge/new/text"
+        ]
+      },
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/border/default",
+          "color/effect/shadow-ink",
+          "color/surface/card",
+          "color/surface/inverse",
+          "color/text/on-inverse"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/display",
+          "font/line-height/desktop/h3",
+          "font/line-height/mobile/label",
+          "font/size/desktop/h3",
+          "font/size/mobile/label",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/4",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 19,
+    "textStyles": [
+      "Mobile/label",
+      "Desktop/h3"
+    ],
+    "classes": [
+      "badge",
+      "category-card",
+      "category-card__media",
+      "category-card__name"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Card de categoría de producto (wireframe UX): imagen de la categoría a sangre, Badge New opcional y el nombre sobre una placa de tinta. Lleva a la Product library filtrada por ese tipo.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Nombre crema sobre tinta 17:1, legible sobre cualquier foto porque va en su placa. La imagen es decorativa (`alt=\"\"`): el nombre da el destino. Toda la card es un único enlace con foco visible; hover y foco no dependen solo del color (sombra y contorno).",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En «Our products» de la Home, una por tipo con productos. No muestra productos sueltos (eso es Product card) ni lleva más texto que el nombre.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "category-card",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "147:1353",
+    "contract": "../../../../../../design-system/schemas/components/category-card.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

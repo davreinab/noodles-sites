@@ -1,0 +1,261 @@
+{
+  "title": "Navbar",
+  "description": "Patrón de cabecera (wireframe UX). Desktop: botón menú (Icon button Secondary, abre el Menu a pantalla completa) a la izquierda · logo de marca centrado (enlace a la Home) · CTA B…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "navbar",
+      "name": "Navbar",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "55:116",
+      "current": {
+        "description": "Patrón de cabecera (wireframe UX). Desktop: botón menú (Icon button Secondary, abre el Menu a pantalla completa) a la izquierda · logo de marca centrado (enlace a la Home) · CTA Button Primary «New 100% Natural Formula» a la derecha (lleva a la Natural formula page) · Lang switch oculto salvo en marcas multiidioma. Mobile: botón menú · logo centrado. Sin enlaces de navegación ni buscador en la barra: la navegación vive en el Menu. Comportamiento: sticky (layer/sticky); se oculta al hacer scroll hacia abajo y reaparece al subir; respeta prefers-reduced-motion. Accesibilidad: <header> con <nav>; el botón menú lleva aria-expanded y aria-controls. Fondo color/surface/page con borde inferior color/border/default. Sin variables propias.",
+        "Propósito": "Cabecera de todas las páginas (wireframe UX): botón de menú a la izquierda, logo de marca centrado y, en desktop, el CTA «New 100% Natural Formula». La navegación vive en el menú a pantalla completa.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Botón de menú con nombre accesible, `aria-expanded` y `aria-controls`; el logo es el enlace a la Home con nombre «Marca, inicio». Tinta sobre crema 17,2:1. Sticky (`--layer-sticky`); se oculta al bajar y reaparece al subir, sin animación con reduce-motion.",
+        "Cuándo usar / qué NO hace": "En todas las páginas. Solo marcas multiidioma muestran el Lang switch (en `.navbar__actions`). No lleva enlaces de navegación ni buscador: van en el Mobile menu."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "55:116",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=55-116",
+      "page": "Pattern / Global",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Patrón de cabecera (wireframe UX). Desktop: botón menú (Icon button Secondary, abre el Menu a pantalla completa) a la izquierda · logo de marca centrado (enlace a la Home) · CTA Button Primary «New 100% Natural Formula» a la derecha (lleva a la Natural formula page) · Lang switch oculto salvo en marcas multiidioma. Mobile: botón menú · logo centrado. Sin enlaces de navegación ni buscador en la barra: la navegación vive en el Menu. Comportamiento: sticky (layer/sticky); se oculta al hacer scroll hacia abajo y reaparece al subir; respeta prefers-reduced-motion. Accesibilidad: <header> con <nav>; el botón menú lleva aria-expanded y aria-controls. Fondo color/surface/page con borde inferior color/border/default. Sin variables propias."
+    ],
+    "props": [
+      {
+        "name": "logo",
+        "type": "icon",
+        "values": [],
+        "default": "Version=Positive",
+        "figma": "Logo#55:0"
+      },
+      {
+        "name": "langSwitch",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "Lang switch#55:3"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "logo"
+      ],
+      "defaults": [
+        "Version=Positive"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "menu",
+        "component": "icon-button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-menu",
+        "exposedAs": "Icon#33:125",
+        "hidden": false
+      },
+      {
+        "layer": "logo",
+        "component": "logo-yatekomo",
+        "exposedAs": "Logo#55:0",
+        "hidden": false
+      },
+      {
+        "layer": "lang-switch",
+        "component": "lang-switch",
+        "exposedAs": "",
+        "hidden": true
+      },
+      {
+        "layer": "cta",
+        "component": "button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "hidden": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick",
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "button",
+        "items": [
+          "button/primary/bg",
+          "button/primary/border",
+          "button/primary/text",
+          "button/secondary/border",
+          "button/secondary/text"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/border/default",
+          "color/surface/page"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/display",
+          "font/line-height/desktop/label",
+          "font/size/desktop/label",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default",
+          "icon/size/md",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "icon-button",
+        "items": [
+          "icon-button/size/m"
+        ]
+      },
+      {
+        "group": "lang-switch",
+        "items": [
+          "lang-switch/bg",
+          "lang-switch/bg-selected",
+          "lang-switch/border",
+          "lang-switch/text",
+          "lang-switch/text-selected"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/frame",
+          "layout/margin"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/4",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 29,
+    "textStyles": [
+      "Desktop/label"
+    ],
+    "classes": [
+      "button",
+      "icon",
+      "icon-button",
+      "icon-button--secondary",
+      "icon-menu",
+      "logo",
+      "navbar",
+      "navbar__actions",
+      "navbar__inner",
+      "navbar__start"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Cabecera de todas las páginas (wireframe UX): botón de menú a la izquierda, logo de marca centrado y, en desktop, el CTA «New 100% Natural Formula». La navegación vive en el menú a pantalla completa.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Botón de menú con nombre accesible, `aria-expanded` y `aria-controls`; el logo es el enlace a la Home con nombre «Marca, inicio». Tinta sobre crema 17,2:1. Sticky (`--layer-sticky`); se oculta al bajar y reaparece al subir, sin animación con reduce-motion.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En todas las páginas. Solo marcas multiidioma muestran el Lang switch (en `.navbar__actions`). No lleva enlaces de navegación ni buscador: van en el Mobile menu.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "navbar",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "55:116",
+    "contract": "../../../../../../design-system/schemas/components/navbar.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

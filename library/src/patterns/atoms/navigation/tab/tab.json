@@ -1,0 +1,176 @@
+{
+  "title": "Tab",
+  "description": "Pestaña del primer nivel del filtro de productos (Cups / Bags / Sauces). Selected en tinta con texto crema. En código: role=\"tablist\" / role=\"tab\" con aria-selected y flechas izqu…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".tab",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--tab-text",
+          "bgVar": "--tab-bg",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".tab:hover",
+          "fg": "#121212",
+          "bg": "#ffcb05",
+          "fgVar": "--tab-text",
+          "bgVar": "--tab-bg-hover",
+          "ratio": 12.31,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "tab",
+      "name": "Tab",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "54:58",
+      "current": {
+        "description": "Pestaña del primer nivel del filtro de productos (Cups / Bags / Sauces). Selected en tinta con texto crema. En código: role=\"tablist\" / role=\"tab\" con aria-selected y flechas izquierda/derecha para moverse. Alto 48 (mínimo táctil).",
+        "Propósito": "Pestaña de tipo de producto (Cups, Bags, Sauces): primer nivel del Product filter.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Reposo: tinta sobre blanco 18,7:1, borde de tinta sobre crema 17,2:1. Hover: tinta sobre amarillo 12,3:1. Seleccionada: crema sobre tinta 17,2:1 y `aria-selected`. Rol: patrón tabs de WAI-ARIA (`tablist`/`tab`/`tabpanel`): Tab entra en la pestaña activa y las flechas mueven entre pestañas (tabindex móvil). Foco: contorno de 2 px pegado en tinta.",
+        "Cuándo usar / qué NO hace": "Para cambiar el conjunto de productos mostrado en la misma página. Solo se muestran tipos con productos. No es navegación entre páginas (Nav item) ni un filtro de selección múltiple (Chip)."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "54:58",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=54-58",
+      "page": "Navigation",
+      "type": "COMPONENT_SET",
+      "variants": 4,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Pestaña del primer nivel del filtro de productos (Cups / Bags / Sauces). Selected en tinta con texto crema. En código: role=\"tablist\" / role=\"tab\" con aria-selected y flechas izquierda/derecha para moverse. Alto 48 (mínimo táctil)."
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "values": [],
+        "default": "Cups",
+        "figma": "Label#54:0"
+      },
+      {
+        "name": "selected",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Selected"
+      }
+    ],
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/display",
+          "font/line-height/desktop/label",
+          "font/size/desktop/label",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24"
+        ]
+      },
+      {
+        "group": "tab",
+        "items": [
+          "tab/bg",
+          "tab/border",
+          "tab/text"
+        ]
+      }
+    ],
+    "tokenCount": 11,
+    "textStyles": [
+      "Desktop/label"
+    ],
+    "classes": [
+      "tab"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Pestaña de tipo de producto (Cups, Bags, Sauces): primer nivel del Product filter.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Reposo: tinta sobre blanco 18,7:1, borde de tinta sobre crema 17,2:1. Hover: tinta sobre amarillo 12,3:1. Seleccionada: crema sobre tinta 17,2:1 y `aria-selected`. Rol: patrón tabs de WAI-ARIA (`tablist`/`tab`/`tabpanel`): Tab entra en la pestaña activa y las flechas mueven entre pestañas (tabindex móvil). Foco: contorno de 2 px pegado en tinta.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Para cambiar el conjunto de productos mostrado en la misma página. Solo se muestran tipos con productos. No es navegación entre páginas (Nav item) ni un filtro de selección múltiple (Chip).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "tab",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "54:58",
+    "contract": "../../../../../../design-system/schemas/components/tab.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <!-- ⚙️ ARCHIVO GENERADO — NO EDITAR A MANO.
-     Se regenera con cada auditoría del DS (protocolo «Auditoría del DS en Figma»
+     Se regenera con cada auditoría del DS (protocolo `guides/auditoria-figma.md`
      de design.md). -->
 
 # GB Noodles · Microsites · Auditoría del DS  ·  _(informe generado)_

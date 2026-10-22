@@ -1,0 +1,295 @@
+{
+  "title": "Product filter",
+  "description": "Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; sol…",
+  "status": "Draft",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "product-filter",
+      "name": "Product filter",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "55:253",
+      "current": {
+        "description": "Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias.",
+        "Propósito": "Filtro de la Product library en tres niveles: tipo (Tab), línea (Chip) y sabor (Chip). Cada nivel depende del anterior y solo muestra opciones con productos.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Etiquetas de nivel en gris cálido sobre crema 5,4:1; Tab y Chip con sus pares (seleccionado crema sobre tinta 17,2:1). Cada nivel es un grupo con nombre (`tablist` para el tipo; `fieldset`/`legend` con chips `aria-pressed` para línea y sabor). Al cambiar un nivel se anuncia el número de productos (aria-live) y el foco no se pierde. En móvil cada fila se desplaza en horizontal y sigue siendo operable con teclado.",
+        "Cuándo usar / qué NO hace": "Solo en la Product library. No muestra filtros que den cero resultados ni sustituye a la búsqueda."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "55:253",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=55-253",
+      "page": "Pattern / Libraries",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "unverified",
+      "verificationLabel": "Sin verificar"
+    },
+    "description": [
+      "Patrón: filtro de la Product library en 3 niveles. Tipo (Tab: Cups / Bags / Sauces) → línea (Chip: Original / Yakisoba / Rice) → sabor (Chip). Cada nivel depende del anterior; solo se muestran las opciones con productos (sin resultados vacíos). Mobile: cada fila se desplaza en horizontal. Los sabores son de ejemplo. Sin variables propias."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "tab",
+        "component": "tab",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "tab",
+        "component": "tab",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "tab",
+        "component": "tab",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": false
+      },
+      {
+        "layer": "chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": false
+      },
+      {
+        "layer": "chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "chip",
+        "items": [
+          "chip/bg",
+          "chip/bg-selected",
+          "chip/border",
+          "chip/height/s",
+          "chip/text",
+          "chip/text-selected"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-s",
+          "font/size/desktop/caption",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/frame",
+          "layout/margin"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/8"
+        ]
+      },
+      {
+        "group": "tab",
+        "items": [
+          "tab/bg",
+          "tab/bg-selected",
+          "tab/border",
+          "tab/text",
+          "tab/text-selected"
+        ]
+      }
+    ],
+    "tokenCount": 30,
+    "textStyles": [
+      "Desktop/caption",
+      "Desktop/label",
+      "Desktop/body-s"
+    ],
+    "classes": [
+      "chip",
+      "icon",
+      "icon-check",
+      "product-filter",
+      "product-filter__group",
+      "product-filter__label",
+      "product-filter__options",
+      "tab"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Filtro de la Product library en tres niveles: tipo (Tab), línea (Chip) y sabor (Chip). Cada nivel depende del anterior y solo muestra opciones con productos.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Etiquetas de nivel en gris cálido sobre crema 5,4:1; Tab y Chip con sus pares (seleccionado crema sobre tinta 17,2:1). Cada nivel es un grupo con nombre (`tablist` para el tipo; `fieldset`/`legend` con chips `aria-pressed` para línea y sabor). Al cambiar un nivel se anuncia el número de productos (aria-live) y el foco no se pierde. En móvil cada fila se desplaza en horizontal y sigue siendo operable con teclado.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en la Product library. No muestra filtros que den cero resultados ni sustituye a la búsqueda.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "product-filter",
+    "kind": "pattern",
+    "verification": "unverified",
+    "figmaNodeId": "55:253",
+    "contract": "../../../../../../design-system/schemas/components/product-filter.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

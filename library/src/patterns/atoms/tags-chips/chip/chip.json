@@ -1,0 +1,269 @@
+{
+  "title": "Chip",
+  "description": "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Size: S 36 px (filtros densos, productos en receta) · M 40 px (filtros principales, uso tá…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".chip",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--chip-text",
+          "bgVar": "--chip-bg",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".chip:hover",
+          "fg": "#121212",
+          "bg": "#ffcb05",
+          "fgVar": "--chip-text",
+          "bgVar": "--chip-bg-hover",
+          "ratio": 12.31,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".chip.chip--selected",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--chip-text-selected",
+          "bgVar": "--chip-bg-selected",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".chip .icon",
+          "why": "color que no se puede resolver con tokens.css"
+        },
+        {
+          "theme": "light",
+          "state": ".chip:hover .icon",
+          "why": "color que no se puede resolver con tokens.css"
+        },
+        {
+          "theme": "light",
+          "state": ".chip.chip--selected .icon",
+          "why": "color que no se puede resolver con tokens.css"
+        }
+      ],
+      "exempt": 1,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "chip",
+      "name": "Chip",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "35:186",
+      "current": {
+        "description": "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Size: S 36 px (filtros densos, productos en receta) · M 40 px (filtros principales, uso táctil preferente); altura mínima ligada a chip/height/*. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP).",
+        "Propósito": "Píldora compacta para filtrar (líneas y sabores del Product filter) y para enlazar productos dentro de una receta. Size S 36 en filtros densos; M 40 como opción táctil preferente.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Default: tinta sobre blanco 18,7:1; borde de tinta sobre crema 17,2:1 (≥ 3:1). Hover: tinta sobre amarillo 12,3:1. Selected: crema sobre tinta 17,2:1 y con icono check, así que el estado no depende solo del color. Disabled: gris cálido sobre arena 4,3:1 (exento). Rol: como filtro, `<button aria-pressed>` dentro de un grupo con nombre (`role=\"group\" aria-label=\"Línea\"`); como producto, `<a>`. Teclado: Tab entre chips y Enter/Espacio para alternar. Foco: contorno de 2 px pegado en tinta. Área táctil: S mide 36 px, por debajo de 44; se compensa con `--space-8` entre chips (cumple el mínimo de 24 px de WCAG 2.5.8). Para uso táctil principal, M.",
+        "Cuándo usar / qué NO hace": "Para filtros de selección múltiple o única y para productos citados en una receta. No es la acción principal (Button), no es una etiqueta informativa (Badge) y no navega entre pestañas de contenido (Tab)."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "35:186",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=35-186",
+      "page": "Tags & chips",
+      "type": "COMPONENT_SET",
+      "variants": 8,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Píldora compacta para productos dentro de una receta (enlaza a la ficha) y para filtros. Size: S 36 px (filtros densos, productos en receta) · M 40 px (filtros principales, uso táctil preferente); altura mínima ligada a chip/height/*. Selected cuando el filtro está activo; el estado no se comunica solo por color: Selected muestra el icono check. Icon leading opcional (INSTANCE_SWAP)."
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "values": [],
+        "default": "Yatekomo Original",
+        "figma": "Label#35:17"
+      },
+      {
+        "name": "iconLeading",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "Icon leading#35:22"
+      },
+      {
+        "name": "iconLeadingSwap",
+        "type": "icon",
+        "values": [],
+        "default": "Icon / check",
+        "figma": "Icon leading swap#35:27"
+      },
+      {
+        "name": "size",
+        "type": "enum",
+        "values": [
+          "S",
+          "M"
+        ],
+        "default": "S",
+        "figma": "Size"
+      },
+      {
+        "name": "selected",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Selected"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Disabled"
+      }
+    ],
+    "cssStates": [
+      "Hover"
+    ],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "iconLeadingSwap"
+      ],
+      "defaults": [
+        "Icon / check"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "chip",
+        "items": [
+          "chip/bg",
+          "chip/border",
+          "chip/height/s",
+          "chip/text"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/body-s",
+          "font/size/desktop/body-s",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 13,
+    "textStyles": [
+      "Desktop/body-s"
+    ],
+    "classes": [
+      "chip",
+      "chip--m",
+      "icon",
+      "icon-check"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Píldora compacta para filtrar (líneas y sabores del Product filter) y para enlazar productos dentro de una receta. Size S 36 en filtros densos; M 40 como opción táctil preferente.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Default: tinta sobre blanco 18,7:1; borde de tinta sobre crema 17,2:1 (≥ 3:1). Hover: tinta sobre amarillo 12,3:1. Selected: crema sobre tinta 17,2:1 y con icono check, así que el estado no depende solo del color. Disabled: gris cálido sobre arena 4,3:1 (exento). Rol: como filtro, `<button aria-pressed>` dentro de un grupo con nombre (`role=\"group\" aria-label=\"Línea\"`); como producto, `<a>`. Teclado: Tab entre chips y Enter/Espacio para alternar. Foco: contorno de 2 px pegado en tinta. Área táctil: S mide 36 px, por debajo de 44; se compensa con `--space-8` entre chips (cumple el mínimo de 24 px de WCAG 2.5.8). Para uso táctil principal, M.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Para filtros de selección múltiple o única y para productos citados en una receta. No es la acción principal (Button), no es una etiqueta informativa (Badge) y no navega entre pestañas de contenido (Tab).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 2,
+      "total": 2,
+      "missing": [],
+      "unchecked": [
+        "iconLeading=true",
+        "disabled=true"
+      ],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "chip",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "35:186",
+    "contract": "../../../../../../design-system/schemas/components/chip.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

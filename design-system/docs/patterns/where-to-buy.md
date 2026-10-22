@@ -1,21 +1,20 @@
-### Where to buy   ⚙️ synced: 2026-10-08T11:52:41Z
+### Where to buy   ⚙️ synced: 2026-10-22T09:37:04Z
 
 <!-- ⚙️ GENERATED:start:where-to-buy -->
-- **Figma:** `92:990` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-08T11:52:41Z
-- **Descripción (Figma):** Dónde comprar (Home, página de producto; wireframe UX): antetítulo «Where to buy?» + título (h2, estilo h3) «You can find us at these shops» · fila de logos de distribuidores del país. Cada logo es un enlace externo (&lt;a target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;) con el logo como imagen y nombre accesible «&lt;Distribuidor&gt; (abre en una pestaña nueva)»; sin tarjeta: el logo va directo sobre color/surface/brand, con la trama de fideos (Decoration / Noodle texture) a sangre por la derecha, detrás. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: texto a la izquierda y logos a la derecha; Mobile: texto arriba y logos en fila con scroll horizontal. Sin variables propias.
+- **Figma:** `92:990` · página «Pattern / Home» · COMPONENT_SET · 2 variantes · última sync 2026-10-22T09:37:04Z
+- **Descripción (Figma):** Dónde comprar (Home, página de producto; wireframe UX): antetítulo «Where to buy?» + título (h2, estilo h3) «You can find us at these shops» · fila de logos de distribuidores del país. Cada logo es un enlace externo (<a target="_blank" rel="noopener">) con el logo como imagen y nombre accesible «<Distribuidor> (abre en una pestaña nueva)»; sin tarjeta: el logo va directo sobre color/surface/brand, con la trama de fideos (Decoration / Noodle texture) a sangre por la derecha, detrás. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean). Desktop: texto a la izquierda y logos a la derecha; Mobile: texto arriba y logos en fila con scroll horizontal. Sin variables propias.
 - **Anatomía:** `noodle-texture` → Decoration / Noodle texture, `noodle` → Shape=1, Tone=Texture, `noodle` → Shape=3, Tone=Texture, `noodle` → Shape=5, Tone=Texture, `noodle` → Shape=2, Tone=Texture, `noodle` → Shape=4, Tone=Texture
-- **Breakpoint:** Desktop, Mobile
-- **Propiedades de componente:** `Breakpoint` (VARIANT, por defecto Desktop)
+- **API:** `breakpoint`: Desktop, Mobile (por defecto Desktop)
+- **Nombres en Figma:** `breakpoint` ← `Breakpoint`
 - **Iconos / instancias anidadas:** ninguno
 - **Tokens que consume:** `border/width/thin`, `color/surface/brand`, `color/text/default`, `color/text/secondary`, `decoration/noodle/texture`, `font/family/body`, `font/family/display`, `font/line-height/desktop/caption`, `font/line-height/desktop/h3`, `font/size/desktop/caption`, `font/size/desktop/h3`, `font/style/body`, `font/style/display`, `layout/frame`, `layout/gutter`, `layout/margin`, `layout/section-y`, `radius/md`, `space/32`, `space/4`, `space/64`
 - **Text styles:** `Desktop/caption`, `Desktop/h3`
-- **Marcas:** cambia con la marca (yatekomo, saikebon, aiki, daisuki, de; por defecto `yatekomo`) vía `[data-brand]` · tokens de marca: `color/surface/brand`, `color/text/default`, `color/text/secondary`, `font/family/body`, `font/family/display`, `font/line-height/desktop/caption`, `font/line-height/desktop/h3`, `font/size/desktop/caption`, `font/size/desktop/h3`, `font/style/body`, `font/style/display`
 <!-- ⚙️ GENERATED:end:where-to-buy -->
 
 - **Propósito:** Dónde comprar (wireframe UX): antetítulo, título y logos de los distribuidores del país, cada uno enlace externo.
 - **Ejemplo de código:**
   ```html
-  <section class="section where-to-buy" id="donde-comprar" aria-labelledby="wtb-title">
+  <section data-ds="where-to-buy" class="section where-to-buy" id="donde-comprar" aria-labelledby="wtb-title">
   <div class="decoration-noodle-texture" aria-hidden="true"><span class="decoration-noodle decoration-noodle--texture"></span><span class="decoration-noodle decoration-noodle--3 decoration-noodle--texture"></span><span class="decoration-noodle decoration-noodle--5 decoration-noodle--texture"></span><span class="decoration-noodle decoration-noodle--2 decoration-noodle--texture"></span><span class="decoration-noodle decoration-noodle--4 decoration-noodle--texture"></span></div>
   <div class="section__inner">
   <div class="where-to-buy__grid">
@@ -25,5 +24,5 @@
   </div>
   </section>
   ```
-- **Accesibilidad (pares AA verificados):** Tinta sobre amarillo 12,3:1 y sobre el ámbar de la trama ≥ 9:1 (la trama es decorativa, `aria-hidden`). Cada logo es un enlace externo con nombre «Distribuidor (abre en una pestaña nueva)» y foco visible. En móvil la fila se desplaza en horizontal con teclado.
+- **Accesibilidad (rol, nombre, estados y teclado):** Tinta sobre amarillo 12,3:1 y sobre el ámbar de la trama ≥ 9:1 (la trama es decorativa, `aria-hidden`). Cada logo es un enlace externo con nombre «Distribuidor (abre en una pestaña nueva)» y foco visible. En móvil la fila se desplaza en horizontal con teclado.
 - **Cuándo usar / qué NO hace:** En la Home y en la ficha de producto. Los distribuidores cambian por país y los logos los aporta GB Foods (no se recrean).

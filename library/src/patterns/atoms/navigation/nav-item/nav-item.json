@@ -1,0 +1,189 @@
+{
+  "title": "Nav item",
+  "description": "Enlace de navegación principal. Bar: navbar de escritorio (Anton 16), fondo amarillo en hover y subrayado grueso en la sección activa. Menu: menú móvil a pantalla completa (Anton…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".nav-item:hover",
+          "fg": "#121212",
+          "bg": "#ffcb05",
+          "fgVar": "--nav-item-text",
+          "bgVar": "--nav-item-hover-bg",
+          "ratio": 12.31,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".nav-item",
+          "why": "sin fondo propio: depende de dónde se ponga"
+        },
+        {
+          "theme": "light",
+          "state": ".nav-item.nav-item--menu",
+          "why": "sin fondo propio: depende de dónde se ponga"
+        },
+        {
+          "theme": "light",
+          "state": ".nav-item.nav-item--menu:hover",
+          "why": "fondo transparente o semitransparente: depende de dónde se ponga"
+        }
+      ],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "nav-item",
+      "name": "Nav item",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "53:102",
+      "current": {
+        "description": "Enlace de navegación principal. Bar: navbar de escritorio (Anton 16), fondo amarillo en hover y subrayado grueso en la sección activa. Menu: menú móvil a pantalla completa (Anton 32, crema sobre tinta; activo en amarillo con subrayado). La sección activa nunca se marca solo por color (subrayado) y lleva aria-current=\"page\". El texto se edita en la instancia.",
+        "Propósito": "Enlace de la navegación principal. Bar: en la Navbar de escritorio, con indicador inferior en la página activa. Menu: en el Mobile menu, en grande y en crema sobre tinta.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Bar: tinta sobre crema 17,2:1; hover tinta sobre amarillo 12,3:1; el activo se marca con `aria-current=\"page\"` y un indicador de 4 px (no solo color). Menu: crema sobre tinta 17,2:1; activo y hover en amarillo 12,3:1, foco amarillo. Rol: enlaces `<a>` dentro de `<nav aria-label>`; Tab entre ellos. Foco: contorno de 2 px pegado, radius/sm.",
+        "Cuándo usar / qué NO hace": "Solo para la navegación principal de la web (cinco secciones). No se usa como pestaña de contenido (Tab) ni como enlace dentro de texto (Link)."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "53:102",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=53-102",
+      "page": "Navigation",
+      "type": "COMPONENT_SET",
+      "variants": 8,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Enlace de navegación principal. Bar: navbar de escritorio (Anton 16), fondo amarillo en hover y subrayado grueso en la sección activa. Menu: menú móvil a pantalla completa (Anton 32, crema sobre tinta; activo en amarillo con subrayado). La sección activa nunca se marca solo por color (subrayado) y lleva aria-current=\"page\". El texto se edita en la instancia."
+    ],
+    "props": [
+      {
+        "name": "type",
+        "type": "enum",
+        "values": [
+          "Bar",
+          "Menu"
+        ],
+        "default": "Bar",
+        "figma": "Type"
+      }
+    ],
+    "cssStates": [
+      "Hover",
+      "Active",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/display",
+          "font/line-height/desktop/label",
+          "font/size/desktop/label",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "nav-item",
+        "items": [
+          "nav-item/indicator",
+          "nav-item/text"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/sm"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/4",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 11,
+    "textStyles": [
+      "Desktop/label"
+    ],
+    "classes": [
+      "nav-item",
+      "nav-item--menu"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Enlace de la navegación principal. Bar: en la Navbar de escritorio, con indicador inferior en la página activa. Menu: en el Mobile menu, en grande y en crema sobre tinta.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Bar: tinta sobre crema 17,2:1; hover tinta sobre amarillo 12,3:1; el activo se marca con `aria-current=\"page\"` y un indicador de 4 px (no solo color). Menu: crema sobre tinta 17,2:1; activo y hover en amarillo 12,3:1, foco amarillo. Rol: enlaces `<a>` dentro de `<nav aria-label>`; Tab entre ellos. Foco: contorno de 2 px pegado, radius/sm.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo para la navegación principal de la web (cinco secciones). No se usa como pestaña de contenido (Tab) ni como enlace dentro de texto (Link).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 2,
+      "total": 2,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "nav-item",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "53:102",
+    "contract": "../../../../../../design-system/schemas/components/nav-item.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

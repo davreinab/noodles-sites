@@ -4,8 +4,15 @@
     "variant-without-css": "warn",
     "example-class-missing": "warn",
     "example-external-image": "warn",
-    "screen-uses-unverified": "warn"
+    "example-placeholder-ellipsis": "warn",
+    "screen-uses-unverified": "warn",
+    "screen-state-anatomy": "warn",
+    "contrast-below-aa": "warn",
+    "variant-not-in-example": "warn",
+    "variant-coverage-unchecked": "info",
+    "screen-uses-internal": "warn"
   },
+  "ellipsisClasses": [],
   "modifiers": {
     "logo-yatekomo": {
       "Version": {
@@ -77,6 +84,19 @@
     "banner": [
       "space/16"
     ]
+  },
+  "contrastExceptions": [],
+  "coverageIgnore": {
+    "values": [
+      "hover",
+      "focus",
+      "focused",
+      "pressed",
+      "press",
+      "active"
+    ],
+    "axes": [],
+    "components": {}
   },
   "_notes": {
     "modifiers": "Logo Version=Negative es otro archivo SVG (assets/logos/*-negative.svg) con la misma clase .logo: no hay modificador CSS. Contest card Status=Closed cambia el contenido (Badge Neutral y Link a ganadores), no el estilo. Video player Ratio=9:16 → .video-player--vertical.",

@@ -1,0 +1,236 @@
+{
+  "title": "Recipe card",
+  "description": "Card de receta (Recipe library, Home, página de producto). Anatomía (wireframe UX): media vertical 288:415 (imagen de marca; sin vídeo al principio) · tiempo (icono timer + texto,…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "recipe-card",
+      "name": "Recipe card",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "67:133",
+      "current": {
+        "description": "Card de receta (Recipe library, Home, página de producto). Anatomía (wireframe UX): media vertical 288:415 (imagen de marca; sin vídeo al principio) · tiempo (icono timer + texto, recipe-card/meta) · título (h3) · productos usados como Chip S (enlazan a la ficha de producto). Sin enlace «Ver receta»: el título es el enlace y su área se estira a toda la card; los Chip son enlaces propios y quedan por encima. Comensales: sin definir (falta información). Hover: elevation/2; Focus: anillo recipe-card/focus-ring. Desktop 384 px; en móvil FILL.",
+        "Propósito": "Card de receta (wireframe UX): imagen vertical, tiempo, título y productos usados. El título es el enlace a la receta y su área cubre toda la card.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Título tinta sobre blanco 18:1; tiempo secundario 7,9:1. El enlace principal es el título (nombre accesible = nombre de la receta); los Chip son enlaces propios por encima del área estirada. Foco visible en toda la card con `:has()`.",
+        "Cuándo usar / qué NO hace": "En la Recipe library, la Home y la ficha de producto. Sin enlace «Ver receta». Comensales: sin definir, falta información."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "67:133",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=67-133",
+      "page": "Cards",
+      "type": "COMPONENT_SET",
+      "variants": 3,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Card de receta (Recipe library, Home, página de producto). Anatomía (wireframe UX): media vertical 288:415 (imagen de marca; sin vídeo al principio) · tiempo (icono timer + texto, recipe-card/meta) · título (h3) · productos usados como Chip S (enlazan a la ficha de producto). Sin enlace «Ver receta»: el título es el enlace y su área se estira a toda la card; los Chip son enlaces propios y quedan por encima. Comensales: sin definir (falta información). Hover: elevation/2; Focus: anillo recipe-card/focus-ring. Desktop 384 px; en móvil FILL."
+    ],
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "values": [],
+        "default": "Nombre de la receta",
+        "figma": "Title#67:0"
+      },
+      {
+        "name": "time",
+        "type": "string",
+        "values": [],
+        "default": "10 min",
+        "figma": "Time#67:4"
+      },
+      {
+        "name": "timeIcon",
+        "type": "icon",
+        "values": [],
+        "default": "Icon / timer",
+        "figma": "Time icon#67:8"
+      }
+    ],
+    "cssStates": [
+      "Hover",
+      "Focus"
+    ],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "timeIcon"
+      ],
+      "defaults": [
+        "Icon / timer"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "icon-time",
+        "component": "icon-timer",
+        "exposedAs": "Time icon#67:8",
+        "hidden": false
+      },
+      {
+        "layer": "product-chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "product-chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "chip",
+        "items": [
+          "chip/bg",
+          "chip/border",
+          "chip/height/s",
+          "chip/text"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/effect/shadow-ink"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h3",
+          "font/size/desktop/body-s",
+          "font/size/desktop/caption",
+          "font/size/desktop/h3",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/none",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "recipe-card",
+        "items": [
+          "recipe-card/bg",
+          "recipe-card/border",
+          "recipe-card/media-bg",
+          "recipe-card/meta",
+          "recipe-card/title"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 28,
+    "textStyles": [
+      "Desktop/caption",
+      "Desktop/body-s",
+      "Desktop/h3"
+    ],
+    "classes": [
+      "chip",
+      "icon",
+      "icon-timer",
+      "recipe-card",
+      "recipe-card__body",
+      "recipe-card__link",
+      "recipe-card__media",
+      "recipe-card__meta",
+      "recipe-card__products",
+      "recipe-card__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Card de receta (wireframe UX): imagen vertical, tiempo, título y productos usados. El título es el enlace a la receta y su área cubre toda la card.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Título tinta sobre blanco 18:1; tiempo secundario 7,9:1. El enlace principal es el título (nombre accesible = nombre de la receta); los Chip son enlaces propios por encima del área estirada. Foco visible en toda la card con `:has()`.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En la Recipe library, la Home y la ficha de producto. Sin enlace «Ver receta». Comensales: sin definir, falta información.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "recipe-card",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "67:133",
+    "contract": "../../../../../../design-system/schemas/components/recipe-card.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

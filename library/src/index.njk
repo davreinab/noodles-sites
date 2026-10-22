@@ -1,0 +1,193 @@
+---
+layout: viewer.njk
+permalink: /
+---
+{# Home = tablero de los componentes: qué piden hoy. Los datos salen de src/_data/dashboard.js en cada build. #}
+{% set d = dashboard %}
+{% macro complink(c) %}<a class="pl-dash__comp" href="{{ c.url }}">{{ c.title }}</a>{% endmacro %}
+{% macro flagchip(f) %}<span class="pl-flag pl-flag--{{ f.tone }}"{% if f.detail %} title="{{ f.detail }}"{% endif %}>{{ f.label }}</span>{% endmacro %}
+{% macro complist(rows, key, more) %}
+  {% if rows.length %}
+  <ul class="pl-dash__list">
+    {% for r in rows %}{% if loop.index0 < more %}
+    <li>{{ complink(r) }}<span class="pl-dash__where">{{ r.group }}</span>
+      {% for f in r.flags %}{% if f.key == key and f.detail %}<span class="pl-dash__detail">{{ f.detail }}</span>{% endif %}{% endfor %}</li>
+    {% endif %}{% endfor %}
+  </ul>
+  {% if rows.length > more %}
+  <details class="pl-dash__more"><summary>Los {{ rows.length - more }} restantes</summary>
+    <ul class="pl-dash__list">
+      {% for r in rows %}{% if loop.index0 >= more %}<li>{{ complink(r) }}<span class="pl-dash__where">{{ r.group }}</span></li>{% endif %}{% endfor %}
+    </ul>
+  </details>
+  {% endif %}
+  {% else %}<p class="pl-muted">Nada pendiente.</p>{% endif %}
+{% endmacro %}
+
+<header class="pl-dash__head">
+  <h1>{{ site.name }}</h1>
+  <div class="pl-dash__kpis">
+    <div class="pl-dash__kpi">
+      <span class="pl-dash__kpi-label">Componentes en la library</span>
+      <b class="pl-dash__kpi-num">{{ d.totals.components }}</b>
+      <div class="pl-dash__bar" aria-hidden="true"><i style="width:{{ (d.totals.atoms / d.totals.components * 100) if d.totals.components else 0 }}%"></i></div>
+      <span class="pl-dash__kpi-foot"><b>{{ d.totals.atoms }}</b> componentes · <b>{{ d.totals.patterns }}</b> patrones{% if d.totals.internos %} · {{ d.totals.internos }} internos aparte{% endif %}</span>
+    </div>
+    <a class="pl-dash__kpi pl-dash__kpi--link" href="#atencion">
+      <span class="pl-dash__kpi-label">Piden algo</span>
+      <b class="pl-dash__kpi-num">{{ d.totals.attention }}<small> de {{ d.totals.components }}</small></b>
+      <div class="pl-dash__bar pl-dash__bar--bad" aria-hidden="true"><i style="width:{{ (d.totals.attention / d.totals.components * 100) if d.totals.components else 0 }}%"></i></div>
+      <span class="pl-dash__kpi-foot"><b>{{ d.totals.clean }}</b> al día</span>
+    </a>
+    <a class="pl-dash__kpi pl-dash__kpi--link" href="#verificar">
+      <span class="pl-dash__kpi-label">Verificados contra Figma</span>
+      <b class="pl-dash__kpi-num">{{ d.totals.verifiedPct }}<small> %</small></b>
+      <div class="pl-dash__bar pl-dash__bar--good" aria-hidden="true"><i style="width:{{ d.totals.verifiedPct }}%"></i></div>
+      <span class="pl-dash__kpi-foot"><b>{{ d.totals.verified }}</b> de {{ d.totals.components }} · {{ d.totals.components - d.totals.verified }} por verificar</span>
+    </a>
+  </div>
+  <dl class="pl-dash__sync">
+    <div><dt>Versión publicada</dt><dd>{% if d.ds.version %}{{ d.ds.version }}{% if d.ds.versionedAt %} · {{ d.ds.versionedAt }}{% endif %}{% else %}sin publicar{% endif %}</dd></div>
+    <div><dt>Último sync</dt><dd>{% if d.ds.lastSync %}{{ d.ds.lastSync }} <span class="pl-muted">({{ d.ds.lastSyncAgo }})</span>{% else %}nunca{% endif %}</dd></div>
+    <div><dt>Componentes leídos de Figma</dt><dd>{% if d.ds.componentsReadAt %}{{ d.ds.componentsReadAt }} <span class="pl-muted">({{ d.ds.componentsReadAgo }})</span>{% if d.ds.refreshesSinceFull %} · {{ d.ds.refreshesSinceFull }} refresco{% if d.ds.refreshesSinceFull != 1 %}s{% endif %} puntual{% if d.ds.refreshesSinceFull != 1 %}es{% endif %} después{% endif %}{% else %}sin lectura{% endif %}</dd></div>
+    <div><dt>Variables leídas de Figma</dt><dd>{% if d.ds.variablesReadAt %}{{ d.ds.variablesReadAt }} <span class="pl-muted">({{ d.ds.variablesReadAgo }})</span>{% else %}sin lectura{% endif %}</dd></div>
+  </dl>
+</header>
+
+<nav class="pl-dash__tiles" aria-label="Pendientes por tipo">
+  <a href="#propuestas"><b>{{ d.counts.proposals }}</b><span>propuestas pendientes de decisión</span>{% if d.counts.approved %}<small>{{ d.counts.approved }} aprobadas sin aplicar</small>{% endif %}</a>
+  <a href="#verificar"><b>{{ d.counts.unverified + d.counts.stale }}</b><span>contratos por verificar</span>{% if d.counts.stale %}<small>{{ d.counts.stale }} con verificación caducada</small>{% endif %}</a>
+  <a href="#ia"><b>{{ d.counts.ai }}</b><span>borradores de la IA por revisar</span></a>
+  <a href="#criterio"><b>{{ d.counts.todo }}</b><span>fichas con criterio por escribir</span></a>
+  <a href="#contraste"><b>{{ d.counts.contrast }}</b><span>componentes con contraste bajo AA</span>{% if d.counts.contrastPairs %}<small>{{ d.counts.contrastPairs }} parejas de color</small>{% endif %}</a>
+  <a href="#ejemplo"><b>{{ d.counts.example }}</b><span>sin ejemplo de código</span></a>
+  <a href="#fidelidad"><b>{{ d.counts.fidelity }}</b><span>con avisos de fidelidad</span></a>
+  <a href="#retiradas"><b>{{ d.counts.retirements }}</b><span>retiradas en curso</span></a>
+</nav>
+
+<section class="pl-dash__sec" id="atencion">
+  <h2>Componentes que piden atención <span class="pl-nav__count">{{ d.totals.attention }}</span></h2>
+  <p class="pl-muted">Primero los que tienen algo roto o esperan una decisión; después, lo que falta por escribir o construir. Pasa el ratón por una marca para ver el detalle.</p>
+  {% if d.attention.length %}
+  <table class="pl-dash__table">
+    <thead><tr><th>Componente</th><th>Grupo</th><th>Qué pide</th></tr></thead>
+    <tbody>
+      {% for r in d.attention %}{% if loop.index0 < 30 %}
+      <tr><td>{{ complink(r) }}</td><td class="pl-dash__where">{{ r.group }}</td><td>{% for f in r.flags %}{{ flagchip(f) }} {% endfor %}</td></tr>
+      {% endif %}{% endfor %}
+    </tbody>
+  </table>
+  {% if d.attention.length > 30 %}
+  <details class="pl-dash__more"><summary>Los {{ d.attention.length - 30 }} restantes</summary>
+    <table class="pl-dash__table">
+      <tbody>
+        {% for r in d.attention %}{% if loop.index0 >= 30 %}
+        <tr><td>{{ complink(r) }}</td><td class="pl-dash__where">{{ r.group }}</td><td>{% for f in r.flags %}{{ flagchip(f) }} {% endfor %}</td></tr>
+        {% endif %}{% endfor %}
+      </tbody>
+    </table>
+  </details>
+  {% endif %}
+  {% else %}<p class="pl-muted">Ningún componente pide nada. Buen día.</p>{% endif %}
+</section>
+
+<div class="pl-dash__cols">
+<section class="pl-dash__sec" id="propuestas">
+  <h2>Propuestas pendientes de decisión <span class="pl-nav__count">{{ d.counts.proposals }}</span></h2>
+  {% if d.proposals.pending.length %}
+  <p class="pl-muted">{{ d.proposals.textPending }} de textos de ficha y {{ d.proposals.otherPending }} de otro tipo. Se aprueban en el archivo de la propuesta; el índice está en <code>design-system/proposals/README.md</code>.</p>
+  <ul class="pl-dash__props">
+    {% for p in d.proposals.pending %}{% if loop.index0 < 12 %}
+    <li>
+      <div class="pl-dash__prop-head"><code>{{ p.id }}</code>{% if p.byAI %}<span class="pl-flag pl-flag--info">borrador de la IA</span>{% endif %}{% if p.isText %}<span class="pl-flag pl-flag--muted">textos</span>{% endif %}</div>
+      <p>{{ p.summary }}</p>
+      <p class="pl-dash__meta">{% for c in p.components %}{{ complink(c) }}{% if not loop.last %} · {% endif %}{% endfor %}{% if p.components.length and p.approver %} · {% endif %}{% if p.approver %}aprueba {{ p.approver }}{% endif %}</p>
+    </li>
+    {% endif %}{% endfor %}
+  </ul>
+  {% if d.proposals.pending.length > 12 %}
+  <details class="pl-dash__more"><summary>Las {{ d.proposals.pending.length - 12 }} restantes</summary>
+    <ul class="pl-dash__props">
+      {% for p in d.proposals.pending %}{% if loop.index0 >= 12 %}<li><div class="pl-dash__prop-head"><code>{{ p.id }}</code></div><p>{{ p.summary }}</p><p class="pl-dash__meta">{% for c in p.components %}{{ complink(c) }}{% if not loop.last %} · {% endif %}{% endfor %}</p></li>{% endif %}{% endfor %}
+    </ul>
+  </details>
+  {% endif %}
+  {% else %}<p class="pl-muted">Ninguna propuesta espera decisión.</p>{% endif %}
+  {% if d.proposals.approved.length %}
+  <h3>Aprobadas y sin aplicar <span class="pl-nav__count">{{ d.proposals.approved.length }}</span></h3>
+  <ul class="pl-dash__props">
+    {% for p in d.proposals.approved %}<li><div class="pl-dash__prop-head"><code>{{ p.id }}</code></div><p>{{ p.summary }}</p><p class="pl-dash__meta">{% for c in p.components %}{{ complink(c) }}{% if not loop.last %} · {% endif %}{% endfor %}</p></li>{% endfor %}
+  </ul>
+  {% endif %}
+</section>
+
+<section class="pl-dash__sec" id="verificar">
+  <h2>Contratos por verificar <span class="pl-nav__count">{{ d.counts.unverified + d.counts.stale }}</span></h2>
+  <p class="pl-muted">Un componente no se usa en una pantalla hasta que su contrato se comprueba contra el maestro de Figma. Los caducados van primero: el maestro cambió desde que se verificaron.</p>
+  {{ complist(d.lists.unverified, "stale", 15) }}
+</section>
+
+<section class="pl-dash__sec" id="ia">
+  <h2>Borradores de la IA por revisar <span class="pl-nav__count">{{ d.counts.ai }}</span></h2>
+  <p class="pl-muted">Textos de ficha que redactó la IA y nadie ha revisado todavía. Se editan o se aprueban desde la propia ficha.</p>
+  {{ complist(d.lists.ai, "ai", 12) }}
+</section>
+
+<section class="pl-dash__sec" id="criterio">
+  <h2>Fichas con criterio por escribir <span class="pl-nav__count">{{ d.counts.todo }}</span></h2>
+  <p class="pl-muted">Campos de la ficha sin texto: propósito, accesibilidad o cuándo usar. La IA puede proponer un borrador; una persona lo aprueba.</p>
+  {{ complist(d.lists.todo, "todo", 12) }}
+</section>
+
+<section class="pl-dash__sec" id="contraste">
+  <h2>Contraste por debajo de AA <span class="pl-nav__count">{{ d.counts.contrast }}</span></h2>
+  <p class="pl-muted">Parejas texto/fondo de su CSS que no llegan al mínimo. Se arregla cambiando la pareja de tokens en Figma, con propuesta.</p>
+  {{ complist(d.lists.contrast, "contrast", 12) }}
+</section>
+
+<section class="pl-dash__sec" id="ejemplo">
+  <h2>Sin ejemplo de código <span class="pl-nav__count">{{ d.counts.example }}</span></h2>
+  <p class="pl-muted">Tienen contrato pero nadie ha escrito su HTML mínimo: no se pueden ver aquí ni usar en pantallas.</p>
+  {{ complist(d.lists.example, "example", 12) }}
+</section>
+
+<section class="pl-dash__sec" id="fidelidad">
+  <h2>Avisos de fidelidad <span class="pl-nav__count">{{ d.counts.fidelity }}</span></h2>
+  {% if d.fidelity %}
+  <p class="pl-muted">Informe de <code>scripts/ds-fidelity.py</code> del {{ d.fidelity.at }} ({{ d.fidelity.ago }}){% if d.fidelity.olderThanSync %}, <strong>anterior al último sync</strong>: vuelve a ejecutarlo con <code>--out design-system/reports/fidelity.json</code>{% endif %}. {% for bc in d.fidelity.byCheck %}{{ bc[0] }} {{ bc[1] }}{% if not loop.last %} · {% endif %}{% endfor %}.</p>
+  {{ complist(d.lists.fidelity, "fidelity", 12) }}
+  {% else %}<p class="pl-muted">No hay informe guardado. Ejecuta <code>python3 scripts/ds-fidelity.py --out design-system/reports/fidelity.json</code>.</p>{% endif %}
+</section>
+
+<section class="pl-dash__sec" id="retiradas">
+  <h2>Retiradas en curso <span class="pl-nav__count">{{ d.counts.retirements }}</span></h2>
+  {% if d.retirements.length %}
+  <p class="pl-muted">Mientras queda plazo, usarlos solo avisa. {% if d.policy.blockNewUsageFromDay %}A los {{ d.policy.blockNewUsageFromDay }} días un uso nuevo es error y frena el commit.{% endif %}</p>
+  <ul class="pl-dash__list">
+    {% for r in d.retirements %}
+    <li>{% if r.url %}{{ complink(r) }}{% else %}<span class="pl-dash__comp">{{ r.title }}</span>{% endif %}
+      <span class="pl-dash__detail">desde {{ r.sinceLabel }}{% if r.blocksFrom %} · bloquea usos nuevos desde {{ r.blocksFrom }}{% endif %}{% if r.replacement %} · sustituto: {% if r.replacementUrl %}<a href="{{ r.replacementUrl }}">{{ r.replacement }}</a>{% else %}{{ r.replacement }}{% endif %}{% endif %}</span></li>
+    {% endfor %}
+  </ul>
+  {% else %}<p class="pl-muted">Nada en retirada.</p>{% endif %}
+</section>
+</div>
+
+<section class="pl-dash__sec pl-dash__sec--foot" id="sync">
+  <h2>De dónde sale todo esto</h2>
+  <div class="pl-dash__foot">
+    <div>
+      <h3>Archivos de Figma</h3>
+      <ul class="pl-dash__plain">{% for s in d.ds.sources %}<li><b>{{ s.name }}</b> <span class="pl-muted">{{ s.role }}</span></li>{% endfor %}</ul>
+    </div>
+    <div>
+      <h3>Componentes por archivo</h3>
+      <ul class="pl-dash__plain">{% for f in d.totals.byFile %}<li><b>{{ f[1] }}</b> {{ f[0] }}</li>{% endfor %}<li><b>{{ d.totals.internos }}</b> internos de Figma, no se construyen</li></ul>
+    </div>
+    <div>
+      <h3>Últimos refrescos puntuales</h3>
+      {% if d.ds.recentRefreshes.length %}<ul class="pl-dash__plain">{% for h in d.ds.recentRefreshes %}<li><span class="pl-muted">{{ h.at }}</span> {{ h.what }}</li>{% endfor %}</ul>{% else %}<p class="pl-muted">Ninguno desde la lectura completa.</p>{% endif %}
+    </div>
+  </div>
+  <p class="pl-muted pl-dash__stamp">Tablero calculado al construir la library, {{ d.generatedAt }}, a partir de los contratos, las propuestas, el ciclo de vida, los volcados del sync y el informe de fidelidad. Para navegar por componentes usa el menú de la izquierda.</p>
+</section>

@@ -43,6 +43,13 @@ Fuente de todas salvo indicación: `noodles/context/traspaso-microsites.md` §5 
 - Los concursos publican sus bases legales.
 - El módulo promocional en iframe necesita revisión de protección de datos antes de publicarse.
 
+### Componentes interactivos
+Fuente: anotaciones del wireframe UX Desktop (`1YhsCqdqYCHlK4Y82IY5G3`, sección `565:13925`, leídas el 2026-10-22).
+- En un acordeón solo hay una pregunta abierta: al abrir otra, se cierra la que estaba abierta, con
+  transición animada (`396:5821`).
+- El slider del hero «pasa automáticamente» (`396:5702`). ⚠️ Choca con el criterio de accesibilidad del
+  design system (sin autoplay, o con pausa visible y parado con «reducir movimiento»): pendiente de decidir.
+
 ### Contacto
 - El contacto se hace con el formulario externo de GB Foods.
 - La *suggestion box* enlaza al formulario externo de Calidad. Unificar ambos formularios: ⬜ TODO — por decidir.

@@ -225,7 +225,14 @@
       }
     ],
     "manualTodo": 0,
-    "notes": ""
+    "notes": "",
+    "coverage": {
+      "visible": 1,
+      "total": 1,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
   },
   "ds": {
     "slug": "product-card",
@@ -237,6 +244,10 @@
   "variants": {
     "default": {
       "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
     }
   }
 }

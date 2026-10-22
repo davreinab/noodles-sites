@@ -1,4 +1,70 @@
 {% macro render(data) %}
+{% if data.view == "todas" %}
+{% raw %}<div class="ds-gallery">
+<style>.ds-gallery{font:14px/1.4 system-ui,sans-serif;color:#1f1f1f}.ds-gallery h3{font:600 12px/1.3 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;color:#4a4a4a}.ds-gallery section{margin:0 0 32px}.ds-gallery__row{display:flex;flex-wrap:wrap;align-items:center;gap:24px 32px}.ds-gallery figure{margin:0;display:flex;flex-direction:column;gap:8px;align-items:flex-start}.ds-gallery figcaption{font:12px/1.3 ui-monospace,monospace;color:#4a4a4a}.ds-gallery__stage{padding:8px;min-width:48px;min-height:32px;outline:1px dashed #bebebe;outline-offset:0}</style>
+<section><h3>required (con y sin)</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><div data-ds="input" class="field">
+<label class="field__label" for="nombre">Nombre<span class="field__required" aria-hidden="true">*</span></label>
+<input class="field__control" id="nombre" name="nombre" type="text" placeholder="Escribe aquí" required aria-describedby="nombre-ayuda">
+<p class="field__helper" id="nombre-ayuda">Texto de ayuda</p>
+</div></div><figcaption>required=true</figcaption></figure>
+<figure><div class="ds-gallery__stage"><div data-ds="input" class="field">
+<label class="field__label" for="nombre-v1">Nombre<span class="field__required" aria-hidden="true">*</span></label>
+<input class="field__control" id="nombre-v1" name="nombre" type="text" placeholder="Escribe aquí" aria-describedby="nombre-ayuda-v1">
+<p class="field__helper" id="nombre-ayuda-v1">Texto de ayuda</p>
+</div></div><figcaption>required=false</figcaption></figure>
+</div></section>
+<section><h3>helper (con y sin)</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><div data-ds="input" class="field">
+<label class="field__label" for="nombre-v2">Nombre<span class="field__required" aria-hidden="true">*</span></label>
+<input class="field__control" id="nombre-v2" name="nombre" type="text" placeholder="Escribe aquí" required aria-describedby="nombre-ayuda-v2">
+<p class="field__helper" id="nombre-ayuda-v2">Texto de ayuda</p>
+</div></div><figcaption>helper=true</figcaption></figure>
+<figure><div class="ds-gallery__stage"><div data-ds="input" class="field">
+<label class="field__label" for="nombre-v3">Nombre<span class="field__required" aria-hidden="true">*</span></label>
+<input class="field__control" id="nombre-v3" name="nombre" type="text" placeholder="Escribe aquí" required aria-describedby="nombre-ayuda">
+
+</div></div><figcaption>helper=false</figcaption></figure>
+</div></section>
+<section><h3>filled (con y sin)</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><div data-ds="input" class="field">
+<label class="field__label" for="nombre-v4">Nombre<span class="field__required" aria-hidden="true">*</span></label>
+<input class="field__control" id="nombre-v4" name="nombre" type="text" placeholder="Escribe aquí" required aria-describedby="nombre-ayuda-v4" value="Valencia">
+<p class="field__helper" id="nombre-ayuda-v4">Texto de ayuda</p>
+</div></div><figcaption>filled=true</figcaption></figure>
+<figure><div class="ds-gallery__stage"><div data-ds="input" class="field">
+<label class="field__label" for="nombre-v5">Nombre<span class="field__required" aria-hidden="true">*</span></label>
+<input class="field__control" id="nombre-v5" name="nombre" type="text" placeholder="Escribe aquí" required aria-describedby="nombre-ayuda-v5">
+<p class="field__helper" id="nombre-ayuda-v5">Texto de ayuda</p>
+</div></div><figcaption>filled=false</figcaption></figure>
+</div></section>
+<section><h3>error (con y sin)</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><div data-ds="input" class="field">
+<label class="field__label" for="nombre-v6">Nombre<span class="field__required" aria-hidden="true">*</span></label>
+<input class="field__control" id="nombre-v6" name="nombre" type="text" placeholder="Escribe aquí" required aria-describedby="nombre-ayuda-v6" aria-invalid="true">
+<p class="field__helper" id="nombre-ayuda-v6">Texto de ayuda</p>
+</div></div><figcaption>error=true</figcaption></figure>
+<figure><div class="ds-gallery__stage"><div data-ds="input" class="field">
+<label class="field__label" for="nombre-v7">Nombre<span class="field__required" aria-hidden="true">*</span></label>
+<input class="field__control" id="nombre-v7" name="nombre" type="text" placeholder="Escribe aquí" required aria-describedby="nombre-ayuda-v7">
+<p class="field__helper" id="nombre-ayuda-v7">Texto de ayuda</p>
+</div></div><figcaption>error=false</figcaption></figure>
+</div></section>
+<section><h3>disabled (con y sin)</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><div data-ds="input" class="field">
+<label class="field__label" for="nombre-v8">Nombre<span class="field__required" aria-hidden="true">*</span></label>
+<input class="field__control" id="nombre-v8" name="nombre" type="text" placeholder="Escribe aquí" required aria-describedby="nombre-ayuda-v8" disabled>
+<p class="field__helper" id="nombre-ayuda-v8">Texto de ayuda</p>
+</div></div><figcaption>disabled=true</figcaption></figure>
+<figure><div class="ds-gallery__stage"><div data-ds="input" class="field">
+<label class="field__label" for="nombre-v9">Nombre<span class="field__required" aria-hidden="true">*</span></label>
+<input class="field__control" id="nombre-v9" name="nombre" type="text" placeholder="Escribe aquí" required aria-describedby="nombre-ayuda-v9">
+<p class="field__helper" id="nombre-ayuda-v9">Texto de ayuda</p>
+</div></div><figcaption>disabled=false</figcaption></figure>
+</div></section>
+<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">La galería clona el elemento raíz del ejemplo y solo cambia sus clases y atributos: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
+</div>{% endraw %}
+{% else %}
 {% raw %}<div data-ds="input" class="field">
 <label class="field__label" for="nombre">Nombre<span class="field__required" aria-hidden="true">*</span></label>
 <input class="field__control" id="nombre" name="nombre" type="text" placeholder="Escribe aquí" required aria-describedby="nombre-ayuda">
@@ -17,4 +83,5 @@
 <label class="field__label" for="codigo-cliente">Código de cliente</label>
 <input class="field__control" id="codigo-cliente" name="codigo-cliente" type="text" value="YT-2041" disabled>
 </div>{% endraw %}
+{% endif %}
 {% endmacro %}

@@ -37,11 +37,29 @@
     "video-player": {
       "Ratio": {
         "9:16": ".video-player--vertical"
+      },
+      "poster": {
+        "true": {
+          "target": ".video-player__poster",
+          "presence": true
+        }
+      },
+      "playing": {
+        "true": {
+          "target": "iframe",
+          "presence": true
+        }
       }
     },
     "modal": {
       "Size": {
         "Full": ".modal--full"
+      },
+      "footer": {
+        "true": {
+          "target": ".modal__footer",
+          "presence": true
+        }
       }
     },
     "suggestion-bubble": {
@@ -62,6 +80,178 @@
     "ingredient-item": {
       "Level": {
         "Secondary": ".ingredient-item--secondary"
+      }
+    },
+    "select": {
+      "required": {
+        "true": {
+          "target": "select",
+          "add": "[required]"
+        }
+      },
+      "error": {
+        "true": {
+          "target": "select",
+          "add": "[aria-invalid=\"true\"]"
+        }
+      },
+      "disabled": {
+        "true": {
+          "target": "select",
+          "add": "[disabled]"
+        }
+      }
+    },
+    "input": {
+      "required": {
+        "true": {
+          "target": ".field__control",
+          "add": "[required]"
+        }
+      },
+      "error": {
+        "true": {
+          "target": ".field__control",
+          "add": "[aria-invalid=\"true\"]"
+        }
+      },
+      "disabled": {
+        "true": {
+          "target": ".field__control",
+          "add": "[disabled]"
+        }
+      },
+      "helper": {
+        "true": {
+          "target": ".field__helper",
+          "presence": true
+        }
+      },
+      "filled": {
+        "true": {
+          "target": ".field__control",
+          "add": "[value=\"Valencia\"]"
+        }
+      }
+    },
+    "textarea": {
+      "required": {
+        "true": {
+          "target": ".field__control",
+          "add": "[required]"
+        }
+      },
+      "error": {
+        "true": {
+          "target": ".field__control",
+          "add": "[aria-invalid=\"true\"]"
+        }
+      },
+      "disabled": {
+        "true": {
+          "target": ".field__control",
+          "add": "[disabled]"
+        }
+      },
+      "helper": {
+        "true": {
+          "target": ".field__helper",
+          "presence": true
+        }
+      }
+    },
+    "checkbox": {
+      "error": {
+        "true": {
+          "target": ".checkbox__input",
+          "add": "[aria-invalid=\"true\"]"
+        }
+      },
+      "disabled": {
+        "true": {
+          "target": ".checkbox__input",
+          "add": "[disabled]"
+        }
+      }
+    },
+    "chip": {
+      "iconLeading": {
+        "true": {
+          "target": ".icon",
+          "presence": true
+        }
+      },
+      "disabled": {
+        "true": "[disabled]"
+      }
+    },
+    "icon-button": {
+      "disabled": {
+        "true": "[disabled]"
+      }
+    },
+    "button": {
+      "disabled": {
+        "true": "[aria-disabled=\"true\"]"
+      }
+    },
+    "timer": {
+      "running": {
+        "true": "[data-state=\"running\"]"
+      },
+      "paused": {
+        "true": "[data-state=\"paused\"]"
+      },
+      "done": {
+        "true": "[data-state=\"done\"]"
+      }
+    },
+    "product-card": {
+      "badge": {
+        "true": {
+          "target": ".badge",
+          "presence": true
+        }
+      }
+    },
+    "category-card": {
+      "badge": {
+        "true": {
+          "target": ".badge",
+          "presence": true
+        }
+      }
+    },
+    "navbar": {
+      "langSwitch": {
+        "true": {
+          "target": ".lang-switch",
+          "presence": true
+        }
+      }
+    },
+    "mobile-menu": {
+      "langSwitch": {
+        "true": {
+          "target": ".lang-switch",
+          "presence": true
+        }
+      }
+    },
+    "alert": {
+      "dismissible": {
+        "true": {
+          "target": ".alert__close",
+          "presence": true
+        }
+      }
+    },
+    "search-field": {
+      "filled": {
+        "true": {
+          "target": "input",
+          "add": "[value=\"fideos yakisoba\"]"
+        }
       }
     }
   },
@@ -98,70 +288,14 @@
     "axes": [],
     "components": {
       "select": {
-        "required=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
-        "open=true": "Lista nativa del navegador: no se puede pintar en una muestra estática.",
-        "error=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
-        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
-      },
-      "input": {
-        "required=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
-        "helper=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin.",
-        "filled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
-        "error=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
-        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
+        "open=true": "Lista nativa del navegador: no se puede pintar en una muestra estática."
       },
       "textarea": {
-        "required=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
-        "helper=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin.",
-        "filled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
-        "error=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
-        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
-      },
-      "checkbox": {
-        "error=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
-        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
-      },
-      "chip": {
-        "iconLeading=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin.",
-        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
-      },
-      "icon-button": {
-        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
+        "filled=true": "El texto va dentro de la etiqueta, no en un atributo: se ve en el «Ejemplo de código»."
       },
       "button": {
-        "iconLeading=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin.",
-        "iconTrailing=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin.",
-        "disabled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
-      },
-      "timer": {
-        "running=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
-        "paused=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
-        "done=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
-      },
-      "video-player": {
-        "poster=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código».",
-        "playing=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
-      },
-      "product-card": {
-        "badge=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin."
-      },
-      "category-card": {
-        "badge=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin."
-      },
-      "navbar": {
-        "langSwitch=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin."
-      },
-      "mobile-menu": {
-        "langSwitch=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin."
-      },
-      "alert": {
-        "dismissible=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin."
-      },
-      "modal": {
-        "footer=true": "Parte que aparece o no: el «Ejemplo de código» la muestra con y sin."
-      },
-      "search-field": {
-        "filled=true": "Estado por atributo HTML/ARIA (no es una clase): se ve en el «Ejemplo de código»."
+        "iconLeading=true": "Los dos iconos llevan la misma clase .icon: un selector simple no distingue el inicial del final; se ve en el «Ejemplo de código».",
+        "iconTrailing=true": "Los dos iconos llevan la misma clase .icon: un selector simple no distingue el inicial del final; se ve en el «Ejemplo de código»."
       }
     }
   },

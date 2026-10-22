@@ -408,7 +408,7 @@ class Tokens:
             return "1" if raw else "0"
         if isinstance(raw, str):
             if re.fullmatch(r"[\w\s,.'\"%-]+", raw) or re.fullmatch(r"[a-z-]+\([\d\s.,%-]*\)", raw):
-                return raw  # palabra suelta o función CSS (cubic-bezier, steps…): sin comillas (parche del proyecto)
+                return raw  # palabra suelta o función CSS (cubic-bezier, steps…): sin comillas
             return json.dumps(raw)
         return str(raw)
 

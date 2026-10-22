@@ -182,7 +182,14 @@
       }
     ],
     "manualTodo": 0,
-    "notes": ""
+    "notes": "",
+    "coverage": {
+      "visible": 2,
+      "total": 2,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
   },
   "ds": {
     "slug": "checkbox",
@@ -194,6 +201,10 @@
   "variants": {
     "default": {
       "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
     }
   }
 }

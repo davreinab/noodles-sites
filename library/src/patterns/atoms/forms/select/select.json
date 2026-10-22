@@ -215,7 +215,14 @@
       }
     ],
     "manualTodo": 0,
-    "notes": ""
+    "notes": "",
+    "coverage": {
+      "visible": 3,
+      "total": 3,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
   },
   "ds": {
     "slug": "select",
@@ -227,6 +234,10 @@
   "variants": {
     "default": {
       "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
     }
   }
 }

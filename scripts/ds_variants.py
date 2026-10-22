@@ -150,6 +150,213 @@ def sin_elementos_con_clase(html_text, classes):
     return "".join(out)
 
 
+class _Elems(HTMLParser):
+    """Todos los elementos del ejemplo (a cualquier profundidad), en orden de documento, con sus atributos y su posición."""
+
+    def __init__(self, text):
+        super().__init__(convert_charrefs=False)
+        self.text, self.stack, self.els = text, [], []
+        self.lines = [0]
+        for ln in text.split("\n")[:-1]:
+            self.lines.append(self.lines[-1] + len(ln) + 1)
+
+    def _off(self):
+        l, c = self.getpos()
+        return self.lines[l - 1] + c
+
+    def _new(self, tag, attrs):
+        st = self.get_starttag_text() or ""
+        el = {"tag": tag.lower(), "attrs": {k.lower(): v for k, v in attrs}, "start": self._off(), "open": st}
+        el["open_end"] = el["start"] + len(st)
+        self.els.append(el)
+        return el
+
+    def handle_starttag(self, tag, attrs):
+        el = self._new(tag, attrs)
+        if tag in VOID:
+            el["end"] = el["open_end"]
+        else:
+            self.stack.append(el)
+
+    def handle_startendtag(self, tag, attrs):
+        el = self._new(tag, attrs)
+        el["end"] = el["open_end"]
+
+    def handle_endtag(self, tag):
+        if tag in VOID:
+            return
+        for i in range(len(self.stack) - 1, -1, -1):
+            if self.stack[i]["tag"] == tag.lower():
+                el = self.stack.pop(i)
+                gt = self.text.find(">", self._off())
+                el["end"] = gt + 1 if gt >= 0 else self._off()
+                break
+
+
+def elementos(text):
+    p = _Elems(text or "")
+    try:
+        p.feed(text or ""); p.close()
+    except Exception:
+        return []
+    return [e for e in p.els if "end" in e]
+
+
+SELECTOR_SIMPLE = re.compile(r"[\w-]*(?:\.[\w-]+|#[\w-]+|\[[^\]]+\])*")
+
+
+def coincide(el, selector):
+    """¿El elemento casa con un selector CSS simple (etiqueta, .clase, #id, [atributo] o [atributo="valor"], sin combinadores)?"""
+    sel = (selector or "").strip()
+    if not sel or not SELECTOR_SIMPLE.fullmatch(sel):
+        return False
+    tag = re.match(r"[\w-]*", sel).group(0)
+    if tag and tag.lower() != el["tag"]:
+        return False
+    for c in re.findall(r"\.([\w-]+)", re.sub(r"\[[^\]]*\]", "", sel)):
+        if c not in (el["attrs"].get("class") or "").split():
+            return False
+    for i in re.findall(r"#([\w-]+)", re.sub(r"\[[^\]]*\]", "", sel)):
+        if el["attrs"].get("id") != i:
+            return False
+    for a in re.findall(r"\[[^\]]+\]", sel):
+        n, v = parse_attr(a)
+        if n not in el["attrs"] or (v is not None and el["attrs"][n] != v):
+            return False
+    return True
+
+
+ATTR_RE = re.compile(r"\[\s*([\w:-]+)\s*(?:=\s*(?:\"([^\"]*)\"|'([^']*)'|([^\]\s]*)))?\s*\]")
+
+
+def parse_attr(token):
+    """'[disabled]' → ('disabled', None); '[aria-invalid="true"]' → ('aria-invalid', 'true')."""
+    m = ATTR_RE.fullmatch(token.strip())
+    if not m:
+        return None, None
+    v = next((g for g in m.groups()[1:] if g is not None), None)
+    return m.group(1).lower(), v
+
+
+def parse_add(text):
+    """'.a [disabled] [data-state="x"]' → {'classes': ['a'], 'attrs': [('disabled', None), ('data-state', 'x')]}"""
+    out = {"classes": [], "attrs": []}
+    for t in re.findall(r'\[[^\]]+\]|\.[\w-]+', str(text or "")):
+        if t.startswith("."):
+            out["classes"].append(t[1:])
+        else:
+            n, v = parse_attr(t)
+            if n:
+                out["attrs"].append((n, v))
+    return out
+
+
+def modificador_spec(raw):
+    """Un valor de `modifiers.<slug>.<prop>.<valor>` que no es una clase del raíz: {'target', 'add', 'presence'} o None.
+    Admite '[atributo]' / '[atributo="valor"]' (atributo en el raíz) y {'target', 'add'} o {'target', 'presence': true}."""
+    if isinstance(raw, str) and raw.strip().startswith("["):
+        add = parse_add(raw)
+        return {"target": None, "add": add, "presence": False} if add["attrs"] else None
+    if isinstance(raw, dict) and (raw.get("target") or raw.get("add")):
+        return {"target": (str(raw["target"]).strip() or None) if raw.get("target") else None,
+                "add": parse_add(raw.get("add") or ""), "presence": bool(raw.get("presence"))}
+    return None
+
+
+def _poner_attr(open_tag, nombre, valor):
+    pat = re.compile(r'(\s)%s(?:\s*=\s*(?:"[^"]*"|\'[^\']*\'|[^\s>]+))?(?=[\s/>])' % re.escape(nombre), re.I)
+    nuevo = (' %s="%s"' % (nombre, valor)) if valor is not None else (" " + nombre)
+    if pat.search(open_tag):
+        return pat.sub(lambda m: nuevo, open_tag, count=1)
+    return re.sub(r"\s*/?>$", lambda m: nuevo + m.group(0).lstrip(), open_tag, count=1) if re.search(r"\s*/?>$", open_tag) else open_tag
+
+
+def _quitar_attr(open_tag, nombre):
+    return re.sub(r'\s%s(?:\s*=\s*(?:"[^"]*"|\'[^\']*\'|[^\s>]+))?(?=[\s/>])' % re.escape(nombre), "", open_tag, flags=re.I)
+
+
+def _destino(text, target):
+    """El primer elemento del texto que casa con `target` (sin target: el primero, que es el raíz)."""
+    els = elementos(text)
+    if not target:
+        return els[0] if els else None
+    return next((e for e in els if coincide(e, target)), None)
+
+
+def _editar_apertura(text, target, fn):
+    el = _destino(text, target)
+    if not el:
+        return text, False
+    return text[:el["start"]] + fn(el["open"]) + text[el["open_end"]:], True
+
+
+def aplicar_spec(text, spec, quitar=()):
+    """El texto del raíz con el estado de `spec` aplicado al elemento que toque y sin los atributos/clases de `quitar`
+    (los de los demás valores del mismo eje: no puede haber dos data-state). Devuelve (texto, aplicado)."""
+    def fn(tag):
+        for q in quitar:
+            for n, _ in q["add"]["attrs"]:
+                tag = _quitar_attr(tag, n)
+        cls = spec["add"]["classes"]
+        quitar_cls = {c for q in quitar for c in q["add"]["classes"]}
+        if cls or quitar_cls:
+            tag = _with_classes(tag, quitar_cls, cls)
+        for n, v in spec["add"]["attrs"]:
+            tag = _poner_attr(tag, n, v)
+        return tag
+    return _editar_apertura(text, spec["target"], fn)
+
+
+def sin_spec(text, specs):
+    """El texto del raíz sin los atributos/clases de esos estados (el valor «apagado» de un eje o de una booleana)."""
+    def fn(tag):
+        for q in specs:
+            for n, _ in q["add"]["attrs"]:
+                tag = _quitar_attr(tag, n)
+        cls = {c for q in specs for c in q["add"]["classes"]}
+        return _with_classes(tag, cls, []) if cls else tag
+    out = text
+    for t in {q["target"] for q in specs}:
+        out, _ = _editar_apertura(out, t, fn)
+    return out
+
+
+def sin_presencia(text, target):
+    """El texto sin los elementos que casan con `target` (y todo lo que llevan dentro)."""
+    els = [e for e in elementos(text) if coincide(e, target) and e["start"] > 0]
+    out, pos = [], 0
+    for e in sorted(els, key=lambda e: e["start"]):
+        if e["start"] < pos:
+            continue
+        out.append(text[pos:e["start"]])
+        pos = e["end"]
+    out.append(text[pos:])
+    return "".join(out)
+
+
+def spec_presente(spec, example):
+    """¿El ejemplo muestra ese estado? Presencia: sale algún elemento que case. Atributo o clase: algún elemento que case
+    (o el raíz, sin target) lo lleva con ese valor."""
+    els = elementos(example)
+    if not els:
+        return False
+    tops = {t["start"] for t in top_level(example)}
+    cand = [e for e in els if (coincide(e, spec["target"]) if spec["target"] else e["start"] in tops)]
+    if spec["presence"]:
+        return bool(cand)
+    for e in cand:
+        ok = all(n in e["attrs"] and (v is None or e["attrs"][n] == v) for n, v in spec["add"]["attrs"])
+        ok = ok and all(c in (e["attrs"].get("class") or "").split() for c in spec["add"]["classes"])
+        if ok:
+            return True
+    return False
+
+
+# Booleanas que se deducen solas cuando el ejemplo tiene un único control de formulario.
+DEDUCE_BOOL = {"disabled": '[disabled]', "error": '[aria-invalid="true"]', "invalid": '[aria-invalid="true"]', "required": "[required]"}
+CONTROLES = ("input", "select", "textarea", "button")
+
+
 def top_level(example):
     p = _Top(example or "")
     try:
@@ -169,14 +376,17 @@ def _bases(slug, tokens):
     return out
 
 
-def _props(sch, cov, fid_cfg):
+def _props(sch, cov, fid_cfg, mods_cfg=None):
     api = sch.get("api") or {}
     ignore_axes = {a.lower() for a in (fid_cfg.get("excludeAxes") or DEFAULT_EXCLUDE_AXES)} | {a.lower() for a in cov.get("axes") or []}
     out = []
     for p in api.get("props") or []:
         name, figma = p.get("name"), str(p.get("figma") or "")
         fname = figma.split("#")[0]
-        if not name or name.lower() in ignore_axes or fname.lower() in ignore_axes:
+        axis_cfg = (mods_cfg or {}).get(name) or (mods_cfg or {}).get(fname)
+        # un eje excluido por defecto (p. ej. «state») entra si el proyecto lo declara con un atributo o un elemento interno
+        declarado = isinstance(axis_cfg, dict) and any(modificador_spec(v) for v in axis_cfg.values())
+        if not name or ((name.lower() in ignore_axes or fname.lower() in ignore_axes) and not declarado):
             continue
         if p.get("type") == "enum" and p.get("values"):
             values = [str(v) for v in p["values"]]
@@ -209,8 +419,10 @@ def analyze(sch, example, classes_in_css, fid_cfg=None):
     pattern = fid_cfg.get("modifierPattern") or ".{base}--{value}"
     mods_cfg = (fid_cfg.get("modifiers") or {}).get(slug) or {}
     ignore_values = {v.lower() for v in (cov.get("values") if cov.get("values") is not None else DEFAULT_IGNORE_VALUES)}
-    comp_ignore = {str(x).lower() for x in ((cov.get("components") or {}).get(slug) or [])}  # lista, o {"eje=valor": "motivo"}
-    props = _props(sch, cov, fid_cfg)
+    comp_raw = (cov.get("components") or {}).get(slug) or []
+    comp_ignore = {str(x).lower() for x in comp_raw}  # lista, o {"eje=valor": "motivo"}
+    razones = {str(k).lower(): str(v) for k, v in comp_raw.items() if v} if isinstance(comp_raw, dict) else {}
+    props = _props(sch, cov, fid_cfg, mods_cfg)
 
     def resolve(prop, value):
         """('class', [clases]) | ('na', []) | ('unknown', [])."""
@@ -218,6 +430,13 @@ def analyze(sch, example, classes_in_css, fid_cfg=None):
         if m is None:
             m = cbp.get(prop["fname"])
         keys = [str(value)] + (["yes"] if str(value) == "true" else [])
+        axis_cfg0 = mods_cfg.get(prop["name"]) or mods_cfg.get(prop["fname"])
+        if isinstance(axis_cfg0, dict):
+            for k in keys:
+                if k in axis_cfg0:
+                    sp = modificador_spec(axis_cfg0[k])
+                    if sp:
+                        return "spec", sp
         if isinstance(m, dict):
             for k in keys:
                 if k in m:
@@ -239,7 +458,16 @@ def analyze(sch, example, classes_in_css, fid_cfg=None):
                     if c not in cands:
                         cands.append(c)
         known = [c for c in cands if c in classes_in_css or c in used]
-        return ("class", known[:1]) if known else ("unknown", [])
+        if known:
+            return "class", known[:1]
+        if prop["kind"] == "bool":
+            for n in (prop["name"], prop["fname"]):
+                tok_ = DEDUCE_BOOL.get(slug_value(n))
+                if tok_:
+                    ctl = [e for e in elementos(example) if e["tag"] in CONTROLES]
+                    if len(ctl) == 1:  # con más de un control no se deduce
+                        return "spec", {"target": ctl[0]["tag"], "add": parse_add(tok_), "presence": False}
+        return "unknown", []
 
     # Dónde vive cada clase: en el elemento raíz del ejemplo, en un elemento interno, o no se sabe (la clase no sale en el
     # ejemplo y no sigue la convención de modificador). ds-fidelity acepta cualquier selector existente; la galería solo
@@ -278,6 +506,20 @@ def analyze(sch, example, classes_in_css, fid_cfg=None):
         for v in p["values"]:
             kind, cl = resolved[v]
             label = f"{p['name']}={v}"
+            if kind != "spec" and p["kind"] == "enum" and str(v) == p["default"] and any(k == "spec" for k, _ in resolved.values()):
+                kind, cl = "spec", {"target": None, "add": {"classes": [], "attrs": []}, "presence": False}  # el valor por defecto de un eje con atributos: sin ellos
+            if kind == "spec":
+                it = {"axis": p["name"], "kind": p["kind"], "value": v, "label": label, "classes": [], "spec": cl,
+                      "default": (p["kind"] == "enum" and v == p["default"]), "mods": [], "scope": "root"}
+                if label.lower() in comp_ignore or v.lower() in ignore_values:
+                    it["state"] = "ignored"
+                elif it["default"]:
+                    it["state"] = "visible"
+                else:
+                    it["state"] = "visible" if spec_presente(cl, example) else "missing"
+                items.append(it)
+                continue
+            cl = cl
             it = {"axis": p["name"], "kind": p["kind"], "value": v, "label": label, "classes": cl,
                   "default": (p["kind"] == "enum" and v == p["default"]), "mods": sorted(mods),
                   "scope": ambito(cl) if kind == "class" else "root"}
@@ -301,7 +543,8 @@ def analyze(sch, example, classes_in_css, fid_cfg=None):
     mis = [i for i in items if i["state"] == "missing"]
     return {"items": items, "visible": len(vis), "total": len(vis) + len(mis), "missing": [i["label"] for i in mis],
             "unchecked": [i["label"] for i in items if i["state"] == "unchecked"],
-            "ignored": sum(1 for i in items if i["state"] == "ignored"), "bases": bases}
+            "ignored": sum(1 for i in items if i["state"] == "ignored"), "bases": bases,
+            "ignored_reasons": [(i["label"], razones[i["label"].lower()]) for i in items if i["state"] == "ignored" and i["label"].lower() in razones]}
 
 
 # ───────────────────────────── galería generada ─────────────────────────────
@@ -392,9 +635,15 @@ def gallery(sch, example, analysis, pairs=None):
     bases = analysis["bases"]
     root = _root(slug, example, bases)
     por_eje, no_gen = {}, []
-    child_bool = []
+    child_bool, spec_ejes = [], {}
     for it in analysis["items"]:
         if it["state"] == "ignored":
+            continue
+        if it.get("spec"):
+            if root is None:
+                no_gen.append(it["label"])
+            else:
+                spec_ejes.setdefault((it["axis"], it["kind"]), []).append(it)
             continue
         if root is None or it["state"] == "unchecked" or (not it["classes"] and not it["default"]):
             no_gen.append(it["label"])
@@ -437,6 +686,40 @@ def gallery(sch, example, analysis, pairs=None):
         con = _unique_ids(text, k); k += 1
         sin = _unique_ids(sin_elementos_con_clase(text, set(it["classes"])), k); k += 1
         secciones.append((f"{it['axis']} (con y sin)", [(f"{it['axis']}=true", con), (f"{it['axis']}=false", sin)]))
+    for (axis, kind), its in spec_ejes.items():
+        todos = [i["spec"] for i in its if not i["spec"]["presence"]]
+        celdas = []
+        for it in its[:MAX_CELLS_PER_AXIS]:
+            sp = it["spec"]
+            donde = sp["target"] or "el elemento raíz"
+            if kind == "enum":
+                if sp["presence"]:
+                    no_gen.append(f"{it['label']} (una variante de un eje no puede ser «presence»)")
+                    continue
+                if it["default"]:
+                    h = sin_spec(text, todos)
+                else:
+                    h, ok = aplicar_spec(text, sp, quitar=todos)
+                    if not ok:
+                        no_gen.append(f"{it['label']} (el elemento «{donde}» no sale en el ejemplo)")
+                        continue
+                celdas.append((it["label"], _unique_ids(h, k))); k += 1
+            else:
+                if sp["presence"]:
+                    if not spec_presente(sp, text):
+                        no_gen.append(f"{it['label']} (el elemento «{donde}» no sale en el ejemplo)")
+                        continue
+                    con, sin = text, sin_presencia(text, sp["target"])
+                else:
+                    con, ok = aplicar_spec(text, sp)
+                    if not ok:
+                        no_gen.append(f"{it['label']} (el elemento «{donde}» no sale en el ejemplo)")
+                        continue
+                    sin = sin_spec(text, [sp])
+                celdas.append((f"{axis}=true", _unique_ids(con, k))); k += 1
+                celdas.append((f"{axis}=false", _unique_ids(sin, k))); k += 1
+        if celdas:
+            secciones.append((axis if kind == "enum" else f"{axis} (con y sin)", celdas))
     combos = combinaciones(analysis, pairs)
     if combos:
         todas = {c for it in analysis["items"] if it["state"] != "ignored" for c in it["classes"]} | {c for it in analysis["items"] for c in it["mods"]}
@@ -459,8 +742,11 @@ def gallery(sch, example, analysis, pairs=None):
         for etiqueta, h in celdas:
             out.append(f"<figure><div class=\"ds-gallery__stage\">{h}</div><figcaption>{etiqueta}</figcaption></figure>")
         out.append("</div></section>")
-    nota = ("La galería clona el elemento raíz del ejemplo y solo cambia sus clases: una variante que necesita otro marcado "
+    nota = ("La galería clona el elemento raíz del ejemplo y solo cambia sus clases" + (" y atributos" if spec_ejes else "") + ": una variante que necesita otro marcado "
             "(otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.")
+    if analysis.get("ignored_reasons"):
+        nota = ("No se pintan por su naturaleza (declarado en coverageIgnore): "
+                + "; ".join(f"{l}: {r}" for l, r in analysis["ignored_reasons"]) + ". " + nota)
     if no_gen:
         nota = "No se han podido pintar (sin clase conocida en el contrato ni en el CSS): " + ", ".join(no_gen) + ". " + nota
     out.append('<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">' + nota + "</p>")
@@ -473,6 +759,8 @@ def lista_faltantes(analysis):
     if not analysis:
         return ""
     partes = []
+    if analysis.get("ignored_reasons"):
+        partes.append("No se pintan por su naturaleza: " + "; ".join(f"{l}: {r}" for l, r in analysis["ignored_reasons"]) + ".")
     if analysis["missing"]:
         partes.append("Variantes de Figma que no salen en el ejemplo: " + ", ".join(analysis["missing"]) + ".")
     if analysis["unchecked"]:

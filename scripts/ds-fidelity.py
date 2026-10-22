@@ -429,6 +429,8 @@ class Audit:
                 if value == default:
                     continue
                 candidates = []
+                if isinstance(axis_cfg, dict) and value in axis_cfg and dv is not None and dv.modificador_spec(axis_cfg[value]):
+                    continue  # se declara con un atributo o un elemento interno: no necesita una clase en el CSS
                 if isinstance(axis_cfg, dict) and value in axis_cfg:
                     candidates.append(axis_cfg[value])
                 elif isinstance(axis_cfg, str):
@@ -474,7 +476,7 @@ class Audit:
         if a["unchecked"]:
             self.add("variant-coverage-unchecked", sch["_file"], 0, slug, str(len(a["unchecked"])),
                      f"no se puede comprobar la cobertura de {len(a['unchecked'])} variante(s) ({', '.join(a['unchecked'][:8])}{' …' if len(a['unchecked']) > 8 else ''}): "
-                     f"ni el contrato ni el CSS dicen qué clase las representa: decláralo en ds-fidelity.config.json → modifiers.{slug} ({{\"propiedad\": {{\"valor\": \".clase\"}}}}); no hace falta tocar el schema")
+                     f"ni el contrato ni el CSS dicen cómo se representan: decláralo en ds-fidelity.config.json → modifiers.{slug} ({{\"propiedad\": {{\"valor\": \".clase\"}}}}; un atributo: \"[aria-invalid=\\\"true\\\"]\"; un elemento interno: {{\"target\": \".x\", \"add\": \"[disabled]\"}} o {{\"target\": \".x\", \"presence\": true}}); no hace falta tocar el schema")
 
     # ── 3. ejemplo frente a CSS ────────────────────────────────────────────────
     def example(self, sch):

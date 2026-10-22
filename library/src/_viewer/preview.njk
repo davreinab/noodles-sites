@@ -6,19 +6,26 @@
   <title>{{ v.patternTitle }} ({{ v.title }})</title>
   {% if hostCss %}<link rel="stylesheet" href="{{ hostCss }}">{% endif %}
   <link rel="stylesheet" href="/assets/css/library.css">
-  <style>html,body{margin:0}.pl-pad{padding:24px}.pl-pad--multi{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}.pl-pad--stack{display:flex;flex-direction:column;align-items:stretch;gap:16px}</style>
+  <style>html,body{margin:0}.pl-pad{padding:24px}.pl-pad--multi{display:flex;flex-wrap:wrap;align-items:flex-start;gap:16px 24px}.pl-pad--stack{display:flex;flex-direction:column;align-items:stretch;gap:16px}.pl-pad--form{max-width:var(--layout-reading,480px)}</style>
 </head>
 <body{% if v.level != 'pages' and v.level != 'templates' %} class="pl-pad"{% endif %}>
 {{ v.html | safe }}
 <script>
-  // Un ejemplo con varias variantes sueltas (varios elementos raíz) se reparte con separación y centrado en
-  // vertical; con un solo elemento raíz (un header, una card a todo el ancho) el marco no toca nada.
+  // Un ejemplo con varias variantes sueltas (varios elementos raíz) se reparte con separación y alineado arriba (así las
+  // muestras con y sin mensaje de ayuda no se descuadran); con un solo elemento raíz (un header, una card a todo el
+  // ancho) el marco no toca nada. Los campos de formulario no tienen ancho propio: se apilan con un ancho de lectura.
   (function () {
-    var b = document.body, c = b.children, n = 0, block = false, BLOCK = /^(HEADER|FOOTER|NAV|SECTION|MAIN|ARTICLE|ASIDE|FORM|TABLE|UL|OL|DL)$/;
-    for (var i = 0; i < c.length; i++) { if (c[i].tagName === 'SCRIPT') continue; n++; if (BLOCK.test(c[i].tagName)) block = true; }
+    var b = document.body, c = b.children, n = 0, block = false, form = false, BLOCK = /^(HEADER|FOOTER|NAV|SECTION|MAIN|ARTICLE|ASIDE|FORM|TABLE|UL|OL|DL)$/,
+        CONTROL = 'input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="button"]):not([type="submit"]):not([type="reset"]), select, textarea';
+    for (var i = 0; i < c.length; i++) {
+      if (c[i].tagName === 'SCRIPT') continue; n++;
+      if (BLOCK.test(c[i].tagName)) block = true;
+      if (c[i].matches(CONTROL) || c[i].querySelector(CONTROL)) form = true;
+    }
     if (!b.classList.contains('pl-pad') || n < 2) return;
     // Varias piezas de bloque (listas, navegaciones, secciones) se apilan con separación; el resto, en fila.
-    b.classList.add(block ? 'pl-pad--stack' : 'pl-pad--multi');
+    b.classList.add(block || form ? 'pl-pad--stack' : 'pl-pad--multi');
+    if (form) b.classList.add('pl-pad--form');
   })();
 </script>
 <script src="/assets/js/library.js"></script>

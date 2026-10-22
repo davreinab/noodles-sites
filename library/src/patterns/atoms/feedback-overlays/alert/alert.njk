@@ -36,7 +36,19 @@
 <button class="alert__close" type="button" aria-label="Cerrar aviso"><span class="icon icon-close" aria-hidden="true"></span></button>
 </div></div><figcaption>layout=Toast</figcaption></figure>
 </div></section>
-<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">La galería clona el elemento raíz del ejemplo y solo cambia sus clases: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
+<section><h3>dismissible (con y sin)</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><div data-ds="alert" class="alert" role="status">
+<span class="icon icon-info" aria-hidden="true"></span>
+<div class="alert__content"><p class="alert__title">Información</p><p class="alert__body">El concurso abre el 1 de noviembre.</p></div>
+<button class="alert__close" type="button" aria-label="Cerrar aviso"><span class="icon icon-close" aria-hidden="true"></span></button>
+</div></div><figcaption>dismissible=true</figcaption></figure>
+<figure><div class="ds-gallery__stage"><div data-ds="alert" class="alert" role="status">
+<span class="icon icon-info" aria-hidden="true"></span>
+<div class="alert__content"><p class="alert__title">Información</p><p class="alert__body">El concurso abre el 1 de noviembre.</p></div>
+
+</div></div><figcaption>dismissible=false</figcaption></figure>
+</div></section>
+<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">La galería clona el elemento raíz del ejemplo y solo cambia sus clases y atributos: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
 </div>{% endraw %}
 {% else %}
 {% raw %}<div data-ds="alert" class="alert" role="status">

@@ -465,7 +465,7 @@ class Audit:
             return
         slug = sch["meta"].get("slug", "")
         ex = self.code_of(sch).get("example") or ""
-        a = dv.analyze(sch, ex, self.css_classes, self.cfg)
+        a = dv.analyze(sch, ex, self.css_classes, self.cfg, self.rules)
         if not a:
             return
         if a["missing"]:

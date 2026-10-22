@@ -14,8 +14,11 @@ Uso:  python3 scripts/ds-extract.py                # inventario → _borrador/ y
 Qué detecta (heurístico, siempre se revisa):
   tokens      propiedades CSS `--nombre` de UI/**/*.css y <style>; `--a-b-c` → `a/b/c`; las que apuntan a otra
               (`var(--x)`) son semánticas; los bloques `[data-theme=dark]`/`.dark` dan el modo Dark.
-  componentes bloques BEM de los `class` de UI/**/*.html: `bloque`, `bloque__elemento`, `bloque--modificador`.
-              Modificadores → prop enum; elementos → capas de la anatomía (tag → tipo de capa).
+  componentes los elementos con `data-ds="<slug>"` de UI/**/*.html (el marcador de la skill): cada uno es una muestra; las
+              clases comunes a todas son la base, las que solo salen en algunas son modificadores (los que salen
+              juntos en un elemento, de ejes distintos) y las de dentro, capas. Si los prototipos no llevan ningún
+              `data-ds`, se usa la convención BEM con los separadores de scripts/ds-extract.config.json (por defecto
+              `__` y `--`): la skill no asume cómo se llaman las clases de un proyecto.
   valores sueltos  colores/medidas escritos a mano en el CSS que ningún token cubre (se informan, no se inventan).
 Qué es un componente y qué una sección de pantalla (la propuesta la hace el script, la decisión es de una persona):
   componente  cumple al menos una: se usa en 2 o más pantallas · tiene variantes (modificadores) · tiene estados
@@ -44,7 +47,6 @@ NAME_RE = re.compile(r"^[a-z][a-z0-9]*(-[a-z0-9]+)*$")
 TEXT_TAGS = {"p", "span", "h1", "h2", "h3", "h4", "h5", "h6", "label", "a", "strong", "em", "small", "li"}
 INTERACTIVE = {"button", "a", "input", "select", "textarea", "details", "summary"}
 STATE_RE = r":(hover|focus|focus-visible|active|disabled|checked)|\[(disabled|aria-[a-z]+|data-state)"
-SIZES = {"xs", "s", "sm", "m", "md", "l", "lg", "xl", "small", "medium", "large"}
 
 
 def jread(p, d=None):
@@ -147,25 +149,85 @@ def build_tokens(base, dark, order):
     return prim, sem, skipped
 
 
+CFG = {"elementSeparator": "__", "modifierSeparator": "--"}
+
+
+def _dv():
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import ds_variants as dv
+    return dv
+
+
+def _toks(e):
+    return (e["attrs"].get("class") or "").split()
+
+
 def scan_components(root):
+    """Componentes de UI/**/*.html. Primero por el marcador de la skill, `data-ds="<slug>"`: cada elemento que lo lleva es
+    una muestra del componente; las clases comunes a todas las muestras son su base, las que solo salen en algunas son
+    modificadores y las de los elementos de dentro, sus capas. Sin ningún `data-ds` en los prototipos se usa la convención
+    BEM con los separadores de scripts/ds-extract.config.json (por defecto `__` y `--`); la skill no asume cómo se llaman."""
+    dv = _dv()
+    files = [(os.path.relpath(p, root), dv.elementos(read(p))) for p in ui_files(root, "*.html")]
+    if any(e["attrs"].get("data-ds") for _, els in files for e in els):
+        return _scan_data_ds(files)
+    return _scan_bem(files)
+
+
+def _scan_data_ds(files):
     blocks = OrderedDict()
-    for p in ui_files(root, "*.html"):
-        rel = os.path.relpath(p, root)
-        for tag, classes in TAG_CLASS_RE.findall(read(p)):
-            for c in classes.split():
-                if not NAME_RE.match(c.replace("__", "-").replace("--", "-")):
+    for rel, els in files:
+        for e in els:
+            slug = e["attrs"].get("data-ds")
+            if not slug:
+                continue
+            b = blocks.setdefault(slug, {"files": set(), "occ": [], "els": OrderedDict(), "tag": e["tag"], "via": "data-ds"})
+            b["files"].add(rel)
+            b["occ"].append(set(_toks(e)))
+            for d in els:
+                if d is not e and e["start"] < d["start"] < e["end"] and not d["attrs"].get("data-ds"):
+                    for c in _toks(d):
+                        b["els"].setdefault(c, d["tag"])
+    for b in blocks.values():
+        comun = set.intersection(*b["occ"]) if b["occ"] else set()
+        b["base"] = sorted(comun)
+        b["mod_sets"] = [o - comun for o in b["occ"]]
+        b["mods"] = OrderedDict((m, 0) for o in b["occ"] for m in sorted(o - comun))
+        b["classes"] = sorted(comun | set(b["mods"]) | set(b["els"]))
+    return blocks
+
+
+def _scan_bem(files):
+    esep, msep = CFG["elementSeparator"], CFG["modifierSeparator"]
+    blocks = OrderedDict()
+    for rel, els in files:
+        for e in els:
+            por_bloque = {}
+            for c in _toks(e):
+                if not NAME_RE.match(c.replace(esep, "-").replace(msep, "-")):
                     continue
-                blk = re.split(r"__|--", c)[0]
-                b = blocks.setdefault(blk, {"files": set(), "mods": OrderedDict(), "els": OrderedDict(), "tag": None})
+                blk = re.split(re.escape(esep) + "|" + re.escape(msep), c)[0]
+                b = blocks.setdefault(blk, {"files": set(), "mods": OrderedDict(), "els": OrderedDict(), "tag": None,
+                                            "mod_sets": [], "via": "bem", "classes": set()})
                 b["files"].add(rel)
-                if "__" in c:
-                    el = c.split("__", 1)[1].split("--")[0]
-                    b["els"].setdefault(el, tag.lower())
-                elif "--" in c:
-                    b["mods"].setdefault(c.split("--", 1)[1], 0)
+                b["classes"].add(c)
+                if esep in c:
+                    b["els"].setdefault(c.split(esep, 1)[1].split(msep)[0], e["tag"])
+                elif msep in c:
+                    m = c.split(msep, 1)[1]
+                    b["mods"].setdefault(m, 0)
+                    por_bloque.setdefault(blk, set()).add(m)
                 else:
-                    b["tag"] = b["tag"] or tag.lower()
-    return OrderedDict((k, v) for k, v in blocks.items() if v["tag"] or v["els"] or v["mods"])
+                    b["tag"] = b["tag"] or e["tag"]
+            for blk, ms in por_bloque.items():
+                blocks[blk]["mod_sets"].append(ms)
+    out = OrderedDict()
+    for k, v in blocks.items():
+        if v["tag"] or v["els"] or v["mods"]:
+            v["base"] = [k]
+            v["classes"] = sorted(v["classes"])
+            out[k] = v
+    return out
 
 
 def motivos(name, b, css_text):
@@ -175,24 +237,36 @@ def motivos(name, b, css_text):
         m.append("se usa en %d pantallas" % len(b["files"]))
     if b["mods"]:
         m.append("tiene variantes (%s)" % ", ".join(list(b["mods"])[:4]))
-    if re.search(r"\." + re.escape(name) + r"(__[a-z0-9-]+|--[a-z0-9-]+)?(" + STATE_RE + ")", css_text):
-        m.append("tiene estados")
+    css = re.sub(r"/\*.*?\*/", "", css_text or "", flags=re.S)
+    pesan = set(b.get("classes") or []) | set(b.get("base") or [])
+    for sel in re.findall(r"([^{}]+)\{", css):
+        if re.search(STATE_RE, sel) and pesan & set(re.findall(r"\.([\w-]+)", sel)):
+            m.append("tiene estados")
+            break
     if (b["tag"] or "") in INTERACTIVE or any(t in INTERACTIVE for t in b["els"].values()):
         m.append("es interactivo")
     return m
 
 
+def ejes(mods, mod_sets):
+    """Agrupa los modificadores en ejes: dos que salen juntos en un mismo elemento son de ejes distintos."""
+    axes = []
+    for m in mods:
+        for ax in axes:
+            if not any(m in s and any(o in s for o in ax) for s in mod_sets):
+                ax.append(m)
+                break
+        else:
+            axes.append([m])
+    return axes
+
+
 def draft_component(name, b):
     mods = list(b["mods"])
-    sizes = [m for m in mods if m in SIZES]
-    others = [m for m in mods if m not in SIZES]
     props = []
-    if others:
-        props.append({"name": "variant", "type": "enum", "values": ["default"] + others, "default": "default"})
-    if len(sizes) > 1:
-        props.append({"name": "size", "type": "enum", "values": sizes, "default": sizes[0]})
-    elif sizes:
-        props.append({"name": "size-" + sizes[0], "type": "boolean", "default": False})
+    for i, ax in enumerate(ejes(mods, b.get("mod_sets") or [])):
+        props.append({"name": "variant" if i == 0 else "variant-%d" % (i + 1), "type": "enum",
+                      "values": ["default"] + ax, "default": "default"})
     children = []
     for el, tag in b["els"].items():
         layer = {"layer": el}
@@ -208,7 +282,8 @@ def draft_component(name, b):
         "description": "Detectado en UI/ (" + ", ".join(sorted(b["files"])[:3]) + "). Por escribir: qué es y cuándo se usa.",
         "props": props,
         "anatomy": {"layer": "root", "tag": b["tag"] or "div", "children": children},
-        "_extraido": {"modificadores": mods, "archivos": sorted(b["files"]), "motivo": b.get("motivos") or []},
+        "_extraido": {"modificadores": mods, "archivos": sorted(b["files"]), "motivo": b.get("motivos") or [],
+                      "detectadoPor": b.get("via")},
     }
 
 
@@ -260,6 +335,10 @@ def extract(root):
         "notas": ["Es un borrador heurístico: nombre, grupo, descripción, tokens de la anatomía y semántica se completan con la IA y se proponen antes de promover."],
     }
     jwrite(os.path.join(root, "design-system", "reports", "ui-extraction.json"), rep)
+    vias = {b.get("via") for b in comps.values()} | {b.get("via") for b in secciones.values()}
+    if vias:
+        print("  componentes detectados por " + ("el marcador data-ds de los prototipos" if "data-ds" in vias else
+              "la convención BEM (separadores %s y %s de scripts/ds-extract.config.json): marca los componentes con data-ds para no depender de ella" % (CFG["elementSeparator"], CFG["modifierSeparator"])))
     print(f"ds-extract · {len(prim)} tokens primitivos, {len(sem)} semánticos, {len(comps)} componentes y {len(secciones)} secciones de pantalla en UI/ → design-system/source/_borrador/")
     if skipped:
         print(f"  {len(skipped)} propiedades CSS se quedan fuera (ni color, ni medida, ni alias); ver reports/ui-extraction.json")
@@ -347,6 +426,10 @@ def main():
     ap.add_argument("--verify", action="store_true")
     a = ap.parse_args()
     root = os.path.abspath(a.root)
+    cfg = jread(os.path.join(os.path.dirname(os.path.abspath(__file__)), "ds-extract.config.json"), {}) or {}
+    for k in ("elementSeparator", "modifierSeparator"):
+        if isinstance(cfg.get(k), str) and cfg[k]:
+            CFG[k] = cfg[k]
     sys.exit(promote(root) if a.promote else verify(root) if a.verify else extract(root))
 
 

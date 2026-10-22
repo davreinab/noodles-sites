@@ -1,0 +1,5 @@
+{
+  "_nota": "Solo se usa si los prototipos de UI/ no llevan ningún data-ds (el marcador de la skill). Entonces ds-extract busca componentes con la convención BEM; aquí se dice con qué separadores. Si el proyecto nombra distinto, lo mejor es marcar los componentes con data-ds=\"<slug>\".",
+  "elementSeparator": "__",
+  "modifierSeparator": "--"
+}

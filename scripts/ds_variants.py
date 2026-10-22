@@ -397,7 +397,7 @@ def _props(sch, cov, fid_cfg, mods_cfg=None):
     return out
 
 
-def analyze(sch, example, classes_in_css, fid_cfg=None):
+def analyze(sch, example, classes_in_css, fid_cfg=None, css_rules=None):
     """Cobertura de variantes del contrato en el ejemplo.
 
     Devuelve {"items": [...], "visible": n, "total": n, "missing": [etiquetas], "unchecked": [etiquetas],
@@ -423,6 +423,8 @@ def analyze(sch, example, classes_in_css, fid_cfg=None):
     comp_ignore = {str(x).lower() for x in comp_raw}  # lista, o {"eje=valor": "motivo"}
     razones = {str(k).lower(): str(v) for k, v in comp_raw.items() if v} if isinstance(comp_raw, dict) else {}
     props = _props(sch, cov, fid_cfg, mods_cfg)
+
+    conv_classes = set()
 
     def resolve(prop, value):
         """('class', [clases]) | ('na', []) | ('unknown', [])."""
@@ -459,19 +461,22 @@ def analyze(sch, example, classes_in_css, fid_cfg=None):
                         cands.append(c)
         known = [c for c in cands if c in classes_in_css or c in used]
         if known:
+            conv_classes.update(known[:1])
             return "class", known[:1]
         if prop["kind"] == "bool":
+            deduce = {**DEDUCE_BOOL, **{str(k).lower(): v for k, v in (fid_cfg.get("deduceBooleans") or {}).items()}}
             for n in (prop["name"], prop["fname"]):
-                tok_ = DEDUCE_BOOL.get(slug_value(n))
+                tok_ = deduce.get(slug_value(n))
                 if tok_:
                     ctl = [e for e in elementos(example) if e["tag"] in CONTROLES]
                     if len(ctl) == 1:  # con más de un control no se deduce
                         return "spec", {"target": ctl[0]["tag"], "add": parse_add(tok_), "presence": False}
         return "unknown", []
 
-    # Dónde vive cada clase: en el elemento raíz del ejemplo, en un elemento interno, o no se sabe (la clase no sale en el
-    # ejemplo y no sigue la convención de modificador). ds-fidelity acepta cualquier selector existente; la galería solo
-    # puede aplicar a la raíz lo que es de la raíz.
+    # Dónde vive cada clase, sin mirar cómo se llama: (1) en el HTML del ejemplo (en el raíz o dentro de él), (2) por los otros
+    # valores de su mismo eje, que sí salen en el ejemplo, y (3) si no sale en ningún sitio, por cómo las reglas del CSS la
+    # combinan con otras clases. ds-fidelity acepta cualquier selector existente; la galería solo puede aplicar a la raíz lo
+    # que es de la raíz.
     raiz = _root(slug, example, bases)
     root_tokens, child_tokens = set(), set()
     for t in top_level(example):  # los elementos de primer nivel (variantes puestas en fila) cuentan como raíz
@@ -480,24 +485,69 @@ def analyze(sch, example, classes_in_css, fid_cfg=None):
         dentro = example[raiz["start"] + len(raiz["open"]):raiz["end"]]
         for m in re.finditer(r"<([a-zA-Z][\w-]*)([^>]*)>", dentro):
             child_tokens |= set(_class_tokens(m.group(2)))
+    for e in elementos(example):  # cada elemento con el data-ds del componente es una muestra más, aunque esté anidado
+        if e["attrs"].get("data-ds") == slug:
+            root_tokens |= set(_class_tokens(e["open"]))
+    child_tokens -= root_tokens
+    directos = set()  # clases de los hijos directos del raíz
+    if raiz:
+        hijos = [e for e in elementos(example) if raiz["start"] < e["start"] < raiz["end"]]
+        for e in hijos:
+            if not any(o is not e and o["start"] > raiz["start"] and o["start"] < e["start"] and o["end"] >= e["end"] for o in hijos):
+                directos |= set(_class_tokens(e["open"]))
 
-    def un_ambito(c):
-        bloque = re.split(r"--|__", c)[0]
-        if c in root_tokens:
-            return "root"
-        if "__" in c or c in child_tokens:
-            return "child"  # un elemento (BEM) o una clase que solo sale dentro del raíz
-        if bloque in root_tokens:
-            return "root"
-        if bloque in child_tokens:
-            return "child"  # modificador de un elemento interno (el bloque solo sale dentro del raíz)
-        if bloque in bases or c.startswith(("is-", "has-")):
-            return "root"
-        return "unknown"
+    def por_css(c):
+        """Evidencia del CSS para una clase que el ejemplo no usa: ('root', None) | ('child', clase_destino | None) | None."""
+        if not css_rules:
+            return None
+        hijo = None
+        for sel, _ in css_rules:
+            for alt in sel.split(","):
+                partes = [re.findall(r"\.([\w-]+)", re.sub(r":not\([^)]*\)|\[[^\]]*\]", "", x)) for x in re.split(r"\s*[>+~]\s*|\s+", alt.strip()) if x]
+                for i, cl_ in enumerate(partes):
+                    if c not in cl_:
+                        continue
+                    otras = set(cl_) - {c}
+                    if otras & root_tokens:
+                        return "root", None  # `.base.c`: la clase se añade a la misma pieza que la raíz
+                    k = next(iter(sorted(otras & child_tokens)), None)
+                    if k:
+                        hijo = hijo or ("child", k)
+                    elif i < len(partes) - 1 and any(set(x) & directos for x in partes[i + 1:]):
+                        return "root", None  # `.c .hijo` con un hijo directo del raíz que sí sale en el ejemplo: la clase va en el raíz
+                    elif i == len(partes) - 1 and any(set(x) & root_tokens for x in partes[:i]):
+                        hijo = hijo or ("child", None)  # `.raiz .c`: es de algo que está dentro del raíz
+        return hijo
 
-    def ambito(cl):
-        r = {un_ambito(c) for c in cl}
-        return "child" if "child" in r else "unknown" if "unknown" in r else "root"
+    def clasificar(p, resolved, v, cl):
+        """(ámbito, clase destino) de la variante `v` del eje `p`: 'root', 'child' o 'unknown'.
+        Por cada clase manda, en este orden: dónde sale en el ejemplo; las reglas del CSS; las demás clases de su eje que sí
+        salen en el ejemplo; y, si la configuración la puso con la convención `modifierPattern`, la pieza base."""
+        if not cl:
+            return "root", None
+        vecinas = {c for w, (k_, cls_) in resolved.items() if k_ == "class" and w != v for c in cls_}
+        res = []
+        for c in cl:
+            if c in root_tokens:
+                res.append(("root", None))
+            elif c in child_tokens:
+                res.append(("child", c))
+            elif por_css(c):
+                res.append(por_css(c))
+            elif vecinas & root_tokens:
+                res.append(("root", None))
+            elif vecinas & child_tokens:
+                res.append(("child", sorted(vecinas & child_tokens)[0]))
+            elif c in conv_classes:
+                res.append(("root", None))
+            else:
+                res.append(("unknown", None))
+        ambitos = {r[0] for r in res}
+        if "child" in ambitos:
+            return "child", next((r[1] for r in res if r[0] == "child" and r[1]), None)
+        if "unknown" in ambitos:
+            return "unknown", None
+        return "root", None
 
     items = []
     for p in props:
@@ -522,11 +572,11 @@ def analyze(sch, example, classes_in_css, fid_cfg=None):
             cl = cl
             it = {"axis": p["name"], "kind": p["kind"], "value": v, "label": label, "classes": cl,
                   "default": (p["kind"] == "enum" and v == p["default"]), "mods": sorted(mods),
-                  "scope": ambito(cl) if kind == "class" else "root"}
-            if it["scope"] == "child" and p["kind"] == "enum" and cl:
-                bloques = {re.split(r"--", c)[0] for c in cl}
-                if len(bloques) == 1 and next(iter(bloques)) in child_tokens:
-                    it["target"] = next(iter(bloques))  # el modificador es de ese elemento interno, no de la raíz
+                  "scope": "root"}
+            if kind == "class":
+                it["scope"], destino = clasificar(p, resolved, v, cl)
+                if it["scope"] == "child" and p["kind"] == "enum" and destino:
+                    it["target"] = destino  # el modificador es de ese elemento interno, no de la raíz
             if label.lower() in comp_ignore or v.lower() in ignore_values or kind == "na":
                 it["state"] = "ignored"
             elif it["default"]:
@@ -554,6 +604,10 @@ def _root(slug, example, bases):
     for t in tops:
         if re.search(r"""data-ds\s*=\s*["']%s["']""" % re.escape(slug), t["open"]):
             return t
+    # el elemento que lleva data-ds=<slug> aunque esté anidado (el ejemplo lo envuelve en un contenedor de maquetación)
+    for e in elementos(example):
+        if e["attrs"].get("data-ds") == slug:
+            return {"tag": e["tag"], "start": e["start"], "end": e["end"], "open": e["open"]}
     for t in tops:
         if set(_class_tokens(t["open"])) & set(bases):
             return t

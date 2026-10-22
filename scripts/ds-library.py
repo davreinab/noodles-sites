@@ -373,7 +373,7 @@ def generate(root, check=False):
                                    os.path.join(lib, os.path.dirname(base))).replace(os.sep, "/")
         docs = s.get("docs") or (s.get("source") or {}).get("docs") or {}
         ficha = read(os.path.join(root, docs.get("file", "")), "") if docs.get("file") else ""
-        analisis = dv.analyze(s, example, css_cls, fid_cfg) if (dv and not interno) else None
+        analisis = dv.analyze(s, example, css_cls, fid_cfg, ctx[1] if ctx else None) if (dv and not interno) else None
         pares = ctx[0].component_pairs(s["meta"]["slug"], ctx[1], ctx[2])["pairs"] if (ctx and (s.get("code") or {}).get("classes")) else None
         gal_html, _no_gen = dv.gallery(s, example, analisis, pares) if (dv and analisis) else (None, [])
         galeria = ("html", gal_html) if gal_html else (("texto", dv.lista_faltantes(analisis)) if (analisis and (analisis["missing"] or analisis["unchecked"])) else None)

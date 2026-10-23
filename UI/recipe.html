@@ -71,9 +71,14 @@
   <p class="section__lead">Everything you need to make this recipe for 4 people.</p>
   </div>
   <div class="recipe-ingredients__body">
+  <!-- HUECO: recipe ingredient quantities and duplication shown in the source wireframe require validation; GB Foods supplies. -->
   <ul class="recipe-ingredients__list">
-  <li class="recipe-ingredient"><div class="recipe-ingredient__info"><p class="recipe-ingredient__amount">150 g</p><p class="recipe-ingredient__name">Chicken breast</p></div></li>
-  <li class="recipe-ingredient recipe-ingredient--brand"><div class="recipe-ingredient__info"><p class="recipe-ingredient__amount">200 g</p><p class="recipe-ingredient__name"><a class="recipe-ingredient__link" href="product.html">Cup Oriental</a></p></div><img class="recipe-ingredient__thumb" src="../design-system/assets/images/placeholder.svg" alt=""></li>
+  <li data-ds="recipe-ingredient" class="recipe-ingredient recipe-ingredient--brand"><div class="recipe-ingredient__info"><p class="recipe-ingredient__amount">200g</p><p class="recipe-ingredient__name"><a class="recipe-ingredient__link" href="product.html">Yatekomo Yakisoba pollo</a></p></div><img class="recipe-ingredient__thumb" src="../design-system/assets/images/placeholder.svg" alt=""></li>
+  <li data-ds="recipe-ingredient" class="recipe-ingredient"><div class="recipe-ingredient__info"><p class="recipe-ingredient__amount">1 unit</p><p class="recipe-ingredient__name">Red bell pepper</p></div></li>
+  <li data-ds="recipe-ingredient" class="recipe-ingredient"><div class="recipe-ingredient__info"><p class="recipe-ingredient__amount">1 unit</p><p class="recipe-ingredient__name">Carrot</p></div></li>
+  <li data-ds="recipe-ingredient" class="recipe-ingredient"><div class="recipe-ingredient__info"><p class="recipe-ingredient__amount">2 big spoon</p><p class="recipe-ingredient__name">Soy sauce</p></div></li>
+  <li data-ds="recipe-ingredient" class="recipe-ingredient"><div class="recipe-ingredient__info"><p class="recipe-ingredient__amount">1 unit</p><p class="recipe-ingredient__name">Red bell pepper</p></div></li>
+  <li data-ds="recipe-ingredient" class="recipe-ingredient"><div class="recipe-ingredient__info"><p class="recipe-ingredient__amount">1 unit</p><p class="recipe-ingredient__name">Carrot</p></div></li>
   </ul>
   <section class="recipe-macros" aria-labelledby="ri-macros">
   <h3 class="recipe-macros__title" id="ri-macros">Recipe macros</h3>
@@ -91,21 +96,16 @@
   <section data-ds="recipe-steps" class="section recipe-steps" aria-labelledby="rsteps-title">
   <div class="section__header">
   <h2 class="section__title" id="rsteps-title">Step-by-step preparation</h2>
-  <p class="section__lead">Follow the steps below for a perfect result.</p>
+  <p class="section__lead">Lorem Ipsum</p>
   </div>
+  <!-- HUECO: validated six preparation steps and recipe-specific copy; GB Foods supplies. -->
   <ol class="steps">
-  <li class="step">
-  <span class="step__number" aria-hidden="true">1</span>
-  <div class="step__content"><h3 class="step__title">Add boiling water up to the mark</h3><p class="step__text">Open the lid halfway and add boiling water up to the inner line.</p></div>
-  </li>
-  <li class="step">
-  <span class="step__number" aria-hidden="true">2</span>
-  <div class="step__content"><h3 class="step__title">Wait 3 minutes</h3><p class="step__text">Let the noodles rest while the sauce warms up.</p></div>
-  </li>
-  <li class="step">
-  <span class="step__number" aria-hidden="true">3</span>
-  <div class="step__content"><p class="step__text">Drain the water carefully and set the noodles aside.</p></div>
-  </li>
+  <li class="step"><span class="step__number" aria-hidden="true">1</span><div class="step__content"><h3 class="step__title">Add boiling water up to the mark</h3><p class="step__text">Shred the vegetables, rinse and separate the lettuce leaves and place everything on a plate.</p></div></li>
+  <li class="step"><span class="step__number" aria-hidden="true">2</span><div class="step__content"><h3 class="step__title">Add boiling water up to the mark</h3><p class="step__text">Shred the vegetables, rinse and separate the lettuce leaves and place everything on a plate. Lorem Ipsum dolor long text test.</p><div class="step__media"><img src="../design-system/assets/images/placeholder.svg" alt="Noodle preparation"></div></div></li>
+  <li class="step"><span class="step__number" aria-hidden="true">3</span><div class="step__content"><h3 class="step__title">Add boiling water up to the mark</h3><p class="step__text">Shred the vegetables, rinse and separate the lettuce leaves and place everything on a plate.</p></div></li>
+  <li class="step"><span class="step__number" aria-hidden="true">4</span><div class="step__content"><h3 class="step__title">Add boiling water up to the mark</h3><p class="step__text">Shred the vegetables, rinse and separate the lettuce leaves and place everything on a plate.</p></div></li>
+  <li class="step"><span class="step__number" aria-hidden="true">5</span><div class="step__content"><h3 class="step__title">Add boiling water up to the mark</h3><p class="step__text">Shred the vegetables, rinse and separate the lettuce leaves and place everything on a plate.</p></div></li>
+  <li class="step"><span class="step__number" aria-hidden="true">6</span><div class="step__content"><h3 class="step__title">Add boiling water up to the mark</h3><p class="step__text">Shred the vegetables, rinse and separate the lettuce leaves and place everything on a plate.</p></div></li>
   </ol>
   </section>
 
@@ -114,14 +114,21 @@
   <div class="section__header"><h2 class="section__title" id="rc-title">We haven’t forgotten you, keen cook</h2><p class="section__lead">Explore and learn recipes to glow up your meals</p></div>
   <a class="button button--secondary button--l recipes__cta" href="recipes.html">See all recipes</a>
   <ul class="carousel">
-  <li><article class="recipe-card"><div class="recipe-card__body"><p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p><h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Spicy Noodle Salad with almond and mint</a></h3></div></article></li>
+  <li><article data-ds="recipe-card" class="recipe-card"><div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div><div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p><h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Spicy Noodle Salad with almond and mint</a></h3><ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Oriental</a></li></ul></div></article></li>
+  <li><article data-ds="recipe-card" class="recipe-card"><div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div><div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>40 minutes</p><h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Thai Chicken Noodles with Peanut</a></h3><ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Oriental</a></li></ul></div></article></li>
+  <li><article data-ds="recipe-card" class="recipe-card"><div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div><div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>30 minutes</p><h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Green Curry Ramen</a></h3><ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Oriental</a></li></ul></div></article></li>
+  <li><article data-ds="recipe-card" class="recipe-card"><div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div><div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>50 minutes</p><h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Traditional Japanese Ramen</a></h3><ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Oriental</a></li></ul></div></article></li>
   </ul>
   </div>
   </section>
 
   <section data-ds="banner" class="section banner" aria-label="Campaign">
   <div class="section__inner">
-  <a class="banner__box" href="contests.html"><img src="../design-system/assets/images/placeholder.svg" alt="Campaign artwork"></a>
+  <a class="banner__box" href="natural-formula.html">
+  <div class="section__header"><h2 class="section__title">Try our new formula noodles</h2><p class="section__lead">100% natural noodles. Nothing else.</p></div>
+  <span class="button button--secondary">Discover the new formula</span>
+  <img src="../design-system/assets/images/placeholder.svg" alt="Try our new formula noodles. 100% natural noodles. Nothing else. Discover the new formula.">
+  </a>
   </div>
   </section>
 <dialog data-ds="modal" class="modal" id="share-recipe" aria-labelledby="share-dialog-title"><div class="modal__header"><h2 class="modal__title" id="share-dialog-title">Share recipe</h2><button class="icon-button icon-button--secondary" type="button" aria-label="Close" data-dialog-close><span class="icon icon-close" aria-hidden="true"></span></button></div><div class="modal__body">  <div data-ds="share-panel" class="share-panel">

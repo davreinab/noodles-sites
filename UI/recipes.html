@@ -48,36 +48,65 @@
   </div>
 </dialog>
 <main>
-<!-- HUECO: Published recipes, ingredients, times, nutrition, filter result data and submission handling; GB Foods supplies. Recipe production is outside this project. -->
+<!-- HUECO: Published recipes, ingredients, times, nutrition, filter-to-recipe assignments and submission handling; GB Foods supplies. Recipe production is outside this project. -->
 <section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title"><div class="library-head__inner"><div class="library-head__intro"><h1 class="page-title" id="lhead-title">Recipes</h1><p class="library-head__lead">Explore and learn recipes to level up your dishes.</p></div><form class="search-field library-head__search" role="search"><span class="icon icon-search" aria-hidden="true"></span><label class="visually-hidden" for="recipe-q">Search a recipe or ingredient</label><input class="search-field__input" id="recipe-q" type="search" placeholder="Search a recipe or ingredient" data-search-target="#recipe-grid"></form><div class="library-head__filters" data-filter-group aria-label="Filter recipes"><button class="chip" type="button" aria-pressed="true">All</button><button class="chip" type="button" aria-pressed="false">Less ingredients</button><button class="chip" type="button" aria-pressed="false">Quick recipes</button><button class="chip" type="button" aria-pressed="false">High protein</button><button class="chip" type="button" aria-pressed="false">Single</button><button class="chip" type="button" aria-pressed="false">2+ people</button><button class="chip" type="button" aria-pressed="false">Spicy</button></div><div class="library-head__results"><p aria-live="polite" data-filter-status data-search-status>All recipes</p><button class="link" type="button" data-filter-clear>Clear filters</button></div></div></section>
-  <section data-ds="library" class="library" aria-label="Recipes">
+  <section data-ds="library" class="library" aria-label="Recipes" data-recipes-normal>
   <ul class="library__grid" id="recipe-grid">
-  <li data-search-item><article class="recipe-card">
+  <li data-search-item data-filter-tags="spicy quick"><article data-ds="recipe-card" class="recipe-card">
   <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
-  <div class="recipe-card__body">
-  <p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p>
   <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Spicy Noodle Salad with almond and mint</a></h3>
-  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Oriental</a></li></ul>
-  </div>
-  </article></li>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Oriental</a></li></ul></div></article></li>
+  <li data-search-item data-filter-tags="high-protein two-plus"><article data-ds="recipe-card" class="recipe-card">
+  <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>40 minutes</p>
+  <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Thai Chicken Noodles with Peanut</a></h3>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Fideos de arroz</a></li></ul></div></article></li>
+  <li data-search-item data-filter-tags="quick less-ingredients"><article data-ds="recipe-card" class="recipe-card">
+  <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>30 minutes</p>
+  <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Green Curry Ramen</a></h3>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Verduras</a></li></ul></div></article></li>
+  <li data-search-item data-filter-tags="spicy two-plus"><article data-ds="recipe-card" class="recipe-card">
+  <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>50 minutes</p>
+  <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Traditional Japanese Ramen</a></h3>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Hot&amp;Spicy</a></li></ul></div></article></li>
   </ul>
-  <div class="library__more"><nav class="pagination" aria-label="Pagination">
-  <ul class="pagination__list">
-  <li><button class="pagination__link" type="button" disabled aria-label="Previous page"><span class="icon icon-arrow-left" aria-hidden="true"></span><span >Previous</span></button></li>
-  <li><a class="pagination__link " href="?page=1" aria-current="page">1</a></li>
-  <li><a class="pagination__link " href="?page=2">2</a></li>
-  <li><a class="pagination__link " href="?page=3">3</a></li>
-  <li><span class="pagination__ellipsis" aria-hidden="true">…</span></li>
-  <li><a class="pagination__link " href="?page=13">13</a></li>
-  <li><a class="pagination__link" href="?page=2" aria-label="Next page"><span >Next</span><span class="icon icon-arrow-right" aria-hidden="true"></span></a></li>
-  </ul>
-  <p class="pagination__status">Page 1 of 13</p>
-  </nav></div>
+  <div class="library__more"><nav class="pagination" aria-label="Pagination"><ul class="pagination__list"><li><button class="pagination__link" type="button" disabled aria-label="Previous page"><span class="icon icon-arrow-left" aria-hidden="true"></span><span>Previous</span></button></li><li><a class="pagination__link" href="?page=1" aria-current="page">1</a></li><li><a class="pagination__link" href="?page=2">2</a></li><li><a class="pagination__link" href="?page=3">3</a></li><li><span class="pagination__ellipsis" aria-hidden="true">…</span></li><li><a class="pagination__link" href="?page=13">13</a></li><li><a class="pagination__link" href="?page=2" aria-label="Next page"><span>Next</span><span class="icon icon-arrow-right" aria-hidden="true"></span></a></li></ul><p class="pagination__status">Page 1 of 13</p></nav></div>
   </section>
+  <section class="section library" data-search-empty hidden aria-label="No recipe results">
+  <div class="section__inner"><div data-ds="empty-state" class="empty-state"><h2 class="empty-state__title">We couldn't find any results for your search</h2><p class="empty-state__text">Try with different ingredients</p></div><p class="section__lead">Didn’t find the recipe you are looking for? Check out our most popular ones:</p><h2 class="section__title">Our most popular ones</h2>
+  <section data-ds="library" class="library" aria-label="Popular recipes"><ul class="library__grid">
+  <li data-search-item data-filter-tags="spicy quick"><article data-ds="recipe-card" class="recipe-card">
+  <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p>
+  <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Spicy Noodle Salad with almond and mint</a></h3>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Oriental</a></li></ul></div></article></li>
+  <li data-search-item data-filter-tags="high-protein two-plus"><article data-ds="recipe-card" class="recipe-card">
+  <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>40 minutes</p>
+  <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Thai Chicken Noodles with Peanut</a></h3>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Fideos de arroz</a></li></ul></div></article></li>
+  <li data-search-item data-filter-tags="quick less-ingredients"><article data-ds="recipe-card" class="recipe-card">
+  <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>30 minutes</p>
+  <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Green Curry Ramen</a></h3>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Verduras</a></li></ul></div></article></li>
+  <li data-search-item data-filter-tags="spicy two-plus"><article data-ds="recipe-card" class="recipe-card">
+  <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>50 minutes</p>
+  <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Traditional Japanese Ramen</a></h3>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Hot&amp;Spicy</a></li></ul></div></article></li>
+  </ul></section></div></section>
 
   <section data-ds="banner" class="section banner" aria-label="Campaign">
   <div class="section__inner">
-  <a class="banner__box" href="contests.html"><img src="../design-system/assets/images/placeholder.svg" alt="Campaign artwork"></a>
+  <a class="banner__box" href="natural-formula.html">
+  <div class="section__header"><h2 class="section__title">Try our new formula noodles</h2><p class="section__lead">100% natural noodles. Nothing else.</p></div>
+  <span class="button button--secondary">Discover the new formula</span>
+  <img src="../design-system/assets/images/placeholder.svg" alt="Try our new formula noodles. 100% natural noodles. Nothing else. Discover the new formula.">
+  </a>
   </div>
   </section>
 
@@ -97,7 +126,7 @@
   </form>
   </div>
   </section>
-<section class="section library" data-search-empty hidden><div data-ds="empty-state" class="empty-state"><h2 class="empty-state__title">We couldn't find any results for your search</h2><p class="empty-state__text">Try with different ingredients</p></div><h2 class="section__title">Our most popular ones</h2>  <section data-ds="library" class="library" aria-label="Recipes">
+<section class="section library" data-search-empty hidden><div data-ds="empty-state" class="empty-state"><h2 class="empty-state__title">We couldn't find any results for your search</h2><p class="empty-state__text">Try with different ingredients</p></div><p class="section__lead">Didn’t find the recipe you are looking for? Check out our most popular ones:</p><h2 class="section__title">Our most popular ones</h2>  <section data-ds="library" class="library" aria-label="Recipes">
   <ul class="library__grid">
   <li><article class="recipe-card">
   <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
@@ -180,22 +209,38 @@ document.querySelectorAll('.faq-list__items, .faq__list').forEach(list => list.q
   list.querySelectorAll('.accordion-item__button').forEach(other => { other.setAttribute('aria-expanded', 'false'); const panel = document.getElementById(other.getAttribute('aria-controls')); if (panel) panel.hidden = true; });
   button.setAttribute('aria-expanded', String(opening)); const panel = document.getElementById(button.getAttribute('aria-controls')); if (panel) panel.hidden = !opening;
 })));
-document.querySelectorAll('[data-filter-clear]').forEach(button => button.addEventListener('click', () => {
-  document.querySelectorAll('[data-filter-group] [aria-pressed]').forEach(item => item.setAttribute('aria-pressed', String(item.textContent.trim() === 'All')));
-  document.querySelectorAll('[data-search-target]').forEach(input => { input.value = ''; input.dispatchEvent(new Event('input')); });
-  const status = document.querySelector('[data-filter-status]'); if (status) status.textContent = 'All recipes';
+const recipeCards = Array.from(document.querySelectorAll('#recipe-grid [data-search-item]'));
+const filterGroup = document.querySelector('[data-filter-group]');
+const searchInput = document.querySelector('[data-search-target="#recipe-grid"]');
+const normalResults = document.querySelector('[data-recipes-normal]');
+const emptyResults = document.querySelector('[data-search-empty]');
+const filterStatus = document.querySelector('[data-filter-status]');
+const updateRecipes = () => {
+  const active = filterGroup?.querySelector('[aria-pressed="true"]');
+  const term = searchInput?.value.trim().toLowerCase() || '';
+  let visible = 0;
+  recipeCards.forEach(card => {
+    const matchesSearch = card.textContent.toLowerCase().includes(term);
+    const filterLabel = active?.textContent.trim();
+    const filter = ({'All': 'all', 'Less ingredients': 'less-ingredients', 'Quick recipes': 'quick', 'High protein': 'high-protein', 'Single': 'single', '2+ people': 'two-plus', 'Spicy': 'spicy'})[filterLabel] || 'all';
+    const matchesFilter = !filter || filter === 'all' || card.dataset.filterTags.split(' ').includes(filter);
+    card.hidden = !(matchesSearch && matchesFilter);
+    if (!card.hidden) visible++;
+  });
+  if (normalResults) normalResults.hidden = visible === 0;
+  if (emptyResults) emptyResults.hidden = visible !== 0;
+  if (filterStatus) filterStatus.textContent = active?.textContent.trim() === 'All' ? `${visible} recipes` : `${visible} filtered recipes`;
+};
+filterGroup?.querySelectorAll('[aria-pressed]').forEach(button => button.addEventListener('click', () => {
+  filterGroup.querySelectorAll('[aria-pressed]').forEach(item => item.setAttribute('aria-pressed', 'false'));
+  button.setAttribute('aria-pressed', 'true'); updateRecipes();
 }));
-document.querySelectorAll('[data-filter-group]').forEach(group => group.querySelectorAll('[aria-pressed]').forEach(button => button.addEventListener('click', () => {
-  const wasPressed = button.getAttribute('aria-pressed') === 'true'; group.querySelectorAll('[aria-pressed]').forEach(item => item.setAttribute('aria-pressed', 'false')); button.setAttribute('aria-pressed', String(!wasPressed));
-  const status = document.querySelector('[data-filter-status]'); if (status) status.textContent = !wasPressed ? 'Filtered results' : 'All results';
-})));
-document.querySelectorAll('[data-copy-link]').forEach(button => button.addEventListener('click', async () => { try { await navigator.clipboard.writeText(location.href); const status = document.querySelector('[data-copy-status]'); if (status) status.textContent = 'Link copied'; } catch { const status = document.querySelector('[data-copy-status]'); if (status) status.textContent = 'Copy this page link from your browser'; } }));
-document.querySelectorAll('[data-search-target]').forEach(input => input.addEventListener('input', () => {
-  const target = document.querySelector(input.dataset.searchTarget); const query = input.value.trim().toLowerCase(); let count = 0;
-  target?.querySelectorAll('[data-search-item]').forEach(item => { const match = item.textContent.toLowerCase().includes(query); item.hidden = !match; if (match) count++; });
-  document.querySelectorAll('[data-search-empty]').forEach(state => state.hidden = count !== 0);
-  const status = document.querySelector('[data-search-status]'); if (status) status.textContent = `${count} results`;
-}));
+document.querySelector('[data-filter-clear]')?.addEventListener('click', () => {
+  filterGroup?.querySelectorAll('[aria-pressed]').forEach(item => item.setAttribute('aria-pressed', String(item.textContent.trim() === 'All')));
+  if (searchInput) searchInput.value = ''; updateRecipes();
+});
+searchInput?.addEventListener('input', updateRecipes);
+updateRecipes();
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.querySelectorAll('.carousel, .product-line__grid, .contest-prizes__list, .contest-community__list').forEach(carousel => {
   carousel.tabIndex = 0;

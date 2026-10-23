@@ -2,6 +2,10 @@
 <html lang="en" data-brand="yatekomo">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="robots" content="noindex, nofollow" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yatekomo · Home</title>
 <!-- Home (Yatekomo). Contenido y estructura del wireframe UX «Rediseño sites · GB Noodles»
@@ -13,34 +17,34 @@
 </head>
 <body>
 
-<header class="navbar">
+<header data-ds="navbar" class="navbar">
   <div class="navbar__inner">
     <div class="navbar__start">
       <button class="icon-button icon-button--secondary" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" data-menu-open><span class="icon icon-menu" aria-hidden="true"></span></button>
     </div>
     <a href="home.html" aria-label="Yatekomo, home"><img class="logo" src="../design-system/assets/logos/logo-yatekomo-positive.svg" alt="Yatekomo"></a>
     <div class="navbar__actions">
-      <a class="button" href="#">New 100% Natural Formula</a>
+      <a class="button" href="natural-formula.html">New 100% Natural Formula</a>
     </div>
   </div>
 </header>
 
-<dialog class="mobile-menu" id="menu" aria-label="Menu">
+<dialog data-ds="mobile-menu" class="mobile-menu" id="menu" aria-label="Menu">
   <div class="mobile-menu__inner">
     <div class="mobile-menu__top">
       <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
       <button class="icon-button icon-button--inverse" type="button" aria-label="Close menu" data-menu-close><span class="icon icon-close" aria-hidden="true"></span></button>
     </div>
     <nav class="mobile-menu__nav" aria-label="Main">
-      <a class="nav-item nav-item--menu" href="#">Products</a>
+      <a class="nav-item nav-item--menu" href="products.html">Products</a>
       <a class="nav-item nav-item--menu" href="#">Natural formula</a>
-      <a class="nav-item nav-item--menu" href="#">Recipes</a>
+      <a class="nav-item nav-item--menu" href="recipes.html">Recipes</a>
       <a class="nav-item nav-item--menu" href="#">Contests</a>
-      <a class="nav-item nav-item--menu" href="#">FAQS</a>
+      <a class="nav-item nav-item--menu" href="faq.html">FAQS</a>
     </nav>
     <div class="mobile-menu__social">
       <p class="mobile-menu__social-label">Our social media:</p>
-      <!-- HUECO: URLs de las redes de la marca -->
+      <!-- HUECO: brand social media URLs; GB Foods supplies. -->
       <ul class="mobile-menu__social-list">
         <li><a class="link link--dark" href="#" aria-label="TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
         <li><a class="link link--dark" href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
@@ -67,7 +71,7 @@
               <p class="hero__lead">Same amount, super convenient for your recipes</p>
             </div>
             <a class="button button--l" href="#">Discover flavours</a>
-            <!-- HUECO: contenido de las slides 2 y 3 (máximo 3 por regla de negocio; el wireframe dibuja 5 puntos) -->
+            <!-- HUECO: contenido de las slides 2 y 3 (máximo 3 por regla de negocio; el wireframe dibuja 5 puntos); GB Foods supplies. -->
             <div class="hero__controls">
               <button class="icon-button icon-button--secondary" type="button" aria-label="Previous slide"><span class="icon icon-arrow-left" aria-hidden="true"></span></button>
               <div class="hero__dots">
@@ -80,10 +84,10 @@
             </div>
           </div>
         </div>
-        <!-- HUECO: imagen de la slide (el wireframe muestra las bolsas nuevas); de momento, las cups de Yatekomo -->
+        <!-- HUECO: imagen de la slide (el wireframe muestra las bolsas nuevas); de momento, las cups de Yatekomo; GB Foods supplies. -->
         <picture class="hero__media">
           <source media="(max-width: 768px)" srcset="assets/yatekomo-hero-cups-mobile.png">
-          <img src="assets/yatekomo-hero-cups.png" alt="Yatekomo cups: Verduras, Pollo and Curry">
+          <img src="assets/yatekomo-hero-cups.png" alt="Yatekomo cups: Vegetables, Chicken and Curry">
         </picture>
       </div>
     </div>
@@ -94,17 +98,17 @@
     <div class="section__inner">
       <div class="promo__grid">
         <div class="promo__content">
-          <!-- HUECO: arte de la campaña (logo «Conoce a Marc Cucurella», PNG recortado) -->
+          <!-- HUECO: arte de la campaña (logo «Conoce a Marc Cucurella», PNG recortado); GB Foods supplies. -->
           <h2 class="section__title" id="pr-title">Enter Yatekomo’s new giveaway and win prizes</h2>
           <p class="promo__body">Official Spanish National Team jerseys and soccer balls signed by Marc Cucurella, and even the chance to meet him in person!</p>
           <div class="promo__actions">
             <a class="button button--l" href="#">I want to participate</a>
             <!-- Bases legales: obligatorias por regla de negocio, aunque el wireframe no las dibuja -->
-            <a class="link" href="#">Contest rules</a>
+            <a class="link" href="contest.html#rules">Contest rules</a>
           </div>
         </div>
         <div class="promo__media">
-          <!-- HUECO: póster y vídeo de la campaña -->
+          <!-- HUECO: póster y vídeo de la campaña; GB Foods supplies. -->
           <div class="video-player">
             <button class="video-player__play" type="button" aria-label="Play video: Yatekomo giveaway"><span class="icon icon-play" aria-hidden="true"></span></button>
           </div>
@@ -138,7 +142,7 @@
       </div>
       <ul class="product-categories__grid">
         <li><a class="category-card" href="#"><img class="category-card__media" src="assets/yakisoba.png" alt=""><span class="category-card__name">Cups</span></a></li>
-        <!-- HUECO: imágenes de Bags y Sauces (no hay assets) -->
+        <!-- HUECO: imágenes de Bags y Sauces (no hay assets); GB Foods supplies. -->
         <li><a class="category-card" href="#"><span class="category-card__name">Bags</span></a></li>
         <li><a class="category-card" href="#"><span class="badge">New</span><span class="category-card__name">Sauces</span></a></li>
       </ul>
@@ -161,7 +165,7 @@
             <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Spicy Noodle Salad with almond and mint</a></h3>
             <ul class="recipe-card__products" aria-label="Products used">
               <li><a class="chip" href="#">Cup Oriental</a></li>
-              <li><a class="chip" href="#">Salsa Sésamo</a></li>
+              <li><a class="chip" href="#">Sesame sauce</a></li>
             </ul>
           </div>
         </article></li>
@@ -171,7 +175,7 @@
             <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>40 minutes</p>
             <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Thai Chicken Noodles with Peanut</a></h3>
             <ul class="recipe-card__products" aria-label="Products used">
-              <li><a class="chip" href="#">Cup Fideos de arroz</a></li>
+              <li><a class="chip" href="#">Rice noodle cup</a></li>
             </ul>
           </div>
         </article></li>
@@ -181,7 +185,7 @@
             <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>30 minutes</p>
             <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Green Curry Ramen</a></h3>
             <ul class="recipe-card__products" aria-label="Products used">
-              <li><a class="chip" href="#">Cup Verduras</a></li>
+              <li><a class="chip" href="#">Vegetable cup</a></li>
             </ul>
           </div>
         </article></li>
@@ -191,7 +195,7 @@
             <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>50 minutes</p>
             <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Traditional Japanese Ramen</a></h3>
             <ul class="recipe-card__products" aria-label="Products used">
-              <li><a class="chip" href="#">Cup Hot&amp;Spicy</a></li>
+              <li><a class="chip" href="#">Hot &amp; Spicy cup</a></li>
             </ul>
           </div>
         </article></li>
@@ -201,7 +205,7 @@
 
   <section class="section banner" aria-label="Campaign">
     <div class="section__inner">
-      <!-- HUECO: pieza gráfica de la campaña (Cucurella); el texto alternativo repetirá su mensaje -->
+      <!-- HUECO: pieza gráfica de la campaña (Cucurella); el texto alternativo repetirá su mensaje; GB Foods supplies. -->
       <a class="banner__box" href="#">Campaign artwork (full piece, with its text)</a>
     </div>
   </section>
@@ -257,30 +261,30 @@
 
 </main>
 
-<footer class="footer">
+<footer data-ds="footer" class="footer">
   <div class="footer__main">
     <div class="footer__brand">
       <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
     </div>
     <nav class="footer__column" aria-label="Footer">
       <ul class="footer__links">
-        <li><a class="link link--dark" href="#">Products</a></li>
+        <li><a class="link link--dark" href="products.html">Products</a></li>
         <li><a class="link link--dark" href="#">100% Natural formula</a></li>
-        <li><a class="link link--dark" href="#">Recipes</a></li>
+        <li><a class="link link--dark" href="recipes.html">Recipes</a></li>
         <li><a class="link link--dark" href="#">Contests</a></li>
-        <li><a class="link link--dark" href="#">FAQS</a></li>
-        <!-- HUECO: enlaces de campaña activa -->
+        <li><a class="link link--dark" href="faq.html">FAQS</a></li>
+        <!-- HUECO: enlaces de campaña activa; GB Foods supplies. -->
         <li><a class="link link--dark" href="#">Campaign link 1</a></li>
         <li><a class="link link--dark" href="#">Campaign link 2</a></li>
       </ul>
     </nav>
-    <!-- Sellos y certificados («2025 Certified by»): sin definir, falta información -->
+    <!-- HUECO: approved certification seals and artwork; GB Foods supplies. -->
     <div class="footer__ticket">
       <div class="footer__ticket-copy">
         <h2 class="footer__ticket-title">Do you have any ideas, complaints or cravings?</h2>
         <p class="footer__ticket-text">Cut to the chase and tell us what you think. We're really reading your comments, for real.</p>
       </div>
-      <!-- HUECO: URL del formulario externo de Calidad -->
+      <!-- HUECO: external Quality form URL; GB Foods supplies. -->
       <a class="button" href="#" target="_blank" rel="noopener">Send suggestions <span class="icon icon-external-link" aria-hidden="true"></span><span class="visually-hidden"> (opens in a new tab)</span></a>
     </div>
   </div>
@@ -289,7 +293,7 @@
     <a class="link link--dark" href="#">Privacy policy</a>
     <a class="link link--dark" href="#">Cookies policy</a>
     <a class="link link--dark" href="#">Legal basis</a>
-    <a class="link link--dark" href="#">Contest rules</a>
+    <a class="link link--dark" href="contest.html#rules">Contest rules</a>
     <a class="link link--dark" href="#">Contact</a>
     <span>© GBFoods</span>
   </div>
@@ -325,6 +329,15 @@
   const SLIDE_INTERVAL = 6000;
   const heroDots = Array.from(document.querySelectorAll('.hero__dot'));
   const heroGroup = document.querySelector('.hero__slide-content');
+  const heroTitle = heroGroup.querySelector('.hero__slide-title');
+  const heroLead = heroGroup.querySelector('.hero__lead');
+  const heroCta = heroGroup.querySelector('.button');
+  const heroImage = document.querySelector('.hero__media img');
+  const slides = [
+    { title: 'Do you like to cook? Check out our new bags', lead: 'Same amount, super convenient for your recipes', cta: 'Discover flavours', href: 'products.html#bags', image: 'assets/yatekomo-hero-cups.png', alt: 'Yatekomo cups: Vegetables, Chicken and Curry' },
+    { title: '100% natural noodles. Nothing else', lead: 'We’re all about the natural flavour of our ingredients', cta: 'Learn more', href: 'natural-formula.html', image: 'assets/yatekomo-bol.png', alt: 'Yatekomo noodles with natural ingredients' },
+    { title: 'Our products', lead: 'Products and flavors for every taste. Find your match!', cta: 'See products', href: 'products.html', image: 'assets/yakisoba.png', alt: 'Yatekomo product range' }
+  ];
   const heroPrev = document.querySelector('[aria-label="Previous slide"]');
   const heroNext = document.querySelector('[aria-label="Next slide"]');
   const heroPause = document.querySelector('.hero__pause');
@@ -333,11 +346,18 @@
   let playing = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let timer = null;
 
-  // Marca el punto activo y actualiza el nombre del grupo («2 of 3»); no cambia el contenido.
+  // Actualiza texto, enlace e imagen con contenido ya presente en la Home.
   const showSlide = index => {
     current = (index + heroDots.length) % heroDots.length;
     heroDots.forEach((dot, i) => i === current ? dot.setAttribute('aria-current', 'true') : dot.removeAttribute('aria-current'));
     heroGroup.setAttribute('aria-label', `${current + 1} of ${heroDots.length}`);
+    const slide = slides[current];
+    heroTitle.textContent = slide.title;
+    heroLead.textContent = slide.lead;
+    heroCta.textContent = slide.cta;
+    heroCta.href = slide.href;
+    heroImage.src = slide.image;
+    heroImage.alt = slide.alt;
   };
   const stopTimer = () => { clearInterval(timer); timer = null; };
   const startTimer = () => { stopTimer(); timer = setInterval(() => showSlide(current + 1), SLIDE_INTERVAL); };

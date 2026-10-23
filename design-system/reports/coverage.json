@@ -3,17 +3,101 @@
   "note": "Informe de scripts/ds-coverage.py. No editar a mano.",
   "definition": "cobertura = elementos con al menos una clase de components.css ÷ elementos con alguna clase",
   "dsClasses": 567,
-  "screens": 1,
+  "screens": 13,
   "summary": {
-    "withClass": 235,
-    "covered": 235,
+    "withClass": 2491,
+    "covered": 2491,
     "coverage": 100.0
   },
   "byScreen": [
     {
+      "file": "UI/contest-result-limit.html",
+      "withClass": 71,
+      "covered": 71,
+      "coverage": 100.0,
+      "foreignClasses": {}
+    },
+    {
+      "file": "UI/contest-result-lose.html",
+      "withClass": 71,
+      "covered": 71,
+      "coverage": 100.0,
+      "foreignClasses": {}
+    },
+    {
+      "file": "UI/contest-result-win.html",
+      "withClass": 67,
+      "covered": 67,
+      "coverage": 100.0,
+      "foreignClasses": {}
+    },
+    {
+      "file": "UI/contest.html",
+      "withClass": 297,
+      "covered": 297,
+      "coverage": 100.0,
+      "foreignClasses": {}
+    },
+    {
+      "file": "UI/contests.html",
+      "withClass": 203,
+      "covered": 203,
+      "coverage": 100.0,
+      "foreignClasses": {}
+    },
+    {
+      "file": "UI/faq.html",
+      "withClass": 148,
+      "covered": 148,
+      "coverage": 100.0,
+      "foreignClasses": {}
+    },
+    {
       "file": "UI/home.html",
-      "withClass": 235,
-      "covered": 235,
+      "withClass": 239,
+      "covered": 239,
+      "coverage": 100.0,
+      "foreignClasses": {}
+    },
+    {
+      "file": "UI/natural-formula.html",
+      "withClass": 254,
+      "covered": 254,
+      "coverage": 100.0,
+      "foreignClasses": {}
+    },
+    {
+      "file": "UI/privacy.html",
+      "withClass": 106,
+      "covered": 106,
+      "coverage": 100.0,
+      "foreignClasses": {}
+    },
+    {
+      "file": "UI/product.html",
+      "withClass": 393,
+      "covered": 393,
+      "coverage": 100.0,
+      "foreignClasses": {}
+    },
+    {
+      "file": "UI/products.html",
+      "withClass": 183,
+      "covered": 183,
+      "coverage": 100.0,
+      "foreignClasses": {}
+    },
+    {
+      "file": "UI/recipe.html",
+      "withClass": 237,
+      "covered": 237,
+      "coverage": 100.0,
+      "foreignClasses": {}
+    },
+    {
+      "file": "UI/recipes.html",
+      "withClass": 222,
+      "covered": 222,
       "coverage": 100.0,
       "foreignClasses": {}
     }

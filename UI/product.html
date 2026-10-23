@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en" data-brand="yatekomo">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yatekomo · Product</title>
+<link rel="stylesheet" href="../design-system/tokens/tokens.css">
+<link rel="stylesheet" href="../design-system/css/components.css">
+</head>
+<body>
+<header data-ds="navbar" class="navbar">
+  <div class="navbar__inner">
+    <div class="navbar__start">
+      <button class="icon-button icon-button--secondary" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" data-menu-open><span class="icon icon-menu" aria-hidden="true"></span></button>
+    </div>
+    <a href="home.html" aria-label="Yatekomo, home"><img class="logo" src="../design-system/assets/logos/logo-yatekomo-positive.svg" alt="Yatekomo"></a>
+    <div class="navbar__actions">
+      <a class="button" href="natural-formula.html">New 100% Natural Formula</a>
+    </div>
+  </div>
+</header>
+
+<dialog data-ds="mobile-menu" class="mobile-menu" id="menu" aria-label="Menu">
+  <div class="mobile-menu__inner">
+    <div class="mobile-menu__top">
+      <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
+      <button class="icon-button icon-button--inverse" type="button" aria-label="Close menu" data-menu-close><span class="icon icon-close" aria-hidden="true"></span></button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Main">
+      <a class="nav-item nav-item--menu" href="products.html">Products</a>
+      <a class="nav-item nav-item--menu" href="natural-formula.html">Natural formula</a>
+      <a class="nav-item nav-item--menu" href="recipes.html">Recipes</a>
+      <a class="nav-item nav-item--menu" href="contests.html">Contests</a>
+      <a class="nav-item nav-item--menu" href="faq.html">FAQS</a>
+    </nav>
+    <div class="mobile-menu__social">
+      <p class="mobile-menu__social-label">Our social media:</p>
+      <!-- HUECO: brand social media URLs; GB Foods supplies. -->
+      <ul class="mobile-menu__social-list">
+        <li><a class="link link--dark" href="#" aria-label="TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="X"><span class="icon icon-x" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a></li>
+      </ul>
+    </div>
+    <p class="mobile-menu__copyright">© GBFoods</p>
+  </div>
+</dialog>
+<main>
+<!-- HUECO: Market-approved ingredient percentages and composition, nutrition values, allergen presence, preparation media, product photography and European pack-label artwork; GB Foods supplies. -->
+  <section data-ds="product-hero" class="section product-hero" aria-labelledby="ph-title">
+  <div class="section__inner">
+  <div class="product-hero__grid">
+  <div class="product-hero__info">
+  <a class="link link--dark link--standalone product-hero__back" href="#cups">All cups <span class="icon icon-arrow-left" aria-hidden="true"></span></a>
+  <div class="product-hero__tags"><span class="badge">New</span></div>
+  <h1 class="page-title product-hero__title" id="ph-title">Yakisoba chicken</h1>
+  <p class="product-hero__description">Your usual chicken, with oriental yakisoba sauce.</p>
+  <ul class="product-hero__chips"><li class="chip chip--m">100% natural ingredients</li><li class="chip chip--m">Ready in 3'</li></ul>
+  </div>
+  <div class="product-hero__media">
+  <img class="product-hero__photo" src="../design-system/assets/images/placeholder.svg" alt="">
+  <img class="product-hero__pack" src="../design-system/assets/images/placeholder.svg" alt="Yakisoba chicken cup">
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <div data-ds="product-details" class="product-details">
+  <section class="section product-details__ingredients">
+  <div class="section__inner">
+  <div class="product-details__grid">
+  <div class="product-details__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
+  <section class="ingredients" aria-labelledby="ing-title-2">
+  <h2 class="ingredients__title" id="ing-title-2">Ingredients</h2>
+  <p class="ingredients__note">100% natural with nothing added. We'll give you all the details.</p>
+  <ul class="ingredients__list">
+  <li class="ingredient-item"><span class="ingredient-item__percent">79% of content</span><span class="ingredient-item__name">Oriental noodles</span><span class="ingredient-item__text"><strong>Wheat</strong> flour, modified starch, salt, sodium and potassium carbonate</span></li>
+  <li class="ingredient-item ingredient-item--secondary">Others: salt, spices, <strong>soy</strong> sauce (<strong>soy</strong>, <strong>wheat</strong>), garlic and onion.</li>
+  </ul>
+  <p class="ingredients__more">Still curious? <a class="link link--standalone ingredients__link" href="#pack-label" aria-haspopup="dialog" data-dialog-open="pack-label">View pack label <span class="icon icon-arrow-right" aria-hidden="true"></span></a></p>
+  </section>
+  </div>
+  </div>
+  </section>
+  <section class="section product-details__nutrition" aria-labelledby="nut-title">
+  <div class="section__inner">
+  <div class="product-details__allergens-head">
+  <h2 class="section__title" id="nut-title">Nutritional information</h2>
+  <p class="product-details__lead">Per 100 g · % of the reference intake</p>
+  </div>
+  <ul class="nutrition-rings" tabindex="0" aria-label="Nutrition per 100 g (scroll to see all)">
+  <li class="nutrition-ring"><div class="nutrition-ring__dial"><svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Energy 380 kcal, 19 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="19 100"/></svg><span class="nutrition-ring__value" aria-hidden="true">19 %</span></div><span class="nutrition-ring__name" aria-hidden="true">Energy</span><span class="nutrition-ring__amount" aria-hidden="true">380 kcal</span></li>
+  <li class="nutrition-ring"><div class="nutrition-ring__dial"><svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Protein 8.3 g, 17 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="17 100"/></svg><span class="nutrition-ring__value" aria-hidden="true">17 %</span></div><span class="nutrition-ring__name" aria-hidden="true">Protein</span><span class="nutrition-ring__amount" aria-hidden="true">8.3 g</span></li>
+  <li class="nutrition-ring"><div class="nutrition-ring__dial"><svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Carbohydrates 52 g, 20 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="20 100"/></svg><span class="nutrition-ring__value" aria-hidden="true">20 %</span></div><span class="nutrition-ring__name" aria-hidden="true">Carbohydrates</span><span class="nutrition-ring__amount" aria-hidden="true">52 g</span></li>
+  <li class="nutrition-ring"><div class="nutrition-ring__dial"><svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Fat 15 g, 21 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="21 100"/></svg><span class="nutrition-ring__value" aria-hidden="true">21 %</span></div><span class="nutrition-ring__name" aria-hidden="true">Fat</span><span class="nutrition-ring__amount" aria-hidden="true">15 g</span></li>
+  <li class="nutrition-ring"><div class="nutrition-ring__dial"><svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Fibre 1.9 g, 8 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="8 100"/></svg><span class="nutrition-ring__value" aria-hidden="true">8 %</span></div><span class="nutrition-ring__name" aria-hidden="true">Fibre</span><span class="nutrition-ring__amount" aria-hidden="true">1.9 g</span></li>
+  <li class="nutrition-ring nutrition-ring--highlight"><div class="nutrition-ring__dial"><svg class="nutrition-ring__svg" viewBox="0 0 100 100" role="img" aria-label="Salt 2.3 g, 38 % of the reference intake"><circle class="nutrition-ring__track" cx="50" cy="50" r="40" pathLength="100"/><circle class="nutrition-ring__fill" cx="50" cy="50" r="40" pathLength="100" stroke-dasharray="38 100"/></svg><span class="nutrition-ring__value" aria-hidden="true">38 %</span></div><span class="nutrition-ring__name" aria-hidden="true">Salt</span><span class="nutrition-ring__amount" aria-hidden="true">2.3 g</span></li>
+  </ul>
+  <div class="product-details__allergens">
+  <h3 class="product-details__subtitle">Main allergens</h3>
+  <ul class="allergen-cards">
+  <li class="allergen-card"><p class="allergen-card__name">Gluten or derivatives</p><p class="allergen-card__note">Not suitable for coeliacs</p></li>
+  <li class="allergen-card"><p class="allergen-card__name">Nuts</p><p class="allergen-card__note">May contain traces</p></li>
+  <li class="allergen-card"><p class="allergen-card__name">Eggs</p><p class="allergen-card__note">Contains preparations</p></li>
+  </ul>
+  <a class="link link--standalone" href="#allergens" aria-haspopup="dialog" data-dialog-open="allergens">To see all allergens · Check the detailed table <span class="icon icon-arrow-right" aria-hidden="true"></span></a>
+  </div>
+  </div>
+  </section>
+  </div>
+
+<section data-ds="preparation" class="section preparation" aria-labelledby="prep-title">
+<div class="section__inner"><header class="section__header"><h2 class="section__title" id="prep-title">Preparation</h2><p class="preparation__subtitle">Ready in just 4 steps</p></header>
+<div class="preparation__grid"><div class="video-player preparation__media"><img class="video-player__poster" src="../design-system/assets/images/placeholder.svg" alt=""><button class="video-player__play" type="button" aria-label="Play preparation video"><span class="icon icon-play" aria-hidden="true"></span></button></div>
+<ol class="steps preparation__steps preparation__steps--first"><li class="step"><span class="step__number" aria-hidden="true">1</span><div class="step__content"><p class="step__text">Open the lid halfway and add boiling water up to the mark.</p></div></li><li class="step"><span class="step__number" aria-hidden="true">2</span><div class="step__content"><p class="step__text">Leave to stand for 3 minutes.</p></div></li></ol>
+<section class="timer" data-timer aria-labelledby="timer-title"><h3 class="timer__title" id="timer-title">Not a second more!</h3><p class="timer__subtitle">Use our timer to prepare your Yatekomo.</p><span class="timer__time" role="timer">3:00</span><p class="timer__label">Ready</p><progress class="timer__bar" max="100" value="100" aria-label="Time remaining"></progress><div class="timer__controls"><button class="button button--secondary" type="button" data-timer-action="start">Start</button><button class="link" type="button" data-timer-action="pause">Pause</button><button class="link" type="button" data-timer-action="resume">Resume</button><button class="link" type="button" data-timer-action="reset"><span class="icon icon-rotate-ccw" aria-hidden="true"></span>Reset</button></div><p class="visually-hidden" aria-live="polite"></p></section>
+<ol class="steps preparation__steps preparation__steps--second" start="3"><li class="step"><span class="step__number" aria-hidden="true">3</span><div class="step__content"><p class="step__text">Drain the water carefully.</p></div></li><li class="step"><span class="step__number" aria-hidden="true">4</span><div class="step__content"><p class="step__text">Add the sauce sachet and enjoy.</p></div></li></ol></div></div></section>
+  <section data-ds="recipes" class="section recipes" aria-labelledby="rc-title">
+  <div class="section__inner">
+  <div class="section__header"><h2 class="section__title" id="rc-title">We haven’t forgotten you, keen cook</h2><p class="section__lead">Explore and learn recipes to glow up your meals</p></div>
+  <a class="button button--secondary button--l recipes__cta" href="recipes.html">See all recipes</a>
+  <ul class="carousel">
+  <li><article class="recipe-card"><div class="recipe-card__body"><p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p><h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Spicy Noodle Salad with almond and mint</a></h3></div></article></li>
+  </ul>
+  </div>
+  </section>
+
+  <section data-ds="banner" class="section banner" aria-label="Campaign">
+  <div class="section__inner">
+  <a class="banner__box" href="contests.html"><img src="../design-system/assets/images/placeholder.svg" alt="Campaign artwork"></a>
+  </div>
+  </section>
+
+  <section data-ds="product-line" class="section product-line" id="cups" aria-labelledby="pl-yatekomo">
+  <div class="product-line__head"><h2 class="section__title">Cups</h2><p class="section__lead">Ready in 3 minutes.</p></div>
+  <div class="product-line__inner">
+  <div class="product-line__pack"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
+  <div class="product-line__info">
+  <h3 class="product-line__name" id="pl-yatekomo">Yatekomo</h3>
+  <p class="product-line__description">Take our word for it. Oriental-style noodles, no fuss, ready in 3 minutes.</p>
+  <h4 class="product-line__subtitle">Find your favourite flavour</h4>
+  <ul class="product-line__grid">
+  <li><a class="flavour-tile" href="product.html"><span class="flavour-tile__media"><img src="../design-system/assets/images/placeholder.svg" alt=""><span class="badge">New</span></span><span class="flavour-tile__name">Chicken</span></a></li>
+  <li><a class="flavour-tile" href="product.html"><span class="flavour-tile__media"><img src="../design-system/assets/images/placeholder.svg" alt=""><span class="badge badge--hot">Hot!</span></span><span class="flavour-tile__name">Hot &amp; Spicy</span></a></li>
+  <li><a class="flavour-tile" href="product.html"><span class="flavour-tile__media"><img src="../design-system/assets/images/placeholder.svg" alt=""><span class="badge badge--natural">Natural</span></span><span class="flavour-tile__name">Chicken rice noodles</span></a></li>
+  </ul>
+  </div>
+  </div>
+  </section>
+  <section data-ds="product-line" class="section product-line product-line--dark" id="yakisoba" aria-labelledby="pl-yakisoba">
+  <div class="product-line__inner">
+  <div class="product-line__pack"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
+  <div class="product-line__info">
+  <h3 class="product-line__name" id="pl-yakisoba">Yakisoba</h3>
+  <p class="product-line__description">If you're into saucy flavours, match with our yakisoba.</p>
+  <h4 class="product-line__subtitle">Find your favourite flavour</h4>
+  <ul class="product-line__grid">
+  <li><a class="flavour-tile" href="product.html"><span class="flavour-tile__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></span><span class="flavour-tile__name">Classic</span></a></li>
+  <li><a class="flavour-tile" href="product.html"><span class="flavour-tile__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></span><span class="flavour-tile__name">Chicken</span></a></li>
+  </ul>
+  </div>
+  </div>
+  </section>
+  <section data-ds="product-line" class="section product-line product-line--sauces" id="sauces" aria-labelledby="pl-sauces">
+  <div class="product-line__head"><h2 class="section__title">Sauces</h2><p class="section__lead">The most original way to eat your Yatekomo.</p></div>
+  <div class="product-line__inner">
+  <ul class="product-line__grid">
+  <li><a class="flavour-tile flavour-tile--tall" href="product.html"><span class="flavour-tile__media"><img src="../design-system/assets/images/placeholder.svg" alt=""><span class="badge">New</span></span><span class="flavour-tile__name">Sweet Teriyaki Sauce</span></a></li>
+  <li><a class="flavour-tile flavour-tile--tall" href="product.html"><span class="flavour-tile__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></span><span class="flavour-tile__name">Spicy Yakisoba Sauce</span></a></li>
+  <li><a class="flavour-tile flavour-tile--tall" href="product.html"><span class="flavour-tile__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></span><span class="flavour-tile__name">Mild Sesame Sauce</span></a></li>
+  </ul>
+  </div>
+  </section>
+<dialog data-ds="modal" class="modal" id="allergens" aria-labelledby="allergen-title"><div class="modal__header"><h2 class="modal__title" id="allergen-title">Allergen information</h2><button class="icon-button icon-button--secondary" type="button" aria-label="Close" data-dialog-close><span class="icon icon-close" aria-hidden="true"></span></button></div><div class="modal__body">  <section data-ds="allergen-table" class="allergen-table" aria-labelledby="allergen-table-intro">
+  <p class="allergen-table__intro" id="allergen-table-intro">Allergen information (EU Reg. 1169/2011): <span aria-hidden="true">●</span> contains, <span aria-hidden="true">–</span> does not contain.</p>
+  <ul class="allergen-table__list">
+  <li class="allergen-table__item"><span class="allergen-table__name">Gluten</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+  <li class="allergen-table__item"><span class="allergen-table__name">Crustaceans</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+  <li class="allergen-table__item allergen-table__item--present"><span class="allergen-table__name">Eggs</span><span class="allergen-table__mark" aria-hidden="true">●</span><span class="visually-hidden"> contains</span></li>
+  <li class="allergen-table__item allergen-table__item--present"><span class="allergen-table__name">Fish</span><span class="allergen-table__mark" aria-hidden="true">●</span><span class="visually-hidden"> contains</span></li>
+  <li class="allergen-table__item allergen-table__item--present"><span class="allergen-table__name">Peanuts</span><span class="allergen-table__mark" aria-hidden="true">●</span><span class="visually-hidden"> contains</span></li>
+  <li class="allergen-table__item allergen-table__item--present"><span class="allergen-table__name">Soy</span><span class="allergen-table__mark" aria-hidden="true">●</span><span class="visually-hidden"> contains</span></li>
+  <li class="allergen-table__item allergen-table__item--present"><span class="allergen-table__name">Milk</span><span class="allergen-table__mark" aria-hidden="true">●</span><span class="visually-hidden"> contains</span></li>
+  <li class="allergen-table__item"><span class="allergen-table__name">Nuts</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+  <li class="allergen-table__item allergen-table__item--present"><span class="allergen-table__name">Celery</span><span class="allergen-table__mark" aria-hidden="true">●</span><span class="visually-hidden"> contains</span></li>
+  <li class="allergen-table__item"><span class="allergen-table__name">Mustard</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+  <li class="allergen-table__item"><span class="allergen-table__name">Sesame</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+  <li class="allergen-table__item"><span class="allergen-table__name">Sulphites</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+  <li class="allergen-table__item"><span class="allergen-table__name">Lupin</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+  <li class="allergen-table__item"><span class="allergen-table__name">Molluscs</span><span class="allergen-table__mark" aria-hidden="true">–</span><span class="visually-hidden"> does not contain</span></li>
+  </ul>
+  </section>
+<!-- HUECO: verified presence/absence for all 14 regulated allergens; GB Foods supplies. --></div></dialog>
+<dialog data-ds="modal" class="modal modal--l" id="pack-label" aria-labelledby="pack-label-title"><div class="modal__header"><h2 class="modal__title" id="pack-label-title">Pack label</h2><button class="icon-button icon-button--secondary" type="button" aria-label="Close" data-dialog-close><span class="icon icon-close" aria-hidden="true"></span></button></div><div class="modal__body"><img src="../design-system/assets/images/placeholder.svg" alt="Pack label placeholder"><!-- HUECO: photography and verified European pack-label text; GB Foods. --></div></dialog>
+</main>
+<footer data-ds="footer" class="footer">
+  <div class="footer__main">
+    <div class="footer__brand">
+      <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
+    </div>
+    <nav class="footer__column" aria-label="Footer">
+      <ul class="footer__links">
+        <li><a class="link link--dark" href="products.html">Products</a></li>
+        <li><a class="link link--dark" href="natural-formula.html">100% Natural formula</a></li>
+        <li><a class="link link--dark" href="recipes.html">Recipes</a></li>
+        <li><a class="link link--dark" href="contests.html">Contests</a></li>
+        <li><a class="link link--dark" href="faq.html">FAQS</a></li>
+        <!-- HUECO: enlaces de campaña activa; GB Foods supplies. -->
+        <li><a class="link link--dark" href="#">Campaign link 1</a></li>
+        <li><a class="link link--dark" href="#">Campaign link 2</a></li>
+      </ul>
+    </nav>
+    <!-- HUECO: approved certification seals and artwork; GB Foods supplies. -->
+    <div class="footer__ticket">
+      <div class="footer__ticket-copy">
+        <h2 class="footer__ticket-title">Do you have any ideas, complaints or cravings?</h2>
+        <p class="footer__ticket-text">Cut to the chase and tell us what you think. We're really reading your comments, for real.</p>
+      </div>
+      <!-- HUECO: external Quality form URL; GB Foods supplies. -->
+      <a class="button" href="#" target="_blank" rel="noopener">Send suggestions <span class="icon icon-external-link" aria-hidden="true"></span><span class="visually-hidden"> (opens in a new tab)</span></a>
+    </div>
+  </div>
+  <div class="footer__legal">
+    <a class="link link--dark" href="#">Legal notice</a>
+    <a class="link link--dark" href="privacy.html">Privacy policy</a>
+    <a class="link link--dark" href="#">Cookies policy</a>
+    <a class="link link--dark" href="#">Legal basis</a>
+    <a class="link link--dark" href="contest.html#rules">Contest rules</a>
+    <a class="link link--dark" href="#">Contact</a>
+    <span>© GBFoods</span>
+  </div>
+</footer>
+<script>
+const menu = document.getElementById('menu');
+const menuOpener = document.querySelector('[data-menu-open]');
+menuOpener?.addEventListener('click', () => { menu?.showModal(); menuOpener.setAttribute('aria-expanded', 'true'); });
+menu?.addEventListener('close', () => menuOpener?.setAttribute('aria-expanded', 'false'));
+document.querySelectorAll('[data-menu-close]').forEach(button => button.addEventListener('click', () => menu?.close()));
+const stickyHeader = document.querySelector('.navbar');
+const updateHeader = () => stickyHeader?.classList.toggle('navbar--scrolled', window.scrollY > 0);
+window.addEventListener('scroll', updateHeader, { passive: true }); updateHeader();
+</script>
+<script>
+// Interactive states used by the wireframe; all presentation remains in Design System classes.
+document.querySelectorAll('[data-dialog-open]').forEach(button => button.addEventListener('click', () => document.getElementById(button.dataset.dialogOpen)?.showModal()));
+document.querySelectorAll('[data-dialog-close]').forEach(button => button.addEventListener('click', () => button.closest('dialog')?.close()));
+document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); }));
+document.querySelectorAll('.faq-list__items, .faq__list').forEach(list => list.querySelectorAll('.accordion-item__button').forEach(button => button.addEventListener('click', () => {
+  const opening = button.getAttribute('aria-expanded') !== 'true';
+  list.querySelectorAll('.accordion-item__button').forEach(other => { other.setAttribute('aria-expanded', 'false'); const panel = document.getElementById(other.getAttribute('aria-controls')); if (panel) panel.hidden = true; });
+  button.setAttribute('aria-expanded', String(opening)); const panel = document.getElementById(button.getAttribute('aria-controls')); if (panel) panel.hidden = !opening;
+})));
+document.querySelectorAll('[data-filter-clear]').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('[data-filter-group] [aria-pressed]').forEach(item => item.setAttribute('aria-pressed', String(item.textContent.trim() === 'All')));
+  document.querySelectorAll('[data-search-target]').forEach(input => { input.value = ''; input.dispatchEvent(new Event('input')); });
+  const status = document.querySelector('[data-filter-status]'); if (status) status.textContent = 'All recipes';
+}));
+document.querySelectorAll('[data-filter-group]').forEach(group => group.querySelectorAll('[aria-pressed]').forEach(button => button.addEventListener('click', () => {
+  const wasPressed = button.getAttribute('aria-pressed') === 'true'; group.querySelectorAll('[aria-pressed]').forEach(item => item.setAttribute('aria-pressed', 'false')); button.setAttribute('aria-pressed', String(!wasPressed));
+  const status = document.querySelector('[data-filter-status]'); if (status) status.textContent = !wasPressed ? 'Filtered results' : 'All results';
+})));
+document.querySelectorAll('[data-copy-link]').forEach(button => button.addEventListener('click', async () => { try { await navigator.clipboard.writeText(location.href); const status = document.querySelector('[data-copy-status]'); if (status) status.textContent = 'Link copied'; } catch { const status = document.querySelector('[data-copy-status]'); if (status) status.textContent = 'Copy this page link from your browser'; } }));
+document.querySelectorAll('[data-search-target]').forEach(input => input.addEventListener('input', () => {
+  const target = document.querySelector(input.dataset.searchTarget); const query = input.value.trim().toLowerCase(); let count = 0;
+  target?.querySelectorAll('[data-search-item]').forEach(item => { const match = item.textContent.toLowerCase().includes(query); item.hidden = !match; if (match) count++; });
+  document.querySelectorAll('[data-search-empty]').forEach(state => state.hidden = count !== 0);
+  const status = document.querySelector('[data-search-status]'); if (status) status.textContent = `${count} results`;
+}));
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.carousel, .product-line__grid, .contest-prizes__list, .contest-community__list').forEach(carousel => {
+  carousel.tabIndex = 0;
+  carousel.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+    const items = Array.from(carousel.children); const current = items.findIndex(item => item.contains(document.activeElement));
+    const next = Math.max(0, Math.min(items.length - 1, current + (event.key === 'ArrowRight' ? 1 : -1)));
+    if (items[next]) { event.preventDefault(); items[next].scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest', inline: 'center'}); items[next].querySelector('a, button')?.focus(); }
+  });
+});
+document.querySelectorAll('[data-timer]').forEach(timer => {
+  let remaining = 180, ticker = null; const display = timer.querySelector('.timer__time'); const progress = timer.querySelector('.timer__bar'); const live = timer.querySelector('[aria-live]');
+  const render = () => { if (display) display.textContent = `${Math.floor(remaining/60)}:${String(remaining%60).padStart(2,'0')}`; if (progress) progress.value = remaining/180*100; };
+  timer.querySelectorAll('[data-timer-action]').forEach(button => button.addEventListener('click', () => { const action = button.dataset.timerAction; clearInterval(ticker); ticker = null;
+    if (action === 'start' || action === 'resume') { if (live) live.textContent = action === 'start' ? 'Timer started' : 'Timer resumed'; ticker = setInterval(() => { remaining--; render(); if (remaining <= 0) { clearInterval(ticker); ticker = null; if (live) live.textContent = 'Timer complete'; } }, 1000); }
+    if (action === 'reset') { remaining = 180; render(); if (live) live.textContent = 'Timer reset'; }
+    if (action === 'pause' && live) live.textContent = 'Timer paused';
+  })); render();
+});
+</script>
+</body>
+</html>

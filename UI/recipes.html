@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" data-brand="yatekomo">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yatekomo · Recipes</title>
+<link rel="stylesheet" href="../design-system/tokens/tokens.css">
+<link rel="stylesheet" href="../design-system/css/components.css">
+</head>
+<body>
+<header data-ds="navbar" class="navbar">
+  <div class="navbar__inner">
+    <div class="navbar__start">
+      <button class="icon-button icon-button--secondary" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" data-menu-open><span class="icon icon-menu" aria-hidden="true"></span></button>
+    </div>
+    <a href="home.html" aria-label="Yatekomo, home"><img class="logo" src="../design-system/assets/logos/logo-yatekomo-positive.svg" alt="Yatekomo"></a>
+    <div class="navbar__actions">
+      <a class="button" href="natural-formula.html">New 100% Natural Formula</a>
+    </div>
+  </div>
+</header>
+
+<dialog data-ds="mobile-menu" class="mobile-menu" id="menu" aria-label="Menu">
+  <div class="mobile-menu__inner">
+    <div class="mobile-menu__top">
+      <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
+      <button class="icon-button icon-button--inverse" type="button" aria-label="Close menu" data-menu-close><span class="icon icon-close" aria-hidden="true"></span></button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Main">
+      <a class="nav-item nav-item--menu" href="products.html">Products</a>
+      <a class="nav-item nav-item--menu" href="natural-formula.html">Natural formula</a>
+      <a class="nav-item nav-item--menu" href="recipes.html">Recipes</a>
+      <a class="nav-item nav-item--menu" href="contests.html">Contests</a>
+      <a class="nav-item nav-item--menu" href="faq.html">FAQS</a>
+    </nav>
+    <div class="mobile-menu__social">
+      <p class="mobile-menu__social-label">Our social media:</p>
+      <!-- HUECO: brand social media URLs; GB Foods supplies. -->
+      <ul class="mobile-menu__social-list">
+        <li><a class="link link--dark" href="#" aria-label="TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="X"><span class="icon icon-x" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a></li>
+      </ul>
+    </div>
+    <p class="mobile-menu__copyright">© GBFoods</p>
+  </div>
+</dialog>
+<main>
+<!-- HUECO: Published recipes, ingredients, times, nutrition, filter result data and submission handling; GB Foods supplies. Recipe production is outside this project. -->
+<section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title"><div class="library-head__inner"><div class="library-head__intro"><h1 class="page-title" id="lhead-title">Recipes</h1><p class="library-head__lead">Explore and learn recipes to level up your dishes.</p></div><form class="search-field library-head__search" role="search"><span class="icon icon-search" aria-hidden="true"></span><label class="visually-hidden" for="recipe-q">Search a recipe or ingredient</label><input class="search-field__input" id="recipe-q" type="search" placeholder="Search a recipe or ingredient" data-search-target="#recipe-grid"></form><div class="library-head__filters" data-filter-group aria-label="Filter recipes"><button class="chip" type="button" aria-pressed="true">All</button><button class="chip" type="button" aria-pressed="false">Less ingredients</button><button class="chip" type="button" aria-pressed="false">Quick recipes</button><button class="chip" type="button" aria-pressed="false">High protein</button><button class="chip" type="button" aria-pressed="false">Single</button><button class="chip" type="button" aria-pressed="false">2+ people</button><button class="chip" type="button" aria-pressed="false">Spicy</button></div><div class="library-head__results"><p aria-live="polite" data-filter-status data-search-status>All recipes</p><button class="link" type="button" data-filter-clear>Clear filters</button></div></div></section>
+  <section data-ds="library" class="library" aria-label="Recipes">
+  <ul class="library__grid" id="recipe-grid">
+  <li data-search-item><article class="recipe-card">
+  <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
+  <div class="recipe-card__body">
+  <p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p>
+  <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Spicy Noodle Salad with almond and mint</a></h3>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Oriental</a></li></ul>
+  </div>
+  </article></li>
+  </ul>
+  <div class="library__more"><nav class="pagination" aria-label="Pagination">
+  <ul class="pagination__list">
+  <li><button class="pagination__link" type="button" disabled aria-label="Previous page"><span class="icon icon-arrow-left" aria-hidden="true"></span><span >Previous</span></button></li>
+  <li><a class="pagination__link " href="?page=1" aria-current="page">1</a></li>
+  <li><a class="pagination__link " href="?page=2">2</a></li>
+  <li><a class="pagination__link " href="?page=3">3</a></li>
+  <li><span class="pagination__ellipsis" aria-hidden="true">…</span></li>
+  <li><a class="pagination__link " href="?page=13">13</a></li>
+  <li><a class="pagination__link" href="?page=2" aria-label="Next page"><span >Next</span><span class="icon icon-arrow-right" aria-hidden="true"></span></a></li>
+  </ul>
+  <p class="pagination__status">Page 1 of 13</p>
+  </nav></div>
+  </section>
+
+  <section data-ds="banner" class="section banner" aria-label="Campaign">
+  <div class="section__inner">
+  <a class="banner__box" href="contests.html"><img src="../design-system/assets/images/placeholder.svg" alt="Campaign artwork"></a>
+  </div>
+  </section>
+
+  <section data-ds="recipe-submit" class="section recipe-submit" aria-labelledby="rs-title">
+  <div class="recipe-submit__inner">
+  <div class="recipe-submit__intro">
+  <h2 class="recipe-submit__title" id="rs-title">Do you have your own recipes with Yatekomo?</h2>
+  <p class="recipe-submit__lead">Share them with us so more people can enjoy your creations.</p>
+  </div>
+  <form class="recipe-submit__form" action="/recipes/submit" method="post">
+  <div class="field">
+  <label class="field__label" for="rs-recipe">Tell us your recipe</label>
+  <textarea class="field__control field__control--textarea" id="rs-recipe" name="recipe" aria-describedby="rs-help"></textarea>
+  <p class="field__helper" id="rs-help">List the ingredients with their quantities and the time of each step</p>
+  </div>
+  <button class="button" type="submit">Send my recipe</button>
+  </form>
+  </div>
+  </section>
+<section class="section library" data-search-empty hidden><div data-ds="empty-state" class="empty-state"><h2 class="empty-state__title">We couldn't find any results for your search</h2><p class="empty-state__text">Try with different ingredients</p></div><h2 class="section__title">Our most popular ones</h2>  <section data-ds="library" class="library" aria-label="Recipes">
+  <ul class="library__grid">
+  <li><article class="recipe-card">
+  <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
+  <div class="recipe-card__body">
+  <p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p>
+  <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Spicy Noodle Salad with almond and mint</a></h3>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Oriental</a></li></ul>
+  </div>
+  </article></li>
+  </ul>
+  <div class="library__more"><nav class="pagination" aria-label="Pagination">
+  <ul class="pagination__list">
+  <li><button class="pagination__link" type="button" disabled aria-label="Previous page"><span class="icon icon-arrow-left" aria-hidden="true"></span><span >Previous</span></button></li>
+  <li><a class="pagination__link " href="?page=1" aria-current="page">1</a></li>
+  <li><a class="pagination__link " href="?page=2">2</a></li>
+  <li><a class="pagination__link " href="?page=3">3</a></li>
+  <li><span class="pagination__ellipsis" aria-hidden="true">…</span></li>
+  <li><a class="pagination__link " href="?page=13">13</a></li>
+  <li><a class="pagination__link" href="?page=2" aria-label="Next page"><span >Next</span><span class="icon icon-arrow-right" aria-hidden="true"></span></a></li>
+  </ul>
+  <p class="pagination__status">Page 1 of 13</p>
+  </nav></div>
+  </section>
+</section>
+</main>
+<footer data-ds="footer" class="footer">
+  <div class="footer__main">
+    <div class="footer__brand">
+      <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
+    </div>
+    <nav class="footer__column" aria-label="Footer">
+      <ul class="footer__links">
+        <li><a class="link link--dark" href="products.html">Products</a></li>
+        <li><a class="link link--dark" href="natural-formula.html">100% Natural formula</a></li>
+        <li><a class="link link--dark" href="recipes.html">Recipes</a></li>
+        <li><a class="link link--dark" href="contests.html">Contests</a></li>
+        <li><a class="link link--dark" href="faq.html">FAQS</a></li>
+        <!-- HUECO: enlaces de campaña activa; GB Foods supplies. -->
+        <li><a class="link link--dark" href="#">Campaign link 1</a></li>
+        <li><a class="link link--dark" href="#">Campaign link 2</a></li>
+      </ul>
+    </nav>
+    <!-- HUECO: approved certification seals and artwork; GB Foods supplies. -->
+    <div class="footer__ticket">
+      <div class="footer__ticket-copy">
+        <h2 class="footer__ticket-title">Do you have any ideas, complaints or cravings?</h2>
+        <p class="footer__ticket-text">Cut to the chase and tell us what you think. We're really reading your comments, for real.</p>
+      </div>
+      <!-- HUECO: external Quality form URL; GB Foods supplies. -->
+      <a class="button" href="#" target="_blank" rel="noopener">Send suggestions <span class="icon icon-external-link" aria-hidden="true"></span><span class="visually-hidden"> (opens in a new tab)</span></a>
+    </div>
+  </div>
+  <div class="footer__legal">
+    <a class="link link--dark" href="#">Legal notice</a>
+    <a class="link link--dark" href="privacy.html">Privacy policy</a>
+    <a class="link link--dark" href="#">Cookies policy</a>
+    <a class="link link--dark" href="#">Legal basis</a>
+    <a class="link link--dark" href="contest.html#rules">Contest rules</a>
+    <a class="link link--dark" href="#">Contact</a>
+    <span>© GBFoods</span>
+  </div>
+</footer>
+<script>
+const menu = document.getElementById('menu');
+const menuOpener = document.querySelector('[data-menu-open]');
+menuOpener?.addEventListener('click', () => { menu?.showModal(); menuOpener.setAttribute('aria-expanded', 'true'); });
+menu?.addEventListener('close', () => menuOpener?.setAttribute('aria-expanded', 'false'));
+document.querySelectorAll('[data-menu-close]').forEach(button => button.addEventListener('click', () => menu?.close()));
+const stickyHeader = document.querySelector('.navbar');
+const updateHeader = () => stickyHeader?.classList.toggle('navbar--scrolled', window.scrollY > 0);
+window.addEventListener('scroll', updateHeader, { passive: true }); updateHeader();
+</script>
+<script>
+// Interactive states used by the wireframe; all presentation remains in Design System classes.
+document.querySelectorAll('[data-dialog-open]').forEach(button => button.addEventListener('click', () => document.getElementById(button.dataset.dialogOpen)?.showModal()));
+document.querySelectorAll('[data-dialog-close]').forEach(button => button.addEventListener('click', () => button.closest('dialog')?.close()));
+document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); }));
+document.querySelectorAll('.faq-list__items, .faq__list').forEach(list => list.querySelectorAll('.accordion-item__button').forEach(button => button.addEventListener('click', () => {
+  const opening = button.getAttribute('aria-expanded') !== 'true';
+  list.querySelectorAll('.accordion-item__button').forEach(other => { other.setAttribute('aria-expanded', 'false'); const panel = document.getElementById(other.getAttribute('aria-controls')); if (panel) panel.hidden = true; });
+  button.setAttribute('aria-expanded', String(opening)); const panel = document.getElementById(button.getAttribute('aria-controls')); if (panel) panel.hidden = !opening;
+})));
+document.querySelectorAll('[data-filter-clear]').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('[data-filter-group] [aria-pressed]').forEach(item => item.setAttribute('aria-pressed', String(item.textContent.trim() === 'All')));
+  document.querySelectorAll('[data-search-target]').forEach(input => { input.value = ''; input.dispatchEvent(new Event('input')); });
+  const status = document.querySelector('[data-filter-status]'); if (status) status.textContent = 'All recipes';
+}));
+document.querySelectorAll('[data-filter-group]').forEach(group => group.querySelectorAll('[aria-pressed]').forEach(button => button.addEventListener('click', () => {
+  const wasPressed = button.getAttribute('aria-pressed') === 'true'; group.querySelectorAll('[aria-pressed]').forEach(item => item.setAttribute('aria-pressed', 'false')); button.setAttribute('aria-pressed', String(!wasPressed));
+  const status = document.querySelector('[data-filter-status]'); if (status) status.textContent = !wasPressed ? 'Filtered results' : 'All results';
+})));
+document.querySelectorAll('[data-copy-link]').forEach(button => button.addEventListener('click', async () => { try { await navigator.clipboard.writeText(location.href); const status = document.querySelector('[data-copy-status]'); if (status) status.textContent = 'Link copied'; } catch { const status = document.querySelector('[data-copy-status]'); if (status) status.textContent = 'Copy this page link from your browser'; } }));
+document.querySelectorAll('[data-search-target]').forEach(input => input.addEventListener('input', () => {
+  const target = document.querySelector(input.dataset.searchTarget); const query = input.value.trim().toLowerCase(); let count = 0;
+  target?.querySelectorAll('[data-search-item]').forEach(item => { const match = item.textContent.toLowerCase().includes(query); item.hidden = !match; if (match) count++; });
+  document.querySelectorAll('[data-search-empty]').forEach(state => state.hidden = count !== 0);
+  const status = document.querySelector('[data-search-status]'); if (status) status.textContent = `${count} results`;
+}));
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.carousel, .product-line__grid, .contest-prizes__list, .contest-community__list').forEach(carousel => {
+  carousel.tabIndex = 0;
+  carousel.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+    const items = Array.from(carousel.children); const current = items.findIndex(item => item.contains(document.activeElement));
+    const next = Math.max(0, Math.min(items.length - 1, current + (event.key === 'ArrowRight' ? 1 : -1)));
+    if (items[next]) { event.preventDefault(); items[next].scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest', inline: 'center'}); items[next].querySelector('a, button')?.focus(); }
+  });
+});
+document.querySelectorAll('[data-timer]').forEach(timer => {
+  let remaining = 180, ticker = null; const display = timer.querySelector('.timer__time'); const progress = timer.querySelector('.timer__bar'); const live = timer.querySelector('[aria-live]');
+  const render = () => { if (display) display.textContent = `${Math.floor(remaining/60)}:${String(remaining%60).padStart(2,'0')}`; if (progress) progress.value = remaining/180*100; };
+  timer.querySelectorAll('[data-timer-action]').forEach(button => button.addEventListener('click', () => { const action = button.dataset.timerAction; clearInterval(ticker); ticker = null;
+    if (action === 'start' || action === 'resume') { if (live) live.textContent = action === 'start' ? 'Timer started' : 'Timer resumed'; ticker = setInterval(() => { remaining--; render(); if (remaining <= 0) { clearInterval(ticker); ticker = null; if (live) live.textContent = 'Timer complete'; } }, 1000); }
+    if (action === 'reset') { remaining = 180; render(); if (live) live.textContent = 'Timer reset'; }
+    if (action === 'pause' && live) live.textContent = 'Timer paused';
+  })); render();
+});
+</script>
+</body>
+</html>

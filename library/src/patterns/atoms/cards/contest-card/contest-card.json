@@ -1,6 +1,6 @@
 {
   "title": "Contest card",
-  "description": "Card de concurso (Contest library, módulo de Home). Status=Active: Badge Natural «En curso» y Button Primary «Participar» (si el concurso es externo o iframe de agencia, activar I…",
+  "description": "Card de concurso (Contest library y Home). Anatomía (wireframe UX): imagen cuadrada 384 (radius md) · en Status=Closed, Badge Neutral «Closed» sobre la imagen · caption «Available…",
   "status": "Ready",
   "sheet": {
     "contrast": {
@@ -17,10 +17,10 @@
       "fileKey": "v4mnn154qUmiB35CCnRfgh",
       "nodeId": "68:95",
       "current": {
-        "description": "Card de concurso (Contest library, módulo de Home). Status=Active: Badge Natural «En curso» y Button Primary «Participar» (si el concurso es externo o iframe de agencia, activar Icon trailing con external-link y abrir en pestaña nueva avisándolo). Status=Closed: Badge Neutral «Finalizado» y Link «Ver ganadores». Las bases legales (Link inline) aparecen siempre: es obligatorio publicarlas. La card no es enlace en bloque: tiene dos acciones. Desktop 448 px; en móvil FILL.",
-        "Propósito": "Card de concurso con estado (En curso o Finalizado), fechas, acción y bases legales. No es un enlace en bloque: tiene dos acciones.",
-        "Accesibilidad (rol, nombre, estados y teclado)": "Título tinta sobre blanco 18,7:1; fechas gris cálido sobre blanco 5,9:1; estado en Badge (blanco sobre verde 5,5:1 o crema sobre tinta 17,2:1) con la palabra, no solo color. Rol: `<article>` con encabezado y dos enlaces. Si el concurso es externo o un iframe de agencia, el botón lo avisa (icono y texto oculto). Teclado: Tab por las dos acciones. Foco: el de Button y Link.",
-        "Cuándo usar / qué NO hace": "En la Contest library y en la Home. Closed cambia el contenido (Badge Neutral «Finalizado» y Link «Ver ganadores»), no el estilo. Las bases legales aparecen siempre (es obligatorio publicarlas)."
+        "description": "Card de concurso (Contest library y Home). Anatomía (wireframe UX): imagen cuadrada 384 (radius md) · en Status=Closed, Badge Neutral «Closed» sobre la imagen · caption «Available until» (Status=Active) o «Ended on» (Status=Closed) con la propiedad Dates · nombre del concurso h3 de 2 líneas con la propiedad Title · chips S de premios (T-shirts, Balls, Experience). Toda la tarjeta es un enlace: sin botones «Participar» ni «Bases legales». Clase CSS: .contest-card. ⬜ TODO GB Foods/agencia: texto de los premios y fecha de cierre reales; mecánica de límite de participaciones pendiente de confirmar.",
+        "Propósito": "Tarjeta de un concurso en la Contest library. Imagen cuadrada, fechas (activos: «Available until …»; cerrados: «Ended on …»), nombre del concurso (h3) y premios en chips. Toda la tarjeta es un enlace a la página del concurso: el título lleva el enlace y este se estira a toda la tarjeta, igual que Recipe card. No lleva botones ni bases legales: las bases están en la página del concurso.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Rol: `article` con un `h3`. El nombre del enlace es el título; `aria-describedby` añade la fecha, así que el lector anuncia «Slurp & Win, Available until 20/9/2026». El estado Closed se dice con texto (el Badge «Closed» y «Ended on»), no con el color. La imagen es decorativa (`alt` vacío) porque el nombre ya va en el texto. Los premios son texto dentro de una lista con nombre («Prizes»); los chips no son controles, así que el cursor no cambia. Contrastes: título tinta sobre blanco (más de 12:1); fechas en gris cálido sobre blanco (5,4:1); Badge neutral crema sobre tinta (17:1). Teclado: Tab llega al enlace del título (un solo punto de parada por tarjeta) y Enter abre el concurso. Foco: el trazo de la tarjeta pasa a grueso y al color de foco (`:has`), además del contorno del enlace si lo hubiera.",
+        "Cuándo usar / qué NO hace": "Solo en la Contest library (concursos activos y cerrados). No tiene botones de participar ni de bases: si un concurso necesita acciones propias, eso va en su página, no en la tarjeta. En móvil ocupa todo el ancho; en rejilla, su columna. Los nombres, fechas y premios de ejemplo son ⬜ TODO: los confirma GB Foods con la agencia. La mecánica de resultado inmediato y el límite de participaciones no se muestran en la tarjeta (⬜ TODO, ver la ficha de Contest result)."
       },
       "proposed": {},
       "pending": null
@@ -31,26 +31,26 @@
       "page": "Cards",
       "type": "COMPONENT_SET",
       "variants": 2,
-      "lastSync": "2026-10-22 · 09:38 UTC",
+      "lastSync": "2026-10-23 · 09:35 UTC",
       "verification": "verified",
       "verificationLabel": "Verificado"
     },
     "description": [
-      "Card de concurso (Contest library, módulo de Home). Status=Active: Badge Natural «En curso» y Button Primary «Participar» (si el concurso es externo o iframe de agencia, activar Icon trailing con external-link y abrir en pestaña nueva avisándolo). Status=Closed: Badge Neutral «Finalizado» y Link «Ver ganadores». Las bases legales (Link inline) aparecen siempre: es obligatorio publicarlas. La card no es enlace en bloque: tiene dos acciones. Desktop 448 px; en móvil FILL."
+      "Card de concurso (Contest library y Home). Anatomía (wireframe UX): imagen cuadrada 384 (radius md) · en Status=Closed, Badge Neutral «Closed» sobre la imagen · caption «Available until» (Status=Active) o «Ended on» (Status=Closed) con la propiedad Dates · nombre del concurso h3 de 2 líneas con la propiedad Title · chips S de premios (T-shirts, Balls, Experience). Toda la tarjeta es un enlace: sin botones «Participar» ni «Bases legales». Clase CSS: .contest-card. ⬜ TODO GB Foods/agencia: texto de los premios y fecha de cierre reales; mecánica de límite de participaciones pendiente de confirmar."
     ],
     "props": [
       {
         "name": "title",
         "type": "string",
         "values": [],
-        "default": "Nombre del concurso",
+        "default": "Contest name",
         "figma": "Title#68:0"
       },
       {
         "name": "dates",
         "type": "string",
         "values": [],
-        "default": "Del 1 al 30 de noviembre de 2026",
+        "default": "Available until 20/9/2026",
         "figma": "Dates#68:3"
       },
       {
@@ -73,63 +73,56 @@
     },
     "nested": [
       {
-        "layer": "status",
-        "component": "badge",
-        "exposedAs": "",
-        "hidden": false
-      },
-      {
-        "layer": "cta",
-        "component": "button",
+        "layer": "Chip",
+        "component": "chip",
         "exposedAs": "",
         "hidden": false
       },
       {
         "layer": "icon-leading",
-        "component": "icon-arrow-right",
-        "exposedAs": "Icon leading swap#33:75",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
         "hidden": true
       },
       {
-        "layer": "icon-trailing",
-        "component": "icon-arrow-right",
-        "exposedAs": "Icon trailing swap#33:100",
-        "hidden": true
-      },
-      {
-        "layer": "rules-link",
-        "component": "link",
+        "layer": "Chip",
+        "component": "chip",
         "exposedAs": "",
         "hidden": false
       },
       {
-        "layer": "icon-trailing",
-        "component": "icon-arrow-right",
-        "exposedAs": "Icon#35:0",
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
         "hidden": true
       }
     ],
     "tokens": [
       {
-        "group": "badge",
-        "items": [
-          "badge/natural/bg",
-          "badge/natural/text"
-        ]
-      },
-      {
         "group": "border",
         "items": [
-          "border/width/thick",
           "border/width/thin"
         ]
       },
       {
-        "group": "button",
+        "group": "chip",
         "items": [
-          "button/primary/bg",
-          "button/primary/border",
-          "button/primary/text"
+          "chip/bg",
+          "chip/border",
+          "chip/height/s",
+          "chip/text"
         ]
       },
       {
@@ -153,18 +146,12 @@
         "items": [
           "font/family/body",
           "font/family/display",
-          "font/line-height/desktop/body-m",
           "font/line-height/desktop/body-s",
           "font/line-height/desktop/caption",
           "font/line-height/desktop/h3",
-          "font/line-height/desktop/label",
-          "font/line-height/mobile/label",
-          "font/size/desktop/body-m",
           "font/size/desktop/body-s",
           "font/size/desktop/caption",
           "font/size/desktop/h3",
-          "font/size/desktop/label",
-          "font/size/mobile/label",
           "font/style/body",
           "font/style/display"
         ]
@@ -173,12 +160,6 @@
         "group": "icon",
         "items": [
           "icon/size/sm"
-        ]
-      },
-      {
-        "group": "link",
-        "items": [
-          "link/default"
         ]
       },
       {
@@ -194,61 +175,53 @@
         "items": [
           "space/16",
           "space/24",
-          "space/4",
           "space/8"
         ]
       }
     ],
-    "tokenCount": 38,
+    "tokenCount": 28,
     "textStyles": [
-      "Mobile/label",
       "Desktop/caption",
       "Desktop/h3",
-      "Desktop/body-s",
-      "Desktop/label",
-      "Desktop/body-m"
+      "Desktop/body-s"
     ],
     "classes": [
       "badge",
-      "badge--natural",
-      "button",
+      "badge--neutral",
+      "chip",
       "contest-card",
-      "contest-card__actions",
       "contest-card__body",
-      "contest-card__caption",
       "contest-card__dates",
+      "contest-card__link",
       "contest-card__media",
-      "contest-card__title",
-      "icon",
-      "icon-external-link",
-      "link",
-      "visually-hidden"
+      "contest-card__prizes",
+      "contest-card__title"
     ],
     "manual": [
       {
         "label": "Propósito",
-        "md": "Card de concurso con estado (En curso o Finalizado), fechas, acción y bases legales. No es un enlace en bloque: tiene dos acciones.",
+        "md": "Tarjeta de un concurso en la Contest library. Imagen cuadrada, fechas (activos: «Available until …»; cerrados: «Ended on …»), nombre del concurso (h3) y premios en chips. Toda la tarjeta es un enlace a la página del concurso: el título lleva el enlace y este se estira a toda la tarjeta, igual que Recipe card. No lleva botones ni bases legales: las bases están en la página del concurso.",
         "todo": false,
         "na": false,
         "canNA": false
       },
       {
         "label": "Accesibilidad (rol, nombre, estados y teclado)",
-        "md": "Título tinta sobre blanco 18,7:1; fechas gris cálido sobre blanco 5,9:1; estado en Badge (blanco sobre verde 5,5:1 o crema sobre tinta 17,2:1) con la palabra, no solo color. Rol: `<article>` con encabezado y dos enlaces. Si el concurso es externo o un iframe de agencia, el botón lo avisa (icono y texto oculto). Teclado: Tab por las dos acciones. Foco: el de Button y Link.",
+        "md": "Rol: `article` con un `h3`. El nombre del enlace es el título; `aria-describedby` añade la fecha, así que el lector anuncia «Slurp & Win, Available until 20/9/2026». El estado Closed se dice con texto (el Badge «Closed» y «Ended on»), no con el color. La imagen es decorativa (`alt` vacío) porque el nombre ya va en el texto. Los premios son texto dentro de una lista con nombre («Prizes»); los chips no son controles, así que el cursor no cambia. Contrastes: título tinta sobre blanco (más de 12:1); fechas en gris cálido sobre blanco (5,4:1); Badge neutral crema sobre tinta (17:1). Teclado: Tab llega al enlace del título (un solo punto de parada por tarjeta) y Enter abre el concurso. Foco: el trazo de la tarjeta pasa a grueso y al color de foco (`:has`), además del contorno del enlace si lo hubiera.",
         "todo": false,
         "na": false,
         "canNA": true
       },
       {
         "label": "Cuándo usar / qué NO hace",
-        "md": "En la Contest library y en la Home. Closed cambia el contenido (Badge Neutral «Finalizado» y Link «Ver ganadores»), no el estilo. Las bases legales aparecen siempre (es obligatorio publicarlas).",
+        "md": "Solo en la Contest library (concursos activos y cerrados). No tiene botones de participar ni de bases: si un concurso necesita acciones propias, eso va en su página, no en la tarjeta. En móvil ocupa todo el ancho; en rejilla, su columna. Los nombres, fechas y premios de ejemplo son ⬜ TODO: los confirma GB Foods con la agencia. La mecánica de resultado inmediato y el límite de participaciones no se muestran en la tarjeta (⬜ TODO, ver la ficha de Contest result).",
         "todo": false,
         "na": false,
         "canNA": false
       }
     ],
     "manualTodo": 0,
-    "notes": "",
+    "notes": "> ⚠️ El bloque GENERATED de arriba es del volcado anterior (tarjeta con botón «Participar» y «Bases legales»). El maestro aprobado de la fase 5 (Active y Closed, sin botones) aún no está en Figma: el próximo sync lo sustituye. Hasta entonces, el criterio y el ejemplo de abajo son los que manda.",
     "coverage": {
       "visible": 1,
       "total": 1,

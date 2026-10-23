@@ -7,11 +7,11 @@
     "slug": "library-head",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T14:07:02Z",
-    "description": "Library head: cabecera de la Recipe library: título de página («Recipes»), subtítulo («Explore and learn recipes to level up your dishes.»), Search field («Search a recipe or ingredient», sin etiqueta visible: aria-label «Buscar» y role=search) y fila de chips de filtro (All, Less ingredients, Quick recipes, High protein, Single, +2 people, Spicy) con aria-pressed. State=Default: All seleccionado. State=Filtered: un chip seleccionado (Less ingredients), fila «48 results for your search» (48 en negrita) y «Clear filters» con Icon / trash a la derecha. Mobile: chips en fila desplazable. Fondo crema (surface/page). Uso: Recipe library (wireframe desktop 171:3808, estados 483:5711 y 485:6064; móvil 486:13025 y 265:3948). Clase CSS: .library-head (.library-head--filtered).",
+    "lastSync": "2026-10-23T09:35:36Z",
+    "description": "Library head: cabecera de la Recipe library: título de página («Recipes»), subtítulo («Explore and learn recipes to level up your dishes.»), Search field («Search a recipe or ingredient», sin etiqueta visible: aria-label «Buscar» y role=search) y fila de chips de filtro (All, Less ingredients, Quick recipes, High protein, Single, +2 people, Spicy) con aria-pressed. State=Default: All seleccionado. State=Filtered: un chip seleccionado (Less ingredients), fila «48 results for your search» (48 en negrita) y «Clear filters» con Icon / trash a la derecha. Mobile: chips en fila desplazable. Fondo crema (surface/page). Uso: Recipe library (wireframe desktop 171:3808, estados 483:5711 y 485:6064; móvil 486:13025 y 265:3948). Clase CSS: .library-head (.library-head--filtered). Align=Left: título y buscador alineados a la izquierda (por defecto). Align=Center: buscador centrado en su fila (FAQ, wireframe 428:10606). Los textos siguen alineados a la izquierda.",
     "figmaPage": "Pattern / Libraries",
     "figmaType": "COMPONENT_SET",
-    "variantCount": 4,
+    "variantCount": 8,
     "autoLayout": true,
     "lifecycle": {
       "status": "active",
@@ -20,22 +20,38 @@
       "replacement": null,
       "reason": null
     },
-    "anatomyHash": "6b87de4a1cc5",
+    "anatomyHash": "93ba8e2b1fec",
     "verification": {
       "status": "verified",
-      "date": "2026-10-22",
-      "figmaVersion": "6b87de4a1cc5",
+      "date": "2026-10-23",
+      "figmaVersion": "93ba8e2b1fec",
       "variantsChecked": [
-        "State=Default, Breakpoint=Desktop",
-        "State=Default, Breakpoint=Mobile",
-        "State=Filtered, Breakpoint=Desktop",
-        "State=Filtered, Breakpoint=Mobile"
+        "State=Default, Breakpoint=Desktop, Align=Left",
+        "State=Filtered, Breakpoint=Desktop, Align=Left",
+        "State=Default, Breakpoint=Mobile, Align=Left",
+        "State=Filtered, Breakpoint=Mobile, Align=Left",
+        "State=Default, Breakpoint=Desktop, Align=Center",
+        "State=Filtered, Breakpoint=Desktop, Align=Center",
+        "State=Default, Breakpoint=Mobile, Align=Center",
+        "State=Filtered, Breakpoint=Mobile, Align=Center"
       ],
       "by": "Claude (Haiku) · revisión de David Reina pendiente"
     }
   },
   "api": {
     "props": [
+      {
+        "name": "search",
+        "type": "boolean",
+        "default": true,
+        "figma": "Search#307:0"
+      },
+      {
+        "name": "filters",
+        "type": "boolean",
+        "default": true,
+        "figma": "Filters#307:5"
+      },
       {
         "name": "filtered",
         "type": "boolean",
@@ -51,6 +67,16 @@
         ],
         "default": "Desktop",
         "figma": "Breakpoint"
+      },
+      {
+        "name": "align",
+        "type": "enum",
+        "values": [
+          "Left",
+          "Center"
+        ],
+        "default": "Left",
+        "figma": "Align"
       }
     ],
     "cssStates": [],
@@ -110,6 +136,9 @@
       "icon-search",
       "icon-trash",
       "library-head",
+      "library-head--center",
+      "library-head--no-filters",
+      "library-head--no-search",
       "library-head__filters",
       "library-head__inner",
       "library-head__intro",
@@ -123,7 +152,7 @@
       "section",
       "visually-hidden"
     ],
-    "example": "<section data-ds=\"library-head\" class=\"section library-head\" aria-labelledby=\"lhead-title\">\n<div class=\"library-head__inner\">\n<div class=\"library-head__intro\">\n<h1 class=\"page-title\" id=\"lhead-title\">Recipes</h1>\n<p class=\"library-head__lead\">Explore and learn recipes to level up your dishes.</p>\n</div>\n<form class=\"search-field library-head__search\" role=\"search\" action=\"/recipes\">\n<span class=\"icon icon-search\" aria-hidden=\"true\"></span>\n<label class=\"visually-hidden\" for=\"lhead-q\">Search a recipe or ingredient</label>\n<input class=\"search-field__input\" id=\"lhead-q\" name=\"q\" type=\"search\" placeholder=\"Search a recipe or ingredient\">\n</form>\n<ul class=\"library-head__filters\" aria-label=\"Filter recipes\">\n<li><button class=\"chip\" type=\"button\" aria-pressed=\"true\"><span class=\"icon icon-check\" aria-hidden=\"true\"></span>All</button></li>\n<li><button class=\"chip\" type=\"button\" aria-pressed=\"false\">Less ingredients</button></li>\n<li><button class=\"chip\" type=\"button\" aria-pressed=\"false\">Quick recipes</button></li>\n<li><button class=\"chip\" type=\"button\" aria-pressed=\"false\">High protein</button></li>\n</ul>\n<div class=\"library-head__results\">\n<p aria-live=\"polite\"><strong>48</strong> results for your search</p>\n<button class=\"link\" type=\"button\"><span class=\"icon icon-trash\" aria-hidden=\"true\"></span>Clear filters</button>\n</div>\n</div>\n</section>",
+    "example": "<section data-ds=\"library-head\" class=\"section library-head\" aria-labelledby=\"lhead-title\">\n<div class=\"library-head__inner\">\n<div class=\"library-head__intro\">\n<h1 class=\"page-title\" id=\"lhead-title\">Recipes</h1>\n<p class=\"library-head__lead\">Explore and learn recipes to level up your dishes.</p>\n</div>\n<form class=\"search-field library-head__search\" role=\"search\" action=\"/recipes\">\n<span class=\"icon icon-search\" aria-hidden=\"true\"></span>\n<label class=\"visually-hidden\" for=\"lhead-q\">Search a recipe or ingredient</label>\n<input class=\"search-field__input\" id=\"lhead-q\" name=\"q\" type=\"search\" placeholder=\"Search a recipe or ingredient\">\n</form>\n<ul class=\"library-head__filters\" aria-label=\"Filter recipes\">\n<li><button class=\"chip\" type=\"button\" aria-pressed=\"true\"><span class=\"icon icon-check\" aria-hidden=\"true\"></span>All</button></li>\n<li><button class=\"chip\" type=\"button\" aria-pressed=\"false\">Less ingredients</button></li>\n<li><button class=\"chip\" type=\"button\" aria-pressed=\"false\">Quick recipes</button></li>\n<li><button class=\"chip\" type=\"button\" aria-pressed=\"false\">High protein</button></li>\n</ul>\n<div class=\"library-head__results\">\n<p aria-live=\"polite\"><strong>48</strong> results for your search</p>\n<button class=\"link\" type=\"button\"><span class=\"icon icon-trash\" aria-hidden=\"true\"></span>Clear filters</button>\n</div>\n</div>\n</section>\n<section data-ds=\"library-head\" class=\"section library-head library-head--no-search library-head--no-filters\" aria-labelledby=\"lhead-contests\">\n<div class=\"library-head__inner\">\n<div class=\"library-head__intro\">\n<h1 class=\"page-title\" id=\"lhead-contests\">Contests &amp; promotions</h1>\n<p class=\"library-head__lead\">Enter our contests and win, don't miss your chance!</p>\n</div>\n</div>\n</section>\n<section data-ds=\"library-head\" class=\"section library-head library-head--center library-head--no-filters\" aria-labelledby=\"lhead-faq\">\n<div class=\"library-head__inner\">\n<div class=\"library-head__intro\">\n<h1 class=\"page-title\" id=\"lhead-faq\">Frequently Asked Questions</h1>\n<p class=\"library-head__lead\">These are the questions we're asked most often, so you won't be left wondering</p>\n</div>\n<form class=\"search-field library-head__search\" role=\"search\" action=\"/faq\">\n<span class=\"icon icon-search\" aria-hidden=\"true\"></span>\n<label class=\"visually-hidden\" for=\"lhead-faq-q\">Search for questions about our products</label>\n<input class=\"search-field__input\" id=\"lhead-faq-q\" name=\"q\" type=\"search\" placeholder=\"Search for questions about our products\">\n</form>\n</div>\n</section>",
     "classByProp": {},
     "stateAnatomy": [],
     "package": null,
@@ -134,8 +163,11 @@
     "nodeId": "219:1839",
     "componentKey": "d5e7974870a8e8e885ecfa9f467990324683d348",
     "propertyNames": {
+      "search": "Search#307:0",
+      "filters": "Filters#307:5",
       "filtered": "State=Filtered",
-      "breakpoint": "Breakpoint"
+      "breakpoint": "Breakpoint",
+      "align": "Align"
     },
     "variantAxes": {
       "State": [
@@ -145,6 +177,10 @@
       "Breakpoint": [
         "Desktop",
         "Mobile"
+      ],
+      "Align": [
+        "Left",
+        "Center"
       ]
     },
     "nestedInstances": [
@@ -153,7 +189,7 @@
         "component": "State=Default",
         "componentSlug": "search-field",
         "exposedAs": null,
-        "toggledBy": null,
+        "toggledBy": "Search#307:0",
         "visibleByDefault": true
       },
       {

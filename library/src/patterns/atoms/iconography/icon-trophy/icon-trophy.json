@@ -1,0 +1,103 @@
+{
+  "title": "Icon / trophy",
+  "description": "Trofeo. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Uso: Contest conditions (Grand prize draw). Color: icon/color/*. Tamaño: icon/size/*",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "icon-trophy",
+      "name": "Icon / trophy",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "307:64",
+      "current": {
+        "description": "Trofeo. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Uso: Contest conditions (Grand prize draw). Color: icon/color/*. Tamaño: icon/size/*",
+        "Propósito": "Glifo de interfaz: premio o sorteo (fecha del sorteo del premio gordo).",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Decorativo por defecto (`aria-hidden=\"true\"`): el significado lo da el texto que lo acompaña. Color `icon/color/default` (hereda `currentColor`); trazo de 2,5 px fijo, tamaño `icon/size/md` (24 px).",
+        "Cuándo usar / qué NO hace": "Dentro de otro componente o junto a un texto que dice lo mismo (p. ej. Contest conditions). Un icono solo no transmite información: si no hay texto visible, el control que lo contiene lleva `aria-label`. No se recolorea ni se cambia el trazo."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "307:64",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=307-64",
+      "page": "Iconography",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-23 · 09:36 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Trofeo. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Uso: Contest conditions (Grand prize draw). Color: icon/color/*. Tamaño: icon/size/*"
+    ],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default",
+          "icon/size/md"
+        ]
+      }
+    ],
+    "tokenCount": 2,
+    "textStyles": [],
+    "classes": [
+      "icon",
+      "icon-trophy"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Glifo de interfaz: premio o sorteo (fecha del sorteo del premio gordo).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Decorativo por defecto (`aria-hidden=\"true\"`): el significado lo da el texto que lo acompaña. Color `icon/color/default` (hereda `currentColor`); trazo de 2,5 px fijo, tamaño `icon/size/md` (24 px).",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Dentro de otro componente o junto a un texto que dice lo mismo (p. ej. Contest conditions). Un icono solo no transmite información: si no hay texto visible, el control que lo contiene lleva `aria-label`. No se recolorea ni se cambia el trazo.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "icon-trophy",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "307:64",
+    "contract": "../../../../../../design-system/schemas/components/icon-trophy.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

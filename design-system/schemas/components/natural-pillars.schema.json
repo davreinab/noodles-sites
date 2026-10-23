@@ -7,12 +7,19 @@
     "slug": "natural-pillars",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T15:21:21Z",
+    "lastSync": "2026-10-23T09:36:22Z",
     "description": "Natural pillars: bloque «Taste you can trust» de la página Natural formula (wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-pillars). Fondo blanco (surface/card, sección Trust). A la izquierda título, subtítulo «Better for people, better for the planet» y lista ordenada de cuatro Pillar item; a la derecha imagen placeholder (560×520 en desktop; en móvil va debajo a ancho completo). Props: Title, Subtitle. Textos de ejemplo y pilares ⬜ TODO envase.",
     "figmaPage": "Pattern / Detail pages",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "1002639051f9",
     "verification": {
       "status": "verified",
@@ -132,7 +139,7 @@
     "nestedInstances": [
       {
         "layer": "pillar-item",
-        "component": "Pillar item",
+        "component": "Tone=Natural",
         "componentSlug": "pillar-item",
         "exposedAs": null,
         "toggledBy": null,
@@ -140,7 +147,7 @@
       },
       {
         "layer": "pillar-item",
-        "component": "Pillar item",
+        "component": "Tone=Natural",
         "componentSlug": "pillar-item",
         "exposedAs": null,
         "toggledBy": null,
@@ -148,7 +155,7 @@
       },
       {
         "layer": "pillar-item",
-        "component": "Pillar item",
+        "component": "Tone=Natural",
         "componentSlug": "pillar-item",
         "exposedAs": null,
         "toggledBy": null,
@@ -156,7 +163,7 @@
       },
       {
         "layer": "pillar-item",
-        "component": "Pillar item",
+        "component": "Tone=Natural",
         "componentSlug": "pillar-item",
         "exposedAs": null,
         "toggledBy": null,

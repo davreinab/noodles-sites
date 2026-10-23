@@ -1,0 +1,125 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:community-card",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Community card",
+    "slug": "community-card",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-23T09:36:22Z",
+    "description": "Community card: foto de la comunidad (ganadores o participantes) con pie «@usuario · producto» en caption. Usos: Contest community (wireframe 330:6557, bloque Real moments / Shared by the community, fila desplazable). Clase CSS: .community-card. ⬜ TODO GB Foods/agencia: fotos y usuarios reales con permiso de publicación.",
+    "figmaPage": "Cards",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "9132c2506fb3",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-23",
+      "figmaVersion": "9132c2506fb3",
+      "variantsChecked": [
+        "default"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "caption",
+        "type": "string",
+        "default": "@user · Home Ramen Kit unboxing",
+        "figma": "Caption#308:12"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "color/border/default",
+      "color/surface/card",
+      "color/text/secondary",
+      "contest-card/media-bg",
+      "font/family/body",
+      "font/line-height/desktop/caption",
+      "font/size/desktop/caption",
+      "font/style/body",
+      "radius/md",
+      "space/16",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "community-card",
+      "community-card__caption",
+      "community-card__media"
+    ],
+    "example": "<figure data-ds=\"community-card\" class=\"community-card\">\n<div class=\"community-card__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<figcaption class=\"community-card__caption\">@user2 · Home Ramen Kit unboxing</figcaption>\n</figure>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "308:2304",
+    "componentKey": "fa472a81223becf05f393d5da2073187ec63490a",
+    "propertyNames": {
+      "caption": "Caption#308:12"
+    },
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: color/surface/card",
+      "strokes: color/border/default",
+      "color: color/surface/card",
+      "color: color/border/default",
+      "fills: contest-card/media-bg",
+      "color: contest-card/media-bg",
+      "itemSpacing: space/8",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/caption",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: color/text/secondary"
+    ],
+    "textStyles": [
+      "Desktop/caption"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/community-card.md",
+    "section": "Community card"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

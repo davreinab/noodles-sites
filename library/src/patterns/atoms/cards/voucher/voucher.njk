@@ -1,0 +1,12 @@
+{% macro render(data) %}
+{% raw %}<div data-ds="voucher" class="voucher">
+<div class="voucher__main">
+<p class="voucher__value">15% OFF</p>
+<p class="voucher__label">Discount voucher</p>
+</div>
+<div class="voucher__stub">
+<img class="voucher__barcode" src="/assets/ds/images/placeholder.svg" alt="Barcode 0876562-R">
+<span class="voucher__code" aria-hidden="true">0876562-R</span>
+</div>
+</div>{% endraw %}
+{% endmacro %}

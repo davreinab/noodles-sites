@@ -1,0 +1,204 @@
+{
+  "title": "Prize card",
+  "description": "Prize card: premio del concurso (Contest page, bloque Contest prizes). Anatomía (wireframe UX): media 4:3 · nivel en caption (Level: «Grand prize», «Featured prize», «Weekly prize…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".prize-card",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-card",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "prize-card",
+      "name": "Prize card",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "308:2303",
+      "current": {
+        "description": "Prize card: premio del concurso (Contest page, bloque Contest prizes). Anatomía (wireframe UX): media 4:3 · nivel en caption (Level: «Grand prize», «Featured prize», «Weekly prize · x50») · nombre h3 (Name) · descripción body-m (Description). Variant=Grand: cuerpo en surface/inverse con texto on-inverse y nivel en brand-on-inverse. Variant=Default: cuerpo en surface/card. Clase CSS: .prize-card (Grand añade .prize-card--grand). ⬜ TODO GB Foods/agencia: nombres, descripciones e imágenes reales de los premios.",
+        "Propósito": "Un premio del concurso: imagen 4:3, nivel del premio (caption), nombre (h3) y descripción. Dos variantes: Default (cuerpo blanco) y Grand (`.prize-card--grand`, cuerpo en tinta con textos claros y el nivel en amarillo de marca), para el gran premio.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Rol: `article` con un `h3`. La imagen es decorativa (`alt` vacío): el nombre del premio ya está en el texto. El nivel se dice con palabras («Grand prize», «Featured prize», «Weekly prize · x50»), no con el color. Contrastes: Default, gris cálido sobre blanco (5,4:1) y tinta sobre blanco; Grand, amarillo de marca sobre tinta (12:1) y crema sobre tinta (17:1). No es interactivo: no hay foco.",
+        "Cuándo usar / qué NO hace": "Solo en Contest prizes. El wireframe marca el gran premio con Grand; el resto, Default. No es una tarjeta de producto ni de receta, no tiene precio ni enlace. Los nombres, niveles, descripciones y número de premios son ⬜ TODO: los confirma GB Foods con la agencia (premios y cantidades son condiciones del concurso)."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "308:2303",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=308-2303",
+      "page": "Cards",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-23 · 09:36 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Prize card: premio del concurso (Contest page, bloque Contest prizes). Anatomía (wireframe UX): media 4:3 · nivel en caption (Level: «Grand prize», «Featured prize», «Weekly prize · x50») · nombre h3 (Name) · descripción body-m (Description). Variant=Grand: cuerpo en surface/inverse con texto on-inverse y nivel en brand-on-inverse. Variant=Default: cuerpo en surface/card. Clase CSS: .prize-card (Grand añade .prize-card--grand). ⬜ TODO GB Foods/agencia: nombres, descripciones e imágenes reales de los premios."
+    ],
+    "props": [
+      {
+        "name": "level",
+        "type": "string",
+        "values": [],
+        "default": "Grand prize",
+        "figma": "Level#308:3"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "values": [],
+        "default": "Prize name",
+        "figma": "Name#308:6"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "values": [],
+        "default": "Prize description",
+        "figma": "Description#308:9"
+      },
+      {
+        "name": "variant",
+        "type": "enum",
+        "values": [
+          "Grand",
+          "Default"
+        ],
+        "default": "Grand",
+        "figma": "Variant"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/border/default",
+          "color/surface/inverse",
+          "color/text/brand-on-inverse",
+          "color/text/on-inverse"
+        ]
+      },
+      {
+        "group": "contest-card",
+        "items": [
+          "contest-card/media-bg"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h3",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/size/desktop/h3",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/24",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 18,
+    "textStyles": [
+      "Desktop/caption",
+      "Desktop/h3",
+      "Desktop/body-m"
+    ],
+    "classes": [
+      "prize-card",
+      "prize-card--grand",
+      "prize-card__body",
+      "prize-card__level",
+      "prize-card__media",
+      "prize-card__text",
+      "prize-card__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Un premio del concurso: imagen 4:3, nivel del premio (caption), nombre (h3) y descripción. Dos variantes: Default (cuerpo blanco) y Grand (`.prize-card--grand`, cuerpo en tinta con textos claros y el nivel en amarillo de marca), para el gran premio.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Rol: `article` con un `h3`. La imagen es decorativa (`alt` vacío): el nombre del premio ya está en el texto. El nivel se dice con palabras («Grand prize», «Featured prize», «Weekly prize · x50»), no con el color. Contrastes: Default, gris cálido sobre blanco (5,4:1) y tinta sobre blanco; Grand, amarillo de marca sobre tinta (12:1) y crema sobre tinta (17:1). No es interactivo: no hay foco.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en Contest prizes. El wireframe marca el gran premio con Grand; el resto, Default. No es una tarjeta de producto ni de receta, no tiene precio ni enlace. Los nombres, niveles, descripciones y número de premios son ⬜ TODO: los confirma GB Foods con la agencia (premios y cantidades son condiciones del concurso).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 2,
+      "total": 2,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "prize-card",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "308:2303",
+    "contract": "../../../../../../design-system/schemas/components/prize-card.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

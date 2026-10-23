@@ -1,0 +1,1052 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:contest-library",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Contest library",
+    "slug": "contest-library",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-23T09:36:22Z",
+    "description": "Contest library: biblioteca de concursos (wireframe 190:3727 desktop, 273:7157 móvil). Library head (Search y Filters desactivados; título «Contests & promotions», subtítulo «Enter our contests and win, don't miss your chance!»). h2 «Active contests» con fila de Contest card Status=Active; h2 «Closed contests» con subtítulo y rejilla de Contest card Status=Closed (4 columnas en desktop, 1 en móvil); botón secondary «Load more». Fondo surface/page. Clase CSS: .contest-library. Desktop 1440 / Móvil 375; card 296. ⬜ TODO GB Foods/agencia: concursos reales, tamaño de tanda de «Load more» y mecánica de límite de participaciones pendiente de confirmar.",
+    "figmaPage": "Pattern / Libraries",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "f965fc370d15",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-23",
+      "figmaVersion": "f965fc370d15",
+      "variantsChecked": [
+        "Breakpoint=Desktop",
+        "Breakpoint=Mobile"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "badge/neutral/bg",
+      "badge/neutral/text",
+      "border/width/thick",
+      "border/width/thin",
+      "button/secondary/border",
+      "button/secondary/text",
+      "chip/bg",
+      "chip/bg-selected",
+      "chip/border",
+      "chip/height/m",
+      "chip/height/s",
+      "chip/text",
+      "chip/text-selected",
+      "color/effect/shadow-ink",
+      "color/surface/page",
+      "color/text/default",
+      "color/text/secondary",
+      "contest-card/bg",
+      "contest-card/border",
+      "contest-card/media-bg",
+      "contest-card/meta",
+      "contest-card/title",
+      "field/bg",
+      "field/border",
+      "field/icon",
+      "field/placeholder",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h1",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/h3",
+      "font/line-height/desktop/label",
+      "font/line-height/mobile/label",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
+      "font/size/desktop/body-s",
+      "font/size/desktop/caption",
+      "font/size/desktop/h1",
+      "font/size/desktop/h2",
+      "font/size/desktop/h3",
+      "font/size/desktop/label",
+      "font/size/mobile/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/md",
+      "icon/size/sm",
+      "layout/margin",
+      "radius/md",
+      "radius/none",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/4",
+      "space/48",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "badge",
+      "badge--neutral",
+      "button",
+      "button--secondary",
+      "chip",
+      "contest-card",
+      "contest-card__body",
+      "contest-card__dates",
+      "contest-card__link",
+      "contest-card__media",
+      "contest-card__prizes",
+      "contest-card__title",
+      "contest-library",
+      "contest-library__grid",
+      "contest-library__group",
+      "contest-library__inner",
+      "contest-library__more",
+      "section",
+      "section__header",
+      "section__inner",
+      "section__lead",
+      "section__title"
+    ],
+    "example": "<section data-ds=\"contest-library\" class=\"section contest-library\" aria-label=\"Contests\">\n<div class=\"section__inner contest-library__inner\">\n<div class=\"contest-library__group\" aria-labelledby=\"cl-active\">\n<div class=\"section__header\"><h2 class=\"section__title\" id=\"cl-active\">Active contests</h2></div>\n<ul class=\"contest-library__grid\">\n<li><article class=\"contest-card\">\n<div class=\"contest-card__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"contest-card__body\">\n<p class=\"contest-card__dates\" id=\"cl-a1-dates\">Available until 20/9/2026</p>\n<h3 class=\"contest-card__title\"><a class=\"contest-card__link\" href=\"/contests/slurp-and-win\" aria-describedby=\"cl-a1-dates\">Slurp &amp; Win</a></h3>\n<ul class=\"contest-card__prizes\" aria-label=\"Prizes\"><li><span class=\"chip\">T-shirts</span></li><li><span class=\"chip\">Balls</span></li><li><span class=\"chip\">Experience</span></li></ul>\n</div>\n</article></li>\n</ul>\n</div>\n<div class=\"contest-library__group\" aria-labelledby=\"cl-closed\">\n<div class=\"section__header\">\n<h2 class=\"section__title\" id=\"cl-closed\">Closed contests</h2>\n<p class=\"section__lead\">Take another look at everything we've given away</p>\n</div>\n<ul class=\"contest-library__grid\">\n<li><article class=\"contest-card\">\n<div class=\"contest-card__media\"><span class=\"badge badge--neutral\">Closed</span><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"contest-card__body\">\n<p class=\"contest-card__dates\" id=\"cl-c1-dates\">Ended on 20/9/2026</p>\n<h3 class=\"contest-card__title\"><a class=\"contest-card__link\" href=\"/contests/old-contest\" aria-describedby=\"cl-c1-dates\">Old contest</a></h3>\n<ul class=\"contest-card__prizes\" aria-label=\"Prizes\"><li><span class=\"chip\">Balls</span></li></ul>\n</div>\n</article></li>\n</ul>\n<div class=\"contest-library__more\"><button class=\"button button--secondary\" type=\"button\">Load more</button></div>\n</div>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "312:3141",
+    "componentKey": "8762f98deaa09f739d7d75a503657b9bf17151db",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Library head",
+        "component": "State=Default, Breakpoint=Desktop, Align=Left",
+        "componentSlug": "library-head",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Search field",
+        "component": "State=Default",
+        "componentSlug": "search-field",
+        "exposedAs": null,
+        "toggledBy": "Search#307:0",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-search",
+        "component": "Icon / search",
+        "componentSlug": "icon-search",
+        "exposedAs": "Icon leading#51:0",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-clear",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": "Clear icon#51:5",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Selected",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=M, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Contest card",
+        "component": "Status=Active",
+        "componentSlug": "contest-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Contest card",
+        "component": "Status=Closed",
+        "componentSlug": "contest-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=Neutral",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Contest card",
+        "component": "Status=Closed",
+        "componentSlug": "contest-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=Neutral",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Contest card",
+        "component": "Status=Closed",
+        "componentSlug": "contest-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=Neutral",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Contest card",
+        "component": "Status=Closed",
+        "componentSlug": "contest-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=Neutral",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Contest card",
+        "component": "Status=Closed",
+        "componentSlug": "contest-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=Neutral",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Contest card",
+        "component": "Status=Closed",
+        "componentSlug": "contest-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=Neutral",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Contest card",
+        "component": "Status=Closed",
+        "componentSlug": "contest-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=Neutral",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Contest card",
+        "component": "Status=Closed",
+        "componentSlug": "contest-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Badge",
+        "component": "Type=Neutral",
+        "componentSlug": "badge",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Chip",
+        "component": "Size=S, State=Default",
+        "componentSlug": "chip",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "toggledBy": "Icon leading#35:22",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Button",
+        "component": "Hierarchy=Secondary, Size=M, State=Default",
+        "componentSlug": "button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "toggledBy": "Icon leading#33:25",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "toggledBy": "Icon trailing#33:50",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/48",
+      "paddingLeft: layout/margin",
+      "paddingTop: space/48",
+      "paddingRight: layout/margin",
+      "paddingBottom: space/48",
+      "fills: color/surface/page",
+      "color: color/surface/page",
+      "itemSpacing: space/24",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h1",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h1",
+      "color: color/text/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-l",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-l",
+      "color: color/text/secondary",
+      "itemSpacing: space/8",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: field/bg",
+      "strokes: field/border",
+      "color: field/bg",
+      "color: field/border",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: field/icon",
+      "color: field/icon",
+      "fills: field/placeholder",
+      "fontSize: font/size/desktop/body-m",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: field/placeholder",
+      "paddingTop: space/8",
+      "paddingBottom: space/8",
+      "minHeight: chip/height/m",
+      "fills: chip/bg-selected",
+      "strokes: chip/border",
+      "color: chip/bg-selected",
+      "color: chip/border",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: chip/text-selected",
+      "color: chip/text-selected",
+      "fills: chip/text-selected",
+      "fontSize: font/size/desktop/body-s",
+      "lineHeight: font/line-height/desktop/body-s",
+      "fills: chip/bg",
+      "color: chip/bg",
+      "strokes: chip/text",
+      "color: chip/text",
+      "fills: chip/text",
+      "fontSize: font/size/desktop/h2",
+      "lineHeight: font/line-height/desktop/h2",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: contest-card/bg",
+      "strokes: contest-card/border",
+      "effects: color/effect/shadow-ink",
+      "color: contest-card/bg",
+      "color: contest-card/border",
+      "topLeftRadius: radius/none",
+      "topRightRadius: radius/none",
+      "bottomLeftRadius: radius/none",
+      "bottomRightRadius: radius/none",
+      "fills: contest-card/media-bg",
+      "color: contest-card/media-bg",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "fills: contest-card/meta",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: contest-card/meta",
+      "fills: contest-card/title",
+      "fontSize: font/size/desktop/h3",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: contest-card/title",
+      "minHeight: chip/height/s",
+      "paddingLeft: space/8",
+      "paddingTop: space/4",
+      "paddingRight: space/8",
+      "paddingBottom: space/4",
+      "fills: badge/neutral/bg",
+      "color: badge/neutral/bg",
+      "fills: badge/neutral/text",
+      "fontSize: font/size/mobile/label",
+      "lineHeight: font/line-height/mobile/label",
+      "color: badge/neutral/text",
+      "strokeTopWeight: border/width/thick",
+      "strokeBottomWeight: border/width/thick",
+      "strokeLeftWeight: border/width/thick",
+      "strokeRightWeight: border/width/thick",
+      "strokes: button/secondary/border",
+      "color: button/secondary/border",
+      "strokes: button/secondary/text",
+      "color: button/secondary/text",
+      "fills: button/secondary/text",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label"
+    ],
+    "textStyles": [
+      "Desktop/h1",
+      "Desktop/body-l",
+      "Desktop/body-m",
+      "Desktop/body-s",
+      "Desktop/h2",
+      "Desktop/caption",
+      "Desktop/h3",
+      "Mobile/label",
+      "Desktop/label"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/contest-library.md",
+    "section": "Contest library"
+  },
+  "relations": {
+    "uses": [
+      "badge",
+      "button",
+      "chip",
+      "contest-card",
+      "icon-arrow-right",
+      "icon-check",
+      "icon-close",
+      "icon-search",
+      "library-head",
+      "search-field"
+    ],
+    "related": []
+  }
+}

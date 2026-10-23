@@ -1,0 +1,21 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="contest-community" class="section contest-community" aria-labelledby="cc2-title">
+<div class="section__inner">
+<div class="section__header">
+<h2 class="section__title" id="cc2-title">Real moments from past winners</h2>
+<p class="section__lead">Past festival-weekend winners share what they walked away with.</p>
+</div>
+<div data-ds="video-player" class="video-player">
+<img class="video-player__poster" src="/assets/ds/images/placeholder.svg" alt="">
+<button class="video-player__play" type="button" aria-label="Play video: Real moments from past winners (0:45)"><span class="icon icon-play" aria-hidden="true"></span></button>
+<span class="video-player__duration" aria-hidden="true">0:45</span>
+</div>
+<h3 class="contest-community__heading" id="cc2-shared">Shared by the community</h3>
+<ul class="contest-community__list" tabindex="0" aria-label="Shared by the community">
+<li><figure data-ds="community-card" class="community-card"><div class="community-card__media"><img src="/assets/ds/images/placeholder.svg" alt=""></div><figcaption class="community-card__caption">@user2 · Home Ramen Kit unboxing</figcaption></figure></li>
+<li><figure data-ds="community-card" class="community-card"><div class="community-card__media"><img src="/assets/ds/images/placeholder.svg" alt=""></div><figcaption class="community-card__caption">@user3 · Merch pack haul</figcaption></figure></li>
+<li><figure data-ds="community-card" class="community-card"><div class="community-card__media"><img src="/assets/ds/images/placeholder.svg" alt=""></div><figcaption class="community-card__caption">@user4 · Weekend winner tour</figcaption></figure></li>
+</ul>
+</div>
+</section>{% endraw %}
+{% endmacro %}

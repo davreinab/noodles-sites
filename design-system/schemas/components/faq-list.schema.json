@@ -1,0 +1,414 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:faq-list",
+  "contractVersion": "2",
+  "meta": {
+    "name": "FAQ list",
+    "slug": "faq-list",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-23T09:38:30Z",
+    "description": "FAQ list: lista de preguntas frecuentes con Accordion item (wireframe 428:10606 desktop, 428:12306 móvil; resultados 428:10962 / 501:14324; sin resultados 495:14043 / 428:12490). Columna de lectura de 808 centrada en desktop (1 columna en móvil). State=Default: 13 preguntas, solo una abierta a la vez (Accordion Expanded=True en la segunda). State=Results: caption «3 results for \"Yatekomo\"» y 3 preguntas. State=Empty: Empty state (219:1663) con «We couldn't find any results for your search» y «Try with a different word or topic», después «Or maybe you're interested in these other questions:» y 3 preguntas sugeridas. Clase CSS: .faq-list. Breakpoint Desktop 1440 / Móvil 375. ⬜ TODO GB Foods: respuestas definitivas (solo hay una respuesta en el wireframe) y preguntas definitivas.",
+    "figmaPage": "Pattern / Global",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 6,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "7fe3139f3412",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-23",
+      "figmaVersion": "7fe3139f3412",
+      "variantsChecked": [
+        "state=Default, breakpoint=Desktop",
+        "state=Results, breakpoint=Desktop",
+        "state=Empty, breakpoint=Desktop",
+        "state=Default, breakpoint=Mobile (móvil por medida del marco)",
+        "state=Results, breakpoint=Mobile (móvil por medida del marco)",
+        "state=Empty, breakpoint=Mobile (móvil por medida del marco)"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "results",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Results"
+      },
+      {
+        "name": "empty",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Empty"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "accordion/answer",
+      "accordion/bg",
+      "accordion/border",
+      "accordion/icon",
+      "accordion/question",
+      "border/width/thin",
+      "font/family/body",
+      "font/line-height/desktop/body-l",
+      "font/line-height/desktop/body-m",
+      "font/size/desktop/body-l",
+      "font/size/desktop/body-m",
+      "font/style/body",
+      "icon/size/md",
+      "layout/margin",
+      "radius/md",
+      "space/16",
+      "space/24",
+      "space/32",
+      "space/64"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "accordion-item",
+      "accordion-item__button",
+      "accordion-item__heading",
+      "accordion-item__panel",
+      "faq",
+      "faq-list",
+      "faq-list__items",
+      "faq-list__status",
+      "icon",
+      "icon-plus",
+      "icon-search",
+      "library-head",
+      "library-head--center",
+      "library-head--no-filters",
+      "library-head__inner",
+      "library-head__intro",
+      "library-head__lead",
+      "library-head__search",
+      "page-title",
+      "search-field",
+      "search-field__input",
+      "section",
+      "visually-hidden"
+    ],
+    "example": "<section data-ds=\"library-head\" class=\"section library-head library-head--center library-head--no-filters\" aria-labelledby=\"faq-title\">\n<div class=\"library-head__inner\">\n<div class=\"library-head__intro\">\n<h1 class=\"page-title\" id=\"faq-title\">Frequently Asked Questions</h1>\n<p class=\"library-head__lead\">These are the questions we're asked most often, so you won't be left wondering</p>\n</div>\n<form class=\"search-field library-head__search\" role=\"search\" action=\"/faq\">\n<span class=\"icon icon-search\" aria-hidden=\"true\"></span>\n<label class=\"visually-hidden\" for=\"faq-q\">Search for questions about our products</label>\n<input class=\"search-field__input\" id=\"faq-q\" name=\"q\" type=\"search\" placeholder=\"Search for questions about our products\">\n</form>\n</div>\n</section>\n<section class=\"section faq\">\n<div data-ds=\"faq-list\" class=\"faq-list\">\n<p class=\"faq-list__status visually-hidden\" role=\"status\"></p>\n<ul class=\"faq-list__items\">\n<li><div class=\"accordion-item\">\n<h3 class=\"accordion-item__heading\"><button class=\"accordion-item__button\" type=\"button\" id=\"faq-q1-btn\" aria-expanded=\"true\" aria-controls=\"faq-q1\">How is it prepared?<span class=\"icon icon-plus\" aria-hidden=\"true\"></span></button></h3>\n<div class=\"accordion-item__panel\" id=\"faq-q1\" role=\"region\" aria-labelledby=\"faq-q1-btn\">Full preparation instructions are printed on the pack. In general, the noodles only need a few minutes in hot water.</div>\n</div></li>\n<li><div class=\"accordion-item\">\n<h3 class=\"accordion-item__heading\"><button class=\"accordion-item__button\" type=\"button\" id=\"faq-q2-btn\" aria-expanded=\"false\" aria-controls=\"faq-q2\">Has the taste of the product changed?<span class=\"icon icon-plus\" aria-hidden=\"true\"></span></button></h3>\n<div class=\"accordion-item__panel\" id=\"faq-q2\" role=\"region\" aria-labelledby=\"faq-q2-btn\" hidden>We review our recipes from time to time. If a change affects the taste, we will say so on the pack.</div>\n</div></li>\n<li><div class=\"accordion-item\">\n<h3 class=\"accordion-item__heading\"><button class=\"accordion-item__button\" type=\"button\" id=\"faq-q3-btn\" aria-expanded=\"false\" aria-controls=\"faq-q3\">Where can I find the noodles?<span class=\"icon icon-plus\" aria-hidden=\"true\"></span></button></h3>\n<div class=\"accordion-item__panel\" id=\"faq-q3\" role=\"region\" aria-labelledby=\"faq-q3-btn\" hidden>Our products are sold in supermarkets and selected stores. Use the Where to buy section to find a shop near you.</div>\n</div></li>\n</ul>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "317:3438",
+    "componentKey": "e65d958a6c83d597ceb577ca285f8e8baabd0d54",
+    "propertyNames": {
+      "results": "State=Results",
+      "empty": "State=Empty",
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "State": [
+        "Default",
+        "Results",
+        "Empty"
+      ],
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Accordion item",
+        "component": "Expanded=False, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Accordion item",
+        "component": "Expanded=True, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-expanded",
+        "component": "Icon / minus",
+        "componentSlug": "icon-minus",
+        "exposedAs": "Icon expanded#69:21",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Accordion item",
+        "component": "Expanded=False, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Accordion item",
+        "component": "Expanded=False, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Accordion item",
+        "component": "Expanded=False, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Accordion item",
+        "component": "Expanded=False, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Accordion item",
+        "component": "Expanded=False, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Accordion item",
+        "component": "Expanded=False, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Accordion item",
+        "component": "Expanded=False, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Accordion item",
+        "component": "Expanded=False, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Accordion item",
+        "component": "Expanded=False, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Accordion item",
+        "component": "Expanded=False, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Accordion item",
+        "component": "Expanded=False, State=Default",
+        "componentSlug": "accordion-item",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "Icon / plus",
+        "componentSlug": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
+      "paddingLeft: layout/margin",
+      "paddingTop: space/32",
+      "paddingRight: layout/margin",
+      "paddingBottom: space/64",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: accordion/bg",
+      "strokes: accordion/border",
+      "color: accordion/bg",
+      "color: accordion/border",
+      "itemSpacing: space/16",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "fills: accordion/question",
+      "fontSize: font/size/desktop/body-l",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-l",
+      "color: accordion/question",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: accordion/icon",
+      "color: accordion/icon",
+      "fills: accordion/answer",
+      "fontSize: font/size/desktop/body-m",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: accordion/answer"
+    ],
+    "textStyles": [
+      "Desktop/body-l",
+      "Desktop/body-m"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/faq-list.md",
+    "section": "FAQ list"
+  },
+  "relations": {
+    "uses": [
+      "accordion-item",
+      "icon-minus",
+      "icon-plus"
+    ],
+    "related": []
+  }
+}

@@ -62,7 +62,7 @@
 <div class="sc-root">
   <header class="sc-header">
     <h1 class="sc-header__title">GB Noodles · Microsites · Design System</h1>
-    <span class="sc-header__meta" data-sc-last-sync>última sync 2026-10-22T15:21:21Z</span>
+    <span class="sc-header__meta" data-sc-last-sync>última sync 2026-10-23T09:38:57Z</span>
     <span class="sc-header__spacer"></span>
     <button class="sc-btn" type="button" data-sc-theme-toggle aria-pressed="false">Tema oscuro</button>
   </header>
@@ -125,6 +125,8 @@
 <div class="sc-card" id="sc-icon-whatsapp"><div class="sc-card__head"><h3>Icon / whatsapp</h3><span class="sc-tag">1 variantes · 208:66</span></div><div class="sc-demo"><span data-ds="icon-whatsapp" class="icon icon-whatsapp" aria-hidden="true"></span></div><pre class="sc-code">&lt;span data-ds=&quot;icon-whatsapp&quot; class=&quot;icon icon-whatsapp&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;</pre></div>
 <div class="sc-card" id="sc-icon-facebook"><div class="sc-card__head"><h3>Icon / facebook</h3><span class="sc-tag">1 variantes · 208:69</span></div><div class="sc-demo"><span data-ds="icon-facebook" class="icon icon-facebook" aria-hidden="true"></span></div><pre class="sc-code">&lt;span data-ds=&quot;icon-facebook&quot; class=&quot;icon icon-facebook&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;</pre></div>
 <div class="sc-card" id="sc-icon-telegram"><div class="sc-card__head"><h3>Icon / telegram</h3><span class="sc-tag">1 variantes · 208:75</span></div><div class="sc-demo"><span data-ds="icon-telegram" class="icon icon-telegram" aria-hidden="true"></span></div><pre class="sc-code">&lt;span data-ds=&quot;icon-telegram&quot; class=&quot;icon icon-telegram&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;</pre></div>
+<div class="sc-card" id="sc-icon-calendar-clock"><div class="sc-card__head"><h3>Icon / calendar-clock</h3><span class="sc-tag">1 variantes · 307:56</span></div><div class="sc-demo"><span data-ds="icon-calendar-clock" class="icon icon-calendar-clock" aria-hidden="true"></span></div><pre class="sc-code">&lt;span data-ds=&quot;icon-calendar-clock&quot; class=&quot;icon icon-calendar-clock&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;</pre></div>
+<div class="sc-card" id="sc-icon-trophy"><div class="sc-card__head"><h3>Icon / trophy</h3><span class="sc-tag">1 variantes · 307:64</span></div><div class="sc-demo"><span data-ds="icon-trophy" class="icon icon-trophy" aria-hidden="true"></span></div><pre class="sc-code">&lt;span data-ds=&quot;icon-trophy&quot; class=&quot;icon icon-trophy&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;</pre></div>
 <div class="sc-card" id="sc-logo-gb-foods"><div class="sc-card__head"><h3>Logo / GB Foods</h3><span class="sc-tag">1 variantes · 21:180</span></div><div class="sc-demo"><img data-ds="logo-gb-foods" class="logo" src="../assets/logos/logo-gb-foods.svg" alt="GB Foods"></div><pre class="sc-code">&lt;img data-ds=&quot;logo-gb-foods&quot; class=&quot;logo&quot; src=&quot;../assets/logos/logo-gb-foods.svg&quot; alt=&quot;GB Foods&quot;&gt;</pre></div>
 <div class="sc-card" id="sc-logo-aiki"><div class="sc-card__head"><h3>Logo / Aiki</h3><span class="sc-tag">1 variantes · 21:179</span></div><div class="sc-demo"><img data-ds="logo-aiki" class="logo" src="../assets/logos/logo-aiki.svg" alt="Aïki"></div><pre class="sc-code">&lt;img data-ds=&quot;logo-aiki&quot; class=&quot;logo&quot; src=&quot;../assets/logos/logo-aiki.svg&quot; alt=&quot;Aïki&quot;&gt;</pre></div>
 <div class="sc-card" id="sc-logo-yatekomo"><div class="sc-card__head"><h3>Logo / Yatekomo</h3><span class="sc-tag">2 variantes · 21:169</span></div><div class="sc-demo"><img data-ds="logo-yatekomo" class="logo" src="../assets/logos/logo-yatekomo-positive.svg" alt="Yatekomo">
@@ -346,6 +348,75 @@
 &lt;input class=&quot;search-field__input&quot; id=&quot;q-con-texto&quot; name=&quot;q&quot; type=&quot;search&quot; value=&quot;fideos yakisoba&quot;&gt;
 &lt;button class=&quot;search-field__clear&quot; type=&quot;button&quot; aria-label=&quot;Borrar búsqueda&quot;&gt;&lt;span class=&quot;icon icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;/form&gt;</pre></div>
+<div class="sc-card" id="sc-file-upload"><div class="sc-card__head"><h3>File upload</h3><span class="sc-tag">3 variantes · 308:2420 · icono</span></div><div class="sc-demo"><div data-ds="file-upload" class="field file-upload">
+<label class="field__label" id="fu-front-label" for="fu-front">Upload receipt – front<span class="field__required" aria-hidden="true">*</span></label>
+<div class="file-upload__control">
+<label class="button button--secondary file-upload__trigger">
+<input class="visually-hidden file-upload__input" id="fu-front" name="receipt-front" type="file" accept="image/jpeg,image/png,application/pdf" required aria-labelledby="fu-front-label" aria-describedby="fu-front-help fu-front-status">
+<span>Upload file</span>
+</label>
+<p class="file-upload__status" id="fu-front-status" aria-live="polite">No file selected — JPG, PNG or PDF, max 5MB</p>
+</div>
+<p class="field__helper" id="fu-front-help">Make sure the purchased products are clearly visible on the receipt.</p>
+</div>
+<div data-ds="file-upload" class="field file-upload">
+<label class="field__label" id="fu-back-label" for="fu-back">Upload receipt – back<span class="field__required" aria-hidden="true">*</span></label>
+<div class="file-upload__control">
+<label class="button button--secondary file-upload__trigger">
+<input class="visually-hidden file-upload__input" id="fu-back" name="receipt-back" type="file" accept="image/jpeg,image/png,application/pdf" aria-labelledby="fu-back-label" aria-describedby="fu-back-help fu-back-status">
+<span>Upload file</span>
+</label>
+<p class="file-upload__status file-upload__status--selected" id="fu-back-status" aria-live="polite">receipt-back.jpg</p>
+<button class="icon-button icon-button--secondary file-upload__remove" type="button" aria-label="Remove receipt-back.jpg"><span class="icon icon-close" aria-hidden="true"></span></button>
+</div>
+<p class="field__helper" id="fu-back-help">Optional: the back of the receipt.</p>
+</div>
+<div data-ds="file-upload" class="field file-upload">
+<label class="field__label" id="fu-err-label" for="fu-err">Upload receipt – front<span class="field__required" aria-hidden="true">*</span></label>
+<div class="file-upload__control">
+<label class="button button--secondary file-upload__trigger">
+<input class="visually-hidden file-upload__input" id="fu-err" name="receipt-err" type="file" aria-invalid="true" required aria-labelledby="fu-err-label" aria-describedby="fu-err-help fu-err-status fu-err-error">
+<span>Upload file</span>
+</label>
+<p class="file-upload__status" id="fu-err-status" aria-live="polite">No file selected — JPG, PNG or PDF, max 5MB</p>
+</div>
+<p class="field__helper" id="fu-err-help">Make sure the purchased products are clearly visible on the receipt.</p>
+<p class="field__error" id="fu-err-error">The file is bigger than 5MB. Choose another one.</p>
+</div></div><pre class="sc-code">&lt;div data-ds=&quot;file-upload&quot; class=&quot;field file-upload&quot;&gt;
+&lt;label class=&quot;field__label&quot; id=&quot;fu-front-label&quot; for=&quot;fu-front&quot;&gt;Upload receipt – front&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+&lt;div class=&quot;file-upload__control&quot;&gt;
+&lt;label class=&quot;button button--secondary file-upload__trigger&quot;&gt;
+&lt;input class=&quot;visually-hidden file-upload__input&quot; id=&quot;fu-front&quot; name=&quot;receipt-front&quot; type=&quot;file&quot; accept=&quot;image/jpeg,image/png,application/pdf&quot; required aria-labelledby=&quot;fu-front-label&quot; aria-describedby=&quot;fu-front-help fu-front-status&quot;&gt;
+&lt;span&gt;Upload file&lt;/span&gt;
+&lt;/label&gt;
+&lt;p class=&quot;file-upload__status&quot; id=&quot;fu-front-status&quot; aria-live=&quot;polite&quot;&gt;No file selected — JPG, PNG or PDF, max 5MB&lt;/p&gt;
+&lt;/div&gt;
+&lt;p class=&quot;field__helper&quot; id=&quot;fu-front-help&quot;&gt;Make sure the purchased products are clearly visible on the receipt.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div data-ds=&quot;file-upload&quot; class=&quot;field file-upload&quot;&gt;
+&lt;label class=&quot;field__label&quot; id=&quot;fu-back-label&quot; for=&quot;fu-back&quot;&gt;Upload receipt – back&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+&lt;div class=&quot;file-upload__control&quot;&gt;
+&lt;label class=&quot;button button--secondary file-upload__trigger&quot;&gt;
+&lt;input class=&quot;visually-hidden file-upload__input&quot; id=&quot;fu-back&quot; name=&quot;receipt-back&quot; type=&quot;file&quot; accept=&quot;image/jpeg,image/png,application/pdf&quot; aria-labelledby=&quot;fu-back-label&quot; aria-describedby=&quot;fu-back-help fu-back-status&quot;&gt;
+&lt;span&gt;Upload file&lt;/span&gt;
+&lt;/label&gt;
+&lt;p class=&quot;file-upload__status file-upload__status--selected&quot; id=&quot;fu-back-status&quot; aria-live=&quot;polite&quot;&gt;receipt-back.jpg&lt;/p&gt;
+&lt;button class=&quot;icon-button icon-button--secondary file-upload__remove&quot; type=&quot;button&quot; aria-label=&quot;Remove receipt-back.jpg&quot;&gt;&lt;span class=&quot;icon icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;p class=&quot;field__helper&quot; id=&quot;fu-back-help&quot;&gt;Optional: the back of the receipt.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div data-ds=&quot;file-upload&quot; class=&quot;field file-upload&quot;&gt;
+&lt;label class=&quot;field__label&quot; id=&quot;fu-err-label&quot; for=&quot;fu-err&quot;&gt;Upload receipt – front&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+&lt;div class=&quot;file-upload__control&quot;&gt;
+&lt;label class=&quot;button button--secondary file-upload__trigger&quot;&gt;
+&lt;input class=&quot;visually-hidden file-upload__input&quot; id=&quot;fu-err&quot; name=&quot;receipt-err&quot; type=&quot;file&quot; aria-invalid=&quot;true&quot; required aria-labelledby=&quot;fu-err-label&quot; aria-describedby=&quot;fu-err-help fu-err-status fu-err-error&quot;&gt;
+&lt;span&gt;Upload file&lt;/span&gt;
+&lt;/label&gt;
+&lt;p class=&quot;file-upload__status&quot; id=&quot;fu-err-status&quot; aria-live=&quot;polite&quot;&gt;No file selected — JPG, PNG or PDF, max 5MB&lt;/p&gt;
+&lt;/div&gt;
+&lt;p class=&quot;field__helper&quot; id=&quot;fu-err-help&quot;&gt;Make sure the purchased products are clearly visible on the receipt.&lt;/p&gt;
+&lt;p class=&quot;field__error&quot; id=&quot;fu-err-error&quot;&gt;The file is bigger than 5MB. Choose another one.&lt;/p&gt;
+&lt;/div&gt;</pre></div>
 <div class="sc-card" id="sc-nav-item"><div class="sc-card__head"><h3>Nav item</h3><span class="sc-tag">8 variantes · 53:102</span></div><div class="sc-demo"><nav data-ds="nav-item" aria-label="Principal">
 <a class="nav-item" href="/productos" aria-current="page">Productos</a>
 <a class="nav-item" href="/recetas">Recetas</a>
@@ -495,30 +566,46 @@
 &lt;/div&gt;
 &lt;/article&gt;</pre></div>
 <div class="sc-card" id="sc-contest-card"><div class="sc-card__head"><h3>Contest card</h3><span class="sc-tag">2 variantes · 68:95 · icono</span></div><div class="sc-demo"><article data-ds="contest-card" class="contest-card">
-<div class="contest-card__media">
-<span class="badge badge--natural">En curso</span>
-<span class="contest-card__caption">Imagen de la campaña</span>
-</div>
+<div class="contest-card__media"><img src="../assets/images/placeholder.svg" alt=""></div>
 <div class="contest-card__body">
-<h3 class="contest-card__title">Gana un viaje a Tokio</h3>
-<p class="contest-card__dates">Del 1 al 30 de noviembre de 2026</p>
-<div class="contest-card__actions">
-<a class="button" href="https://concursos.example.org/tokio" target="_blank" rel="noopener">Participar <span class="icon icon-external-link" aria-hidden="true"></span><span class="visually-hidden"> (abre en una pestaña nueva)</span></a>
-<a class="link" href="/concursos/tokio/bases">Bases legales</a>
+<p class="contest-card__dates" id="cc-slurp-dates">Available until 20/9/2026</p>
+<h3 class="contest-card__title"><a class="contest-card__link" href="/contests/slurp-and-win" aria-describedby="cc-slurp-dates">Slurp &amp; Win</a></h3>
+<ul class="contest-card__prizes" aria-label="Prizes">
+<li><span class="chip">T-shirts</span></li>
+<li><span class="chip">Balls</span></li>
+<li><span class="chip">Experience</span></li>
+</ul>
 </div>
+</article>
+<article data-ds="contest-card" class="contest-card">
+<div class="contest-card__media"><span class="badge badge--neutral">Closed</span><img src="../assets/images/placeholder.svg" alt=""></div>
+<div class="contest-card__body">
+<p class="contest-card__dates" id="cc-old-dates">Ended on 20/9/2026</p>
+<h3 class="contest-card__title"><a class="contest-card__link" href="/contests/old-contest" aria-describedby="cc-old-dates">Old contest</a></h3>
+<ul class="contest-card__prizes" aria-label="Prizes">
+<li><span class="chip">Balls</span></li>
+</ul>
 </div>
 </article></div><pre class="sc-code">&lt;article data-ds=&quot;contest-card&quot; class=&quot;contest-card&quot;&gt;
-&lt;div class=&quot;contest-card__media&quot;&gt;
-&lt;span class=&quot;badge badge--natural&quot;&gt;En curso&lt;/span&gt;
-&lt;span class=&quot;contest-card__caption&quot;&gt;Imagen de la campaña&lt;/span&gt;
-&lt;/div&gt;
+&lt;div class=&quot;contest-card__media&quot;&gt;&lt;img src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;contest-card__body&quot;&gt;
-&lt;h3 class=&quot;contest-card__title&quot;&gt;Gana un viaje a Tokio&lt;/h3&gt;
-&lt;p class=&quot;contest-card__dates&quot;&gt;Del 1 al 30 de noviembre de 2026&lt;/p&gt;
-&lt;div class=&quot;contest-card__actions&quot;&gt;
-&lt;a class=&quot;button&quot; href=&quot;https://concursos.example.org/tokio&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Participar &lt;span class=&quot;icon icon-external-link&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span class=&quot;visually-hidden&quot;&gt; (abre en una pestaña nueva)&lt;/span&gt;&lt;/a&gt;
-&lt;a class=&quot;link&quot; href=&quot;/concursos/tokio/bases&quot;&gt;Bases legales&lt;/a&gt;
+&lt;p class=&quot;contest-card__dates&quot; id=&quot;cc-slurp-dates&quot;&gt;Available until 20/9/2026&lt;/p&gt;
+&lt;h3 class=&quot;contest-card__title&quot;&gt;&lt;a class=&quot;contest-card__link&quot; href=&quot;/contests/slurp-and-win&quot; aria-describedby=&quot;cc-slurp-dates&quot;&gt;Slurp &amp;amp; Win&lt;/a&gt;&lt;/h3&gt;
+&lt;ul class=&quot;contest-card__prizes&quot; aria-label=&quot;Prizes&quot;&gt;
+&lt;li&gt;&lt;span class=&quot;chip&quot;&gt;T-shirts&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;chip&quot;&gt;Balls&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;chip&quot;&gt;Experience&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
+&lt;/article&gt;
+&lt;article data-ds=&quot;contest-card&quot; class=&quot;contest-card&quot;&gt;
+&lt;div class=&quot;contest-card__media&quot;&gt;&lt;span class=&quot;badge badge--neutral&quot;&gt;Closed&lt;/span&gt;&lt;img src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;contest-card__body&quot;&gt;
+&lt;p class=&quot;contest-card__dates&quot; id=&quot;cc-old-dates&quot;&gt;Ended on 20/9/2026&lt;/p&gt;
+&lt;h3 class=&quot;contest-card__title&quot;&gt;&lt;a class=&quot;contest-card__link&quot; href=&quot;/contests/old-contest&quot; aria-describedby=&quot;cc-old-dates&quot;&gt;Old contest&lt;/a&gt;&lt;/h3&gt;
+&lt;ul class=&quot;contest-card__prizes&quot; aria-label=&quot;Prizes&quot;&gt;
+&lt;li&gt;&lt;span class=&quot;chip&quot;&gt;Balls&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/article&gt;</pre></div>
 <div class="sc-card" id="sc-category-card"><div class="sc-card__head"><h3>Category card</h3><span class="sc-tag">3 variantes · 147:1353</span></div><div class="sc-demo"><a data-ds="category-card" class="category-card" href="/productos?tipo=cups">
@@ -561,6 +648,63 @@
 &lt;span class=&quot;flavour-tile__media&quot;&gt;&lt;img src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/span&gt;
 &lt;span class=&quot;flavour-tile__name&quot;&gt;Chicken rice noodles&lt;/span&gt;
 &lt;/a&gt;</pre></div>
+<div class="sc-card" id="sc-prize-card"><div class="sc-card__head"><h3>Prize card</h3><span class="sc-tag">2 variantes · 308:2303</span></div><div class="sc-demo"><article data-ds="prize-card" class="prize-card">
+<div class="prize-card__media"><img src="../assets/images/placeholder.svg" alt=""></div>
+<div class="prize-card__body">
+<p class="prize-card__level">Featured prize</p>
+<h3 class="prize-card__title">Home ramen kit</h3>
+<p class="prize-card__text">Professional-grade bowls, a chopstick set and a full year of your favourite flavours.</p>
+</div>
+</article>
+<article data-ds="prize-card" class="prize-card prize-card--grand">
+<div class="prize-card__media"><img src="../assets/images/placeholder.svg" alt=""></div>
+<div class="prize-card__body">
+<p class="prize-card__level">Grand prize</p>
+<h3 class="prize-card__title">Festival weekend for two</h3>
+<p class="prize-card__text">Two festival weekend passes, travel budget and backstage access to this year's festival partner.</p>
+</div>
+</article></div><pre class="sc-code">&lt;article data-ds=&quot;prize-card&quot; class=&quot;prize-card&quot;&gt;
+&lt;div class=&quot;prize-card__media&quot;&gt;&lt;img src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;prize-card__body&quot;&gt;
+&lt;p class=&quot;prize-card__level&quot;&gt;Featured prize&lt;/p&gt;
+&lt;h3 class=&quot;prize-card__title&quot;&gt;Home ramen kit&lt;/h3&gt;
+&lt;p class=&quot;prize-card__text&quot;&gt;Professional-grade bowls, a chopstick set and a full year of your favourite flavours.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+&lt;article data-ds=&quot;prize-card&quot; class=&quot;prize-card prize-card--grand&quot;&gt;
+&lt;div class=&quot;prize-card__media&quot;&gt;&lt;img src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;prize-card__body&quot;&gt;
+&lt;p class=&quot;prize-card__level&quot;&gt;Grand prize&lt;/p&gt;
+&lt;h3 class=&quot;prize-card__title&quot;&gt;Festival weekend for two&lt;/h3&gt;
+&lt;p class=&quot;prize-card__text&quot;&gt;Two festival weekend passes, travel budget and backstage access to this year&#x27;s festival partner.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/article&gt;</pre></div>
+<div class="sc-card" id="sc-community-card"><div class="sc-card__head"><h3>Community card</h3><span class="sc-tag">1 variantes · 308:2304</span></div><div class="sc-demo"><figure data-ds="community-card" class="community-card">
+<div class="community-card__media"><img src="../assets/images/placeholder.svg" alt=""></div>
+<figcaption class="community-card__caption">@user2 · Home Ramen Kit unboxing</figcaption>
+</figure></div><pre class="sc-code">&lt;figure data-ds=&quot;community-card&quot; class=&quot;community-card&quot;&gt;
+&lt;div class=&quot;community-card__media&quot;&gt;&lt;img src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+&lt;figcaption class=&quot;community-card__caption&quot;&gt;@user2 · Home Ramen Kit unboxing&lt;/figcaption&gt;
+&lt;/figure&gt;</pre></div>
+<div class="sc-card" id="sc-voucher"><div class="sc-card__head"><h3>Voucher</h3><span class="sc-tag">1 variantes · 308:2421</span></div><div class="sc-demo"><div data-ds="voucher" class="voucher">
+<div class="voucher__main">
+<p class="voucher__value">15% OFF</p>
+<p class="voucher__label">Discount voucher</p>
+</div>
+<div class="voucher__stub">
+<img class="voucher__barcode" src="../assets/images/placeholder.svg" alt="Barcode 0876562-R">
+<span class="voucher__code" aria-hidden="true">0876562-R</span>
+</div>
+</div></div><pre class="sc-code">&lt;div data-ds=&quot;voucher&quot; class=&quot;voucher&quot;&gt;
+&lt;div class=&quot;voucher__main&quot;&gt;
+&lt;p class=&quot;voucher__value&quot;&gt;15% OFF&lt;/p&gt;
+&lt;p class=&quot;voucher__label&quot;&gt;Discount voucher&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;voucher__stub&quot;&gt;
+&lt;img class=&quot;voucher__barcode&quot; src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;Barcode 0876562-R&quot;&gt;
+&lt;span class=&quot;voucher__code&quot; aria-hidden=&quot;true&quot;&gt;0876562-R&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</pre></div>
 <div class="sc-card" id="sc-accordion-item"><div class="sc-card__head"><h3>Accordion item</h3><span class="sc-tag">6 variantes · 69:93 · icono</span></div><div class="sc-demo"><div data-ds="accordion-item" class="accordion-item">
 <h3 class="accordion-item__heading">
 <button class="accordion-item__button" type="button" aria-expanded="true" aria-controls="faq-1">¿Por qué decimos que es 100 % natural?<span class="icon icon-plus" aria-hidden="true"></span></button>
@@ -951,7 +1095,28 @@
 <div class="sc-card" id="sc-ingredient-swap"><div class="sc-card__head"><h3>Ingredient swap</h3><span class="sc-tag">1 variantes · 276:283 · icono</span></div><div class="sc-demo"><li data-ds="ingredient-swap" class="ingredient-swap"><span class="removed-tag"><span class="icon icon-close" aria-hidden="true"></span><span class="visually-hidden">Removed:</span><s class="removed-tag__text">Palm oil</s></span><span class="icon icon-chevron-down ingredient-swap__arrow" aria-hidden="true"></span><div class="ingredient-swap__card"><div class="ingredient-swap__text"><p class="ingredient-swap__name">Sunflower oil</p><p class="ingredient-swap__reason">Cold-pressed, no tropical deforestation footprint.</p></div><img class="ingredient-swap__thumb" src="../assets/images/placeholder.svg" alt=""></div></li></div><pre class="sc-code">&lt;li data-ds=&quot;ingredient-swap&quot; class=&quot;ingredient-swap&quot;&gt;&lt;span class=&quot;removed-tag&quot;&gt;&lt;span class=&quot;icon icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span class=&quot;visually-hidden&quot;&gt;Removed:&lt;/span&gt;&lt;s class=&quot;removed-tag__text&quot;&gt;Palm oil&lt;/s&gt;&lt;/span&gt;&lt;span class=&quot;icon icon-chevron-down ingredient-swap__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;div class=&quot;ingredient-swap__card&quot;&gt;&lt;div class=&quot;ingredient-swap__text&quot;&gt;&lt;p class=&quot;ingredient-swap__name&quot;&gt;Sunflower oil&lt;/p&gt;&lt;p class=&quot;ingredient-swap__reason&quot;&gt;Cold-pressed, no tropical deforestation footprint.&lt;/p&gt;&lt;/div&gt;&lt;img class=&quot;ingredient-swap__thumb&quot; src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;&lt;/li&gt;</pre></div>
 <div class="sc-card" id="sc-origins-map"><div class="sc-card__head"><h3>Origins map</h3><span class="sc-tag">2 variantes · 277:319</span></div><div class="sc-demo"><div data-ds="origins-map" class="origins-map"><p class="origins-map__seal">100% natural</p><ul class="origins-map__list" aria-label="Ingredient origins"><li class="origins-map__item"><span class="origins-map__name">Wheat</span><span class="visually-hidden"> from </span><span class="origins-map__country">Spain</span></li><li class="origins-map__item"><span class="origins-map__name">Soy sauce</span><span class="visually-hidden"> from </span><span class="origins-map__country">France</span></li><li class="origins-map__item"><span class="origins-map__name">Sesame oil</span><span class="visually-hidden"> from </span><span class="origins-map__country">China</span></li><li class="origins-map__item"><span class="origins-map__name">Vegetables</span><span class="visually-hidden"> from </span><span class="origins-map__country">Spain</span></li><li class="origins-map__item"><span class="origins-map__name">Sunflower oil</span><span class="visually-hidden"> from </span><span class="origins-map__country">Netherlands</span></li><li class="origins-map__item"><span class="origins-map__name">Spices</span><span class="visually-hidden"> from </span><span class="origins-map__country">Poland</span></li></ul></div></div><pre class="sc-code">&lt;div data-ds=&quot;origins-map&quot; class=&quot;origins-map&quot;&gt;&lt;p class=&quot;origins-map__seal&quot;&gt;100% natural&lt;/p&gt;&lt;ul class=&quot;origins-map__list&quot; aria-label=&quot;Ingredient origins&quot;&gt;&lt;li class=&quot;origins-map__item&quot;&gt;&lt;span class=&quot;origins-map__name&quot;&gt;Wheat&lt;/span&gt;&lt;span class=&quot;visually-hidden&quot;&gt; from &lt;/span&gt;&lt;span class=&quot;origins-map__country&quot;&gt;Spain&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;origins-map__item&quot;&gt;&lt;span class=&quot;origins-map__name&quot;&gt;Soy sauce&lt;/span&gt;&lt;span class=&quot;visually-hidden&quot;&gt; from &lt;/span&gt;&lt;span class=&quot;origins-map__country&quot;&gt;France&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;origins-map__item&quot;&gt;&lt;span class=&quot;origins-map__name&quot;&gt;Sesame oil&lt;/span&gt;&lt;span class=&quot;visually-hidden&quot;&gt; from &lt;/span&gt;&lt;span class=&quot;origins-map__country&quot;&gt;China&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;origins-map__item&quot;&gt;&lt;span class=&quot;origins-map__name&quot;&gt;Vegetables&lt;/span&gt;&lt;span class=&quot;visually-hidden&quot;&gt; from &lt;/span&gt;&lt;span class=&quot;origins-map__country&quot;&gt;Spain&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;origins-map__item&quot;&gt;&lt;span class=&quot;origins-map__name&quot;&gt;Sunflower oil&lt;/span&gt;&lt;span class=&quot;visually-hidden&quot;&gt; from &lt;/span&gt;&lt;span class=&quot;origins-map__country&quot;&gt;Netherlands&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;origins-map__item&quot;&gt;&lt;span class=&quot;origins-map__name&quot;&gt;Spices&lt;/span&gt;&lt;span class=&quot;visually-hidden&quot;&gt; from &lt;/span&gt;&lt;span class=&quot;origins-map__country&quot;&gt;Poland&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</pre></div>
 <div class="sc-card" id="sc-stat-figure"><div class="sc-card__head"><h3>Stat figure</h3><span class="sc-tag">1 variantes · 277:325</span></div><div class="sc-demo"><li data-ds="stat-figure" class="stat-figure"><mark class="stat-figure__value">-45%</mark><span class="stat-figure__label">Less processed ingredients</span></li></div><pre class="sc-code">&lt;li data-ds=&quot;stat-figure&quot; class=&quot;stat-figure&quot;&gt;&lt;mark class=&quot;stat-figure__value&quot;&gt;-45%&lt;/mark&gt;&lt;span class=&quot;stat-figure__label&quot;&gt;Less processed ingredients&lt;/span&gt;&lt;/li&gt;</pre></div>
-<div class="sc-card" id="sc-pillar-item"><div class="sc-card__head"><h3>Pillar item</h3><span class="sc-tag">1 variantes · 277:332</span></div><div class="sc-demo"><li data-ds="pillar-item" class="pillar-item"><span class="pillar-item__number" aria-hidden="true">1</span><p class="pillar-item__title">Better noodles start with better production</p><p class="pillar-item__text">CO2-neutral production commitments and factory-level sourcing standards.</p></li></div><pre class="sc-code">&lt;li data-ds=&quot;pillar-item&quot; class=&quot;pillar-item&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;1&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Better noodles start with better production&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;CO2-neutral production commitments and factory-level sourcing standards.&lt;/p&gt;&lt;/li&gt;</pre></div>
+<div class="sc-card" id="sc-pillar-item"><div class="sc-card__head"><h3>Pillar item</h3><span class="sc-tag">2 variantes · 308:367</span></div><div class="sc-demo"><ol data-ds="pillar-item">
+<li class="pillar-item"><span class="pillar-item__number" aria-hidden="true">1</span><p class="pillar-item__title">Better noodles start with better production</p><p class="pillar-item__text">CO2-neutral production commitments and factory-level sourcing standards.</p></li>
+<li class="pillar-item pillar-item--ink"><span class="pillar-item__number" aria-hidden="true">2</span><p class="pillar-item__title">Submit your entry</p><p class="pillar-item__text">Fill in the participation form with your details and a photo of the receipt.</p><p class="pillar-item__action"><a class="link" href="#join">Submit it now →</a></p></li>
+</ol></div><pre class="sc-code">&lt;ol data-ds=&quot;pillar-item&quot;&gt;
+&lt;li class=&quot;pillar-item&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;1&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Better noodles start with better production&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;CO2-neutral production commitments and factory-level sourcing standards.&lt;/p&gt;&lt;/li&gt;
+&lt;li class=&quot;pillar-item pillar-item--ink&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;2&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Submit your entry&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;Fill in the participation form with your details and a photo of the receipt.&lt;/p&gt;&lt;p class=&quot;pillar-item__action&quot;&gt;&lt;a class=&quot;link&quot; href=&quot;#join&quot;&gt;Submit it now →&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;</pre></div>
+<div class="sc-card" id="sc-contest-conditions"><div class="sc-card__head"><h3>Contest conditions</h3><span class="sc-tag">1 variantes · 308:2308 · icono</span></div><div class="sc-demo"><div data-ds="contest-conditions" class="contest-conditions">
+<ul class="contest-conditions__list">
+<li class="contest-conditions__item"><span class="icon icon-calendar-clock icon--inverse" aria-hidden="true"></span><span>Entries close: <strong>30 September 2026 at 23:59 CET</strong></span></li>
+<li class="contest-conditions__item"><span class="icon icon-trophy icon--inverse" aria-hidden="true"></span><span>Grand prize draw: <strong>7 October 2026</strong></span></li>
+</ul>
+<p class="contest-conditions__text">Entry rules apply: one entry per purchase, and proof of purchase is required.</p>
+<a class="link link--dark" href="/contests/slurp-and-win/rules">Read the full contest rules →</a>
+</div></div><pre class="sc-code">&lt;div data-ds=&quot;contest-conditions&quot; class=&quot;contest-conditions&quot;&gt;
+&lt;ul class=&quot;contest-conditions__list&quot;&gt;
+&lt;li class=&quot;contest-conditions__item&quot;&gt;&lt;span class=&quot;icon icon-calendar-clock icon--inverse&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span&gt;Entries close: &lt;strong&gt;30 September 2026 at 23:59 CET&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class=&quot;contest-conditions__item&quot;&gt;&lt;span class=&quot;icon icon-trophy icon--inverse&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span&gt;Grand prize draw: &lt;strong&gt;7 October 2026&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;contest-conditions__text&quot;&gt;Entry rules apply: one entry per purchase, and proof of purchase is required.&lt;/p&gt;
+&lt;a class=&quot;link link--dark&quot; href=&quot;/contests/slurp-and-win/rules&quot;&gt;Read the full contest rules →&lt;/a&gt;
+&lt;/div&gt;</pre></div>
 <div class="sc-card" id="sc-modal-slot"><div class="sc-card__head"><h3>Modal / Slot</h3><span class="sc-tag">1 variantes · 79:52</span></div><div class="sc-demo"><div data-ds="modal-slot" class="modal-slot">Contenido del modal</div></div><pre class="sc-code">&lt;div data-ds=&quot;modal-slot&quot; class=&quot;modal-slot&quot;&gt;Contenido del modal&lt;/div&gt;</pre></div>
 <div class="sc-card" id="sc-modal"><div class="sc-card__head"><h3>Modal</h3><span class="sc-tag">3 variantes · 79:123 · icono</span></div><div class="sc-demo"><dialog data-ds="modal" class="modal modal--l" aria-labelledby="modal-title" open>
 <div class="modal__header">
@@ -1212,6 +1377,181 @@
 &lt;/div&gt;
 &lt;div class=&quot;footer__legal&quot;&gt;&lt;a class=&quot;link link--dark&quot; href=&quot;/aviso-legal&quot;&gt;Legal notice&lt;/a&gt;&lt;a class=&quot;link link--dark&quot; href=&quot;/privacidad&quot;&gt;Privacy policy&lt;/a&gt;&lt;span&gt;© GBFoods&lt;/span&gt;&lt;/div&gt;
 &lt;/footer&gt;</pre></div>
+<div class="sc-card" id="sc-faq-list"><div class="sc-card__head"><h3>FAQ list</h3><span class="sc-tag">6 variantes · 317:3438 · icono</span></div><div class="sc-demo"><section data-ds="library-head" class="section library-head library-head--center library-head--no-filters" aria-labelledby="faq-title">
+<div class="library-head__inner">
+<div class="library-head__intro">
+<h1 class="page-title" id="faq-title">Frequently Asked Questions</h1>
+<p class="library-head__lead">These are the questions we're asked most often, so you won't be left wondering</p>
+</div>
+<form class="search-field library-head__search" role="search" action="/faq">
+<span class="icon icon-search" aria-hidden="true"></span>
+<label class="visually-hidden" for="faq-q">Search for questions about our products</label>
+<input class="search-field__input" id="faq-q" name="q" type="search" placeholder="Search for questions about our products">
+</form>
+</div>
+</section>
+<section class="section faq">
+<div data-ds="faq-list" class="faq-list">
+<p class="faq-list__status visually-hidden" role="status"></p>
+<ul class="faq-list__items">
+<li><div class="accordion-item">
+<h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q1-btn" aria-expanded="true" aria-controls="faq-q1">How is it prepared?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+<div class="accordion-item__panel" id="faq-q1" role="region" aria-labelledby="faq-q1-btn">Full preparation instructions are printed on the pack. In general, the noodles only need a few minutes in hot water.</div>
+</div></li>
+<li><div class="accordion-item">
+<h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q2-btn" aria-expanded="false" aria-controls="faq-q2">Has the taste of the product changed?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+<div class="accordion-item__panel" id="faq-q2" role="region" aria-labelledby="faq-q2-btn" hidden>We review our recipes from time to time. If a change affects the taste, we will say so on the pack.</div>
+</div></li>
+<li><div class="accordion-item">
+<h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q3-btn" aria-expanded="false" aria-controls="faq-q3">Where can I find the noodles?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+<div class="accordion-item__panel" id="faq-q3" role="region" aria-labelledby="faq-q3-btn" hidden>Our products are sold in supermarkets and selected stores. Use the Where to buy section to find a shop near you.</div>
+</div></li>
+</ul>
+</div>
+</section></div><pre class="sc-code">&lt;section data-ds=&quot;library-head&quot; class=&quot;section library-head library-head--center library-head--no-filters&quot; aria-labelledby=&quot;faq-title&quot;&gt;
+&lt;div class=&quot;library-head__inner&quot;&gt;
+&lt;div class=&quot;library-head__intro&quot;&gt;
+&lt;h1 class=&quot;page-title&quot; id=&quot;faq-title&quot;&gt;Frequently Asked Questions&lt;/h1&gt;
+&lt;p class=&quot;library-head__lead&quot;&gt;These are the questions we&#x27;re asked most often, so you won&#x27;t be left wondering&lt;/p&gt;
+&lt;/div&gt;
+&lt;form class=&quot;search-field library-head__search&quot; role=&quot;search&quot; action=&quot;/faq&quot;&gt;
+&lt;span class=&quot;icon icon-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+&lt;label class=&quot;visually-hidden&quot; for=&quot;faq-q&quot;&gt;Search for questions about our products&lt;/label&gt;
+&lt;input class=&quot;search-field__input&quot; id=&quot;faq-q&quot; name=&quot;q&quot; type=&quot;search&quot; placeholder=&quot;Search for questions about our products&quot;&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;section class=&quot;section faq&quot;&gt;
+&lt;div data-ds=&quot;faq-list&quot; class=&quot;faq-list&quot;&gt;
+&lt;p class=&quot;faq-list__status visually-hidden&quot; role=&quot;status&quot;&gt;&lt;/p&gt;
+&lt;ul class=&quot;faq-list__items&quot;&gt;
+&lt;li&gt;&lt;div class=&quot;accordion-item&quot;&gt;
+&lt;h3 class=&quot;accordion-item__heading&quot;&gt;&lt;button class=&quot;accordion-item__button&quot; type=&quot;button&quot; id=&quot;faq-q1-btn&quot; aria-expanded=&quot;true&quot; aria-controls=&quot;faq-q1&quot;&gt;How is it prepared?&lt;span class=&quot;icon icon-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/h3&gt;
+&lt;div class=&quot;accordion-item__panel&quot; id=&quot;faq-q1&quot; role=&quot;region&quot; aria-labelledby=&quot;faq-q1-btn&quot;&gt;Full preparation instructions are printed on the pack. In general, the noodles only need a few minutes in hot water.&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;div class=&quot;accordion-item&quot;&gt;
+&lt;h3 class=&quot;accordion-item__heading&quot;&gt;&lt;button class=&quot;accordion-item__button&quot; type=&quot;button&quot; id=&quot;faq-q2-btn&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;faq-q2&quot;&gt;Has the taste of the product changed?&lt;span class=&quot;icon icon-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/h3&gt;
+&lt;div class=&quot;accordion-item__panel&quot; id=&quot;faq-q2&quot; role=&quot;region&quot; aria-labelledby=&quot;faq-q2-btn&quot; hidden&gt;We review our recipes from time to time. If a change affects the taste, we will say so on the pack.&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;div class=&quot;accordion-item&quot;&gt;
+&lt;h3 class=&quot;accordion-item__heading&quot;&gt;&lt;button class=&quot;accordion-item__button&quot; type=&quot;button&quot; id=&quot;faq-q3-btn&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;faq-q3&quot;&gt;Where can I find the noodles?&lt;span class=&quot;icon icon-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;/h3&gt;
+&lt;div class=&quot;accordion-item__panel&quot; id=&quot;faq-q3&quot; role=&quot;region&quot; aria-labelledby=&quot;faq-q3-btn&quot; hidden&gt;Our products are sold in supermarkets and selected stores. Use the Where to buy section to find a shop near you.&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/section&gt;</pre></div>
+<div class="sc-card" id="sc-legal-table"><div class="sc-card__head"><h3>Legal table</h3><span class="sc-tag">2 variantes · 317:3484</span></div><div class="sc-demo"><table data-ds="legal-table" class="legal-table">
+<caption class="visually-hidden">How long do we keep your data?</caption>
+<thead><tr><th scope="col">Purpose</th><th scope="col">Retention period</th></tr></thead>
+<tbody>
+<tr><td data-label="Purpose">(i) To learn about your browsing preferences on our Website in order to personalise and improve our products and your experience.</td><td data-label="Retention period">As indicated in our Cookie Policy, up to a maximum of 2 years.</td></tr>
+<tr><td data-label="Purpose">(ii) To manage and process the response to your request for information sent through our Website's contact form.</td><td data-label="Retention period">Until your query has been resolved, as well as the time necessary to comply with the corresponding legal obligations.</td></tr>
+<tr><td data-label="Purpose">(iii) To handle emails received at our corporate email addresses for the purpose of maintaining business relationships with entities, organisations or companies and with the people who work for or collaborate with them or with their legal representatives.</td><td data-label="Retention period">For a reasonable period after your last interaction with us.</td></tr>
+</tbody>
+</table></div><pre class="sc-code">&lt;table data-ds=&quot;legal-table&quot; class=&quot;legal-table&quot;&gt;
+&lt;caption class=&quot;visually-hidden&quot;&gt;How long do we keep your data?&lt;/caption&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Purpose&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Retention period&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td data-label=&quot;Purpose&quot;&gt;(i) To learn about your browsing preferences on our Website in order to personalise and improve our products and your experience.&lt;/td&gt;&lt;td data-label=&quot;Retention period&quot;&gt;As indicated in our Cookie Policy, up to a maximum of 2 years.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-label=&quot;Purpose&quot;&gt;(ii) To manage and process the response to your request for information sent through our Website&#x27;s contact form.&lt;/td&gt;&lt;td data-label=&quot;Retention period&quot;&gt;Until your query has been resolved, as well as the time necessary to comply with the corresponding legal obligations.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-label=&quot;Purpose&quot;&gt;(iii) To handle emails received at our corporate email addresses for the purpose of maintaining business relationships with entities, organisations or companies and with the people who work for or collaborate with them or with their legal representatives.&lt;/td&gt;&lt;td data-label=&quot;Retention period&quot;&gt;For a reasonable period after your last interaction with us.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</pre></div>
+<div class="sc-card" id="sc-legal-page"><div class="sc-card__head"><h3>Legal page</h3><span class="sc-tag">2 variantes · 317:3602 · icono</span></div><div class="sc-demo"><article data-ds="legal-page" class="legal-page">
+<div class="legal-page__inner">
+<a class="link legal-page__back" href="index.html"><span class="icon icon-arrow-left" aria-hidden="true"></span>Back</a>
+<h1 class="page-title">Yatekomo Privacy Policy</h1>
+<p class="legal-page__lead">At "Yatekomo" we place great importance on current regulations regarding privacy and data protection. In this sense, protecting the security, integrity and confidentiality of all users' information is very important to us, and therefore we want to act responsibly in this area.</p>
+<p class="legal-page__intro">This Privacy Policy (hereinafter, the "Privacy Policy") describes the type of personal information we collect, how we obtain it, how we share it, and the purposes for which we process it, as well as the means available to you as a user to control such use and exercise your rights.</p>
+<section class="legal-page__section">
+<h2 class="legal-page__heading">1. Scope of the Privacy Policy</h2>
+<p class="legal-page__text">This Privacy Policy applies to the personal data obtained by Yatekomo from our customers, suppliers, information requesters, job applicants and, where applicable, users of our Website or third parties with whom we interact.</p>
+</section>
+<section class="legal-page__section">
+<h2 class="legal-page__heading">2. Who is the Data Controller?</h2>
+<p class="legal-page__text">The Data Controller for your data is GALLINA BLANCA, S.A. Below are our contact details: company name: GALLINA BLANCA, S.A.; contact email: dataprivacy@thegbfoods.com.</p>
+</section>
+<section class="legal-page__section">
+<h2 class="legal-page__heading">3. What information do we collect and how do we collect it?</h2>
+<p class="legal-page__text">We collect the information you give us directly, for example when you subscribe to our newsletter or contact us through the website, as well as basic technical data about your visit.</p>
+</section>
+<section class="legal-page__section">
+<h2 class="legal-page__heading">5. How long do we keep your data?</h2>
+<table data-ds="legal-table" class="legal-table">
+<caption class="visually-hidden">Purposes and retention periods</caption>
+<thead>
+<tr><th scope="col">Purpose</th><th scope="col">Retention period</th></tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Purpose">(i) To learn about your browsing preferences on our Website in order to personalise and improve our products and your experience.</td>
+<td data-label="Retention period">As indicated in our Cookie Policy, up to a maximum of 2 years.</td>
+</tr>
+<tr>
+<td data-label="Purpose">(ii) To manage and process the response to your request for information sent through our Website's contact form.</td>
+<td data-label="Retention period">Until your query has been resolved, as well as the time necessary to comply with the corresponding legal obligations.</td>
+</tr>
+<tr>
+<td data-label="Purpose">(iii) To handle emails received at our corporate email addresses for the purpose of maintaining business relationships with entities, organisations or companies and with the people who work for or collaborate with them or with their legal representatives.</td>
+<td data-label="Retention period">For a reasonable period after your last interaction with us.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="legal-page__section">
+<h2 class="legal-page__heading">6. What legitimises us to process your personal data?</h2>
+<p class="legal-page__text">We process your data on the basis of your consent, the performance of any contract with you and our legitimate interest in answering your queries.</p>
+</section>
+<p class="legal-page__updated">Last updated: <time datetime="2026-07">July 2026</time></p>
+</div>
+</article></div><pre class="sc-code">&lt;article data-ds=&quot;legal-page&quot; class=&quot;legal-page&quot;&gt;
+&lt;div class=&quot;legal-page__inner&quot;&gt;
+&lt;a class=&quot;link legal-page__back&quot; href=&quot;index.html&quot;&gt;&lt;span class=&quot;icon icon-arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Back&lt;/a&gt;
+&lt;h1 class=&quot;page-title&quot;&gt;Yatekomo Privacy Policy&lt;/h1&gt;
+&lt;p class=&quot;legal-page__lead&quot;&gt;At &quot;Yatekomo&quot; we place great importance on current regulations regarding privacy and data protection. In this sense, protecting the security, integrity and confidentiality of all users&#x27; information is very important to us, and therefore we want to act responsibly in this area.&lt;/p&gt;
+&lt;p class=&quot;legal-page__intro&quot;&gt;This Privacy Policy (hereinafter, the &quot;Privacy Policy&quot;) describes the type of personal information we collect, how we obtain it, how we share it, and the purposes for which we process it, as well as the means available to you as a user to control such use and exercise your rights.&lt;/p&gt;
+&lt;section class=&quot;legal-page__section&quot;&gt;
+&lt;h2 class=&quot;legal-page__heading&quot;&gt;1. Scope of the Privacy Policy&lt;/h2&gt;
+&lt;p class=&quot;legal-page__text&quot;&gt;This Privacy Policy applies to the personal data obtained by Yatekomo from our customers, suppliers, information requesters, job applicants and, where applicable, users of our Website or third parties with whom we interact.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class=&quot;legal-page__section&quot;&gt;
+&lt;h2 class=&quot;legal-page__heading&quot;&gt;2. Who is the Data Controller?&lt;/h2&gt;
+&lt;p class=&quot;legal-page__text&quot;&gt;The Data Controller for your data is GALLINA BLANCA, S.A. Below are our contact details: company name: GALLINA BLANCA, S.A.; contact email: dataprivacy@thegbfoods.com.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class=&quot;legal-page__section&quot;&gt;
+&lt;h2 class=&quot;legal-page__heading&quot;&gt;3. What information do we collect and how do we collect it?&lt;/h2&gt;
+&lt;p class=&quot;legal-page__text&quot;&gt;We collect the information you give us directly, for example when you subscribe to our newsletter or contact us through the website, as well as basic technical data about your visit.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section class=&quot;legal-page__section&quot;&gt;
+&lt;h2 class=&quot;legal-page__heading&quot;&gt;5. How long do we keep your data?&lt;/h2&gt;
+&lt;table data-ds=&quot;legal-table&quot; class=&quot;legal-table&quot;&gt;
+&lt;caption class=&quot;visually-hidden&quot;&gt;Purposes and retention periods&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Purpose&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Retention period&lt;/th&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td data-label=&quot;Purpose&quot;&gt;(i) To learn about your browsing preferences on our Website in order to personalise and improve our products and your experience.&lt;/td&gt;
+&lt;td data-label=&quot;Retention period&quot;&gt;As indicated in our Cookie Policy, up to a maximum of 2 years.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td data-label=&quot;Purpose&quot;&gt;(ii) To manage and process the response to your request for information sent through our Website&#x27;s contact form.&lt;/td&gt;
+&lt;td data-label=&quot;Retention period&quot;&gt;Until your query has been resolved, as well as the time necessary to comply with the corresponding legal obligations.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td data-label=&quot;Purpose&quot;&gt;(iii) To handle emails received at our corporate email addresses for the purpose of maintaining business relationships with entities, organisations or companies and with the people who work for or collaborate with them or with their legal representatives.&lt;/td&gt;
+&lt;td data-label=&quot;Retention period&quot;&gt;For a reasonable period after your last interaction with us.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/section&gt;
+&lt;section class=&quot;legal-page__section&quot;&gt;
+&lt;h2 class=&quot;legal-page__heading&quot;&gt;6. What legitimises us to process your personal data?&lt;/h2&gt;
+&lt;p class=&quot;legal-page__text&quot;&gt;We process your data on the basis of your consent, the performance of any contract with you and our legitimate interest in answering your queries.&lt;/p&gt;
+&lt;/section&gt;
+&lt;p class=&quot;legal-page__updated&quot;&gt;Last updated: &lt;time datetime=&quot;2026-07&quot;&gt;July 2026&lt;/time&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/article&gt;</pre></div>
 <div class="sc-card" id="sc-hero"><div class="sc-card__head"><h3>Hero</h3><span class="sc-tag">2 variantes · 88:132 · icono</span></div><div class="sc-demo"><section data-ds="hero" class="section hero" aria-roledescription="carrusel" aria-label="Destacados">
 <span class="decoration-noodle hero__noodle" aria-hidden="true"></span>
 <div class="section__inner">
@@ -1557,7 +1897,7 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-library-head"><div class="sc-card__head"><h3>Library head</h3><span class="sc-tag">4 variantes · 219:1839 · icono</span></div><div class="sc-demo"><section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title">
+<div class="sc-card" id="sc-library-head"><div class="sc-card__head"><h3>Library head</h3><span class="sc-tag">8 variantes · 219:1839 · icono</span></div><div class="sc-demo"><section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title">
 <div class="library-head__inner">
 <div class="library-head__intro">
 <h1 class="page-title" id="lhead-title">Recipes</h1>
@@ -1578,6 +1918,27 @@
 <p aria-live="polite"><strong>48</strong> results for your search</p>
 <button class="link" type="button"><span class="icon icon-trash" aria-hidden="true"></span>Clear filters</button>
 </div>
+</div>
+</section>
+<section data-ds="library-head" class="section library-head library-head--no-search library-head--no-filters" aria-labelledby="lhead-contests">
+<div class="library-head__inner">
+<div class="library-head__intro">
+<h1 class="page-title" id="lhead-contests">Contests &amp; promotions</h1>
+<p class="library-head__lead">Enter our contests and win, don't miss your chance!</p>
+</div>
+</div>
+</section>
+<section data-ds="library-head" class="section library-head library-head--center library-head--no-filters" aria-labelledby="lhead-faq">
+<div class="library-head__inner">
+<div class="library-head__intro">
+<h1 class="page-title" id="lhead-faq">Frequently Asked Questions</h1>
+<p class="library-head__lead">These are the questions we're asked most often, so you won't be left wondering</p>
+</div>
+<form class="search-field library-head__search" role="search" action="/faq">
+<span class="icon icon-search" aria-hidden="true"></span>
+<label class="visually-hidden" for="lhead-faq-q">Search for questions about our products</label>
+<input class="search-field__input" id="lhead-faq-q" name="q" type="search" placeholder="Search for questions about our products">
+</form>
 </div>
 </section></div><pre class="sc-code">&lt;section data-ds=&quot;library-head&quot; class=&quot;section library-head&quot; aria-labelledby=&quot;lhead-title&quot;&gt;
 &lt;div class=&quot;library-head__inner&quot;&gt;
@@ -1600,6 +1961,27 @@
 &lt;p aria-live=&quot;polite&quot;&gt;&lt;strong&gt;48&lt;/strong&gt; results for your search&lt;/p&gt;
 &lt;button class=&quot;link&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;icon icon-trash&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Clear filters&lt;/button&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;section data-ds=&quot;library-head&quot; class=&quot;section library-head library-head--no-search library-head--no-filters&quot; aria-labelledby=&quot;lhead-contests&quot;&gt;
+&lt;div class=&quot;library-head__inner&quot;&gt;
+&lt;div class=&quot;library-head__intro&quot;&gt;
+&lt;h1 class=&quot;page-title&quot; id=&quot;lhead-contests&quot;&gt;Contests &amp;amp; promotions&lt;/h1&gt;
+&lt;p class=&quot;library-head__lead&quot;&gt;Enter our contests and win, don&#x27;t miss your chance!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;section data-ds=&quot;library-head&quot; class=&quot;section library-head library-head--center library-head--no-filters&quot; aria-labelledby=&quot;lhead-faq&quot;&gt;
+&lt;div class=&quot;library-head__inner&quot;&gt;
+&lt;div class=&quot;library-head__intro&quot;&gt;
+&lt;h1 class=&quot;page-title&quot; id=&quot;lhead-faq&quot;&gt;Frequently Asked Questions&lt;/h1&gt;
+&lt;p class=&quot;library-head__lead&quot;&gt;These are the questions we&#x27;re asked most often, so you won&#x27;t be left wondering&lt;/p&gt;
+&lt;/div&gt;
+&lt;form class=&quot;search-field library-head__search&quot; role=&quot;search&quot; action=&quot;/faq&quot;&gt;
+&lt;span class=&quot;icon icon-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+&lt;label class=&quot;visually-hidden&quot; for=&quot;lhead-faq-q&quot;&gt;Search for questions about our products&lt;/label&gt;
+&lt;input class=&quot;search-field__input&quot; id=&quot;lhead-faq-q&quot; name=&quot;q&quot; type=&quot;search&quot; placeholder=&quot;Search for questions about our products&quot;&gt;
+&lt;/form&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
 <div class="sc-card" id="sc-recipe-submit"><div class="sc-card__head"><h3>Recipe submit</h3><span class="sc-tag">2 variantes · 219:1911 · icono</span></div><div class="sc-demo"><section data-ds="recipe-submit" class="section recipe-submit" aria-labelledby="rs-title">
@@ -1630,6 +2012,122 @@
 &lt;p class=&quot;field__helper&quot; id=&quot;rs-help&quot;&gt;List the ingredients with their quantities and the time of each step&lt;/p&gt;
 &lt;/div&gt;
 &lt;button class=&quot;button&quot; type=&quot;submit&quot;&gt;Send my recipe&lt;/button&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;/section&gt;</pre></div>
+<div class="sc-card" id="sc-contest-library"><div class="sc-card__head"><h3>Contest library</h3><span class="sc-tag">2 variantes · 312:3141 · icono</span></div><div class="sc-demo"><section data-ds="contest-library" class="section contest-library" aria-label="Contests">
+<div class="section__inner contest-library__inner">
+<div class="contest-library__group" aria-labelledby="cl-active">
+<div class="section__header"><h2 class="section__title" id="cl-active">Active contests</h2></div>
+<ul class="contest-library__grid">
+<li><article class="contest-card">
+<div class="contest-card__media"><img src="../assets/images/placeholder.svg" alt=""></div>
+<div class="contest-card__body">
+<p class="contest-card__dates" id="cl-a1-dates">Available until 20/9/2026</p>
+<h3 class="contest-card__title"><a class="contest-card__link" href="/contests/slurp-and-win" aria-describedby="cl-a1-dates">Slurp &amp; Win</a></h3>
+<ul class="contest-card__prizes" aria-label="Prizes"><li><span class="chip">T-shirts</span></li><li><span class="chip">Balls</span></li><li><span class="chip">Experience</span></li></ul>
+</div>
+</article></li>
+</ul>
+</div>
+<div class="contest-library__group" aria-labelledby="cl-closed">
+<div class="section__header">
+<h2 class="section__title" id="cl-closed">Closed contests</h2>
+<p class="section__lead">Take another look at everything we've given away</p>
+</div>
+<ul class="contest-library__grid">
+<li><article class="contest-card">
+<div class="contest-card__media"><span class="badge badge--neutral">Closed</span><img src="../assets/images/placeholder.svg" alt=""></div>
+<div class="contest-card__body">
+<p class="contest-card__dates" id="cl-c1-dates">Ended on 20/9/2026</p>
+<h3 class="contest-card__title"><a class="contest-card__link" href="/contests/old-contest" aria-describedby="cl-c1-dates">Old contest</a></h3>
+<ul class="contest-card__prizes" aria-label="Prizes"><li><span class="chip">Balls</span></li></ul>
+</div>
+</article></li>
+</ul>
+<div class="contest-library__more"><button class="button button--secondary" type="button">Load more</button></div>
+</div>
+</div>
+</section></div><pre class="sc-code">&lt;section data-ds=&quot;contest-library&quot; class=&quot;section contest-library&quot; aria-label=&quot;Contests&quot;&gt;
+&lt;div class=&quot;section__inner contest-library__inner&quot;&gt;
+&lt;div class=&quot;contest-library__group&quot; aria-labelledby=&quot;cl-active&quot;&gt;
+&lt;div class=&quot;section__header&quot;&gt;&lt;h2 class=&quot;section__title&quot; id=&quot;cl-active&quot;&gt;Active contests&lt;/h2&gt;&lt;/div&gt;
+&lt;ul class=&quot;contest-library__grid&quot;&gt;
+&lt;li&gt;&lt;article class=&quot;contest-card&quot;&gt;
+&lt;div class=&quot;contest-card__media&quot;&gt;&lt;img src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;contest-card__body&quot;&gt;
+&lt;p class=&quot;contest-card__dates&quot; id=&quot;cl-a1-dates&quot;&gt;Available until 20/9/2026&lt;/p&gt;
+&lt;h3 class=&quot;contest-card__title&quot;&gt;&lt;a class=&quot;contest-card__link&quot; href=&quot;/contests/slurp-and-win&quot; aria-describedby=&quot;cl-a1-dates&quot;&gt;Slurp &amp;amp; Win&lt;/a&gt;&lt;/h3&gt;
+&lt;ul class=&quot;contest-card__prizes&quot; aria-label=&quot;Prizes&quot;&gt;&lt;li&gt;&lt;span class=&quot;chip&quot;&gt;T-shirts&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;chip&quot;&gt;Balls&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span class=&quot;chip&quot;&gt;Experience&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/article&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;contest-library__group&quot; aria-labelledby=&quot;cl-closed&quot;&gt;
+&lt;div class=&quot;section__header&quot;&gt;
+&lt;h2 class=&quot;section__title&quot; id=&quot;cl-closed&quot;&gt;Closed contests&lt;/h2&gt;
+&lt;p class=&quot;section__lead&quot;&gt;Take another look at everything we&#x27;ve given away&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;contest-library__grid&quot;&gt;
+&lt;li&gt;&lt;article class=&quot;contest-card&quot;&gt;
+&lt;div class=&quot;contest-card__media&quot;&gt;&lt;span class=&quot;badge badge--neutral&quot;&gt;Closed&lt;/span&gt;&lt;img src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;contest-card__body&quot;&gt;
+&lt;p class=&quot;contest-card__dates&quot; id=&quot;cl-c1-dates&quot;&gt;Ended on 20/9/2026&lt;/p&gt;
+&lt;h3 class=&quot;contest-card__title&quot;&gt;&lt;a class=&quot;contest-card__link&quot; href=&quot;/contests/old-contest&quot; aria-describedby=&quot;cl-c1-dates&quot;&gt;Old contest&lt;/a&gt;&lt;/h3&gt;
+&lt;ul class=&quot;contest-card__prizes&quot; aria-label=&quot;Prizes&quot;&gt;&lt;li&gt;&lt;span class=&quot;chip&quot;&gt;Balls&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/article&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;contest-library__more&quot;&gt;&lt;button class=&quot;button button--secondary&quot; type=&quot;button&quot;&gt;Load more&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;</pre></div>
+<div class="sc-card" id="sc-newsletter"><div class="sc-card__head"><h3>Newsletter</h3><span class="sc-tag">2 variantes · 312:3247 · icono</span></div><div class="sc-demo"><section data-ds="newsletter" class="section newsletter" aria-labelledby="nl-title">
+<div class="section__inner newsletter__grid">
+<div class="newsletter__content">
+<h2 class="newsletter__title" id="nl-title">Don't miss a thing</h2>
+<p class="newsletter__text">Subscribe to our newsletter and follow us to stay up to date on all the contests from the very start.</p>
+<div class="newsletter__social">
+<p class="newsletter__social-label" id="nl-social">Our social media:</p>
+<ul class="newsletter__social-list" aria-labelledby="nl-social">
+<li><a class="icon-button icon-button--inverse" href="https://www.tiktok.com/" aria-label="TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
+<li><a class="icon-button icon-button--inverse" href="https://www.instagram.com/" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
+<li><a class="icon-button icon-button--inverse" href="https://x.com/" aria-label="X"><span class="icon icon-x" aria-hidden="true"></span></a></li>
+<li><a class="icon-button icon-button--inverse" href="https://www.youtube.com/" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a></li>
+</ul>
+</div>
+</div>
+<form class="newsletter__form" action="/newsletter" method="post">
+<div class="field">
+<label class="visually-hidden" for="nl-email">Email address</label>
+<input class="field__control" id="nl-email" name="email" type="email" autocomplete="email" placeholder="Enter your mail" required>
+</div>
+<p class="newsletter__legal" id="nl-legal">By subscribing to the newsletter, I agree to have my email address used to send me promotions and marketing content. You can withdraw your consent at any time with the unsubscribe link in each email.</p>
+<button class="button button--inverse" type="submit" aria-describedby="nl-legal">Subscribe</button>
+</form>
+</div>
+</section></div><pre class="sc-code">&lt;section data-ds=&quot;newsletter&quot; class=&quot;section newsletter&quot; aria-labelledby=&quot;nl-title&quot;&gt;
+&lt;div class=&quot;section__inner newsletter__grid&quot;&gt;
+&lt;div class=&quot;newsletter__content&quot;&gt;
+&lt;h2 class=&quot;newsletter__title&quot; id=&quot;nl-title&quot;&gt;Don&#x27;t miss a thing&lt;/h2&gt;
+&lt;p class=&quot;newsletter__text&quot;&gt;Subscribe to our newsletter and follow us to stay up to date on all the contests from the very start.&lt;/p&gt;
+&lt;div class=&quot;newsletter__social&quot;&gt;
+&lt;p class=&quot;newsletter__social-label&quot; id=&quot;nl-social&quot;&gt;Our social media:&lt;/p&gt;
+&lt;ul class=&quot;newsletter__social-list&quot; aria-labelledby=&quot;nl-social&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;icon-button icon-button--inverse&quot; href=&quot;https://www.tiktok.com/&quot; aria-label=&quot;TikTok&quot;&gt;&lt;span class=&quot;icon icon-tiktok&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;icon-button icon-button--inverse&quot; href=&quot;https://www.instagram.com/&quot; aria-label=&quot;Instagram&quot;&gt;&lt;span class=&quot;icon icon-instagram&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;icon-button icon-button--inverse&quot; href=&quot;https://x.com/&quot; aria-label=&quot;X&quot;&gt;&lt;span class=&quot;icon icon-x&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;icon-button icon-button--inverse&quot; href=&quot;https://www.youtube.com/&quot; aria-label=&quot;YouTube&quot;&gt;&lt;span class=&quot;icon icon-youtube&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;form class=&quot;newsletter__form&quot; action=&quot;/newsletter&quot; method=&quot;post&quot;&gt;
+&lt;div class=&quot;field&quot;&gt;
+&lt;label class=&quot;visually-hidden&quot; for=&quot;nl-email&quot;&gt;Email address&lt;/label&gt;
+&lt;input class=&quot;field__control&quot; id=&quot;nl-email&quot; name=&quot;email&quot; type=&quot;email&quot; autocomplete=&quot;email&quot; placeholder=&quot;Enter your mail&quot; required&gt;
+&lt;/div&gt;
+&lt;p class=&quot;newsletter__legal&quot; id=&quot;nl-legal&quot;&gt;By subscribing to the newsletter, I agree to have my email address used to send me promotions and marketing content. You can withdraw your consent at any time with the unsubscribe link in each email.&lt;/p&gt;
+&lt;button class=&quot;button button--inverse&quot; type=&quot;submit&quot; aria-describedby=&quot;nl-legal&quot;&gt;Subscribe&lt;/button&gt;
 &lt;/form&gt;
 &lt;/div&gt;
 &lt;/section&gt;</pre></div>
@@ -1924,7 +2422,317 @@
 <div class="sc-card" id="sc-natural-hero"><div class="sc-card__head"><h3>Natural hero</h3><span class="sc-tag">2 variantes · 278:519 · icono</span></div><div class="sc-demo"><section data-ds="natural-hero" class="section natural-hero" aria-labelledby="nh-title"><div class="section__inner"><div class="natural-hero__grid"><div class="natural-hero__content"><span class="badge badge--neutral">New improved formula</span><h1 class="natural-hero__title" id="nh-title">100% natural. We cut the bullsh*t.</h1><p class="natural-hero__text">We rebuilt our recipe from scratch: same great taste, only ingredients you can actually recognize.</p><ul class="natural-hero__chips"><li class="chip">Ready in 3'</li><li class="chip">Real flavour</li><li class="chip">Full ingredient transparency</li></ul></div><figure class="natural-hero__media"><img class="natural-hero__image" src="../assets/images/placeholder.svg" alt="Noodle packshot and its ingredients"></figure></div></div></section></div><pre class="sc-code">&lt;section data-ds=&quot;natural-hero&quot; class=&quot;section natural-hero&quot; aria-labelledby=&quot;nh-title&quot;&gt;&lt;div class=&quot;section__inner&quot;&gt;&lt;div class=&quot;natural-hero__grid&quot;&gt;&lt;div class=&quot;natural-hero__content&quot;&gt;&lt;span class=&quot;badge badge--neutral&quot;&gt;New improved formula&lt;/span&gt;&lt;h1 class=&quot;natural-hero__title&quot; id=&quot;nh-title&quot;&gt;100% natural. We cut the bullsh*t.&lt;/h1&gt;&lt;p class=&quot;natural-hero__text&quot;&gt;We rebuilt our recipe from scratch: same great taste, only ingredients you can actually recognize.&lt;/p&gt;&lt;ul class=&quot;natural-hero__chips&quot;&gt;&lt;li class=&quot;chip&quot;&gt;Ready in 3&#x27;&lt;/li&gt;&lt;li class=&quot;chip&quot;&gt;Real flavour&lt;/li&gt;&lt;li class=&quot;chip&quot;&gt;Full ingredient transparency&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;figure class=&quot;natural-hero__media&quot;&gt;&lt;img class=&quot;natural-hero__image&quot; src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;Noodle packshot and its ingredients&quot;&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;</pre></div>
 <div class="sc-card" id="sc-natural-improvement"><div class="sc-card__head"><h3>Natural improvement</h3><span class="sc-tag">2 variantes · 279:725 · icono</span></div><div class="sc-demo"><section data-ds="natural-improvement" class="section natural-improvement" aria-labelledby="ni-title"><div class="section__inner"><div class="natural-improvement__head"><h2 class="natural-improvement__title" id="ni-title">That's what we call an improvement</h2><p class="natural-improvement__subtitle">Every ingredient we removed has a natural replacement with a clear reason behind it.</p></div><div class="natural-improvement__block"><h3 class="natural-improvement__heading" id="ni-swaps">Replaced ingredients</h3><ul class="natural-improvement__swaps" aria-labelledby="ni-swaps"><li class="ingredient-swap"><span class="removed-tag"><span class="icon icon-close" aria-hidden="true"></span><span class="visually-hidden">Removed:</span><s class="removed-tag__text">Palm oil</s></span><span class="icon icon-chevron-down ingredient-swap__arrow" aria-hidden="true"></span><div class="ingredient-swap__card"><div class="ingredient-swap__text"><p class="ingredient-swap__name">Sunflower oil</p><p class="ingredient-swap__reason">Cold-pressed, no tropical deforestation footprint.</p></div><img class="ingredient-swap__thumb" src="../assets/images/placeholder.svg" alt=""></div></li></ul></div><div class="natural-improvement__block"><h3 class="natural-improvement__heading" id="ni-removed">We also removed</h3><ul class="natural-improvement__removed" aria-labelledby="ni-removed"><li><span class="removed-tag"><span class="icon icon-close" aria-hidden="true"></span><span class="visually-hidden">Removed:</span><s class="removed-tag__text">Preservatives</s></span></li></ul></div><div class="natural-improvement__block"><h3 class="natural-improvement__heading" id="ni-origins">Ingredient origins</h3><p class="natural-improvement__origins-text">The new formula improves the nutritional profile across the board, without adding a single minute to prep time.</p><div data-ds="origins-map" class="origins-map"><p class="origins-map__seal">100% natural</p><ul class="origins-map__list" aria-label="Ingredient origins"><li class="origins-map__item"><span class="origins-map__name">Wheat</span><span class="visually-hidden"> from </span><span class="origins-map__country">Spain</span></li></ul></div></div></div></section></div><pre class="sc-code">&lt;section data-ds=&quot;natural-improvement&quot; class=&quot;section natural-improvement&quot; aria-labelledby=&quot;ni-title&quot;&gt;&lt;div class=&quot;section__inner&quot;&gt;&lt;div class=&quot;natural-improvement__head&quot;&gt;&lt;h2 class=&quot;natural-improvement__title&quot; id=&quot;ni-title&quot;&gt;That&#x27;s what we call an improvement&lt;/h2&gt;&lt;p class=&quot;natural-improvement__subtitle&quot;&gt;Every ingredient we removed has a natural replacement with a clear reason behind it.&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;natural-improvement__block&quot;&gt;&lt;h3 class=&quot;natural-improvement__heading&quot; id=&quot;ni-swaps&quot;&gt;Replaced ingredients&lt;/h3&gt;&lt;ul class=&quot;natural-improvement__swaps&quot; aria-labelledby=&quot;ni-swaps&quot;&gt;&lt;li class=&quot;ingredient-swap&quot;&gt;&lt;span class=&quot;removed-tag&quot;&gt;&lt;span class=&quot;icon icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span class=&quot;visually-hidden&quot;&gt;Removed:&lt;/span&gt;&lt;s class=&quot;removed-tag__text&quot;&gt;Palm oil&lt;/s&gt;&lt;/span&gt;&lt;span class=&quot;icon icon-chevron-down ingredient-swap__arrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;div class=&quot;ingredient-swap__card&quot;&gt;&lt;div class=&quot;ingredient-swap__text&quot;&gt;&lt;p class=&quot;ingredient-swap__name&quot;&gt;Sunflower oil&lt;/p&gt;&lt;p class=&quot;ingredient-swap__reason&quot;&gt;Cold-pressed, no tropical deforestation footprint.&lt;/p&gt;&lt;/div&gt;&lt;img class=&quot;ingredient-swap__thumb&quot; src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;natural-improvement__block&quot;&gt;&lt;h3 class=&quot;natural-improvement__heading&quot; id=&quot;ni-removed&quot;&gt;We also removed&lt;/h3&gt;&lt;ul class=&quot;natural-improvement__removed&quot; aria-labelledby=&quot;ni-removed&quot;&gt;&lt;li&gt;&lt;span class=&quot;removed-tag&quot;&gt;&lt;span class=&quot;icon icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span class=&quot;visually-hidden&quot;&gt;Removed:&lt;/span&gt;&lt;s class=&quot;removed-tag__text&quot;&gt;Preservatives&lt;/s&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=&quot;natural-improvement__block&quot;&gt;&lt;h3 class=&quot;natural-improvement__heading&quot; id=&quot;ni-origins&quot;&gt;Ingredient origins&lt;/h3&gt;&lt;p class=&quot;natural-improvement__origins-text&quot;&gt;The new formula improves the nutritional profile across the board, without adding a single minute to prep time.&lt;/p&gt;&lt;div data-ds=&quot;origins-map&quot; class=&quot;origins-map&quot;&gt;&lt;p class=&quot;origins-map__seal&quot;&gt;100% natural&lt;/p&gt;&lt;ul class=&quot;origins-map__list&quot; aria-label=&quot;Ingredient origins&quot;&gt;&lt;li class=&quot;origins-map__item&quot;&gt;&lt;span class=&quot;origins-map__name&quot;&gt;Wheat&lt;/span&gt;&lt;span class=&quot;visually-hidden&quot;&gt; from &lt;/span&gt;&lt;span class=&quot;origins-map__country&quot;&gt;Spain&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;</pre></div>
 <div class="sc-card" id="sc-natural-stats"><div class="sc-card__head"><h3>Natural stats</h3><span class="sc-tag">2 variantes · 279:776</span></div><div class="sc-demo"><section data-ds="natural-stats" class="section natural-stats" aria-labelledby="ns-title"><div class="section__inner"><div class="natural-stats__head"><h2 class="natural-stats__title" id="ns-title">Eating fast doesn't mean to eat unhealthy</h2><p class="natural-stats__subtitle">The new formula improves the nutritional profile across the board, without adding a single minute to prep time.</p></div><ul class="natural-stats__list" aria-label="Key figures"><li data-ds="stat-figure" class="stat-figure"><mark class="stat-figure__value">-45%</mark><span class="stat-figure__label">Less processed ingredients</span></li><li data-ds="stat-figure" class="stat-figure"><mark class="stat-figure__value">+5g</mark><span class="stat-figure__label">Improved protein for your muscles</span></li><li data-ds="stat-figure" class="stat-figure"><mark class="stat-figure__value">+20g</mark><span class="stat-figure__label">Natural fiber to help digestive system</span></li><li data-ds="stat-figure" class="stat-figure"><mark class="stat-figure__value">100%</mark><span class="stat-figure__label">Flavour, same as always</span></li></ul></div></section></div><pre class="sc-code">&lt;section data-ds=&quot;natural-stats&quot; class=&quot;section natural-stats&quot; aria-labelledby=&quot;ns-title&quot;&gt;&lt;div class=&quot;section__inner&quot;&gt;&lt;div class=&quot;natural-stats__head&quot;&gt;&lt;h2 class=&quot;natural-stats__title&quot; id=&quot;ns-title&quot;&gt;Eating fast doesn&#x27;t mean to eat unhealthy&lt;/h2&gt;&lt;p class=&quot;natural-stats__subtitle&quot;&gt;The new formula improves the nutritional profile across the board, without adding a single minute to prep time.&lt;/p&gt;&lt;/div&gt;&lt;ul class=&quot;natural-stats__list&quot; aria-label=&quot;Key figures&quot;&gt;&lt;li data-ds=&quot;stat-figure&quot; class=&quot;stat-figure&quot;&gt;&lt;mark class=&quot;stat-figure__value&quot;&gt;-45%&lt;/mark&gt;&lt;span class=&quot;stat-figure__label&quot;&gt;Less processed ingredients&lt;/span&gt;&lt;/li&gt;&lt;li data-ds=&quot;stat-figure&quot; class=&quot;stat-figure&quot;&gt;&lt;mark class=&quot;stat-figure__value&quot;&gt;+5g&lt;/mark&gt;&lt;span class=&quot;stat-figure__label&quot;&gt;Improved protein for your muscles&lt;/span&gt;&lt;/li&gt;&lt;li data-ds=&quot;stat-figure&quot; class=&quot;stat-figure&quot;&gt;&lt;mark class=&quot;stat-figure__value&quot;&gt;+20g&lt;/mark&gt;&lt;span class=&quot;stat-figure__label&quot;&gt;Natural fiber to help digestive system&lt;/span&gt;&lt;/li&gt;&lt;li data-ds=&quot;stat-figure&quot; class=&quot;stat-figure&quot;&gt;&lt;mark class=&quot;stat-figure__value&quot;&gt;100%&lt;/mark&gt;&lt;span class=&quot;stat-figure__label&quot;&gt;Flavour, same as always&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/section&gt;</pre></div>
-<div class="sc-card" id="sc-natural-pillars"><div class="sc-card__head"><h3>Natural pillars</h3><span class="sc-tag">2 variantes · 279:844</span></div><div class="sc-demo"><section data-ds="natural-pillars" class="section natural-pillars" aria-labelledby="np-title"><div class="section__inner"><div class="natural-pillars__grid"><div class="natural-pillars__content"><div class="natural-pillars__head"><h2 class="natural-pillars__title" id="np-title">Taste you can trust</h2><p class="natural-pillars__subtitle">Better for people, better for the planet</p></div><ol class="natural-pillars__list"><li data-ds="pillar-item" class="pillar-item"><span class="pillar-item__number" aria-hidden="true">1</span><p class="pillar-item__title">Better noodles start with better production</p><p class="pillar-item__text">CO2-neutral production commitments and factory-level sourcing standards.</p></li><li data-ds="pillar-item" class="pillar-item"><span class="pillar-item__number" aria-hidden="true">2</span><p class="pillar-item__title">Growing together with local communities</p><p class="pillar-item__text">Sourcing partnerships and support programmes with local farming communities.</p></li><li data-ds="pillar-item" class="pillar-item"><span class="pillar-item__number" aria-hidden="true">3</span><p class="pillar-item__title">Innovation in every recipe</p><p class="pillar-item__text">R&amp;D behind each natural substitution, tested to keep the exact same taste.</p></li><li data-ds="pillar-item" class="pillar-item"><span class="pillar-item__number" aria-hidden="true">4</span><p class="pillar-item__title">Cleaner recipe. Same great taste.</p><p class="pillar-item__text">Closing statement tying the four pillars back to the «Taste you can trust» claim.</p></li></ol></div><figure class="natural-pillars__media"><img class="natural-pillars__image" src="../assets/images/placeholder.svg" alt=""></figure></div></div></section></div><pre class="sc-code">&lt;section data-ds=&quot;natural-pillars&quot; class=&quot;section natural-pillars&quot; aria-labelledby=&quot;np-title&quot;&gt;&lt;div class=&quot;section__inner&quot;&gt;&lt;div class=&quot;natural-pillars__grid&quot;&gt;&lt;div class=&quot;natural-pillars__content&quot;&gt;&lt;div class=&quot;natural-pillars__head&quot;&gt;&lt;h2 class=&quot;natural-pillars__title&quot; id=&quot;np-title&quot;&gt;Taste you can trust&lt;/h2&gt;&lt;p class=&quot;natural-pillars__subtitle&quot;&gt;Better for people, better for the planet&lt;/p&gt;&lt;/div&gt;&lt;ol class=&quot;natural-pillars__list&quot;&gt;&lt;li data-ds=&quot;pillar-item&quot; class=&quot;pillar-item&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;1&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Better noodles start with better production&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;CO2-neutral production commitments and factory-level sourcing standards.&lt;/p&gt;&lt;/li&gt;&lt;li data-ds=&quot;pillar-item&quot; class=&quot;pillar-item&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;2&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Growing together with local communities&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;Sourcing partnerships and support programmes with local farming communities.&lt;/p&gt;&lt;/li&gt;&lt;li data-ds=&quot;pillar-item&quot; class=&quot;pillar-item&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;3&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Innovation in every recipe&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;R&amp;amp;D behind each natural substitution, tested to keep the exact same taste.&lt;/p&gt;&lt;/li&gt;&lt;li data-ds=&quot;pillar-item&quot; class=&quot;pillar-item&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;4&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Cleaner recipe. Same great taste.&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;Closing statement tying the four pillars back to the «Taste you can trust» claim.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;figure class=&quot;natural-pillars__media&quot;&gt;&lt;img class=&quot;natural-pillars__image&quot; src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;</pre></div></div>
+<div class="sc-card" id="sc-natural-pillars"><div class="sc-card__head"><h3>Natural pillars</h3><span class="sc-tag">2 variantes · 279:844</span></div><div class="sc-demo"><section data-ds="natural-pillars" class="section natural-pillars" aria-labelledby="np-title"><div class="section__inner"><div class="natural-pillars__grid"><div class="natural-pillars__content"><div class="natural-pillars__head"><h2 class="natural-pillars__title" id="np-title">Taste you can trust</h2><p class="natural-pillars__subtitle">Better for people, better for the planet</p></div><ol class="natural-pillars__list"><li data-ds="pillar-item" class="pillar-item"><span class="pillar-item__number" aria-hidden="true">1</span><p class="pillar-item__title">Better noodles start with better production</p><p class="pillar-item__text">CO2-neutral production commitments and factory-level sourcing standards.</p></li><li data-ds="pillar-item" class="pillar-item"><span class="pillar-item__number" aria-hidden="true">2</span><p class="pillar-item__title">Growing together with local communities</p><p class="pillar-item__text">Sourcing partnerships and support programmes with local farming communities.</p></li><li data-ds="pillar-item" class="pillar-item"><span class="pillar-item__number" aria-hidden="true">3</span><p class="pillar-item__title">Innovation in every recipe</p><p class="pillar-item__text">R&amp;D behind each natural substitution, tested to keep the exact same taste.</p></li><li data-ds="pillar-item" class="pillar-item"><span class="pillar-item__number" aria-hidden="true">4</span><p class="pillar-item__title">Cleaner recipe. Same great taste.</p><p class="pillar-item__text">Closing statement tying the four pillars back to the «Taste you can trust» claim.</p></li></ol></div><figure class="natural-pillars__media"><img class="natural-pillars__image" src="../assets/images/placeholder.svg" alt=""></figure></div></div></section></div><pre class="sc-code">&lt;section data-ds=&quot;natural-pillars&quot; class=&quot;section natural-pillars&quot; aria-labelledby=&quot;np-title&quot;&gt;&lt;div class=&quot;section__inner&quot;&gt;&lt;div class=&quot;natural-pillars__grid&quot;&gt;&lt;div class=&quot;natural-pillars__content&quot;&gt;&lt;div class=&quot;natural-pillars__head&quot;&gt;&lt;h2 class=&quot;natural-pillars__title&quot; id=&quot;np-title&quot;&gt;Taste you can trust&lt;/h2&gt;&lt;p class=&quot;natural-pillars__subtitle&quot;&gt;Better for people, better for the planet&lt;/p&gt;&lt;/div&gt;&lt;ol class=&quot;natural-pillars__list&quot;&gt;&lt;li data-ds=&quot;pillar-item&quot; class=&quot;pillar-item&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;1&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Better noodles start with better production&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;CO2-neutral production commitments and factory-level sourcing standards.&lt;/p&gt;&lt;/li&gt;&lt;li data-ds=&quot;pillar-item&quot; class=&quot;pillar-item&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;2&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Growing together with local communities&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;Sourcing partnerships and support programmes with local farming communities.&lt;/p&gt;&lt;/li&gt;&lt;li data-ds=&quot;pillar-item&quot; class=&quot;pillar-item&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;3&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Innovation in every recipe&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;R&amp;amp;D behind each natural substitution, tested to keep the exact same taste.&lt;/p&gt;&lt;/li&gt;&lt;li data-ds=&quot;pillar-item&quot; class=&quot;pillar-item&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;4&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Cleaner recipe. Same great taste.&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;Closing statement tying the four pillars back to the «Taste you can trust» claim.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;figure class=&quot;natural-pillars__media&quot;&gt;&lt;img class=&quot;natural-pillars__image&quot; src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;</pre></div>
+<div class="sc-card" id="sc-contest-hero"><div class="sc-card__head"><h3>Contest hero</h3><span class="sc-tag">2 variantes · 313:866 · icono</span></div><div class="sc-demo"><section data-ds="contest-hero" class="section contest-hero" aria-labelledby="ch-title">
+<div class="section__inner">
+<figure class="contest-hero__media"><img class="contest-hero__image" src="../assets/images/placeholder.svg" alt=""></figure>
+<div class="contest-hero__grid">
+<div class="contest-hero__content">
+<span class="badge badge--natural">Live now · Ends 30 Sept 2026</span>
+<h1 class="contest-hero__title" id="ch-title">Slurp &amp; Win</h1>
+<p class="contest-hero__lead">Buy, keep your receipt, and you could take home festival trips, kitchen gear and more.</p>
+<div class="contest-hero__actions">
+<a class="button button--l" href="#join">Enter now</a>
+<a class="link" href="/contests/slurp-and-win/rules">Read the rules</a>
+</div>
+</div>
+<aside class="contest-hero__how" aria-labelledby="ch-how">
+<h2 class="contest-hero__how-title" id="ch-how">How to participate</h2>
+<p class="contest-hero__how-text">Buy a participating pack, keep your receipt, and submit it in the form below before the deadline.</p>
+</aside>
+</div>
+</div>
+</section></div><pre class="sc-code">&lt;section data-ds=&quot;contest-hero&quot; class=&quot;section contest-hero&quot; aria-labelledby=&quot;ch-title&quot;&gt;
+&lt;div class=&quot;section__inner&quot;&gt;
+&lt;figure class=&quot;contest-hero__media&quot;&gt;&lt;img class=&quot;contest-hero__image&quot; src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/figure&gt;
+&lt;div class=&quot;contest-hero__grid&quot;&gt;
+&lt;div class=&quot;contest-hero__content&quot;&gt;
+&lt;span class=&quot;badge badge--natural&quot;&gt;Live now · Ends 30 Sept 2026&lt;/span&gt;
+&lt;h1 class=&quot;contest-hero__title&quot; id=&quot;ch-title&quot;&gt;Slurp &amp;amp; Win&lt;/h1&gt;
+&lt;p class=&quot;contest-hero__lead&quot;&gt;Buy, keep your receipt, and you could take home festival trips, kitchen gear and more.&lt;/p&gt;
+&lt;div class=&quot;contest-hero__actions&quot;&gt;
+&lt;a class=&quot;button button--l&quot; href=&quot;#join&quot;&gt;Enter now&lt;/a&gt;
+&lt;a class=&quot;link&quot; href=&quot;/contests/slurp-and-win/rules&quot;&gt;Read the rules&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;aside class=&quot;contest-hero__how&quot; aria-labelledby=&quot;ch-how&quot;&gt;
+&lt;h2 class=&quot;contest-hero__how-title&quot; id=&quot;ch-how&quot;&gt;How to participate&lt;/h2&gt;
+&lt;p class=&quot;contest-hero__how-text&quot;&gt;Buy a participating pack, keep your receipt, and submit it in the form below before the deadline.&lt;/p&gt;
+&lt;/aside&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;</pre></div>
+<div class="sc-card" id="sc-contest-prizes"><div class="sc-card__head"><h3>Contest prizes</h3><span class="sc-tag">2 variantes · 313:925</span></div><div class="sc-demo"><section data-ds="contest-prizes" class="section contest-prizes" aria-labelledby="cp-title">
+<div class="section__inner">
+<div class="section__header">
+<h2 class="section__title" id="cp-title">What's up for prizes</h2>
+<p class="section__lead">Four prize tiers, drawn weekly and at the grand final — every valid entry counts.</p>
+</div>
+<ul class="contest-prizes__list" tabindex="0" aria-label="Prizes">
+<li><article class="prize-card prize-card--grand">
+<div class="prize-card__media"><img src="../assets/images/placeholder.svg" alt=""></div>
+<div class="prize-card__body"><p class="prize-card__level">Grand prize</p><h3 class="prize-card__title">Festival weekend for two</h3><p class="prize-card__text">Two festival weekend passes, travel budget and backstage access to this year's festival partner.</p></div>
+</article></li>
+<li><article class="prize-card">
+<div class="prize-card__media"><img src="../assets/images/placeholder.svg" alt=""></div>
+<div class="prize-card__body"><p class="prize-card__level">Weekly prize · x50</p><h3 class="prize-card__title">Weekly runner-up boxes</h3><p class="prize-card__text">50 snack boxes given away every week for the length of the contest.</p></div>
+</article></li>
+</ul>
+</div>
+</section></div><pre class="sc-code">&lt;section data-ds=&quot;contest-prizes&quot; class=&quot;section contest-prizes&quot; aria-labelledby=&quot;cp-title&quot;&gt;
+&lt;div class=&quot;section__inner&quot;&gt;
+&lt;div class=&quot;section__header&quot;&gt;
+&lt;h2 class=&quot;section__title&quot; id=&quot;cp-title&quot;&gt;What&#x27;s up for prizes&lt;/h2&gt;
+&lt;p class=&quot;section__lead&quot;&gt;Four prize tiers, drawn weekly and at the grand final — every valid entry counts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;contest-prizes__list&quot; tabindex=&quot;0&quot; aria-label=&quot;Prizes&quot;&gt;
+&lt;li&gt;&lt;article class=&quot;prize-card prize-card--grand&quot;&gt;
+&lt;div class=&quot;prize-card__media&quot;&gt;&lt;img src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;prize-card__body&quot;&gt;&lt;p class=&quot;prize-card__level&quot;&gt;Grand prize&lt;/p&gt;&lt;h3 class=&quot;prize-card__title&quot;&gt;Festival weekend for two&lt;/h3&gt;&lt;p class=&quot;prize-card__text&quot;&gt;Two festival weekend passes, travel budget and backstage access to this year&#x27;s festival partner.&lt;/p&gt;&lt;/div&gt;
+&lt;/article&gt;&lt;/li&gt;
+&lt;li&gt;&lt;article class=&quot;prize-card&quot;&gt;
+&lt;div class=&quot;prize-card__media&quot;&gt;&lt;img src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;prize-card__body&quot;&gt;&lt;p class=&quot;prize-card__level&quot;&gt;Weekly prize · x50&lt;/p&gt;&lt;h3 class=&quot;prize-card__title&quot;&gt;Weekly runner-up boxes&lt;/h3&gt;&lt;p class=&quot;prize-card__text&quot;&gt;50 snack boxes given away every week for the length of the contest.&lt;/p&gt;&lt;/div&gt;
+&lt;/article&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/section&gt;</pre></div>
+<div class="sc-card" id="sc-contest-how-to"><div class="sc-card__head"><h3>Contest how-to</h3><span class="sc-tag">2 variantes · 313:2905 · icono</span></div><div class="sc-demo"><section data-ds="contest-howto" class="section contest-howto" aria-labelledby="ch2-title">
+<div class="section__inner">
+<div class="section__header">
+<h2 class="section__title" id="ch2-title">Easy to participate, easy to win</h2>
+<p class="section__lead">No purchase-free route needed here — if you already bought the product, you're most of the way there.</p>
+</div>
+<div class="contest-howto__grid">
+<div class="contest-howto__column">
+<h3 class="contest-howto__heading" id="ch2-steps">Steps</h3>
+<ol class="contest-howto__steps" aria-labelledby="ch2-steps">
+<li data-ds="pillar-item" class="pillar-item pillar-item--ink"><span class="pillar-item__number" aria-hidden="true">1</span><p class="pillar-item__title">Buy a participating pack</p><p class="pillar-item__text">Any GB Foods Noodlebox cup or bag purchased between 1 August and 30 September 2026 qualifies.</p></li>
+<li data-ds="pillar-item" class="pillar-item pillar-item--ink"><span class="pillar-item__number" aria-hidden="true">2</span><p class="pillar-item__title">Keep your receipt</p><p class="pillar-item__text">You'll need the purchase date, time and receipt number to complete the form below.</p></li>
+<li data-ds="pillar-item" class="pillar-item pillar-item--ink"><span class="pillar-item__number" aria-hidden="true">3</span><p class="pillar-item__title">Submit your entry</p><p class="pillar-item__text">Fill in the participation form with your details and a photo of the receipt.</p><p class="pillar-item__action"><a class="link" href="#join">Submit it now →</a></p></li>
+<li data-ds="pillar-item" class="pillar-item pillar-item--ink"><span class="pillar-item__number" aria-hidden="true">4</span><p class="pillar-item__title">Wait for the draw</p><p class="pillar-item__text">Weekly winners are drawn every Monday, the grand prize is drawn after the contest closes.</p></li>
+</ol>
+</div>
+<div class="contest-howto__column contest-howto__column--conditions">
+<h3 class="contest-howto__heading" id="ch2-conditions">Winning conditions</h3>
+<div data-ds="contest-conditions" class="contest-conditions">
+<ul class="contest-conditions__list">
+<li class="contest-conditions__item"><span class="icon icon-calendar-clock icon--inverse" aria-hidden="true"></span><span>Entries close: <strong>30 September 2026 at 23:59 CET</strong></span></li>
+<li class="contest-conditions__item"><span class="icon icon-trophy icon--inverse" aria-hidden="true"></span><span>Grand prize draw: <strong>7 October 2026</strong></span></li>
+</ul>
+<p class="contest-conditions__text">One entry per purchase. Proof of purchase is required.</p>
+<a class="link link--dark" href="/contests/slurp-and-win/rules">Read the full contest rules →</a>
+</div>
+</div>
+</div>
+</div>
+</section></div><pre class="sc-code">&lt;section data-ds=&quot;contest-howto&quot; class=&quot;section contest-howto&quot; aria-labelledby=&quot;ch2-title&quot;&gt;
+&lt;div class=&quot;section__inner&quot;&gt;
+&lt;div class=&quot;section__header&quot;&gt;
+&lt;h2 class=&quot;section__title&quot; id=&quot;ch2-title&quot;&gt;Easy to participate, easy to win&lt;/h2&gt;
+&lt;p class=&quot;section__lead&quot;&gt;No purchase-free route needed here — if you already bought the product, you&#x27;re most of the way there.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;contest-howto__grid&quot;&gt;
+&lt;div class=&quot;contest-howto__column&quot;&gt;
+&lt;h3 class=&quot;contest-howto__heading&quot; id=&quot;ch2-steps&quot;&gt;Steps&lt;/h3&gt;
+&lt;ol class=&quot;contest-howto__steps&quot; aria-labelledby=&quot;ch2-steps&quot;&gt;
+&lt;li data-ds=&quot;pillar-item&quot; class=&quot;pillar-item pillar-item--ink&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;1&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Buy a participating pack&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;Any GB Foods Noodlebox cup or bag purchased between 1 August and 30 September 2026 qualifies.&lt;/p&gt;&lt;/li&gt;
+&lt;li data-ds=&quot;pillar-item&quot; class=&quot;pillar-item pillar-item--ink&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;2&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Keep your receipt&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;You&#x27;ll need the purchase date, time and receipt number to complete the form below.&lt;/p&gt;&lt;/li&gt;
+&lt;li data-ds=&quot;pillar-item&quot; class=&quot;pillar-item pillar-item--ink&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;3&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Submit your entry&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;Fill in the participation form with your details and a photo of the receipt.&lt;/p&gt;&lt;p class=&quot;pillar-item__action&quot;&gt;&lt;a class=&quot;link&quot; href=&quot;#join&quot;&gt;Submit it now →&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li data-ds=&quot;pillar-item&quot; class=&quot;pillar-item pillar-item--ink&quot;&gt;&lt;span class=&quot;pillar-item__number&quot; aria-hidden=&quot;true&quot;&gt;4&lt;/span&gt;&lt;p class=&quot;pillar-item__title&quot;&gt;Wait for the draw&lt;/p&gt;&lt;p class=&quot;pillar-item__text&quot;&gt;Weekly winners are drawn every Monday, the grand prize is drawn after the contest closes.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&quot;contest-howto__column contest-howto__column--conditions&quot;&gt;
+&lt;h3 class=&quot;contest-howto__heading&quot; id=&quot;ch2-conditions&quot;&gt;Winning conditions&lt;/h3&gt;
+&lt;div data-ds=&quot;contest-conditions&quot; class=&quot;contest-conditions&quot;&gt;
+&lt;ul class=&quot;contest-conditions__list&quot;&gt;
+&lt;li class=&quot;contest-conditions__item&quot;&gt;&lt;span class=&quot;icon icon-calendar-clock icon--inverse&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span&gt;Entries close: &lt;strong&gt;30 September 2026 at 23:59 CET&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li class=&quot;contest-conditions__item&quot;&gt;&lt;span class=&quot;icon icon-trophy icon--inverse&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span&gt;Grand prize draw: &lt;strong&gt;7 October 2026&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;contest-conditions__text&quot;&gt;One entry per purchase. Proof of purchase is required.&lt;/p&gt;
+&lt;a class=&quot;link link--dark&quot; href=&quot;/contests/slurp-and-win/rules&quot;&gt;Read the full contest rules →&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;</pre></div>
+<div class="sc-card" id="sc-contest-form"><div class="sc-card__head"><h3>Contest form</h3><span class="sc-tag">2 variantes · 313:3247 · icono</span></div><div class="sc-demo"><section data-ds="contest-form" class="section contest-form" aria-labelledby="cf-title">
+<div class="section__inner">
+<div class="section__header">
+<h2 class="section__title" id="cf-title">Join it now</h2>
+<p class="section__lead">Fill out the form to enter the drawing</p>
+</div>
+<form class="contest-form__form" id="join" tabindex="-1" action="/contests/slurp-and-win/enter" method="post">
+<fieldset class="contest-form__block">
+<legend class="contest-form__legend">Personal data</legend>
+<div class="contest-form__grid">
+<div class="field"><label class="field__label" for="cf-first">First name<span class="field__required" aria-hidden="true">*</span></label><input class="field__control" id="cf-first" name="first-name" type="text" autocomplete="given-name" placeholder="Enter first name" required></div>
+<div class="field"><label class="field__label" for="cf-last">Last name<span class="field__required" aria-hidden="true">*</span></label><input class="field__control" id="cf-last" name="last-name" type="text" autocomplete="family-name" placeholder="Enter last name" required></div>
+<div class="field"><label class="field__label" for="cf-email">Email address<span class="field__required" aria-hidden="true">*</span></label><input class="field__control" id="cf-email" name="email" type="email" autocomplete="email" placeholder="Enter email address" required></div>
+<div class="field"><label class="field__label" for="cf-birth">Date of birth (DD/MM/YYYY)<span class="field__required" aria-hidden="true">*</span></label><input class="field__control" id="cf-birth" name="birth-date" type="text" inputmode="numeric" autocomplete="bday" placeholder="DD/MM/YYYY" required></div>
+</div>
+</fieldset>
+<fieldset class="contest-form__block">
+<legend class="contest-form__legend">Proof of purchase</legend>
+<div class="contest-form__grid">
+<div class="field contest-form__full"><label class="field__label" for="cf-type">Purchase type<span class="field__required" aria-hidden="true">*</span></label><div class="field__select"><select class="field__control" id="cf-type" name="purchase-type" required><option value="">Select an option</option></select></div></div>
+<div class="field contest-form__full"><label class="field__label" for="cf-amount">Amount spent<span class="field__required" aria-hidden="true">*</span></label><input class="field__control" id="cf-amount" name="amount" type="text" inputmode="decimal" placeholder="0.00" required></div>
+</div>
+</fieldset>
+<fieldset class="contest-form__block">
+<legend class="contest-form__legend">Consent</legend>
+<div class="contest-form__consent">
+<label class="checkbox" data-ds="checkbox"><input class="checkbox__input" type="checkbox" name="age" required><span class="checkbox__label">I confirm I am 18 years or older and a resident of a participating country.<span class="field__required" aria-hidden="true">*</span></span></label>
+<label class="checkbox" data-ds="checkbox"><input class="checkbox__input" type="checkbox" name="rules" required><span class="checkbox__label">I have read and accept the <a class="link" href="/contests/slurp-and-win/rules">Contest Rules</a>.<span class="field__required" aria-hidden="true">*</span></span></label>
+<label class="checkbox" data-ds="checkbox"><input class="checkbox__input" type="checkbox" name="privacy" required><span class="checkbox__label">I have read the Privacy Notice on how my personal data will be processed for this contest.<span class="field__required" aria-hidden="true">*</span></span></label>
+<p class="contest-form__note">* Required fields</p>
+<div class="alert"><span class="icon icon-info" aria-hidden="true"></span><div class="alert__content"><p class="alert__title">Important information</p><p class="alert__body">Save your purchase tickets to send us if you win any of the contest prizes.</p></div></div>
+</div>
+<button class="button button--l contest-form__submit" type="submit">Enter the contest</button>
+<p class="contest-form__help">Having trouble? Check the <a class="link" href="/contests/slurp-and-win/rules">full contest rules</a> or contact <a class="link" href="/contact">customer care</a>.</p>
+</fieldset>
+</form>
+</div>
+</section></div><pre class="sc-code">&lt;section data-ds=&quot;contest-form&quot; class=&quot;section contest-form&quot; aria-labelledby=&quot;cf-title&quot;&gt;
+&lt;div class=&quot;section__inner&quot;&gt;
+&lt;div class=&quot;section__header&quot;&gt;
+&lt;h2 class=&quot;section__title&quot; id=&quot;cf-title&quot;&gt;Join it now&lt;/h2&gt;
+&lt;p class=&quot;section__lead&quot;&gt;Fill out the form to enter the drawing&lt;/p&gt;
+&lt;/div&gt;
+&lt;form class=&quot;contest-form__form&quot; id=&quot;join&quot; tabindex=&quot;-1&quot; action=&quot;/contests/slurp-and-win/enter&quot; method=&quot;post&quot;&gt;
+&lt;fieldset class=&quot;contest-form__block&quot;&gt;
+&lt;legend class=&quot;contest-form__legend&quot;&gt;Personal data&lt;/legend&gt;
+&lt;div class=&quot;contest-form__grid&quot;&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label class=&quot;field__label&quot; for=&quot;cf-first&quot;&gt;First name&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;input class=&quot;field__control&quot; id=&quot;cf-first&quot; name=&quot;first-name&quot; type=&quot;text&quot; autocomplete=&quot;given-name&quot; placeholder=&quot;Enter first name&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label class=&quot;field__label&quot; for=&quot;cf-last&quot;&gt;Last name&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;input class=&quot;field__control&quot; id=&quot;cf-last&quot; name=&quot;last-name&quot; type=&quot;text&quot; autocomplete=&quot;family-name&quot; placeholder=&quot;Enter last name&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label class=&quot;field__label&quot; for=&quot;cf-email&quot;&gt;Email address&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;input class=&quot;field__control&quot; id=&quot;cf-email&quot; name=&quot;email&quot; type=&quot;email&quot; autocomplete=&quot;email&quot; placeholder=&quot;Enter email address&quot; required&gt;&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;&lt;label class=&quot;field__label&quot; for=&quot;cf-birth&quot;&gt;Date of birth (DD/MM/YYYY)&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;input class=&quot;field__control&quot; id=&quot;cf-birth&quot; name=&quot;birth-date&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;bday&quot; placeholder=&quot;DD/MM/YYYY&quot; required&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/fieldset&gt;
+&lt;fieldset class=&quot;contest-form__block&quot;&gt;
+&lt;legend class=&quot;contest-form__legend&quot;&gt;Proof of purchase&lt;/legend&gt;
+&lt;div class=&quot;contest-form__grid&quot;&gt;
+&lt;div class=&quot;field contest-form__full&quot;&gt;&lt;label class=&quot;field__label&quot; for=&quot;cf-type&quot;&gt;Purchase type&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;div class=&quot;field__select&quot;&gt;&lt;select class=&quot;field__control&quot; id=&quot;cf-type&quot; name=&quot;purchase-type&quot; required&gt;&lt;option value=&quot;&quot;&gt;Select an option&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;field contest-form__full&quot;&gt;&lt;label class=&quot;field__label&quot; for=&quot;cf-amount&quot;&gt;Amount spent&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/label&gt;&lt;input class=&quot;field__control&quot; id=&quot;cf-amount&quot; name=&quot;amount&quot; type=&quot;text&quot; inputmode=&quot;decimal&quot; placeholder=&quot;0.00&quot; required&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/fieldset&gt;
+&lt;fieldset class=&quot;contest-form__block&quot;&gt;
+&lt;legend class=&quot;contest-form__legend&quot;&gt;Consent&lt;/legend&gt;
+&lt;div class=&quot;contest-form__consent&quot;&gt;
+&lt;label class=&quot;checkbox&quot; data-ds=&quot;checkbox&quot;&gt;&lt;input class=&quot;checkbox__input&quot; type=&quot;checkbox&quot; name=&quot;age&quot; required&gt;&lt;span class=&quot;checkbox__label&quot;&gt;I confirm I am 18 years or older and a resident of a participating country.&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;checkbox&quot; data-ds=&quot;checkbox&quot;&gt;&lt;input class=&quot;checkbox__input&quot; type=&quot;checkbox&quot; name=&quot;rules&quot; required&gt;&lt;span class=&quot;checkbox__label&quot;&gt;I have read and accept the &lt;a class=&quot;link&quot; href=&quot;/contests/slurp-and-win/rules&quot;&gt;Contest Rules&lt;/a&gt;.&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;label class=&quot;checkbox&quot; data-ds=&quot;checkbox&quot;&gt;&lt;input class=&quot;checkbox__input&quot; type=&quot;checkbox&quot; name=&quot;privacy&quot; required&gt;&lt;span class=&quot;checkbox__label&quot;&gt;I have read the Privacy Notice on how my personal data will be processed for this contest.&lt;span class=&quot;field__required&quot; aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;p class=&quot;contest-form__note&quot;&gt;* Required fields&lt;/p&gt;
+&lt;div class=&quot;alert&quot;&gt;&lt;span class=&quot;icon icon-info&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;div class=&quot;alert__content&quot;&gt;&lt;p class=&quot;alert__title&quot;&gt;Important information&lt;/p&gt;&lt;p class=&quot;alert__body&quot;&gt;Save your purchase tickets to send us if you win any of the contest prizes.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class=&quot;button button--l contest-form__submit&quot; type=&quot;submit&quot;&gt;Enter the contest&lt;/button&gt;
+&lt;p class=&quot;contest-form__help&quot;&gt;Having trouble? Check the &lt;a class=&quot;link&quot; href=&quot;/contests/slurp-and-win/rules&quot;&gt;full contest rules&lt;/a&gt; or contact &lt;a class=&quot;link&quot; href=&quot;/contact&quot;&gt;customer care&lt;/a&gt;.&lt;/p&gt;
+&lt;/fieldset&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;/section&gt;</pre></div>
+<div class="sc-card" id="sc-contest-community"><div class="sc-card__head"><h3>Contest community</h3><span class="sc-tag">2 variantes · 313:3452 · icono</span></div><div class="sc-demo"><section data-ds="contest-community" class="section contest-community" aria-labelledby="cc2-title">
+<div class="section__inner">
+<div class="section__header">
+<h2 class="section__title" id="cc2-title">Real moments from past winners</h2>
+<p class="section__lead">Past festival-weekend winners share what they walked away with.</p>
+</div>
+<div data-ds="video-player" class="video-player">
+<img class="video-player__poster" src="../assets/images/placeholder.svg" alt="">
+<button class="video-player__play" type="button" aria-label="Play video: Real moments from past winners (0:45)"><span class="icon icon-play" aria-hidden="true"></span></button>
+<span class="video-player__duration" aria-hidden="true">0:45</span>
+</div>
+<h3 class="contest-community__heading" id="cc2-shared">Shared by the community</h3>
+<ul class="contest-community__list" tabindex="0" aria-label="Shared by the community">
+<li><figure data-ds="community-card" class="community-card"><div class="community-card__media"><img src="../assets/images/placeholder.svg" alt=""></div><figcaption class="community-card__caption">@user2 · Home Ramen Kit unboxing</figcaption></figure></li>
+<li><figure data-ds="community-card" class="community-card"><div class="community-card__media"><img src="../assets/images/placeholder.svg" alt=""></div><figcaption class="community-card__caption">@user3 · Merch pack haul</figcaption></figure></li>
+<li><figure data-ds="community-card" class="community-card"><div class="community-card__media"><img src="../assets/images/placeholder.svg" alt=""></div><figcaption class="community-card__caption">@user4 · Weekend winner tour</figcaption></figure></li>
+</ul>
+</div>
+</section></div><pre class="sc-code">&lt;section data-ds=&quot;contest-community&quot; class=&quot;section contest-community&quot; aria-labelledby=&quot;cc2-title&quot;&gt;
+&lt;div class=&quot;section__inner&quot;&gt;
+&lt;div class=&quot;section__header&quot;&gt;
+&lt;h2 class=&quot;section__title&quot; id=&quot;cc2-title&quot;&gt;Real moments from past winners&lt;/h2&gt;
+&lt;p class=&quot;section__lead&quot;&gt;Past festival-weekend winners share what they walked away with.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div data-ds=&quot;video-player&quot; class=&quot;video-player&quot;&gt;
+&lt;img class=&quot;video-player__poster&quot; src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;
+&lt;button class=&quot;video-player__play&quot; type=&quot;button&quot; aria-label=&quot;Play video: Real moments from past winners (0:45)&quot;&gt;&lt;span class=&quot;icon icon-play&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;span class=&quot;video-player__duration&quot; aria-hidden=&quot;true&quot;&gt;0:45&lt;/span&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;contest-community__heading&quot; id=&quot;cc2-shared&quot;&gt;Shared by the community&lt;/h3&gt;
+&lt;ul class=&quot;contest-community__list&quot; tabindex=&quot;0&quot; aria-label=&quot;Shared by the community&quot;&gt;
+&lt;li&gt;&lt;figure data-ds=&quot;community-card&quot; class=&quot;community-card&quot;&gt;&lt;div class=&quot;community-card__media&quot;&gt;&lt;img src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;&lt;figcaption class=&quot;community-card__caption&quot;&gt;@user2 · Home Ramen Kit unboxing&lt;/figcaption&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;figure data-ds=&quot;community-card&quot; class=&quot;community-card&quot;&gt;&lt;div class=&quot;community-card__media&quot;&gt;&lt;img src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;&lt;figcaption class=&quot;community-card__caption&quot;&gt;@user3 · Merch pack haul&lt;/figcaption&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;figure data-ds=&quot;community-card&quot; class=&quot;community-card&quot;&gt;&lt;div class=&quot;community-card__media&quot;&gt;&lt;img src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;&lt;figcaption class=&quot;community-card__caption&quot;&gt;@user4 · Weekend winner tour&lt;/figcaption&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/section&gt;</pre></div>
+<div class="sc-card" id="sc-contest-result"><div class="sc-card__head"><h3>Contest result</h3><span class="sc-tag">6 variantes · 313:3567 · icono</span></div><div class="sc-demo"><section data-ds="contest-result" class="section contest-result" aria-labelledby="cr-title">
+<div class="contest-result__inner">
+<h1 class="contest-result__title" id="cr-title">Oh crap… Your entry hasn't won a prize this time</h1>
+<p class="contest-result__text"><strong>Don't lose your one use 15% discount voucher</strong><br>Download it and use it in your next Yatekomo noodle cup purchase:</p>
+<div data-ds="voucher" class="voucher">
+<div class="voucher__main"><p class="voucher__value">15% OFF</p><p class="voucher__label">Discount voucher</p></div>
+<div class="voucher__stub"><img class="voucher__barcode" src="../assets/images/placeholder.svg" alt="Barcode 0876562-R"><span class="voucher__code" aria-hidden="true">0876562-R</span></div>
+</div>
+<a class="button button--l" href="/contests/slurp-and-win/voucher.pdf" download>Download discount voucher</a>
+</div>
+</section>
+
+<section data-ds="contest-result" class="section contest-result contest-result--win" aria-labelledby="cr-title-win">
+<div class="contest-result__inner">
+<figure class="contest-result__media"><img class="contest-result__image" src="../assets/images/placeholder.svg" alt="Prize won"></figure>
+<h1 class="contest-result__title" id="cr-title-win">Oh my noodles!</h1>
+<p class="contest-result__subtitle">Your entry has won the prize</p>
+<p class="contest-result__text">We'll verify your entry and send you an email to process your prize if everything is in order.</p>
+<a class="button button--l button--secondary" href="/contests/slurp-and-win">Go back to the contest site</a>
+</div>
+</section>
+
+<section data-ds="contest-result" class="section contest-result contest-result--limit" aria-labelledby="cr-title-limit">
+<div class="contest-result__inner">
+<h1 class="contest-result__title" id="cr-title-limit">You have surpassed the maximum participations allowed</h1>
+<p class="contest-result__text"><strong>You can't participate in this contest anymore but we'd like to reward your loyalty with a discount voucher</strong><br>Download it and use it in your next Yatekomo noodle cup purchase:</p>
+<div data-ds="voucher" class="voucher">
+<div class="voucher__main"><p class="voucher__value">25% OFF</p><p class="voucher__label">Discount voucher</p></div>
+<div class="voucher__stub"><img class="voucher__barcode" src="../assets/images/placeholder.svg" alt="Barcode 0876562-R"><span class="voucher__code" aria-hidden="true">0876562-R</span></div>
+</div>
+<a class="button button--l" href="/contests/slurp-and-win/voucher.pdf" download>Download discount voucher</a>
+</div>
+</section></div><pre class="sc-code">&lt;section data-ds=&quot;contest-result&quot; class=&quot;section contest-result&quot; aria-labelledby=&quot;cr-title&quot;&gt;
+&lt;div class=&quot;contest-result__inner&quot;&gt;
+&lt;h1 class=&quot;contest-result__title&quot; id=&quot;cr-title&quot;&gt;Oh crap… Your entry hasn&#x27;t won a prize this time&lt;/h1&gt;
+&lt;p class=&quot;contest-result__text&quot;&gt;&lt;strong&gt;Don&#x27;t lose your one use 15% discount voucher&lt;/strong&gt;&lt;br&gt;Download it and use it in your next Yatekomo noodle cup purchase:&lt;/p&gt;
+&lt;div data-ds=&quot;voucher&quot; class=&quot;voucher&quot;&gt;
+&lt;div class=&quot;voucher__main&quot;&gt;&lt;p class=&quot;voucher__value&quot;&gt;15% OFF&lt;/p&gt;&lt;p class=&quot;voucher__label&quot;&gt;Discount voucher&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;voucher__stub&quot;&gt;&lt;img class=&quot;voucher__barcode&quot; src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;Barcode 0876562-R&quot;&gt;&lt;span class=&quot;voucher__code&quot; aria-hidden=&quot;true&quot;&gt;0876562-R&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;a class=&quot;button button--l&quot; href=&quot;/contests/slurp-and-win/voucher.pdf&quot; download&gt;Download discount voucher&lt;/a&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section data-ds=&quot;contest-result&quot; class=&quot;section contest-result contest-result--win&quot; aria-labelledby=&quot;cr-title-win&quot;&gt;
+&lt;div class=&quot;contest-result__inner&quot;&gt;
+&lt;figure class=&quot;contest-result__media&quot;&gt;&lt;img class=&quot;contest-result__image&quot; src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;Prize won&quot;&gt;&lt;/figure&gt;
+&lt;h1 class=&quot;contest-result__title&quot; id=&quot;cr-title-win&quot;&gt;Oh my noodles!&lt;/h1&gt;
+&lt;p class=&quot;contest-result__subtitle&quot;&gt;Your entry has won the prize&lt;/p&gt;
+&lt;p class=&quot;contest-result__text&quot;&gt;We&#x27;ll verify your entry and send you an email to process your prize if everything is in order.&lt;/p&gt;
+&lt;a class=&quot;button button--l button--secondary&quot; href=&quot;/contests/slurp-and-win&quot;&gt;Go back to the contest site&lt;/a&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section data-ds=&quot;contest-result&quot; class=&quot;section contest-result contest-result--limit&quot; aria-labelledby=&quot;cr-title-limit&quot;&gt;
+&lt;div class=&quot;contest-result__inner&quot;&gt;
+&lt;h1 class=&quot;contest-result__title&quot; id=&quot;cr-title-limit&quot;&gt;You have surpassed the maximum participations allowed&lt;/h1&gt;
+&lt;p class=&quot;contest-result__text&quot;&gt;&lt;strong&gt;You can&#x27;t participate in this contest anymore but we&#x27;d like to reward your loyalty with a discount voucher&lt;/strong&gt;&lt;br&gt;Download it and use it in your next Yatekomo noodle cup purchase:&lt;/p&gt;
+&lt;div data-ds=&quot;voucher&quot; class=&quot;voucher&quot;&gt;
+&lt;div class=&quot;voucher__main&quot;&gt;&lt;p class=&quot;voucher__value&quot;&gt;25% OFF&lt;/p&gt;&lt;p class=&quot;voucher__label&quot;&gt;Discount voucher&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;voucher__stub&quot;&gt;&lt;img class=&quot;voucher__barcode&quot; src=&quot;../assets/images/placeholder.svg&quot; alt=&quot;Barcode 0876562-R&quot;&gt;&lt;span class=&quot;voucher__code&quot; aria-hidden=&quot;true&quot;&gt;0876562-R&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;a class=&quot;button button--l&quot; href=&quot;/contests/slurp-and-win/voucher.pdf&quot; download&gt;Download discount voucher&lt;/a&gt;
+&lt;/div&gt;
+&lt;/section&gt;</pre></div></div>
 <!-- ⚙️ GENERATED:end:patterns -->
       </section>
 
@@ -1943,7 +2751,7 @@
         <h2>Assets</h2>
         <p class="sc-section__lead">Iconos y fuentes exportados de Figma a <code>assets/</code>, documentados en <code>docs/assets.md</code>.</p>
         <!-- ⚙️ GENERATED:start:assets -->
-<div class="sc-grid"><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/arrow-left.svg" alt="Icon / arrow-left" width="24" height="24"></div><pre class="sc-code">arrow-left.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/arrow-right.svg" alt="Icon / arrow-right" width="24" height="24"></div><pre class="sc-code">arrow-right.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/check.svg" alt="Icon / check" width="24" height="24"></div><pre class="sc-code">check.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/chevron-down.svg" alt="Icon / chevron-down" width="24" height="24"></div><pre class="sc-code">chevron-down.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/circle-alert.svg" alt="Icon / circle-alert" width="24" height="24"></div><pre class="sc-code">circle-alert.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/close.svg" alt="Icon / close" width="24" height="24"></div><pre class="sc-code">close.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/external-link.svg" alt="Icon / external-link" width="24" height="24"></div><pre class="sc-code">external-link.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/instagram.svg" alt="Icon / instagram" width="24" height="24"></div><pre class="sc-code">instagram.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/menu.svg" alt="Icon / menu" width="24" height="24"></div><pre class="sc-code">menu.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/minus.svg" alt="Icon / minus" width="24" height="24"></div><pre class="sc-code">minus.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/play.svg" alt="Icon / play" width="24" height="24"></div><pre class="sc-code">play.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/plus.svg" alt="Icon / plus" width="24" height="24"></div><pre class="sc-code">plus.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/search.svg" alt="Icon / search" width="24" height="24"></div><pre class="sc-code">search.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/tiktok.svg" alt="Icon / tiktok" width="24" height="24"></div><pre class="sc-code">tiktok.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/timer.svg" alt="Icon / timer" width="24" height="24"></div><pre class="sc-code">timer.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/x.svg" alt="Icon / x" width="24" height="24"></div><pre class="sc-code">x.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/youtube.svg" alt="Icon / youtube" width="24" height="24"></div><pre class="sc-code">youtube.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/pause.svg" alt="Icon / pause" width="24" height="24"></div><pre class="sc-code">pause.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/rotate-ccw.svg" alt="Icon / rotate-ccw" width="24" height="24"></div><pre class="sc-code">rotate-ccw.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/info.svg" alt="Icon / info" width="24" height="24"></div><pre class="sc-code">info.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/circle-check.svg" alt="Icon / circle-check" width="24" height="24"></div><pre class="sc-code">circle-check.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/triangle-alert.svg" alt="Icon / triangle-alert" width="24" height="24"></div><pre class="sc-code">triangle-alert.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/message-circle.svg" alt="Icon / message-circle" width="24" height="24"></div><pre class="sc-code">message-circle.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/facebook.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">facebook.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/link.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">link.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/send.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">send.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/telegram.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">telegram.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/trash.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">trash.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/whatsapp.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">whatsapp.svg</pre></div></div>
+<div class="sc-grid"><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/arrow-left.svg" alt="Icon / arrow-left" width="24" height="24"></div><pre class="sc-code">arrow-left.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/arrow-right.svg" alt="Icon / arrow-right" width="24" height="24"></div><pre class="sc-code">arrow-right.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/check.svg" alt="Icon / check" width="24" height="24"></div><pre class="sc-code">check.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/chevron-down.svg" alt="Icon / chevron-down" width="24" height="24"></div><pre class="sc-code">chevron-down.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/circle-alert.svg" alt="Icon / circle-alert" width="24" height="24"></div><pre class="sc-code">circle-alert.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/close.svg" alt="Icon / close" width="24" height="24"></div><pre class="sc-code">close.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/external-link.svg" alt="Icon / external-link" width="24" height="24"></div><pre class="sc-code">external-link.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/instagram.svg" alt="Icon / instagram" width="24" height="24"></div><pre class="sc-code">instagram.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/menu.svg" alt="Icon / menu" width="24" height="24"></div><pre class="sc-code">menu.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/minus.svg" alt="Icon / minus" width="24" height="24"></div><pre class="sc-code">minus.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/play.svg" alt="Icon / play" width="24" height="24"></div><pre class="sc-code">play.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/plus.svg" alt="Icon / plus" width="24" height="24"></div><pre class="sc-code">plus.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/search.svg" alt="Icon / search" width="24" height="24"></div><pre class="sc-code">search.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/tiktok.svg" alt="Icon / tiktok" width="24" height="24"></div><pre class="sc-code">tiktok.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/timer.svg" alt="Icon / timer" width="24" height="24"></div><pre class="sc-code">timer.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/x.svg" alt="Icon / x" width="24" height="24"></div><pre class="sc-code">x.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/youtube.svg" alt="Icon / youtube" width="24" height="24"></div><pre class="sc-code">youtube.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/pause.svg" alt="Icon / pause" width="24" height="24"></div><pre class="sc-code">pause.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/rotate-ccw.svg" alt="Icon / rotate-ccw" width="24" height="24"></div><pre class="sc-code">rotate-ccw.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/info.svg" alt="Icon / info" width="24" height="24"></div><pre class="sc-code">info.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/circle-check.svg" alt="Icon / circle-check" width="24" height="24"></div><pre class="sc-code">circle-check.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/triangle-alert.svg" alt="Icon / triangle-alert" width="24" height="24"></div><pre class="sc-code">triangle-alert.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/message-circle.svg" alt="Icon / message-circle" width="24" height="24"></div><pre class="sc-code">message-circle.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/calendar-clock.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">calendar-clock.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/facebook.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">facebook.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/link.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">link.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/send.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">send.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/telegram.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">telegram.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/trash.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">trash.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/trophy.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">trophy.svg</pre></div><div class="sc-card"><div class="sc-demo"><img src="../assets/icons/whatsapp.svg" alt="unknown (no está en sync/icons.json)" width="24" height="24"></div><pre class="sc-code">whatsapp.svg</pre></div></div>
 <!-- ⚙️ GENERATED:end:assets -->
       </section>
     </main>

@@ -1,0 +1,36 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="contest-library" class="section contest-library" aria-label="Contests">
+<div class="section__inner contest-library__inner">
+<div class="contest-library__group" aria-labelledby="cl-active">
+<div class="section__header"><h2 class="section__title" id="cl-active">Active contests</h2></div>
+<ul class="contest-library__grid">
+<li><article class="contest-card">
+<div class="contest-card__media"><img src="/assets/ds/images/placeholder.svg" alt=""></div>
+<div class="contest-card__body">
+<p class="contest-card__dates" id="cl-a1-dates">Available until 20/9/2026</p>
+<h3 class="contest-card__title"><a class="contest-card__link" href="/contests/slurp-and-win" aria-describedby="cl-a1-dates">Slurp &amp; Win</a></h3>
+<ul class="contest-card__prizes" aria-label="Prizes"><li><span class="chip">T-shirts</span></li><li><span class="chip">Balls</span></li><li><span class="chip">Experience</span></li></ul>
+</div>
+</article></li>
+</ul>
+</div>
+<div class="contest-library__group" aria-labelledby="cl-closed">
+<div class="section__header">
+<h2 class="section__title" id="cl-closed">Closed contests</h2>
+<p class="section__lead">Take another look at everything we've given away</p>
+</div>
+<ul class="contest-library__grid">
+<li><article class="contest-card">
+<div class="contest-card__media"><span class="badge badge--neutral">Closed</span><img src="/assets/ds/images/placeholder.svg" alt=""></div>
+<div class="contest-card__body">
+<p class="contest-card__dates" id="cl-c1-dates">Ended on 20/9/2026</p>
+<h3 class="contest-card__title"><a class="contest-card__link" href="/contests/old-contest" aria-describedby="cl-c1-dates">Old contest</a></h3>
+<ul class="contest-card__prizes" aria-label="Prizes"><li><span class="chip">Balls</span></li></ul>
+</div>
+</article></li>
+</ul>
+<div class="contest-library__more"><button class="button button--secondary" type="button">Load more</button></div>
+</div>
+</div>
+</section>{% endraw %}
+{% endmacro %}

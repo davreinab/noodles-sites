@@ -1,0 +1,250 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:file-upload",
+  "contractVersion": "2",
+  "meta": {
+    "name": "File upload",
+    "slug": "file-upload",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-23T09:36:22Z",
+    "description": "File upload: campo de subida de archivo para el formulario de concurso (Proof of purchase: foto del ticket delantera y trasera). State=Empty: «No file selected — JPG, PNG or PDF, max 5MB». State=Selected: nombre del archivo y icono close (Remove). State=Error: borde y mensaje en color de error (field/border-error, field/error-text). Tokens de Input (field/*). En código: input type=\"file\" real, visualmente oculto pero accesible, con su label; el botón «Upload file» es el visible. Clase CSS: .file-upload (estado: .file-upload--selected / --error). ⬜ TODO GB Foods: formatos y tamaño máximo definitivos (JPG, PNG, PDF, 5 MB).",
+    "figmaPage": "Forms",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 3,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "2a440005eb84",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-23",
+      "figmaVersion": "2a440005eb84",
+      "variantsChecked": [
+        "State=Empty",
+        "State=Selected",
+        "State=Error"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "default": "Upload receipt — front",
+        "figma": "Label#308:21"
+      },
+      {
+        "name": "helper",
+        "type": "string",
+        "default": "Upload a clear photo of the receipt.",
+        "figma": "Helper#308:25"
+      },
+      {
+        "name": "empty",
+        "type": "boolean",
+        "default": true,
+        "figma": "State=Empty"
+      },
+      {
+        "name": "selected",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Selected"
+      },
+      {
+        "name": "error",
+        "type": "boolean",
+        "default": false,
+        "figma": "State=Error"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thick",
+      "border/width/thin",
+      "button/secondary/border",
+      "button/secondary/text",
+      "field/bg",
+      "field/border",
+      "field/helper",
+      "field/label",
+      "field/placeholder",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/body-s",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "radius/md",
+      "radius/pill",
+      "space/16",
+      "space/24",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "button",
+      "button--secondary",
+      "field",
+      "field__error",
+      "field__helper",
+      "field__label",
+      "field__required",
+      "file-upload",
+      "file-upload__control",
+      "file-upload__input",
+      "file-upload__remove",
+      "file-upload__status",
+      "file-upload__status--selected",
+      "file-upload__trigger",
+      "icon",
+      "icon-button",
+      "icon-button--secondary",
+      "icon-close",
+      "visually-hidden"
+    ],
+    "example": "<div data-ds=\"file-upload\" class=\"field file-upload\">\n<label class=\"field__label\" id=\"fu-front-label\" for=\"fu-front\">Upload receipt – front<span class=\"field__required\" aria-hidden=\"true\">*</span></label>\n<div class=\"file-upload__control\">\n<label class=\"button button--secondary file-upload__trigger\">\n<input class=\"visually-hidden file-upload__input\" id=\"fu-front\" name=\"receipt-front\" type=\"file\" accept=\"image/jpeg,image/png,application/pdf\" required aria-labelledby=\"fu-front-label\" aria-describedby=\"fu-front-help fu-front-status\">\n<span>Upload file</span>\n</label>\n<p class=\"file-upload__status\" id=\"fu-front-status\" aria-live=\"polite\">No file selected — JPG, PNG or PDF, max 5MB</p>\n</div>\n<p class=\"field__helper\" id=\"fu-front-help\">Make sure the purchased products are clearly visible on the receipt.</p>\n</div>\n<div data-ds=\"file-upload\" class=\"field file-upload\">\n<label class=\"field__label\" id=\"fu-back-label\" for=\"fu-back\">Upload receipt – back<span class=\"field__required\" aria-hidden=\"true\">*</span></label>\n<div class=\"file-upload__control\">\n<label class=\"button button--secondary file-upload__trigger\">\n<input class=\"visually-hidden file-upload__input\" id=\"fu-back\" name=\"receipt-back\" type=\"file\" accept=\"image/jpeg,image/png,application/pdf\" aria-labelledby=\"fu-back-label\" aria-describedby=\"fu-back-help fu-back-status\">\n<span>Upload file</span>\n</label>\n<p class=\"file-upload__status file-upload__status--selected\" id=\"fu-back-status\" aria-live=\"polite\">receipt-back.jpg</p>\n<button class=\"icon-button icon-button--secondary file-upload__remove\" type=\"button\" aria-label=\"Remove receipt-back.jpg\"><span class=\"icon icon-close\" aria-hidden=\"true\"></span></button>\n</div>\n<p class=\"field__helper\" id=\"fu-back-help\">Optional: the back of the receipt.</p>\n</div>\n<div data-ds=\"file-upload\" class=\"field file-upload\">\n<label class=\"field__label\" id=\"fu-err-label\" for=\"fu-err\">Upload receipt – front<span class=\"field__required\" aria-hidden=\"true\">*</span></label>\n<div class=\"file-upload__control\">\n<label class=\"button button--secondary file-upload__trigger\">\n<input class=\"visually-hidden file-upload__input\" id=\"fu-err\" name=\"receipt-err\" type=\"file\" aria-invalid=\"true\" required aria-labelledby=\"fu-err-label\" aria-describedby=\"fu-err-help fu-err-status fu-err-error\">\n<span>Upload file</span>\n</label>\n<p class=\"file-upload__status\" id=\"fu-err-status\" aria-live=\"polite\">No file selected — JPG, PNG or PDF, max 5MB</p>\n</div>\n<p class=\"field__helper\" id=\"fu-err-help\">Make sure the purchased products are clearly visible on the receipt.</p>\n<p class=\"field__error\" id=\"fu-err-error\">The file is bigger than 5MB. Choose another one.</p>\n</div>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "308:2420",
+    "componentKey": "f932902f2b15bdf4575a5356a157d368d97f8378",
+    "propertyNames": {
+      "label": "Label#308:21",
+      "helper": "Helper#308:25",
+      "empty": "State=Empty",
+      "selected": "State=Selected",
+      "error": "State=Error"
+    },
+    "variantAxes": {
+      "State": [
+        "Empty",
+        "Selected",
+        "Error"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Button",
+        "component": "Hierarchy=Secondary, Size=M, State=Default",
+        "componentSlug": "button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "toggledBy": "Icon leading#33:25",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "toggledBy": "Icon trailing#33:50",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
+      "itemSpacing: space/8",
+      "fills: field/label",
+      "fontSize: font/size/desktop/label",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/label",
+      "color: field/label",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: field/bg",
+      "strokes: field/border",
+      "color: field/bg",
+      "color: field/border",
+      "paddingLeft: space/24",
+      "paddingRight: space/24",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thick",
+      "strokeBottomWeight: border/width/thick",
+      "strokeLeftWeight: border/width/thick",
+      "strokeRightWeight: border/width/thick",
+      "strokes: button/secondary/border",
+      "color: button/secondary/border",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: button/secondary/text",
+      "color: button/secondary/text",
+      "fills: button/secondary/text",
+      "fills: field/placeholder",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: field/placeholder",
+      "fills: field/helper",
+      "fontSize: font/size/desktop/body-s",
+      "lineHeight: font/line-height/desktop/body-s",
+      "color: field/helper"
+    ],
+    "textStyles": [
+      "Desktop/label",
+      "Desktop/body-m",
+      "Desktop/body-s"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/file-upload.md",
+    "section": "File upload"
+  },
+  "relations": {
+    "uses": [
+      "button",
+      "icon-arrow-right"
+    ],
+    "related": []
+  }
+}

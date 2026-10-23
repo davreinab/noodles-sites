@@ -1,0 +1,27 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="newsletter" class="section newsletter" aria-labelledby="nl-title">
+<div class="section__inner newsletter__grid">
+<div class="newsletter__content">
+<h2 class="newsletter__title" id="nl-title">Don't miss a thing</h2>
+<p class="newsletter__text">Subscribe to our newsletter and follow us to stay up to date on all the contests from the very start.</p>
+<div class="newsletter__social">
+<p class="newsletter__social-label" id="nl-social">Our social media:</p>
+<ul class="newsletter__social-list" aria-labelledby="nl-social">
+<li><a class="icon-button icon-button--inverse" href="https://www.tiktok.com/" aria-label="TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
+<li><a class="icon-button icon-button--inverse" href="https://www.instagram.com/" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
+<li><a class="icon-button icon-button--inverse" href="https://x.com/" aria-label="X"><span class="icon icon-x" aria-hidden="true"></span></a></li>
+<li><a class="icon-button icon-button--inverse" href="https://www.youtube.com/" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a></li>
+</ul>
+</div>
+</div>
+<form class="newsletter__form" action="/newsletter" method="post">
+<div class="field">
+<label class="visually-hidden" for="nl-email">Email address</label>
+<input class="field__control" id="nl-email" name="email" type="email" autocomplete="email" placeholder="Enter your mail" required>
+</div>
+<p class="newsletter__legal" id="nl-legal">By subscribing to the newsletter, I agree to have my email address used to send me promotions and marketing content. You can withdraw your consent at any time with the unsubscribe link in each email.</p>
+<button class="button button--inverse" type="submit" aria-describedby="nl-legal">Subscribe</button>
+</form>
+</div>
+</section>{% endraw %}
+{% endmacro %}

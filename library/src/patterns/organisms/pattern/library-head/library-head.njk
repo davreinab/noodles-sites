@@ -2,7 +2,7 @@
 {% if data.view == "todas" %}
 {% raw %}<div class="ds-gallery">
 <style>.ds-gallery{font:14px/1.4 system-ui,sans-serif;color:#1f1f1f}.ds-gallery h3{font:600 12px/1.3 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;color:#4a4a4a}.ds-gallery section{margin:0 0 32px}.ds-gallery__row{display:flex;flex-wrap:wrap;align-items:center;gap:24px 32px}.ds-gallery figure{margin:0;display:flex;flex-direction:column;gap:8px;align-items:flex-start}.ds-gallery figcaption{font:12px/1.3 ui-monospace,monospace;color:#4a4a4a}.ds-gallery__stage{padding:8px;min-width:48px;min-height:32px;outline:1px dashed #bebebe;outline-offset:0}</style>
-<section><h3>filtered (con y sin)</h3><div class="ds-gallery__row">
+<section><h3>align</h3><div class="ds-gallery__row">
 <figure><div class="ds-gallery__stage"><section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title">
 <div class="library-head__inner">
 <div class="library-head__intro">
@@ -25,8 +25,8 @@
 <button class="link" type="button"><span class="icon icon-trash" aria-hidden="true"></span>Clear filters</button>
 </div>
 </div>
-</section></div><figcaption>filtered=true</figcaption></figure>
-<figure><div class="ds-gallery__stage"><section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title-v1">
+</section></div><figcaption>align=Left</figcaption></figure>
+<figure><div class="ds-gallery__stage"><section data-ds="library-head" class="section library-head library-head--center" aria-labelledby="lhead-title-v1">
 <div class="library-head__inner">
 <div class="library-head__intro">
 <h1 class="page-title" id="lhead-title-v1">Recipes</h1>
@@ -36,6 +36,141 @@
 <span class="icon icon-search" aria-hidden="true"></span>
 <label class="visually-hidden" for="lhead-q-v1">Search a recipe or ingredient</label>
 <input class="search-field__input" id="lhead-q-v1" name="q" type="search" placeholder="Search a recipe or ingredient">
+</form>
+<ul class="library-head__filters" aria-label="Filter recipes">
+<li><button class="chip" type="button" aria-pressed="true"><span class="icon icon-check" aria-hidden="true"></span>All</button></li>
+<li><button class="chip" type="button" aria-pressed="false">Less ingredients</button></li>
+<li><button class="chip" type="button" aria-pressed="false">Quick recipes</button></li>
+<li><button class="chip" type="button" aria-pressed="false">High protein</button></li>
+</ul>
+<div class="library-head__results">
+<p aria-live="polite"><strong>48</strong> results for your search</p>
+<button class="link" type="button"><span class="icon icon-trash" aria-hidden="true"></span>Clear filters</button>
+</div>
+</div>
+</section></div><figcaption>align=Center</figcaption></figure>
+</div></section>
+<section><h3>search (con y sin)</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title-v2">
+<div class="library-head__inner">
+<div class="library-head__intro">
+<h1 class="page-title" id="lhead-title-v2">Recipes</h1>
+<p class="library-head__lead">Explore and learn recipes to level up your dishes.</p>
+</div>
+<form class="search-field library-head__search" role="search" action="/recipes">
+<span class="icon icon-search" aria-hidden="true"></span>
+<label class="visually-hidden" for="lhead-q-v2">Search a recipe or ingredient</label>
+<input class="search-field__input" id="lhead-q-v2" name="q" type="search" placeholder="Search a recipe or ingredient">
+</form>
+<ul class="library-head__filters" aria-label="Filter recipes">
+<li><button class="chip" type="button" aria-pressed="true"><span class="icon icon-check" aria-hidden="true"></span>All</button></li>
+<li><button class="chip" type="button" aria-pressed="false">Less ingredients</button></li>
+<li><button class="chip" type="button" aria-pressed="false">Quick recipes</button></li>
+<li><button class="chip" type="button" aria-pressed="false">High protein</button></li>
+</ul>
+<div class="library-head__results">
+<p aria-live="polite"><strong>48</strong> results for your search</p>
+<button class="link" type="button"><span class="icon icon-trash" aria-hidden="true"></span>Clear filters</button>
+</div>
+</div>
+</section></div><figcaption>search=true</figcaption></figure>
+<figure><div class="ds-gallery__stage"><section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title-v3">
+<div class="library-head__inner">
+<div class="library-head__intro">
+<h1 class="page-title" id="lhead-title-v3">Recipes</h1>
+<p class="library-head__lead">Explore and learn recipes to level up your dishes.</p>
+</div>
+
+<ul class="library-head__filters" aria-label="Filter recipes">
+<li><button class="chip" type="button" aria-pressed="true"><span class="icon icon-check" aria-hidden="true"></span>All</button></li>
+<li><button class="chip" type="button" aria-pressed="false">Less ingredients</button></li>
+<li><button class="chip" type="button" aria-pressed="false">Quick recipes</button></li>
+<li><button class="chip" type="button" aria-pressed="false">High protein</button></li>
+</ul>
+<div class="library-head__results">
+<p aria-live="polite"><strong>48</strong> results for your search</p>
+<button class="link" type="button"><span class="icon icon-trash" aria-hidden="true"></span>Clear filters</button>
+</div>
+</div>
+</section></div><figcaption>search=false</figcaption></figure>
+</div></section>
+<section><h3>filters (con y sin)</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title-v4">
+<div class="library-head__inner">
+<div class="library-head__intro">
+<h1 class="page-title" id="lhead-title-v4">Recipes</h1>
+<p class="library-head__lead">Explore and learn recipes to level up your dishes.</p>
+</div>
+<form class="search-field library-head__search" role="search" action="/recipes">
+<span class="icon icon-search" aria-hidden="true"></span>
+<label class="visually-hidden" for="lhead-q-v4">Search a recipe or ingredient</label>
+<input class="search-field__input" id="lhead-q-v4" name="q" type="search" placeholder="Search a recipe or ingredient">
+</form>
+<ul class="library-head__filters" aria-label="Filter recipes">
+<li><button class="chip" type="button" aria-pressed="true"><span class="icon icon-check" aria-hidden="true"></span>All</button></li>
+<li><button class="chip" type="button" aria-pressed="false">Less ingredients</button></li>
+<li><button class="chip" type="button" aria-pressed="false">Quick recipes</button></li>
+<li><button class="chip" type="button" aria-pressed="false">High protein</button></li>
+</ul>
+<div class="library-head__results">
+<p aria-live="polite"><strong>48</strong> results for your search</p>
+<button class="link" type="button"><span class="icon icon-trash" aria-hidden="true"></span>Clear filters</button>
+</div>
+</div>
+</section></div><figcaption>filters=true</figcaption></figure>
+<figure><div class="ds-gallery__stage"><section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title-v5">
+<div class="library-head__inner">
+<div class="library-head__intro">
+<h1 class="page-title" id="lhead-title-v5">Recipes</h1>
+<p class="library-head__lead">Explore and learn recipes to level up your dishes.</p>
+</div>
+<form class="search-field library-head__search" role="search" action="/recipes">
+<span class="icon icon-search" aria-hidden="true"></span>
+<label class="visually-hidden" for="lhead-q-v5">Search a recipe or ingredient</label>
+<input class="search-field__input" id="lhead-q-v5" name="q" type="search" placeholder="Search a recipe or ingredient">
+</form>
+
+<div class="library-head__results">
+<p aria-live="polite"><strong>48</strong> results for your search</p>
+<button class="link" type="button"><span class="icon icon-trash" aria-hidden="true"></span>Clear filters</button>
+</div>
+</div>
+</section></div><figcaption>filters=false</figcaption></figure>
+</div></section>
+<section><h3>filtered (con y sin)</h3><div class="ds-gallery__row">
+<figure><div class="ds-gallery__stage"><section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title-v6">
+<div class="library-head__inner">
+<div class="library-head__intro">
+<h1 class="page-title" id="lhead-title-v6">Recipes</h1>
+<p class="library-head__lead">Explore and learn recipes to level up your dishes.</p>
+</div>
+<form class="search-field library-head__search" role="search" action="/recipes">
+<span class="icon icon-search" aria-hidden="true"></span>
+<label class="visually-hidden" for="lhead-q-v6">Search a recipe or ingredient</label>
+<input class="search-field__input" id="lhead-q-v6" name="q" type="search" placeholder="Search a recipe or ingredient">
+</form>
+<ul class="library-head__filters" aria-label="Filter recipes">
+<li><button class="chip" type="button" aria-pressed="true"><span class="icon icon-check" aria-hidden="true"></span>All</button></li>
+<li><button class="chip" type="button" aria-pressed="false">Less ingredients</button></li>
+<li><button class="chip" type="button" aria-pressed="false">Quick recipes</button></li>
+<li><button class="chip" type="button" aria-pressed="false">High protein</button></li>
+</ul>
+<div class="library-head__results">
+<p aria-live="polite"><strong>48</strong> results for your search</p>
+<button class="link" type="button"><span class="icon icon-trash" aria-hidden="true"></span>Clear filters</button>
+</div>
+</div>
+</section></div><figcaption>filtered=true</figcaption></figure>
+<figure><div class="ds-gallery__stage"><section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title-v7">
+<div class="library-head__inner">
+<div class="library-head__intro">
+<h1 class="page-title" id="lhead-title-v7">Recipes</h1>
+<p class="library-head__lead">Explore and learn recipes to level up your dishes.</p>
+</div>
+<form class="search-field library-head__search" role="search" action="/recipes">
+<span class="icon icon-search" aria-hidden="true"></span>
+<label class="visually-hidden" for="lhead-q-v7">Search a recipe or ingredient</label>
+<input class="search-field__input" id="lhead-q-v7" name="q" type="search" placeholder="Search a recipe or ingredient">
 </form>
 <ul class="library-head__filters" aria-label="Filter recipes">
 <li><button class="chip" type="button" aria-pressed="true"><span class="icon icon-check" aria-hidden="true"></span>All</button></li>
@@ -71,6 +206,27 @@
 <p aria-live="polite"><strong>48</strong> results for your search</p>
 <button class="link" type="button"><span class="icon icon-trash" aria-hidden="true"></span>Clear filters</button>
 </div>
+</div>
+</section>
+<section data-ds="library-head" class="section library-head library-head--no-search library-head--no-filters" aria-labelledby="lhead-contests">
+<div class="library-head__inner">
+<div class="library-head__intro">
+<h1 class="page-title" id="lhead-contests">Contests &amp; promotions</h1>
+<p class="library-head__lead">Enter our contests and win, don't miss your chance!</p>
+</div>
+</div>
+</section>
+<section data-ds="library-head" class="section library-head library-head--center library-head--no-filters" aria-labelledby="lhead-faq">
+<div class="library-head__inner">
+<div class="library-head__intro">
+<h1 class="page-title" id="lhead-faq">Frequently Asked Questions</h1>
+<p class="library-head__lead">These are the questions we're asked most often, so you won't be left wondering</p>
+</div>
+<form class="search-field library-head__search" role="search" action="/faq">
+<span class="icon icon-search" aria-hidden="true"></span>
+<label class="visually-hidden" for="lhead-faq-q">Search for questions about our products</label>
+<input class="search-field__input" id="lhead-faq-q" name="q" type="search" placeholder="Search for questions about our products">
+</form>
 </div>
 </section>{% endraw %}
 {% endif %}

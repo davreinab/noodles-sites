@@ -1,0 +1,323 @@
+{
+  "title": "Newsletter",
+  "description": "Newsletter: captación de email con redes sociales, sobre fondo surface/inverse (wireframe 190:3727 y 330:6557, pie de bloque). Title (TEXT): «Don't miss a thing» en la biblioteca…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".newsletter",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "newsletter",
+      "name": "Newsletter",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "312:3247",
+      "current": {
+        "description": "Newsletter: captación de email con redes sociales, sobre fondo surface/inverse (wireframe 190:3727 y 330:6557, pie de bloque). Title (TEXT): «Don't miss a thing» en la biblioteca y «Never miss the next contest» en la página de concurso. Texto de suscripción, «Our social media:» con 4 icon buttons inverse (TikTok, Instagram, X, YouTube), Input de email, texto legal de consentimiento (caption) y botón Subscribe (Hierarchy=Inverse). Clase CSS: .newsletter. Desktop 1440 / Móvil 375. ⬜ TODO GB Foods/agencia: texto legal de consentimiento definitivo y destinatario del alta.",
+        "Propósito": "Captación de la newsletter sobre tinta: título, texto, «Our social media:» con los iconos de redes, y a la derecha un campo de email con el texto de consentimiento y el botón «Subscribe». Se usa al final de las páginas de concurso y de la Contest library, para no encadenar secciones crema.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "La sección tiene nombre por su h2. El campo tiene etiqueta oculta («Email address») y `type=\"email\"` con `autocomplete=\"email\"`, para que el teclado y el navegador lo traten como email; el placeholder no sustituye a la etiqueta. El texto legal se enlaza al botón con `aria-describedby`, así el consentimiento se lee al llegar a «Subscribe». Cada icono de red es un enlace con nombre propio (`aria-label`) y el icono va oculto. Teclado: Tab por el campo, el botón y los iconos en orden. Contraste: textos crema sobre tinta (17:1); el botón es crema con texto tinta. El error de email, si lo hay, lo marca el patrón de Field (⬜ TODO: pendiente de su mensaje).",
+        "Cuándo usar / qué NO hace": "Como captación al final de una página o biblioteca de concursos, sobre tinta. No es el formulario de participación (eso es Contest form) ni un pie de página. El texto legal de consentimiento, las redes y los enlaces son ⬜ TODO: los confirma GB Foods y el equipo de datos (RGPD)."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "312:3247",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=312-3247",
+      "page": "Pattern / Libraries",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-23 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Newsletter: captación de email con redes sociales, sobre fondo surface/inverse (wireframe 190:3727 y 330:6557, pie de bloque). Title (TEXT): «Don't miss a thing» en la biblioteca y «Never miss the next contest» en la página de concurso. Texto de suscripción, «Our social media:» con 4 icon buttons inverse (TikTok, Instagram, X, YouTube), Input de email, texto legal de consentimiento (caption) y botón Subscribe (Hierarchy=Inverse). Clase CSS: .newsletter. Desktop 1440 / Móvil 375. ⬜ TODO GB Foods/agencia: texto legal de consentimiento definitivo y destinatario del alta."
+    ],
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "values": [],
+        "default": "Don't miss a thing",
+        "figma": "Title#312:0"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "icon-button TikTok",
+        "component": "icon-button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-tiktok",
+        "exposedAs": "Icon#33:125",
+        "hidden": false
+      },
+      {
+        "layer": "icon-button Instagram",
+        "component": "icon-button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-instagram",
+        "exposedAs": "Icon#33:125",
+        "hidden": false
+      },
+      {
+        "layer": "icon-button X",
+        "component": "icon-button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-x",
+        "exposedAs": "Icon#33:125",
+        "hidden": false
+      },
+      {
+        "layer": "icon-button YouTube",
+        "component": "icon-button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-youtube",
+        "exposedAs": "Icon#33:125",
+        "hidden": false
+      },
+      {
+        "layer": "Input",
+        "component": "input",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-error",
+        "component": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "hidden": true
+      },
+      {
+        "layer": "Button",
+        "component": "button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "hidden": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick",
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "button",
+        "items": [
+          "button/inverse/bg",
+          "button/inverse/border",
+          "button/inverse/text"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/surface/inverse",
+          "color/text/on-inverse"
+        ]
+      },
+      {
+        "group": "field",
+        "items": [
+          "field/bg",
+          "field/border",
+          "field/error-text",
+          "field/helper",
+          "field/label",
+          "field/placeholder"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h2",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-m",
+          "font/size/desktop/body-s",
+          "font/size/desktop/caption",
+          "font/size/desktop/h2",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default",
+          "icon/size/md",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "icon-button",
+        "items": [
+          "icon-button/size/m"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/margin"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill",
+          "radius/sm"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/4",
+          "space/64",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 39,
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m",
+      "Desktop/body-s",
+      "Desktop/label",
+      "Desktop/caption"
+    ],
+    "classes": [
+      "button",
+      "button--inverse",
+      "field",
+      "field__control",
+      "icon",
+      "icon-button",
+      "icon-button--inverse",
+      "icon-instagram",
+      "icon-tiktok",
+      "icon-x",
+      "icon-youtube",
+      "newsletter",
+      "newsletter__content",
+      "newsletter__form",
+      "newsletter__grid",
+      "newsletter__legal",
+      "newsletter__social",
+      "newsletter__social-label",
+      "newsletter__social-list",
+      "newsletter__text",
+      "newsletter__title",
+      "section",
+      "section__inner",
+      "visually-hidden"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Captación de la newsletter sobre tinta: título, texto, «Our social media:» con los iconos de redes, y a la derecha un campo de email con el texto de consentimiento y el botón «Subscribe». Se usa al final de las páginas de concurso y de la Contest library, para no encadenar secciones crema.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "La sección tiene nombre por su h2. El campo tiene etiqueta oculta («Email address») y `type=\"email\"` con `autocomplete=\"email\"`, para que el teclado y el navegador lo traten como email; el placeholder no sustituye a la etiqueta. El texto legal se enlaza al botón con `aria-describedby`, así el consentimiento se lee al llegar a «Subscribe». Cada icono de red es un enlace con nombre propio (`aria-label`) y el icono va oculto. Teclado: Tab por el campo, el botón y los iconos en orden. Contraste: textos crema sobre tinta (17:1); el botón es crema con texto tinta. El error de email, si lo hay, lo marca el patrón de Field (⬜ TODO: pendiente de su mensaje).",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Como captación al final de una página o biblioteca de concursos, sobre tinta. No es el formulario de participación (eso es Contest form) ni un pie de página. El texto legal de consentimiento, las redes y los enlaces son ⬜ TODO: los confirma GB Foods y el equipo de datos (RGPD).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "newsletter",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "312:3247",
+    "contract": "../../../../../../design-system/schemas/components/newsletter.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

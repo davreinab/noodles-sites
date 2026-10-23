@@ -1,0 +1,261 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:contest-result",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Contest result",
+    "slug": "contest-result",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-23T09:38:57Z",
+    "description": "Contest result: pantalla tras participar (wireframe 490:13618 lose, 490:13957 win, 490:13867 limit; móviles 501:14641, 501:15446, 501:15170). Variant=Lose: «Oh crap… Your entry hasn't won a prize this time», texto de descarga con negrita, Voucher «15% OFF» y botón «Download discount voucher». Variant=Win: imagen de premios, «Oh my noodles!» y «Your entry has won the prize», texto de verificación por email (⬜ TODO) y botón secondary «Go back to the contest site». Variant=Limit: «You have surpassed the maximum participations allowed», texto de cupón con negrita, Voucher «25% OFF» y botón de descarga. Fondo surface/page. Clase CSS: .contest-result (.contest-result--win / --limit). ⬜ TODO GB Foods/agencia: mecánica de límite de participaciones y de resultado inmediato (pendiente de confirmar); código de barras real.",
+    "figmaPage": "Pattern / Detail pages",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 6,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "348358815889",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-23",
+      "figmaVersion": "348358815889",
+      "variantsChecked": [
+        "variant=Lose, breakpoint=Desktop",
+        "variant=Lose, breakpoint=Mobile",
+        "variant=Win, breakpoint=Desktop",
+        "variant=Win, breakpoint=Mobile",
+        "variant=Limit, breakpoint=Desktop",
+        "variant=Limit, breakpoint=Mobile (móvil por medida del marco)"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "variant",
+        "type": "enum",
+        "values": [
+          "Lose",
+          "Win",
+          "Limit"
+        ],
+        "default": "Lose",
+        "figma": "Variant"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thick",
+      "button/primary/bg",
+      "button/primary/border",
+      "button/primary/text",
+      "color/surface/page",
+      "color/text/default",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/display",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/display",
+      "font/size/desktop/h2",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/sm",
+      "layout/margin",
+      "radius/pill",
+      "shadow/soft",
+      "space/16",
+      "space/24",
+      "space/64",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "button",
+      "button--l",
+      "button--secondary",
+      "contest-result",
+      "contest-result--limit",
+      "contest-result--win",
+      "contest-result__image",
+      "contest-result__inner",
+      "contest-result__media",
+      "contest-result__subtitle",
+      "contest-result__text",
+      "contest-result__title",
+      "section",
+      "voucher",
+      "voucher__barcode",
+      "voucher__code",
+      "voucher__label",
+      "voucher__main",
+      "voucher__stub",
+      "voucher__value"
+    ],
+    "example": "<section data-ds=\"contest-result\" class=\"section contest-result\" aria-labelledby=\"cr-title\">\n<div class=\"contest-result__inner\">\n<h1 class=\"contest-result__title\" id=\"cr-title\">Oh crap… Your entry hasn't won a prize this time</h1>\n<p class=\"contest-result__text\"><strong>Don't lose your one use 15% discount voucher</strong><br>Download it and use it in your next Yatekomo noodle cup purchase:</p>\n<div data-ds=\"voucher\" class=\"voucher\">\n<div class=\"voucher__main\"><p class=\"voucher__value\">15% OFF</p><p class=\"voucher__label\">Discount voucher</p></div>\n<div class=\"voucher__stub\"><img class=\"voucher__barcode\" src=\"../assets/images/placeholder.svg\" alt=\"Barcode 0876562-R\"><span class=\"voucher__code\" aria-hidden=\"true\">0876562-R</span></div>\n</div>\n<a class=\"button button--l\" href=\"/contests/slurp-and-win/voucher.pdf\" download>Download discount voucher</a>\n</div>\n</section>\n\n<section data-ds=\"contest-result\" class=\"section contest-result contest-result--win\" aria-labelledby=\"cr-title-win\">\n<div class=\"contest-result__inner\">\n<figure class=\"contest-result__media\"><img class=\"contest-result__image\" src=\"../assets/images/placeholder.svg\" alt=\"Prize won\"></figure>\n<h1 class=\"contest-result__title\" id=\"cr-title-win\">Oh my noodles!</h1>\n<p class=\"contest-result__subtitle\">Your entry has won the prize</p>\n<p class=\"contest-result__text\">We'll verify your entry and send you an email to process your prize if everything is in order.</p>\n<a class=\"button button--l button--secondary\" href=\"/contests/slurp-and-win\">Go back to the contest site</a>\n</div>\n</section>\n\n<section data-ds=\"contest-result\" class=\"section contest-result contest-result--limit\" aria-labelledby=\"cr-title-limit\">\n<div class=\"contest-result__inner\">\n<h1 class=\"contest-result__title\" id=\"cr-title-limit\">You have surpassed the maximum participations allowed</h1>\n<p class=\"contest-result__text\"><strong>You can't participate in this contest anymore but we'd like to reward your loyalty with a discount voucher</strong><br>Download it and use it in your next Yatekomo noodle cup purchase:</p>\n<div data-ds=\"voucher\" class=\"voucher\">\n<div class=\"voucher__main\"><p class=\"voucher__value\">25% OFF</p><p class=\"voucher__label\">Discount voucher</p></div>\n<div class=\"voucher__stub\"><img class=\"voucher__barcode\" src=\"../assets/images/placeholder.svg\" alt=\"Barcode 0876562-R\"><span class=\"voucher__code\" aria-hidden=\"true\">0876562-R</span></div>\n</div>\n<a class=\"button button--l\" href=\"/contests/slurp-and-win/voucher.pdf\" download>Download discount voucher</a>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "313:3567",
+    "componentKey": "901b02ff5159b3ca3811b0f1c9119b863cc3d7e0",
+    "propertyNames": {
+      "variant": "Variant",
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Variant": [
+        "Lose",
+        "Win",
+        "Limit"
+      ],
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Voucher",
+        "component": "Voucher",
+        "componentSlug": "voucher",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Button",
+        "component": "Hierarchy=Primary, Size=M, State=Default",
+        "componentSlug": "button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "toggledBy": "Icon leading#33:25",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "toggledBy": "Icon trailing#33:50",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
+      "paddingLeft: layout/margin",
+      "paddingTop: space/64",
+      "paddingRight: layout/margin",
+      "paddingBottom: space/64",
+      "fills: color/surface/page",
+      "color: color/surface/page",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h2",
+      "color: color/text/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "textRangeFills: color/text/secondary",
+      "color: color/text/secondary",
+      "itemSpacing: space/24",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "effects: shadow/soft",
+      "fontSize: font/size/desktop/display",
+      "lineHeight: font/line-height/desktop/display",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "itemSpacing: space/8",
+      "paddingTop: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thick",
+      "strokeBottomWeight: border/width/thick",
+      "strokeLeftWeight: border/width/thick",
+      "strokeRightWeight: border/width/thick",
+      "fills: button/primary/bg",
+      "strokes: button/primary/border",
+      "color: button/primary/bg",
+      "color: button/primary/border",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: button/primary/text",
+      "color: button/primary/text",
+      "fills: button/primary/text"
+    ],
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/display",
+      "Desktop/label",
+      "Desktop/caption"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/contest-result.md",
+    "section": "Contest result"
+  },
+  "relations": {
+    "uses": [
+      "button",
+      "icon-arrow-right",
+      "voucher"
+    ],
+    "related": []
+  }
+}

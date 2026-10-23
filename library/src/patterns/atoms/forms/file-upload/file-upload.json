@@ -1,0 +1,243 @@
+{
+  "title": "File upload",
+  "description": "File upload: campo de subida de archivo para el formulario de concurso (Proof of purchase: foto del ticket delantera y trasera). State=Empty: «No file selected — JPG, PNG or PDF,…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "file-upload",
+      "name": "File upload",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "308:2420",
+      "current": {
+        "description": "File upload: campo de subida de archivo para el formulario de concurso (Proof of purchase: foto del ticket delantera y trasera). State=Empty: «No file selected — JPG, PNG or PDF, max 5MB». State=Selected: nombre del archivo y icono close (Remove). State=Error: borde y mensaje en color de error (field/border-error, field/error-text). Tokens de Input (field/*). En código: input type=\"file\" real, visualmente oculto pero accesible, con su label; el botón «Upload file» es el visible. Clase CSS: .file-upload (estado: .file-upload--selected / --error). ⬜ TODO GB Foods: formatos y tamaño máximo definitivos (JPG, PNG, PDF, 5 MB).",
+        "Propósito": "Subida de un archivo (justificante de compra): etiqueta del campo, caja con el botón «Upload file» y un texto de estado («No file selected — JPG, PNG or PDF, max 5MB»), ayuda debajo y, si falla, el error. Tres estados: Empty (por defecto), Selected (nombre del archivo y botón de quitar) y Error (borde grueso en error y mensaje).",
+        "Accesibilidad (rol, nombre, estados y teclado)": "El `input type=\"file\"` es el control real: va visualmente oculto (`visually-hidden`) pero sigue en el orden de Tab. El foco se ve en el botón (`:has`), con contorno de 2 px. Enter o Espacio abren el selector nativo. El nombre accesible lo da `aria-labelledby` (la etiqueta del campo, «Upload receipt – front»); prevalece sobre las etiquetas, así que el texto «Upload file» no se suma al nombre. El `label for` del campo queda para la asociación visual. El estado va en `aria-live=\"polite\"` y se anuncia al elegir o quitar un archivo. El error se dice con `aria-invalid` y con el texto del mensaje; no depende del color (el borde grueso es un refuerzo). La ayuda va en `aria-describedby`. Contraste: texto de estado gris cálido sobre blanco (5,4:1); foco en tinta sobre blanco.",
+        "Cuándo usar / qué NO hace": "Solo para justificantes en Contest form. Acepta un archivo por campo (sin `multiple`). Límites del wireframe: 5 MB y JPG, PNG o PDF; ⬜ TODO confirmar con GB Foods y la agencia (son condiciones de la mecánica del concurso). No hace vista previa ni sube nada por sí solo: la subida la hace el formulario al enviar. El justificante trasero es opcional y el texto de ayuda lo dice."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "308:2420",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=308-2420",
+      "page": "Forms",
+      "type": "COMPONENT_SET",
+      "variants": 3,
+      "lastSync": "2026-10-23 · 09:36 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "File upload: campo de subida de archivo para el formulario de concurso (Proof of purchase: foto del ticket delantera y trasera). State=Empty: «No file selected — JPG, PNG or PDF, max 5MB». State=Selected: nombre del archivo y icono close (Remove). State=Error: borde y mensaje en color de error (field/border-error, field/error-text). Tokens de Input (field/*). En código: input type=\"file\" real, visualmente oculto pero accesible, con su label; el botón «Upload file» es el visible. Clase CSS: .file-upload (estado: .file-upload--selected / --error). ⬜ TODO GB Foods: formatos y tamaño máximo definitivos (JPG, PNG, PDF, 5 MB)."
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "values": [],
+        "default": "Upload receipt — front",
+        "figma": "Label#308:21"
+      },
+      {
+        "name": "helper",
+        "type": "string",
+        "values": [],
+        "default": "Upload a clear photo of the receipt.",
+        "figma": "Helper#308:25"
+      },
+      {
+        "name": "empty",
+        "type": "boolean",
+        "values": [],
+        "default": "true",
+        "figma": "State=Empty"
+      },
+      {
+        "name": "selected",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Selected"
+      },
+      {
+        "name": "error",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Error"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "Button",
+        "component": "button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "hidden": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick",
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "button",
+        "items": [
+          "button/secondary/border",
+          "button/secondary/text"
+        ]
+      },
+      {
+        "group": "field",
+        "items": [
+          "field/bg",
+          "field/border",
+          "field/helper",
+          "field/label",
+          "field/placeholder"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-m",
+          "font/size/desktop/body-s",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 25,
+    "textStyles": [
+      "Desktop/label",
+      "Desktop/body-m",
+      "Desktop/body-s"
+    ],
+    "classes": [
+      "button",
+      "button--secondary",
+      "field",
+      "field__error",
+      "field__helper",
+      "field__label",
+      "field__required",
+      "file-upload",
+      "file-upload__control",
+      "file-upload__input",
+      "file-upload__remove",
+      "file-upload__status",
+      "file-upload__status--selected",
+      "file-upload__trigger",
+      "icon",
+      "icon-button",
+      "icon-button--secondary",
+      "icon-close",
+      "visually-hidden"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Subida de un archivo (justificante de compra): etiqueta del campo, caja con el botón «Upload file» y un texto de estado («No file selected — JPG, PNG or PDF, max 5MB»), ayuda debajo y, si falla, el error. Tres estados: Empty (por defecto), Selected (nombre del archivo y botón de quitar) y Error (borde grueso en error y mensaje).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "El `input type=\"file\"` es el control real: va visualmente oculto (`visually-hidden`) pero sigue en el orden de Tab. El foco se ve en el botón (`:has`), con contorno de 2 px. Enter o Espacio abren el selector nativo. El nombre accesible lo da `aria-labelledby` (la etiqueta del campo, «Upload receipt – front»); prevalece sobre las etiquetas, así que el texto «Upload file» no se suma al nombre. El `label for` del campo queda para la asociación visual. El estado va en `aria-live=\"polite\"` y se anuncia al elegir o quitar un archivo. El error se dice con `aria-invalid` y con el texto del mensaje; no depende del color (el borde grueso es un refuerzo). La ayuda va en `aria-describedby`. Contraste: texto de estado gris cálido sobre blanco (5,4:1); foco en tinta sobre blanco.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo para justificantes en Contest form. Acepta un archivo por campo (sin `multiple`). Límites del wireframe: 5 MB y JPG, PNG o PDF; ⬜ TODO confirmar con GB Foods y la agencia (son condiciones de la mecánica del concurso). No hace vista previa ni sube nada por sí solo: la subida la hace el formulario al enviar. El justificante trasero es opcional y el texto de ayuda lo dice.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 2,
+      "total": 2,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "file-upload",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "308:2420",
+    "contract": "../../../../../../design-system/schemas/components/file-upload.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

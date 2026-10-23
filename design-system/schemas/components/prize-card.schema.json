@@ -1,0 +1,177 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:prize-card",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Prize card",
+    "slug": "prize-card",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-23T09:36:22Z",
+    "description": "Prize card: premio del concurso (Contest page, bloque Contest prizes). Anatomía (wireframe UX): media 4:3 · nivel en caption (Level: «Grand prize», «Featured prize», «Weekly prize · x50») · nombre h3 (Name) · descripción body-m (Description). Variant=Grand: cuerpo en surface/inverse con texto on-inverse y nivel en brand-on-inverse. Variant=Default: cuerpo en surface/card. Clase CSS: .prize-card (Grand añade .prize-card--grand). ⬜ TODO GB Foods/agencia: nombres, descripciones e imágenes reales de los premios.",
+    "figmaPage": "Cards",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "c12e7c7ed790",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-23",
+      "figmaVersion": "c12e7c7ed790",
+      "variantsChecked": [
+        "Variant=Grand",
+        "Variant=Default"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "level",
+        "type": "string",
+        "default": "Grand prize",
+        "figma": "Level#308:3"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "default": "Prize name",
+        "figma": "Name#308:6"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "default": "Prize description",
+        "figma": "Description#308:9"
+      },
+      {
+        "name": "variant",
+        "type": "enum",
+        "values": [
+          "Grand",
+          "Default"
+        ],
+        "default": "Grand",
+        "figma": "Variant"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "color/border/default",
+      "color/surface/inverse",
+      "color/text/brand-on-inverse",
+      "color/text/on-inverse",
+      "contest-card/media-bg",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h3",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/h3",
+      "font/style/body",
+      "font/style/display",
+      "radius/md",
+      "space/24",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "prize-card",
+      "prize-card--grand",
+      "prize-card__body",
+      "prize-card__level",
+      "prize-card__media",
+      "prize-card__text",
+      "prize-card__title"
+    ],
+    "example": "<article data-ds=\"prize-card\" class=\"prize-card\">\n<div class=\"prize-card__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"prize-card__body\">\n<p class=\"prize-card__level\">Featured prize</p>\n<h3 class=\"prize-card__title\">Home ramen kit</h3>\n<p class=\"prize-card__text\">Professional-grade bowls, a chopstick set and a full year of your favourite flavours.</p>\n</div>\n</article>\n<article data-ds=\"prize-card\" class=\"prize-card prize-card--grand\">\n<div class=\"prize-card__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"prize-card__body\">\n<p class=\"prize-card__level\">Grand prize</p>\n<h3 class=\"prize-card__title\">Festival weekend for two</h3>\n<p class=\"prize-card__text\">Two festival weekend passes, travel budget and backstage access to this year's festival partner.</p>\n</div>\n</article>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "308:2303",
+    "componentKey": "ac1186ee28875873c7861e2c56cae5aa430cb729",
+    "propertyNames": {
+      "level": "Level#308:3",
+      "name": "Name#308:6",
+      "description": "Description#308:9",
+      "variant": "Variant"
+    },
+    "variantAxes": {
+      "Variant": [
+        "Grand",
+        "Default"
+      ]
+    },
+    "nestedInstances": [],
+    "variableBindings": [
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: color/surface/inverse",
+      "strokes: color/border/default",
+      "color: color/surface/inverse",
+      "color: color/border/default",
+      "fills: contest-card/media-bg",
+      "color: contest-card/media-bg",
+      "itemSpacing: space/8",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "fills: color/text/brand-on-inverse",
+      "fontSize: font/size/desktop/caption",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: color/text/brand-on-inverse",
+      "fills: color/text/on-inverse",
+      "fontSize: font/size/desktop/h3",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: color/text/on-inverse",
+      "fontSize: font/size/desktop/body-m",
+      "lineHeight: font/line-height/desktop/body-m"
+    ],
+    "textStyles": [
+      "Desktop/caption",
+      "Desktop/h3",
+      "Desktop/body-m"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/prize-card.md",
+    "section": "Prize card"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

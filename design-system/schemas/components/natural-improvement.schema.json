@@ -7,12 +7,19 @@
     "slug": "natural-improvement",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T15:21:21Z",
+    "lastSync": "2026-10-23T09:36:22Z",
     "description": "Natural improvement: sección de mejoras de la fórmula natural (página Natural formula; wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-improvement). Fondo crema (surface/page) con textos en tinta (text/default). Título «That's what we call an improvement» y subtítulo; tres bloques con h3: «Replaced ingredients» (4 instancias de Ingredient swap: 4 columnas en desktop y 1 en móvil), «We also removed» (fila de Removed tag) e «Ingredient origins» (texto y Origins map). Props: Title, Subtitle, Replaced title, Removed title, Origins title, Origins text. Ingredientes, motivos y orígenes de ejemplo ⬜ TODO envase (business-rules).",
     "figmaPage": "Pattern / Detail pages",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "6130344c3d46",
     "verification": {
       "status": "verified",

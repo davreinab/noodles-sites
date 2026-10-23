@@ -1,0 +1,38 @@
+{% macro render(data) %}
+{% if data.view == "todas" %}
+<p class="ds-gallery__note" style="font:14px/1.5 system-ui;color:#1f1f1f;max-width:70ch">No se han podido pintar: results=true (no hay clase ni atributo declarados para ella: declara su selector en modifiers), empty=true (no hay clase ni atributo declarados para ella: declara su selector en modifiers).</p>
+{% else %}
+{% raw %}<section data-ds="library-head" class="section library-head library-head--center library-head--no-filters" aria-labelledby="faq-title">
+<div class="library-head__inner">
+<div class="library-head__intro">
+<h1 class="page-title" id="faq-title">Frequently Asked Questions</h1>
+<p class="library-head__lead">These are the questions we're asked most often, so you won't be left wondering</p>
+</div>
+<form class="search-field library-head__search" role="search" action="/faq">
+<span class="icon icon-search" aria-hidden="true"></span>
+<label class="visually-hidden" for="faq-q">Search for questions about our products</label>
+<input class="search-field__input" id="faq-q" name="q" type="search" placeholder="Search for questions about our products">
+</form>
+</div>
+</section>
+<section class="section faq">
+<div data-ds="faq-list" class="faq-list">
+<p class="faq-list__status visually-hidden" role="status"></p>
+<ul class="faq-list__items">
+<li><div class="accordion-item">
+<h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q1-btn" aria-expanded="true" aria-controls="faq-q1">How is it prepared?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+<div class="accordion-item__panel" id="faq-q1" role="region" aria-labelledby="faq-q1-btn">Full preparation instructions are printed on the pack. In general, the noodles only need a few minutes in hot water.</div>
+</div></li>
+<li><div class="accordion-item">
+<h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q2-btn" aria-expanded="false" aria-controls="faq-q2">Has the taste of the product changed?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+<div class="accordion-item__panel" id="faq-q2" role="region" aria-labelledby="faq-q2-btn" hidden>We review our recipes from time to time. If a change affects the taste, we will say so on the pack.</div>
+</div></li>
+<li><div class="accordion-item">
+<h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q3-btn" aria-expanded="false" aria-controls="faq-q3">Where can I find the noodles?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+<div class="accordion-item__panel" id="faq-q3" role="region" aria-labelledby="faq-q3-btn" hidden>Our products are sold in supermarkets and selected stores. Use the Where to buy section to find a shop near you.</div>
+</div></li>
+</ul>
+</div>
+</section>{% endraw %}
+{% endif %}
+{% endmacro %}

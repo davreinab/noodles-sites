@@ -1,0 +1,225 @@
+{
+  "title": "Legal page",
+  "description": "Legal page: página de texto legal (wireframe 377:8301 desktop, 381:14542 móvil). Link «Back» con icono arrow-left, h1 «Yatekomo Privacy Policy», entradilla body-l, párrafo de intr…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "legal-page",
+      "name": "Legal page",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "317:3602",
+      "current": {
+        "description": "Legal page: página de texto legal (wireframe 377:8301 desktop, 381:14542 móvil). Link «Back» con icono arrow-left, h1 «Yatekomo Privacy Policy», entradilla body-l, párrafo de introducción, 12 apartados numerados (h3 de apartado) con párrafos, tabla de conservación (Legal table, apartado 5) y «Last updated: July 2026» (caption). Columna de lectura de 800 (layout/reading) centrada en desktop; fondo surface/card. Solo los apartados 1 y 2 llevan texto real de la captura; el resto ⬜ TODO (texto legal de GB Foods). Clase CSS: .legal-page (basada en la página de contenido puro de la landing). Breakpoint Desktop 1440 / Móvil 375.",
+        "Propósito": "Página de texto legal (política de privacidad, aviso legal) en una columna de lectura centrada (`--layout-reading`, 720 px). Orden: enlace «Back» con flecha delante, h1 con el nombre del documento, entradilla (body-l), párrafo de introducción, apartados numerados (h2 «1. …», «2. …») con sus párrafos, listas y datos de contacto, tablas de conservación con Legal table, y la fecha «Last updated». Fondo blanco (surface/card).",
+        "Variantes": "una. Desktop y Mobile: la misma columna; en móvil el margen lateral es 16 px y los títulos bajan a su tamaño móvil.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "El `article` lleva un único `h1` (`page-title`); cada apartado es una `section` con su `h2`, y el número va en el texto del h2 para que se lea («1. Scope…»). Los apartados no llevan `aria-labelledby`: no son regiones de navegación y no se quiere llenar la página de landmarks. El enlace «Back» es un `a` con su texto visible; la flecha va delante con `aria-hidden`, así que se anuncia «Back». Teclado: Tab recorre el enlace «Back» y después los enlaces que haya en el texto legal; no hay controles propios. La fecha va en `time` con `datetime=\"2026-07\"`. Contraste: texto en tinta sobre blanco (18,7:1); la fecha, gris cálido (5,9:1). Sin color como único indicador: los apartados se distinguen por su número y su título.",
+        "Cuándo usar / qué NO hace": "Para cualquier texto legal de la web (privacidad, aviso legal, condiciones de un concurso que sea un documento aparte). No es una página de producto ni de receta, no tiene cabecera de librería, no lleva buscador ni acordeón (para preguntas frecuentes, FAQ list). El link «Back» vuelve a la página desde la que se llega: ⬜ TODO el destino (se decide en la implementación). El texto legal completo es ⬜ TODO: lo aporta GB Foods; ninguno de los apartados sin captura se ha redactado en el DS."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "317:3602",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=317-3602",
+      "page": "Pattern / Global",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-23 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Legal page: página de texto legal (wireframe 377:8301 desktop, 381:14542 móvil). Link «Back» con icono arrow-left, h1 «Yatekomo Privacy Policy», entradilla body-l, párrafo de introducción, 12 apartados numerados (h3 de apartado) con párrafos, tabla de conservación (Legal table, apartado 5) y «Last updated: July 2026» (caption). Columna de lectura de 800 (layout/reading) centrada en desktop; fondo surface/card. Solo los apartados 1 y 2 llevan texto real de la captura; el resto ⬜ TODO (texto legal de GB Foods). Clase CSS: .legal-page (basada en la página de contenido puro de la landing). Breakpoint Desktop 1440 / Móvil 375."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "icon-leading",
+        "component": "icon-arrow-left",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-left",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "Legal table",
+        "component": "legal-table",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/border/default",
+          "color/border/subtle",
+          "color/surface/card",
+          "color/text/default",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-l",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h1",
+          "font/line-height/desktop/h3",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-l",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/size/desktop/h1",
+          "font/size/desktop/h3",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default",
+          "icon/size/md",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/margin"
+        ]
+      },
+      {
+        "group": "link",
+        "items": [
+          "link/default"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/64",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 30,
+    "textStyles": [
+      "Desktop/body-m",
+      "Desktop/h1",
+      "Desktop/body-l",
+      "Desktop/h3",
+      "Desktop/label",
+      "Desktop/caption"
+    ],
+    "classes": [
+      "icon",
+      "icon-arrow-left",
+      "legal-page",
+      "legal-page__back",
+      "legal-page__heading",
+      "legal-page__inner",
+      "legal-page__intro",
+      "legal-page__lead",
+      "legal-page__section",
+      "legal-page__text",
+      "legal-page__updated",
+      "legal-table",
+      "link",
+      "page-title",
+      "visually-hidden"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Página de texto legal (política de privacidad, aviso legal) en una columna de lectura centrada (`--layout-reading`, 720 px). Orden: enlace «Back» con flecha delante, h1 con el nombre del documento, entradilla (body-l), párrafo de introducción, apartados numerados (h2 «1. …», «2. …») con sus párrafos, listas y datos de contacto, tablas de conservación con Legal table, y la fecha «Last updated». Fondo blanco (surface/card).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Variantes",
+        "md": "una. Desktop y Mobile: la misma columna; en móvil el margen lateral es 16 px y los títulos bajan a su tamaño móvil.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "El `article` lleva un único `h1` (`page-title`); cada apartado es una `section` con su `h2`, y el número va en el texto del h2 para que se lea («1. Scope…»). Los apartados no llevan `aria-labelledby`: no son regiones de navegación y no se quiere llenar la página de landmarks. El enlace «Back» es un `a` con su texto visible; la flecha va delante con `aria-hidden`, así que se anuncia «Back». Teclado: Tab recorre el enlace «Back» y después los enlaces que haya en el texto legal; no hay controles propios. La fecha va en `time` con `datetime=\"2026-07\"`. Contraste: texto en tinta sobre blanco (18,7:1); la fecha, gris cálido (5,9:1). Sin color como único indicador: los apartados se distinguen por su número y su título.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Para cualquier texto legal de la web (privacidad, aviso legal, condiciones de un concurso que sea un documento aparte). No es una página de producto ni de receta, no tiene cabecera de librería, no lleva buscador ni acordeón (para preguntas frecuentes, FAQ list). El link «Back» vuelve a la página desde la que se llega: ⬜ TODO el destino (se decide en la implementación). El texto legal completo es ⬜ TODO: lo aporta GB Foods; ninguno de los apartados sin captura se ha redactado en el DS.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "legal-page",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "317:3602",
+    "contract": "../../../../../../design-system/schemas/components/legal-page.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

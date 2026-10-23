@@ -1,0 +1,177 @@
+{
+  "title": "Contest conditions",
+  "description": "Contest conditions: caja tinta de condiciones y fechas del concurso (columna Winning conditions del bloque Contest how-to, wireframe 330:6619). Dos filas con icono (Icon calendar-…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".contest-conditions",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "contest-conditions",
+      "name": "Contest conditions",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "308:2308",
+      "current": {
+        "description": "Contest conditions: caja tinta de condiciones y fechas del concurso (columna Winning conditions del bloque Contest how-to, wireframe 330:6619). Dos filas con icono (Icon calendar-clock: «Entries close» con fecha en negrita; Icon trophy: «Grand prize draw»), lista de condiciones y link «Read the full contest rules →». Clase CSS: .contest-conditions. ⬜ TODO GB Foods: la lista de condiciones, fechas reales y la mecánica del sorteo (resultado inmediato y límite de participaciones pendientes de confirmar con GB Foods y la agencia). Iconos: surface/inverse con icon/color/inverse (override en instancia).",
+        "Propósito": "Bloque de condiciones del concurso sobre tinta: dos filas con icono (cierre de participaciones y sorteo del gran premio), un texto de condiciones y el enlace a las bases completas.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Los iconos son decorativos (`aria-hidden`): las fechas van en texto y se leen en orden. Las filas son elementos de una lista sin nombre visible; la lista no necesita nombre porque sus filas se explican solas. Contrastes: crema sobre tinta (17:1); la fecha en negrita no cambia el color. El enlace es `link--dark`: crema sobre tinta con subrayado, y su foco es amarillo de marca (12:1 sobre tinta). Teclado: Tab llega al enlace de las bases. Sin controles salvo el enlace.",
+        "Cuándo usar / qué NO hace": "Solo en la columna «Winning conditions» de Contest how-to. No sustituye a las bases legales: el texto de condiciones es ⬜ TODO (GB Foods) y el enlace lleva a las bases completas, que son obligatorias. No sirve para otras fechas que no sean de cierre o de sorteo. Las fechas son ⬜ TODO: 30 septiembre y 7 octubre de 2026 vienen del wireframe y deben confirmarse con GB Foods y la agencia."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "308:2308",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=308-2308",
+      "page": "Content",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-23 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Contest conditions: caja tinta de condiciones y fechas del concurso (columna Winning conditions del bloque Contest how-to, wireframe 330:6619). Dos filas con icono (Icon calendar-clock: «Entries close» con fecha en negrita; Icon trophy: «Grand prize draw»), lista de condiciones y link «Read the full contest rules →». Clase CSS: .contest-conditions. ⬜ TODO GB Foods: la lista de condiciones, fechas reales y la mecánica del sorteo (resultado inmediato y límite de participaciones pendientes de confirmar con GB Foods y la agencia). Iconos: surface/inverse con icon/color/inverse (override en instancia)."
+    ],
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "Icon / calendar-clock",
+        "component": "icon-calendar-clock",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Icon / trophy",
+        "component": "icon-trophy",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/surface/inverse",
+          "color/text/on-inverse"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/body-s",
+          "font/size/desktop/body-m",
+          "font/size/desktop/body-s",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/inverse",
+          "icon/size/md"
+        ]
+      },
+      {
+        "group": "link",
+        "items": [
+          "link/inverse"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/24",
+          "space/32"
+        ]
+      }
+    ],
+    "tokenCount": 14,
+    "textStyles": [
+      "Desktop/body-s",
+      "Desktop/body-m"
+    ],
+    "classes": [
+      "contest-conditions",
+      "contest-conditions__item",
+      "contest-conditions__list",
+      "contest-conditions__text",
+      "icon",
+      "icon--inverse",
+      "icon-calendar-clock",
+      "icon-trophy",
+      "link",
+      "link--dark"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Bloque de condiciones del concurso sobre tinta: dos filas con icono (cierre de participaciones y sorteo del gran premio), un texto de condiciones y el enlace a las bases completas.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Los iconos son decorativos (`aria-hidden`): las fechas van en texto y se leen en orden. Las filas son elementos de una lista sin nombre visible; la lista no necesita nombre porque sus filas se explican solas. Contrastes: crema sobre tinta (17:1); la fecha en negrita no cambia el color. El enlace es `link--dark`: crema sobre tinta con subrayado, y su foco es amarillo de marca (12:1 sobre tinta). Teclado: Tab llega al enlace de las bases. Sin controles salvo el enlace.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en la columna «Winning conditions» de Contest how-to. No sustituye a las bases legales: el texto de condiciones es ⬜ TODO (GB Foods) y el enlace lleva a las bases completas, que son obligatorias. No sirve para otras fechas que no sean de cierre o de sorteo. Las fechas son ⬜ TODO: 30 septiembre y 7 octubre de 2026 vienen del wireframe y deben confirmarse con GB Foods y la agencia.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "contest-conditions",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "308:2308",
+    "contract": "../../../../../../design-system/schemas/components/contest-conditions.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

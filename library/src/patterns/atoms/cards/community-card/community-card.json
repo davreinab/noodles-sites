@@ -1,0 +1,156 @@
+{
+  "title": "Community card",
+  "description": "Community card: foto de la comunidad (ganadores o participantes) con pie «@usuario · producto» en caption. Usos: Contest community (wireframe 330:6557, bloque Real moments / Share…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".community-card",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-card",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "community-card",
+      "name": "Community card",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "308:2304",
+      "current": {
+        "description": "Community card: foto de la comunidad (ganadores o participantes) con pie «@usuario · producto» en caption. Usos: Contest community (wireframe 330:6557, bloque Real moments / Shared by the community, fila desplazable). Clase CSS: .community-card. ⬜ TODO GB Foods/agencia: fotos y usuarios reales con permiso de publicación.",
+        "Propósito": "Foto de la comunidad con su pie de autoría (por ejemplo «@user2 · Home Ramen Kit unboxing»). Es una figura con pie (`figure` y `figcaption`) y no es un enlace.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Rol: `figure` con `figcaption`: el pie es su nombre. La imagen es decorativa (`alt` vacío) porque el pie dice quién la comparte y de qué va; si una foto necesitara descripción propia, se escribe en `alt`. No es interactivo: no tiene foco. Contraste: texto tinta sobre blanco.",
+        "Cuándo usar / qué NO hace": "Solo en Contest community. No es un enlace a la publicación original: si se quisiera enlazar, habría que añadirlo como un componente nuevo. Las fotos y los nombres de usuario son ⬜ TODO: hay que tener el permiso de uso de cada autor antes de publicarlas (es una condición de imagen, no de diseño)."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "308:2304",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=308-2304",
+      "page": "Cards",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-23 · 09:36 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Community card: foto de la comunidad (ganadores o participantes) con pie «@usuario · producto» en caption. Usos: Contest community (wireframe 330:6557, bloque Real moments / Shared by the community, fila desplazable). Clase CSS: .community-card. ⬜ TODO GB Foods/agencia: fotos y usuarios reales con permiso de publicación."
+    ],
+    "props": [
+      {
+        "name": "caption",
+        "type": "string",
+        "values": [],
+        "default": "@user · Home Ramen Kit unboxing",
+        "figma": "Caption#308:12"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/border/default",
+          "color/surface/card",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "contest-card",
+        "items": [
+          "contest-card/media-bg"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/caption",
+          "font/size/desktop/caption",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 11,
+    "textStyles": [
+      "Desktop/caption"
+    ],
+    "classes": [
+      "community-card",
+      "community-card__caption",
+      "community-card__media"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Foto de la comunidad con su pie de autoría (por ejemplo «@user2 · Home Ramen Kit unboxing»). Es una figura con pie (`figure` y `figcaption`) y no es un enlace.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Rol: `figure` con `figcaption`: el pie es su nombre. La imagen es decorativa (`alt` vacío) porque el pie dice quién la comparte y de qué va; si una foto necesitara descripción propia, se escribe en `alt`. No es interactivo: no tiene foco. Contraste: texto tinta sobre blanco.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en Contest community. No es un enlace a la publicación original: si se quisiera enlazar, habría que añadirlo como un componente nuevo. Las fotos y los nombres de usuario son ⬜ TODO: hay que tener el permiso de uso de cada autor antes de publicarlas (es una condición de imagen, no de diseño).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "community-card",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "308:2304",
+    "contract": "../../../../../../design-system/schemas/components/community-card.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

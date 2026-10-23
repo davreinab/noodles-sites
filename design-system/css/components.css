@@ -95,6 +95,8 @@
 .icon-send            { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='m21.854 2.147-10.94 10.939' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/send.svg */; }
 .icon-timer           { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 2H14' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 14L15 11' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 16.4183 6 12 6C7.58172 6 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/timer.svg */; }
 .icon-trash           { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 6h18' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 11V17' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 11V17' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/trash.svg */; }
+.icon-calendar-clock { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 2v4' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 2v4' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3 10h5' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.5 17.5 16 16.3V14' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22 16a6 6 0 1 0-12 0a6 6 0 1 0 12 0' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/calendar-clock.svg */; }
+.icon-trophy         { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9H4.5a2.5 2.5 0 0 1 0-5H6' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 9h1.5a2.5 2.5 0 0 0 0-5H18' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4 22h16' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 2H6v7a6 6 0 0 0 12 0V2Z' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/trophy.svg */; }
 .icon-triangle-alert  { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.73 18L13.73 4C13.5556 3.6922 13.3026 3.43618 12.9969 3.25806C12.6912 3.07995 12.3438 2.9861 11.99 2.9861C11.6362 2.9861 11.2887 3.07995 10.9831 3.25806C10.6774 3.43618 10.4244 3.6922 10.25 4L2.24999 18C2.07367 18.3054 1.98122 18.6519 1.982 19.0045C1.98278 19.3571 2.07677 19.7032 2.25444 20.0078C2.43211 20.3124 2.68714 20.5646 2.99369 20.7388C3.30023 20.9131 3.6474 21.0032 3.99999 21H20C20.3509 20.9996 20.6955 20.907 20.9993 20.7313C21.303 20.5556 21.5552 20.3031 21.7305 19.9991C21.9058 19.6951 21.998 19.3504 21.9979 18.9995C21.9978 18.6486 21.9054 18.3039 21.73 18Z' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 9V13' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 17H12.01' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") /* ../assets/icons/triangle-alert.svg */; }
 .icon-instagram       { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cg clip-path='url(%23clip0_21_65)'%3E %3Cpath d='M7.03008 0.0840168C5.75328 0.144217 4.88138 0.348017 4.11908 0.647417C3.33028 0.954917 2.66158 1.36742 1.99628 2.03512C1.33108 2.70282 0.921282 3.37192 0.616082 4.16212C0.320682 4.92592 0.120482 5.79862 0.0640816 7.07612C0.00768159 8.35362 -0.00481841 8.76432 0.00148159 12.0231C0.00768159 15.2817 0.0220816 15.6902 0.0839816 16.9704C0.144982 18.2469 0.347982 19.1186 0.647482 19.8811C0.955482 20.67 1.36748 21.3384 2.03548 22.0039C2.70338 22.6694 3.37198 23.0782 4.16398 23.3839C4.92718 23.6789 5.80008 23.88 7.07738 23.9359C8.35468 23.9919 8.76578 24.0049 12.0236 23.9986C15.2814 23.9924 15.6916 23.9779 16.9714 23.9172C18.2514 23.8565 19.1184 23.652 19.8812 23.3539C20.6701 23.0453 21.339 22.6339 22.004 21.9658C22.669 21.2976 23.0785 20.628 23.3835 19.8374C23.6792 19.0742 23.8801 18.2014 23.9355 16.925C23.9915 15.6441 24.0047 15.2352 23.9985 11.977C23.9922 8.71872 23.9775 8.31022 23.9168 7.03052C23.8561 5.75082 23.6528 4.88182 23.3535 4.11882C23.0451 3.32992 22.6335 2.66202 21.9659 1.99602C21.2982 1.33002 20.628 0.920817 19.8378 0.616517C19.074 0.321017 18.2017 0.119717 16.9244 0.0645168C15.6471 0.00931678 15.236 -0.00498321 11.977 0.00141679C8.71798 0.00761679 8.30998 0.0216168 7.03008 0.0840168ZM7.17028 21.7771C6.00028 21.7262 5.36498 21.5318 4.94158 21.3691C4.38098 21.1531 3.98158 20.892 3.55968 20.4741C3.13768 20.0563 2.87858 19.6555 2.65968 19.0961C2.49528 18.6727 2.29728 18.0381 2.24258 16.8681C2.18308 15.6036 2.17058 15.2239 2.16358 12.0201C2.15658 8.81642 2.16888 8.43712 2.22428 7.17212C2.27428 6.00312 2.46988 5.36712 2.63228 4.94392C2.84828 4.38262 3.10848 3.98392 3.52728 3.56232C3.94608 3.14062 4.34568 2.88092 4.90558 2.66202C5.32858 2.49692 5.96308 2.30062 7.13258 2.24492C8.39808 2.18492 8.77728 2.17292 11.9806 2.16592C15.1839 2.15892 15.5641 2.17092 16.8301 2.22672C17.9991 2.27752 18.6354 2.47122 19.0581 2.63472C19.6189 2.85072 20.0181 3.11012 20.4397 3.52972C20.8614 3.94912 21.1213 4.34732 21.3402 4.90842C21.5055 5.33012 21.7019 5.96442 21.7571 7.13472C21.8173 8.40022 21.831 8.77972 21.8367 11.9827C21.8425 15.1857 21.8312 15.5661 21.7757 16.8307C21.7247 18.0007 21.5307 18.6362 21.3677 19.0601C21.1517 19.6205 20.8914 20.0201 20.4723 20.4415C20.0533 20.863 19.6542 21.1226 19.094 21.3415C18.6716 21.5064 18.0363 21.7032 16.8678 21.7589C15.6022 21.8184 15.223 21.8309 12.0185 21.8379C8.81398 21.8449 8.43578 21.8319 7.17028 21.7771ZM16.953 5.58642C16.9535 5.87125 17.0384 6.14954 17.197 6.38609C17.3557 6.62265 17.5809 6.80684 17.8443 6.91537C18.1076 7.02391 18.3972 7.05191 18.6765 6.99583C18.9557 6.93975 19.2121 6.80212 19.4131 6.60034C19.6141 6.39855 19.7508 6.14169 19.8058 5.86222C19.8609 5.58276 19.8318 5.29325 19.7223 5.03032C19.6128 4.76739 19.4277 4.54284 19.1906 4.38508C18.9534 4.22731 18.6748 4.14342 18.39 4.14402C18.0082 4.14481 17.6423 4.29721 17.3728 4.56769C17.1034 4.83818 16.9523 5.20461 16.953 5.58642ZM5.83848 12.012C5.84518 15.4152 8.60908 18.1677 12.0115 18.1613C15.4141 18.1548 18.1685 15.3912 18.1621 11.988C18.1556 8.58482 15.3911 5.83152 11.9881 5.83822C8.58508 5.84492 5.83208 8.60922 5.83848 12.012ZM7.99998 12.0077C7.99842 11.2166 8.23149 10.4428 8.66971 9.78412C9.10793 9.12546 9.73163 8.61154 10.4619 8.30735C11.1922 8.00315 11.9963 7.92234 12.7726 8.07514C13.5488 8.22794 14.2623 8.60749 14.8228 9.16578C15.3833 9.72408 15.7657 10.436 15.9216 11.2117C16.0774 11.9873 15.9998 12.7917 15.6985 13.5232C15.3972 14.2547 14.8858 14.8804 14.2289 15.3213C13.572 15.7621 12.7991 15.9982 12.008 15.9998C11.4827 16.0009 10.9623 15.8985 10.4766 15.6985C9.99082 15.4985 9.54925 15.2047 9.17706 14.834C8.80487 14.4633 8.50935 14.0229 8.30739 13.5379C8.10542 13.053 8.00097 12.533 7.99998 12.0077Z' fill='black'/%3E %3C/g%3E %3Cdefs%3E %3CclipPath id='clip0_21_65'%3E %3Crect width='24' height='24' fill='white'/%3E %3C/clipPath%3E %3C/defs%3E %3C/svg%3E") /* ../assets/icons/instagram.svg */; }
 .icon-tiktok          { --icon-src: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cg clip-path='url(%23clip0_21_62)'%3E %3Cpath d='M12.525 0.02C13.835 0 15.135 0.01 16.435 0C16.515 1.53 17.065 3.09 18.185 4.17C19.305 5.28 20.885 5.79 22.425 5.96V9.99C20.985 9.94 19.535 9.64 18.225 9.02C17.655 8.76 17.125 8.43 16.605 8.09C16.595 11.01 16.615 13.93 16.585 16.84C16.505 18.24 16.045 19.63 15.235 20.78C13.925 22.7 11.655 23.95 9.325 23.99C7.895 24.07 6.465 23.68 5.245 22.96C3.225 21.77 1.805 19.59 1.595 17.25C1.575 16.75 1.565 16.25 1.585 15.76C1.765 13.86 2.705 12.04 4.165 10.8C5.825 9.36 8.145 8.67 10.315 9.08C10.335 10.56 10.275 12.04 10.275 13.52C9.285 13.2 8.125 13.29 7.255 13.89C6.625 14.3 6.145 14.93 5.895 15.64C5.685 16.15 5.745 16.71 5.755 17.25C5.995 18.89 7.575 20.27 9.255 20.12C10.375 20.11 11.445 19.46 12.025 18.51C12.215 18.18 12.425 17.84 12.435 17.45C12.535 15.66 12.495 13.88 12.505 12.09C12.515 8.06 12.495 4.04 12.525 0.02Z' fill='black'/%3E %3C/g%3E %3Cdefs%3E %3CclipPath id='clip0_21_62'%3E %3Crect width='24' height='24' fill='white'/%3E %3C/clipPath%3E %3C/defs%3E %3C/svg%3E") /* ../assets/icons/tiktok.svg */; }
@@ -904,10 +906,13 @@
 @media (prefers-reduced-motion: reduce) { .category-card { transition: none; } }
 
 /* ══════════════════════════════════════════════════════════════════════════
-   CONTEST CARD · no es enlace en bloque: tiene acción y bases legales
-   Status Active / Closed cambia el contenido (Badge, acción), no el estilo.
+   CONTEST CARD · tarjeta de concurso de la Contest library · toda la tarjeta es un enlace
+   El título lleva el enlace y este se estira a toda la tarjeta (mismo patrón que Recipe card).
+   Active: caption «Available until …». Closed: Badge «Closed» sobre la imagen y «Ended on …».
+   Imagen cuadrada (1:1). Fluida: en la rejilla ocupa su columna; en móvil, todo el ancho.
    ══════════════════════════════════════════════════════════════════════════ */
 .contest-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -915,18 +920,28 @@
   border-radius: var(--radius-md);
   background-color: var(--contest-card-bg);
   box-shadow: var(--elevation-1);
+  transition: box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
 }
+.contest-card:hover { box-shadow: var(--elevation-2); }
+/* Foco: el trazo de la tarjeta pasa a grueso y al color de foco (sin token propio de foco aún: usa el del enlace) */
+.contest-card:has(.contest-card__link:focus-visible) { border-width: var(--border-width-thick); border-color: var(--link-focus-ring); }
 .contest-card__media {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  aspect-ratio: 16 / 9;
-  padding: var(--space-16);
+  position: relative;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius-none);
   background-color: var(--contest-card-media-bg);
 }
-.contest-card__body { display: flex; flex-direction: column; gap: var(--space-16); padding: var(--space-24); }
+.contest-card__media img { width: 100%; height: 100%; object-fit: cover; }
+/* Badge de estado sobre la imagen (Closed) */
+.contest-card .badge { position: absolute; top: var(--space-16); left: var(--space-16); }
+.contest-card__body { display: flex; flex-direction: column; gap: var(--space-8); padding: var(--space-24); }
+.contest-card__dates {
+  margin: 0;
+  color: var(--contest-card-meta);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
 .contest-card__title {
   margin: 0;
   color: var(--contest-card-title);
@@ -936,20 +951,11 @@
   font-weight: var(--font-desktop-h3-weight);
   text-transform: uppercase;
 }
-.contest-card__dates {
-  margin: 0;
-  color: var(--contest-card-meta);
-  font-family: var(--font-family-body), sans-serif;
-  font-size: var(--font-size-desktop-body-s);
-  line-height: var(--font-line-height-desktop-body-s);
-}
-.contest-card__caption {
-  color: var(--contest-card-meta);
-  font-family: var(--font-family-body), sans-serif;
-  font-size: var(--font-size-desktop-caption);
-  line-height: var(--font-line-height-desktop-caption);
-}
-.contest-card__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-16) var(--space-24); }
+.contest-card__link { color: inherit; text-decoration: none; outline: none; }
+.contest-card__link::after { content: ""; position: absolute; inset: 0; }
+.contest-card__prizes { display: flex; flex-wrap: wrap; gap: var(--space-8); margin: 0; padding: 0; list-style: none; }
+/* Los premios son texto, no botones: el chip no cambia el cursor */
+.contest-card__prizes .chip { min-height: var(--chip-height-s); cursor: default; }
 
 /* ══════════════════════════════════════════════════════════════════════════
    ACCORDION ITEM · pregunta (botón con aria-expanded) y respuesta (región)
@@ -2384,6 +2390,11 @@
   line-height: var(--font-line-height-desktop-body-m);
 }
 
+/* Variant Ink (Tone=Ink): círculo tinta con el número en crema, para pasos sobre fondo blanco (Contest how-to) */
+.pillar-item--ink .pillar-item__number { background-color: var(--color-surface-inverse); color: var(--color-text-on-inverse); }
+/* Enlace o acción bajo el texto del pilar: ocupa las dos columnas y queda alineado con el círculo */
+.pillar-item__action { grid-column: 1 / -1; margin: 0; }
+
 /* ── NATURAL HERO · cabecera de la Natural formula page · fondo verde natural ─────────────── */
 .natural-hero { background-color: var(--color-surface-natural); color: var(--color-text-on-natural); }
 /* Columnas 688 : 560 px en el maestro (texto más ancho que la imagen) */
@@ -2641,6 +2652,13 @@
   .library-head__filters > li { flex: none; }
 }
 
+/* Variantes de cabecera sin buscador o sin filtros (Contest library: solo título y subtítulo) */
+.library-head--no-search .library-head__search { display: none; }
+.library-head--no-filters .library-head__filters,
+.library-head--no-filters .library-head__results { display: none; }
+/* Align=Center (fase 6): el Search field se centra en la columna; título, subtítulo y chips siguen a la izquierda. Align=Left es el valor por defecto. */
+.library-head--center .library-head__search { margin-inline: auto; }
+
 
 .library { display: flex; flex-direction: column; gap: var(--space-32); padding: var(--layout-section-y) 0; background-color: var(--color-surface-page); }
 .library__header { display: flex; flex-direction: column; gap: var(--space-16); padding-inline: var(--layout-margin); }
@@ -2737,6 +2755,10 @@
   font-family: var(--font-family-body), sans-serif;
   font-size: var(--font-size-desktop-body-m);
   line-height: var(--font-line-height-desktop-body-m);
+}
+/* Móvil (fase 6): el título pasa al tamaño móvil del h2; el maestro lo dibuja con el tamaño de escritorio */
+@media (max-width: 768px) {
+  .empty-state__title { font-size: var(--font-size-mobile-h2); line-height: var(--font-line-height-mobile-h2); }
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -3064,4 +3086,689 @@
     font-size: var(--font-size-mobile-body-m);
     line-height: var(--font-line-height-mobile-body-m);
   }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   FASE 5 · CONCURSOS · bloques de la contest library, de la página de concurso y del resultado
+   Todo consume tokens semánticos ya existentes. Los tokens propios de cada componente (prize-card/*,
+   voucher/*, contest-hero/*…) no existen aún en Figma: pendientes de sincronizar.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════════════════════════════════
+   PRIZE CARD · premio de un concurso · imagen 4:3, nivel (caption), nombre (h3) y descripción
+   Variant Grand: el cuerpo va en tinta (texto claro y nivel en amarillo de marca). Default: cuerpo blanco.
+   La imagen es decorativa (alt vacío): el nombre del premio ya va en el texto.
+   ══════════════════════════════════════════════════════════════════════════ */
+.prize-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  border: var(--border-width-thin) solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+  color: var(--color-text-default);
+}
+.prize-card__media { aspect-ratio: 4 / 3; background-color: var(--contest-card-media-bg); }
+.prize-card__media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.prize-card__body { display: flex; flex: 1; flex-direction: column; gap: var(--space-8); padding: var(--space-24); }
+.prize-card__level {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+.prize-card__title {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.prize-card__text {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+/* Grand: cuerpo en tinta; la etiqueta en amarillo de marca (12:1 sobre tinta) y el texto en crema (17:1) */
+.prize-card--grand .prize-card__body { background-color: var(--color-surface-inverse); }
+.prize-card--grand .prize-card__level { color: var(--color-text-brand-on-inverse); }
+.prize-card--grand .prize-card__title,
+.prize-card--grand .prize-card__text { color: var(--color-text-on-inverse); }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CONTEST PRIZES · premios del concurso · cuatro Prize card · fondo crema
+   Escritorio: cuatro en fila. Tablet: dos. Móvil: carrusel horizontal con ajuste por tarjeta (scroll-snap),
+   como los anillos de nutrición. La lista es enfocable (tabindex="0") para desplazarla con teclado.
+   ══════════════════════════════════════════════════════════════════════════ */
+.contest-prizes { background-color: var(--color-surface-page); }
+.contest-prizes__list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--layout-gutter); margin: 0; padding: 0; list-style: none; }
+.contest-prizes__list > li { display: flex; min-width: 0; }
+.contest-prizes__list > li > .prize-card { flex: 1; }
+.contest-prizes__list:focus-visible,
+.contest-community__list:focus-visible { outline: var(--border-width-thin) solid var(--link-focus-ring); outline-offset: var(--space-4); }
+@media (max-width: 1024px) { .contest-prizes__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 768px) {
+  .contest-prizes__list { display: flex; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; }
+  .contest-prizes__list > li { flex: 0 0 80%; scroll-snap-align: start; }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CONTEST HERO · cabecera de la página de concurso · fondo amarillo de marca
+   Imagen ancha arriba (radio lg). Debajo, a la izquierda: Badge de estado, título (h1), texto, botón «Enter now»
+   (ancla a #join, el formulario) y «Read the rules»; a la derecha, la caja «How to participate».
+   El texto va en tinta (text/default): el gris secundario no pasa AA sobre amarillo (3,85:1).
+   ══════════════════════════════════════════════════════════════════════════ */
+.contest-hero { background-color: var(--color-surface-brand); color: var(--color-text-default); }
+.contest-hero__media { margin: 0; }
+.contest-hero__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 2;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  background-color: var(--contest-card-media-bg);
+}
+.contest-hero__grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 3fr); align-items: end; gap: var(--space-64); }
+.contest-hero__content { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-16); }
+.contest-hero__title {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h1);
+  line-height: var(--font-line-height-desktop-h1);
+  font-weight: var(--font-desktop-h1-weight);
+  text-transform: uppercase;
+}
+.contest-hero__lead {
+  margin: 0;
+  color: var(--color-text-default); /* el maestro liga text/secondary; sobre brand (3,85:1) no pasa AA: ver nota de la cabecera */
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-l);
+  line-height: var(--font-line-height-desktop-body-l);
+}
+.contest-hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-16) var(--space-24); }
+.contest-hero__how {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-24);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+  color: var(--color-text-default);
+}
+.contest-hero__how-title {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.contest-hero__how-text {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-s);
+  line-height: var(--font-line-height-desktop-body-s);
+}
+@media (max-width: 768px) {
+  .contest-hero__image { aspect-ratio: 4 / 3; }
+  .contest-hero__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-24); }
+  .contest-hero__title { font-size: var(--font-size-mobile-h1); line-height: var(--font-line-height-mobile-h1); }
+  .contest-hero__lead { font-size: var(--font-size-mobile-body-l); line-height: var(--font-line-height-mobile-body-l); }
+  .contest-hero__how-title { font-size: var(--font-size-mobile-h3); line-height: var(--font-line-height-mobile-h3); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CONTEST HOWTO · cómo participar y cómo se gana · fondo blanco
+   Dos columnas: pasos (Pillar item en variante Ink; el paso 3 lleva enlace a #join) y condiciones del concurso.
+   Móvil: apilado, primero los pasos.
+   ══════════════════════════════════════════════════════════════════════════ */
+.contest-howto { background-color: var(--color-surface-card); }
+.contest-howto__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: var(--space-80); }
+.contest-howto__column { display: flex; flex-direction: column; gap: var(--space-32); min-width: 0; }
+.contest-howto__column--conditions { gap: var(--space-16); } /* el maestro: título y caja de condiciones a 16 */
+.contest-howto__heading {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.contest-howto__steps { display: flex; flex-direction: column; gap: var(--space-32); margin: 0; padding: 0; list-style: none; }
+@media (max-width: 768px) {
+  .contest-howto__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-48); }
+  .contest-howto__heading { font-size: var(--font-size-mobile-h3); line-height: var(--font-line-height-mobile-h3); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CONTEST CONDITIONS · condiciones del concurso sobre tinta · dos filas con icono (cierre y sorteo),
+   texto pendiente de GB Foods y enlace a las bases completas.
+   El icono va en color inverso (crema sobre tinta). El enlace usa Link en variante oscura.
+   ══════════════════════════════════════════════════════════════════════════ */
+.contest-conditions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  padding: var(--space-32);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-inverse);
+  color: var(--color-text-on-inverse);
+}
+.contest-conditions__list { display: flex; flex-direction: column; gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
+.contest-conditions__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  margin: 0;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+.contest-conditions__item .icon { flex: none; width: var(--icon-size-md); height: var(--icon-size-md); color: inherit; }
+.contest-conditions__item strong { font-weight: bold; }
+.contest-conditions__text {
+  margin: 0;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-s);
+  line-height: var(--font-line-height-desktop-body-s);
+}
+@media (max-width: 768px) {
+  .contest-conditions { padding: var(--space-24); }
+  .contest-conditions__item { font-size: var(--font-size-mobile-body-m); line-height: var(--font-line-height-mobile-body-m); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   FILE UPLOAD · subida de un justificante · etiqueta, caja con botón y texto de estado, ayuda y error
+   El input real (type=file) va visualmente oculto (.visually-hidden) pero sigue enfocable: el foco se ve en el
+   botón (:has). El botón es una etiqueta que envuelve el input, así el clic abre el selector sin JavaScript.
+   El nombre accesible lo da aria-labelledby, que prevalece sobre las etiquetas (el texto del botón no se suma).
+   La caja usa flex-wrap: en móvil el estado salta debajo del botón.
+   ══════════════════════════════════════════════════════════════════════════ */
+.file-upload__control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-16);
+  padding: calc(var(--space-16) - var(--border-width-thin));
+  border: var(--border-width-thin) solid var(--field-border);
+  border-radius: var(--radius-md);
+  background-color: var(--field-bg);
+}
+/* Error: el mismo trazo grueso y color que el resto de campos con aria-invalid */
+.file-upload:has(.file-upload__input[aria-invalid="true"]) .file-upload__control {
+  border-width: var(--border-width-thick);
+  border-color: var(--field-border-error);
+  padding: calc(var(--space-16) - var(--border-width-thick));
+}
+.file-upload__trigger { position: relative; cursor: pointer; }
+.file-upload__trigger:has(.file-upload__input:focus-visible) {
+  outline: var(--border-width-thin) solid var(--button-secondary-focus-ring);
+  outline-offset: 0;
+}
+.file-upload__status {
+  flex: 1 1 calc(var(--space-96) * 2);
+  min-width: 0;
+  margin: 0;
+  color: var(--field-placeholder); /* vacío: el texto de marcador («No file selected…»), como el maestro */
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+  overflow-wrap: anywhere;
+}
+/* Estado con archivo: el nombre pasa a color de texto y el botón de quitar va al final */
+.file-upload__status--selected { color: var(--field-text); }
+.file-upload__remove { flex: none; }
+/* Ayuda y error: body-s (14/20) en el maestro, no caption */
+.file-upload .field__helper,
+.file-upload .field__error { font-size: var(--font-size-desktop-body-s); line-height: var(--font-line-height-desktop-body-s); }
+@media (max-width: 768px) {
+  .file-upload__status { font-size: var(--font-size-mobile-body-m); line-height: var(--font-line-height-mobile-body-m); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   COMMUNITY CARD · foto de la comunidad con pie de autoría · figura sin enlace (no es navegable)
+   ══════════════════════════════════════════════════════════════════════════ */
+.community-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0;
+  border: var(--border-width-thin) solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+  color: var(--color-text-default);
+}
+.community-card__media { aspect-ratio: 1 / 1; background-color: var(--contest-card-media-bg); }
+.community-card__media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.community-card__caption {
+  margin: 0;
+  padding: var(--space-16);
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CONTEST COMMUNITY · vídeo de ganadores y fila de fotos de la comunidad · fondo blanco
+   El vídeo (Video player) ocupa el ancho del contenedor. Las Community card forman una rejilla de cinco en
+   escritorio, tres en tablet y un carrusel horizontal en móvil (como Contest prizes).
+   ══════════════════════════════════════════════════════════════════════════ */
+.contest-community { background-color: var(--color-surface-card); }
+.contest-community__heading {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.contest-community__list { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--layout-gutter); margin: 0; padding: 0; list-style: none; }
+.contest-community__list > li { display: flex; min-width: 0; }
+.contest-community__list > li > .community-card { flex: 1; }
+@media (max-width: 1024px) { .contest-community__list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 768px) {
+  .contest-community__list { display: flex; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; }
+  .contest-community__list > li { flex: 0 0 75%; scroll-snap-align: start; }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   VOUCHER · cupón de descuento con el estilo ticket del pie (footer__ticket): borde superior dentado, sin radio y giro leve
+   Los dientes son ::before con clip-path y la silueta se sombrea con filter: drop-shadow, como en el pie. El contorno
+   fino de la tarjeta se simula con un drop-shadow de 2 px en tinta (clip-path no admite filete). La sombra suave es la de la landing.
+   El código de barras es una imagen placeholder cuyo alt dice el código; el código bajo el código de barras es decorativo (aria-hidden) y va en horizontal, como en el maestro.
+   ══════════════════════════════════════════════════════════════════════════ */
+.voucher {
+  position: relative;
+  box-sizing: border-box; /* el padding entra en el ancho: sin él, en 320 px el cupón se sale de la columna */
+  display: flex;
+  align-items: center; /* contenido centrado en vertical, como el maestro (copia y talón a la misma altura) */
+  justify-content: space-between;
+  gap: var(--space-24);
+  width: 100%;
+  max-width: calc(var(--space-128) * 4); /* 512px: el maestro lo muestra a 520px (instancia), la medida más cercana en la escala de 8 */
+  margin-inline: auto;
+  padding: var(--space-24); /* padding del maestro: 24 en los cuatro lados */
+  color: var(--color-text-default);
+  transform: rotate(-0.6deg); /* giro del ticket del pie (sin token de rotación) */
+  filter: drop-shadow(0 0 var(--border-width-thin) var(--color-surface-inverse)) drop-shadow(0 var(--space-8) var(--space-24) var(--shadow-soft));
+}
+.voucher > * { position: relative; }
+.voucher::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-surface-page);
+  clip-path: polygon(0% 0, 7.14% var(--space-16), 14.28% 0, 21.42% var(--space-16), 28.56% 0, 35.7% var(--space-16), 42.84% 0, 50% var(--space-16), 57.14% 0, 64.28% var(--space-16), 71.42% 0, 78.56% var(--space-16), 85.7% 0, 92.84% var(--space-16), 100% 0, 100% 100%, 0% 100%);
+}
+.voucher__main { display: flex; flex-direction: column; justify-content: flex-end; gap: var(--space-4); min-width: 0; }
+.voucher__value {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-display);
+  line-height: var(--font-line-height-desktop-display);
+  font-weight: var(--font-desktop-h1-weight);
+  text-transform: uppercase;
+}
+.voucher__label {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-label);
+  line-height: var(--font-line-height-desktop-label);
+  text-transform: uppercase;
+}
+/* Talón: código de barras con el código debajo, en horizontal (como el maestro: barcode 96 × 56 y gap 8) */
+.voucher__stub { display: flex; flex: none; flex-direction: column; align-items: center; gap: var(--space-8); }
+.voucher__barcode { display: block; width: var(--space-96); height: var(--space-56); object-fit: cover; }
+.voucher__code {
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+@media (max-width: 768px) {
+  .voucher { padding: calc(var(--space-32) + var(--space-16)) var(--space-16) var(--space-24); }
+  .voucher__value { font-size: var(--font-size-mobile-display); line-height: var(--font-line-height-mobile-display); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CONTEST RESULT · resultado tras participar · centrado sobre crema · Variant Lose, Win y Limit
+   Título en h1; texto; Voucher (Lose y Limit) o imagen del premio (Win); botón de descarga (enlace con download)
+   o enlace de vuelta al concurso (Win).
+   ══════════════════════════════════════════════════════════════════════════ */
+.contest-result { background-color: var(--color-surface-page); color: var(--color-text-default); text-align: center; padding-block: var(--space-64); /* 64 en escritorio y móvil, como el maestro */ }
+.contest-result__inner { display: flex; flex-direction: column; align-items: center; gap: var(--space-24); max-width: calc(var(--space-128) * 5); margin-inline: auto; }
+.contest-result__title {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h2);
+  line-height: var(--font-line-height-desktop-h2);
+  font-weight: var(--font-desktop-h2-weight);
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.contest-result__subtitle {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.contest-result__text {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+.contest-result__media { margin: 0; width: 100%; }
+/* Variantes: Win cambia el bloque central por la imagen del premio y el botón a secondary; Limit usa el Voucher con 25%. */
+.contest-result--win .contest-result__text { color: var(--color-text-secondary); } /* texto de verificación en text/secondary, como el maestro */
+.contest-result--limit .contest-result__title { color: var(--color-text-default); }
+
+.contest-result__image {
+  display: block;
+  width: 100%;
+  height: calc(var(--space-64) * 5); /* 320px: alto fijo del maestro en escritorio */
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface-card);
+}
+@media (max-width: 768px) {
+  .contest-result__image { height: calc(var(--space-64) * 3.75); } /* 240px: alto del maestro en móvil */
+  .contest-result__title { font-size: var(--font-size-mobile-h2); line-height: var(--font-line-height-mobile-h2); }
+  .contest-result__subtitle { font-size: var(--font-size-mobile-h3); line-height: var(--font-line-height-mobile-h3); }
+  .contest-result__text { font-size: var(--font-size-mobile-body-m); line-height: var(--font-line-height-mobile-body-m); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CONTEST LIBRARY · biblioteca de concursos · dos grupos: activos y cerrados
+   Cada grupo tiene su título h2 (y entradilla en cerrados) y su rejilla de Contest card: cuatro columnas en
+   escritorio, dos en tablet y una en móvil. «Load more» centrado debajo de los cerrados.
+   Fondo blanco: la Library head va en crema y no pueden ir dos secciones crema seguidas.
+   ══════════════════════════════════════════════════════════════════════════ */
+.contest-library { background-color: var(--color-surface-card); }
+.contest-library__inner { gap: var(--space-48); } /* entre cabecera, activos, cerrados y acción: 48 en el maestro */
+.contest-library__group { display: flex; flex-direction: column; gap: var(--space-24); min-width: 0; } /* título y tarjetas: 24 */
+.contest-library__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-24) var(--layout-gutter);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contest-library__more { display: flex; justify-content: center; }
+@media (max-width: 1024px) { .contest-library__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 768px) { .contest-library__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-24); } }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   NEWSLETTER · captación de la newsletter sobre tinta · título, texto, redes y campo de email con consentimiento
+   Dos columnas en escritorio (texto y redes a la izquierda; formulario a la derecha). Móvil: apilado.
+   La etiqueta del campo va oculta (.visually-hidden): sobre tinta la etiqueta visible no sería legible como campo.
+   ══════════════════════════════════════════════════════════════════════════ */
+.newsletter { background-color: var(--color-surface-inverse); color: var(--color-text-on-inverse); }
+.newsletter__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: var(--space-48) var(--space-80); }
+.newsletter__content { display: flex; flex-direction: column; gap: var(--space-16); min-width: 0; }
+.newsletter__title {
+  margin: 0;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h2);
+  line-height: var(--font-line-height-desktop-h2);
+  font-weight: var(--font-desktop-h2-weight);
+  text-transform: uppercase;
+}
+.newsletter__text {
+  margin: 0;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+.newsletter__social { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-8); margin: 0; }
+.newsletter__social-label {
+  margin: 0;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-s);
+  line-height: var(--font-line-height-desktop-body-s);
+}
+.newsletter__social-list { display: flex; flex-wrap: wrap; gap: var(--space-8); margin: 0; padding: 0; list-style: none; }
+.newsletter__form { display: flex; flex-direction: column; gap: var(--space-16); margin: 0; min-width: 0; }
+.newsletter__legal {
+  margin: 0;
+  color: var(--color-text-on-inverse);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+.newsletter__form .button { align-self: flex-start; }
+@media (max-width: 768px) {
+  .newsletter__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-32); }
+  .newsletter__title { font-size: var(--font-size-mobile-h2); line-height: var(--font-line-height-mobile-h2); }
+  .newsletter__text { font-size: var(--font-size-mobile-body-m); line-height: var(--font-line-height-mobile-body-m); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CONTEST FORM · formulario de participación sobre tinta · tres bloques (fieldset + legend) en tarjetas blancas
+   Cada bloque es un fieldset con su legend; dentro, una rejilla de dos columnas (una en móvil). El fieldset no
+   usa flex ni grid porque los navegadores antiguos colocan mal el legend; la rejilla va en un div interior.
+   Campos obligatorios con required y «*»; la nota «* Required fields» va con el consentimiento.
+   ══════════════════════════════════════════════════════════════════════════ */
+.contest-form { background-color: var(--color-surface-inverse); color: var(--color-text-on-inverse); }
+.contest-form .section__title,
+.contest-form .section__lead { color: var(--color-text-on-inverse); }
+.contest-form__form { display: flex; flex-direction: column; gap: var(--space-32); width: 100%; max-width: calc(var(--space-96) * 7.5); margin-inline: auto; } /* 720px: ancho de las tarjetas del maestro */
+.contest-form__block {
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-24);
+  border: 0;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+  color: var(--color-text-default);
+}
+.contest-form__legend {
+  float: inline-start; /* legend flotante: se pinta dentro de la tarjeta y no sobre su borde superior */
+  width: 100%;
+  margin: 0 0 var(--space-24);
+  padding: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.contest-form__block .field { min-width: 0; }
+.contest-form .field__control { box-sizing: border-box; max-width: 100%; }
+.contest-form__legend + * { clear: both; }
+.contest-form__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-16); }
+.contest-form__full { grid-column: 1 / -1; }
+.contest-form__consent { display: flex; flex-direction: column; gap: var(--space-16); }
+.contest-form__note {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+.contest-form__submit { width: 100%; }
+.contest-form__help {
+  margin: 0;
+  color: var(--color-text-secondary); /* sobre la tarjeta blanca de consentimiento, no sobre tinta */
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .contest-form__block { padding: var(--space-24); }
+  .contest-form__grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   FASE 6 · FAQ Y LEGALES · lista de preguntas frecuentes, página legal y tabla de plazos de conservación
+   Todo consume tokens semánticos ya existentes. Los tokens propios (faq-list/*, legal-table/*…) no existen aún en
+   Figma: pendientes de sincronizar. Los textos de las fichas son de ejemplo o ⬜ TODO hasta que los aporte GB Foods.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── FAQ LIST · preguntas frecuentes en columna de lectura · Accordion item, con recuento o estado vacío ──
+   Columna centrada a --layout-reading (720 px). Una sola respuesta abierta a la vez: lo resuelve el script de la
+   página (ver la ficha), no el CSS. En Results, el recuento va visible como caption; en Default va oculto (.visually-hidden
+   en el marcado) para que la región de estado exista y anuncie al cambiar. En Empty, el Empty state va encima y debajo
+   la lista de sugerencias, con su rótulo.
+   ══════════════════════════════════════════════════════════════════════════ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  width: 100%;
+  max-width: var(--layout-reading);
+  margin-inline: auto;
+}
+.faq-list__items { display: flex; flex-direction: column; gap: var(--space-16); margin: 0; padding: 0; list-style: none; }
+.faq-list__status {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+.faq-list__suggest {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+@media (max-width: 768px) {
+  .faq-list__status { font-size: var(--font-size-mobile-caption); line-height: var(--font-line-height-mobile-caption); }
+  .faq-list__suggest { font-size: var(--font-size-mobile-body-m); line-height: var(--font-line-height-mobile-body-m); }
+}
+
+/* ── LEGAL PAGE · página legal en columna de lectura · enlace de volver, h1, entradilla, intro, apartados numerados y fecha ──
+   Fondo blanco (surface/card): la página legal no encadena crema con la cabecera de la página. La columna va centrada a
+   --layout-reading (720 px). El número del apartado va en el propio texto del h2 («1. Scope of the Privacy Policy»),
+   igual que en el maestro, para que lo lean los lectores de pantalla. El h1 usa .page-title (tamaño de h1 del DS).
+   ══════════════════════════════════════════════════════════════════════════ */
+.legal-page { background-color: var(--color-surface-card); padding: var(--space-64) var(--layout-margin); }
+.legal-page__inner { display: flex; flex-direction: column; gap: var(--space-24); max-width: var(--layout-reading); margin-inline: auto; }
+.legal-page__back { align-self: flex-start; }
+.legal-page__lead {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-l);
+  line-height: var(--font-line-height-desktop-body-l);
+}
+.legal-page__intro,
+.legal-page__text,
+.legal-page__list {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+}
+.legal-page__section { display: flex; flex-direction: column; gap: var(--space-16); min-width: 0; }
+.legal-page__text { color: var(--color-text-secondary); } /* el maestro: los párrafos de los apartados van en text/secondary; la introducción, en default */
+.legal-page__heading {
+  margin: 0;
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-h3);
+  line-height: var(--font-line-height-desktop-h3);
+  font-weight: var(--font-desktop-h3-weight);
+  text-transform: uppercase;
+}
+.legal-page__list { display: flex; flex-direction: column; gap: var(--space-8); padding-left: var(--space-24); }
+.legal-page__updated {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-caption);
+  line-height: var(--font-line-height-desktop-caption);
+}
+@media (max-width: 768px) {
+  .legal-page { padding: var(--space-64) var(--space-16); }
+  .legal-page__inner { gap: var(--space-24); }
+  .legal-page__lead { font-size: var(--font-size-mobile-body-l); line-height: var(--font-line-height-mobile-body-l); }
+  .legal-page__heading { font-size: var(--font-size-mobile-h3); line-height: var(--font-line-height-mobile-h3); }
+  .legal-page__updated { font-size: var(--font-size-mobile-caption); line-height: var(--font-line-height-mobile-caption); }
+}
+
+/* ── LEGAL TABLE · tabla de dos columnas (finalidad y plazo) · cabecera en negrita con filete y filas con filete fino ──
+   Escritorio: tabla normal con <th scope="col">. Móvil: cada fila se apila (finalidad encima, plazo debajo) y el nombre de
+   la columna aparece como etiqueta visible con data-label. La cabecera no se quita con display:none sino que se
+   esconde con medidas cero: así sigue en el árbol de accesibilidad. Caption visualmente oculto en el marcado.
+   ══════════════════════════════════════════════════════════════════════════ */
+.legal-table {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  color: var(--color-text-default);
+  font-family: var(--font-family-body), sans-serif;
+  font-size: var(--font-size-desktop-body-m);
+  line-height: var(--font-line-height-desktop-body-m);
+  text-align: left;
+  vertical-align: top;
+}
+.legal-table th {
+  padding: var(--space-8) var(--space-24) var(--space-8) 0;
+  border-bottom: var(--border-width-thin) solid var(--color-border-default);
+  color: var(--color-text-default);
+  font-family: var(--font-family-display), sans-serif;
+  font-size: var(--font-size-desktop-label);
+  line-height: var(--font-line-height-desktop-label);
+  font-weight: var(--font-desktop-label-weight);
+  text-transform: uppercase;
+}
+.legal-table td {
+  padding: var(--space-16) var(--space-24) var(--space-16) 0;
+  border-bottom: var(--border-width-thin) solid var(--color-border-subtle);
+}
+.legal-table th:last-child,
+.legal-table td:last-child { padding-right: 0; }
+.legal-table td::before { content: none; }
+@media (max-width: 768px) {
+  .legal-table,
+  .legal-table tbody,
+  .legal-table tr,
+  .legal-table td { display: block; }
+  .legal-table thead { position: absolute; width: 0; height: 0; overflow: hidden; }
+  .legal-table tr { padding: var(--space-16) 0; border-bottom: var(--border-width-thin) solid var(--color-border-subtle); }
+  .legal-table tr:last-child { border-bottom: 0; }
+  .legal-table td { padding: 0 0 var(--space-8); border-bottom: 0; } /* el maestro separa finalidad y plazo con 8 */
+  .legal-table td:last-child { padding-bottom: 0; }
+  .legal-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: var(--space-4);
+    color: var(--color-text-secondary);
+    font-family: var(--font-family-body), sans-serif;
+    font-size: var(--font-size-mobile-caption);
+    line-height: var(--font-line-height-mobile-caption);
+  }
+  .legal-table td { font-size: var(--font-size-mobile-body-m); line-height: var(--font-line-height-mobile-body-m); }
 }

@@ -1,6 +1,6 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": "2026-10-22T15:29:03Z",
+  "generatedAt": "2026-10-23T09:40:52Z",
   "adoptionMode": "new",
   "sourcesCompared": [
     "figma",
@@ -12,8 +12,8 @@
   ],
   "summary": {
     "critical": 0,
-    "warning": 25,
-    "info": 17
+    "warning": 32,
+    "info": 19
   },
   "findings": [
     {
@@ -89,6 +89,16 @@
     {
       "severity": "warning",
       "check": "icon-not-exposed-as-swap",
+      "detail": "Contest conditions: capa «Icon / calendar-clock» (Icon / calendar-clock) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Contest conditions: capa «Icon / trophy» (Icon / trophy) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
       "detail": "Alert: capa «icon-status» (Icon / info) sin INSTANCE_SWAP"
     },
     {
@@ -120,6 +130,11 @@
       "severity": "warning",
       "check": "icon-not-exposed-as-swap",
       "detail": "Mobile menu: capa «social» (Icon / youtube) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Legal page: capa «icon-leading» (Icon / arrow-left) sin INSTANCE_SWAP"
     },
     {
       "severity": "warning",
@@ -197,6 +212,31 @@
       "detail": "Natural improvement: capa «icon» (Icon / close) sin INSTANCE_SWAP"
     },
     {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Contest how-to: capa «Icon / calendar-clock» (Icon / calendar-clock) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Contest how-to: capa «Icon / trophy» (Icon / trophy) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "icon-not-exposed-as-swap",
+      "detail": "Contest form: capa «icon-status» (Icon / info) sin INSTANCE_SWAP"
+    },
+    {
+      "severity": "warning",
+      "check": "contract-doc-without-component",
+      "detail": "docs/components/legal-table.md no corresponde a ningún componente del volcado; su criterio se conserva hasta que alguien decida"
+    },
+    {
+      "severity": "info",
+      "check": "figma-vs-component-contracts",
+      "detail": "assets/icons/calendar-clock.svg sin entrada en sync/icons.json"
+    },
+    {
       "severity": "info",
       "check": "figma-vs-component-contracts",
       "detail": "assets/icons/facebook.svg sin entrada en sync/icons.json"
@@ -220,6 +260,11 @@
       "severity": "info",
       "check": "figma-vs-component-contracts",
       "detail": "assets/icons/trash.svg sin entrada en sync/icons.json"
+    },
+    {
+      "severity": "info",
+      "check": "figma-vs-component-contracts",
+      "detail": "assets/icons/trophy.svg sin entrada en sync/icons.json"
     },
     {
       "severity": "info",

@@ -1,0 +1,601 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:contest-form",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Contest form",
+    "slug": "contest-form",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-23T09:36:22Z",
+    "description": "Contest form: formulario de participación sobre fondo surface/inverse (wireframe 330:6682 desktop; 361:8561 móvil). Título «Join it now» y subtítulo; tres tarjetas blancas (Personal data, Proof of purchase, Consent) con Input (2 columnas en desktop, 1 en móvil), Select «Purchase type», 2 File upload (State=Empty: receipt front y back), 3 Checkbox, «* Required fields», Alert info «Important information» y botón Primary «Enter the contest» a todo el ancho; ayuda centrada. Clase CSS: .contest-form. ⬜ TODO GB Foods/agencia: campos y textos legales definitivos, formatos de fecha e importe, y el texto del consentimiento.",
+    "figmaPage": "Pattern / Detail pages",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "61ac1c220ae7",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-23",
+      "figmaVersion": "61ac1c220ae7",
+      "variantsChecked": [
+        "breakpoint=Desktop",
+        "breakpoint=Mobile"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": [
+        "icon-status"
+      ]
+    },
+    "tokens": [
+      "alert/close",
+      "alert/info/bg",
+      "alert/info/border",
+      "alert/info/icon",
+      "alert/info/text",
+      "border/width/thick",
+      "border/width/thin",
+      "button/primary/bg",
+      "button/primary/border",
+      "button/primary/text",
+      "button/secondary/border",
+      "button/secondary/text",
+      "checkbox/box-bg",
+      "checkbox/box-border",
+      "checkbox/check",
+      "checkbox/label",
+      "color/surface/card",
+      "color/surface/inverse",
+      "color/text/default",
+      "color/text/on-inverse",
+      "color/text/secondary",
+      "field/bg",
+      "field/border",
+      "field/error-text",
+      "field/helper",
+      "field/icon",
+      "field/label",
+      "field/placeholder",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/h3",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/body-s",
+      "font/size/desktop/caption",
+      "font/size/desktop/h2",
+      "font/size/desktop/h3",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon/size/md",
+      "icon/size/sm",
+      "layout/margin",
+      "radius/md",
+      "radius/pill",
+      "radius/sm",
+      "space/16",
+      "space/24",
+      "space/32",
+      "space/4",
+      "space/64",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "alert",
+      "alert__body",
+      "alert__content",
+      "alert__title",
+      "button",
+      "button--l",
+      "checkbox",
+      "checkbox__input",
+      "checkbox__label",
+      "contest-form",
+      "contest-form__block",
+      "contest-form__consent",
+      "contest-form__form",
+      "contest-form__full",
+      "contest-form__grid",
+      "contest-form__help",
+      "contest-form__legend",
+      "contest-form__note",
+      "contest-form__submit",
+      "field",
+      "field__control",
+      "field__label",
+      "field__required",
+      "field__select",
+      "icon",
+      "icon-info",
+      "link",
+      "section",
+      "section__header",
+      "section__inner",
+      "section__lead",
+      "section__title"
+    ],
+    "example": "<section data-ds=\"contest-form\" class=\"section contest-form\" aria-labelledby=\"cf-title\">\n<div class=\"section__inner\">\n<div class=\"section__header\">\n<h2 class=\"section__title\" id=\"cf-title\">Join it now</h2>\n<p class=\"section__lead\">Fill out the form to enter the drawing</p>\n</div>\n<form class=\"contest-form__form\" id=\"join\" tabindex=\"-1\" action=\"/contests/slurp-and-win/enter\" method=\"post\">\n<fieldset class=\"contest-form__block\">\n<legend class=\"contest-form__legend\">Personal data</legend>\n<div class=\"contest-form__grid\">\n<div class=\"field\"><label class=\"field__label\" for=\"cf-first\">First name<span class=\"field__required\" aria-hidden=\"true\">*</span></label><input class=\"field__control\" id=\"cf-first\" name=\"first-name\" type=\"text\" autocomplete=\"given-name\" placeholder=\"Enter first name\" required></div>\n<div class=\"field\"><label class=\"field__label\" for=\"cf-last\">Last name<span class=\"field__required\" aria-hidden=\"true\">*</span></label><input class=\"field__control\" id=\"cf-last\" name=\"last-name\" type=\"text\" autocomplete=\"family-name\" placeholder=\"Enter last name\" required></div>\n<div class=\"field\"><label class=\"field__label\" for=\"cf-email\">Email address<span class=\"field__required\" aria-hidden=\"true\">*</span></label><input class=\"field__control\" id=\"cf-email\" name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"Enter email address\" required></div>\n<div class=\"field\"><label class=\"field__label\" for=\"cf-birth\">Date of birth (DD/MM/YYYY)<span class=\"field__required\" aria-hidden=\"true\">*</span></label><input class=\"field__control\" id=\"cf-birth\" name=\"birth-date\" type=\"text\" inputmode=\"numeric\" autocomplete=\"bday\" placeholder=\"DD/MM/YYYY\" required></div>\n</div>\n</fieldset>\n<fieldset class=\"contest-form__block\">\n<legend class=\"contest-form__legend\">Proof of purchase</legend>\n<div class=\"contest-form__grid\">\n<div class=\"field contest-form__full\"><label class=\"field__label\" for=\"cf-type\">Purchase type<span class=\"field__required\" aria-hidden=\"true\">*</span></label><div class=\"field__select\"><select class=\"field__control\" id=\"cf-type\" name=\"purchase-type\" required><option value=\"\">Select an option</option></select></div></div>\n<div class=\"field contest-form__full\"><label class=\"field__label\" for=\"cf-amount\">Amount spent<span class=\"field__required\" aria-hidden=\"true\">*</span></label><input class=\"field__control\" id=\"cf-amount\" name=\"amount\" type=\"text\" inputmode=\"decimal\" placeholder=\"0.00\" required></div>\n</div>\n</fieldset>\n<fieldset class=\"contest-form__block\">\n<legend class=\"contest-form__legend\">Consent</legend>\n<div class=\"contest-form__consent\">\n<label class=\"checkbox\" data-ds=\"checkbox\"><input class=\"checkbox__input\" type=\"checkbox\" name=\"age\" required><span class=\"checkbox__label\">I confirm I am 18 years or older and a resident of a participating country.<span class=\"field__required\" aria-hidden=\"true\">*</span></span></label>\n<label class=\"checkbox\" data-ds=\"checkbox\"><input class=\"checkbox__input\" type=\"checkbox\" name=\"rules\" required><span class=\"checkbox__label\">I have read and accept the <a class=\"link\" href=\"/contests/slurp-and-win/rules\">Contest Rules</a>.<span class=\"field__required\" aria-hidden=\"true\">*</span></span></label>\n<label class=\"checkbox\" data-ds=\"checkbox\"><input class=\"checkbox__input\" type=\"checkbox\" name=\"privacy\" required><span class=\"checkbox__label\">I have read the Privacy Notice on how my personal data will be processed for this contest.<span class=\"field__required\" aria-hidden=\"true\">*</span></span></label>\n<p class=\"contest-form__note\">* Required fields</p>\n<div class=\"alert\"><span class=\"icon icon-info\" aria-hidden=\"true\"></span><div class=\"alert__content\"><p class=\"alert__title\">Important information</p><p class=\"alert__body\">Save your purchase tickets to send us if you win any of the contest prizes.</p></div></div>\n</div>\n<button class=\"button button--l contest-form__submit\" type=\"submit\">Enter the contest</button>\n<p class=\"contest-form__help\">Having trouble? Check the <a class=\"link\" href=\"/contests/slurp-and-win/rules\">full contest rules</a> or contact <a class=\"link\" href=\"/contact\">customer care</a>.</p>\n</fieldset>\n</form>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "313:3247",
+    "componentKey": "0fc2c395b053dfbce1d7b40bc55b6baf15b94f08",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Input",
+        "component": "State=Default",
+        "componentSlug": "input",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Input",
+        "component": "State=Default",
+        "componentSlug": "input",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Input",
+        "component": "State=Default",
+        "componentSlug": "input",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Input",
+        "component": "State=Default",
+        "componentSlug": "input",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Select",
+        "component": "State=Default",
+        "componentSlug": "select",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-chevron",
+        "component": "Icon / chevron-down",
+        "componentSlug": "icon-chevron-down",
+        "exposedAs": "Icon#50:18",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#50:25",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Input",
+        "component": "State=Default",
+        "componentSlug": "input",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Input",
+        "component": "State=Default",
+        "componentSlug": "input",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "File upload",
+        "component": "State=Empty",
+        "componentSlug": "file-upload",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Button",
+        "component": "Hierarchy=Secondary, Size=M, State=Default",
+        "componentSlug": "button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "toggledBy": "Icon leading#33:25",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "toggledBy": "Icon trailing#33:50",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "File upload",
+        "component": "State=Empty",
+        "componentSlug": "file-upload",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Button",
+        "component": "Hierarchy=Secondary, Size=M, State=Default",
+        "componentSlug": "button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "toggledBy": "Icon leading#33:25",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "toggledBy": "Icon trailing#33:50",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Checkbox",
+        "component": "Checked=False, State=Default",
+        "componentSlug": "checkbox",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "check",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Check icon#50:7",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Checkbox",
+        "component": "Checked=False, State=Default",
+        "componentSlug": "checkbox",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "check",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Check icon#50:7",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Checkbox",
+        "component": "Checked=False, State=Default",
+        "componentSlug": "checkbox",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "check",
+        "component": "Icon / check",
+        "componentSlug": "icon-check",
+        "exposedAs": "Check icon#50:7",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Alert",
+        "component": "Type=Info, Layout=Inline",
+        "componentSlug": "alert",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-status",
+        "component": "Icon / info",
+        "componentSlug": "icon-info",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-close",
+        "component": "Icon / close",
+        "componentSlug": "icon-close",
+        "exposedAs": "Close icon#80:36",
+        "toggledBy": "Dismissible#80:18",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Button",
+        "component": "Hierarchy=Primary, Size=L, State=Default",
+        "componentSlug": "button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "toggledBy": "Icon leading#33:25",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "toggledBy": "Icon trailing#33:50",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
+      "paddingLeft: layout/margin",
+      "paddingTop: space/64",
+      "paddingRight: layout/margin",
+      "paddingBottom: space/64",
+      "fills: color/surface/inverse",
+      "color: color/surface/inverse",
+      "fills: color/text/on-inverse",
+      "fontSize: font/size/desktop/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h2",
+      "color: color/text/on-inverse",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "fills: color/surface/card",
+      "color: color/surface/card",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h3",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: color/text/default",
+      "itemSpacing: space/8",
+      "itemSpacing: space/4",
+      "fills: field/label",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label",
+      "color: field/label",
+      "fills: field/error-text",
+      "color: field/error-text",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: field/bg",
+      "strokes: field/border",
+      "color: field/bg",
+      "color: field/border",
+      "fills: field/placeholder",
+      "color: field/placeholder",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: field/error-text",
+      "fills: field/helper",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: field/helper",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: field/icon",
+      "color: field/icon",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "paddingLeft: space/24",
+      "paddingRight: space/24",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thick",
+      "strokeBottomWeight: border/width/thick",
+      "strokeLeftWeight: border/width/thick",
+      "strokeRightWeight: border/width/thick",
+      "strokes: button/secondary/border",
+      "color: button/secondary/border",
+      "strokes: button/secondary/text",
+      "color: button/secondary/text",
+      "fills: button/secondary/text",
+      "fontSize: font/size/desktop/body-s",
+      "lineHeight: font/line-height/desktop/body-s",
+      "itemSpacing: space/16",
+      "fills: checkbox/box-bg",
+      "strokes: checkbox/box-border",
+      "color: checkbox/box-bg",
+      "color: checkbox/box-border",
+      "strokes: checkbox/check",
+      "color: checkbox/check",
+      "fills: checkbox/label",
+      "color: checkbox/label",
+      "fills: color/text/secondary",
+      "color: color/text/secondary",
+      "fills: alert/info/bg",
+      "strokes: alert/info/border",
+      "color: alert/info/bg",
+      "color: alert/info/border",
+      "strokes: alert/info/icon",
+      "color: alert/info/icon",
+      "fills: alert/info/text",
+      "color: alert/info/text",
+      "strokes: alert/close",
+      "color: alert/close",
+      "paddingLeft: space/32",
+      "paddingTop: space/24",
+      "paddingRight: space/32",
+      "paddingBottom: space/24",
+      "fills: button/primary/bg",
+      "strokes: button/primary/border",
+      "color: button/primary/bg",
+      "color: button/primary/border",
+      "strokes: button/primary/text",
+      "color: button/primary/text",
+      "fills: button/primary/text"
+    ],
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m",
+      "Desktop/h3",
+      "Desktop/label",
+      "Desktop/caption",
+      "Desktop/body-s"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/contest-form.md",
+    "section": "Contest form"
+  },
+  "relations": {
+    "uses": [
+      "alert",
+      "button",
+      "checkbox",
+      "file-upload",
+      "icon-arrow-right",
+      "icon-check",
+      "icon-chevron-down",
+      "icon-circle-alert",
+      "icon-close",
+      "icon-info",
+      "input",
+      "select"
+    ],
+    "related": []
+  }
+}

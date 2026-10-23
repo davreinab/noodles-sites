@@ -1,0 +1,154 @@
+{
+  "title": "Voucher",
+  "description": "Voucher: cupón de descuento que se descarga tras participar (resultado Lose y Limit del bloque Contest result, wireframe 490:13618 y 490:13867). Estilo ticket de la landing (.idea…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".voucher",
+          "why": "sin fondo propio: depende de dónde se ponga"
+        }
+      ],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "voucher",
+      "name": "Voucher",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "308:2421",
+      "current": {
+        "description": "Voucher: cupón de descuento que se descarga tras participar (resultado Lose y Limit del bloque Contest result, wireframe 490:13618 y 490:13867). Estilo ticket de la landing (.ideas__ticket): papel en surface/page con borde dentado (vector ticket-paper clonado del pie 184:114), sombra shadow/soft y giro -0.6°. Texto Discount (display, «15% OFF» o «25% OFF»), caption «Discount Voucher», código de barras (placeholder rectangular) y código «0876562-R» en vertical. Clase CSS: .voucher. ⬜ TODO GB Foods/agencia: código de barras real, formato del código y porcentaje de la mecánica de límite.",
+        "Propósito": "Cupón de descuento con el estilo ticket del pie de la landing: papel crema, borde superior dentado, sin radio y giro leve. Muestra el porcentaje («15% OFF» o «25% OFF»), la etiqueta «Discount voucher», un código de barras y el código de cupón en vertical.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Es texto: el valor («15% OFF») y la etiqueta se leen en orden. El código de barras es una imagen con `alt` que dice el código, para que quien no ve el código de barras tenga el dato. El código vertical va con `aria-hidden` para no repetirlo. No es interactivo; el botón de descarga va aparte (en Contest result). Contraste: tinta sobre crema (más de 12:1); etiqueta y código en gris cálido sobre crema (5,4:1). La sombra y el contorno son decorativos.",
+        "Cuándo usar / qué NO hace": "Solo en Contest result (variantes Lose y Limit). No es un cupón de producto genérico ni un código que se pueda copiar: el código real y el porcentaje son ⬜ TODO (GB Foods). Hay que confirmar la validez del cupón y el texto legal de uso antes de publicarlo. El contorno fino es una aproximación con sombra de 2 px: el clip-path no admite filete, así que el borde no es idéntico al del maestro."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "nodeId": "308:2421",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=308-2421",
+      "page": "Cards",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-23 · 09:36 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Voucher: cupón de descuento que se descarga tras participar (resultado Lose y Limit del bloque Contest result, wireframe 490:13618 y 490:13867). Estilo ticket de la landing (.ideas__ticket): papel en surface/page con borde dentado (vector ticket-paper clonado del pie 184:114), sombra shadow/soft y giro -0.6°. Texto Discount (display, «15% OFF» o «25% OFF»), caption «Discount Voucher», código de barras (placeholder rectangular) y código «0876562-R» en vertical. Clase CSS: .voucher. ⬜ TODO GB Foods/agencia: código de barras real, formato del código y porcentaje de la mecánica de límite."
+    ],
+    "props": [
+      {
+        "name": "discount",
+        "type": "string",
+        "values": [],
+        "default": "15% OFF",
+        "figma": "Discount#308:29"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/surface/page",
+          "color/text/default",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/display",
+          "font/line-height/desktop/label",
+          "font/size/desktop/caption",
+          "font/size/desktop/display",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "shadow",
+        "items": [
+          "shadow/soft"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/24"
+        ]
+      }
+    ],
+    "tokenCount": 15,
+    "textStyles": [
+      "Desktop/display",
+      "Desktop/label",
+      "Desktop/caption"
+    ],
+    "classes": [
+      "voucher",
+      "voucher__barcode",
+      "voucher__code",
+      "voucher__label",
+      "voucher__main",
+      "voucher__stub",
+      "voucher__value"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Cupón de descuento con el estilo ticket del pie de la landing: papel crema, borde superior dentado, sin radio y giro leve. Muestra el porcentaje («15% OFF» o «25% OFF»), la etiqueta «Discount voucher», un código de barras y el código de cupón en vertical.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Es texto: el valor («15% OFF») y la etiqueta se leen en orden. El código de barras es una imagen con `alt` que dice el código, para que quien no ve el código de barras tenga el dato. El código vertical va con `aria-hidden` para no repetirlo. No es interactivo; el botón de descarga va aparte (en Contest result). Contraste: tinta sobre crema (más de 12:1); etiqueta y código en gris cálido sobre crema (5,4:1). La sombra y el contorno son decorativos.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en Contest result (variantes Lose y Limit). No es un cupón de producto genérico ni un código que se pueda copiar: el código real y el porcentaje son ⬜ TODO (GB Foods). Hay que confirmar la validez del cupón y el texto legal de uso antes de publicarlo. El contorno fino es una aproximación con sombra de 2 px: el clip-path no admite filete, así que el borde no es idéntico al del maestro.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "voucher",
+    "kind": "component",
+    "verification": "verified",
+    "figmaNodeId": "308:2421",
+    "contract": "../../../../../../design-system/schemas/components/voucher.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

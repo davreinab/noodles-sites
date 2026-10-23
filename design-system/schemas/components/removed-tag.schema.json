@@ -7,12 +7,19 @@
     "slug": "removed-tag",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T15:21:21Z",
+    "lastSync": "2026-10-23T09:36:22Z",
     "description": "Removed tag: píldora de ingrediente retirado de la fórmula natural (Natural formula, wireframe UX 274:6354; clase CSS .removed-tag). Icono x (close) a la izquierda y texto tachado en color/text/secondary; el texto oculto «removed:» va delante para lectores de pantalla, porque el tachado por sí solo no comunica el estado. Se usa en «We also removed» (Natural improvement) y dentro de Ingredient swap. Label: nombre del ingrediente retirado, p. ej. «Preservatives» (ejemplo ⬜ TODO envase).",
     "figmaPage": "Tags & chips",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "c940e2a4d2af",
     "verification": {
       "status": "verified",

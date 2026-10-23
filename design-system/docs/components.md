@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un componente que no esté aquí; los componentes consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 84 componentes sincronizados el 2026-10-22T15:21:21Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 91 componentes sincronizados el 2026-10-23T09:35:36Z · una ficha por archivo en `components/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -44,6 +44,8 @@
 - [Icon / whatsapp](components/icon-whatsapp.md) · component · `icon-whatsapp` · ✅ criterio completo
 - [Icon / facebook](components/icon-facebook.md) · component · `icon-facebook` · ✅ criterio completo
 - [Icon / telegram](components/icon-telegram.md) · component · `icon-telegram` · ✅ criterio completo
+- [Icon / calendar-clock](components/icon-calendar-clock.md) · component · `icon-calendar-clock` · ✅ criterio completo
+- [Icon / trophy](components/icon-trophy.md) · component · `icon-trophy` · ✅ criterio completo
 - [Logo / GB Foods](components/logo-gb-foods.md) · component · `logo-gb-foods` · ✅ criterio completo
 - [Logo / Aiki](components/logo-aiki.md) · component · `logo-aiki` · ✅ criterio completo
 - [Logo / Yatekomo](components/logo-yatekomo.md) · component · `logo-yatekomo` · ✅ criterio completo
@@ -59,6 +61,7 @@
 - [Select](components/select.md) · component · `select` · ✅ criterio completo
 - [Checkbox](components/checkbox.md) · component · `checkbox` · ✅ criterio completo
 - [Search field](components/search-field.md) · component · `search-field` · ✅ criterio completo
+- [File upload](components/file-upload.md) · component · `file-upload` · ⬜ 2 pendientes
 - [Nav item](components/nav-item.md) · component · `nav-item` · ✅ criterio completo
 - [Tab](components/tab.md) · component · `tab` · ✅ criterio completo
 - [Lang switch](components/lang-switch.md) · component · `lang-switch` · ✅ criterio completo
@@ -71,9 +74,12 @@
 - [Removed tag](components/removed-tag.md) · component · `removed-tag` · ⬜ 2 pendientes
 - [Product card](components/product-card.md) · component · `product-card` · ✅ criterio completo
 - [Recipe card](components/recipe-card.md) · component · `recipe-card` · ✅ criterio completo
-- [Contest card](components/contest-card.md) · component · `contest-card` · ✅ criterio completo
+- [Contest card](components/contest-card.md) · component · `contest-card` · ⬜ 3 pendientes
 - [Category card](components/category-card.md) · component · `category-card` · ✅ criterio completo
 - [Flavour tile](components/flavour-tile.md) · component · `flavour-tile` · ✅ criterio completo
+- [Prize card](components/prize-card.md) · component · `prize-card` · ⬜ 2 pendientes
+- [Community card](components/community-card.md) · component · `community-card` · ⬜ 2 pendientes
+- [Voucher](components/voucher.md) · component · `voucher` · ⬜ 2 pendientes
 - [Accordion item](components/accordion-item.md) · component · `accordion-item` · ✅ criterio completo
 - [Ingredient item](components/ingredient-item.md) · component · `ingredient-item` · ✅ criterio completo
 - [Ingredients](components/ingredients.md) · component · `ingredients` · ✅ criterio completo
@@ -92,7 +98,8 @@
 - [Ingredient swap](components/ingredient-swap.md) · component · `ingredient-swap` · ⬜ 2 pendientes
 - [Origins map](components/origins-map.md) · component · `origins-map` · ⬜ 2 pendientes
 - [Stat figure](components/stat-figure.md) · component · `stat-figure` · ⬜ 2 pendientes
-- [Pillar item](components/pillar-item.md) · component · `pillar-item` · ⬜ 2 pendientes
+- [Pillar item](components/pillar-item.md) · component · `pillar-item` · ⬜ 3 pendientes
+- [Contest conditions](components/contest-conditions.md) · component · `contest-conditions` · ⬜ 4 pendientes
 - [Modal / Slot](components/modal-slot.md) · component · `modal-slot` · ✅ criterio completo
 - [Modal](components/modal.md) · component · `modal` · ✅ criterio completo
 - [Alert](components/alert.md) · component · `alert` · ✅ criterio completo
@@ -134,5 +141,17 @@ Cada ficha nace con el bloque generado y cuatro campos de criterio en `⬜ TODO`
 - **Nuevos** (fichas a mano, sin volcado de Figma todavía; el sync rellena el bloque GENERATED): removed-tag, ingredient-swap, origins-map, stat-figure, pillar-item. CSS en `css/components.css` tras `.natural-formula`.
 - **Origins map:** la `ul` lleva los seis orígenes y es la que se lee; el círculo se coloca con CSS (ángulo por `:nth-child`, radio en `cqw`). Móvil conserva el círculo más pequeño (radio del 36 %), sin pasar a dos columnas.
 - **Pendiente:** todas las cifras, ingredientes, países y textos de Natural formula son de ejemplo (⬜ TODO envase).
+
+## Nota de cambios · fase 5 (2026-10-23)
+
+- **Nuevos** (fichas a mano, sin volcado de Figma todavía; el bloque GENERATED queda vacío hasta el sync): prize-card, contest-conditions, file-upload, community-card, voucher. CSS en `css/components.css`, en los bloques de fase 5 al final del archivo.
+- **Actualizados:** contest-card (estructura del maestro: imagen 1:1, fecha, nombre y premios; toda la tarjeta es un enlace y no lleva botones) y pillar-item (variante `pillar-item--ink` y acción `pillar-item__action`).
+- **Pendiente:** los maestros aprobados (h-*.png) aún no están en Figma, así que el bloque GENERATED de contest-card describe la versión anterior hasta el sync. Textos, premios, fechas y condiciones son ⬜ TODO (confirmar con GB Foods y la agencia). Los tokens propios de cada componente (prize-card/*, voucher/*…) no existen aún: se usan los semánticos ya definidos.
+
+## Nota de cambios · fase 6 (2026-10-23)
+
+- **Nuevos** (fichas a mano, sin volcado de Figma; el bloque GENERATED queda vacío hasta el sync): legal-table. CSS en `css/components.css`, en el bloque «FASE 6 · FAQ Y LEGALES» al final del archivo.
+- **Actualizados:** empty-state (en móvil, el título usa el tamaño móvil del h2; ficha con la regla).
+- **Pendiente:** los textos legales son ⬜ TODO (los aporta GB Foods). Verificación de la tabla apilada en VoiceOver (iOS y macOS) antes de darla por verificada.
 
 ## Catálogo propuesto (⬜ por definir en Figma)

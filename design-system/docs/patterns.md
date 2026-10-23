@@ -9,7 +9,7 @@
 > Reglas duras: no se inventa un patrón que no esté aquí; los patrones se componen de átomos y consumen
 > **tokens semánticos** de `tokens.css`, nunca primitivos ni hex.
 
-**Estado:** 28 patrones sincronizados el 2026-10-22T15:21:21Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
+**Estado:** 39 patrones sincronizados el 2026-10-23T09:38:30Z · una ficha por archivo en `patterns/<slug>.md` (este archivo solo guarda el índice y las secciones manuales).
 
 ---
 
@@ -18,6 +18,9 @@
 - [Navbar](patterns/navbar.md) · pattern · `navbar` · ✅ criterio completo
 - [Mobile menu](patterns/mobile-menu.md) · pattern · `mobile-menu` · ✅ criterio completo
 - [Footer](patterns/footer.md) · pattern · `footer` · ✅ criterio completo
+- [FAQ list](patterns/faq-list.md) · pattern · `faq-list` · ⬜ 4 pendientes
+- [Legal table](patterns/legal-table.md) · pattern · `legal-table` · ⬜ 4 pendientes
+- [Legal page](patterns/legal-page.md) · pattern · `legal-page` · ⬜ 5 pendientes
 - [Hero](patterns/hero.md) · pattern · `hero` · ✅ criterio completo
 - [Marquee](patterns/marquee.md) · pattern · `marquee` · ✅ criterio completo
 - [Promo](patterns/promo.md) · pattern · `promo` · ✅ criterio completo
@@ -33,6 +36,8 @@
 - [Product line](patterns/product-line.md) · pattern · `product-line` · ✅ criterio completo
 - [Library head](patterns/library-head.md) · pattern · `library-head` · ✅ criterio completo
 - [Recipe submit](patterns/recipe-submit.md) · pattern · `recipe-submit` · ✅ criterio completo
+- [Contest library](patterns/contest-library.md) · pattern · `contest-library` · ⬜ 2 pendientes
+- [Newsletter](patterns/newsletter.md) · pattern · `newsletter` · ⬜ 4 pendientes
 - [Product hero](patterns/product-hero.md) · pattern · `product-hero` · ✅ criterio completo
 - [Product details](patterns/product-details.md) · pattern · `product-details` · ✅ criterio completo
 - [Preparation](patterns/preparation.md) · pattern · `preparation` · ✅ criterio completo
@@ -43,6 +48,12 @@
 - [Natural improvement](patterns/natural-improvement.md) · pattern · `natural-improvement` · ⬜ 2 pendientes
 - [Natural stats](patterns/natural-stats.md) · pattern · `natural-stats` · ⬜ 2 pendientes
 - [Natural pillars](patterns/natural-pillars.md) · pattern · `natural-pillars` · ⬜ 2 pendientes
+- [Contest hero](patterns/contest-hero.md) · pattern · `contest-hero` · ⬜ 3 pendientes
+- [Contest prizes](patterns/contest-prizes.md) · pattern · `contest-prizes` · ⬜ 2 pendientes
+- [Contest how-to](patterns/contest-how-to.md) · pattern · `contest-how-to` · ⬜ 3 pendientes
+- [Contest form](patterns/contest-form.md) · pattern · `contest-form` · ⬜ 4 pendientes
+- [Contest community](patterns/contest-community.md) · pattern · `contest-community` · ⬜ 2 pendientes
+- [Contest result](patterns/contest-result.md) · pattern · `contest-result` · ⬜ 5 pendientes
 
 ## Cómo rellenar una ficha
 
@@ -67,6 +78,20 @@ Cada ficha nace con el bloque generado y cuatro campos de criterio en `⬜ TODO`
   ratón, no está terminado); *foco* (dónde entra, dónde sale, si queda atrapado a propósito) y *qué se
   oculta al lector* (partes decorativas o redundantes).
 - **Cuándo usar / qué NO hace:** el límite del patrón; lo que parece suyo y es de otro.
+
+## Nota de cambios · fase 5 (2026-10-23)
+
+- **Nuevos** (fichas a mano, sin volcado de Figma todavía; el bloque GENERATED queda vacío hasta el sync): contest-library, newsletter, contest-hero, contest-prizes, contest-how-to, contest-form, contest-community, contest-result. CSS en `css/components.css`, en los bloques de fase 5 al final del archivo.
+- **Actualizados:** library-head (booleanos Search y Filters: `library-head--no-search` y `library-head--no-filters`; por defecto se ven, así que Recipes no cambia).
+- **Decisión abierta (⬜):** el maestro de la Contest library dibuja la cabecera y los concursos en crema; el patrón lo hace blanco para no encadenar dos secciones crema (norma de composición). Lo decide David Reina.
+- **Pendiente:** textos, mecánica de resultado inmediato, límite de participaciones, condiciones legales, premios, fechas del concurso y texto de consentimiento: ⬜ TODO, a confirmar con GB Foods y la agencia. Ninguno de estos datos está inventado en las fichas.
+
+## Nota de cambios · fase 6 (2026-10-23)
+
+- **Nuevos** (fichas a mano, sin volcado de Figma; el bloque GENERATED queda vacío hasta el sync): faq-list (Default, Results, Empty) y legal-page. CSS en `css/components.css`, en el bloque «FASE 6 · FAQ Y LEGALES».
+- **Actualizados:** library-head (nueva propiedad Align: Left por defecto o Center, `library-head--center`; el buscador se centra y el título queda a la izquierda). El bloque GENERATED aún no la lista: se añade en el próximo sync.
+- **Decisión:** la columna de lectura de la FAQ es `--layout-reading` (720 px) y no los 808 px del wireframe, porque no hay token de 808 y la columna de lectura del DS es 720.
+- **Pendiente:** todas las respuestas de la FAQ y los textos legales de GB Foods (⬜ TODO). Las fichas no inventan texto.
 
 ## Catálogo propuesto (⬜ por definir en Figma)
 

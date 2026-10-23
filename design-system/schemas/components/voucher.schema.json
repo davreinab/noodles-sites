@@ -1,0 +1,136 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:voucher",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Voucher",
+    "slug": "voucher",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-23T09:36:22Z",
+    "description": "Voucher: cupón de descuento que se descarga tras participar (resultado Lose y Limit del bloque Contest result, wireframe 490:13618 y 490:13867). Estilo ticket de la landing (.ideas__ticket): papel en surface/page con borde dentado (vector ticket-paper clonado del pie 184:114), sombra shadow/soft y giro -0.6°. Texto Discount (display, «15% OFF» o «25% OFF»), caption «Discount Voucher», código de barras (placeholder rectangular) y código «0876562-R» en vertical. Clase CSS: .voucher. ⬜ TODO GB Foods/agencia: código de barras real, formato del código y porcentaje de la mecánica de límite.",
+    "figmaPage": "Cards",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "203d632026cd",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-23",
+      "figmaVersion": "203d632026cd",
+      "variantsChecked": [
+        "default"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "discount",
+        "type": "string",
+        "default": "15% OFF",
+        "figma": "Discount#308:29"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "color/surface/page",
+      "color/text/default",
+      "color/text/secondary",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/display",
+      "font/line-height/desktop/label",
+      "font/size/desktop/caption",
+      "font/size/desktop/display",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "shadow/soft",
+      "space/24"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "voucher",
+      "voucher__barcode",
+      "voucher__code",
+      "voucher__label",
+      "voucher__main",
+      "voucher__stub",
+      "voucher__value"
+    ],
+    "example": "<div data-ds=\"voucher\" class=\"voucher\">\n<div class=\"voucher__main\">\n<p class=\"voucher__value\">15% OFF</p>\n<p class=\"voucher__label\">Discount voucher</p>\n</div>\n<div class=\"voucher__stub\">\n<img class=\"voucher__barcode\" src=\"../assets/images/placeholder.svg\" alt=\"Barcode 0876562-R\">\n<span class=\"voucher__code\" aria-hidden=\"true\">0876562-R</span>\n</div>\n</div>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "308:2421",
+    "componentKey": "0c6907d0fa07e305a1238de4a99746b001d3f1bd",
+    "propertyNames": {
+      "discount": "Discount#308:29"
+    },
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
+      "itemSpacing: space/24",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "fills: color/surface/page",
+      "effects: shadow/soft",
+      "color: color/surface/page",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/display",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/display",
+      "color: color/text/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label",
+      "color: color/text/secondary",
+      "fontSize: font/size/desktop/caption",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/caption"
+    ],
+    "textStyles": [
+      "Desktop/display",
+      "Desktop/label",
+      "Desktop/caption"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/components/voucher.md",
+    "section": "Voucher"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

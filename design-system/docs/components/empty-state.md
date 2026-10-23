@@ -19,4 +19,5 @@
   </div>
   ```
 - **Accesibilidad (rol, nombre, estados y teclado):** Rol: ninguno; es contenido de texto, sin `role`. El componente no anuncia nada: el cambio a «sin resultados» lo anuncia la página en la región de estado del patrón Library head. El título es un encabezado y su nivel lo fija la página (el ejemplo usa `h2`). No tiene elementos interactivos ni foco: el teclado pasa al contenido siguiente.
+- **Móvil (fase 6):** el título pasa al tamaño móvil del h2 (`--font-size-mobile-h2` y su interlineado). El maestro de la FAQ lo dibuja con el tamaño de escritorio; en código se corrige con esta regla, no con el maestro.
 - **Cuándo usar / qué NO hace:** Cuando una búsqueda o un filtro devuelve cero resultados en un listado. No lleva botones: «Clear filters» va en el patrón Library head. No es un error de página ni una alerta (eso es Alert).

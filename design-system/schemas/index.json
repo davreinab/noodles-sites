@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-22T15:21:21Z",
+  "lastSync": "2026-10-23T09:38:57Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -771,6 +771,57 @@
       }
     },
     {
+      "id": "component:icon-calendar-clock",
+      "name": "Icon / calendar-clock",
+      "slug": "icon-calendar-clock",
+      "kind": "component",
+      "contractPath": "./components/icon-calendar-clock.schema.json",
+      "keywords": [
+        "calendar",
+        "clock",
+        "icon"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "307:56",
+        "componentKey": "90989546b65e42356607da8a67f4c4741a74f01e"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "icon",
+          "icon-calendar-clock"
+        ]
+      }
+    },
+    {
+      "id": "component:icon-trophy",
+      "name": "Icon / trophy",
+      "slug": "icon-trophy",
+      "kind": "component",
+      "contractPath": "./components/icon-trophy.schema.json",
+      "keywords": [
+        "icon",
+        "trophy"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "307:64",
+        "componentKey": "2bbcbe37bb38a1b66085eafd23d26c6d27c70386"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "icon",
+          "icon-trophy"
+        ]
+      }
+    },
+    {
       "id": "component:logo-gb-foods",
       "name": "Logo / GB Foods",
       "slug": "logo-gb-foods",
@@ -1221,6 +1272,52 @@
       }
     },
     {
+      "id": "component:file-upload",
+      "name": "File upload",
+      "slug": "file-upload",
+      "kind": "component",
+      "contractPath": "./components/file-upload.schema.json",
+      "keywords": [
+        "file",
+        "icon",
+        "upload"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "308:2420",
+        "componentKey": "f932902f2b15bdf4575a5356a157d368d97f8378"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "button",
+          "button--secondary",
+          "field",
+          "field__error",
+          "field__helper",
+          "field__label",
+          "field__required",
+          "file-upload",
+          "file-upload__control",
+          "file-upload__input",
+          "file-upload__remove",
+          "file-upload__status",
+          "file-upload__status--selected",
+          "file-upload__trigger",
+          "icon",
+          "icon-button",
+          "icon-button--secondary",
+          "icon-close",
+          "visually-hidden"
+        ]
+      }
+    },
+    {
       "id": "component:nav-item",
       "name": "Nav item",
       "slug": "nav-item",
@@ -1594,10 +1691,8 @@
         "icon"
       ],
       "dependencies": [
-        "badge",
-        "button",
-        "icon-arrow-right",
-        "link"
+        "chip",
+        "icon-check"
       ],
       "hasIcon": true,
       "figmaSource": {
@@ -1609,19 +1704,15 @@
         "path": "design-system/css/components.css",
         "classes": [
           "badge",
-          "badge--natural",
-          "button",
+          "badge--neutral",
+          "chip",
           "contest-card",
-          "contest-card__actions",
           "contest-card__body",
-          "contest-card__caption",
           "contest-card__dates",
+          "contest-card__link",
           "contest-card__media",
-          "contest-card__title",
-          "icon",
-          "icon-external-link",
-          "link",
-          "visually-hidden"
+          "contest-card__prizes",
+          "contest-card__title"
         ]
       }
     },
@@ -1683,6 +1774,91 @@
           "flavour-tile--tall",
           "flavour-tile__media",
           "flavour-tile__name"
+        ]
+      }
+    },
+    {
+      "id": "component:prize-card",
+      "name": "Prize card",
+      "slug": "prize-card",
+      "kind": "component",
+      "contractPath": "./components/prize-card.schema.json",
+      "keywords": [
+        "card",
+        "prize"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "308:2303",
+        "componentKey": "ac1186ee28875873c7861e2c56cae5aa430cb729"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "prize-card",
+          "prize-card--grand",
+          "prize-card__body",
+          "prize-card__level",
+          "prize-card__media",
+          "prize-card__text",
+          "prize-card__title"
+        ]
+      }
+    },
+    {
+      "id": "component:community-card",
+      "name": "Community card",
+      "slug": "community-card",
+      "kind": "component",
+      "contractPath": "./components/community-card.schema.json",
+      "keywords": [
+        "card",
+        "community"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "308:2304",
+        "componentKey": "fa472a81223becf05f393d5da2073187ec63490a"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "community-card",
+          "community-card__caption",
+          "community-card__media"
+        ]
+      }
+    },
+    {
+      "id": "component:voucher",
+      "name": "Voucher",
+      "slug": "voucher",
+      "kind": "component",
+      "contractPath": "./components/voucher.schema.json",
+      "keywords": [
+        "voucher"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "308:2421",
+        "componentKey": "0c6907d0fa07e305a1238de4a99746b001d3f1bd"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "voucher",
+          "voucher__barcode",
+          "voucher__code",
+          "voucher__label",
+          "voucher__main",
+          "voucher__stub",
+          "voucher__value"
         ]
       }
     },
@@ -2300,16 +2476,56 @@
       "hasIcon": false,
       "figmaSource": {
         "fileKey": "v4mnn154qUmiB35CCnRfgh",
-        "nodeId": "277:332",
-        "componentKey": "fafb8d42cf90dfec23646d13eb76ae4e08624c14"
+        "nodeId": "308:367",
+        "componentKey": "69471fecad73e2d1fb2fbd59ccbd9881f4c1e76b"
       },
       "codeSource": {
         "path": "design-system/css/components.css",
         "classes": [
+          "link",
           "pillar-item",
+          "pillar-item--ink",
+          "pillar-item__action",
           "pillar-item__number",
           "pillar-item__text",
           "pillar-item__title"
+        ]
+      }
+    },
+    {
+      "id": "component:contest-conditions",
+      "name": "Contest conditions",
+      "slug": "contest-conditions",
+      "kind": "component",
+      "contractPath": "./components/contest-conditions.schema.json",
+      "keywords": [
+        "conditions",
+        "contest",
+        "icon"
+      ],
+      "dependencies": [
+        "icon-calendar-clock",
+        "icon-trophy"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "308:2308",
+        "componentKey": "67555792b6fe542f529373ac173e422759405b30"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "contest-conditions",
+          "contest-conditions__item",
+          "contest-conditions__list",
+          "contest-conditions__text",
+          "icon",
+          "icon--inverse",
+          "icon-calendar-clock",
+          "icon-trophy",
+          "link",
+          "link--dark"
         ]
       }
     },
@@ -2672,6 +2888,125 @@
           "link",
           "link--dark",
           "logo",
+          "visually-hidden"
+        ]
+      }
+    },
+    {
+      "id": "pattern:faq-list",
+      "name": "FAQ list",
+      "slug": "faq-list",
+      "kind": "pattern",
+      "contractPath": "./components/faq-list.schema.json",
+      "keywords": [
+        "faq",
+        "icon",
+        "list"
+      ],
+      "dependencies": [
+        "accordion-item",
+        "icon-minus",
+        "icon-plus"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "317:3438",
+        "componentKey": "e65d958a6c83d597ceb577ca285f8e8baabd0d54"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "accordion-item",
+          "accordion-item__button",
+          "accordion-item__heading",
+          "accordion-item__panel",
+          "faq",
+          "faq-list",
+          "faq-list__items",
+          "faq-list__status",
+          "icon",
+          "icon-plus",
+          "icon-search",
+          "library-head",
+          "library-head--center",
+          "library-head--no-filters",
+          "library-head__inner",
+          "library-head__intro",
+          "library-head__lead",
+          "library-head__search",
+          "page-title",
+          "search-field",
+          "search-field__input",
+          "section",
+          "visually-hidden"
+        ]
+      }
+    },
+    {
+      "id": "pattern:legal-table",
+      "name": "Legal table",
+      "slug": "legal-table",
+      "kind": "pattern",
+      "contractPath": "./components/legal-table.schema.json",
+      "keywords": [
+        "legal",
+        "table"
+      ],
+      "dependencies": [],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "317:3484",
+        "componentKey": "fe2d751bedb8c1ea205050bb0e88ae7bcea46a4d"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "legal-table",
+          "visually-hidden"
+        ]
+      }
+    },
+    {
+      "id": "pattern:legal-page",
+      "name": "Legal page",
+      "slug": "legal-page",
+      "kind": "pattern",
+      "contractPath": "./components/legal-page.schema.json",
+      "keywords": [
+        "icon",
+        "legal",
+        "page"
+      ],
+      "dependencies": [
+        "icon-arrow-left",
+        "legal-table",
+        "link"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "317:3602",
+        "componentKey": "4d8f05b786de25871d177583e219739e5e0af85e"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "icon",
+          "icon-arrow-left",
+          "legal-page",
+          "legal-page__back",
+          "legal-page__heading",
+          "legal-page__inner",
+          "legal-page__intro",
+          "legal-page__lead",
+          "legal-page__section",
+          "legal-page__text",
+          "legal-page__updated",
+          "legal-table",
+          "link",
+          "page-title",
           "visually-hidden"
         ]
       }
@@ -3261,6 +3596,9 @@
           "icon-search",
           "icon-trash",
           "library-head",
+          "library-head--center",
+          "library-head--no-filters",
+          "library-head--no-search",
           "library-head__filters",
           "library-head__inner",
           "library-head__intro",
@@ -3315,6 +3653,120 @@
           "recipe-submit__lead",
           "recipe-submit__title",
           "section"
+        ]
+      }
+    },
+    {
+      "id": "pattern:contest-library",
+      "name": "Contest library",
+      "slug": "contest-library",
+      "kind": "pattern",
+      "contractPath": "./components/contest-library.schema.json",
+      "keywords": [
+        "contest",
+        "icon",
+        "library"
+      ],
+      "dependencies": [
+        "badge",
+        "button",
+        "chip",
+        "contest-card",
+        "icon-arrow-right",
+        "icon-check",
+        "icon-close",
+        "icon-search",
+        "library-head",
+        "search-field"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "312:3141",
+        "componentKey": "8762f98deaa09f739d7d75a503657b9bf17151db"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "badge",
+          "badge--neutral",
+          "button",
+          "button--secondary",
+          "chip",
+          "contest-card",
+          "contest-card__body",
+          "contest-card__dates",
+          "contest-card__link",
+          "contest-card__media",
+          "contest-card__prizes",
+          "contest-card__title",
+          "contest-library",
+          "contest-library__grid",
+          "contest-library__group",
+          "contest-library__inner",
+          "contest-library__more",
+          "section",
+          "section__header",
+          "section__inner",
+          "section__lead",
+          "section__title"
+        ]
+      }
+    },
+    {
+      "id": "pattern:newsletter",
+      "name": "Newsletter",
+      "slug": "newsletter",
+      "kind": "pattern",
+      "contractPath": "./components/newsletter.schema.json",
+      "keywords": [
+        "icon",
+        "newsletter"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right",
+        "icon-button",
+        "icon-circle-alert",
+        "icon-instagram",
+        "icon-tiktok",
+        "icon-x",
+        "icon-youtube",
+        "input"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "312:3247",
+        "componentKey": "85273235e0e4f13e8c1bd73b9be0433bf7f862f1"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "button",
+          "button--inverse",
+          "field",
+          "field__control",
+          "icon",
+          "icon-button",
+          "icon-button--inverse",
+          "icon-instagram",
+          "icon-tiktok",
+          "icon-x",
+          "icon-youtube",
+          "newsletter",
+          "newsletter__content",
+          "newsletter__form",
+          "newsletter__grid",
+          "newsletter__legal",
+          "newsletter__social",
+          "newsletter__social-label",
+          "newsletter__social-list",
+          "newsletter__text",
+          "newsletter__title",
+          "section",
+          "section__inner",
+          "visually-hidden"
         ]
       }
     },
@@ -3815,10 +4267,317 @@
           "section__inner"
         ]
       }
+    },
+    {
+      "id": "pattern:contest-hero",
+      "name": "Contest hero",
+      "slug": "contest-hero",
+      "kind": "pattern",
+      "contractPath": "./components/contest-hero.schema.json",
+      "keywords": [
+        "contest",
+        "hero",
+        "icon"
+      ],
+      "dependencies": [
+        "badge",
+        "button",
+        "icon-arrow-right",
+        "link"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "313:866",
+        "componentKey": "e63f1d945b443ea5eaa43c342ea7268fd5bc3567"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "badge",
+          "badge--natural",
+          "button",
+          "button--l",
+          "contest-hero",
+          "contest-hero__actions",
+          "contest-hero__content",
+          "contest-hero__grid",
+          "contest-hero__how",
+          "contest-hero__how-text",
+          "contest-hero__how-title",
+          "contest-hero__image",
+          "contest-hero__lead",
+          "contest-hero__media",
+          "contest-hero__title",
+          "link",
+          "section",
+          "section__inner"
+        ]
+      }
+    },
+    {
+      "id": "pattern:contest-prizes",
+      "name": "Contest prizes",
+      "slug": "contest-prizes",
+      "kind": "pattern",
+      "contractPath": "./components/contest-prizes.schema.json",
+      "keywords": [
+        "contest",
+        "prizes"
+      ],
+      "dependencies": [
+        "prize-card"
+      ],
+      "hasIcon": false,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "313:925",
+        "componentKey": "4d1291f8452e2df9386b00accc352a86bd808046"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "contest-prizes",
+          "contest-prizes__list",
+          "prize-card",
+          "prize-card--grand",
+          "prize-card__body",
+          "prize-card__level",
+          "prize-card__media",
+          "prize-card__text",
+          "prize-card__title",
+          "section",
+          "section__header",
+          "section__inner",
+          "section__lead",
+          "section__title"
+        ]
+      }
+    },
+    {
+      "id": "pattern:contest-how-to",
+      "name": "Contest how-to",
+      "slug": "contest-how-to",
+      "kind": "pattern",
+      "contractPath": "./components/contest-how-to.schema.json",
+      "keywords": [
+        "contest",
+        "how",
+        "icon",
+        "to"
+      ],
+      "dependencies": [
+        "contest-conditions",
+        "icon-arrow-right",
+        "icon-calendar-clock",
+        "icon-trophy",
+        "link",
+        "pillar-item"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "313:2905",
+        "componentKey": "6e5e4a19ff5e53408e77234be2975b45cf0a3b7c"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "contest-conditions",
+          "contest-conditions__item",
+          "contest-conditions__list",
+          "contest-conditions__text",
+          "contest-howto",
+          "contest-howto__column",
+          "contest-howto__column--conditions",
+          "contest-howto__grid",
+          "contest-howto__heading",
+          "contest-howto__steps",
+          "icon",
+          "icon--inverse",
+          "icon-calendar-clock",
+          "icon-trophy",
+          "link",
+          "link--dark",
+          "pillar-item",
+          "pillar-item--ink",
+          "pillar-item__action",
+          "pillar-item__number",
+          "pillar-item__text",
+          "pillar-item__title",
+          "section",
+          "section__header",
+          "section__inner",
+          "section__lead",
+          "section__title"
+        ]
+      }
+    },
+    {
+      "id": "pattern:contest-form",
+      "name": "Contest form",
+      "slug": "contest-form",
+      "kind": "pattern",
+      "contractPath": "./components/contest-form.schema.json",
+      "keywords": [
+        "contest",
+        "form",
+        "icon"
+      ],
+      "dependencies": [
+        "alert",
+        "button",
+        "checkbox",
+        "file-upload",
+        "icon-arrow-right",
+        "icon-check",
+        "icon-chevron-down",
+        "icon-circle-alert",
+        "icon-close",
+        "icon-info",
+        "input",
+        "select"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "313:3247",
+        "componentKey": "0fc2c395b053dfbce1d7b40bc55b6baf15b94f08"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "alert",
+          "alert__body",
+          "alert__content",
+          "alert__title",
+          "button",
+          "button--l",
+          "checkbox",
+          "checkbox__input",
+          "checkbox__label",
+          "contest-form",
+          "contest-form__block",
+          "contest-form__consent",
+          "contest-form__form",
+          "contest-form__full",
+          "contest-form__grid",
+          "contest-form__help",
+          "contest-form__legend",
+          "contest-form__note",
+          "contest-form__submit",
+          "field",
+          "field__control",
+          "field__label",
+          "field__required",
+          "field__select",
+          "icon",
+          "icon-info",
+          "link",
+          "section",
+          "section__header",
+          "section__inner",
+          "section__lead",
+          "section__title"
+        ]
+      }
+    },
+    {
+      "id": "pattern:contest-community",
+      "name": "Contest community",
+      "slug": "contest-community",
+      "kind": "pattern",
+      "contractPath": "./components/contest-community.schema.json",
+      "keywords": [
+        "community",
+        "contest",
+        "icon"
+      ],
+      "dependencies": [
+        "community-card",
+        "icon-play",
+        "video-player"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "313:3452",
+        "componentKey": "5f467f618209e4f69884df2f85582f7f84b88519"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "community-card",
+          "community-card__caption",
+          "community-card__media",
+          "contest-community",
+          "contest-community__heading",
+          "contest-community__list",
+          "icon",
+          "icon-play",
+          "section",
+          "section__header",
+          "section__inner",
+          "section__lead",
+          "section__title",
+          "video-player",
+          "video-player__duration",
+          "video-player__play",
+          "video-player__poster"
+        ]
+      }
+    },
+    {
+      "id": "pattern:contest-result",
+      "name": "Contest result",
+      "slug": "contest-result",
+      "kind": "pattern",
+      "contractPath": "./components/contest-result.schema.json",
+      "keywords": [
+        "contest",
+        "icon",
+        "result"
+      ],
+      "dependencies": [
+        "button",
+        "icon-arrow-right",
+        "voucher"
+      ],
+      "hasIcon": true,
+      "figmaSource": {
+        "fileKey": "v4mnn154qUmiB35CCnRfgh",
+        "nodeId": "313:3567",
+        "componentKey": "901b02ff5159b3ca3811b0f1c9119b863cc3d7e0"
+      },
+      "codeSource": {
+        "path": "design-system/css/components.css",
+        "classes": [
+          "button",
+          "button--l",
+          "button--secondary",
+          "contest-result",
+          "contest-result--limit",
+          "contest-result--win",
+          "contest-result__image",
+          "contest-result__inner",
+          "contest-result__media",
+          "contest-result__subtitle",
+          "contest-result__text",
+          "contest-result__title",
+          "section",
+          "voucher",
+          "voucher__barcode",
+          "voucher__code",
+          "voucher__label",
+          "voucher__main",
+          "voucher__stub",
+          "voucher__value"
+        ]
+      }
     }
   ],
   "counts": {
-    "atoms": 84,
-    "patterns": 28
+    "atoms": 91,
+    "patterns": 39
   }
 }

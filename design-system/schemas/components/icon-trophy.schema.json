@@ -1,0 +1,87 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:icon-trophy",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Icon / trophy",
+    "slug": "icon-trophy",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-23T09:36:22Z",
+    "description": "Trofeo. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Uso: Contest conditions (Grand prize draw). Color: icon/color/*. Tamaño: icon/size/*",
+    "figmaPage": "Iconography",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": false,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "2dd02c21bfc9",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-23",
+      "figmaVersion": "2dd02c21bfc9",
+      "variantsChecked": [
+        "default"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "icon/color/default",
+      "icon/size/md"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "icon",
+      "icon-trophy"
+    ],
+    "example": "<span data-ds=\"icon-trophy\" class=\"icon icon-trophy\" aria-hidden=\"true\"></span>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "307:64",
+    "componentKey": "2bbcbe37bb38a1b66085eafd23d26c6d27c70386",
+    "propertyNames": {},
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: icon/color/default",
+      "color: icon/color/default"
+    ],
+    "textStyles": []
+  },
+  "docs": {
+    "file": "design-system/docs/components/icon-trophy.md",
+    "section": "Icon / trophy"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

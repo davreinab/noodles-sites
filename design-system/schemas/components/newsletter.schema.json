@@ -1,0 +1,363 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:newsletter",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Newsletter",
+    "slug": "newsletter",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-23T09:38:30Z",
+    "description": "Newsletter: captación de email con redes sociales, sobre fondo surface/inverse (wireframe 190:3727 y 330:6557, pie de bloque). Title (TEXT): «Don't miss a thing» en la biblioteca y «Never miss the next contest» en la página de concurso. Texto de suscripción, «Our social media:» con 4 icon buttons inverse (TikTok, Instagram, X, YouTube), Input de email, texto legal de consentimiento (caption) y botón Subscribe (Hierarchy=Inverse). Clase CSS: .newsletter. Desktop 1440 / Móvil 375. ⬜ TODO GB Foods/agencia: texto legal de consentimiento definitivo y destinatario del alta.",
+    "figmaPage": "Pattern / Libraries",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "040b48a100da",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-23",
+      "figmaVersion": "040b48a100da",
+      "variantsChecked": [
+        "Breakpoint=Desktop",
+        "Breakpoint=Mobile"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "default": "Don't miss a thing",
+        "figma": "Title#312:0"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": true,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "unknown",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "border/width/thick",
+      "border/width/thin",
+      "button/inverse/bg",
+      "button/inverse/border",
+      "button/inverse/text",
+      "color/surface/inverse",
+      "color/text/on-inverse",
+      "field/bg",
+      "field/border",
+      "field/error-text",
+      "field/helper",
+      "field/label",
+      "field/placeholder",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/body-s",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/label",
+      "font/size/desktop/body-m",
+      "font/size/desktop/body-s",
+      "font/size/desktop/caption",
+      "font/size/desktop/h2",
+      "font/size/desktop/label",
+      "font/style/body",
+      "font/style/display",
+      "icon-button/size/m",
+      "icon/color/default",
+      "icon/size/md",
+      "icon/size/sm",
+      "layout/margin",
+      "radius/pill",
+      "radius/sm",
+      "space/16",
+      "space/24",
+      "space/4",
+      "space/64",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "button",
+      "button--inverse",
+      "field",
+      "field__control",
+      "icon",
+      "icon-button",
+      "icon-button--inverse",
+      "icon-instagram",
+      "icon-tiktok",
+      "icon-x",
+      "icon-youtube",
+      "newsletter",
+      "newsletter__content",
+      "newsletter__form",
+      "newsletter__grid",
+      "newsletter__legal",
+      "newsletter__social",
+      "newsletter__social-label",
+      "newsletter__social-list",
+      "newsletter__text",
+      "newsletter__title",
+      "section",
+      "section__inner",
+      "visually-hidden"
+    ],
+    "example": "<section data-ds=\"newsletter\" class=\"section newsletter\" aria-labelledby=\"nl-title\">\n<div class=\"section__inner newsletter__grid\">\n<div class=\"newsletter__content\">\n<h2 class=\"newsletter__title\" id=\"nl-title\">Don't miss a thing</h2>\n<p class=\"newsletter__text\">Subscribe to our newsletter and follow us to stay up to date on all the contests from the very start.</p>\n<div class=\"newsletter__social\">\n<p class=\"newsletter__social-label\" id=\"nl-social\">Our social media:</p>\n<ul class=\"newsletter__social-list\" aria-labelledby=\"nl-social\">\n<li><a class=\"icon-button icon-button--inverse\" href=\"https://www.tiktok.com/\" aria-label=\"TikTok\"><span class=\"icon icon-tiktok\" aria-hidden=\"true\"></span></a></li>\n<li><a class=\"icon-button icon-button--inverse\" href=\"https://www.instagram.com/\" aria-label=\"Instagram\"><span class=\"icon icon-instagram\" aria-hidden=\"true\"></span></a></li>\n<li><a class=\"icon-button icon-button--inverse\" href=\"https://x.com/\" aria-label=\"X\"><span class=\"icon icon-x\" aria-hidden=\"true\"></span></a></li>\n<li><a class=\"icon-button icon-button--inverse\" href=\"https://www.youtube.com/\" aria-label=\"YouTube\"><span class=\"icon icon-youtube\" aria-hidden=\"true\"></span></a></li>\n</ul>\n</div>\n</div>\n<form class=\"newsletter__form\" action=\"/newsletter\" method=\"post\">\n<div class=\"field\">\n<label class=\"visually-hidden\" for=\"nl-email\">Email address</label>\n<input class=\"field__control\" id=\"nl-email\" name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"Enter your mail\" required>\n</div>\n<p class=\"newsletter__legal\" id=\"nl-legal\">By subscribing to the newsletter, I agree to have my email address used to send me promotions and marketing content. You can withdraw your consent at any time with the unsubscribe link in each email.</p>\n<button class=\"button button--inverse\" type=\"submit\" aria-describedby=\"nl-legal\">Subscribe</button>\n</form>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "312:3247",
+    "componentKey": "85273235e0e4f13e8c1bd73b9be0433bf7f862f1",
+    "propertyNames": {
+      "title": "Title#312:0",
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "icon-button TikTok",
+        "component": "Hierarchy=Inverse, Size=M, State=Default",
+        "componentSlug": "icon-button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / tiktok",
+        "componentSlug": "icon-tiktok",
+        "exposedAs": "Icon#33:125",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-button Instagram",
+        "component": "Hierarchy=Inverse, Size=M, State=Default",
+        "componentSlug": "icon-button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / instagram",
+        "componentSlug": "icon-instagram",
+        "exposedAs": "Icon#33:125",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-button X",
+        "component": "Hierarchy=Inverse, Size=M, State=Default",
+        "componentSlug": "icon-button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / x",
+        "componentSlug": "icon-x",
+        "exposedAs": "Icon#33:125",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-button YouTube",
+        "component": "Hierarchy=Inverse, Size=M, State=Default",
+        "componentSlug": "icon-button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon",
+        "component": "Icon / youtube",
+        "componentSlug": "icon-youtube",
+        "exposedAs": "Icon#33:125",
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Input",
+        "component": "State=Default",
+        "componentSlug": "input",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-error",
+        "component": "Icon / circle-alert",
+        "componentSlug": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "toggledBy": null,
+        "visibleByDefault": false
+      },
+      {
+        "layer": "Button",
+        "component": "Hierarchy=Inverse, Size=M, State=Default",
+        "componentSlug": "button",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "icon-leading",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "toggledBy": "Icon leading#33:25",
+        "visibleByDefault": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "Icon / arrow-right",
+        "componentSlug": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "toggledBy": "Icon trailing#33:50",
+        "visibleByDefault": false
+      }
+    ],
+    "variableBindings": [
+      "paddingLeft: layout/margin",
+      "paddingTop: space/64",
+      "paddingRight: layout/margin",
+      "paddingBottom: space/64",
+      "fills: color/surface/inverse",
+      "color: color/surface/inverse",
+      "fills: color/text/on-inverse",
+      "fontSize: font/size/desktop/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h2",
+      "color: color/text/on-inverse",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "fontSize: font/size/desktop/body-s",
+      "lineHeight: font/line-height/desktop/body-s",
+      "width: icon-button/size/m",
+      "height: icon-button/size/m",
+      "topLeftRadius: radius/pill",
+      "topRightRadius: radius/pill",
+      "bottomLeftRadius: radius/pill",
+      "bottomRightRadius: radius/pill",
+      "strokeTopWeight: border/width/thick",
+      "strokeBottomWeight: border/width/thick",
+      "strokeLeftWeight: border/width/thick",
+      "strokeRightWeight: border/width/thick",
+      "fills: button/inverse/bg",
+      "strokes: button/inverse/border",
+      "color: button/inverse/bg",
+      "color: button/inverse/border",
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "fills: icon/color/default",
+      "strokes: button/inverse/text",
+      "color: icon/color/default",
+      "color: button/inverse/text",
+      "itemSpacing: space/8",
+      "itemSpacing: space/4",
+      "fills: field/label",
+      "fontSize: font/size/desktop/label",
+      "lineHeight: font/line-height/desktop/label",
+      "color: field/label",
+      "fills: field/error-text",
+      "color: field/error-text",
+      "paddingLeft: space/16",
+      "paddingTop: space/16",
+      "paddingRight: space/16",
+      "paddingBottom: space/16",
+      "topLeftRadius: radius/sm",
+      "topRightRadius: radius/sm",
+      "bottomLeftRadius: radius/sm",
+      "bottomRightRadius: radius/sm",
+      "strokeTopWeight: border/width/thin",
+      "strokeBottomWeight: border/width/thin",
+      "strokeLeftWeight: border/width/thin",
+      "strokeRightWeight: border/width/thin",
+      "fills: field/bg",
+      "strokes: field/border",
+      "color: field/bg",
+      "color: field/border",
+      "fills: field/placeholder",
+      "color: field/placeholder",
+      "width: icon/size/sm",
+      "height: icon/size/sm",
+      "strokes: field/error-text",
+      "fills: field/helper",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: field/helper",
+      "paddingLeft: space/24",
+      "paddingRight: space/24",
+      "fills: button/inverse/text"
+    ],
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m",
+      "Desktop/body-s",
+      "Desktop/label",
+      "Desktop/caption"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/newsletter.md",
+    "section": "Newsletter"
+  },
+  "relations": {
+    "uses": [
+      "button",
+      "icon-arrow-right",
+      "icon-button",
+      "icon-circle-alert",
+      "icon-instagram",
+      "icon-tiktok",
+      "icon-x",
+      "icon-youtube",
+      "input"
+    ],
+    "related": []
+  }
+}

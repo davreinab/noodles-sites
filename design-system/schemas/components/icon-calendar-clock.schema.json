@@ -1,0 +1,87 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "component:icon-calendar-clock",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Icon / calendar-clock",
+    "slug": "icon-calendar-clock",
+    "kind": "component",
+    "version": "1.0.0",
+    "lastSync": "2026-10-23T09:36:22Z",
+    "description": "Calendario con reloj. Fuente: Lucide (ISC). Trazo 2.5 px (geometría fija del glifo). Uso: Contest conditions (Entries close). Color: icon/color/*. Tamaño: icon/size/*",
+    "figmaPage": "Iconography",
+    "figmaType": "COMPONENT",
+    "variantCount": 1,
+    "autoLayout": false,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "36ad93cdbf47",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-23",
+      "figmaVersion": "36ad93cdbf47",
+      "variantsChecked": [
+        "default"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "icon/color/default",
+      "icon/size/md"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "icon",
+      "icon-calendar-clock"
+    ],
+    "example": "<span data-ds=\"icon-calendar-clock\" class=\"icon icon-calendar-clock\" aria-hidden=\"true\"></span>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "307:56",
+    "componentKey": "90989546b65e42356607da8a67f4c4741a74f01e",
+    "propertyNames": {},
+    "variantAxes": {},
+    "nestedInstances": [],
+    "variableBindings": [
+      "width: icon/size/md",
+      "height: icon/size/md",
+      "strokes: icon/color/default",
+      "color: icon/color/default"
+    ],
+    "textStyles": []
+  },
+  "docs": {
+    "file": "design-system/docs/components/icon-calendar-clock.md",
+    "section": "Icon / calendar-clock"
+  },
+  "relations": {
+    "uses": [],
+    "related": []
+  }
+}

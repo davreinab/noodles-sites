@@ -63,6 +63,16 @@
       "type": "uses"
     },
     {
+      "from": "file-upload",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "file-upload",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
       "from": "anchor-nav",
       "to": "anchor-nav-item",
       "type": "uses"
@@ -124,22 +134,12 @@
     },
     {
       "from": "contest-card",
-      "to": "badge",
+      "to": "chip",
       "type": "uses"
     },
     {
       "from": "contest-card",
-      "to": "button",
-      "type": "uses"
-    },
-    {
-      "from": "contest-card",
-      "to": "icon-arrow-right",
-      "type": "uses"
-    },
-    {
-      "from": "contest-card",
-      "to": "link",
+      "to": "icon-check",
       "type": "uses"
     },
     {
@@ -225,6 +225,16 @@
     {
       "from": "ingredient-swap",
       "to": "icon-close",
+      "type": "uses"
+    },
+    {
+      "from": "contest-conditions",
+      "to": "icon-calendar-clock",
+      "type": "uses"
+    },
+    {
+      "from": "contest-conditions",
+      "to": "icon-trophy",
       "type": "uses"
     },
     {
@@ -420,6 +430,36 @@
     {
       "from": "footer",
       "to": "logo-yatekomo",
+      "type": "uses"
+    },
+    {
+      "from": "faq-list",
+      "to": "accordion-item",
+      "type": "uses"
+    },
+    {
+      "from": "faq-list",
+      "to": "icon-minus",
+      "type": "uses"
+    },
+    {
+      "from": "faq-list",
+      "to": "icon-plus",
+      "type": "uses"
+    },
+    {
+      "from": "legal-page",
+      "to": "icon-arrow-left",
+      "type": "uses"
+    },
+    {
+      "from": "legal-page",
+      "to": "legal-table",
+      "type": "uses"
+    },
+    {
+      "from": "legal-page",
+      "to": "link",
       "type": "uses"
     },
     {
@@ -708,6 +748,101 @@
       "type": "uses"
     },
     {
+      "from": "contest-library",
+      "to": "badge",
+      "type": "uses"
+    },
+    {
+      "from": "contest-library",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "contest-library",
+      "to": "chip",
+      "type": "uses"
+    },
+    {
+      "from": "contest-library",
+      "to": "contest-card",
+      "type": "uses"
+    },
+    {
+      "from": "contest-library",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "contest-library",
+      "to": "icon-check",
+      "type": "uses"
+    },
+    {
+      "from": "contest-library",
+      "to": "icon-close",
+      "type": "uses"
+    },
+    {
+      "from": "contest-library",
+      "to": "icon-search",
+      "type": "uses"
+    },
+    {
+      "from": "contest-library",
+      "to": "library-head",
+      "type": "uses"
+    },
+    {
+      "from": "contest-library",
+      "to": "search-field",
+      "type": "uses"
+    },
+    {
+      "from": "newsletter",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "newsletter",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "newsletter",
+      "to": "icon-button",
+      "type": "uses"
+    },
+    {
+      "from": "newsletter",
+      "to": "icon-circle-alert",
+      "type": "uses"
+    },
+    {
+      "from": "newsletter",
+      "to": "icon-instagram",
+      "type": "uses"
+    },
+    {
+      "from": "newsletter",
+      "to": "icon-tiktok",
+      "type": "uses"
+    },
+    {
+      "from": "newsletter",
+      "to": "icon-x",
+      "type": "uses"
+    },
+    {
+      "from": "newsletter",
+      "to": "icon-youtube",
+      "type": "uses"
+    },
+    {
+      "from": "newsletter",
+      "to": "input",
+      "type": "uses"
+    },
+    {
       "from": "product-hero",
       "to": "badge",
       "type": "uses"
@@ -886,9 +1021,154 @@
       "from": "natural-pillars",
       "to": "pillar-item",
       "type": "uses"
+    },
+    {
+      "from": "contest-hero",
+      "to": "badge",
+      "type": "uses"
+    },
+    {
+      "from": "contest-hero",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "contest-hero",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "contest-hero",
+      "to": "link",
+      "type": "uses"
+    },
+    {
+      "from": "contest-prizes",
+      "to": "prize-card",
+      "type": "uses"
+    },
+    {
+      "from": "contest-how-to",
+      "to": "contest-conditions",
+      "type": "uses"
+    },
+    {
+      "from": "contest-how-to",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "contest-how-to",
+      "to": "icon-calendar-clock",
+      "type": "uses"
+    },
+    {
+      "from": "contest-how-to",
+      "to": "icon-trophy",
+      "type": "uses"
+    },
+    {
+      "from": "contest-how-to",
+      "to": "link",
+      "type": "uses"
+    },
+    {
+      "from": "contest-how-to",
+      "to": "pillar-item",
+      "type": "uses"
+    },
+    {
+      "from": "contest-form",
+      "to": "alert",
+      "type": "uses"
+    },
+    {
+      "from": "contest-form",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "contest-form",
+      "to": "checkbox",
+      "type": "uses"
+    },
+    {
+      "from": "contest-form",
+      "to": "file-upload",
+      "type": "uses"
+    },
+    {
+      "from": "contest-form",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "contest-form",
+      "to": "icon-check",
+      "type": "uses"
+    },
+    {
+      "from": "contest-form",
+      "to": "icon-chevron-down",
+      "type": "uses"
+    },
+    {
+      "from": "contest-form",
+      "to": "icon-circle-alert",
+      "type": "uses"
+    },
+    {
+      "from": "contest-form",
+      "to": "icon-close",
+      "type": "uses"
+    },
+    {
+      "from": "contest-form",
+      "to": "icon-info",
+      "type": "uses"
+    },
+    {
+      "from": "contest-form",
+      "to": "input",
+      "type": "uses"
+    },
+    {
+      "from": "contest-form",
+      "to": "select",
+      "type": "uses"
+    },
+    {
+      "from": "contest-community",
+      "to": "community-card",
+      "type": "uses"
+    },
+    {
+      "from": "contest-community",
+      "to": "icon-play",
+      "type": "uses"
+    },
+    {
+      "from": "contest-community",
+      "to": "video-player",
+      "type": "uses"
+    },
+    {
+      "from": "contest-result",
+      "to": "button",
+      "type": "uses"
+    },
+    {
+      "from": "contest-result",
+      "to": "icon-arrow-right",
+      "type": "uses"
+    },
+    {
+      "from": "contest-result",
+      "to": "voucher",
+      "type": "uses"
     }
   ],
-  "lastSync": "2026-10-22T15:21:21Z",
+  "lastSync": "2026-10-23T09:24:19Z",
   "usedBy": {
     "decoration-noodle": [
       "decoration-noodle-texture",
@@ -899,8 +1179,8 @@
     "icon-arrow-right": [
       "button",
       "link",
+      "file-upload",
       "product-card",
-      "contest-card",
       "ingredients",
       "timer",
       "recipe-macros",
@@ -914,9 +1194,15 @@
       "recipes",
       "faq",
       "recipe-submit",
+      "contest-library",
+      "newsletter",
       "product-details",
       "preparation",
-      "recipe-ingredients"
+      "recipe-ingredients",
+      "contest-hero",
+      "contest-how-to",
+      "contest-form",
+      "contest-result"
     ],
     "icon-close": [
       "icon-button",
@@ -928,91 +1214,47 @@
       "mobile-menu",
       "library",
       "library-head",
-      "natural-improvement"
+      "contest-library",
+      "natural-improvement",
+      "contest-form"
     ],
     "icon-circle-alert": [
       "input",
       "textarea",
       "select",
-      "recipe-submit"
+      "recipe-submit",
+      "newsletter",
+      "contest-form"
     ],
     "icon-chevron-down": [
       "select",
       "ingredient-swap",
-      "natural-improvement"
+      "natural-improvement",
+      "contest-form"
     ],
     "icon-check": [
       "checkbox",
       "chip",
       "recipe-card",
+      "contest-card",
       "recipes",
       "library",
       "product-filter",
       "library-head",
+      "contest-library",
       "product-hero",
       "recipe-hero",
-      "natural-hero"
+      "natural-hero",
+      "contest-form"
     ],
     "icon-search": [
       "search-field",
       "library",
-      "library-head"
-    ],
-    "anchor-nav-item": [
-      "anchor-nav"
-    ],
-    "icon-arrow-left": [
-      "pagination-item",
-      "pagination",
-      "hero",
-      "library",
-      "product-hero",
-      "recipe-hero"
-    ],
-    "pagination-item": [
-      "pagination",
-      "library"
-    ],
-    "badge": [
-      "product-card",
-      "contest-card",
-      "category-card",
-      "flavour-tile",
-      "nutrition-panel",
-      "hero",
-      "product-categories",
-      "library-hero",
-      "product-line",
-      "product-hero",
-      "natural-hero"
-    ],
-    "link": [
-      "product-card",
-      "contest-card",
-      "ingredients",
-      "footer",
-      "promo",
-      "faq",
-      "product-hero",
-      "product-details"
-    ],
-    "chip": [
-      "recipe-card",
-      "recipes",
-      "library",
-      "product-filter",
       "library-head",
-      "product-hero",
-      "recipe-hero",
-      "natural-hero"
-    ],
-    "icon-timer": [
-      "recipe-card",
-      "recipes",
-      "library"
+      "contest-library"
     ],
     "button": [
-      "contest-card",
+      "file-upload",
       "timer",
       "recipe-macros",
       "modal",
@@ -1024,11 +1266,76 @@
       "natural-formula",
       "recipes",
       "recipe-submit",
+      "contest-library",
+      "newsletter",
       "preparation",
-      "recipe-ingredients"
+      "recipe-ingredients",
+      "contest-hero",
+      "contest-form",
+      "contest-result"
+    ],
+    "anchor-nav-item": [
+      "anchor-nav"
+    ],
+    "icon-arrow-left": [
+      "pagination-item",
+      "pagination",
+      "legal-page",
+      "hero",
+      "library",
+      "product-hero",
+      "recipe-hero"
+    ],
+    "pagination-item": [
+      "pagination",
+      "library"
+    ],
+    "badge": [
+      "product-card",
+      "category-card",
+      "flavour-tile",
+      "nutrition-panel",
+      "hero",
+      "product-categories",
+      "library-hero",
+      "product-line",
+      "contest-library",
+      "product-hero",
+      "natural-hero",
+      "contest-hero"
+    ],
+    "link": [
+      "product-card",
+      "ingredients",
+      "footer",
+      "legal-page",
+      "promo",
+      "faq",
+      "product-hero",
+      "product-details",
+      "contest-hero",
+      "contest-how-to"
+    ],
+    "chip": [
+      "recipe-card",
+      "contest-card",
+      "recipes",
+      "library",
+      "product-filter",
+      "library-head",
+      "contest-library",
+      "product-hero",
+      "recipe-hero",
+      "natural-hero"
+    ],
+    "icon-timer": [
+      "recipe-card",
+      "recipes",
+      "library"
     ],
     "icon-plus": [
       "accordion-item",
+      "faq-list",
       "faq"
     ],
     "ingredient-item": [
@@ -1042,23 +1349,34 @@
       "timer",
       "video-player",
       "promo",
-      "preparation"
+      "preparation",
+      "contest-community"
     ],
     "allergen-table-cell": [
       "allergen-table"
+    ],
+    "icon-calendar-clock": [
+      "contest-conditions",
+      "contest-how-to"
+    ],
+    "icon-trophy": [
+      "contest-conditions",
+      "contest-how-to"
     ],
     "icon-button": [
       "modal",
       "share-panel",
       "navbar",
       "mobile-menu",
-      "hero"
+      "hero",
+      "newsletter"
     ],
     "modal-slot": [
       "modal"
     ],
     "icon-info": [
-      "alert"
+      "alert",
+      "contest-form"
     ],
     "icon-external-link": [
       "suggestion-bubble",
@@ -1072,7 +1390,8 @@
     ],
     "icon-instagram": [
       "share-panel",
-      "mobile-menu"
+      "mobile-menu",
+      "newsletter"
     ],
     "icon-link": [
       "share-panel"
@@ -1082,14 +1401,16 @@
     ],
     "icon-tiktok": [
       "share-panel",
-      "mobile-menu"
+      "mobile-menu",
+      "newsletter"
     ],
     "icon-whatsapp": [
       "share-panel"
     ],
     "icon-x": [
       "share-panel",
-      "mobile-menu"
+      "mobile-menu",
+      "newsletter"
     ],
     "icon-menu": [
       "navbar"
@@ -1104,10 +1425,22 @@
       "footer"
     ],
     "icon-youtube": [
-      "mobile-menu"
+      "mobile-menu",
+      "newsletter"
     ],
     "nav-item": [
       "mobile-menu"
+    ],
+    "accordion-item": [
+      "faq-list",
+      "faq"
+    ],
+    "icon-minus": [
+      "faq-list",
+      "faq"
+    ],
+    "legal-table": [
+      "legal-page"
     ],
     "icon-pause": [
       "hero"
@@ -1118,7 +1451,8 @@
     ],
     "video-player": [
       "promo",
-      "preparation"
+      "preparation",
+      "contest-community"
     ],
     "category-card": [
       "product-categories"
@@ -1127,21 +1461,17 @@
       "recipes",
       "library"
     ],
-    "accordion-item": [
-      "faq"
-    ],
-    "icon-minus": [
-      "faq"
-    ],
     "library-head": [
-      "library"
+      "library",
+      "contest-library"
     ],
     "pagination": [
       "library"
     ],
     "search-field": [
       "library",
-      "library-head"
+      "library-head",
+      "contest-library"
     ],
     "tab": [
       "product-filter"
@@ -1151,6 +1481,13 @@
     ],
     "textarea": [
       "recipe-submit"
+    ],
+    "contest-card": [
+      "contest-library"
+    ],
+    "input": [
+      "newsletter",
+      "contest-form"
     ],
     "allergen-card": [
       "product-details"
@@ -1190,7 +1527,32 @@
       "natural-stats"
     ],
     "pillar-item": [
-      "natural-pillars"
+      "natural-pillars",
+      "contest-how-to"
+    ],
+    "prize-card": [
+      "contest-prizes"
+    ],
+    "contest-conditions": [
+      "contest-how-to"
+    ],
+    "alert": [
+      "contest-form"
+    ],
+    "checkbox": [
+      "contest-form"
+    ],
+    "file-upload": [
+      "contest-form"
+    ],
+    "select": [
+      "contest-form"
+    ],
+    "community-card": [
+      "contest-community"
+    ],
+    "voucher": [
+      "contest-result"
     ]
   }
 }

@@ -1,0 +1,221 @@
+{
+  "$schema": "../_component.schema.json",
+  "id": "pattern:contest-prizes",
+  "contractVersion": "2",
+  "meta": {
+    "name": "Contest prizes",
+    "slug": "contest-prizes",
+    "kind": "pattern",
+    "version": "1.0.0",
+    "lastSync": "2026-10-23T09:36:22Z",
+    "description": "Contest prizes: bloque de premios de la página de concurso (wireframe 330:6587 desktop, 361:8675 móvil). Fondo surface/page (crema). h2 «What's up for prizes», subtítulo y 4 Prize card (Variant=Grand para el gran premio, Default para el resto). Desktop: fila de 4. Móvil: carrusel horizontal con recorte (clipsContent) como los anillos de nutrición. Clase CSS: .contest-prizes. ⬜ TODO GB Foods/agencia: premios, niveles y descripciones reales; imágenes de los premios.",
+    "figmaPage": "Pattern / Detail pages",
+    "figmaType": "COMPONENT_SET",
+    "variantCount": 2,
+    "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
+    "anatomyHash": "93fc553c7bf7",
+    "verification": {
+      "status": "verified",
+      "date": "2026-10-23",
+      "figmaVersion": "93fc553c7bf7",
+      "variantsChecked": [
+        "breakpoint=Desktop",
+        "breakpoint=Mobile (móvil por medida del marco)"
+      ],
+      "by": "Claude (Haiku) · revisión de David Reina pendiente"
+    }
+  },
+  "api": {
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "exclusive": [],
+    "icons": {
+      "hasIcon": false,
+      "swapProperties": [],
+      "defaultIcons": [],
+      "compatible": "none",
+      "unexposedIconLayers": []
+    },
+    "tokens": [
+      "color/border/default",
+      "color/surface/card",
+      "color/surface/inverse",
+      "color/surface/page",
+      "color/text/brand-on-inverse",
+      "color/text/default",
+      "color/text/on-inverse",
+      "color/text/secondary",
+      "contest-card/media-bg",
+      "font/family/body",
+      "font/family/display",
+      "font/line-height/desktop/body-m",
+      "font/line-height/desktop/caption",
+      "font/line-height/desktop/h2",
+      "font/line-height/desktop/h3",
+      "font/size/desktop/body-m",
+      "font/size/desktop/caption",
+      "font/size/desktop/h2",
+      "font/size/desktop/h3",
+      "font/style/body",
+      "font/style/display",
+      "layout/margin",
+      "radius/md",
+      "space/24",
+      "space/64",
+      "space/8"
+    ]
+  },
+  "code": {
+    "path": "design-system/css/components.css",
+    "classes": [
+      "contest-prizes",
+      "contest-prizes__list",
+      "prize-card",
+      "prize-card--grand",
+      "prize-card__body",
+      "prize-card__level",
+      "prize-card__media",
+      "prize-card__text",
+      "prize-card__title",
+      "section",
+      "section__header",
+      "section__inner",
+      "section__lead",
+      "section__title"
+    ],
+    "example": "<section data-ds=\"contest-prizes\" class=\"section contest-prizes\" aria-labelledby=\"cp-title\">\n<div class=\"section__inner\">\n<div class=\"section__header\">\n<h2 class=\"section__title\" id=\"cp-title\">What's up for prizes</h2>\n<p class=\"section__lead\">Four prize tiers, drawn weekly and at the grand final — every valid entry counts.</p>\n</div>\n<ul class=\"contest-prizes__list\" tabindex=\"0\" aria-label=\"Prizes\">\n<li><article class=\"prize-card prize-card--grand\">\n<div class=\"prize-card__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"prize-card__body\"><p class=\"prize-card__level\">Grand prize</p><h3 class=\"prize-card__title\">Festival weekend for two</h3><p class=\"prize-card__text\">Two festival weekend passes, travel budget and backstage access to this year's festival partner.</p></div>\n</article></li>\n<li><article class=\"prize-card\">\n<div class=\"prize-card__media\"><img src=\"../assets/images/placeholder.svg\" alt=\"\"></div>\n<div class=\"prize-card__body\"><p class=\"prize-card__level\">Weekly prize · x50</p><h3 class=\"prize-card__title\">Weekly runner-up boxes</h3><p class=\"prize-card__text\">50 snack boxes given away every week for the length of the contest.</p></div>\n</article></li>\n</ul>\n</div>\n</section>",
+    "classByProp": {},
+    "stateAnatomy": [],
+    "package": null,
+    "import": null
+  },
+  "figma": {
+    "fileKey": "v4mnn154qUmiB35CCnRfgh",
+    "nodeId": "313:925",
+    "componentKey": "4d1291f8452e2df9386b00accc352a86bd808046",
+    "propertyNames": {
+      "breakpoint": "Breakpoint"
+    },
+    "variantAxes": {
+      "Breakpoint": [
+        "Desktop",
+        "Mobile"
+      ]
+    },
+    "nestedInstances": [
+      {
+        "layer": "Prize card",
+        "component": "Variant=Grand",
+        "componentSlug": "prize-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Prize card",
+        "component": "Variant=Default",
+        "componentSlug": "prize-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Prize card",
+        "component": "Variant=Default",
+        "componentSlug": "prize-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      },
+      {
+        "layer": "Prize card",
+        "component": "Variant=Default",
+        "componentSlug": "prize-card",
+        "exposedAs": null,
+        "toggledBy": null,
+        "visibleByDefault": true
+      }
+    ],
+    "variableBindings": [
+      "paddingLeft: layout/margin",
+      "paddingTop: space/64",
+      "paddingRight: layout/margin",
+      "paddingBottom: space/64",
+      "fills: color/surface/page",
+      "color: color/surface/page",
+      "fills: color/text/default",
+      "fontSize: font/size/desktop/h2",
+      "fontStyle: font/style/display",
+      "fontFamily: font/family/display",
+      "lineHeight: font/line-height/desktop/h2",
+      "color: color/text/default",
+      "fills: color/text/secondary",
+      "fontSize: font/size/desktop/body-m",
+      "fontStyle: font/style/body",
+      "fontFamily: font/family/body",
+      "lineHeight: font/line-height/desktop/body-m",
+      "color: color/text/secondary",
+      "topLeftRadius: radius/md",
+      "topRightRadius: radius/md",
+      "bottomLeftRadius: radius/md",
+      "bottomRightRadius: radius/md",
+      "fills: color/surface/inverse",
+      "strokes: color/border/default",
+      "color: color/surface/inverse",
+      "color: color/border/default",
+      "fills: contest-card/media-bg",
+      "color: contest-card/media-bg",
+      "itemSpacing: space/8",
+      "paddingLeft: space/24",
+      "paddingTop: space/24",
+      "paddingRight: space/24",
+      "paddingBottom: space/24",
+      "fills: color/text/brand-on-inverse",
+      "fontSize: font/size/desktop/caption",
+      "lineHeight: font/line-height/desktop/caption",
+      "color: color/text/brand-on-inverse",
+      "fills: color/text/on-inverse",
+      "fontSize: font/size/desktop/h3",
+      "lineHeight: font/line-height/desktop/h3",
+      "color: color/text/on-inverse",
+      "fills: color/surface/card",
+      "color: color/surface/card"
+    ],
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m",
+      "Desktop/caption",
+      "Desktop/h3"
+    ]
+  },
+  "docs": {
+    "file": "design-system/docs/patterns/contest-prizes.md",
+    "section": "Contest prizes"
+  },
+  "relations": {
+    "uses": [
+      "prize-card"
+    ],
+    "related": []
+  }
+}

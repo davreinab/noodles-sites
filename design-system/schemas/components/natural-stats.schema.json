@@ -7,12 +7,19 @@
     "slug": "natural-stats",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T15:21:21Z",
+    "lastSync": "2026-10-23T09:36:22Z",
     "description": "Natural stats: bloque de cifras de la página Natural formula (wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-stats). Fondo tinta (surface/inverse) con título y subtítulo en text/on-inverse (amarillo suave, contraste alto). Cuatro Stat figure en fila en desktop y en rejilla 2×2 en móvil. Props: Title, Subtitle. Cifras, etiquetas y textos de ejemplo ⬜ TODO envase (business-rules).",
     "figmaPage": "Pattern / Detail pages",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "80351b3fbef3",
     "verification": {
       "status": "verified",

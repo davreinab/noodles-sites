@@ -1,0 +1,40 @@
+{% macro render(data) %}
+{% raw %}<section data-ds="contest-form" class="section contest-form" aria-labelledby="cf-title">
+<div class="section__inner">
+<div class="section__header">
+<h2 class="section__title" id="cf-title">Join it now</h2>
+<p class="section__lead">Fill out the form to enter the drawing</p>
+</div>
+<form class="contest-form__form" id="join" tabindex="-1" action="/contests/slurp-and-win/enter" method="post">
+<fieldset class="contest-form__block">
+<legend class="contest-form__legend">Personal data</legend>
+<div class="contest-form__grid">
+<div class="field"><label class="field__label" for="cf-first">First name<span class="field__required" aria-hidden="true">*</span></label><input class="field__control" id="cf-first" name="first-name" type="text" autocomplete="given-name" placeholder="Enter first name" required></div>
+<div class="field"><label class="field__label" for="cf-last">Last name<span class="field__required" aria-hidden="true">*</span></label><input class="field__control" id="cf-last" name="last-name" type="text" autocomplete="family-name" placeholder="Enter last name" required></div>
+<div class="field"><label class="field__label" for="cf-email">Email address<span class="field__required" aria-hidden="true">*</span></label><input class="field__control" id="cf-email" name="email" type="email" autocomplete="email" placeholder="Enter email address" required></div>
+<div class="field"><label class="field__label" for="cf-birth">Date of birth (DD/MM/YYYY)<span class="field__required" aria-hidden="true">*</span></label><input class="field__control" id="cf-birth" name="birth-date" type="text" inputmode="numeric" autocomplete="bday" placeholder="DD/MM/YYYY" required></div>
+</div>
+</fieldset>
+<fieldset class="contest-form__block">
+<legend class="contest-form__legend">Proof of purchase</legend>
+<div class="contest-form__grid">
+<div class="field contest-form__full"><label class="field__label" for="cf-type">Purchase type<span class="field__required" aria-hidden="true">*</span></label><div class="field__select"><select class="field__control" id="cf-type" name="purchase-type" required><option value="">Select an option</option></select></div></div>
+<div class="field contest-form__full"><label class="field__label" for="cf-amount">Amount spent<span class="field__required" aria-hidden="true">*</span></label><input class="field__control" id="cf-amount" name="amount" type="text" inputmode="decimal" placeholder="0.00" required></div>
+</div>
+</fieldset>
+<fieldset class="contest-form__block">
+<legend class="contest-form__legend">Consent</legend>
+<div class="contest-form__consent">
+<label class="checkbox" data-ds="checkbox"><input class="checkbox__input" type="checkbox" name="age" required><span class="checkbox__label">I confirm I am 18 years or older and a resident of a participating country.<span class="field__required" aria-hidden="true">*</span></span></label>
+<label class="checkbox" data-ds="checkbox"><input class="checkbox__input" type="checkbox" name="rules" required><span class="checkbox__label">I have read and accept the <a class="link" href="/contests/slurp-and-win/rules">Contest Rules</a>.<span class="field__required" aria-hidden="true">*</span></span></label>
+<label class="checkbox" data-ds="checkbox"><input class="checkbox__input" type="checkbox" name="privacy" required><span class="checkbox__label">I have read the Privacy Notice on how my personal data will be processed for this contest.<span class="field__required" aria-hidden="true">*</span></span></label>
+<p class="contest-form__note">* Required fields</p>
+<div class="alert"><span class="icon icon-info" aria-hidden="true"></span><div class="alert__content"><p class="alert__title">Important information</p><p class="alert__body">Save your purchase tickets to send us if you win any of the contest prizes.</p></div></div>
+</div>
+<button class="button button--l contest-form__submit" type="submit">Enter the contest</button>
+<p class="contest-form__help">Having trouble? Check the <a class="link" href="/contests/slurp-and-win/rules">full contest rules</a> or contact <a class="link" href="/contact">customer care</a>.</p>
+</fieldset>
+</form>
+</div>
+</section>{% endraw %}
+{% endmacro %}

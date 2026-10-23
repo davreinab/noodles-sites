@@ -7,12 +7,19 @@
     "slug": "stat-figure",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T15:21:21Z",
+    "lastSync": "2026-10-23T09:36:22Z",
     "description": "Stat figure: cifra destacada con marcador tipo <mark> (clase CSS .stat-figure; wireframe UX 274:6354, módulo Natural stats). Cifra en Desktop/h2 (Anton) sobre bloque amarillo de marca (surface/brand) con texto en tinta (text/default, contraste ~12:1); el marcador lleva relleno de space/2 vertical y space/8 horizontal (la landing usa 2px 10px; 10 px no existe como variable, se usa space/8). Etiqueta en Desktop/body-s en text/on-inverse sobre el fondo tinta del patrón. Cifras de ejemplo ⬜ TODO envase (-45%, +5g, +20g, 100%). Props: Figure, Label.",
     "figmaPage": "Content",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "3175316b75fd",
     "verification": {
       "status": "verified",

@@ -7,12 +7,19 @@
     "slug": "natural-hero",
     "kind": "pattern",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T15:21:21Z",
+    "lastSync": "2026-10-23T09:36:22Z",
     "description": "Natural hero: cabecera de la página Natural formula (wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-hero). Fondo verde natural (surface/natural) con textos en blanco (text/on-natural; blanco sobre verde ~5.5:1, AA). Badge Neutral «New improved formula» (tinta sobre verde; la variante Natural desaparecería sobre el fondo verde). Claim h1 (Title), entradilla (Lead), fila de Chip M (Ready in 3', Real flavour, Full ingredient transparency) e imagen a la derecha (placeholder de packshot e ingredientes). Desktop: texto a la izquierda y 560×480 a la derecha. Mobile: texto arriba e imagen debajo a ancho completo. Props: Title, Lead; el resto son instancias editables. El claim es el de la SPEC ⬜ TODO: validar con el envase.",
     "figmaPage": "Pattern / Detail pages",
     "figmaType": "COMPONENT_SET",
     "variantCount": 2,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "51dad383ad31",
     "verification": {
       "status": "verified",

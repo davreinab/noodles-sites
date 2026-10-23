@@ -1,6 +1,6 @@
 {
   "designSystem": "GB Noodles · Microsites",
-  "generatedAt": "2026-10-22",
+  "generatedAt": "2026-10-23",
   "note": "Informe de scripts/ds-lifecycle.py. No editar a mano.",
   "policy": {
     "minNoticeDays": 180,
@@ -17,8 +17,8 @@
   },
   "errors": [],
   "warnings": [
-    "suggestion-bubble: 246 usos todavía en el código (sustituto: footer) → UI/home.html (1), UI/home.html (21), design-system/showcase/index.html (2), design-system/showcase/index.html (4)",
-    "product-filter: 321 usos todavía en el código (sustituto: anchor-nav) → UI/home.html (4), UI/home.html (5), UI/home.html (21), design-system/showcase/index.html (4)"
+    "suggestion-bubble: 288 usos todavía en el código (sustituto: footer) → UI/home.html (1), UI/home.html (21), design-system/showcase/index.html (2), design-system/showcase/index.html (4)",
+    "product-filter: 387 usos todavía en el código (sustituto: anchor-nav) → UI/home.html (4), UI/home.html (5), UI/home.html (21), design-system/showcase/index.html (4)"
   ],
   "usage": {
     "suggestion-bubble": [
@@ -28,7 +28,7 @@
       },
       {
         "file": "design-system/showcase/index.html",
-        "hits": 200
+        "hits": 244
       },
       {
         "file": "UI/home.html",
@@ -36,7 +36,7 @@
       },
       {
         "file": "design-system/showcase/index.html",
-        "hits": 12
+        "hits": 10
       },
       {
         "file": "design-system/showcase/index.html",
@@ -58,7 +58,7 @@
       },
       {
         "file": "design-system/showcase/index.html",
-        "hits": 47
+        "hits": 69
       },
       {
         "file": "UI/home.html",
@@ -66,7 +66,7 @@
       },
       {
         "file": "design-system/showcase/index.html",
-        "hits": 200
+        "hits": 244
       },
       {
         "file": "design-system/showcase/index.html",
@@ -99,14 +99,32 @@
     ]
   },
   "contractsStamped": [
-    "allergen-table-cell",
-    "anchor-nav-item",
-    "icon-facebook",
-    "icon-link",
-    "icon-send",
-    "icon-telegram",
-    "icon-trash",
-    "icon-whatsapp",
-    "pagination-item"
+    "community-card",
+    "contest-community",
+    "contest-conditions",
+    "contest-form",
+    "contest-hero",
+    "contest-how-to",
+    "contest-library",
+    "contest-prizes",
+    "contest-result",
+    "faq-list",
+    "file-upload",
+    "icon-calendar-clock",
+    "icon-trophy",
+    "ingredient-swap",
+    "legal-page",
+    "legal-table",
+    "natural-hero",
+    "natural-improvement",
+    "natural-pillars",
+    "natural-stats",
+    "newsletter",
+    "origins-map",
+    "pillar-item",
+    "prize-card",
+    "removed-tag",
+    "stat-figure",
+    "voucher"
   ]
 }

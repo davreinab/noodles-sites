@@ -7,12 +7,19 @@
     "slug": "ingredient-swap",
     "kind": "component",
     "version": "1.0.0",
-    "lastSync": "2026-10-22T15:21:21Z",
+    "lastSync": "2026-10-23T09:36:22Z",
     "description": "Ingredient swap: ingrediente retirado y su sustituto (Natural improvement → «Replaced ingredients»; wireframe UX 274:6354; clase CSS .ingredient-swap). Arriba la píldora tachada (Removed, mismo estilo que Removed tag, con «removed:» oculto), flecha chevron-down y debajo la tarjeta del sustituto: nombre en negrita en verde natural (text/natural, Archivo Bold 18/24, sin estilo de texto), motivo en Desktop/body-s y miniatura de 56 px (placeholder). Tarjeta: fondo blanco (surface/card) y borde verde natural (surface/natural); no hay variable opaca de superficie natural clara, así que no se usa verde claro. Props: Removed, Name, Reason. Ejemplos de ingredientes y motivos ⬜ TODO envase.",
     "figmaPage": "Content",
     "figmaType": "COMPONENT",
     "variantCount": 1,
     "autoLayout": true,
+    "lifecycle": {
+      "status": "active",
+      "since": null,
+      "removeIn": null,
+      "replacement": null,
+      "reason": null
+    },
     "anatomyHash": "4374dc7fe9ca",
     "verification": {
       "status": "verified",

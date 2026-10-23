@@ -1,9 +1,9 @@
-### Natural pillars   ⚙️ synced: 2026-10-22T15:21:21Z
+### Natural pillars   ⚙️ synced: 2026-10-23T09:22:57Z
 
 <!-- ⚙️ GENERATED:start:natural-pillars -->
-- **Figma:** `279:844` · página «Pattern / Detail pages» · COMPONENT_SET · 2 variantes · última sync 2026-10-22T15:21:21Z
+- **Figma:** `279:844` · página «Pattern / Detail pages» · COMPONENT_SET · 2 variantes · última sync 2026-10-23T09:22:57Z
 - **Descripción (Figma):** Natural pillars: bloque «Taste you can trust» de la página Natural formula (wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-pillars). Fondo blanco (surface/card, sección Trust). A la izquierda título, subtítulo «Better for people, better for the planet» y lista ordenada de cuatro Pillar item; a la derecha imagen placeholder (560×520 en desktop; en móvil va debajo a ancho completo). Props: Title, Subtitle. Textos de ejemplo y pilares ⬜ TODO envase.
-- **Anatomía:** `pillar-item` → Pillar item, `pillar-item` → Pillar item, `pillar-item` → Pillar item, `pillar-item` → Pillar item
+- **Anatomía:** `pillar-item` → Tone=Natural, `pillar-item` → Tone=Natural, `pillar-item` → Tone=Natural, `pillar-item` → Tone=Natural
 - **API:** `title` (string, por defecto Taste you can trust) · `subtitle` (string, por defecto Better for people, better for the planet) · `breakpoint`: Desktop, Mobile (por defecto Desktop)
 - **Nombres en Figma:** `title` ← `Title#279:24`, `subtitle` ← `Subtitle#279:27`, `breakpoint` ← `Breakpoint`
 - **Iconos / instancias anidadas:** ninguno

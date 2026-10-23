@@ -14,6 +14,25 @@
   },
   "ellipsisClasses": [],
   "modifiers": {
+    "prize-card": {
+      "variant": {
+        "Default": ".prize-card"
+      }
+    },
+    "file-upload": {
+      "empty": {
+        "true": {
+          "target": ".file-upload__status",
+          "presence": true
+        }
+      },
+      "error": {
+        "true": {
+          "target": ".file-upload__input",
+          "add": "[aria-invalid=\"true\"]"
+        }
+      }
+    },
     "logo-yatekomo": {
       "Version": {
         "Negative": ".logo"
@@ -272,6 +291,21 @@
           "target": ".library-head__results",
           "presence": true
         }
+      },
+      "search": {
+        "true": {
+          "target": ".library-head__search",
+          "presence": true
+        }
+      },
+      "filters": {
+        "true": {
+          "target": ".library-head__filters",
+          "presence": true
+        }
+      },
+      "align": {
+        "Center": ".library-head--center"
       }
     },
     "product-line": {
@@ -315,6 +349,9 @@
     }
   },
   "ignoreTokens": {
+    "community-card": [
+      "space/8"
+    ],
     "_all": [
       "font/style/display",
       "font/style/body",
@@ -342,6 +379,10 @@
       "font/size/desktop/caption",
       "font/line-height/desktop/caption",
       "space/16"
+    ],
+    "faq-list": [
+      "space/32",
+      "space/64"
     ],
     "promo": [
       "color/text/secondary"
@@ -414,8 +455,8 @@
     }
   },
   "_notes": {
-    "modifiers": "Logo Version=Negative es otro archivo SVG (assets/logos/*-negative.svg) con la misma clase .logo: no hay modificador CSS. Contest card Status=Closed cambia el contenido (Badge Neutral y Link a ganadores), no el estilo. Video player Ratio=9:16 → .video-player--vertical.",
-    "ignoreTokens": "font/style/* son nombres de estilo de Figma («Regular», «Bold»): en CSS los realiza font-family + font-weight, no una variable. color/effect/shadow-ink y shadow/soft van dentro de --elevation-* (box-shadow compuesto), que es lo que consume el CSS. Recipe card: el caption del maestro es el texto de marcador del hueco de imagen («Imagen de la receta»), que en código es la foto. space/16 es el padding del hueco de imagen en el maestro, que solo coloca ese texto de marcador («Recipe image»); en código la foto de receta va a sangre dentro de la tarjeta, sin padding en .recipe-card__media.layout/frame es el ancho del lienzo de diseño (1440/768/375), no una medida de CSS: las secciones ocupan el 100 % y el contenido se limita con --layout-content-max. Promo: color/text/secondary es el texto de marcador del hueco del arte de campaña («Arte de la campaña»), que en código es una imagen. Banner: space/16 es el padding del hueco de la imagen en el maestro; en código la pieza ocupa todo el marco. Share panel: radius/lg es el radio de la tarjeta del maestro (fondo card, padding 24); en web esa tarjeta la pone el modal (.modal, radio md; .modal__body, padding 24) donde se usa el componente, y el componente no la repite para no duplicar el fondo y el padding. Flavour tile, Library hero y Product line: font/size y font/line-height del caption y product-card/meta son el texto de marcador del hueco de imagen («Imagen de producto (3D)» en el maestro); en código ese hueco es la foto del producto, así que no hay texto que pintar con ellos. Recipe steps: step/border y step/media-bg los liga el maestro en las instancias de Step anidadas y los aplica .step__media (no las clases propias de .recipe-steps); el caption es el texto de marcador del hueco de imagen del paso. Allergen table cell: caption y text/secondary son de la capa oculta «contains / does not contain», que en web es texto .visually-hidden sin estilo visible. Natural hero, Natural improvement, Natural pillars y Natural stats: space/96 (y space/64 en Natural stats) es el padding de sección del maestro (96 en escritorio, 64 en móvil; 64 y 24 laterales). En web lo pone la clase .section con --layout-section-y y --layout-margin, que cambian por breakpoint; el componente no repite ese padding para no duplicarlo.",
+    "modifiers": "Logo Version=Negative es otro archivo SVG (assets/logos/*-negative.svg) con la misma clase .logo: no hay modificador CSS. Contest card Status=Closed cambia el contenido (Badge Neutral y Link a ganadores), no el estilo. Video player Ratio=9:16 → .video-player--vertical. Prize card Variant=Default es el valor base: sin modificador, la clase base .prize-card. File upload State=Empty es el estado sin archivo: el texto de marcador va en .file-upload__status sin modificador, y State=Error es aria-invalid en el input. Library head Align=Left es el valor base (sin modificador).",
+    "ignoreTokens": "font/style/* son nombres de estilo de Figma («Regular», «Bold»): en CSS los realiza font-family + font-weight, no una variable. color/effect/shadow-ink y shadow/soft van dentro de --elevation-* (box-shadow compuesto), que es lo que consume el CSS. Recipe card: el caption del maestro es el texto de marcador del hueco de imagen («Imagen de la receta»), que en código es la foto. space/16 es el padding del hueco de imagen en el maestro, que solo coloca ese texto de marcador («Recipe image»); en código la foto de receta va a sangre dentro de la tarjeta, sin padding en .recipe-card__media.layout/frame es el ancho del lienzo de diseño (1440/768/375), no una medida de CSS: las secciones ocupan el 100 % y el contenido se limita con --layout-content-max. Promo: color/text/secondary es el texto de marcador del hueco del arte de campaña («Arte de la campaña»), que en código es una imagen. Banner: space/16 es el padding del hueco de la imagen en el maestro; en código la pieza ocupa todo el marco. Share panel: radius/lg es el radio de la tarjeta del maestro (fondo card, padding 24); en web esa tarjeta la pone el modal (.modal, radio md; .modal__body, padding 24) donde se usa el componente, y el componente no la repite para no duplicar el fondo y el padding. Flavour tile, Library hero y Product line: font/size y font/line-height del caption y product-card/meta son el texto de marcador del hueco de imagen («Imagen de producto (3D)» en el maestro); en código ese hueco es la foto del producto, así que no hay texto que pintar con ellos. Recipe steps: step/border y step/media-bg los liga el maestro en las instancias de Step anidadas y los aplica .step__media (no las clases propias de .recipe-steps); el caption es el texto de marcador del hueco de imagen del paso. Allergen table cell: caption y text/secondary son de la capa oculta «contains / does not contain», que en web es texto .visually-hidden sin estilo visible. Natural hero, Natural improvement, Natural pillars y Natural stats: space/96 (y space/64 en Natural stats) es el padding de sección del maestro (96 en escritorio, 64 en móvil; 64 y 24 laterales). En web lo pone la clase .section con --layout-section-y y --layout-margin, que cambian por breakpoint; el componente no repite ese padding para no duplicarlo. Community card: space/8 es el gap del pie de la foto (caption), que tiene un único texto dentro; sin hermanos no hay separación que aplicar en web. FAQ list: space/32 (arriba) y space/64 (abajo) son el padding vertical del maestro alrededor de la lista; en web el espacio de la página lo pone la sección contenedora (.section.faq, con --layout-section-y y --layout-margin), así que .faq-list no lo repite para no duplicarlo.",
     "excludeAxes": "Además de los ejes por defecto: Checked, Selected y Expanded son estados y en código se expresan con ARIA (aria-checked, aria-pressed/aria-selected, aria-expanded), no con clases modificadoras.",
     "ignoreTokensVerificacion": "Product hero: font/size y font/line-height del caption son el texto de marcador «Imagen 3D del producto» del hueco del packshot; en código ese hueco es la imagen. Ingredients: color/surface/page, radius/lg y space/64 los pone el contenedor del bloque (sección a sangre, imagen y rejilla de product-details), no la clase .ingredients, que en el maestro es el hueco de imagen + columna dentro de la sección."
   },

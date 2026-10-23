@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en" data-brand="yatekomo">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yatekomo · Recipe</title>
+<link rel="stylesheet" href="../design-system/tokens/tokens.css">
+<link rel="stylesheet" href="../design-system/css/components.css">
+</head>
+<body>
+<header data-ds="navbar" class="navbar">
+  <div class="navbar__inner">
+    <div class="navbar__start">
+      <button class="icon-button icon-button--secondary" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" data-menu-open><span class="icon icon-menu" aria-hidden="true"></span></button>
+    </div>
+    <a href="home.html" aria-label="Yatekomo, home"><img class="logo" src="../design-system/assets/logos/logo-yatekomo-positive.svg" alt="Yatekomo"></a>
+    <div class="navbar__actions">
+      <a class="button" href="natural-formula.html">New 100% Natural Formula</a>
+    </div>
+  </div>
+</header>
+
+<dialog data-ds="mobile-menu" class="mobile-menu" id="menu" aria-label="Menu">
+  <div class="mobile-menu__inner">
+    <div class="mobile-menu__top">
+      <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
+      <button class="icon-button icon-button--inverse" type="button" aria-label="Close menu" data-menu-close><span class="icon icon-close" aria-hidden="true"></span></button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Main">
+      <a class="nav-item nav-item--menu" href="products.html">Products</a>
+      <a class="nav-item nav-item--menu" href="natural-formula.html">Natural formula</a>
+      <a class="nav-item nav-item--menu" href="recipes.html">Recipes</a>
+      <a class="nav-item nav-item--menu" href="contests.html">Contests</a>
+      <a class="nav-item nav-item--menu" href="faq.html">FAQS</a>
+    </nav>
+    <div class="mobile-menu__social">
+      <p class="mobile-menu__social-label">Our social media:</p>
+      <!-- HUECO: brand social media URLs; GB Foods supplies. -->
+      <ul class="mobile-menu__social-list">
+        <li><a class="link link--dark" href="#" aria-label="TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="X"><span class="icon icon-x" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a></li>
+      </ul>
+    </div>
+    <p class="mobile-menu__copyright">© GBFoods</p>
+  </div>
+</dialog>
+<main>
+<!-- HUECO: Validated recipe ingredients, amounts, nutrition, timings, product references and photography; GB Foods supplies. -->
+  <section data-ds="recipe-hero" class="section recipe-hero" aria-labelledby="rh-title">
+  <div class="section__inner">
+  <div class="recipe-hero__grid">
+  <div class="recipe-hero__info">
+  <a class="recipe-hero__back" href="/recipes"><span class="icon icon-arrow-left" aria-hidden="true"></span>All recipes</a>
+  <ul class="recipe-hero__products" aria-label="Products used in this recipe"><li><a class="chip chip--m" href="product.html">Cup Oriental</a></li><li><a class="chip chip--m" href="product.html">Sauce Sesame</a></li></ul>
+  <h1 class="page-title" id="rh-title">Oriental chicken noodles</h1>
+  <p class="recipe-hero__description">Quick, savory noodles with a smoky soy glaze.</p>
+  <ul class="recipe-hero__meta"><li><span class="chip chip--m"><span class="icon icon-timer" aria-hidden="true"></span>15 min preparation</span></li><li><span class="chip chip--m">4 people</span></li></ul>
+  <button class="link" type="button" aria-haspopup="dialog" data-dialog-open="share-recipe"><span class="icon icon-send" aria-hidden="true"></span>Share recipe</button>
+  </div>
+  <div class="media-frame recipe-hero__media"><img src="../design-system/assets/images/placeholder.svg" alt="Oriental chicken noodles served in a bowl"></div>
+  </div>
+  </div>
+  </section>
+
+  <section data-ds="recipe-ingredients" class="section recipe-ingredients" aria-labelledby="ri-title">
+  <div class="section__header">
+  <h2 class="section__title" id="ri-title">Ingredients</h2>
+  <p class="section__lead">Everything you need to make this recipe for 4 people.</p>
+  </div>
+  <div class="recipe-ingredients__body">
+  <ul class="recipe-ingredients__list">
+  <li class="recipe-ingredient"><div class="recipe-ingredient__info"><p class="recipe-ingredient__amount">150 g</p><p class="recipe-ingredient__name">Chicken breast</p></div></li>
+  <li class="recipe-ingredient recipe-ingredient--brand"><div class="recipe-ingredient__info"><p class="recipe-ingredient__amount">200 g</p><p class="recipe-ingredient__name"><a class="recipe-ingredient__link" href="product.html">Cup Oriental</a></p></div><img class="recipe-ingredient__thumb" src="../design-system/assets/images/placeholder.svg" alt=""></li>
+  </ul>
+  <section class="recipe-macros" aria-labelledby="ri-macros">
+  <h3 class="recipe-macros__title" id="ri-macros">Recipe macros</h3>
+  <p class="recipe-macros__head">Per serving</p>
+  <ul class="recipe-macros__list">
+  <li class="recipe-macros__row"><span class="recipe-macros__name">Protein</span><span class="recipe-macros__value">8.3 g</span></li>
+  <li class="recipe-macros__row"><span class="recipe-macros__name">Carbohydrates</span><span class="recipe-macros__value">52 g</span></li>
+  <li class="recipe-macros__row"><span class="recipe-macros__name">Fat</span><span class="recipe-macros__value">10 g</span></li>
+  </ul>
+  <button class="button button--secondary recipe-macros__action" type="button" aria-haspopup="dialog">See allergen table</button>
+  </section>
+  </div>
+  </section>
+
+  <section data-ds="recipe-steps" class="section recipe-steps" aria-labelledby="rsteps-title">
+  <div class="section__header">
+  <h2 class="section__title" id="rsteps-title">Step-by-step preparation</h2>
+  <p class="section__lead">Follow the steps below for a perfect result.</p>
+  </div>
+  <ol class="steps">
+  <li class="step">
+  <span class="step__number" aria-hidden="true">1</span>
+  <div class="step__content"><h3 class="step__title">Add boiling water up to the mark</h3><p class="step__text">Open the lid halfway and add boiling water up to the inner line.</p></div>
+  </li>
+  <li class="step">
+  <span class="step__number" aria-hidden="true">2</span>
+  <div class="step__content"><h3 class="step__title">Wait 3 minutes</h3><p class="step__text">Let the noodles rest while the sauce warms up.</p></div>
+  </li>
+  <li class="step">
+  <span class="step__number" aria-hidden="true">3</span>
+  <div class="step__content"><p class="step__text">Drain the water carefully and set the noodles aside.</p></div>
+  </li>
+  </ol>
+  </section>
+
+  <section data-ds="recipes" class="section recipes" aria-labelledby="rc-title">
+  <div class="section__inner">
+  <div class="section__header"><h2 class="section__title" id="rc-title">We haven’t forgotten you, keen cook</h2><p class="section__lead">Explore and learn recipes to glow up your meals</p></div>
+  <a class="button button--secondary button--l recipes__cta" href="recipes.html">See all recipes</a>
+  <ul class="carousel">
+  <li><article class="recipe-card"><div class="recipe-card__body"><p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p><h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Spicy Noodle Salad with almond and mint</a></h3></div></article></li>
+  </ul>
+  </div>
+  </section>
+
+  <section data-ds="banner" class="section banner" aria-label="Campaign">
+  <div class="section__inner">
+  <a class="banner__box" href="contests.html"><img src="../design-system/assets/images/placeholder.svg" alt="Campaign artwork"></a>
+  </div>
+  </section>
+<dialog data-ds="modal" class="modal" id="share-recipe" aria-labelledby="share-dialog-title"><div class="modal__header"><h2 class="modal__title" id="share-dialog-title">Share recipe</h2><button class="icon-button icon-button--secondary" type="button" aria-label="Close" data-dialog-close><span class="icon icon-close" aria-hidden="true"></span></button></div><div class="modal__body">  <div data-ds="share-panel" class="share-panel">
+  <h3 class="share-panel__title">Share on your socials</h3>
+  <ul class="share-panel__socials">
+  <li><a class="icon-button icon-button--secondary" href="https://wa.me/" aria-label="Share on WhatsApp"><span class="icon icon-whatsapp" aria-hidden="true"></span></a></li>
+  <li><a class="icon-button icon-button--secondary" href="https://www.instagram.com/" aria-label="Share on Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
+  <li><a class="icon-button icon-button--secondary" href="https://www.facebook.com/" aria-label="Share on Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a></li>
+  <li><a class="icon-button icon-button--secondary" href="https://www.tiktok.com/" aria-label="Share on TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
+  <li><a class="icon-button icon-button--secondary" href="https://x.com/" aria-label="Share on X"><span class="icon icon-x" aria-hidden="true"></span></a></li>
+  <li><a class="icon-button icon-button--secondary" href="https://t.me/" aria-label="Share on Telegram"><span class="icon icon-telegram" aria-hidden="true"></span></a></li>
+  </ul>
+  <label class="share-panel__label" for="share-link">Page link</label>
+  <div class="share-panel__row">
+  <div class="share-panel__field"><span class="icon icon-link" aria-hidden="true"></span><input class="share-panel__input" id="share-link" type="text" value="https://example.com/recetas/spicy-noodle-salad" readonly></div>
+  <button class="button button--secondary" type="button" data-copy-link>Copy link</button>
+  </div>
+  <p class="share-panel__status" aria-live="polite" data-copy-status></p>
+  </div>
+</div></dialog>
+</main>
+<footer data-ds="footer" class="footer">
+  <div class="footer__main">
+    <div class="footer__brand">
+      <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
+    </div>
+    <nav class="footer__column" aria-label="Footer">
+      <ul class="footer__links">
+        <li><a class="link link--dark" href="products.html">Products</a></li>
+        <li><a class="link link--dark" href="natural-formula.html">100% Natural formula</a></li>
+        <li><a class="link link--dark" href="recipes.html">Recipes</a></li>
+        <li><a class="link link--dark" href="contests.html">Contests</a></li>
+        <li><a class="link link--dark" href="faq.html">FAQS</a></li>
+        <!-- HUECO: enlaces de campaña activa; GB Foods supplies. -->
+        <li><a class="link link--dark" href="#">Campaign link 1</a></li>
+        <li><a class="link link--dark" href="#">Campaign link 2</a></li>
+      </ul>
+    </nav>
+    <!-- HUECO: approved certification seals and artwork; GB Foods supplies. -->
+    <div class="footer__ticket">
+      <div class="footer__ticket-copy">
+        <h2 class="footer__ticket-title">Do you have any ideas, complaints or cravings?</h2>
+        <p class="footer__ticket-text">Cut to the chase and tell us what you think. We're really reading your comments, for real.</p>
+      </div>
+      <!-- HUECO: external Quality form URL; GB Foods supplies. -->
+      <a class="button" href="#" target="_blank" rel="noopener">Send suggestions <span class="icon icon-external-link" aria-hidden="true"></span><span class="visually-hidden"> (opens in a new tab)</span></a>
+    </div>
+  </div>
+  <div class="footer__legal">
+    <a class="link link--dark" href="#">Legal notice</a>
+    <a class="link link--dark" href="privacy.html">Privacy policy</a>
+    <a class="link link--dark" href="#">Cookies policy</a>
+    <a class="link link--dark" href="#">Legal basis</a>
+    <a class="link link--dark" href="contest.html#rules">Contest rules</a>
+    <a class="link link--dark" href="#">Contact</a>
+    <span>© GBFoods</span>
+  </div>
+</footer>
+<script>
+const menu = document.getElementById('menu');
+const menuOpener = document.querySelector('[data-menu-open]');
+menuOpener?.addEventListener('click', () => { menu?.showModal(); menuOpener.setAttribute('aria-expanded', 'true'); });
+menu?.addEventListener('close', () => menuOpener?.setAttribute('aria-expanded', 'false'));
+document.querySelectorAll('[data-menu-close]').forEach(button => button.addEventListener('click', () => menu?.close()));
+const stickyHeader = document.querySelector('.navbar');
+const updateHeader = () => stickyHeader?.classList.toggle('navbar--scrolled', window.scrollY > 0);
+window.addEventListener('scroll', updateHeader, { passive: true }); updateHeader();
+</script>
+<script>
+// Interactive states used by the wireframe; all presentation remains in Design System classes.
+document.querySelectorAll('[data-dialog-open]').forEach(button => button.addEventListener('click', () => document.getElementById(button.dataset.dialogOpen)?.showModal()));
+document.querySelectorAll('[data-dialog-close]').forEach(button => button.addEventListener('click', () => button.closest('dialog')?.close()));
+document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); }));
+document.querySelectorAll('.faq-list__items, .faq__list').forEach(list => list.querySelectorAll('.accordion-item__button').forEach(button => button.addEventListener('click', () => {
+  const opening = button.getAttribute('aria-expanded') !== 'true';
+  list.querySelectorAll('.accordion-item__button').forEach(other => { other.setAttribute('aria-expanded', 'false'); const panel = document.getElementById(other.getAttribute('aria-controls')); if (panel) panel.hidden = true; });
+  button.setAttribute('aria-expanded', String(opening)); const panel = document.getElementById(button.getAttribute('aria-controls')); if (panel) panel.hidden = !opening;
+})));
+document.querySelectorAll('[data-filter-clear]').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('[data-filter-group] [aria-pressed]').forEach(item => item.setAttribute('aria-pressed', String(item.textContent.trim() === 'All')));
+  document.querySelectorAll('[data-search-target]').forEach(input => { input.value = ''; input.dispatchEvent(new Event('input')); });
+  const status = document.querySelector('[data-filter-status]'); if (status) status.textContent = 'All recipes';
+}));
+document.querySelectorAll('[data-filter-group]').forEach(group => group.querySelectorAll('[aria-pressed]').forEach(button => button.addEventListener('click', () => {
+  const wasPressed = button.getAttribute('aria-pressed') === 'true'; group.querySelectorAll('[aria-pressed]').forEach(item => item.setAttribute('aria-pressed', 'false')); button.setAttribute('aria-pressed', String(!wasPressed));
+  const status = document.querySelector('[data-filter-status]'); if (status) status.textContent = !wasPressed ? 'Filtered results' : 'All results';
+})));
+document.querySelectorAll('[data-copy-link]').forEach(button => button.addEventListener('click', async () => { try { await navigator.clipboard.writeText(location.href); const status = document.querySelector('[data-copy-status]'); if (status) status.textContent = 'Link copied'; } catch { const status = document.querySelector('[data-copy-status]'); if (status) status.textContent = 'Copy this page link from your browser'; } }));
+document.querySelectorAll('[data-search-target]').forEach(input => input.addEventListener('input', () => {
+  const target = document.querySelector(input.dataset.searchTarget); const query = input.value.trim().toLowerCase(); let count = 0;
+  target?.querySelectorAll('[data-search-item]').forEach(item => { const match = item.textContent.toLowerCase().includes(query); item.hidden = !match; if (match) count++; });
+  document.querySelectorAll('[data-search-empty]').forEach(state => state.hidden = count !== 0);
+  const status = document.querySelector('[data-search-status]'); if (status) status.textContent = `${count} results`;
+}));
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.carousel, .product-line__grid, .contest-prizes__list, .contest-community__list').forEach(carousel => {
+  carousel.tabIndex = 0;
+  carousel.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+    const items = Array.from(carousel.children); const current = items.findIndex(item => item.contains(document.activeElement));
+    const next = Math.max(0, Math.min(items.length - 1, current + (event.key === 'ArrowRight' ? 1 : -1)));
+    if (items[next]) { event.preventDefault(); items[next].scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest', inline: 'center'}); items[next].querySelector('a, button')?.focus(); }
+  });
+});
+document.querySelectorAll('[data-timer]').forEach(timer => {
+  let remaining = 180, ticker = null; const display = timer.querySelector('.timer__time'); const progress = timer.querySelector('.timer__bar'); const live = timer.querySelector('[aria-live]');
+  const render = () => { if (display) display.textContent = `${Math.floor(remaining/60)}:${String(remaining%60).padStart(2,'0')}`; if (progress) progress.value = remaining/180*100; };
+  timer.querySelectorAll('[data-timer-action]').forEach(button => button.addEventListener('click', () => { const action = button.dataset.timerAction; clearInterval(ticker); ticker = null;
+    if (action === 'start' || action === 'resume') { if (live) live.textContent = action === 'start' ? 'Timer started' : 'Timer resumed'; ticker = setInterval(() => { remaining--; render(); if (remaining <= 0) { clearInterval(ticker); ticker = null; if (live) live.textContent = 'Timer complete'; } }, 1000); }
+    if (action === 'reset') { remaining = 180; render(); if (live) live.textContent = 'Timer reset'; }
+    if (action === 'pause' && live) live.textContent = 'Timer paused';
+  })); render();
+});
+</script>
+</body>
+</html>

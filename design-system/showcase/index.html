@@ -62,7 +62,7 @@
 <div class="sc-root">
   <header class="sc-header">
     <h1 class="sc-header__title">GB Noodles · Microsites · Design System</h1>
-    <span class="sc-header__meta" data-sc-last-sync>última sync 2026-10-23T09:38:57Z</span>
+    <span class="sc-header__meta" data-sc-last-sync>última sync 2026-10-26T10:10:00Z</span>
     <span class="sc-header__spacer"></span>
     <button class="sc-btn" type="button" data-sc-theme-toggle aria-pressed="false">Tema oscuro</button>
   </header>
@@ -163,10 +163,12 @@
 &lt;button data-ds=&quot;button&quot; class=&quot;button button--inverse button--l&quot; type=&quot;button&quot;&gt;Participar&lt;/button&gt;
 &lt;button data-ds=&quot;button&quot; class=&quot;button&quot; type=&quot;button&quot; aria-disabled=&quot;true&quot;&gt;No disponible&lt;/button&gt;
 &lt;button data-ds=&quot;button&quot; class=&quot;button button--secondary&quot; type=&quot;button&quot;&gt;&lt;span class=&quot;icon icon-play&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;Ver vídeo&lt;/button&gt;</pre></div>
-<div class="sc-card" id="sc-icon-button"><div class="sc-card__head"><h3>Icon button</h3><span class="sc-tag">24 variantes · 33:401 · icono</span></div><div class="sc-demo"><button data-ds="icon-button" class="icon-button icon-button--secondary" type="button" aria-label="Buscar"><span class="icon icon-search" aria-hidden="true"></span></button>
+<div class="sc-card" id="sc-icon-button"><div class="sc-card__head"><h3>Icon button</h3><span class="sc-tag">24 variantes · 33:401 · icono</span></div><div class="sc-demo"><button data-ds="icon-button" class="icon-button" type="button" aria-label="Abrir menú"><span class="icon icon-menu" aria-hidden="true"></span></button>
+<button data-ds="icon-button" class="icon-button icon-button--secondary" type="button" aria-label="Buscar"><span class="icon icon-search" aria-hidden="true"></span></button>
 <button data-ds="icon-button" class="icon-button icon-button--inverse" type="button" aria-label="Cerrar menú"><span class="icon icon-close" aria-hidden="true"></span></button>
 <button data-ds="icon-button" class="icon-button icon-button--secondary icon-button--l" type="button" aria-label="Slide siguiente"><span class="icon icon-arrow-right" aria-hidden="true"></span></button>
-<button data-ds="icon-button" class="icon-button icon-button--secondary" type="button" aria-label="Slide anterior" disabled><span class="icon icon-arrow-left" aria-hidden="true"></span></button></div><pre class="sc-code">&lt;button data-ds=&quot;icon-button&quot; class=&quot;icon-button icon-button--secondary&quot; type=&quot;button&quot; aria-label=&quot;Buscar&quot;&gt;&lt;span class=&quot;icon icon-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+<button data-ds="icon-button" class="icon-button icon-button--secondary" type="button" aria-label="Slide anterior" disabled><span class="icon icon-arrow-left" aria-hidden="true"></span></button></div><pre class="sc-code">&lt;button data-ds=&quot;icon-button&quot; class=&quot;icon-button&quot; type=&quot;button&quot; aria-label=&quot;Abrir menú&quot;&gt;&lt;span class=&quot;icon icon-menu&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;button data-ds=&quot;icon-button&quot; class=&quot;icon-button icon-button--secondary&quot; type=&quot;button&quot; aria-label=&quot;Buscar&quot;&gt;&lt;span class=&quot;icon icon-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;button data-ds=&quot;icon-button&quot; class=&quot;icon-button icon-button--inverse&quot; type=&quot;button&quot; aria-label=&quot;Cerrar menú&quot;&gt;&lt;span class=&quot;icon icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;button data-ds=&quot;icon-button&quot; class=&quot;icon-button icon-button--secondary icon-button--l&quot; type=&quot;button&quot; aria-label=&quot;Slide siguiente&quot;&gt;&lt;span class=&quot;icon icon-arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;button data-ds=&quot;icon-button&quot; class=&quot;icon-button icon-button--secondary&quot; type=&quot;button&quot; aria-label=&quot;Slide anterior&quot; disabled&gt;&lt;span class=&quot;icon icon-arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;</pre></div>
@@ -1126,6 +1128,14 @@
 <div class="modal__body"><div class="modal-slot">Contenido</div></div>
 <div class="modal__footer"><button class="button" type="button">Entendido</button></div>
 </dialog>
+<dialog data-ds="modal" class="modal" aria-labelledby="modal-m-title" open>
+<div class="modal__header">
+<h2 class="modal__title" id="modal-m-title">Resultado del concurso</h2>
+<button class="icon-button icon-button--secondary" type="button" aria-label="Cerrar"><span class="icon icon-close" aria-hidden="true"></span></button>
+</div>
+<div class="modal__body"><div class="modal-slot">Contenido</div></div>
+<div class="modal__footer"><button class="button" type="button">Entendido</button></div>
+</dialog>
 <dialog data-ds="modal" class="modal modal--full" aria-labelledby="modal-full-title" open>
 <div class="modal__header">
 <h2 class="modal__title" id="modal-full-title">Alérgenos</h2>
@@ -1135,6 +1145,14 @@
 </dialog></div><pre class="sc-code">&lt;dialog data-ds=&quot;modal&quot; class=&quot;modal modal--l&quot; aria-labelledby=&quot;modal-title&quot; open&gt;
 &lt;div class=&quot;modal__header&quot;&gt;
 &lt;h2 class=&quot;modal__title&quot; id=&quot;modal-title&quot;&gt;Etiqueta del envase&lt;/h2&gt;
+&lt;button class=&quot;icon-button icon-button--secondary&quot; type=&quot;button&quot; aria-label=&quot;Cerrar&quot;&gt;&lt;span class=&quot;icon icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;modal__body&quot;&gt;&lt;div class=&quot;modal-slot&quot;&gt;Contenido&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;modal__footer&quot;&gt;&lt;button class=&quot;button&quot; type=&quot;button&quot;&gt;Entendido&lt;/button&gt;&lt;/div&gt;
+&lt;/dialog&gt;
+&lt;dialog data-ds=&quot;modal&quot; class=&quot;modal&quot; aria-labelledby=&quot;modal-m-title&quot; open&gt;
+&lt;div class=&quot;modal__header&quot;&gt;
+&lt;h2 class=&quot;modal__title&quot; id=&quot;modal-m-title&quot;&gt;Resultado del concurso&lt;/h2&gt;
 &lt;button class=&quot;icon-button icon-button--secondary&quot; type=&quot;button&quot; aria-label=&quot;Cerrar&quot;&gt;&lt;span class=&quot;icon icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;modal__body&quot;&gt;&lt;div class=&quot;modal-slot&quot;&gt;Contenido&lt;/div&gt;&lt;/div&gt;

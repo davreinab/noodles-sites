@@ -87,6 +87,9 @@
       }
     },
     "step": {
+      "media": {
+        "true": ".step--media"
+      },
       "Media": {
         "True": ".step--media"
       },

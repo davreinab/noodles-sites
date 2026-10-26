@@ -20,7 +20,7 @@
       "url": "https://www.figma.com/design/1YhsCqdqYCHlK4Y82IY5G3"
     }
   ],
-  "lastSync": "2026-10-23T09:38:57Z",
+  "lastSync": "2026-10-26T10:10:00Z",
   "note": "Registro de componentes del DS. Se regenera con el sync; no editar a mano.",
   "entryContract": {
     "requiredFields": [
@@ -1071,6 +1071,7 @@
           "icon-button--l",
           "icon-button--secondary",
           "icon-close",
+          "icon-menu",
           "icon-search"
         ]
       }

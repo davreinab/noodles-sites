@@ -175,12 +175,10 @@
     "manualTodo": 0,
     "notes": "",
     "coverage": {
-      "visible": 1,
-      "total": 1,
+      "visible": 2,
+      "total": 2,
       "missing": [],
-      "unchecked": [
-        "media=true"
-      ],
+      "unchecked": [],
       "complete": true
     }
   },

@@ -3,22 +3,23 @@
 {% raw %}<div class="ds-gallery">
 <style>.ds-gallery{font:14px/1.4 system-ui,sans-serif;color:#1f1f1f}.ds-gallery h3{font:600 12px/1.3 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;color:#4a4a4a}.ds-gallery section{margin:0 0 32px}.ds-gallery__row{display:flex;flex-wrap:wrap;align-items:center;gap:24px 32px}.ds-gallery figure{margin:0;display:flex;flex-direction:column;gap:8px;align-items:flex-start}.ds-gallery figcaption{font:12px/1.3 ui-monospace,monospace;color:#4a4a4a}.ds-gallery__stage{padding:8px;min-width:48px;min-height:32px;outline:1px dashed #bebebe;outline-offset:0}</style>
 <section><h3>hierarchy</h3><div class="ds-gallery__row">
-<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button" type="button" aria-label="Buscar"><span class="icon icon-search" aria-hidden="true"></span></button></div><figcaption>hierarchy=Primary</figcaption></figure>
-<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button icon-button--secondary" type="button" aria-label="Buscar"><span class="icon icon-search" aria-hidden="true"></span></button></div><figcaption>hierarchy=Secondary</figcaption></figure>
-<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button icon-button--inverse" type="button" aria-label="Buscar"><span class="icon icon-search" aria-hidden="true"></span></button></div><figcaption>hierarchy=Inverse</figcaption></figure>
+<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button" type="button" aria-label="Abrir menú"><span class="icon icon-menu" aria-hidden="true"></span></button></div><figcaption>hierarchy=Primary</figcaption></figure>
+<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button icon-button--secondary" type="button" aria-label="Abrir menú"><span class="icon icon-menu" aria-hidden="true"></span></button></div><figcaption>hierarchy=Secondary</figcaption></figure>
+<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button icon-button--inverse" type="button" aria-label="Abrir menú"><span class="icon icon-menu" aria-hidden="true"></span></button></div><figcaption>hierarchy=Inverse</figcaption></figure>
 </div></section>
 <section><h3>size</h3><div class="ds-gallery__row">
-<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button icon-button--secondary" type="button" aria-label="Buscar"><span class="icon icon-search" aria-hidden="true"></span></button></div><figcaption>size=M</figcaption></figure>
-<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button icon-button--secondary icon-button--l" type="button" aria-label="Buscar"><span class="icon icon-search" aria-hidden="true"></span></button></div><figcaption>size=L</figcaption></figure>
+<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button" type="button" aria-label="Abrir menú"><span class="icon icon-menu" aria-hidden="true"></span></button></div><figcaption>size=M</figcaption></figure>
+<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button icon-button--l" type="button" aria-label="Abrir menú"><span class="icon icon-menu" aria-hidden="true"></span></button></div><figcaption>size=L</figcaption></figure>
 </div></section>
 <section><h3>disabled (con y sin)</h3><div class="ds-gallery__row">
-<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button icon-button--secondary" type="button" aria-label="Buscar" disabled><span class="icon icon-search" aria-hidden="true"></span></button></div><figcaption>disabled=true</figcaption></figure>
-<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button icon-button--secondary" type="button" aria-label="Buscar"><span class="icon icon-search" aria-hidden="true"></span></button></div><figcaption>disabled=false</figcaption></figure>
+<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button" type="button" aria-label="Abrir menú" disabled><span class="icon icon-menu" aria-hidden="true"></span></button></div><figcaption>disabled=true</figcaption></figure>
+<figure><div class="ds-gallery__stage"><button data-ds="icon-button" class="icon-button" type="button" aria-label="Abrir menú"><span class="icon icon-menu" aria-hidden="true"></span></button></div><figcaption>disabled=false</figcaption></figure>
 </div></section>
 <p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">La galería clona el elemento raíz del ejemplo, con los contenedores que le dan color o fondo, y solo cambia sus clases y atributos: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
 </div>{% endraw %}
 {% else %}
-{% raw %}<button data-ds="icon-button" class="icon-button icon-button--secondary" type="button" aria-label="Buscar"><span class="icon icon-search" aria-hidden="true"></span></button>
+{% raw %}<button data-ds="icon-button" class="icon-button" type="button" aria-label="Abrir menú"><span class="icon icon-menu" aria-hidden="true"></span></button>
+<button data-ds="icon-button" class="icon-button icon-button--secondary" type="button" aria-label="Buscar"><span class="icon icon-search" aria-hidden="true"></span></button>
 <button data-ds="icon-button" class="icon-button icon-button--inverse" type="button" aria-label="Cerrar menú"><span class="icon icon-close" aria-hidden="true"></span></button>
 <button data-ds="icon-button" class="icon-button icon-button--secondary icon-button--l" type="button" aria-label="Slide siguiente"><span class="icon icon-arrow-right" aria-hidden="true"></span></button>
 <button data-ds="icon-button" class="icon-button icon-button--secondary" type="button" aria-label="Slide anterior" disabled><span class="icon icon-arrow-left" aria-hidden="true"></span></button>{% endraw %}

@@ -14,6 +14,7 @@
 - **Propósito:** Botón solo con icono para acciones universales: cerrar, buscar, menú, anterior y siguiente. Mismas jerarquías y colores que Button; M 48 y L 64, la misma altura que Button.
 - **Ejemplo de código:**
   ```html
+  <button data-ds="icon-button" class="icon-button" type="button" aria-label="Abrir menú"><span class="icon icon-menu" aria-hidden="true"></span></button>
   <button data-ds="icon-button" class="icon-button icon-button--secondary" type="button" aria-label="Buscar"><span class="icon icon-search" aria-hidden="true"></span></button>
   <button data-ds="icon-button" class="icon-button icon-button--inverse" type="button" aria-label="Cerrar menú"><span class="icon icon-close" aria-hidden="true"></span></button>
   <button data-ds="icon-button" class="icon-button icon-button--secondary icon-button--l" type="button" aria-label="Slide siguiente"><span class="icon icon-arrow-right" aria-hidden="true"></span></button>

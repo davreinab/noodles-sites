@@ -268,11 +268,13 @@
     "manualTodo": 0,
     "notes": "",
     "coverage": {
-      "visible": 6,
+      "visible": 5,
       "total": 6,
-      "missing": [],
+      "missing": [
+        "hierarchy=Primary"
+      ],
       "unchecked": [],
-      "complete": true
+      "complete": false
     }
   },
   "ds": {

@@ -262,11 +262,13 @@
     "manualTodo": 0,
     "notes": "",
     "coverage": {
-      "visible": 4,
+      "visible": 3,
       "total": 4,
-      "missing": [],
+      "missing": [
+        "size=M"
+      ],
       "unchecked": [],
-      "complete": true
+      "complete": false
     }
   },
   "ds": {

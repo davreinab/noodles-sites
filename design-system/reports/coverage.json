@@ -5,8 +5,8 @@
   "dsClasses": 567,
   "screens": 13,
   "summary": {
-    "withClass": 2491,
-    "covered": 2491,
+    "withClass": 2432,
+    "covered": 2432,
     "coverage": 100.0
   },
   "byScreen": [
@@ -54,15 +54,15 @@
     },
     {
       "file": "UI/home.html",
-      "withClass": 239,
-      "covered": 239,
+      "withClass": 235,
+      "covered": 235,
       "coverage": 100.0,
       "foreignClasses": {}
     },
     {
       "file": "UI/natural-formula.html",
-      "withClass": 254,
-      "covered": 254,
+      "withClass": 250,
+      "covered": 250,
       "coverage": 100.0,
       "foreignClasses": {}
     },
@@ -75,8 +75,8 @@
     },
     {
       "file": "UI/product.html",
-      "withClass": 393,
-      "covered": 393,
+      "withClass": 380,
+      "covered": 380,
       "coverage": 100.0,
       "foreignClasses": {}
     },
@@ -89,15 +89,15 @@
     },
     {
       "file": "UI/recipe.html",
-      "withClass": 237,
-      "covered": 237,
+      "withClass": 233,
+      "covered": 233,
       "coverage": 100.0,
       "foreignClasses": {}
     },
     {
       "file": "UI/recipes.html",
-      "withClass": 222,
-      "covered": 222,
+      "withClass": 188,
+      "covered": 188,
       "coverage": 100.0,
       "foreignClasses": {}
     }

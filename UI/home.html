@@ -20,11 +20,11 @@
 <header data-ds="navbar" class="navbar">
   <div class="navbar__inner">
     <div class="navbar__start">
-      <button class="icon-button icon-button--secondary" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" data-menu-open><span class="icon icon-menu" aria-hidden="true"></span></button>
+      <button class="icon-button icon-button--secondary" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" data-menu-open data-ds="icon-button"><span class="icon icon-menu" aria-hidden="true" data-ds="icon-menu"></span></button>
     </div>
     <a href="home.html" aria-label="Yatekomo, home"><img class="logo" src="../design-system/assets/logos/logo-yatekomo-positive.svg" alt="Yatekomo"></a>
     <div class="navbar__actions">
-      <a class="button" href="natural-formula.html">New 100% Natural Formula</a>
+      <a class="button" href="natural-formula.html" data-ds="button">New 100% Natural Formula</a>
     </div>
   </div>
 </header>
@@ -33,23 +33,23 @@
   <div class="mobile-menu__inner">
     <div class="mobile-menu__top">
       <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
-      <button class="icon-button icon-button--inverse" type="button" aria-label="Close menu" data-menu-close><span class="icon icon-close" aria-hidden="true"></span></button>
+      <button class="icon-button icon-button--inverse" type="button" aria-label="Close menu" data-menu-close data-ds="icon-button"><span class="icon icon-close" aria-hidden="true" data-ds="icon-close"></span></button>
     </div>
     <nav class="mobile-menu__nav" aria-label="Main">
-      <a class="nav-item nav-item--menu" href="products.html">Products</a>
-      <a class="nav-item nav-item--menu" href="#">Natural formula</a>
-      <a class="nav-item nav-item--menu" href="recipes.html">Recipes</a>
-      <a class="nav-item nav-item--menu" href="#">Contests</a>
-      <a class="nav-item nav-item--menu" href="faq.html">FAQS</a>
+      <a class="nav-item nav-item--menu" href="products.html" data-ds="nav-item">Products</a>
+      <a class="nav-item nav-item--menu" href="#" data-ds="nav-item">Natural formula</a>
+      <a class="nav-item nav-item--menu" href="recipes.html" data-ds="nav-item">Recipes</a>
+      <a class="nav-item nav-item--menu" href="#" data-ds="nav-item">Contests</a>
+      <a class="nav-item nav-item--menu" href="faq.html" data-ds="nav-item">FAQS</a>
     </nav>
     <div class="mobile-menu__social">
       <p class="mobile-menu__social-label">Our social media:</p>
       <!-- HUECO: brand social media URLs; GB Foods supplies. -->
       <ul class="mobile-menu__social-list">
-        <li><a class="link link--dark" href="#" aria-label="TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="X"><span class="icon icon-x" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="TikTok" data-ds="link"><span class="icon icon-tiktok" aria-hidden="true" data-ds="icon-tiktok"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="Instagram" data-ds="link"><span class="icon icon-instagram" aria-hidden="true" data-ds="icon-instagram"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="X" data-ds="link"><span class="icon icon-x" aria-hidden="true" data-ds="icon-x"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="YouTube" data-ds="link"><span class="icon icon-youtube" aria-hidden="true" data-ds="icon-youtube"></span></a></li>
       </ul>
     </div>
     <p class="mobile-menu__copyright">© GBFoods</p>
@@ -58,29 +58,29 @@
 
 <main>
 
-  <section class="section hero" aria-roledescription="carousel" aria-label="Highlights">
-    <span class="decoration-noodle hero__noodle" aria-hidden="true"></span>
+  <section class="section hero" aria-roledescription="carousel" aria-label="Highlights" data-ds="hero">
+    <span class="decoration-noodle hero__noodle" aria-hidden="true" data-ds="decoration-noodle"></span>
     <div class="section__inner">
       <div class="hero__slide">
         <div class="hero__content">
           <h1 class="hero__title">Welcome to the new era</h1>
           <div class="hero__slide-content" role="group" aria-roledescription="slide" aria-label="1 of 3">
             <div class="hero__slide-copy">
-              <span class="badge">New</span>
+              <span class="badge" data-ds="badge">New</span>
               <h2 class="hero__slide-title">Do you like to cook? Check out our new bags</h2>
               <p class="hero__lead">Same amount, super convenient for your recipes</p>
             </div>
-            <a class="button button--l" href="#">Discover flavours</a>
+            <a class="button button--l" href="#" data-ds="button">Discover flavours</a>
             <!-- HUECO: contenido de las slides 2 y 3 (máximo 3 por regla de negocio; el wireframe dibuja 5 puntos); GB Foods supplies. -->
             <div class="hero__controls">
-              <button class="icon-button icon-button--secondary" type="button" aria-label="Previous slide"><span class="icon icon-arrow-left" aria-hidden="true"></span></button>
+              <button class="icon-button icon-button--secondary" type="button" aria-label="Previous slide" data-ds="icon-button"><span class="icon icon-arrow-left" aria-hidden="true" data-ds="icon-arrow-left"></span></button>
               <div class="hero__dots">
                 <button class="hero__dot" type="button" aria-current="true" aria-label="Slide 1"></button>
                 <button class="hero__dot" type="button" aria-label="Slide 2"></button>
                 <button class="hero__dot" type="button" aria-label="Slide 3"></button>
               </div>
-              <button class="icon-button icon-button--secondary" type="button" aria-label="Next slide"><span class="icon icon-arrow-right" aria-hidden="true"></span></button>
-              <button class="icon-button icon-button--secondary hero__pause" type="button" aria-label="Pause slideshow"><span class="icon icon-pause" aria-hidden="true"></span></button>
+              <button class="icon-button icon-button--secondary" type="button" aria-label="Next slide" data-ds="icon-button"><span class="icon icon-arrow-right" aria-hidden="true" data-ds="icon-arrow-right"></span></button>
+              <button class="icon-button icon-button--secondary hero__pause" type="button" aria-label="Pause slideshow" data-ds="icon-button"><span class="icon icon-pause" aria-hidden="true" data-ds="icon-pause"></span></button>
             </div>
           </div>
         </div>
@@ -93,8 +93,8 @@
     </div>
   </section>
 
-  <section class="section promo" aria-labelledby="pr-title">
-    <div class="decoration-noodle-texture" aria-hidden="true"><span class="decoration-noodle decoration-noodle--texture"></span><span class="decoration-noodle decoration-noodle--3 decoration-noodle--texture"></span><span class="decoration-noodle decoration-noodle--5 decoration-noodle--texture"></span><span class="decoration-noodle decoration-noodle--2 decoration-noodle--texture"></span><span class="decoration-noodle decoration-noodle--4 decoration-noodle--texture"></span></div>
+  <section class="section promo" aria-labelledby="pr-title" data-ds="promo">
+    <div class="decoration-noodle-texture" aria-hidden="true" data-ds="decoration-noodle-texture"><span class="decoration-noodle decoration-noodle--texture" data-ds="decoration-noodle"></span><span class="decoration-noodle decoration-noodle--3 decoration-noodle--texture" data-ds="decoration-noodle"></span><span class="decoration-noodle decoration-noodle--5 decoration-noodle--texture" data-ds="decoration-noodle"></span><span class="decoration-noodle decoration-noodle--2 decoration-noodle--texture" data-ds="decoration-noodle"></span><span class="decoration-noodle decoration-noodle--4 decoration-noodle--texture" data-ds="decoration-noodle"></span></div>
     <div class="section__inner">
       <div class="promo__grid">
         <div class="promo__content">
@@ -102,22 +102,22 @@
           <h2 class="section__title" id="pr-title">Enter Yatekomo’s new giveaway and win prizes</h2>
           <p class="promo__body">Official Spanish National Team jerseys and soccer balls signed by Marc Cucurella, and even the chance to meet him in person!</p>
           <div class="promo__actions">
-            <a class="button button--l" href="#">I want to participate</a>
+            <a class="button button--l" href="#" data-ds="button">I want to participate</a>
             <!-- Bases legales: obligatorias por regla de negocio, aunque el wireframe no las dibuja -->
-            <a class="link" href="contest.html#rules">Contest rules</a>
+            <a class="link" href="contest.html#rules" data-ds="link">Contest rules</a>
           </div>
         </div>
         <div class="promo__media">
           <!-- HUECO: póster y vídeo de la campaña; GB Foods supplies. -->
-          <div class="video-player">
-            <button class="video-player__play" type="button" aria-label="Play video: Yatekomo giveaway"><span class="icon icon-play" aria-hidden="true"></span></button>
+          <div class="video-player" data-ds="video-player">
+            <button class="video-player__play" type="button" aria-label="Play video: Yatekomo giveaway"><span class="icon icon-play" aria-hidden="true" data-ds="icon-play"></span></button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section natural-formula" aria-labelledby="nf-title">
+  <section class="section natural-formula" aria-labelledby="nf-title" data-ds="natural-formula">
     <div class="section__inner">
       <div class="natural-formula__grid">
         <h2 class="natural-formula__title" id="nf-title">100% natural noodles. Nothing else</h2>
@@ -128,74 +128,74 @@
             <li class="natural-formula__item"><s class="natural-formula__ingredient"><span class="visually-hidden">No </span>Palm oil</s><span class="natural-formula__statement">Only virgin and vegetable oils</span></li>
             <li class="natural-formula__item"><s class="natural-formula__ingredient"><span class="visually-hidden">No </span>Glutamate</s><span class="natural-formula__statement">No sweeteners at all, that’s not for us!</span></li>
           </ul>
-          <a class="button button--inverse button--l" href="#">Learn more</a>
+          <a class="button button--inverse button--l" href="#" data-ds="button">Learn more</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section product-categories" aria-labelledby="pc-title">
+  <section class="section product-categories" aria-labelledby="pc-title" data-ds="product-categories">
     <div class="section__inner">
       <div class="section__header">
         <h2 class="section__title" id="pc-title">Our products</h2>
         <p class="section__lead">Products and flavors for every taste. Find your match!</p>
       </div>
       <ul class="product-categories__grid">
-        <li><a class="category-card" href="#"><img class="category-card__media" src="assets/yakisoba.png" alt=""><span class="category-card__name">Cups</span></a></li>
+        <li><a class="category-card" href="#" data-ds="category-card"><img class="category-card__media" src="assets/yakisoba.png" alt=""><span class="category-card__name">Cups</span></a></li>
         <!-- HUECO: imágenes de Bags y Sauces (no hay assets); GB Foods supplies. -->
-        <li><a class="category-card" href="#"><span class="category-card__name">Bags</span></a></li>
-        <li><a class="category-card" href="#"><span class="badge">New</span><span class="category-card__name">Sauces</span></a></li>
+        <li><a class="category-card" href="#" data-ds="category-card"><span class="category-card__name">Bags</span></a></li>
+        <li><a class="category-card" href="#" data-ds="category-card"><span class="badge" data-ds="badge">New</span><span class="category-card__name">Sauces</span></a></li>
       </ul>
     </div>
   </section>
 
-  <section class="section recipes" aria-labelledby="rc-title">
+  <section class="section recipes" aria-labelledby="rc-title" data-ds="recipes">
     <div class="section__inner">
       <div class="section__header">
         <h2 class="section__title" id="rc-title">We haven’t forgotten you, keen cook</h2>
         <p class="section__lead">Explore and learn recipes to glow up your meals</p>
       </div>
-      <a class="button button--secondary button--l recipes__cta" href="#">See all recipes</a>
+      <a class="button button--secondary button--l recipes__cta" href="#" data-ds="button">See all recipes</a>
       <!-- Comensales («2 people»): sin definir, falta información. HUECO: fotos de las recetas (ahora, fotos de UI/assets/modelos) -->
       <ul class="carousel">
-        <li><article class="recipe-card">
+        <li><article class="recipe-card" data-ds="recipe-card">
           <div class="recipe-card__media"><img src="assets/modelos/yatekomo-pollo-abuelos.jpg" alt=""></div>
           <div class="recipe-card__body">
-            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p>
+            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true" data-ds="icon-timer"></span>20 minutes</p>
             <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Spicy Noodle Salad with almond and mint</a></h3>
             <ul class="recipe-card__products" aria-label="Products used">
-              <li><a class="chip" href="#">Cup Oriental</a></li>
-              <li><a class="chip" href="#">Sesame sauce</a></li>
+              <li><a class="chip" href="#" data-ds="chip">Cup Oriental</a></li>
+              <li><a class="chip" href="#" data-ds="chip">Sesame sauce</a></li>
             </ul>
           </div>
         </article></li>
-        <li><article class="recipe-card">
+        <li><article class="recipe-card" data-ds="recipe-card">
           <div class="recipe-card__media"><img src="assets/modelos/situacion-8.jpg" alt=""></div>
           <div class="recipe-card__body">
-            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>40 minutes</p>
+            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true" data-ds="icon-timer"></span>40 minutes</p>
             <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Thai Chicken Noodles with Peanut</a></h3>
             <ul class="recipe-card__products" aria-label="Products used">
-              <li><a class="chip" href="#">Rice noodle cup</a></li>
+              <li><a class="chip" href="#" data-ds="chip">Rice noodle cup</a></li>
             </ul>
           </div>
         </article></li>
-        <li><article class="recipe-card">
+        <li><article class="recipe-card" data-ds="recipe-card">
           <div class="recipe-card__media"><img src="assets/modelos/situacion-9.jpg" alt=""></div>
           <div class="recipe-card__body">
-            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>30 minutes</p>
+            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true" data-ds="icon-timer"></span>30 minutes</p>
             <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Green Curry Ramen</a></h3>
             <ul class="recipe-card__products" aria-label="Products used">
-              <li><a class="chip" href="#">Vegetable cup</a></li>
+              <li><a class="chip" href="#" data-ds="chip">Vegetable cup</a></li>
             </ul>
           </div>
         </article></li>
-        <li><article class="recipe-card">
+        <li><article class="recipe-card" data-ds="recipe-card">
           <div class="recipe-card__media"><img src="assets/modelos/situacion-10.jpg" alt=""></div>
           <div class="recipe-card__body">
-            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true"></span>50 minutes</p>
+            <p class="recipe-card__meta"><span class="icon icon-timer" aria-hidden="true" data-ds="icon-timer"></span>50 minutes</p>
             <h3 class="recipe-card__title"><a class="recipe-card__link" href="#">Traditional Japanese Ramen</a></h3>
             <ul class="recipe-card__products" aria-label="Products used">
-              <li><a class="chip" href="#">Hot &amp; Spicy cup</a></li>
+              <li><a class="chip" href="#" data-ds="chip">Hot &amp; Spicy cup</a></li>
             </ul>
           </div>
         </article></li>
@@ -213,7 +213,7 @@
     </div>
   </section>
 
-  <section class="section faq" aria-labelledby="faq-title">
+  <section class="section faq" aria-labelledby="faq-title" data-ds="faq">
     <div class="section__inner">
       <div class="faq__grid">
         <div class="section__header">
@@ -222,30 +222,30 @@
         </div>
         <!-- HUECO: respuestas 1, 3 y 4 (las valida GB Foods) -->
         <ul class="faq__list">
-          <li><div class="accordion-item">
-            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q1-btn" aria-expanded="false" aria-controls="q1">How is it prepared?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+          <li><div class="accordion-item" data-ds="accordion-item">
+            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q1-btn" aria-expanded="false" aria-controls="q1">How is it prepared?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3>
             <div class="accordion-item__panel" id="q1" role="region" aria-labelledby="q1-btn" hidden>Answer pending.</div>
           </div></li>
-          <li><div class="accordion-item">
-            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q2-btn" aria-expanded="true" aria-controls="q2">Why has the noodle recipe changed?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+          <li><div class="accordion-item" data-ds="accordion-item">
+            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q2-btn" aria-expanded="true" aria-controls="q2">Why has the noodle recipe changed?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3>
             <div class="accordion-item__panel" id="q2" role="region" aria-labelledby="q2-btn">We've redesigned the recipe to make it much more natural without sacrificing the classic flavor. Before, only about 30% of the ingredients were natural; now, 100% of them are.</div>
           </div></li>
-          <li><div class="accordion-item">
-            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q3-btn" aria-expanded="false" aria-controls="q3">Has the taste of the product changed?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+          <li><div class="accordion-item" data-ds="accordion-item">
+            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q3-btn" aria-expanded="false" aria-controls="q3">Has the taste of the product changed?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3>
             <div class="accordion-item__panel" id="q3" role="region" aria-labelledby="q3-btn" hidden>Answer pending.</div>
           </div></li>
-          <li><div class="accordion-item">
-            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q4-btn" aria-expanded="false" aria-controls="q4">Where can I find the noodles?<span class="icon icon-plus" aria-hidden="true"></span></button></h3>
+          <li><div class="accordion-item" data-ds="accordion-item">
+            <h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="q4-btn" aria-expanded="false" aria-controls="q4">Where can I find the noodles?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3>
             <div class="accordion-item__panel" id="q4" role="region" aria-labelledby="q4-btn" hidden>Answer pending.</div>
           </div></li>
         </ul>
-        <p class="faq__more">Still curious? <a class="link link--standalone" href="#">See all FAQS <span class="icon icon-arrow-right" aria-hidden="true"></span></a></p>
+        <p class="faq__more">Still curious? <a class="link link--standalone" href="#" data-ds="link">See all FAQS <span class="icon icon-arrow-right" aria-hidden="true" data-ds="icon-arrow-right"></span></a></p>
       </div>
     </div>
   </section>
 
-  <section class="section where-to-buy" id="where-to-buy" aria-labelledby="wtb-title">
-    <div class="decoration-noodle-texture" aria-hidden="true"><span class="decoration-noodle decoration-noodle--texture"></span><span class="decoration-noodle decoration-noodle--3 decoration-noodle--texture"></span><span class="decoration-noodle decoration-noodle--5 decoration-noodle--texture"></span><span class="decoration-noodle decoration-noodle--2 decoration-noodle--texture"></span><span class="decoration-noodle decoration-noodle--4 decoration-noodle--texture"></span></div>
+  <section class="section where-to-buy" id="where-to-buy" aria-labelledby="wtb-title" data-ds="where-to-buy">
+    <div class="decoration-noodle-texture" aria-hidden="true" data-ds="decoration-noodle-texture"><span class="decoration-noodle decoration-noodle--texture" data-ds="decoration-noodle"></span><span class="decoration-noodle decoration-noodle--3 decoration-noodle--texture" data-ds="decoration-noodle"></span><span class="decoration-noodle decoration-noodle--5 decoration-noodle--texture" data-ds="decoration-noodle"></span><span class="decoration-noodle decoration-noodle--2 decoration-noodle--texture" data-ds="decoration-noodle"></span><span class="decoration-noodle decoration-noodle--4 decoration-noodle--texture" data-ds="decoration-noodle"></span></div>
     <div class="section__inner">
       <div class="where-to-buy__grid">
         <div class="where-to-buy__text">
@@ -271,14 +271,14 @@
     </div>
     <nav class="footer__column" aria-label="Footer">
       <ul class="footer__links">
-        <li><a class="link link--dark" href="products.html">Products</a></li>
-        <li><a class="link link--dark" href="#">100% Natural formula</a></li>
-        <li><a class="link link--dark" href="recipes.html">Recipes</a></li>
-        <li><a class="link link--dark" href="#">Contests</a></li>
-        <li><a class="link link--dark" href="faq.html">FAQS</a></li>
+        <li><a class="link link--dark" href="products.html" data-ds="link">Products</a></li>
+        <li><a class="link link--dark" href="#" data-ds="link">100% Natural formula</a></li>
+        <li><a class="link link--dark" href="recipes.html" data-ds="link">Recipes</a></li>
+        <li><a class="link link--dark" href="#" data-ds="link">Contests</a></li>
+        <li><a class="link link--dark" href="faq.html" data-ds="link">FAQS</a></li>
         <!-- HUECO: enlaces de campaña activa; GB Foods supplies. -->
-        <li><a class="link link--dark" href="#">Campaign link 1</a></li>
-        <li><a class="link link--dark" href="#">Campaign link 2</a></li>
+        <li><a class="link link--dark" href="#" data-ds="link">Campaign link 1</a></li>
+        <li><a class="link link--dark" href="#" data-ds="link">Campaign link 2</a></li>
       </ul>
     </nav>
     <!-- HUECO: approved certification seals and artwork; GB Foods supplies. -->
@@ -288,16 +288,16 @@
         <p class="footer__ticket-text">Cut to the chase and tell us what you think. We're really reading your comments, for real.</p>
       </div>
       <!-- HUECO: external Quality form URL; GB Foods supplies. -->
-      <a class="button" href="#" target="_blank" rel="noopener">Send suggestions <span class="icon icon-external-link" aria-hidden="true"></span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      <a class="button" href="#" target="_blank" rel="noopener" data-ds="button">Send suggestions <span class="icon icon-external-link" aria-hidden="true" data-ds="icon-external-link"></span><span class="visually-hidden"> (opens in a new tab)</span></a>
     </div>
   </div>
   <div class="footer__legal">
-    <a class="link link--dark" href="#">Legal notice</a>
-    <a class="link link--dark" href="#">Privacy policy</a>
-    <a class="link link--dark" href="#">Cookies policy</a>
-    <a class="link link--dark" href="#">Legal basis</a>
-    <a class="link link--dark" href="contest.html#rules">Contest rules</a>
-    <a class="link link--dark" href="#">Contact</a>
+    <a class="link link--dark" href="#" data-ds="link">Legal notice</a>
+    <a class="link link--dark" href="#" data-ds="link">Privacy policy</a>
+    <a class="link link--dark" href="#" data-ds="link">Cookies policy</a>
+    <a class="link link--dark" href="#" data-ds="link">Legal basis</a>
+    <a class="link link--dark" href="contest.html#rules" data-ds="link">Contest rules</a>
+    <a class="link link--dark" href="#" data-ds="link">Contact</a>
     <span>© GBFoods</span>
   </div>
 </footer>

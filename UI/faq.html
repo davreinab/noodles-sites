@@ -12,11 +12,11 @@
 <header data-ds="navbar" class="navbar">
   <div class="navbar__inner">
     <div class="navbar__start">
-      <button class="icon-button icon-button--secondary" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" data-menu-open><span class="icon icon-menu" aria-hidden="true"></span></button>
+      <button class="icon-button icon-button--secondary" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" data-menu-open data-ds="icon-button"><span class="icon icon-menu" aria-hidden="true" data-ds="icon-menu"></span></button>
     </div>
     <a href="home.html" aria-label="Yatekomo, home"><img class="logo" src="../design-system/assets/logos/logo-yatekomo-positive.svg" alt="Yatekomo"></a>
     <div class="navbar__actions">
-      <a class="button" href="natural-formula.html">New 100% Natural Formula</a>
+      <a class="button" href="natural-formula.html" data-ds="button">New 100% Natural Formula</a>
     </div>
   </div>
 </header>
@@ -25,23 +25,23 @@
   <div class="mobile-menu__inner">
     <div class="mobile-menu__top">
       <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
-      <button class="icon-button icon-button--inverse" type="button" aria-label="Close menu" data-menu-close><span class="icon icon-close" aria-hidden="true"></span></button>
+      <button class="icon-button icon-button--inverse" type="button" aria-label="Close menu" data-menu-close data-ds="icon-button"><span class="icon icon-close" aria-hidden="true" data-ds="icon-close"></span></button>
     </div>
     <nav class="mobile-menu__nav" aria-label="Main">
-      <a class="nav-item nav-item--menu" href="products.html">Products</a>
-      <a class="nav-item nav-item--menu" href="natural-formula.html">Natural formula</a>
-      <a class="nav-item nav-item--menu" href="recipes.html">Recipes</a>
-      <a class="nav-item nav-item--menu" href="contests.html">Contests</a>
-      <a class="nav-item nav-item--menu" href="faq.html">FAQS</a>
+      <a class="nav-item nav-item--menu" href="products.html" data-ds="nav-item">Products</a>
+      <a class="nav-item nav-item--menu" href="natural-formula.html" data-ds="nav-item">Natural formula</a>
+      <a class="nav-item nav-item--menu" href="recipes.html" data-ds="nav-item">Recipes</a>
+      <a class="nav-item nav-item--menu" href="contests.html" data-ds="nav-item">Contests</a>
+      <a class="nav-item nav-item--menu" href="faq.html" data-ds="nav-item">FAQS</a>
     </nav>
     <div class="mobile-menu__social">
       <p class="mobile-menu__social-label">Our social media:</p>
       <!-- HUECO: brand social media URLs; GB Foods supplies. -->
       <ul class="mobile-menu__social-list">
-        <li><a class="link link--dark" href="#" aria-label="TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="X"><span class="icon icon-x" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="TikTok" data-ds="link"><span class="icon icon-tiktok" aria-hidden="true" data-ds="icon-tiktok"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="Instagram" data-ds="link"><span class="icon icon-instagram" aria-hidden="true" data-ds="icon-instagram"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="X" data-ds="link"><span class="icon icon-x" aria-hidden="true" data-ds="icon-x"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="YouTube" data-ds="link"><span class="icon icon-youtube" aria-hidden="true" data-ds="icon-youtube"></span></a></li>
       </ul>
     </div>
     <p class="mobile-menu__copyright">© GBFoods</p>
@@ -55,30 +55,30 @@
   <h1 class="page-title" id="faq-title">Frequently Asked Questions</h1>
   <p class="library-head__lead">These are the questions we're asked most often, so you won't be left wondering</p>
   </div>
-  <form class="search-field library-head__search" role="search" action="/faq">
-  <span class="icon icon-search" aria-hidden="true"></span>
+  <form class="search-field library-head__search" role="search" action="/faq" data-ds="search-field">
+  <span class="icon icon-search" aria-hidden="true" data-ds="icon-search"></span>
   <label class="visually-hidden" for="faq-q">Search for questions about our products</label>
   <input class="search-field__input" id="faq-q" name="q" type="search" placeholder="Search for questions about our products" data-search-target="#faqs">
   </form>
   </div>
   </section>
-  <section data-ds="faq-list" class="section faq" data-faq-normal aria-label="Frequently asked questions"><div class="section__inner"><div class="faq-list"><p class="faq-list__status visually-hidden" role="status" data-search-status></p><ul class="faq-list__items" id="faqs">
+  <section data-ds="faq-list" class="section faq" data-faq-normal aria-label="Frequently asked questions"><div class="section__inner"><div class="faq-list" data-ds="faq-list"><p class="faq-list__status visually-hidden" role="status" data-search-status></p><ul class="faq-list__items" id="faqs">
   <!-- HUECO: approved answers to all questions except the recipe-change example; GB Foods supplies. -->
-  <li data-search-item><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q1-btn" aria-expanded="false" aria-controls="faq-q1">How is it prepared?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="faq-q1" role="region" aria-labelledby="faq-q1-btn" hidden>Answer pending.</div></div></li>
-  <li data-search-item><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q2-btn" aria-expanded="true" aria-controls="faq-q2">Why has the noodle recipe changed?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="faq-q2" role="region" aria-labelledby="faq-q2-btn">We've redesigned the recipe to make it much more natural without sacrificing the classic flavor. Before, only about 30% of the ingredients were natural; now, 100% of them are.</div></div></li>
-  <li data-search-item><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q3-btn" aria-expanded="false" aria-controls="faq-q3">Has the taste of the product changed?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="faq-q3" role="region" aria-labelledby="faq-q3-btn" hidden>Answer pending.</div></div></li>
-  <li data-search-item><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q4-btn" aria-expanded="false" aria-controls="faq-q4">Does Yatekomo contain MSG (glutamate) or flavor enhancers?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="faq-q4" role="region" aria-labelledby="faq-q4-btn" hidden>Answer pending.</div></div></li>
-  <li data-search-item><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q5-btn" aria-expanded="false" aria-controls="faq-q5">Is Yatekomo suitable for people with celiac disease or gluten intolerance?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="faq-q5" role="region" aria-labelledby="faq-q5-btn" hidden>Answer pending.</div></div></li>
-  <li data-search-item><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q6-btn" aria-expanded="false" aria-controls="faq-q6">What's the nutritional difference compared to the old recipe?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="faq-q6" role="region" aria-labelledby="faq-q6-btn" hidden>Answer pending.</div></div></li>
-  <li data-search-item><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q7-btn" aria-expanded="false" aria-controls="faq-q7">How do I prepare Yatekomo noodles, and how long does it take?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="faq-q7" role="region" aria-labelledby="faq-q7-btn" hidden>Answer pending.</div></div></li>
-  <li data-search-item><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q8-btn" aria-expanded="false" aria-controls="faq-q8">What's the difference between the Original range and the Yakisoba range?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="faq-q8" role="region" aria-labelledby="faq-q8-btn" hidden>Answer pending.</div></div></li>
-  <li data-search-item><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q9-btn" aria-expanded="false" aria-controls="faq-q9">Are the ingredients sourced locally, and how sustainable is production?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="faq-q9" role="region" aria-labelledby="faq-q9-btn" hidden>Answer pending.</div></div></li>
-  <li data-search-item><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q10-btn" aria-expanded="false" aria-controls="faq-q10">Is the packaging recyclable, and what should I do with it after use?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="faq-q10" role="region" aria-labelledby="faq-q10-btn" hidden>Answer pending.</div></div></li>
-  <li data-search-item><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q11-btn" aria-expanded="false" aria-controls="faq-q11">What's the difference between the cup and bag formats?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="faq-q11" role="region" aria-labelledby="faq-q11-btn" hidden>Answer pending.</div></div></li>
-  <li data-search-item><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q12-btn" aria-expanded="false" aria-controls="faq-q12">Has the taste changed now that the recipe is 100% natural, or does it taste the same as before?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="faq-q12" role="region" aria-labelledby="faq-q12-btn" hidden>Answer pending.</div></div></li>
-  <li data-search-item><div class="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q13-btn" aria-expanded="false" aria-controls="faq-q13">Where can I find the noodles?<span class="icon icon-plus" aria-hidden="true"></span></button></h3><div class="accordion-item__panel" id="faq-q13" role="region" aria-labelledby="faq-q13-btn" hidden>Answer pending.</div></div></li>
+  <li data-search-item><div class="accordion-item" data-ds="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q1-btn" aria-expanded="false" aria-controls="faq-q1">How is it prepared?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3><div class="accordion-item__panel" id="faq-q1" role="region" aria-labelledby="faq-q1-btn" hidden>Answer pending.</div></div></li>
+  <li data-search-item><div class="accordion-item" data-ds="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q2-btn" aria-expanded="true" aria-controls="faq-q2">Why has the noodle recipe changed?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3><div class="accordion-item__panel" id="faq-q2" role="region" aria-labelledby="faq-q2-btn">We've redesigned the recipe to make it much more natural without sacrificing the classic flavor. Before, only about 30% of the ingredients were natural; now, 100% of them are.</div></div></li>
+  <li data-search-item><div class="accordion-item" data-ds="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q3-btn" aria-expanded="false" aria-controls="faq-q3">Has the taste of the product changed?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3><div class="accordion-item__panel" id="faq-q3" role="region" aria-labelledby="faq-q3-btn" hidden>Answer pending.</div></div></li>
+  <li data-search-item><div class="accordion-item" data-ds="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q4-btn" aria-expanded="false" aria-controls="faq-q4">Does Yatekomo contain MSG (glutamate) or flavor enhancers?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3><div class="accordion-item__panel" id="faq-q4" role="region" aria-labelledby="faq-q4-btn" hidden>Answer pending.</div></div></li>
+  <li data-search-item><div class="accordion-item" data-ds="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q5-btn" aria-expanded="false" aria-controls="faq-q5">Is Yatekomo suitable for people with celiac disease or gluten intolerance?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3><div class="accordion-item__panel" id="faq-q5" role="region" aria-labelledby="faq-q5-btn" hidden>Answer pending.</div></div></li>
+  <li data-search-item><div class="accordion-item" data-ds="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q6-btn" aria-expanded="false" aria-controls="faq-q6">What's the nutritional difference compared to the old recipe?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3><div class="accordion-item__panel" id="faq-q6" role="region" aria-labelledby="faq-q6-btn" hidden>Answer pending.</div></div></li>
+  <li data-search-item><div class="accordion-item" data-ds="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q7-btn" aria-expanded="false" aria-controls="faq-q7">How do I prepare Yatekomo noodles, and how long does it take?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3><div class="accordion-item__panel" id="faq-q7" role="region" aria-labelledby="faq-q7-btn" hidden>Answer pending.</div></div></li>
+  <li data-search-item><div class="accordion-item" data-ds="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q8-btn" aria-expanded="false" aria-controls="faq-q8">What's the difference between the Original range and the Yakisoba range?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3><div class="accordion-item__panel" id="faq-q8" role="region" aria-labelledby="faq-q8-btn" hidden>Answer pending.</div></div></li>
+  <li data-search-item><div class="accordion-item" data-ds="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q9-btn" aria-expanded="false" aria-controls="faq-q9">Are the ingredients sourced locally, and how sustainable is production?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3><div class="accordion-item__panel" id="faq-q9" role="region" aria-labelledby="faq-q9-btn" hidden>Answer pending.</div></div></li>
+  <li data-search-item><div class="accordion-item" data-ds="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q10-btn" aria-expanded="false" aria-controls="faq-q10">Is the packaging recyclable, and what should I do with it after use?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3><div class="accordion-item__panel" id="faq-q10" role="region" aria-labelledby="faq-q10-btn" hidden>Answer pending.</div></div></li>
+  <li data-search-item><div class="accordion-item" data-ds="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q11-btn" aria-expanded="false" aria-controls="faq-q11">What's the difference between the cup and bag formats?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3><div class="accordion-item__panel" id="faq-q11" role="region" aria-labelledby="faq-q11-btn" hidden>Answer pending.</div></div></li>
+  <li data-search-item><div class="accordion-item" data-ds="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q12-btn" aria-expanded="false" aria-controls="faq-q12">Has the taste changed now that the recipe is 100% natural, or does it taste the same as before?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3><div class="accordion-item__panel" id="faq-q12" role="region" aria-labelledby="faq-q12-btn" hidden>Answer pending.</div></div></li>
+  <li data-search-item><div class="accordion-item" data-ds="accordion-item"><h3 class="accordion-item__heading"><button class="accordion-item__button" type="button" id="faq-q13-btn" aria-expanded="false" aria-controls="faq-q13">Where can I find the noodles?<span class="icon icon-plus" aria-hidden="true" data-ds="icon-plus"></span></button></h3><div class="accordion-item__panel" id="faq-q13" role="region" aria-labelledby="faq-q13-btn" hidden>Answer pending.</div></div></li>
   </ul></div></div></section>
-  <section data-ds="faq-list" class="section faq" data-search-empty hidden aria-label="No FAQ results"><div class="section__inner"><div data-ds="empty-state" class="empty-state"><h2 class="empty-state__title">We couldn't find any results for your search</h2><p class="empty-state__text">Try with a different word or topic</p></div><p class="section__lead">Or maybe you're interested in these other questions:</p><ul class="faq-list__items"><li><a class="link" href="#faq-q3-btn">Has the taste of the product changed?</a></li><li><a class="link" href="#faq-q4-btn">Does Yatekomo contain MSG (glutamate) or flavor enhancers?</a></li><li><a class="link" href="#faq-q5-btn">Is Yatekomo suitable for people with celiac disease or gluten intolerance?</a></li></ul></div></section>
+  <section data-ds="faq-list" class="section faq" data-search-empty hidden aria-label="No FAQ results"><div class="section__inner"><div data-ds="empty-state" class="empty-state"><h2 class="empty-state__title">We couldn't find any results for your search</h2><p class="empty-state__text">Try with a different word or topic</p></div><p class="section__lead">Or maybe you're interested in these other questions:</p><ul class="faq-list__items"><li><a class="link" href="#faq-q3-btn" data-ds="link">Has the taste of the product changed?</a></li><li><a class="link" href="#faq-q4-btn" data-ds="link">Does Yatekomo contain MSG (glutamate) or flavor enhancers?</a></li><li><a class="link" href="#faq-q5-btn" data-ds="link">Is Yatekomo suitable for people with celiac disease or gluten intolerance?</a></li></ul></div></section>
 </main>
 <footer data-ds="footer" class="footer">
   <div class="footer__main">
@@ -87,14 +87,14 @@
     </div>
     <nav class="footer__column" aria-label="Footer">
       <ul class="footer__links">
-        <li><a class="link link--dark" href="products.html">Products</a></li>
-        <li><a class="link link--dark" href="natural-formula.html">100% Natural formula</a></li>
-        <li><a class="link link--dark" href="recipes.html">Recipes</a></li>
-        <li><a class="link link--dark" href="contests.html">Contests</a></li>
-        <li><a class="link link--dark" href="faq.html">FAQS</a></li>
+        <li><a class="link link--dark" href="products.html" data-ds="link">Products</a></li>
+        <li><a class="link link--dark" href="natural-formula.html" data-ds="link">100% Natural formula</a></li>
+        <li><a class="link link--dark" href="recipes.html" data-ds="link">Recipes</a></li>
+        <li><a class="link link--dark" href="contests.html" data-ds="link">Contests</a></li>
+        <li><a class="link link--dark" href="faq.html" data-ds="link">FAQS</a></li>
         <!-- HUECO: enlaces de campaña activa; GB Foods supplies. -->
-        <li><a class="link link--dark" href="#">Campaign link 1</a></li>
-        <li><a class="link link--dark" href="#">Campaign link 2</a></li>
+        <li><a class="link link--dark" href="#" data-ds="link">Campaign link 1</a></li>
+        <li><a class="link link--dark" href="#" data-ds="link">Campaign link 2</a></li>
       </ul>
     </nav>
     <!-- HUECO: approved certification seals and artwork; GB Foods supplies. -->
@@ -104,16 +104,16 @@
         <p class="footer__ticket-text">Cut to the chase and tell us what you think. We're really reading your comments, for real.</p>
       </div>
       <!-- HUECO: external Quality form URL; GB Foods supplies. -->
-      <a class="button" href="#" target="_blank" rel="noopener">Send suggestions <span class="icon icon-external-link" aria-hidden="true"></span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      <a class="button" href="#" target="_blank" rel="noopener" data-ds="button">Send suggestions <span class="icon icon-external-link" aria-hidden="true" data-ds="icon-external-link"></span><span class="visually-hidden"> (opens in a new tab)</span></a>
     </div>
   </div>
   <div class="footer__legal">
-    <a class="link link--dark" href="#">Legal notice</a>
-    <a class="link link--dark" href="privacy.html">Privacy policy</a>
-    <a class="link link--dark" href="#">Cookies policy</a>
-    <a class="link link--dark" href="#">Legal basis</a>
-    <a class="link link--dark" href="contest.html#rules">Contest rules</a>
-    <a class="link link--dark" href="#">Contact</a>
+    <a class="link link--dark" href="#" data-ds="link">Legal notice</a>
+    <a class="link link--dark" href="privacy.html" data-ds="link">Privacy policy</a>
+    <a class="link link--dark" href="#" data-ds="link">Cookies policy</a>
+    <a class="link link--dark" href="#" data-ds="link">Legal basis</a>
+    <a class="link link--dark" href="contest.html#rules" data-ds="link">Contest rules</a>
+    <a class="link link--dark" href="#" data-ds="link">Contact</a>
     <span>© GBFoods</span>
   </div>
 </footer>

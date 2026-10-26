@@ -12,11 +12,11 @@
 <header data-ds="navbar" class="navbar">
   <div class="navbar__inner">
     <div class="navbar__start">
-      <button class="icon-button icon-button--secondary" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" data-menu-open><span class="icon icon-menu" aria-hidden="true"></span></button>
+      <button class="icon-button icon-button--secondary" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" data-menu-open data-ds="icon-button"><span class="icon icon-menu" aria-hidden="true" data-ds="icon-menu"></span></button>
     </div>
     <a href="home.html" aria-label="Yatekomo, home"><img class="logo" src="../design-system/assets/logos/logo-yatekomo-positive.svg" alt="Yatekomo"></a>
     <div class="navbar__actions">
-      <a class="button" href="natural-formula.html">New 100% Natural Formula</a>
+      <a class="button" href="natural-formula.html" data-ds="button">New 100% Natural Formula</a>
     </div>
   </div>
 </header>
@@ -25,23 +25,23 @@
   <div class="mobile-menu__inner">
     <div class="mobile-menu__top">
       <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
-      <button class="icon-button icon-button--inverse" type="button" aria-label="Close menu" data-menu-close><span class="icon icon-close" aria-hidden="true"></span></button>
+      <button class="icon-button icon-button--inverse" type="button" aria-label="Close menu" data-menu-close data-ds="icon-button"><span class="icon icon-close" aria-hidden="true" data-ds="icon-close"></span></button>
     </div>
     <nav class="mobile-menu__nav" aria-label="Main">
-      <a class="nav-item nav-item--menu" href="products.html">Products</a>
-      <a class="nav-item nav-item--menu" href="natural-formula.html">Natural formula</a>
-      <a class="nav-item nav-item--menu" href="recipes.html">Recipes</a>
-      <a class="nav-item nav-item--menu" href="contests.html">Contests</a>
-      <a class="nav-item nav-item--menu" href="faq.html">FAQS</a>
+      <a class="nav-item nav-item--menu" href="products.html" data-ds="nav-item">Products</a>
+      <a class="nav-item nav-item--menu" href="natural-formula.html" data-ds="nav-item">Natural formula</a>
+      <a class="nav-item nav-item--menu" href="recipes.html" data-ds="nav-item">Recipes</a>
+      <a class="nav-item nav-item--menu" href="contests.html" data-ds="nav-item">Contests</a>
+      <a class="nav-item nav-item--menu" href="faq.html" data-ds="nav-item">FAQS</a>
     </nav>
     <div class="mobile-menu__social">
       <p class="mobile-menu__social-label">Our social media:</p>
       <!-- HUECO: brand social media URLs; GB Foods supplies. -->
       <ul class="mobile-menu__social-list">
-        <li><a class="link link--dark" href="#" aria-label="TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="X"><span class="icon icon-x" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="TikTok" data-ds="link"><span class="icon icon-tiktok" aria-hidden="true" data-ds="icon-tiktok"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="Instagram" data-ds="link"><span class="icon icon-instagram" aria-hidden="true" data-ds="icon-instagram"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="X" data-ds="link"><span class="icon icon-x" aria-hidden="true" data-ds="icon-x"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="YouTube" data-ds="link"><span class="icon icon-youtube" aria-hidden="true" data-ds="icon-youtube"></span></a></li>
       </ul>
     </div>
     <p class="mobile-menu__copyright">© GBFoods</p>
@@ -57,7 +57,7 @@
   <div class="voucher__main"><p class="voucher__value">15% OFF</p><p class="voucher__label">Discount voucher</p></div>
   <div class="voucher__stub"><img class="voucher__barcode" src="../design-system/assets/images/placeholder.svg" alt="Barcode 0876562-R"><span class="voucher__code" aria-hidden="true">0876562-R</span></div>
   </div>
-  <a class="button button--l" href="/contests/slurp-and-win/voucher.pdf" download>Download discount voucher</a>
+  <a class="button button--l" href="/contests/slurp-and-win/voucher.pdf" download data-ds="button">Download discount voucher</a>
   </div>
   </section>
 </main>
@@ -68,14 +68,14 @@
     </div>
     <nav class="footer__column" aria-label="Footer">
       <ul class="footer__links">
-        <li><a class="link link--dark" href="products.html">Products</a></li>
-        <li><a class="link link--dark" href="natural-formula.html">100% Natural formula</a></li>
-        <li><a class="link link--dark" href="recipes.html">Recipes</a></li>
-        <li><a class="link link--dark" href="contests.html">Contests</a></li>
-        <li><a class="link link--dark" href="faq.html">FAQS</a></li>
+        <li><a class="link link--dark" href="products.html" data-ds="link">Products</a></li>
+        <li><a class="link link--dark" href="natural-formula.html" data-ds="link">100% Natural formula</a></li>
+        <li><a class="link link--dark" href="recipes.html" data-ds="link">Recipes</a></li>
+        <li><a class="link link--dark" href="contests.html" data-ds="link">Contests</a></li>
+        <li><a class="link link--dark" href="faq.html" data-ds="link">FAQS</a></li>
         <!-- HUECO: enlaces de campaña activa; GB Foods supplies. -->
-        <li><a class="link link--dark" href="#">Campaign link 1</a></li>
-        <li><a class="link link--dark" href="#">Campaign link 2</a></li>
+        <li><a class="link link--dark" href="#" data-ds="link">Campaign link 1</a></li>
+        <li><a class="link link--dark" href="#" data-ds="link">Campaign link 2</a></li>
       </ul>
     </nav>
     <!-- HUECO: approved certification seals and artwork; GB Foods supplies. -->
@@ -85,16 +85,16 @@
         <p class="footer__ticket-text">Cut to the chase and tell us what you think. We're really reading your comments, for real.</p>
       </div>
       <!-- HUECO: external Quality form URL; GB Foods supplies. -->
-      <a class="button" href="#" target="_blank" rel="noopener">Send suggestions <span class="icon icon-external-link" aria-hidden="true"></span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      <a class="button" href="#" target="_blank" rel="noopener" data-ds="button">Send suggestions <span class="icon icon-external-link" aria-hidden="true" data-ds="icon-external-link"></span><span class="visually-hidden"> (opens in a new tab)</span></a>
     </div>
   </div>
   <div class="footer__legal">
-    <a class="link link--dark" href="#">Legal notice</a>
-    <a class="link link--dark" href="privacy.html">Privacy policy</a>
-    <a class="link link--dark" href="#">Cookies policy</a>
-    <a class="link link--dark" href="#">Legal basis</a>
-    <a class="link link--dark" href="contest.html#rules">Contest rules</a>
-    <a class="link link--dark" href="#">Contact</a>
+    <a class="link link--dark" href="#" data-ds="link">Legal notice</a>
+    <a class="link link--dark" href="privacy.html" data-ds="link">Privacy policy</a>
+    <a class="link link--dark" href="#" data-ds="link">Cookies policy</a>
+    <a class="link link--dark" href="#" data-ds="link">Legal basis</a>
+    <a class="link link--dark" href="contest.html#rules" data-ds="link">Contest rules</a>
+    <a class="link link--dark" href="#" data-ds="link">Contact</a>
     <span>© GBFoods</span>
   </div>
 </footer>

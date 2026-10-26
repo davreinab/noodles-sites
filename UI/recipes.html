@@ -12,11 +12,11 @@
 <header data-ds="navbar" class="navbar">
   <div class="navbar__inner">
     <div class="navbar__start">
-      <button class="icon-button icon-button--secondary" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" data-menu-open><span class="icon icon-menu" aria-hidden="true"></span></button>
+      <button class="icon-button icon-button--secondary" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" data-menu-open data-ds="icon-button"><span class="icon icon-menu" aria-hidden="true" data-ds="icon-menu"></span></button>
     </div>
     <a href="home.html" aria-label="Yatekomo, home"><img class="logo" src="../design-system/assets/logos/logo-yatekomo-positive.svg" alt="Yatekomo"></a>
     <div class="navbar__actions">
-      <a class="button" href="natural-formula.html">New 100% Natural Formula</a>
+      <a class="button" href="natural-formula.html" data-ds="button">New 100% Natural Formula</a>
     </div>
   </div>
 </header>
@@ -25,23 +25,23 @@
   <div class="mobile-menu__inner">
     <div class="mobile-menu__top">
       <img class="logo" src="../design-system/assets/logos/logo-yatekomo-negative.svg" alt="Yatekomo">
-      <button class="icon-button icon-button--inverse" type="button" aria-label="Close menu" data-menu-close><span class="icon icon-close" aria-hidden="true"></span></button>
+      <button class="icon-button icon-button--inverse" type="button" aria-label="Close menu" data-menu-close data-ds="icon-button"><span class="icon icon-close" aria-hidden="true" data-ds="icon-close"></span></button>
     </div>
     <nav class="mobile-menu__nav" aria-label="Main">
-      <a class="nav-item nav-item--menu" href="products.html">Products</a>
-      <a class="nav-item nav-item--menu" href="natural-formula.html">Natural formula</a>
-      <a class="nav-item nav-item--menu" href="recipes.html">Recipes</a>
-      <a class="nav-item nav-item--menu" href="contests.html">Contests</a>
-      <a class="nav-item nav-item--menu" href="faq.html">FAQS</a>
+      <a class="nav-item nav-item--menu" href="products.html" data-ds="nav-item">Products</a>
+      <a class="nav-item nav-item--menu" href="natural-formula.html" data-ds="nav-item">Natural formula</a>
+      <a class="nav-item nav-item--menu" href="recipes.html" data-ds="nav-item">Recipes</a>
+      <a class="nav-item nav-item--menu" href="contests.html" data-ds="nav-item">Contests</a>
+      <a class="nav-item nav-item--menu" href="faq.html" data-ds="nav-item">FAQS</a>
     </nav>
     <div class="mobile-menu__social">
       <p class="mobile-menu__social-label">Our social media:</p>
       <!-- HUECO: brand social media URLs; GB Foods supplies. -->
       <ul class="mobile-menu__social-list">
-        <li><a class="link link--dark" href="#" aria-label="TikTok"><span class="icon icon-tiktok" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="Instagram"><span class="icon icon-instagram" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="X"><span class="icon icon-x" aria-hidden="true"></span></a></li>
-        <li><a class="link link--dark" href="#" aria-label="YouTube"><span class="icon icon-youtube" aria-hidden="true"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="TikTok" data-ds="link"><span class="icon icon-tiktok" aria-hidden="true" data-ds="icon-tiktok"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="Instagram" data-ds="link"><span class="icon icon-instagram" aria-hidden="true" data-ds="icon-instagram"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="X" data-ds="link"><span class="icon icon-x" aria-hidden="true" data-ds="icon-x"></span></a></li>
+        <li><a class="link link--dark" href="#" aria-label="YouTube" data-ds="link"><span class="icon icon-youtube" aria-hidden="true" data-ds="icon-youtube"></span></a></li>
       </ul>
     </div>
     <p class="mobile-menu__copyright">© GBFoods</p>
@@ -49,55 +49,55 @@
 </dialog>
 <main>
 <!-- HUECO: Published recipes, ingredients, times, nutrition, filter-to-recipe assignments and submission handling; GB Foods supplies. Recipe production is outside this project. -->
-<section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title"><div class="library-head__inner"><div class="library-head__intro"><h1 class="page-title" id="lhead-title">Recipes</h1><p class="library-head__lead">Explore and learn recipes to level up your dishes.</p></div><form class="search-field library-head__search" role="search"><span class="icon icon-search" aria-hidden="true"></span><label class="visually-hidden" for="recipe-q">Search a recipe or ingredient</label><input class="search-field__input" id="recipe-q" type="search" placeholder="Search a recipe or ingredient" data-search-target="#recipe-grid"></form><div class="library-head__filters" data-filter-group aria-label="Filter recipes"><button class="chip" type="button" aria-pressed="true">All</button><button class="chip" type="button" aria-pressed="false">Less ingredients</button><button class="chip" type="button" aria-pressed="false">Quick recipes</button><button class="chip" type="button" aria-pressed="false">High protein</button><button class="chip" type="button" aria-pressed="false">Single</button><button class="chip" type="button" aria-pressed="false">2+ people</button><button class="chip" type="button" aria-pressed="false">Spicy</button></div><div class="library-head__results"><p aria-live="polite" data-filter-status data-search-status>All recipes</p><button class="link" type="button" data-filter-clear>Clear filters</button></div></div></section>
+<section data-ds="library-head" class="section library-head" aria-labelledby="lhead-title"><div class="library-head__inner"><div class="library-head__intro"><h1 class="page-title" id="lhead-title">Recipes</h1><p class="library-head__lead">Explore and learn recipes to level up your dishes.</p></div><form class="search-field library-head__search" role="search" data-ds="search-field"><span class="icon icon-search" aria-hidden="true" data-ds="icon-search"></span><label class="visually-hidden" for="recipe-q">Search a recipe or ingredient</label><input class="search-field__input" id="recipe-q" type="search" placeholder="Search a recipe or ingredient" data-search-target="#recipe-grid"></form><div class="library-head__filters" data-filter-group aria-label="Filter recipes"><button class="chip" type="button" aria-pressed="true" data-ds="chip">All</button><button class="chip" type="button" aria-pressed="false" data-ds="chip">Less ingredients</button><button class="chip" type="button" aria-pressed="false" data-ds="chip">Quick recipes</button><button class="chip" type="button" aria-pressed="false" data-ds="chip">High protein</button><button class="chip" type="button" aria-pressed="false" data-ds="chip">Single</button><button class="chip" type="button" aria-pressed="false" data-ds="chip">2+ people</button><button class="chip" type="button" aria-pressed="false" data-ds="chip">Spicy</button></div><div class="library-head__results"><p aria-live="polite" data-filter-status data-search-status>All recipes</p><button class="link" type="button" data-filter-clear data-ds="link">Clear filters</button></div></div></section>
   <section data-ds="library" class="library" aria-label="Recipes" data-recipes-normal>
   <ul class="library__grid" id="recipe-grid">
   <li data-search-item data-filter-tags="spicy quick"><article data-ds="recipe-card" class="recipe-card">
   <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
-  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true" data-ds="icon-timer"></span>20 minutes</p>
   <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Spicy Noodle Salad with almond and mint</a></h3>
-  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Oriental</a></li></ul></div></article></li>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html" data-ds="chip">Cup Oriental</a></li></ul></div></article></li>
   <li data-search-item data-filter-tags="high-protein two-plus"><article data-ds="recipe-card" class="recipe-card">
   <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
-  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>40 minutes</p>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true" data-ds="icon-timer"></span>40 minutes</p>
   <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Thai Chicken Noodles with Peanut</a></h3>
-  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Fideos de arroz</a></li></ul></div></article></li>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html" data-ds="chip">Cup Fideos de arroz</a></li></ul></div></article></li>
   <li data-search-item data-filter-tags="quick less-ingredients"><article data-ds="recipe-card" class="recipe-card">
   <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
-  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>30 minutes</p>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true" data-ds="icon-timer"></span>30 minutes</p>
   <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Green Curry Ramen</a></h3>
-  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Verduras</a></li></ul></div></article></li>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html" data-ds="chip">Cup Verduras</a></li></ul></div></article></li>
   <li data-search-item data-filter-tags="spicy two-plus"><article data-ds="recipe-card" class="recipe-card">
   <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
-  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>50 minutes</p>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true" data-ds="icon-timer"></span>50 minutes</p>
   <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Traditional Japanese Ramen</a></h3>
-  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Hot&amp;Spicy</a></li></ul></div></article></li>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html" data-ds="chip">Cup Hot&amp;Spicy</a></li></ul></div></article></li>
   </ul>
-  <div class="library__more"><nav class="pagination" aria-label="Pagination"><ul class="pagination__list"><li><button class="pagination__link" type="button" disabled aria-label="Previous page"><span class="icon icon-arrow-left" aria-hidden="true"></span><span>Previous</span></button></li><li><a class="pagination__link" href="?page=1" aria-current="page">1</a></li><li><a class="pagination__link" href="?page=2">2</a></li><li><a class="pagination__link" href="?page=3">3</a></li><li><span class="pagination__ellipsis" aria-hidden="true">…</span></li><li><a class="pagination__link" href="?page=13">13</a></li><li><a class="pagination__link" href="?page=2" aria-label="Next page"><span>Next</span><span class="icon icon-arrow-right" aria-hidden="true"></span></a></li></ul><p class="pagination__status">Page 1 of 13</p></nav></div>
+  <div class="library__more"><nav class="pagination" aria-label="Pagination" data-ds="pagination"><ul class="pagination__list"><li><button class="pagination__link" type="button" disabled aria-label="Previous page"><span class="icon icon-arrow-left" aria-hidden="true" data-ds="icon-arrow-left"></span><span>Previous</span></button></li><li><a class="pagination__link" href="?page=1" aria-current="page">1</a></li><li><a class="pagination__link" href="?page=2">2</a></li><li><a class="pagination__link" href="?page=3">3</a></li><li><span class="pagination__ellipsis" aria-hidden="true">…</span></li><li><a class="pagination__link" href="?page=13">13</a></li><li><a class="pagination__link" href="?page=2" aria-label="Next page"><span>Next</span><span class="icon icon-arrow-right" aria-hidden="true" data-ds="icon-arrow-right"></span></a></li></ul><p class="pagination__status">Page 1 of 13</p></nav></div>
   </section>
-  <section class="section library" data-search-empty hidden aria-label="No recipe results">
+  <section class="section library" data-search-empty hidden aria-label="No recipe results" data-ds="library">
   <div class="section__inner"><div data-ds="empty-state" class="empty-state"><h2 class="empty-state__title">We couldn't find any results for your search</h2><p class="empty-state__text">Try with different ingredients</p></div><p class="section__lead">Didn’t find the recipe you are looking for? Check out our most popular ones:</p><h2 class="section__title">Our most popular ones</h2>
   <section data-ds="library" class="library" aria-label="Popular recipes"><ul class="library__grid">
   <li data-search-item data-filter-tags="spicy quick"><article data-ds="recipe-card" class="recipe-card">
   <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
-  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>20 minutes</p>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true" data-ds="icon-timer"></span>20 minutes</p>
   <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Spicy Noodle Salad with almond and mint</a></h3>
-  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Oriental</a></li></ul></div></article></li>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html" data-ds="chip">Cup Oriental</a></li></ul></div></article></li>
   <li data-search-item data-filter-tags="high-protein two-plus"><article data-ds="recipe-card" class="recipe-card">
   <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
-  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>40 minutes</p>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true" data-ds="icon-timer"></span>40 minutes</p>
   <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Thai Chicken Noodles with Peanut</a></h3>
-  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Fideos de arroz</a></li></ul></div></article></li>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html" data-ds="chip">Cup Fideos de arroz</a></li></ul></div></article></li>
   <li data-search-item data-filter-tags="quick less-ingredients"><article data-ds="recipe-card" class="recipe-card">
   <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
-  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>30 minutes</p>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true" data-ds="icon-timer"></span>30 minutes</p>
   <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Green Curry Ramen</a></h3>
-  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Verduras</a></li></ul></div></article></li>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html" data-ds="chip">Cup Verduras</a></li></ul></div></article></li>
   <li data-search-item data-filter-tags="spicy two-plus"><article data-ds="recipe-card" class="recipe-card">
   <div class="recipe-card__media"><img src="../design-system/assets/images/placeholder.svg" alt=""></div>
-  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true"></span>50 minutes</p>
+  <div class="recipe-card__body"><p class="recipe-card__meta">2 people · <span class="icon icon-timer" aria-hidden="true" data-ds="icon-timer"></span>50 minutes</p>
   <h3 class="recipe-card__title"><a class="recipe-card__link" href="recipe.html">Traditional Japanese Ramen</a></h3>
-  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html">Cup Hot&amp;Spicy</a></li></ul></div></article></li>
+  <ul class="recipe-card__products" aria-label="Products used in this recipe"><li><a class="chip" href="product.html" data-ds="chip">Cup Hot&amp;Spicy</a></li></ul></div></article></li>
   </ul></section></div></section>
 
   <section data-ds="banner" class="section banner" aria-label="Campaign">
@@ -121,7 +121,7 @@
   <textarea class="field__control field__control--textarea" id="rs-recipe" name="recipe" aria-describedby="rs-help"></textarea>
   <p class="field__helper" id="rs-help">List the ingredients with their quantities and the time of each step</p>
   </div>
-  <button class="button" type="submit">Send my recipe</button>
+  <button class="button" type="submit" data-ds="button">Send my recipe</button>
   </form>
   </div>
   </section>
@@ -133,14 +133,14 @@
     </div>
     <nav class="footer__column" aria-label="Footer">
       <ul class="footer__links">
-        <li><a class="link link--dark" href="products.html">Products</a></li>
-        <li><a class="link link--dark" href="natural-formula.html">100% Natural formula</a></li>
-        <li><a class="link link--dark" href="recipes.html">Recipes</a></li>
-        <li><a class="link link--dark" href="contests.html">Contests</a></li>
-        <li><a class="link link--dark" href="faq.html">FAQS</a></li>
+        <li><a class="link link--dark" href="products.html" data-ds="link">Products</a></li>
+        <li><a class="link link--dark" href="natural-formula.html" data-ds="link">100% Natural formula</a></li>
+        <li><a class="link link--dark" href="recipes.html" data-ds="link">Recipes</a></li>
+        <li><a class="link link--dark" href="contests.html" data-ds="link">Contests</a></li>
+        <li><a class="link link--dark" href="faq.html" data-ds="link">FAQS</a></li>
         <!-- HUECO: enlaces de campaña activa; GB Foods supplies. -->
-        <li><a class="link link--dark" href="#">Campaign link 1</a></li>
-        <li><a class="link link--dark" href="#">Campaign link 2</a></li>
+        <li><a class="link link--dark" href="#" data-ds="link">Campaign link 1</a></li>
+        <li><a class="link link--dark" href="#" data-ds="link">Campaign link 2</a></li>
       </ul>
     </nav>
     <!-- HUECO: approved certification seals and artwork; GB Foods supplies. -->
@@ -150,16 +150,16 @@
         <p class="footer__ticket-text">Cut to the chase and tell us what you think. We're really reading your comments, for real.</p>
       </div>
       <!-- HUECO: external Quality form URL; GB Foods supplies. -->
-      <a class="button" href="#" target="_blank" rel="noopener">Send suggestions <span class="icon icon-external-link" aria-hidden="true"></span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      <a class="button" href="#" target="_blank" rel="noopener" data-ds="button">Send suggestions <span class="icon icon-external-link" aria-hidden="true" data-ds="icon-external-link"></span><span class="visually-hidden"> (opens in a new tab)</span></a>
     </div>
   </div>
   <div class="footer__legal">
-    <a class="link link--dark" href="#">Legal notice</a>
-    <a class="link link--dark" href="privacy.html">Privacy policy</a>
-    <a class="link link--dark" href="#">Cookies policy</a>
-    <a class="link link--dark" href="#">Legal basis</a>
-    <a class="link link--dark" href="contest.html#rules">Contest rules</a>
-    <a class="link link--dark" href="#">Contact</a>
+    <a class="link link--dark" href="#" data-ds="link">Legal notice</a>
+    <a class="link link--dark" href="privacy.html" data-ds="link">Privacy policy</a>
+    <a class="link link--dark" href="#" data-ds="link">Cookies policy</a>
+    <a class="link link--dark" href="#" data-ds="link">Legal basis</a>
+    <a class="link link--dark" href="contest.html#rules" data-ds="link">Contest rules</a>
+    <a class="link link--dark" href="#" data-ds="link">Contact</a>
     <span>© GBFoods</span>
   </div>
 </footer>

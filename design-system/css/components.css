@@ -1072,7 +1072,8 @@
 }
 /* Composición (línea 3) en body S según el maestro; la variante secondary es solo texto corrido en body S. */
 .ingredient-item__text { color: var(--ingredient-meta); font-size: var(--font-size-desktop-body-s); line-height: var(--font-line-height-desktop-body-s); }
-.ingredient-item--secondary { color: var(--ingredient-text); font-size: var(--font-size-desktop-body-s); line-height: var(--font-line-height-desktop-body-s); }
+/* Secondary: texto corrido en línea; hereda de .ingredient-item el padding, borde y fondo, pero no la columna flex. */
+.ingredient-item--secondary { display: block; color: var(--ingredient-text); font-size: var(--font-size-desktop-body-s); line-height: var(--font-line-height-desktop-body-s); }
 .ingredient-item strong, .nutrition-panel__allergens strong { font-weight: bold; }
 
 

@@ -1,0 +1,504 @@
+{
+  "title": "Contest form",
+  "description": "Contest form: formulario de participación sobre fondo surface/inverse (wireframe 330:6682 desktop; 361:8561 móvil). Título «Join it now» y subtítulo; tres tarjetas blancas (Person…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".contest-form",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".contest-form .section__title",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".contest-form .section__lead",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "contest-form",
+      "name": "Contest form",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "313:3247",
+      "current": {
+        "description": "Contest form: formulario de participación sobre fondo surface/inverse (wireframe 330:6682 desktop; 361:8561 móvil). Título «Join it now» y subtítulo; tres tarjetas blancas (Personal data, Proof of purchase, Consent) con Input (2 columnas en desktop, 1 en móvil), Select «Purchase type», 2 File upload (State=Empty: receipt front y back), 3 Checkbox, «* Required fields», Alert info «Important information» y botón Primary «Enter the contest» a todo el ancho; ayuda centrada. Clase CSS: .contest-form. ⬜ TODO GB Foods/agencia: campos y textos legales definitivos, formatos de fecha e importe, y el texto del consentimiento.",
+        "Propósito": "Formulario de participación sobre tinta: título «Join it now» y entradilla; tres bloques en tarjetas blancas (Personal data, Proof of purchase y Consent), cada uno un fieldset con legend; y al final el botón «Enter the contest» a todo el ancho y la ayuda. Su ancla es `#join`.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Cada bloque es un `fieldset` con su `legend`, así el lector anuncia el grupo al entrar en sus campos. Cada campo tiene `label for`. Los obligatorios llevan `required` (el lector lo anuncia) y un «*» con `aria-hidden` (el asterisco no se lee dos veces); la nota «* Required fields» explica la convención. Autocompletado: nombre, apellidos, email y fecha de nacimiento (`bday`). Los tres consentimientos son obligatorios, por eso también llevan «*». El formulario recibe `#join` con `tabindex=\"-1\"`: el enlace «Enter now» o «Submit it now» lleva el foco a él. Teclado: orden de Tab por bloque y campo; Espacio marca los checkboxes; el botón envía. Contraste: campos y texto tinta sobre blanco; el texto de la ayuda final sobre tinta, crema (17:1), con los enlaces en `link--dark`. El error por campo lo marca Input o File upload con `aria-invalid` y su mensaje.",
+        "Cuándo usar / qué NO hace": "Solo en la página de concurso. No es el formulario de la newsletter (eso es Newsletter) ni de receta (Recipe submit). ⬜ TODO, de negocio: el límite de participaciones por persona o por compra (la pantalla «maximum participations» del wireframe depende de él), la mecánica de resultado inmediato (si el resultado se muestra al enviar o llega por correo) y el tipo de compra y la fecha válida. Los textos de consentimiento son ⬜ TODO (GB Foods, RGPD). El resumen de errores al enviar no está definido aún (⬜ TODO en el patrón de Field)."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "fromRepo": false,
+      "nodeId": "313:3247",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=313-3247",
+      "page": "Pattern / Detail pages",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-23 · 09:36 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Contest form: formulario de participación sobre fondo surface/inverse (wireframe 330:6682 desktop; 361:8561 móvil). Título «Join it now» y subtítulo; tres tarjetas blancas (Personal data, Proof of purchase, Consent) con Input (2 columnas en desktop, 1 en móvil), Select «Purchase type», 2 File upload (State=Empty: receipt front y back), 3 Checkbox, «* Required fields», Alert info «Important information» y botón Primary «Enter the contest» a todo el ancho; ayuda centrada. Clase CSS: .contest-form. ⬜ TODO GB Foods/agencia: campos y textos legales definitivos, formatos de fecha e importe, y el texto del consentimiento."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "Input",
+        "component": "input",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-error",
+        "component": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "hidden": true
+      },
+      {
+        "layer": "Input",
+        "component": "input",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-error",
+        "component": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "hidden": true
+      },
+      {
+        "layer": "Input",
+        "component": "input",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-error",
+        "component": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "hidden": true
+      },
+      {
+        "layer": "Input",
+        "component": "input",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-error",
+        "component": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "hidden": true
+      },
+      {
+        "layer": "Select",
+        "component": "select",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-chevron",
+        "component": "icon-chevron-down",
+        "exposedAs": "Icon#50:18",
+        "hidden": false
+      },
+      {
+        "layer": "icon-error",
+        "component": "icon-circle-alert",
+        "exposedAs": "Error icon#50:25",
+        "hidden": true
+      },
+      {
+        "layer": "Input",
+        "component": "input",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-error",
+        "component": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "hidden": true
+      },
+      {
+        "layer": "Input",
+        "component": "input",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-error",
+        "component": "icon-circle-alert",
+        "exposedAs": "Error icon#49:0",
+        "hidden": true
+      },
+      {
+        "layer": "File upload",
+        "component": "file-upload",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Button",
+        "component": "button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "hidden": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "hidden": true
+      },
+      {
+        "layer": "File upload",
+        "component": "file-upload",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Button",
+        "component": "button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "hidden": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "hidden": true
+      },
+      {
+        "layer": "Checkbox",
+        "component": "checkbox",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "check",
+        "component": "icon-check",
+        "exposedAs": "Check icon#50:7",
+        "hidden": true
+      },
+      {
+        "layer": "Checkbox",
+        "component": "checkbox",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "check",
+        "component": "icon-check",
+        "exposedAs": "Check icon#50:7",
+        "hidden": true
+      },
+      {
+        "layer": "Checkbox",
+        "component": "checkbox",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "check",
+        "component": "icon-check",
+        "exposedAs": "Check icon#50:7",
+        "hidden": true
+      },
+      {
+        "layer": "Alert",
+        "component": "alert",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-status",
+        "component": "icon-info",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-close",
+        "component": "icon-close",
+        "exposedAs": "Close icon#80:36",
+        "hidden": true
+      },
+      {
+        "layer": "Button",
+        "component": "button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "hidden": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "alert",
+        "items": [
+          "alert/close",
+          "alert/info/bg",
+          "alert/info/border",
+          "alert/info/icon",
+          "alert/info/text"
+        ]
+      },
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick",
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "button",
+        "items": [
+          "button/primary/bg",
+          "button/primary/border",
+          "button/primary/text",
+          "button/secondary/border",
+          "button/secondary/text"
+        ]
+      },
+      {
+        "group": "checkbox",
+        "items": [
+          "checkbox/box-bg",
+          "checkbox/box-border",
+          "checkbox/check",
+          "checkbox/label"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/surface/card",
+          "color/surface/inverse",
+          "color/text/default",
+          "color/text/on-inverse",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "field",
+        "items": [
+          "field/bg",
+          "field/border",
+          "field/error-text",
+          "field/helper",
+          "field/icon",
+          "field/label",
+          "field/placeholder"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h2",
+          "font/line-height/desktop/h3",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-m",
+          "font/size/desktop/body-s",
+          "font/size/desktop/caption",
+          "font/size/desktop/h2",
+          "font/size/desktop/h3",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/md",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/margin"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/pill",
+          "radius/sm"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/32",
+          "space/4",
+          "space/64",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 56,
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m",
+      "Desktop/h3",
+      "Desktop/label",
+      "Desktop/caption",
+      "Desktop/body-s"
+    ],
+    "classes": [
+      "alert",
+      "alert__body",
+      "alert__content",
+      "alert__title",
+      "button",
+      "button--l",
+      "checkbox",
+      "checkbox__input",
+      "checkbox__label",
+      "contest-form",
+      "contest-form__block",
+      "contest-form__consent",
+      "contest-form__form",
+      "contest-form__full",
+      "contest-form__grid",
+      "contest-form__help",
+      "contest-form__legend",
+      "contest-form__note",
+      "contest-form__submit",
+      "field",
+      "field__control",
+      "field__label",
+      "field__required",
+      "field__select",
+      "icon",
+      "icon-info",
+      "link",
+      "section",
+      "section__header",
+      "section__inner",
+      "section__lead",
+      "section__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Formulario de participación sobre tinta: título «Join it now» y entradilla; tres bloques en tarjetas blancas (Personal data, Proof of purchase y Consent), cada uno un fieldset con legend; y al final el botón «Enter the contest» a todo el ancho y la ayuda. Su ancla es `#join`.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Cada bloque es un `fieldset` con su `legend`, así el lector anuncia el grupo al entrar en sus campos. Cada campo tiene `label for`. Los obligatorios llevan `required` (el lector lo anuncia) y un «*» con `aria-hidden` (el asterisco no se lee dos veces); la nota «* Required fields» explica la convención. Autocompletado: nombre, apellidos, email y fecha de nacimiento (`bday`). Los tres consentimientos son obligatorios, por eso también llevan «*». El formulario recibe `#join` con `tabindex=\"-1\"`: el enlace «Enter now» o «Submit it now» lleva el foco a él. Teclado: orden de Tab por bloque y campo; Espacio marca los checkboxes; el botón envía. Contraste: campos y texto tinta sobre blanco; el texto de la ayuda final sobre tinta, crema (17:1), con los enlaces en `link--dark`. El error por campo lo marca Input o File upload con `aria-invalid` y su mensaje.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en la página de concurso. No es el formulario de la newsletter (eso es Newsletter) ni de receta (Recipe submit). ⬜ TODO, de negocio: el límite de participaciones por persona o por compra (la pantalla «maximum participations» del wireframe depende de él), la mecánica de resultado inmediato (si el resultado se muestra al enviar o llega por correo) y el tipo de compra y la fecha válida. Los textos de consentimiento son ⬜ TODO (GB Foods, RGPD). El resumen de errores al enviar no está definido aún (⬜ TODO en el patrón de Field).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "contest-form",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "313:3247",
+    "contract": "../../../../../../design-system/schemas/components/contest-form.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

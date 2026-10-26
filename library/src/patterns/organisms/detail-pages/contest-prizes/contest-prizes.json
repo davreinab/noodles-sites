@@ -1,0 +1,206 @@
+{
+  "title": "Contest prizes",
+  "description": "Contest prizes: bloque de premios de la página de concurso (wireframe 330:6587 desktop, 361:8675 móvil). Fondo surface/page (crema). h2 «What's up for prizes», subtítulo y 4 Prize…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "contest-prizes",
+      "name": "Contest prizes",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "313:925",
+      "current": {
+        "description": "Contest prizes: bloque de premios de la página de concurso (wireframe 330:6587 desktop, 361:8675 móvil). Fondo surface/page (crema). h2 «What's up for prizes», subtítulo y 4 Prize card (Variant=Grand para el gran premio, Default para el resto). Desktop: fila de 4. Móvil: carrusel horizontal con recorte (clipsContent) como los anillos de nutrición. Clase CSS: .contest-prizes. ⬜ TODO GB Foods/agencia: premios, niveles y descripciones reales; imágenes de los premios.",
+        "Propósito": "Premios del concurso: título «What's up for prizes», entradilla y cuatro Prize card (un gran premio en Grand y tres en Default). Fondo crema.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "La lista tiene nombre («Prizes») y cada premio es un `article` con su `h3`. En móvil es un carrusel horizontal: la lista es enfocable (`tabindex=\"0\"`) y se desplaza con las flechas del teclado; el contorno de foco es el de la lista. Las tarjetas no son controles. Los niveles se dicen con texto. Contraste: como en Prize card (Grand sobre tinta; Default sobre blanco). En escritorio la lista no se desplaza, pero el `tabindex` no molesta.",
+        "Cuándo usar / qué NO hace": "Solo en la página de concurso, después de la cabecera. Cuatro niveles como máximo: el wireframe los dibuja así. Los premios, niveles, cantidades y descripciones son ⬜ TODO: GB Foods y la agencia los confirman (son condiciones del concurso). No muestra la mecánica del sorteo."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "fromRepo": false,
+      "nodeId": "313:925",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=313-925",
+      "page": "Pattern / Detail pages",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-23 · 09:36 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Contest prizes: bloque de premios de la página de concurso (wireframe 330:6587 desktop, 361:8675 móvil). Fondo surface/page (crema). h2 «What's up for prizes», subtítulo y 4 Prize card (Variant=Grand para el gran premio, Default para el resto). Desktop: fila de 4. Móvil: carrusel horizontal con recorte (clipsContent) como los anillos de nutrición. Clase CSS: .contest-prizes. ⬜ TODO GB Foods/agencia: premios, niveles y descripciones reales; imágenes de los premios."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "Prize card",
+        "component": "prize-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Prize card",
+        "component": "prize-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Prize card",
+        "component": "prize-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Prize card",
+        "component": "prize-card",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/border/default",
+          "color/surface/card",
+          "color/surface/inverse",
+          "color/surface/page",
+          "color/text/brand-on-inverse",
+          "color/text/default",
+          "color/text/on-inverse",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "contest-card",
+        "items": [
+          "contest-card/media-bg"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h2",
+          "font/line-height/desktop/h3",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/size/desktop/h2",
+          "font/size/desktop/h3",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/margin"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/24",
+          "space/64",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 26,
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m",
+      "Desktop/caption",
+      "Desktop/h3"
+    ],
+    "classes": [
+      "contest-prizes",
+      "contest-prizes__list",
+      "prize-card",
+      "prize-card--grand",
+      "prize-card__body",
+      "prize-card__level",
+      "prize-card__media",
+      "prize-card__text",
+      "prize-card__title",
+      "section",
+      "section__header",
+      "section__inner",
+      "section__lead",
+      "section__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Premios del concurso: título «What's up for prizes», entradilla y cuatro Prize card (un gran premio en Grand y tres en Default). Fondo crema.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "La lista tiene nombre («Prizes») y cada premio es un `article` con su `h3`. En móvil es un carrusel horizontal: la lista es enfocable (`tabindex=\"0\"`) y se desplaza con las flechas del teclado; el contorno de foco es el de la lista. Las tarjetas no son controles. Los niveles se dicen con texto. Contraste: como en Prize card (Grand sobre tinta; Default sobre blanco). En escritorio la lista no se desplaza, pero el `tabindex` no molesta.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en la página de concurso, después de la cabecera. Cuatro niveles como máximo: el wireframe los dibuja así. Los premios, niveles, cantidades y descripciones son ⬜ TODO: GB Foods y la agencia los confirman (son condiciones del concurso). No muestra la mecánica del sorteo.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "contest-prizes",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "313:925",
+    "contract": "../../../../../../design-system/schemas/components/contest-prizes.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

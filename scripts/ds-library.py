@@ -17,7 +17,7 @@ página se llama «Página / Sección», el grupo es «Página»). Dos grupos es
     «Pendientes de construir»            los contratos sin «Ejemplo de código», por página, al final del menú
     «Internos de Figma · no se construyen»  piezas de trabajo de Figma: nombre que empieza por «.», contiene
                                          «deprecated», página «Documentation», o listadas en
-                                         scripts/ds-library.config.json → internal.names
+                                         scripts/ds-library.config.json → internal.names · internal.namePatterns
 Estado: verified → Ready · stale → In review · unverified → Draft · retirado (lifecycle) → Deprecated.
 
 Imágenes de los ejemplos: cada src="…" se resuelve contra design-system/assets/. Un asset del DS
@@ -40,9 +40,11 @@ import re
 import sys
 
 LEVEL = {"component": "atoms", "pattern": "organisms"}
+SUBGRUPO_MIN = 8  # piezas de una página a partir de las cuales se reparte por sección
 STATUS = {"verified": "Ready", "stale": "In review", "unverified": "Draft"}
 SPECIAL = {
     "pendientes": {"slug": "pendientes", "title": "Pendientes de construir", "order": 800},
+    "partes": {"slug": "partes-de-otro-componente", "title": "Partes de otro componente · las cubre el ejemplo de su padre", "order": 850},
     "internos": {"slug": "internos-de-figma", "title": "Internos de Figma · no se construyen", "order": 900},
 }
 PLACEHOLDER = "images/placeholder.svg"
@@ -244,7 +246,7 @@ def hoja(s, ficha_text, pendiente=None, ctx=None):
         "contrast": contraste(s, ctx),
         "pending": pend,
         "edit": edit,
-        "figma": {"nodeId": node, "url": url, "page": meta.get("figmaPage") or "", "type": meta.get("figmaType") or "",
+        "figma": {"fromRepo": fg.get("fileKey") == "repo", "nodeId": node, "url": url, "page": meta.get("figmaPage") or "", "type": meta.get("figmaType") or "",
                   "variants": meta.get("variantCount"), "lastSync": fecha(meta.get("lastSync")),
                   "verification": ver, "verificationLabel": VERIF_LABEL.get(ver, ver)},
         "description": paras,
@@ -340,7 +342,8 @@ def generate(root, check=False):
     problemas = []
     schemas = [s for s in (jload(p) for p in sorted(glob.glob(os.path.join(ds, "schemas", "components", "*.schema.json"))))
                if isinstance(s, dict) and s.get("meta")]
-    pendientes, internos = 0, 0
+    pendientes, internos, partes_n = 0, 0, 0
+    padres = dcom.partes_de(schemas, cfg)
     textos_pendientes = propuestas_texto(ds)
     try:
         sys.path.insert(0, here)
@@ -349,6 +352,18 @@ def generate(root, check=False):
                dc.theme_vars(read(os.path.join(ds, "tokens", "tokens.css"), "") or ""))
     except ImportError:
         ctx = None
+    # Subgrupos (12.22.3): una página de Figma con muchas piezas y varias secciones («Página / Sección») se reparte por sección.
+    # Si es la única página de su nivel, las secciones suben al menú de primer nivel: no hace falta abrir la página para verlas.
+    cuenta = {}
+    for s in schemas:
+        m = s["meta"]
+        if dcom.interno_de(s, cfg) is None and ((s.get("code") or (s.get("source") or {}).get("code") or {}).get("example") or "").strip():
+            k = (LEVEL.get(m.get("kind", "component"), "atoms"), pagina(m, cfg))
+            cuenta.setdefault(k, []).append(dcom.seccion(m, cfg))
+    paginas_nivel = {}
+    for (lv, pg) in cuenta:
+        paginas_nivel.setdefault(lv, set()).add(pg)
+    dividir = {k for k, v in cuenta.items() if len(v) > SUBGRUPO_MIN and len({x for x in v if x}) >= 2}
     for s in schemas:
         meta = s["meta"]; sl = meta["slug"]; kind = meta.get("kind", "component")
         level = LEVEL.get(kind, "atoms")
@@ -358,10 +373,19 @@ def generate(root, check=False):
         interno = dcom.interno_de(s, cfg) is not None
         if interno:
             group = SPECIAL["internos"]["slug"]; grupos[(level, group)] = dict(SPECIAL["internos"]); internos += 1
+        elif not example.strip() and padres.get(sl):
+            group = SPECIAL["partes"]["slug"]; grupos[(level, group)] = dict(SPECIAL["partes"]); partes_n += 1
         elif not example.strip():
             group = f"{SPECIAL['pendientes']['slug']}/{slug(page)}"
             grupos[(level, SPECIAL["pendientes"]["slug"])] = dict(SPECIAL["pendientes"])
             grupos[(level, group)] = {"title": page}; pendientes += 1
+        elif (level, page) in dividir and dcom.seccion(meta, cfg):
+            sec = dcom.seccion(meta, cfg)
+            if len(paginas_nivel[level]) == 1:
+                group = slug(sec); grupos.setdefault((level, group), {"title": sec})
+            else:
+                group = f"{slug(page)}/{slug(sec)}"
+                grupos.setdefault((level, slug(page)), {"title": page}); grupos.setdefault((level, group), {"title": sec})
         else:
             group = slug(page); grupos.setdefault((level, group), {"title": page})
         ver = (meta.get("verification") or {}).get("status") or "unverified"
@@ -375,7 +399,7 @@ def generate(root, check=False):
         ficha = read(os.path.join(root, docs.get("file", "")), "") if docs.get("file") else ""
         analisis = dv.analyze(s, example, css_cls, fid_cfg, ctx[1] if ctx else None) if (dv and not interno) else None
         pares = ctx[0].component_pairs(s["meta"]["slug"], ctx[1], ctx[2])["pairs"] if (ctx and (s.get("code") or {}).get("classes")) else None
-        gal_html, _no_gen = dv.gallery(s, example, analisis, pares) if (dv and analisis) else (None, [])
+        gal_html, _no_gen = dv.gallery(s, example, analisis, pares, ctx[1] if ctx else None) if (dv and analisis) else (None, [])
         # la página existe si hay algo que pintar o algo que decir: variantes que faltan en el ejemplo, o variantes que el proyecto
         # justificó en coverageIgnore con su motivo (si no, el motivo no aparecería en ninguna parte de la library)
         galeria = ("html", gal_html) if gal_html else (("texto", dv.lista_faltantes(analisis)) if (analisis and (analisis["missing"] or analisis.get("ignored_reasons"))) else None)
@@ -433,7 +457,7 @@ def generate(root, check=False):
             os.rmdir(dp)
     n = len(schemas)
     print(f"catálogo: {n} patrones en {len(grupos)} grupos · {len(desfasados)} archivos escritos · {len(sobran)} retirados · "
-          f"{pendientes} pendientes de construir (sin ejemplo) · {internos} internos de Figma"
+          f"{pendientes} pendientes de construir (sin ejemplo) · {partes_n} partes de otro componente · {internos} internos de Figma"
           + (f" · {errores} iconos que no existen" if errores else ""))
     print("para verlo: cd library && npm install && npm start")
     if desfasados or sobran:

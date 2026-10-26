@@ -1,0 +1,4 @@
+{
+  "note": "Configuración de scripts/screen-report.py. `newModuleClasses`: las clases (sin punto) con las que el proyecto señaliza un «nuevo módulo» en una pantalla, es decir, algo que todavía no es del design system. Vacío por defecto: el informe dice que no hay marca configurada. Una actualización de la skill no pisa este archivo si el proyecto ya lo tiene.",
+  "newModuleClasses": []
+}

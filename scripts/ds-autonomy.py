@@ -6,6 +6,7 @@ lo declarado sea coherente.
 Dos dimensiones que no hay que confundir:
 
   · La AUTONOMÍA se declara por capacidad (governance/capabilities.json → level).
+  · El NIVEL DE MODELO que conviene (criterio o mecánico) va en `tier` de cada capacidad; governance/models.json lo explica y deja ajustarlo.
   · El TIPO DE EJECUCIÓN se declara por paso (steps: D determinista, C cognitivo, H humano).
 
 El nivel no sale de si la capacidad escribe o no, sino de qué pasos contiene, qué decisiones
@@ -32,6 +33,7 @@ import os
 import sys
 
 PASOS = ("D", "C", "H")
+TIERS = ("criterio", "mecanico")
 
 
 def jload(p, default=None):
@@ -50,6 +52,7 @@ class Autonomy:
         self.cap = jload(os.path.join(g, "capabilities.json"))
         if self.aut is None or self.cap is None:
             sys.exit("[ERROR] faltan governance/autonomy.json o governance/capabilities.json")
+        self.modelos = jload(os.path.join(g, "models.json"))
         self.niveles = {int(x["level"]) for x in (self.aut.get("scale") or [])}
         self.techo = (self.aut.get("ceiling") or {})
         self.errores = []
@@ -76,7 +79,33 @@ class Autonomy:
                 self.errores.append("%s: steps %r; solo valen %s" % (a, pasos, list(PASOS)))
             if not (x.get("why") or "").strip():
                 self.errores.append("%s: sin 'why'; un nivel sin motivo no se puede discutir" % a)
+            if x.get("tier") is not None and x["tier"] not in TIERS:
+                self.errores.append("%s: tier %r; solo valen %s" % (a, x.get("tier"), list(TIERS)))
+        self.validar_modelos(vistas)
         return decidido
+
+    def validar_modelos(self, acciones):
+        """governance/models.json es opcional (los proyectos anteriores no lo tienen); si está, tiene que ser coherente."""
+        m = self.modelos
+        if m is None:
+            return
+        tiers = m.get("tiers") or {}
+        for t in TIERS:
+            if t not in tiers:
+                self.errores.append("models.json: falta el nivel %r en 'tiers'" % t)
+        for a, t in (m.get("overrides") or {}).items():
+            if a not in acciones:
+                self.errores.append("models.json: el ajuste de %r no corresponde a ninguna capacidad" % a)
+            if t not in TIERS:
+                self.errores.append("models.json: el ajuste de %r vale %r; solo valen %s" % (a, t, list(TIERS)))
+        for h, nombres in (m.get("tools") or {}).items():
+            if not isinstance(nombres, dict) or any(k not in TIERS for k in nombres):
+                self.errores.append("models.json: 'tools.%s' tiene que ser {criterio: ..., mecanico: ...}" % h)
+
+    def nivel_modelo(self, x):
+        """El nivel efectivo: el ajuste del proyecto, si lo hay; si no el `tier` de la capacidad; sin nada, criterio (lo seguro)."""
+        aj = ((self.modelos or {}).get("overrides") or {}).get(x.get("action"))
+        return aj if aj in TIERS else (x.get("tier") if x.get("tier") in TIERS else "criterio")
 
     def tabla(self):
         maxi = int(self.techo.get("maxLevel") or 0)
@@ -85,7 +114,7 @@ class Autonomy:
             nat = int(x.get("level", 0))
             filas.append({"action": x.get("action"), "domain": x.get("domain"),
                           "steps": x.get("steps"), "natural": nat,
-                          "effective": min(nat, maxi), "capped": nat > maxi})
+                          "effective": min(nat, maxi), "capped": nat > maxi, "tier": self.nivel_modelo(x)})
         return filas
 
 
@@ -107,16 +136,16 @@ def main():
     rep = {"project": os.path.basename(root), "generatedAt": None,
            "note": "Informe de scripts/ds-autonomy.py. No editar a mano.",
            "ceiling": au.techo,
-           "summary": {"capabilities": len(filas), "aboveCeiling": len(recortadas), "errors": len(au.errores)},
+           "summary": {"capabilities": len(filas), "aboveCeiling": len(recortadas), "mechanical": sum(1 for f in filas if f["tier"] == "mecanico"), "errors": len(au.errores)},
            "effective": filas, "errors": au.errores}
     text = json.dumps(rep, ensure_ascii=False, indent=2) + "\n"
 
     techo = au.techo.get("maxLevel")
     print("Techo del proyecto: %s%s" % (techo, "" if decidido else "  ⬜ sin decidir — se aplica el valor por defecto"))
-    print("%-44s %-8s %-6s %-9s %s" % ("capacidad", "dominio", "pasos", "natural", "efectivo"))
+    print("%-44s %-8s %-6s %-9s %-9s %s" % ("capacidad", "dominio", "pasos", "natural", "efectivo", "modelo"))
     for f in filas:
-        print("  %s %-42s %-8s %-6s %-9s %s" % (ICONO[f["capped"]], f["action"], (f["domain"] or "")[:8],
-                                                "".join(f["steps"] or []), f["natural"], f["effective"]))
+        print("  %s %-42s %-8s %-6s %-9s %-9s %s" % (ICONO[f["capped"]], f["action"], (f["domain"] or "")[:8],
+                                                   "".join(f["steps"] or []), f["natural"], f["effective"], f["tier"]))
     if recortadas:
         print("\n%d capacidades quedan por debajo de su nivel natural por el techo (marcadas ↓)." % len(recortadas))
     for e in au.errores:

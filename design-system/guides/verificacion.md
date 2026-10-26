@@ -34,7 +34,19 @@ CSS usa variables, no que use *las* variables del maestro. Por eso cada contrato
    `ds-fidelity` sepa qué clase representa cada valor se usa la convención `.<base>--<valor>`; lo que no
    se deduce así se declara en `ds-fidelity.config.json → modifiers.<slug>` (`{"propiedad": {"valor":
    ".clase"}}`; en las booleanas el valor es `true`), nunca editando el schema, que es un archivo
-   generado. Una variante sin clase conocida queda «sin comprobar» (informativo). Si un
+   generado. **No todo estado es una clase.** `modifiers` admite también:
+   un atributo en el elemento raíz (`"[data-state=\"running\"]"`); un atributo o una clase en un elemento
+   interno (`{"target": ".field__control", "add": "[aria-invalid=\"true\"]"}`, con un selector CSS simple:
+   etiqueta, `.clase`, `#id` o `[atributo]`, sin combinadores; se aplica al primero que case); y una parte
+   interna que se muestra u oculta (`{"target": ".modal__footer", "presence": true}`: la muestra `true` es el
+   ejemplo tal cual y la `false`, el ejemplo sin ese elemento). La galería «Todas las variantes» pinta cada
+   estado sobre el elemento que toque y no puede haber dos valores del mismo atributo; la cobertura cuenta
+   un estado como visible si algún elemento que case lo lleva. En un ejemplo con **un único control**
+   (`input`, `select`, `textarea` o `button`), las booleanas `disabled`, `error` o `invalid` y `required` se
+   deducen solas (`[disabled]`, `[aria-invalid="true"]`, `[required]`); con más de un control no se deduce.
+   Un estado que no se puede pintar por su naturaleza (el desplegado de un `<select>` nativo) se declara en
+   `coverageIgnore.components.<slug>` con su motivo, y la galería lo enseña en su nota. Una variante sin forma
+   conocida de representarla queda «sin comprobar» (informativo). Si un
    estado cambia la **estructura** del componente y no solo el estilo (un campo relleno que lleva un
    badge de código además del texto), declararlo en `code.stateAnatomy` del schema
    (`when`: selector del caso en la pantalla; `require`: lo que debe existir dentro; `why`: la frase
@@ -61,3 +73,24 @@ no se apunta a mano en la ficha.
 Si un maestro desaparece de la librería (se borró o se republicó con otra key), el sync lo marca
 `stale` con motivo «maestro no encontrado». Cómo reenlazar las instancias huérfanas en Figma está en
 `figma.md § 6`.
+
+## Informe de cierre de pantallas
+
+Dos normas para cualquier pantalla, flujo o landing que se genere en `UI/`:
+
+1. **Cada componente del DS que se coloca en una pantalla lleva `data-ds="<slug>"` en su elemento raíz.**
+   Es lo que permite saber con certeza qué piezas usa la pantalla; una clase sola también se detecta, pero
+   es una pista, no una declaración.
+2. **Al terminar una pantalla o un flujo se ejecuta el informe y se entrega**:
+   `python3 scripts/screen-report.py UI/<pantalla>.html [más archivos o carpetas]`. Sale de los datos (el
+   HTML, los contratos, las propuestas y `token-audit.py`), nunca de memoria. Por pantalla cuenta:
+   componentes del DS con su estado (verificado, sin verificar, obsoleto) y si llevan `data-ds`; piezas
+   internas de Figma; módulos nuevos señalizados; overrides enlazados y el estado de su propuesta; clases
+   que `components.css` no define (huecos del DS o módulos sin señalizar) y los errores y avisos de
+   `token-audit`. Termina con «Lo accionable». Quien lo entrega resume ese bloque: qué contratos hay que
+   verificar, dónde falta `data-ds`, qué piezas internas hay que sustituir, qué overrides siguen vivos y
+   qué clases ajenas quedan.
+
+La marca que el proyecto use para «nuevo módulo» (algo que aún no es del DS) se declara en
+`scripts/screen-report.config.json → newModuleClasses`; vacía por defecto. `ds-fidelity.py` avisa
+(`screen-without-data-ds`) de las pantallas con componentes detectados solo por clase.

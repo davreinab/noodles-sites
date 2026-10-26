@@ -1,0 +1,810 @@
+{
+  "title": "Contest library",
+  "description": "Contest library: biblioteca de concursos (wireframe 190:3727 desktop, 273:7157 móvil). Library head (Search y Filters desactivados; título «Contests & promotions», subtítulo «Ente…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "contest-library",
+      "name": "Contest library",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "312:3141",
+      "current": {
+        "description": "Contest library: biblioteca de concursos (wireframe 190:3727 desktop, 273:7157 móvil). Library head (Search y Filters desactivados; título «Contests & promotions», subtítulo «Enter our contests and win, don't miss your chance!»). h2 «Active contests» con fila de Contest card Status=Active; h2 «Closed contests» con subtítulo y rejilla de Contest card Status=Closed (4 columnas en desktop, 1 en móvil); botón secondary «Load more». Fondo surface/page. Clase CSS: .contest-library. Desktop 1440 / Móvil 375; card 296. ⬜ TODO GB Foods/agencia: concursos reales, tamaño de tanda de «Load more» y mecánica de límite de participaciones pendiente de confirmar.",
+        "Propósito": "Biblioteca de concursos: dos grupos, Active contests (concursos abiertos) y Closed contests (concursos terminados, con la entradilla «Take another look at everything we've given away» y «Load more»). Cada grupo es una rejilla de Contest card. Va debajo de Library head sin filtros.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Cada grupo es una región con nombre por su h2 (`aria-labelledby`). Las tarjetas van en `ul` y `li` y cada una es un `article` con su enlace. Teclado: Tab recorre los enlaces de los concursos en orden (Active, luego Closed) y después «Load more». Al pulsar «Load more» llegan más tarjetas: el foco se queda en el botón, que sigue disponible (⬜ decisión pendiente: si el botón desaparece al llegar al final, el foco debe pasar al primer concurso nuevo). El estado Closed se dice con el Badge y con «Ended on», no con el color. Contraste: sección blanca; la entradilla en gris cálido (5,4:1).",
+        "Cuándo usar / qué NO hace": "Solo en la página de concursos (Contests & promotions), con Library head sin filtros. Si no hay concursos activos, el grupo Active se oculta entero, sin mensaje (regla de composición de `patterns.md`); igual con Closed si está vacío. Fondo blanco: la cabecera va en crema y no pueden ir dos secciones crema seguidas (el maestro las dibuja juntas; ⬜ decidir con David). El tamaño de página de «Load more» y el orden de los cerrados son ⬜ TODO."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "fromRepo": false,
+      "nodeId": "312:3141",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=312-3141",
+      "page": "Pattern / Libraries",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-23 · 09:36 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Contest library: biblioteca de concursos (wireframe 190:3727 desktop, 273:7157 móvil). Library head (Search y Filters desactivados; título «Contests & promotions», subtítulo «Enter our contests and win, don't miss your chance!»). h2 «Active contests» con fila de Contest card Status=Active; h2 «Closed contests» con subtítulo y rejilla de Contest card Status=Closed (4 columnas en desktop, 1 en móvil); botón secondary «Load more». Fondo surface/page. Clase CSS: .contest-library. Desktop 1440 / Móvil 375; card 296. ⬜ TODO GB Foods/agencia: concursos reales, tamaño de tanda de «Load more» y mecánica de límite de participaciones pendiente de confirmar."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "Library head",
+        "component": "library-head",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Search field",
+        "component": "search-field",
+        "exposedAs": "",
+        "hidden": true
+      },
+      {
+        "layer": "icon-search",
+        "component": "icon-search",
+        "exposedAs": "Icon leading#51:0",
+        "hidden": false
+      },
+      {
+        "layer": "icon-clear",
+        "component": "icon-close",
+        "exposedAs": "Clear icon#51:5",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Contest card",
+        "component": "contest-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Contest card",
+        "component": "contest-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Contest card",
+        "component": "contest-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Contest card",
+        "component": "contest-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Contest card",
+        "component": "contest-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Contest card",
+        "component": "contest-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Contest card",
+        "component": "contest-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Contest card",
+        "component": "contest-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Contest card",
+        "component": "contest-card",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Badge",
+        "component": "badge",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Chip",
+        "component": "chip",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-check",
+        "exposedAs": "Icon leading swap#35:27",
+        "hidden": true
+      },
+      {
+        "layer": "Button",
+        "component": "button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "hidden": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "badge",
+        "items": [
+          "badge/neutral/bg",
+          "badge/neutral/text"
+        ]
+      },
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick",
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "button",
+        "items": [
+          "button/secondary/border",
+          "button/secondary/text"
+        ]
+      },
+      {
+        "group": "chip",
+        "items": [
+          "chip/bg",
+          "chip/bg-selected",
+          "chip/border",
+          "chip/height/m",
+          "chip/height/s",
+          "chip/text",
+          "chip/text-selected"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/effect/shadow-ink",
+          "color/surface/page",
+          "color/text/default",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "contest-card",
+        "items": [
+          "contest-card/bg",
+          "contest-card/border",
+          "contest-card/media-bg",
+          "contest-card/meta",
+          "contest-card/title"
+        ]
+      },
+      {
+        "group": "field",
+        "items": [
+          "field/bg",
+          "field/border",
+          "field/icon",
+          "field/placeholder"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-l",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h1",
+          "font/line-height/desktop/h2",
+          "font/line-height/desktop/h3",
+          "font/line-height/desktop/label",
+          "font/line-height/mobile/label",
+          "font/size/desktop/body-l",
+          "font/size/desktop/body-m",
+          "font/size/desktop/body-s",
+          "font/size/desktop/caption",
+          "font/size/desktop/h1",
+          "font/size/desktop/h2",
+          "font/size/desktop/h3",
+          "font/size/desktop/label",
+          "font/size/mobile/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/md",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/margin"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/none",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/4",
+          "space/48",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 59,
+    "textStyles": [
+      "Desktop/h1",
+      "Desktop/body-l",
+      "Desktop/body-m",
+      "Desktop/body-s",
+      "Desktop/h2",
+      "Desktop/caption",
+      "Desktop/h3",
+      "Mobile/label",
+      "Desktop/label"
+    ],
+    "classes": [
+      "badge",
+      "badge--neutral",
+      "button",
+      "button--secondary",
+      "chip",
+      "contest-card",
+      "contest-card__body",
+      "contest-card__dates",
+      "contest-card__link",
+      "contest-card__media",
+      "contest-card__prizes",
+      "contest-card__title",
+      "contest-library",
+      "contest-library__grid",
+      "contest-library__group",
+      "contest-library__inner",
+      "contest-library__more",
+      "section",
+      "section__header",
+      "section__inner",
+      "section__lead",
+      "section__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Biblioteca de concursos: dos grupos, Active contests (concursos abiertos) y Closed contests (concursos terminados, con la entradilla «Take another look at everything we've given away» y «Load more»). Cada grupo es una rejilla de Contest card. Va debajo de Library head sin filtros.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Cada grupo es una región con nombre por su h2 (`aria-labelledby`). Las tarjetas van en `ul` y `li` y cada una es un `article` con su enlace. Teclado: Tab recorre los enlaces de los concursos en orden (Active, luego Closed) y después «Load more». Al pulsar «Load more» llegan más tarjetas: el foco se queda en el botón, que sigue disponible (⬜ decisión pendiente: si el botón desaparece al llegar al final, el foco debe pasar al primer concurso nuevo). El estado Closed se dice con el Badge y con «Ended on», no con el color. Contraste: sección blanca; la entradilla en gris cálido (5,4:1).",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en la página de concursos (Contests & promotions), con Library head sin filtros. Si no hay concursos activos, el grupo Active se oculta entero, sin mensaje (regla de composición de `patterns.md`); igual con Closed si está vacío. Fondo blanco: la cabecera va en crema y no pueden ir dos secciones crema seguidas (el maestro las dibuja juntas; ⬜ decidir con David). El tamaño de página de «Load more» y el orden de los cerrados son ⬜ TODO.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "contest-library",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "312:3141",
+    "contract": "../../../../../../design-system/schemas/components/contest-library.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

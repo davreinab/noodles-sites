@@ -1,0 +1,418 @@
+{
+  "title": "Footer",
+  "description": "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".footer",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "footer",
+      "name": "Footer",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "56:167",
+      "current": {
+        "description": "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de sugerencias («Do you have any ideas, complaints or cravings?» + texto + Button Primary «Send suggestions» con external-link: abre el formulario externo de Calidad) · franja legal por país (Legal notice, Privacy policy, Cookies policy, Legal basis, Contest rules, Contact) y © GBFoods. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Menu. Desktop: logo y enlaces a la izquierda, caja de sugerencias a la derecha; Mobile: la caja arriba. Sin variables propias. Caja de sugerencias con estilo ticket (borde superior dentado, sombra elevation/3, giro -0.6°), como en la landing.",
+        "Propósito": "Pie de todas las páginas (wireframe UX): logo, enlaces (con hasta dos de campaña), caja de sugerencias al formulario externo de Calidad y franja legal por país.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Enlaces crema sobre tinta 17:1; la caja de sugerencias, tinta sobre crema 17,2:1 con Button Primary. El botón externo avisa de que abre otra pestaña. Los enlaces legales están en el HTML de todas las páginas.",
+        "Cuándo usar / qué NO hace": "En todas las páginas. Los textos legales cambian por país. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Mobile menu, no aquí."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "fromRepo": false,
+      "nodeId": "56:167",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=56-167",
+      "page": "Pattern / Global",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Patrón de pie (wireframe UX), en tinta: logo de marca (negativo) · enlaces Products, 100% Natural formula, Recipes, Contests, FAQS y hasta dos enlaces de campaña activa · caja de sugerencias («Do you have any ideas, complaints or cravings?» + texto + Button Primary «Send suggestions» con external-link: abre el formulario externo de Calidad) · franja legal por país (Legal notice, Privacy policy, Cookies policy, Legal basis, Contest rules, Contact) y © GBFoods. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Menu. Desktop: logo y enlaces a la izquierda, caja de sugerencias a la derecha; Mobile: la caja arriba. Sin variables propias. Caja de sugerencias con estilo ticket (borde superior dentado, sombra elevation/3, giro -0.6°), como en la landing."
+    ],
+    "props": [
+      {
+        "name": "logo",
+        "type": "icon",
+        "values": [],
+        "default": "Version=Negative",
+        "figma": "Logo#56:0"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "logo"
+      ],
+      "defaults": [
+        "Version=Negative"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "logo",
+        "component": "logo-yatekomo",
+        "exposedAs": "Logo#56:0",
+        "hidden": false
+      },
+      {
+        "layer": "nav-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "nav-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "nav-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "nav-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "nav-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "nav-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "nav-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "cta",
+        "component": "button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon leading swap#33:75",
+        "hidden": true
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-external-link",
+        "exposedAs": "Icon trailing swap#33:100",
+        "hidden": false
+      },
+      {
+        "layer": "legal-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "legal-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "legal-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "legal-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "legal-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "legal-link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick",
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "button",
+        "items": [
+          "button/primary/bg",
+          "button/primary/border",
+          "button/primary/text"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/border/subtle",
+          "color/surface/inverse",
+          "color/surface/page",
+          "color/text/default",
+          "color/text/on-inverse"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/h3",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/size/desktop/h3",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/frame",
+          "layout/margin"
+        ]
+      },
+      {
+        "group": "link",
+        "items": [
+          "link/inverse"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "shadow",
+        "items": [
+          "shadow/soft"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/32",
+          "space/48",
+          "space/64",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 35,
+    "textStyles": [
+      "Desktop/body-m",
+      "Desktop/h3",
+      "Desktop/label",
+      "Desktop/caption"
+    ],
+    "classes": [
+      "button",
+      "footer",
+      "footer__brand",
+      "footer__column",
+      "footer__legal",
+      "footer__links",
+      "footer__main",
+      "footer__ticket",
+      "footer__ticket-copy",
+      "footer__ticket-text",
+      "footer__ticket-title",
+      "icon",
+      "icon-external-link",
+      "link",
+      "link--dark",
+      "logo",
+      "visually-hidden"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Pie de todas las páginas (wireframe UX): logo, enlaces (con hasta dos de campaña), caja de sugerencias al formulario externo de Calidad y franja legal por país.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Enlaces crema sobre tinta 17:1; la caja de sugerencias, tinta sobre crema 17,2:1 con Button Primary. El botón externo avisa de que abre otra pestaña. Los enlaces legales están en el HTML de todas las páginas.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En todas las páginas. Los textos legales cambian por país. Sellos y certificados (EFSA, BREEAM): sin definir, falta información. Las redes van en el Mobile menu, no aquí.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "footer",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "56:167",
+    "contract": "../../../../../../design-system/schemas/components/footer.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

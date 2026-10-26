@@ -39,6 +39,7 @@
       "pending": null
     },
     "figma": {
+      "fromRepo": false,
       "nodeId": "79:123",
       "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=79-123",
       "page": "Feedback & overlays",

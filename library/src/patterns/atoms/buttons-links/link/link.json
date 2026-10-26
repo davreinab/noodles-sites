@@ -67,6 +67,7 @@
       "pending": null
     },
     "figma": {
+      "fromRepo": false,
       "nodeId": "35:107",
       "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=35-107",
       "page": "Buttons & links",

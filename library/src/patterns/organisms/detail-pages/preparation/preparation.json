@@ -1,0 +1,325 @@
+{
+  "title": "Preparation",
+  "description": "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en <ol> · Timer de 3…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".preparation .section__title",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "preparation",
+      "name": "Preparation",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "95:1158",
+      "current": {
+        "description": "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en <ol> · Timer de 3 minutos. El texto de los pasos sale del envase. Desktop: pasos a la izquierda; vídeo y temporizador a la derecha (560 px). Mobile: vídeo arriba, pasos y temporizador al final (al alcance mientras se cocina). En la Recipe page se reutiliza sin el Timer y con Step Media=True. Sin variables propias.",
+        "Propósito": "Preparación de la página de producto: título y subtítulo, vídeo de preparación, pasos numerados y temporizador de 3 minutos. Fondo tinta.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Título en `h2` sobre tinta (texto crema 17,2:1; subtítulo amarillo de marca 12,3:1). Orden del DOM = orden de lectura: vídeo, pasos 1-2, temporizador, pasos 3-4. Los pasos son dos `ol`; la segunda empieza en 3 (`start=\"3\"`) para que el lector anuncie la posición correcta. En escritorio la rejilla los coloca por filas en ese mismo orden; en móvil es una columna. El vídeo no arranca solo. El temporizador anuncia solo el cambio de estado.",
+        "Cuándo usar / qué NO hace": "En la página de producto. En la receta se reutiliza sin Timer y con Step con media."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "fromRepo": false,
+      "nodeId": "95:1158",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=95-1158",
+      "page": "Pattern / Detail pages",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 14:07 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Sección de preparación de la página de producto: título (h2) · Video player 16:9 (GIF o vídeo de preparación como MP4 silencioso en bucle, con pausa) · 3 Step en <ol> · Timer de 3 minutos. El texto de los pasos sale del envase. Desktop: pasos a la izquierda; vídeo y temporizador a la derecha (560 px). Mobile: vídeo arriba, pasos y temporizador al final (al alcance mientras se cocina). En la Recipe page se reutiliza sin el Timer y con Step Media=True. Sin variables propias."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "video",
+        "component": "video-player",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-play",
+        "component": "icon-play",
+        "exposedAs": "Play icon#83:5",
+        "hidden": false
+      },
+      {
+        "layer": "step",
+        "component": "step",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "step",
+        "component": "step",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "step",
+        "component": "step",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "step",
+        "component": "step",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "timer",
+        "component": "timer",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "action",
+        "component": "button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-leading",
+        "component": "icon-play",
+        "exposedAs": "Icon leading swap#33:75",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon trailing swap#33:100",
+        "hidden": true
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick",
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "button",
+        "items": [
+          "button/secondary/border",
+          "button/secondary/text"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/border/default",
+          "color/surface/card",
+          "color/surface/inverse",
+          "color/surface/page",
+          "color/text/brand-on-inverse",
+          "color/text/default",
+          "color/text/on-inverse",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-l",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/display",
+          "font/line-height/desktop/h2",
+          "font/line-height/desktop/h3",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-l",
+          "font/size/desktop/body-m",
+          "font/size/desktop/caption",
+          "font/size/desktop/display",
+          "font/size/desktop/h2",
+          "font/size/desktop/h3",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/lg",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/frame",
+          "layout/margin",
+          "layout/section-y"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/32",
+          "space/4",
+          "space/48",
+          "space/8"
+        ]
+      },
+      {
+        "group": "step",
+        "items": [
+          "step/number-text",
+          "step/text"
+        ]
+      },
+      {
+        "group": "timer",
+        "items": [
+          "timer/progress"
+        ]
+      },
+      {
+        "group": "video",
+        "items": [
+          "video/border",
+          "video/meta-bg",
+          "video/meta-text",
+          "video/play-bg",
+          "video/play-icon",
+          "video/poster-bg"
+        ]
+      }
+    ],
+    "tokenCount": 52,
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m",
+      "Desktop/caption",
+      "Desktop/label",
+      "Desktop/display",
+      "Desktop/h3"
+    ],
+    "classes": [
+      "button",
+      "button--secondary",
+      "icon",
+      "icon-play",
+      "preparation",
+      "preparation__grid",
+      "preparation__media",
+      "preparation__steps",
+      "preparation__steps--first",
+      "preparation__steps--second",
+      "preparation__subtitle",
+      "section",
+      "section__header",
+      "section__inner",
+      "section__title",
+      "step",
+      "step__content",
+      "step__number",
+      "step__text",
+      "steps",
+      "timer",
+      "timer__bar",
+      "timer__controls",
+      "timer__label",
+      "timer__subtitle",
+      "timer__time",
+      "timer__title",
+      "video-player",
+      "video-player__duration",
+      "video-player__play",
+      "visually-hidden"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Preparación de la página de producto: título y subtítulo, vídeo de preparación, pasos numerados y temporizador de 3 minutos. Fondo tinta.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Título en `h2` sobre tinta (texto crema 17,2:1; subtítulo amarillo de marca 12,3:1). Orden del DOM = orden de lectura: vídeo, pasos 1-2, temporizador, pasos 3-4. Los pasos son dos `ol`; la segunda empieza en 3 (`start=\"3\"`) para que el lector anuncie la posición correcta. En escritorio la rejilla los coloca por filas en ese mismo orden; en móvil es una columna. El vídeo no arranca solo. El temporizador anuncia solo el cambio de estado.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En la página de producto. En la receta se reutiliza sin Timer y con Step con media.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "preparation",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "95:1158",
+    "contract": "../../../../../../design-system/schemas/components/preparation.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

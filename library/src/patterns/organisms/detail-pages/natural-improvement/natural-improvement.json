@@ -1,0 +1,381 @@
+{
+  "title": "Natural improvement",
+  "description": "Natural improvement: sección de mejoras de la fórmula natural (página Natural formula; wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-improvement). Fondo crema…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".natural-improvement",
+          "fg": "#121212",
+          "bg": "#fff5d9",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-page",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "natural-improvement",
+      "name": "Natural improvement",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "279:725",
+      "current": {
+        "description": "Natural improvement: sección de mejoras de la fórmula natural (página Natural formula; wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-improvement). Fondo crema (surface/page) con textos en tinta (text/default). Título «That's what we call an improvement» y subtítulo; tres bloques con h3: «Replaced ingredients» (4 instancias de Ingredient swap: 4 columnas en desktop y 1 en móvil), «We also removed» (fila de Removed tag) e «Ingredient origins» (texto y Origins map). Props: Title, Subtitle, Replaced title, Removed title, Origins title, Origins text. Ingredientes, motivos y orígenes de ejemplo ⬜ TODO envase (business-rules).",
+        "Propósito": "Sección «That's what we call an improvement» de la Natural formula page, sobre fondo crema. Tres bloques: reemplazos (cuatro Ingredient swap), ingredientes retirados (filas de Removed tag) y orígenes (Origins map).",
+        "Accesibilidad (rol, nombre, estados y teclado)": "`section` con nombre por el h2; los bloques llevan h3, con cada lista nombrada por su h3 (`aria-labelledby`). Orden de lectura: reemplazos, retiradas, orígenes. Sin interacción: no hay foco ni teclado. Contrastes: texto tinta sobre crema (17:1, token documentado) y texto gris cálido sobre blanco en las tarjetas.",
+        "Cuándo usar / qué NO hace": "Solo en la Natural formula page, después de Natural hero. Los textos de reemplazos, motivos, retiradas y orígenes son ⬜ TODO envase: deben salir de la fórmula validada. No se pone sobre otro crema: la norma de fondos (dos cremas seguidas no) se cumple porque el bloque anterior es verde."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "fromRepo": false,
+      "nodeId": "279:725",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=279-725",
+      "page": "Pattern / Detail pages",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-23 · 09:36 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Natural improvement: sección de mejoras de la fórmula natural (página Natural formula; wireframe UX 274:6354 desktop y 319:2744 móvil; clase CSS .natural-improvement). Fondo crema (surface/page) con textos en tinta (text/default). Título «That's what we call an improvement» y subtítulo; tres bloques con h3: «Replaced ingredients» (4 instancias de Ingredient swap: 4 columnas en desktop y 1 en móvil), «We also removed» (fila de Removed tag) e «Ingredient origins» (texto y Origins map). Props: Title, Subtitle, Replaced title, Removed title, Origins title, Origins text. Ingredientes, motivos y orígenes de ejemplo ⬜ TODO envase (business-rules)."
+    ],
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "values": [],
+        "default": "That's what we call an improvement",
+        "figma": "Title#279:0"
+      },
+      {
+        "name": "subtitle",
+        "type": "string",
+        "values": [],
+        "default": "Every ingredient we removed has a natural replacement with a clear reason behind it.",
+        "figma": "Subtitle#279:3"
+      },
+      {
+        "name": "replacedTitle",
+        "type": "string",
+        "values": [],
+        "default": "Replaced ingredients",
+        "figma": "Replaced title#279:6"
+      },
+      {
+        "name": "removedTitle",
+        "type": "string",
+        "values": [],
+        "default": "We also removed",
+        "figma": "Removed title#279:9"
+      },
+      {
+        "name": "originsTitle",
+        "type": "string",
+        "values": [],
+        "default": "Ingredient origins",
+        "figma": "Origins title#279:12"
+      },
+      {
+        "name": "originsText",
+        "type": "string",
+        "values": [],
+        "default": "The new formula improves the nutritional profile across the board, without adding a single minute to prep time.",
+        "figma": "Origins text#279:15"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "ingredient-swap",
+        "component": "ingredient-swap",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-close",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "arrow",
+        "component": "icon-chevron-down",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "ingredient-swap",
+        "component": "ingredient-swap",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-close",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "arrow",
+        "component": "icon-chevron-down",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "ingredient-swap",
+        "component": "ingredient-swap",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-close",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "arrow",
+        "component": "icon-chevron-down",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "ingredient-swap",
+        "component": "ingredient-swap",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-close",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "arrow",
+        "component": "icon-chevron-down",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "removed-tag",
+        "component": "removed-tag",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-close",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "removed-tag",
+        "component": "removed-tag",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-close",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "removed-tag",
+        "component": "removed-tag",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-close",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "removed-tag",
+        "component": "removed-tag",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-close",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "origins-map",
+        "component": "origins-map",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/border/subtle",
+          "color/surface/card",
+          "color/surface/natural",
+          "color/surface/page",
+          "color/text/default",
+          "color/text/natural",
+          "color/text/on-natural",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-l",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/h2",
+          "font/line-height/desktop/h3",
+          "font/size/desktop/body-l",
+          "font/size/desktop/body-m",
+          "font/size/desktop/body-s",
+          "font/size/desktop/h2",
+          "font/size/desktop/h3",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/default",
+          "icon/size/md"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/pill",
+          "radius/sm"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/64",
+          "space/8",
+          "space/96"
+        ]
+      }
+    ],
+    "tokenCount": 32,
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-l",
+      "Desktop/h3",
+      "Desktop/body-s",
+      "Desktop/body-m"
+    ],
+    "classes": [
+      "icon",
+      "icon-chevron-down",
+      "icon-close",
+      "ingredient-swap",
+      "ingredient-swap__arrow",
+      "ingredient-swap__card",
+      "ingredient-swap__name",
+      "ingredient-swap__reason",
+      "ingredient-swap__text",
+      "ingredient-swap__thumb",
+      "natural-improvement",
+      "natural-improvement__block",
+      "natural-improvement__head",
+      "natural-improvement__heading",
+      "natural-improvement__origins-text",
+      "natural-improvement__removed",
+      "natural-improvement__subtitle",
+      "natural-improvement__swaps",
+      "natural-improvement__title",
+      "origins-map",
+      "origins-map__country",
+      "origins-map__item",
+      "origins-map__list",
+      "origins-map__name",
+      "origins-map__seal",
+      "removed-tag",
+      "removed-tag__text",
+      "section",
+      "section__inner",
+      "visually-hidden"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Sección «That's what we call an improvement» de la Natural formula page, sobre fondo crema. Tres bloques: reemplazos (cuatro Ingredient swap), ingredientes retirados (filas de Removed tag) y orígenes (Origins map).",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "`section` con nombre por el h2; los bloques llevan h3, con cada lista nombrada por su h3 (`aria-labelledby`). Orden de lectura: reemplazos, retiradas, orígenes. Sin interacción: no hay foco ni teclado. Contrastes: texto tinta sobre crema (17:1, token documentado) y texto gris cálido sobre blanco en las tarjetas.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en la Natural formula page, después de Natural hero. Los textos de reemplazos, motivos, retiradas y orígenes son ⬜ TODO envase: deben salir de la fórmula validada. No se pone sobre otro crema: la norma de fondos (dos cremas seguidas no) se cumple porque el bloque anterior es verde.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "natural-improvement",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "279:725",
+    "contract": "../../../../../../design-system/schemas/components/natural-improvement.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

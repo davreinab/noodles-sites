@@ -212,6 +212,13 @@ def comprobar(ds, man, ahora, base):
     return 1 if modo == "error" else 0
 
 
+def placeholders(ds):
+    """Tokens de design-system/source/tokens.json marcados `placeholder: true`: valores de relleno que nadie ha confirmado."""
+    src = jload(os.path.join(ds, "source", "tokens.json"), {}) or {}
+    return sorted("%s/%s" % (c.get("name"), k) for c in src.get("collections") or [] for k, t in (c.get("tokens") or {}).items()
+                  if isinstance(t, dict) and t.get("placeholder") is True)
+
+
 def bump(version, nivel):
     try:
         a, b, c = (int(x) for x in str(version).split("."))
@@ -242,6 +249,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=".")
     ap.add_argument("--apply", action="store_true", help="sube la versión, escribe el CHANGELOG y guarda la línea base")
+    ap.add_argument("--accept-placeholders", dest="acepta_placeholders", action="store_true",
+                    help="publica aunque queden valores de relleno (placeholder: true) sin confirmar")
     ap.add_argument("--check", action="store_true", help="solo comprueba: borrador o publicado, y propuestas que faltan")
     ap.add_argument("--as", dest="forzado", choices=["major", "minor", "patch"], default=None)
     a = ap.parse_args()
@@ -255,8 +264,17 @@ def main():
     ahora = fingerprint(ds)
     bpath = os.path.join(ds, "reports", "release-baseline.json")
     base = jload(bpath)
+    pend = placeholders(ds) if (man.get("sourceMode") == "repo") else []
     if a.check:
+        if pend:
+            print("[AVISO] quedan %d valores de relleno sin confirmar (placeholder: true en design-system/source/tokens.json); "
+                  "confírmalos o cámbialos y quita la marca antes de publicar: %s%s" % (len(pend), ", ".join(pend[:4]), " …" if len(pend) > 4 else ""))
         return comprobar(ds, man, ahora, base)
+    if pend and a.apply and not a.acepta_placeholders:
+        print("[ERROR] no se publica: quedan %d valores de relleno sin confirmar (placeholder: true), p. ej. %s." % (len(pend), ", ".join(pend[:4])))
+        print("Cámbialos por los valores reales de la marca (o confírmalos) y quita `placeholder: true` en design-system/source/tokens.json. "
+              "Si de verdad quieres publicar con ellos, `--accept-placeholders`.")
+        return 1
     estado_base = (base or {}).get("state") or {}
     primera = base is None or not (estado_base.get("tokens") or estado_base.get("components"))
     if primera and base is not None:

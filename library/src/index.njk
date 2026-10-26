@@ -39,24 +39,24 @@ permalink: /
       <div class="pl-dash__bar pl-dash__bar--bad" aria-hidden="true"><i style="width:{{ (d.totals.attention / d.totals.components * 100) if d.totals.components else 0 }}%"></i></div>
       <span class="pl-dash__kpi-foot"><b>{{ d.totals.clean }}</b> al día</span>
     </a>
-    <a class="pl-dash__kpi pl-dash__kpi--link" href="#verificar">
+    {% if not d.ds.fromRepo %}<a class="pl-dash__kpi pl-dash__kpi--link" href="#verificar">
       <span class="pl-dash__kpi-label">Verificados contra Figma</span>
       <b class="pl-dash__kpi-num">{{ d.totals.verifiedPct }}<small> %</small></b>
       <div class="pl-dash__bar pl-dash__bar--good" aria-hidden="true"><i style="width:{{ d.totals.verifiedPct }}%"></i></div>
       <span class="pl-dash__kpi-foot"><b>{{ d.totals.verified }}</b> de {{ d.totals.components }} · {{ d.totals.components - d.totals.verified }} por verificar</span>
-    </a>
+    </a>{% endif %}
   </div>
   <dl class="pl-dash__sync">
     <div><dt>Versión publicada</dt><dd>{% if d.ds.version %}{{ d.ds.version }}{% if d.ds.versionedAt %} · {{ d.ds.versionedAt }}{% endif %}{% else %}sin publicar{% endif %}</dd></div>
     <div><dt>Último sync</dt><dd>{% if d.ds.lastSync %}{{ d.ds.lastSync }} <span class="pl-muted">({{ d.ds.lastSyncAgo }})</span>{% else %}nunca{% endif %}</dd></div>
-    <div><dt>Componentes leídos de Figma</dt><dd>{% if d.ds.componentsReadAt %}{{ d.ds.componentsReadAt }} <span class="pl-muted">({{ d.ds.componentsReadAgo }})</span>{% if d.ds.refreshesSinceFull %} · {{ d.ds.refreshesSinceFull }} refresco{% if d.ds.refreshesSinceFull != 1 %}s{% endif %} puntual{% if d.ds.refreshesSinceFull != 1 %}es{% endif %} después{% endif %}{% else %}sin lectura{% endif %}</dd></div>
-    <div><dt>Variables leídas de Figma</dt><dd>{% if d.ds.variablesReadAt %}{{ d.ds.variablesReadAt }} <span class="pl-muted">({{ d.ds.variablesReadAgo }})</span>{% else %}sin lectura{% endif %}</dd></div>
+    {% if not d.ds.fromRepo %}<div><dt>Componentes leídos de Figma</dt><dd>{% if d.ds.componentsReadAt %}{{ d.ds.componentsReadAt }} <span class="pl-muted">({{ d.ds.componentsReadAgo }})</span>{% if d.ds.refreshesSinceFull %} · {{ d.ds.refreshesSinceFull }} refresco{% if d.ds.refreshesSinceFull != 1 %}s{% endif %} puntual{% if d.ds.refreshesSinceFull != 1 %}es{% endif %} después{% endif %}{% else %}sin lectura{% endif %}</dd></div>
+    <div><dt>Variables leídas de Figma</dt><dd>{% if d.ds.variablesReadAt %}{{ d.ds.variablesReadAt }} <span class="pl-muted">({{ d.ds.variablesReadAgo }})</span>{% else %}sin lectura{% endif %}</dd></div>{% endif %}
   </dl>
 </header>
 
 <nav class="pl-dash__tiles" aria-label="Pendientes por tipo">
   <a href="#propuestas"><b>{{ d.counts.proposals }}</b><span>propuestas pendientes de decisión</span>{% if d.counts.approved %}<small>{{ d.counts.approved }} aprobadas sin aplicar</small>{% endif %}</a>
-  <a href="#verificar"><b>{{ d.counts.unverified + d.counts.stale }}</b><span>contratos por verificar</span>{% if d.counts.stale %}<small>{{ d.counts.stale }} con verificación caducada</small>{% endif %}</a>
+  {% if not d.ds.fromRepo %}<a href="#verificar"><b>{{ d.counts.unverified + d.counts.stale }}</b><span>contratos por verificar</span>{% if d.counts.stale %}<small>{{ d.counts.stale }} con verificación caducada</small>{% endif %}</a>{% endif %}
   <a href="#ia"><b>{{ d.counts.ai }}</b><span>borradores de la IA por revisar</span></a>
   <a href="#criterio"><b>{{ d.counts.todo }}</b><span>fichas con criterio por escribir</span></a>
   <a href="#contraste"><b>{{ d.counts.contrast }}</b><span>componentes con contraste bajo AA</span>{% if d.counts.contrastPairs %}<small>{{ d.counts.contrastPairs }} parejas de color</small>{% endif %}</a>
@@ -121,11 +121,11 @@ permalink: /
   {% endif %}
 </section>
 
-<section class="pl-dash__sec" id="verificar">
+{% if not d.ds.fromRepo %}<section class="pl-dash__sec" id="verificar">
   <h2>Contratos por verificar <span class="pl-nav__count">{{ d.counts.unverified + d.counts.stale }}</span></h2>
   <p class="pl-muted">Un componente no se usa en una pantalla hasta que su contrato se comprueba contra el maestro de Figma. Los caducados van primero: el maestro cambió desde que se verificaron.</p>
   {{ complist(d.lists.unverified, "stale", 15) }}
-</section>
+</section>{% endif %}
 
 <section class="pl-dash__sec" id="ia">
   <h2>Borradores de la IA por revisar <span class="pl-nav__count">{{ d.counts.ai }}</span></h2>
@@ -141,7 +141,7 @@ permalink: /
 
 <section class="pl-dash__sec" id="contraste">
   <h2>Contraste por debajo de AA <span class="pl-nav__count">{{ d.counts.contrast }}</span></h2>
-  <p class="pl-muted">Parejas texto/fondo de su CSS que no llegan al mínimo. Se arregla cambiando la pareja de tokens en Figma, con propuesta.</p>
+  <p class="pl-muted">Parejas texto/fondo de su CSS que no llegan al mínimo. Se arregla cambiando la pareja de tokens {% if d.ds.fromRepo %}en la fuente del repo{% else %}en Figma{% endif %}, con propuesta.</p>
   {{ complist(d.lists.contrast, "contrast", 12) }}
 </section>
 
@@ -176,14 +176,14 @@ permalink: /
 <section class="pl-dash__sec pl-dash__sec--foot" id="sync">
   <h2>De dónde sale todo esto</h2>
   <div class="pl-dash__foot">
-    <div>
+    {% if not d.ds.fromRepo %}<div>
       <h3>Archivos de Figma</h3>
       <ul class="pl-dash__plain">{% for s in d.ds.sources %}<li><b>{{ s.name }}</b> <span class="pl-muted">{{ s.role }}</span></li>{% endfor %}</ul>
     </div>
     <div>
       <h3>Componentes por archivo</h3>
       <ul class="pl-dash__plain">{% for f in d.totals.byFile %}<li><b>{{ f[1] }}</b> {{ f[0] }}</li>{% endfor %}<li><b>{{ d.totals.internos }}</b> internos de Figma, no se construyen</li></ul>
-    </div>
+    </div>{% endif %}
     <div>
       <h3>Últimos refrescos puntuales</h3>
       {% if d.ds.recentRefreshes.length %}<ul class="pl-dash__plain">{% for h in d.ds.recentRefreshes %}<li><span class="pl-muted">{{ h.at }}</span> {{ h.what }}</li>{% endfor %}</ul>{% else %}<p class="pl-muted">Ninguno desde la lectura completa.</p>{% endif %}

@@ -99,7 +99,7 @@ Cada ficha nace con el bloque generado y cuatro campos de criterio en `⬜ TODO`
 
 > Cómo se **colocan** los componentes en una página. Es el tercer nivel del DS (tokens →
 > componentes → composición) y el que evita que cada pantalla decida su propio espaciado.
-> Toda medida citada aquí es un token de `tokens.css`; si falta, se crea en Figma primero.
+> Toda medida citada aquí es un token de `tokens.css`; si falta, se propone y, aprobada la propuesta, se crea en Figma primero.
 > Las pantallas de `UI/` y el agente consultan esta sección antes de montar cualquier vista.
 > Las secciones de referencia son los patrones `Pattern / *` de Figma (fase 6).
 

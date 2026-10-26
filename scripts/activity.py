@@ -27,6 +27,7 @@ Uso como biblioteca (desde otro script):
 Uso desde la línea de comandos (lo usa el agente):
     python3 scripts/activity.py --actor agent --action change-business-rule \
         --detail "regla de reembolso actualizada" --capability change-business-rule --approval human-review
+    python3 scripts/activity.py --actor agent --action lanzar-agentes --detail "4 agentes en paralelo" --tier mecanico
     python3 scripts/activity.py --tail 20        # ver las últimas líneas
 """
 
@@ -40,7 +41,10 @@ RUTA = os.path.join("governance", "activity.jsonl")
 ACTORES = ("script", "agent", "human")
 
 
-def log(root, actor, action, detail, capability=None, approval=None, files=None):
+TIERS = ("criterio", "mecanico")
+
+
+def log(root, actor, action, detail, capability=None, approval=None, files=None, tier=None):
     """Añade una línea. Nunca reescribe ni borra: el rastro solo crece."""
     if actor not in ACTORES:
         raise ValueError("actor debe ser uno de %s" % (ACTORES,))
@@ -50,6 +54,10 @@ def log(root, actor, action, detail, capability=None, approval=None, files=None)
         linea["capability"] = capability
     if approval:
         linea["approval"] = approval
+    if tier:
+        if tier not in TIERS:
+            raise ValueError("tier debe ser uno de %s" % (TIERS,))
+        linea["tier"] = tier        # el nivel de modelo con el que se lanzó el trabajo (ver governance/models.json)
     if files:
         linea["files"] = sorted(files)[:40]
     dest = os.path.join(root, RUTA)
@@ -67,6 +75,7 @@ def main():
     ap.add_argument("--detail", default="")
     ap.add_argument("--capability", default=None)
     ap.add_argument("--approval", default=None)
+    ap.add_argument("--tier", choices=TIERS, default=None, help="nivel de modelo con el que se lanzó el trabajo (criterio o mecanico)")
     ap.add_argument("--tail", type=int, default=None, help="muestra las últimas N líneas y sale")
     a = ap.parse_args()
     root = os.path.abspath(a.root)
@@ -86,7 +95,7 @@ def main():
     if a.actor == "agent" and (a.capability or "").startswith("sync-"):
         sys.exit("[ERROR] esa ejecución la registra el script que la hace. El agente registra "
                  "decisiones y autorizaciones, no ejecuciones.")
-    linea = log(root, a.actor, a.action, a.detail, a.capability, a.approval)
+    linea = log(root, a.actor, a.action, a.detail, a.capability, a.approval, tier=a.tier)
     print("registrado: %s · %s" % (linea["actor"], linea["action"]))
     return 0
 

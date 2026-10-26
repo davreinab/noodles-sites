@@ -3,7 +3,7 @@
 {% raw %}<div class="ds-gallery">
 <style>.ds-gallery{font:14px/1.4 system-ui,sans-serif;color:#1f1f1f}.ds-gallery h3{font:600 12px/1.3 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;color:#4a4a4a}.ds-gallery section{margin:0 0 32px}.ds-gallery__row{display:flex;flex-wrap:wrap;align-items:center;gap:24px 32px}.ds-gallery figure{margin:0;display:flex;flex-direction:column;gap:8px;align-items:flex-start}.ds-gallery figcaption{font:12px/1.3 ui-monospace,monospace;color:#4a4a4a}.ds-gallery__stage{padding:8px;min-width:48px;min-height:32px;outline:1px dashed #bebebe;outline-offset:0}</style>
 <section><h3>variant</h3><div class="ds-gallery__row">
-<figure><div class="ds-gallery__stage"><article data-ds="prize-card" class="prize-card">
+<figure><div class="ds-gallery__stage"><article data-ds="prize-card" class="prize-card prize-card--grand">
 <div class="prize-card__media"><img src="/assets/ds/images/placeholder.svg" alt=""></div>
 <div class="prize-card__body">
 <p class="prize-card__level">Featured prize</p>
@@ -20,7 +20,7 @@
 </div>
 </article></div><figcaption>variant=Default</figcaption></figure>
 </div></section>
-<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">La galería clona el elemento raíz del ejemplo y solo cambia sus clases: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
+<p class="ds-gallery__note" style="font:13px/1.5 system-ui,sans-serif;color:#4a4a4a;max-width:75ch">La galería clona el elemento raíz del ejemplo, con los contenedores que le dan color o fondo, y solo cambia sus clases: una variante que necesita otro marcado (otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.</p>
 </div>{% endraw %}
 {% else %}
 {% raw %}<article data-ds="prize-card" class="prize-card">

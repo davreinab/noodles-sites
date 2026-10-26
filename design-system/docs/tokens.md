@@ -1,8 +1,8 @@
 <!-- ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO. -->
 
-# GB Noodles · Microsites · Tokens  ·  _(espejo generado de Figma)_
+# GB Noodles · Microsites · Tokens  ·  _(espejo generado de la fuente)_
 
-> Última sync: **2026-10-22T14:49:47Z** · modo de adopción: `new` · 331 variables en 8 colecciones · 18 text styles · 4 effect styles.
+> Última sync: **2026-10-26T09:34:49Z** · modo de adopción: `new` · 331 variables en 8 colecciones · 18 text styles · 4 effect styles.
 > Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.
 
 ## Índice

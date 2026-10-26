@@ -1,0 +1,335 @@
+{
+  "title": "Mobile menu",
+  "description": "Patrón: menú a pantalla completa en todos los breakpoints (wireframe UX: se abre desde el botón menú de la Navbar, también en desktop). Logo negativo · cerrar · 5 Nav item (Menu):…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".mobile-menu",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--nav-item-menu-text",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Cumple AA"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "mobile-menu",
+      "name": "Mobile menu",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "55:119",
+      "current": {
+        "description": "Patrón: menú a pantalla completa en todos los breakpoints (wireframe UX: se abre desde el botón menú de la Navbar, también en desktop). Logo negativo · cerrar · 5 Nav item (Menu): Products, Natural formula, Recipes, Contests, FAQS · Lang switch (solo marcas multiidioma) · «Our social media:» con los iconos de redes de la marca (enlaces externos) · © GBFoods. Accesibilidad: <dialog> modal, foco atrapado dentro, Esc cierra y el foco vuelve al botón menú; layer/modal. Fondo color/surface/inverse. Sin variables propias.",
+        "Propósito": "Menú a pantalla completa en todos los breakpoints (wireframe UX): navegación principal, redes de la marca y ©. Se abre desde el botón de menú de la Navbar.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "`<dialog>` modal: foco atrapado, Esc cierra y el foco vuelve al botón de menú. Ítems crema sobre tinta 17:1; el activo, amarillo con indicador (forma, no solo color). Cada red es un enlace con nombre.",
+        "Cuándo usar / qué NO hace": "Es la navegación principal en todos los breakpoints. No lleva CTA ni buscador."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "fromRepo": false,
+      "nodeId": "55:119",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=55-119",
+      "page": "Pattern / Global",
+      "type": "COMPONENT",
+      "variants": 1,
+      "lastSync": "2026-10-22 · 10:02 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Patrón: menú a pantalla completa en todos los breakpoints (wireframe UX: se abre desde el botón menú de la Navbar, también en desktop). Logo negativo · cerrar · 5 Nav item (Menu): Products, Natural formula, Recipes, Contests, FAQS · Lang switch (solo marcas multiidioma) · «Our social media:» con los iconos de redes de la marca (enlaces externos) · © GBFoods. Accesibilidad: <dialog> modal, foco atrapado dentro, Esc cierra y el foco vuelve al botón menú; layer/modal. Fondo color/surface/inverse. Sin variables propias."
+    ],
+    "props": [
+      {
+        "name": "logo",
+        "type": "icon",
+        "values": [],
+        "default": "Version=Negative",
+        "figma": "Logo#55:6"
+      },
+      {
+        "name": "langSwitch",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "Lang switch#55:7"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [
+        "logo"
+      ],
+      "defaults": [
+        "Version=Negative"
+      ]
+    },
+    "nested": [
+      {
+        "layer": "logo",
+        "component": "logo-yatekomo",
+        "exposedAs": "Logo#55:6",
+        "hidden": false
+      },
+      {
+        "layer": "close",
+        "component": "icon-button",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon",
+        "component": "icon-close",
+        "exposedAs": "Icon#33:125",
+        "hidden": false
+      },
+      {
+        "layer": "nav-item",
+        "component": "nav-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "nav-item",
+        "component": "nav-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "nav-item",
+        "component": "nav-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "nav-item",
+        "component": "nav-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "nav-item",
+        "component": "nav-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "lang-switch",
+        "component": "lang-switch",
+        "exposedAs": "",
+        "hidden": true
+      },
+      {
+        "layer": "social",
+        "component": "icon-tiktok",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "social",
+        "component": "icon-instagram",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "social",
+        "component": "icon-x",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "social",
+        "component": "icon-youtube",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thick",
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "button",
+        "items": [
+          "button/inverse/bg",
+          "button/inverse/border",
+          "button/inverse/text"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/surface/inverse",
+          "color/text/on-inverse"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/caption",
+          "font/line-height/desktop/label",
+          "font/line-height/mobile/h2",
+          "font/size/desktop/body-s",
+          "font/size/desktop/caption",
+          "font/size/desktop/label",
+          "font/size/mobile/h2",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/inverse",
+          "icon/size/md"
+        ]
+      },
+      {
+        "group": "icon-button",
+        "items": [
+          "icon-button/size/m"
+        ]
+      },
+      {
+        "group": "lang-switch",
+        "items": [
+          "lang-switch/bg",
+          "lang-switch/bg-selected",
+          "lang-switch/border",
+          "lang-switch/text",
+          "lang-switch/text-selected"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/frame",
+          "layout/margin"
+        ]
+      },
+      {
+        "group": "nav-item",
+        "items": [
+          "nav-item/menu-text",
+          "nav-item/menu-text-active"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/pill",
+          "radius/sm"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/4",
+          "space/40",
+          "space/48",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 38,
+    "textStyles": [
+      "Mobile/h2",
+      "Desktop/label",
+      "Desktop/body-s",
+      "Desktop/caption"
+    ],
+    "classes": [
+      "icon",
+      "icon-button",
+      "icon-button--inverse",
+      "icon-close",
+      "icon-instagram",
+      "lang-switch",
+      "lang-switch__option",
+      "link",
+      "link--dark",
+      "logo",
+      "mobile-menu",
+      "mobile-menu__copyright",
+      "mobile-menu__inner",
+      "mobile-menu__nav",
+      "mobile-menu__social",
+      "mobile-menu__social-label",
+      "mobile-menu__social-list",
+      "mobile-menu__top",
+      "nav-item",
+      "nav-item--menu"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Menú a pantalla completa en todos los breakpoints (wireframe UX): navegación principal, redes de la marca y ©. Se abre desde el botón de menú de la Navbar.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "`<dialog>` modal: foco atrapado, Esc cierra y el foco vuelve al botón de menú. Ítems crema sobre tinta 17:1; el activo, amarillo con indicador (forma, no solo color). Cada red es un enlace con nombre.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Es la navegación principal en todos los breakpoints. No lleva CTA ni buscador.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": "",
+    "coverage": {
+      "visible": 1,
+      "total": 1,
+      "missing": [],
+      "unchecked": [],
+      "complete": true
+    }
+  },
+  "ds": {
+    "slug": "mobile-menu",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "55:119",
+    "contract": "../../../../../../design-system/schemas/components/mobile-menu.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

@@ -84,8 +84,12 @@
 - Solo una dimensión realmente líquida puede quedar sin variable de ancho o altura,
   según corresponda. Las propiedades que Figma no permita vincular y la geometría fija
   imprescindible deben quedar documentadas como excepciones técnicas.
-- No uses valores locales como sustituto provisional. Si falta una variable o estilo,
-  créalo, limita su scope y descríbelo antes de continuar.
+- No uses valores locales como sustituto provisional. **En Figma solo se pinta lo aprobado**: se
+  usan las variables, estilos y componentes que ya existen en el DS. Si falta una variable o estilo,
+  **no se crea**: se escribe una propuesta en `proposals/` (evidencia, impacto, aprobador) y ese
+  elemento queda pendiente hasta que esté aprobada. Aprobada, se crea con su scope más estrecho y su
+  descripción, y la propuesta pasa a `aplicadas/`. Usar la variable existente más parecida solo
+  con autorización expresa de quien aprueba.
 - Los separadores se realizan como border del contenedor, no como líneas sueltas.
 - Todo componente con icono lo expone como `INSTANCE_SWAP`, con un icono real de la
   galería como valor inicial; nunca uses un frame de color como sustituto.
@@ -144,7 +148,9 @@
 - Los agentes pueden **leer**, recuperar contexto acotado, generar propuestas y ejecutar
   auditorías sin aprobación. Pueden aplicar cambios mecánicos solo cuando la fuente de
   verdad y el resultado sean deterministas y la política los marque como automáticos.
-- Crear o cambiar tokens, componentes, contratos o primitivas requiere revisión humana.
+- Crear o cambiar tokens, componentes, contratos o primitivas requiere revisión humana, y en
+  Figma **nada nuevo se pinta ni se crea sin su propuesta aprobada** (variables, estilos, componentes
+  o variantes), tampoco al pintar una pantalla.
   Publicar una librería de Figma requiere siempre aprobación explícita.
 - Un agente nunca convierte una propuesta en cambio aprobado por sí mismo. Cada propuesta
   registra evidencia, impacto, aprobador requerido y estado.

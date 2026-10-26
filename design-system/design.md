@@ -35,6 +35,7 @@ Tú editas Figma; aquí solo se refleja.
 | **dirección visual**: tono, paleta o tipografía como intención, «cómo debería verse» | `../UX/direction/DESIGN.md` (se lee antes de crear tokens o proponer estilo; los valores nacen en Figma) | — |
 | empezar pantalla/proyecto nuevo | `../UX/direction/DESIGN.md` + este archivo + `tokens/tokens.css` + `docs/patterns.md § Composición de pantalla` | components/patterns bajo demanda |
 | **colocar componentes en una pantalla**: espaciado entre secciones, anchos, grid, breakpoints, paneles, capas | `docs/patterns.md § Composición de pantalla` | — |
+| **cerrar una pantalla, un flujo o una landing** de `UI/`: qué usa del DS y qué no | `python3 scripts/screen-report.py UI/<pantalla>.html` (informe) | `guides/verificacion.md § Informe de cierre de pantallas` |
 | sombra, z-index, duración o easing, tamaño de icono | `docs/tokens.md` §§ Icon size · Layer · Motion · Elevation (son tokens; nunca valores sueltos) | — |
 | **ver el DS entero**, componente a componente, con vista previa y estado de verificación | `../library/` (`cd library && npm start`; lo genera `scripts/ds-library.py` desde este design system) | — |
 | una **imagen** en un «Ejemplo de código» | `assets/images/placeholder.svg` (las fotos reales son de las pantallas, en `UI/`; los iconos, con su ruta real `../assets/icons/<nombre>.svg`) | — |
@@ -151,12 +152,17 @@ Tú editas Figma; aquí solo se refleja.
    si el maestro cambió después (`stale`). La primera vez que una pantalla usa un componente
    `unverified` o `stale` se pasa el protocolo de **Verificación contra el maestro** antes de montarla.
    `scripts/ds-fidelity.py` lo recuerda y cruza contrato, CSS y ejemplo con lo comprobable sin abrir Figma.
+   Cada componente del DS que se coloca en una pantalla lleva `data-ds="<slug>"` en su elemento raíz,
+   y al terminar una pantalla o un flujo se entrega el informe de `scripts/screen-report.py`
+   (`guides/verificacion.md § Informe de cierre de pantallas`).
 
 ### Reglas duras en Figma
 
 Solo con Figma: qué debe cumplirse al escribir variables y componentes en el canvas está en
 [`guides/reglas-figma.md`](./guides/reglas-figma.md), y el cómo en [`figma.md`](./figma.md). Se leen antes de
-escribir nada en Figma, no para el resto del trabajo.
+escribir nada en Figma, no para el resto del trabajo. **En Figma solo se pinta lo aprobado**: ninguna variable,
+estilo, componente o variante nueva se crea sin una propuesta aprobada, tampoco al pintar una pantalla; si falta
+algo, se propone y ese elemento espera.
 
 ## Guías (se leen solo cuando la tarea lo pide)
 

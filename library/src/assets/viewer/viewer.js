@@ -3,6 +3,42 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
+  // Visual mode: the selector under the search box sets data-theme on every component preview (same origin).
+  // The choice is kept in localStorage; preview.njk reads it before painting, so a new tab or a reload keeps it.
+  const modeSel = $("[data-mode]");
+  if (modeSel) {
+    const MODE = "pl-mode";
+    let saved = "";
+    try {
+      saved = localStorage.getItem(MODE) || "";
+    } catch (e) {
+      /* storage unavailable */
+    }
+    if ([...modeSel.options].some((o) => o.value === saved)) modeSel.value = saved;
+    const paint = (frame) => {
+      try {
+        const root = frame.contentDocument.documentElement;
+        if (modeSel.value) root.setAttribute("data-theme", modeSel.value);
+        else root.removeAttribute("data-theme");
+      } catch (e) {
+        /* no access to the document */
+      }
+    };
+    const frames = () => $$("iframe[data-frame], iframe[data-fit]");
+    frames().forEach((f) => f.addEventListener("load", () => paint(f)));
+    frames().forEach((f) => {
+      if (f.contentDocument?.readyState === "complete") paint(f);
+    });
+    modeSel.addEventListener("change", () => {
+      try {
+        localStorage.setItem(MODE, modeSel.value);
+      } catch (e) {
+        /* storage unavailable */
+      }
+      frames().forEach(paint);
+    });
+  }
+
   // Sidebar scroll: every page is a new document, so keep the scroll of the
   // menu across navigations and make sure the current page stays visible.
   const nav = $("[data-nav]");

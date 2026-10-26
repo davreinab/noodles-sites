@@ -1,0 +1,35 @@
+{
+  "designSystem": "{{PROYECTO}}",
+  "note": "Qué nivel de modelo conviene para cada tipo de trabajo. Habla de NIVELES, no de nombres de modelo: cada herramienta traduce «criterio» y «mecánico» a su propia gama. La skill no puede obligar a usar un modelo concreto (es Markdown y scripts, y no llama a ninguna API): dice qué conviene, y que se cumpla depende de que la herramienta deje elegir el modelo al lanzar un agente. Lo que decide cada tarea está en `tier` de governance/capabilities.json; este archivo explica los niveles y deja ajustar el reparto. Si el proyecto quiere fijar nombres concretos, van en `tools` con esta forma: {\"<herramienta>\": {\"criterio\": \"<modelo>\", \"mecanico\": \"<modelo>\"}}; vacío por defecto.",
+  "tiers": {
+    "criterio": {
+      "label": "Nivel de criterio",
+      "use": "El modelo más capaz que ofrezca la herramienta.",
+      "for": [
+        "destilar evidencia y escribir notas de research",
+        "sintetizar y reescribir la síntesis",
+        "redactar o cambiar requisitos, reglas de negocio y contexto",
+        "revisar propuestas y decidir entre fuentes que chocan",
+        "cualquier trabajo ambiguo o con consecuencias difíciles de deshacer"
+      ],
+      "never": "No se baja de nivel para lo que decide, interpreta o aprueba."
+    },
+    "mecanico": {
+      "label": "Nivel mecánico",
+      "use": "El modelo más económico de la misma familia que ofrezca la herramienta.",
+      "for": [
+        "pintar en Figma o generar código, HTML y CSS a partir de algo ya aprobado",
+        "renombrar, formatear y aplicar cambios cerrados",
+        "lanzar varios agentes en paralelo con encargos acotados",
+        "leer, listar y comparar archivos"
+      ],
+      "needs": "Un encargo cerrado (qué archivo, qué reglas, qué comprobar) y, después, las comprobaciones de los scripts y una revisión antes de darlo por bueno."
+    }
+  },
+  "parallel": {
+    "tier": "mecanico",
+    "rule": "Varias tareas independientes con encargo cerrado se lanzan en paralelo con el nivel mecánico. Si la herramienta no deja elegir modelo, se sigue con el que haya y se dice una sola vez."
+  },
+  "tools": {},
+  "overrides": {}
+}

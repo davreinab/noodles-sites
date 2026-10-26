@@ -26,6 +26,7 @@
       "pending": null
     },
     "figma": {
+      "fromRepo": false,
       "nodeId": "46:78",
       "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=46-78",
       "page": "Iconography",

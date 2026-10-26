@@ -1,0 +1,35 @@
+---
+layout: viewer.njk
+permalink: /composicion/
+eleventyExcludeFromCollections: true
+---
+{# Reglas de composición de pantalla: cómo se colocan los componentes (espaciado, contenedores, rejilla, capas, flujo). El contenido sale de design-system/docs/patterns.md en cada build (src/_data/composicion.js). #}
+<header class="pl-dash__head">
+  <h1>Composición de pantalla</h1>
+  <p class="pl-muted">Cómo se colocan los componentes en una página: espaciado entre secciones, anchos, rejilla y breakpoints, capas y flujo de contenido.</p>
+</header>
+<div class="pl-docs pl-comp">
+  <h2>Qué es esto</h2>
+  <p>Los tokens dicen de qué está hecho el sistema y los componentes, con qué piezas se construye. Estas reglas dicen <b>cómo se colocan esas piezas en una pantalla</b>. Evitan que cada pantalla invente su propio espaciado: las pantallas consumen estas reglas y no las redefinen.</p>
+  {% if composicion.found and composicion.pending == 0 and composicion.preset %}
+  <p class="pl-comp__note"><b>Reglas preestablecidas.</b> Vienen con la base inicial del design system y se dan por confirmadas: no hace falta aprobarlas para empezar a montar pantallas. Se pueden ajustar cuando el proyecto lo necesite; un cambio es una decisión de diseño, y si pide un token nuevo, pasa por propuesta. Quien monte pantallas con IA recibirá un aviso de que existen antes de la primera.</p>
+  {% elif composicion.found and composicion.pending == 0 %}
+  <p class="pl-comp__note"><b>Reglas escritas por el equipo.</b> Son las que el proyecto decidió para colocar los componentes.</p>
+  {% elif composicion.found %}
+  <p class="pl-comp__note pl-comp__note--warn"><b>Reglas pendientes.</b> Quedan {{ composicion.pending }} reglas sin escribir (marcadas ⬜ TODO). Hasta que estén escritas, la IA no monta pantallas.</p>
+  {% endif %}
+  <h2>Cómo leerlo</h2>
+  <ul>
+    <li><b>Ritmo vertical:</b> cuánto espacio va entre secciones, bloques, títulos y campos. Usa solo tokens de espaciado.</li>
+    <li><b>Contenedores y anchos:</b> cuánto mide una página, una columna de lectura, un panel o un diálogo.</li>
+    <li><b>Grid y breakpoints:</b> en qué anchos de pantalla cambia el diseño y cuántas columnas tiene la rejilla en cada uno.</li>
+    <li><b>Paneles, overlays y capas:</b> qué se superpone a qué y con qué movimiento aparece.</li>
+    <li><b>Flujo de contenido:</b> el orden de lectura, dónde van las acciones principales y cómo se muestran los estados vacío, de carga y de error.</li>
+  </ul>
+  {% if composicion.found %}
+  <h2>Las reglas</h2>
+  {{ composicion.html | safe }}
+  {% else %}
+  <p class="pl-muted">Este proyecto no tiene todavía la sección «Composición de pantalla» en <code>design-system/docs/patterns.md</code>.</p>
+  {% endif %}
+</div>

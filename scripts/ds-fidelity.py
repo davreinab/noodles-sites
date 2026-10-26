@@ -49,6 +49,9 @@ no vacío; los que no la tienen ya los señala agent-readiness con `runnable-pat
   6. example-without-data-ds (nota, no aviso) · El elemento raíz del «Ejemplo de código» lleva
      data-ds="<slug>": es la marca que permite seguir el hilo pantalla → contrato → maestro de Figma, y la
      que un futuro validador de desarrollo necesitará. Severidad `info` por defecto.
+  6b. screen-without-data-ds · Una pantalla de UI/ con componentes detectados solo por clase, sin data-ds en
+     su elemento raíz: una línea por pantalla con la lista. Aviso por defecto; el informe por pantalla es
+     scripts/screen-report.py.
   7. contrast-below-aa · El texto de cada componente cumple WCAG 2.1 AA (4,5:1; 3:1 si es grande) en
      cada estado que su CSS escribe, en claro y, si existe, en oscuro. Se calcula desde el CSS y tokens.css
      (scripts/ds_contrast.py: cascada de modificadores y pseudoclases, variables locales incluidas). Exentos:
@@ -112,6 +115,7 @@ DEFAULT_CONFIG = {
         "screen-uses-internal": "warn",
         "screen-state-anatomy": "warn",
         "example-without-data-ds": "info",
+        "screen-without-data-ds": "warn",
         "contrast-below-aa": "warn"
     },
     "contrastExceptions": [],
@@ -554,6 +558,12 @@ class Audit:
                         usa_internos[slug] = internos.get(slug, "")
                     elif st != "verified":
                         pend[slug] = st
+            solo_clase = sorted({by_class[c][0] for c in used if c in by_class and by_class[c][1] != "interno"}
+                                - set(re.findall(r'data-ds\s*=\s*["\']([^"\']+)["\']', html)))
+            if solo_clase:
+                rel = os.path.relpath(f, self.root)
+                self.add("screen-without-data-ds", rel, 0, "pantalla", f"{len(solo_clase)} componentes sin data-ds",
+                         f"usa componentes detectados solo por clase, sin data-ds en su elemento raíz: {', '.join(solo_clase)}. Añade data-ds=\"<slug>\" al raíz de cada uno")
             if usa_internos:
                 rel = os.path.relpath(f, self.root)
                 lista = ", ".join(f"{k} ({v})" for k, v in sorted(usa_internos.items()))

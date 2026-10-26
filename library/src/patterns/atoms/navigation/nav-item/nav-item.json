@@ -55,6 +55,7 @@
       "pending": null
     },
     "figma": {
+      "fromRepo": false,
       "nodeId": "53:102",
       "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=53-102",
       "page": "Navigation",

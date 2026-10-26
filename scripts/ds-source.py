@@ -181,7 +181,9 @@ def compile_tokens(src, errs, warns):
                 except ValueError as e:
                     errs.append(f"{cname}/{path} ({m}): valor «{v}» no válido, {e}")
                     continue
-                if rol == "semantic" and not isinstance(v, dict):
+                # un string (una sombra, una curva) o un color translúcido por naturaleza (overlay, scrim, backdrop) no se pueden aliasar a un primitivo
+                crudo_normal = t.get("type") == "string" or path.split("/")[0] in ("overlay", "scrim", "backdrop")
+                if rol == "semantic" and not isinstance(v, dict) and not crudo_normal:
                     warns.append(f"{cname}/{path} ({m}): un token semántico lleva un alias a un primitivo, no un valor crudo")
                 values[mode_ids[m]] = {"type": "value", "value": conv}
             hidden = t.get("hidden")
@@ -513,7 +515,7 @@ Pasar a Figma después es con pérdida declarada: `python3 scripts/ds-source.py 
 - `value`: un valor para todos los modos, o un objeto con un valor por modo. Un alias es `{ruta}` o `{Colección:ruta}`.
 - La cadena de alias va siempre Components → Semantic → Primitive. Los componentes usan tokens semánticos.
 - Nombres: minúsculas, números y guiones; tramos separados por `/` (pasan a Figma tal cual y a CSS con guiones).
-- Opcionales: `description`, `scopes` (los de Figma, p. ej. ALL_FILLS), `hidden`.
+- Opcionales: `description`, `scopes` (los de Figma, p. ej. ALL_FILLS), `hidden`, `placeholder: true` (un valor de relleno que nadie ha confirmado: `ds-release.py` no deja publicar mientras quede alguno sin `--accept-placeholders`).
 
 ## components/<slug>.json
 
@@ -647,6 +649,43 @@ def init(ds):
     return creados
 
 
+def switch_to_figma(ds):
+    """Pasa la fuente de verdad del repo a Figma: se hace cuando el design system ya está volcado a Figma (con el plan de
+    --figma-plan) y las fuentes de Figma están registradas. Cambia `sourceMode` a figma y deja design-system/source/ como
+    histórico (no se compila más). No toca Figma ni los volcados: el siguiente paso es el primer sync leyendo Figma, que hace
+    caducar la verificación de cada contrato para volver a pasarla contra el maestro. Devuelve (errores, avisos)."""
+    mpath = os.path.join(ds, "agent-manifest.json")
+    m = read_json(mpath, {}) or {}
+    errs, notes = [], []
+    if (m.get("sourceMode") or "figma") != "repo":
+        return ["el proyecto no está en modo repo: no hay nada que pasar a Figma"], notes
+    if not m.get("figmaSources"):
+        errs.append("registra antes las fuentes de Figma en design-system/agent-manifest.json → figmaSources (el archivo donde ya has volcado "
+                    "la base, con las variables y los componentes) y verifica el MCP de Figma")
+    if not os.path.isfile(os.path.join(ds, "source", "tokens.json")):
+        errs.append("no hay design-system/source/tokens.json: no hay fuente en el repo que pasar")
+    if errs:
+        return errs, notes
+    from datetime import date
+    m["sourceMode"] = "figma"
+    m["sourceSwitchedToFigmaAt"] = date.today().isoformat()
+    write_json(mpath, m)
+    rpath = os.path.join(ds, "source", "README.md")
+    try:
+        txt = open(rpath, encoding="utf-8").read()
+    except OSError:
+        txt = ""
+    aviso = ("> **HISTÓRICO desde %s.** El design system pasó a Figma: la fuente de verdad es Figma y esta carpeta ya no se compila. "
+             "Se conserva como registro de lo que se diseñó en el repo.\n\n" % m["sourceSwitchedToFigmaAt"])
+    if "HISTÓRICO desde" not in txt:
+        with open(rpath, "w", encoding="utf-8") as fh:
+            fh.write(aviso + txt)
+    notes.append("sourceMode: figma (antes repo). design-system/source/ queda como histórico.")
+    notes.append("Siguiente: el primer sync leyendo Figma por MCP (Paso 5 de la skill; si tokens.css baja de tamaño, `ds-sync.py --allow-fewer-tokens`). "
+                 "Los contratos pasarán a «verificación caducada» y hay que volver a verificarlos contra el maestro de Figma.")
+    return errs, notes
+
+
 def source_mode(ds):
     return (read_json(os.path.join(ds, "agent-manifest.json"), {}) or {}).get("sourceMode") or "figma"
 
@@ -659,10 +698,19 @@ def main():
     ap.add_argument("--figma-plan", dest="figma_plan", action="store_true")
     ap.add_argument("--status", action="store_true")
     ap.add_argument("--restore-figma-guides", dest="restore_figma", action="store_true")
+    ap.add_argument("--switch-to-figma", dest="switch_figma", action="store_true")
     a = ap.parse_args()
     here = os.path.dirname(os.path.abspath(__file__))
     root = os.path.abspath(a.root or os.path.dirname(here))
     ds = os.path.join(root, "design-system")
+    if a.switch_figma:
+        errs, notes = switch_to_figma(ds)
+        for e in errs:
+            print("  [ERROR] " + e)
+        for n in notes:
+            print("  " + n)
+        print("ds-source · " + ("no se ha cambiado nada" if errs else "la fuente de verdad pasa a Figma"))
+        return 1 if errs else 0
     if a.restore_figma:
         n = restaurar_figma(ds)
         print("ds-source · %d guías de Figma devueltas a design.md" % n if n else "ds-source · no hay guías de Figma que devolver")

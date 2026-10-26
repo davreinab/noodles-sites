@@ -5,7 +5,7 @@
   "versionedAt": null,
   "maturityStage": 1,
   "targetMaturityStage": 2,
-  "lastSync": "2026-10-23T09:40:52Z",
+  "lastSync": "2026-10-26T09:34:49Z",
   "adoptionMode": "new",
   "structuralStandardsEnforced": true,
   "sourceMode": "figma",
@@ -49,6 +49,7 @@
     "policies": "./schemas/governance/policies.json",
     "constraints": "./schemas/governance/constraints.json",
     "capabilities": "../governance/capabilities.json",
+    "models": "../governance/models.json",
     "autonomy": "../governance/autonomy.json",
     "phases": "../governance/phases.json",
     "autonomyReport": "../governance/reports/autonomy.json",
@@ -99,5 +100,7 @@
       "required": false,
       "configuredByThisSkill": false
     }
-  }
+  },
+  "starterBase": "not-applicable",
+  "starterBaseNote": "El proyecto ya usaba init-proyecto o ya había empezado su design system cuando se añadió la base inicial de componentes (12.22.0): no se le carga y la skill no debe aplicársela."
 }

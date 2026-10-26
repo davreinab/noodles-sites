@@ -37,6 +37,29 @@ terminal ni la estructura interna del repo. Por eso:
 | «¿cómo debería verse?» / «dale estilo» | Lee `UX/direction/DESIGN.md` primero. Si está en `⬜ TODO`, pide referencias en vez de inventar | Qué dirección aplicaste y de qué referencia sale |
 | «¿por qué hiciste esto?» | Cita la regla o el archivo de origen (`design.md` regla N, `patterns.md § Decisiones recurrentes`, `specs.md` R-xx) | La regla, en una frase, y dónde vive |
 
+## Modelos y agentes en paralelo
+
+El trabajo no cuesta lo mismo ni se equivoca igual. Esta norma habla de **niveles**, no de nombres
+de modelo: tu herramienta los traduce a su propia gama.
+
+- **Nivel de criterio: el modelo más capaz de tu herramienta.** Para lo que decide, interpreta o
+  redacta: destilar evidencia, sintetizar, escribir requisitos y reglas, revisar propuestas, resolver
+  fuentes que chocan. Nunca se baja de nivel para eso.
+- **Nivel mecánico: el más económico de la misma familia.** Para ejecutar algo ya decidido: pintar en
+  Figma o generar código, HTML y CSS a partir de un contrato o un diseño aprobado, renombrar, formatear,
+  leer y comparar archivos.
+- **Qué va en cada nivel** está en `tier` de `governance/capabilities.json`. El proyecto puede ajustarlo
+  en `governance/models.json` (`overrides`). Sin dato, es criterio: lo seguro.
+- **En paralelo, solo trabajo mecánico con encargo cerrado.** Cada agente recibe qué archivo toca, qué
+  reglas cumple y qué tiene que comprobar. Lo que devuelva pasa por los scripts de comprobación y por
+  una revisión antes de darlo por bueno: un modelo económico se equivoca más, y el ahorro solo vale si
+  no se paga después en correcciones.
+- **Si tu herramienta no deja elegir modelo** al lanzar un agente, sigue con el que haya y dilo una sola
+  vez. No es un error y no bloquea nada.
+- **Deja rastro** al lanzar agentes en paralelo:
+  `python3 scripts/activity.py --actor agent --action lanzar-agentes --detail "…" --tier mecanico`.
+- Escribir en Figma sigue pidiendo el «sí» de siempre, aunque sea nivel mecánico.
+
 ## Contexto funcional compartido
 
 **Antes de leer, escribir o citar cualquier dato funcional, lee
@@ -111,6 +134,12 @@ como tokens.
 Si el producto tiene superficie móvil, lee también
 [`UX/mobile-environment.md`](./UX/mobile-environment.md) antes de cualquier pantalla móvil:
 es la especificación del entorno que se simula con tecnologías web.
+
+**Al colocar un componente del DS en una pantalla**, su elemento raíz lleva `data-ds="<slug>"`. **Al
+terminar una pantalla o un flujo de `UI/`**, ejecuta `python3 scripts/screen-report.py UI/<pantalla>.html`
+y entrega el informe, resumiendo «Lo accionable» (componentes sin verificar, sin `data-ds`, piezas
+internas, overrides vivos, clases ajenas). Detalle en
+[`design-system/guides/verificacion.md § Informe de cierre de pantallas`](./design-system/guides/verificacion.md).
 
 **Lee después [`design-system/design.md`](./design-system/design.md).** Es la **única fuente de
 verdad** de las reglas del design system GB Noodles · Microsites (índice + reglas duras + Modelo B + protocolo

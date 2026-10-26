@@ -26,6 +26,7 @@
       "pending": null
     },
     "figma": {
+      "fromRepo": false,
       "nodeId": "193:176",
       "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=193-176",
       "page": "Content",

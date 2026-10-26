@@ -34,10 +34,20 @@
     <aside class="pl-nav" data-nav>
       <div class="pl-nav__top">
         <a class="pl-nav__home" href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>{{ site.name }}</a>
+        <a class="pl-nav__link" href="/composicion/"{% if page.url == "/composicion/" %} aria-current="page"{% endif %}>Composición de pantalla</a>
         <label class="pl-search">
           <span class="pl-visually-hidden">Search patterns</span>
           <input type="search" placeholder="Search patterns" data-search autocomplete="off">
         </label>
+        {% if modes.multiple %}
+        <label class="pl-mode">
+          <span class="pl-mode__label">Visual mode</span>
+          <select data-mode aria-describedby="pl-mode-help">
+            {% for m in modes.list %}<option value="{{ m.key }}">{{ m.label }}</option>{% endfor %}
+          </select>
+          <span class="pl-visually-hidden" id="pl-mode-help">Changes how the component previews are drawn.</span>
+        </label>
+        {% endif %}
       </div>
       {% for level in patterns.levels %}
       <section class="pl-nav__group" data-level-group>

@@ -1,0 +1,369 @@
+{
+  "title": "FAQ list",
+  "description": "FAQ list: lista de preguntas frecuentes con Accordion item (wireframe 428:10606 desktop, 428:12306 móvil; resultados 428:10962 / 501:14324; sin resultados 495:14043 / 428:12490).…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "faq-list",
+      "name": "FAQ list",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "317:3438",
+      "current": {
+        "description": "FAQ list: lista de preguntas frecuentes con Accordion item (wireframe 428:10606 desktop, 428:12306 móvil; resultados 428:10962 / 501:14324; sin resultados 495:14043 / 428:12490). Columna de lectura de 808 centrada en desktop (1 columna en móvil). State=Default: 13 preguntas, solo una abierta a la vez (Accordion Expanded=True en la segunda). State=Results: caption «3 results for \"Yatekomo\"» y 3 preguntas. State=Empty: Empty state (219:1663) con «We couldn't find any results for your search» y «Try with a different word or topic», después «Or maybe you're interested in these other questions:» y 3 preguntas sugeridas. Clase CSS: .faq-list. Breakpoint Desktop 1440 / Móvil 375. ⬜ TODO GB Foods: respuestas definitivas (solo hay una respuesta en el wireframe) y preguntas definitivas.",
+        "Propósito": "Lista de preguntas frecuentes de la página FAQ, en una columna de lectura centrada (`--layout-reading`, 720 px) con Accordion item. Tres estados: Default (la lista completa, de 6 a 11 preguntas), Results (la lista filtrada por la búsqueda, con el recuento «3 results for \"Yatekomo\"») y Empty (sin resultados: Empty state, la frase «Or maybe you're interested in these other questions:» y tres preguntas sugeridas). Va debajo de Library head con `library-head--center` y `library-head--no-filters`.",
+        "Variantes": "Default · Results · Empty. Breakpoint Desktop y Mobile: en móvil la misma columna ocupa todo el ancho del margen (16 px); no cambia la estructura.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "La lista es un `ul` con un `li` por pregunta, y cada pregunta es un Accordion item (encabezado `h3` con `button` y `aria-expanded`; respuesta en región). Una sola respuesta abierta a la vez: al abrir una, el script de la página cierra la anterior y actualiza su `aria-expanded` y su `hidden`. El script de la maqueta (`UI/home.html`) lo hace para todos los `.accordion-item__button` de la página; en producción, la lista debe llevar el mismo comportamiento. El recuento y el estado vacío van en `p role=\"status\"` (región viva, «polite»): cuando cambia el filtro, el lector anuncia «3 results for \"Yatekomo\"» o «0 results…» sin mover el foco. En Default la región existe y va oculta con `visually-hidden`, no con `display: none`, para que siga viva. El título del Empty state es un `h2` y las sugerencias se nombran con `aria-labelledby` en su `ul`. Teclado: Tab recorre la búsqueda y después las preguntas en orden; Enter o Espacio abren y cierran; no hay foco en la región de estado. Contraste: el recuento y el rótulo, gris cálido (`text-secondary`) sobre blanco 5,9:1 y sobre crema 5,4:1; las preguntas y respuestas, en tinta (18,7:1 sobre blanco).",
+        "Cuándo usar / qué NO hace": "Solo en la página de preguntas frecuentes. No es un buscador (la búsqueda es Library head) ni el FAQ de la Home (ese es el patrón `faq`, con su propio título y «Still curious?»). No filtra por sí mismo: el script de la página recibe el texto y decide la lista. El ancho es `--layout-reading` (720 px) y no los 808 px del wireframe: no existe token de 808 y la columna de lectura del DS es 720 (`patterns.md § Contenedores y anchos`). Textos: las preguntas son las del wireframe; **todas las respuestas son ⬜ TODO** (las confirma GB Foods). El número de preguntas por defecto (6–11) y la lista de sugerencias del Empty state (tres preguntas) son ⬜ TODO: la regla de negocio es que las sugerencias sean preguntas reales de la lista, no inventadas."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "fromRepo": false,
+      "nodeId": "317:3438",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=317-3438",
+      "page": "Pattern / Global",
+      "type": "COMPONENT_SET",
+      "variants": 6,
+      "lastSync": "2026-10-23 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "FAQ list: lista de preguntas frecuentes con Accordion item (wireframe 428:10606 desktop, 428:12306 móvil; resultados 428:10962 / 501:14324; sin resultados 495:14043 / 428:12490). Columna de lectura de 808 centrada en desktop (1 columna en móvil). State=Default: 13 preguntas, solo una abierta a la vez (Accordion Expanded=True en la segunda). State=Results: caption «3 results for \"Yatekomo\"» y 3 preguntas. State=Empty: Empty state (219:1663) con «We couldn't find any results for your search» y «Try with a different word or topic», después «Or maybe you're interested in these other questions:» y 3 preguntas sugeridas. Clase CSS: .faq-list. Breakpoint Desktop 1440 / Móvil 375. ⬜ TODO GB Foods: respuestas definitivas (solo hay una respuesta en el wireframe) y preguntas definitivas."
+    ],
+    "props": [
+      {
+        "name": "results",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Results"
+      },
+      {
+        "name": "empty",
+        "type": "boolean",
+        "values": [],
+        "default": "false",
+        "figma": "State=Empty"
+      },
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "Accordion item",
+        "component": "accordion-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "hidden": false
+      },
+      {
+        "layer": "Accordion item",
+        "component": "accordion-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-expanded",
+        "component": "icon-minus",
+        "exposedAs": "Icon expanded#69:21",
+        "hidden": false
+      },
+      {
+        "layer": "Accordion item",
+        "component": "accordion-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "hidden": false
+      },
+      {
+        "layer": "Accordion item",
+        "component": "accordion-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "hidden": false
+      },
+      {
+        "layer": "Accordion item",
+        "component": "accordion-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "hidden": false
+      },
+      {
+        "layer": "Accordion item",
+        "component": "accordion-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "hidden": false
+      },
+      {
+        "layer": "Accordion item",
+        "component": "accordion-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "hidden": false
+      },
+      {
+        "layer": "Accordion item",
+        "component": "accordion-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "hidden": false
+      },
+      {
+        "layer": "Accordion item",
+        "component": "accordion-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "hidden": false
+      },
+      {
+        "layer": "Accordion item",
+        "component": "accordion-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "hidden": false
+      },
+      {
+        "layer": "Accordion item",
+        "component": "accordion-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "hidden": false
+      },
+      {
+        "layer": "Accordion item",
+        "component": "accordion-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "hidden": false
+      },
+      {
+        "layer": "Accordion item",
+        "component": "accordion-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-collapsed",
+        "component": "icon-plus",
+        "exposedAs": "Icon collapsed#69:14",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "accordion",
+        "items": [
+          "accordion/answer",
+          "accordion/bg",
+          "accordion/border",
+          "accordion/icon",
+          "accordion/question"
+        ]
+      },
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/body-l",
+          "font/line-height/desktop/body-m",
+          "font/size/desktop/body-l",
+          "font/size/desktop/body-m",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/size/md"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/margin"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/32",
+          "space/64"
+        ]
+      }
+    ],
+    "tokenCount": 19,
+    "textStyles": [
+      "Desktop/body-l",
+      "Desktop/body-m"
+    ],
+    "classes": [
+      "accordion-item",
+      "accordion-item__button",
+      "accordion-item__heading",
+      "accordion-item__panel",
+      "faq",
+      "faq-list",
+      "faq-list__items",
+      "faq-list__status",
+      "icon",
+      "icon-plus",
+      "icon-search",
+      "library-head",
+      "library-head--center",
+      "library-head--no-filters",
+      "library-head__inner",
+      "library-head__intro",
+      "library-head__lead",
+      "library-head__search",
+      "page-title",
+      "search-field",
+      "search-field__input",
+      "section",
+      "visually-hidden"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Lista de preguntas frecuentes de la página FAQ, en una columna de lectura centrada (`--layout-reading`, 720 px) con Accordion item. Tres estados: Default (la lista completa, de 6 a 11 preguntas), Results (la lista filtrada por la búsqueda, con el recuento «3 results for \"Yatekomo\"») y Empty (sin resultados: Empty state, la frase «Or maybe you're interested in these other questions:» y tres preguntas sugeridas). Va debajo de Library head con `library-head--center` y `library-head--no-filters`.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Variantes",
+        "md": "Default · Results · Empty. Breakpoint Desktop y Mobile: en móvil la misma columna ocupa todo el ancho del margen (16 px); no cambia la estructura.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "La lista es un `ul` con un `li` por pregunta, y cada pregunta es un Accordion item (encabezado `h3` con `button` y `aria-expanded`; respuesta en región). Una sola respuesta abierta a la vez: al abrir una, el script de la página cierra la anterior y actualiza su `aria-expanded` y su `hidden`. El script de la maqueta (`UI/home.html`) lo hace para todos los `.accordion-item__button` de la página; en producción, la lista debe llevar el mismo comportamiento. El recuento y el estado vacío van en `p role=\"status\"` (región viva, «polite»): cuando cambia el filtro, el lector anuncia «3 results for \"Yatekomo\"» o «0 results…» sin mover el foco. En Default la región existe y va oculta con `visually-hidden`, no con `display: none`, para que siga viva. El título del Empty state es un `h2` y las sugerencias se nombran con `aria-labelledby` en su `ul`. Teclado: Tab recorre la búsqueda y después las preguntas en orden; Enter o Espacio abren y cierran; no hay foco en la región de estado. Contraste: el recuento y el rótulo, gris cálido (`text-secondary`) sobre blanco 5,9:1 y sobre crema 5,4:1; las preguntas y respuestas, en tinta (18,7:1 sobre blanco).",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en la página de preguntas frecuentes. No es un buscador (la búsqueda es Library head) ni el FAQ de la Home (ese es el patrón `faq`, con su propio título y «Still curious?»). No filtra por sí mismo: el script de la página recibe el texto y decide la lista. El ancho es `--layout-reading` (720 px) y no los 808 px del wireframe: no existe token de 808 y la columna de lectura del DS es 720 (`patterns.md § Contenedores y anchos`). Textos: las preguntas son las del wireframe; **todas las respuestas son ⬜ TODO** (las confirma GB Foods). El número de preguntas por defecto (6–11) y la lista de sugerencias del Empty state (tres preguntas) son ⬜ TODO: la regla de negocio es que las sugerencias sean preguntas reales de la lista, no inventadas.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "faq-list",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "317:3438",
+    "contract": "../../../../../../design-system/schemas/components/faq-list.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    },
+    "todas-las-variantes": {
+      "_title": "Todas las variantes",
+      "view": "todas"
+    }
+  }
+}

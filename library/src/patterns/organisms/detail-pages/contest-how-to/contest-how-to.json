@@ -1,0 +1,261 @@
+{
+  "title": "Contest how-to",
+  "description": "Contest how-to: cómo participar y condiciones de ganar (wireframe 330:6619 desktop, 361:8675 móvil; ver también 330:6619 y 361:8675). Fondo surface/card (blanco). h2 «Easy to part…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "contest-how-to",
+      "name": "Contest how-to",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "313:2905",
+      "current": {
+        "description": "Contest how-to: cómo participar y condiciones de ganar (wireframe 330:6619 desktop, 361:8675 móvil; ver también 330:6619 y 361:8675). Fondo surface/card (blanco). h2 «Easy to participate, easy to win» con subtítulo; columna «Steps» con 4 Pillar item Tone=Ink (el paso 3 lleva Link «Submit it now →»); columna «Winning conditions» con Contest conditions. Móvil: columnas apiladas. Clase CSS: .contest-howto. ⬜ TODO GB Foods: texto de los pasos, fechas del sorteo y lista de condiciones reales; la mecánica de resultado inmediato sigue pendiente de confirmar con GB Foods y la agencia.",
+        "Propósito": "Cómo participar y cómo se gana: título «Easy to participate, easy to win» y entradilla; dos columnas: los pasos (Pillar item en variante Ink, con «Submit it now →» en el paso 3) y las condiciones del concurso (Contest conditions). Fondo blanco.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "Cada columna tiene su h3 y los pasos van en `ol`: el orden de los pasos lo dice la lista. Los números van con `aria-hidden`. El enlace «Submit it now →» va a `#join` (el formulario, con `tabindex=\"-1\"`). Teclado: Tab por el enlace del paso 3 y por el de las bases. Contraste: tinta sobre blanco; los círculos tinta con número crema (17:1). El orden en móvil es el mismo: primero los pasos y después las condiciones.",
+        "Cuándo usar / qué NO hace": "Solo en la página de concurso, entre premios y formulario. No es una lista de preparación (eso es Preparation con Step). Los textos de los pasos son ⬜ TODO: son reglas del concurso y los confirma GB Foods; el periodo de compra (1 agosto a 30 septiembre de 2026) también."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "fromRepo": false,
+      "nodeId": "313:2905",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=313-2905",
+      "page": "Pattern / Detail pages",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-23 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Contest how-to: cómo participar y condiciones de ganar (wireframe 330:6619 desktop, 361:8675 móvil; ver también 330:6619 y 361:8675). Fondo surface/card (blanco). h2 «Easy to participate, easy to win» con subtítulo; columna «Steps» con 4 Pillar item Tone=Ink (el paso 3 lleva Link «Submit it now →»); columna «Winning conditions» con Contest conditions. Móvil: columnas apiladas. Clase CSS: .contest-howto. ⬜ TODO GB Foods: texto de los pasos, fechas del sorteo y lista de condiciones reales; la mecánica de resultado inmediato sigue pendiente de confirmar con GB Foods y la agencia."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [
+      {
+        "layer": "Pillar item",
+        "component": "pillar-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Pillar item",
+        "component": "pillar-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Pillar item",
+        "component": "pillar-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Link",
+        "component": "link",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "icon-trailing",
+        "component": "icon-arrow-right",
+        "exposedAs": "Icon#35:0",
+        "hidden": true
+      },
+      {
+        "layer": "Pillar item",
+        "component": "pillar-item",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Contest conditions",
+        "component": "contest-conditions",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Icon / calendar-clock",
+        "component": "icon-calendar-clock",
+        "exposedAs": "",
+        "hidden": false
+      },
+      {
+        "layer": "Icon / trophy",
+        "component": "icon-trophy",
+        "exposedAs": "",
+        "hidden": false
+      }
+    ],
+    "tokens": [
+      {
+        "group": "color",
+        "items": [
+          "color/surface/card",
+          "color/surface/inverse",
+          "color/text/default",
+          "color/text/on-inverse",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/family/display",
+          "font/line-height/desktop/body-m",
+          "font/line-height/desktop/body-s",
+          "font/line-height/desktop/h2",
+          "font/line-height/desktop/h3",
+          "font/line-height/desktop/label",
+          "font/size/desktop/body-m",
+          "font/size/desktop/body-s",
+          "font/size/desktop/h2",
+          "font/size/desktop/h3",
+          "font/size/desktop/label",
+          "font/style/body",
+          "font/style/display"
+        ]
+      },
+      {
+        "group": "icon",
+        "items": [
+          "icon/color/inverse",
+          "icon/size/md",
+          "icon/size/sm"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/margin"
+        ]
+      },
+      {
+        "group": "link",
+        "items": [
+          "link/default",
+          "link/inverse"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/md",
+          "radius/pill"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/24",
+          "space/32",
+          "space/64",
+          "space/8"
+        ]
+      }
+    ],
+    "tokenCount": 32,
+    "textStyles": [
+      "Desktop/h2",
+      "Desktop/body-m",
+      "Desktop/h3",
+      "Desktop/label",
+      "Desktop/body-s"
+    ],
+    "classes": [
+      "contest-conditions",
+      "contest-conditions__item",
+      "contest-conditions__list",
+      "contest-conditions__text",
+      "contest-howto",
+      "contest-howto__column",
+      "contest-howto__column--conditions",
+      "contest-howto__grid",
+      "contest-howto__heading",
+      "contest-howto__steps",
+      "icon",
+      "icon--inverse",
+      "icon-calendar-clock",
+      "icon-trophy",
+      "link",
+      "link--dark",
+      "pillar-item",
+      "pillar-item--ink",
+      "pillar-item__action",
+      "pillar-item__number",
+      "pillar-item__text",
+      "pillar-item__title",
+      "section",
+      "section__header",
+      "section__inner",
+      "section__lead",
+      "section__title"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Cómo participar y cómo se gana: título «Easy to participate, easy to win» y entradilla; dos columnas: los pasos (Pillar item en variante Ink, con «Submit it now →» en el paso 3) y las condiciones del concurso (Contest conditions). Fondo blanco.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "Cada columna tiene su h3 y los pasos van en `ol`: el orden de los pasos lo dice la lista. Los números van con `aria-hidden`. El enlace «Submit it now →» va a `#join` (el formulario, con `tabindex=\"-1\"`). Teclado: Tab por el enlace del paso 3 y por el de las bases. Contraste: tinta sobre blanco; los círculos tinta con número crema (17:1). El orden en móvil es el mismo: primero los pasos y después las condiciones.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "Solo en la página de concurso, entre premios y formulario. No es una lista de preparación (eso es Preparation con Step). Los textos de los pasos son ⬜ TODO: son reglas del concurso y los confirma GB Foods; el periodo de compra (1 agosto a 30 septiembre de 2026) también.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "contest-how-to",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "313:2905",
+    "contract": "../../../../../../design-system/schemas/components/contest-how-to.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

@@ -79,6 +79,7 @@ function walkPatterns() {
           kind: meta.ds.kind || "component",
           verification: meta.ds.verification || "unverified",
           interno: segments.includes("internos-de-figma"),
+          parte: segments.includes("partes-de-otro-componente"),
           sheet: meta.sheet && typeof meta.sheet === "object" ? meta.sheet : null,
         });
         return;
@@ -218,7 +219,7 @@ export default function () {
         flags.push({ ...FLAG.contrast, label: `contraste bajo AA (${contrastFail})`, detail: (sh.contrast && sh.contrast.label) || "" });
         contrastPairs += contrastFail;
       }
-      if (!c.hasExample) flags.push({ ...FLAG.example, detail: "" });
+      if (!c.hasExample && !c.parte) flags.push({ ...FLAG.example, detail: "" });
       if (c.lifecycle === "deprecated") flags.push({ ...FLAG.retired, detail: "" });
       const fw = fidByComp.get(c.slug) || [];
       if (fw.length) flags.push({ ...FLAG.fidelity, label: `fidelidad (${fw.length})`, detail: fw.map((f) => `${f.code}: ${f.value}`).join(" · ") });
@@ -256,6 +257,7 @@ export default function () {
     generatedAt: fmtDate(new Date().toISOString(), true),
     ds: {
       name: manifest.designSystem || "",
+      fromRepo: manifest.sourceMode === "repo",
       version: manifest.version || null,
       versionedAt: fmtDate(manifest.versionedAt),
       lastSync: fmtDate(manifest.lastSync, true),

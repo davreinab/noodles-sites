@@ -334,13 +334,15 @@ def sin_presencia(text, target):
     return "".join(out)
 
 
-def spec_presente(spec, example):
+def spec_presente(spec, example, slug=None):
     """¿El ejemplo muestra ese estado? Presencia: sale algún elemento que case. Atributo o clase: algún elemento que case
-    (o el raíz, sin target) lo lleva con ese valor."""
+    (o, sin target, alguna muestra: un elemento de primer nivel o uno con el data-ds del componente, aunque el ejemplo
+    lo envuelva en un contenedor de maquetación) lo lleva con ese valor."""
     els = elementos(example)
     if not els:
         return False
     tops = {t["start"] for t in top_level(example)}
+    tops |= {e["start"] for e in els if e["attrs"].get("data-ds") and (slug is None or e["attrs"].get("data-ds") == slug)}
     cand = [e for e in els if (coincide(e, spec["target"]) if spec["target"] else e["start"] in tops)]
     if spec["presence"]:
         return bool(cand)
@@ -558,6 +560,9 @@ def analyze(sch, example, classes_in_css, fid_cfg=None, css_rules=None):
     for p in props:
         resolved = {v: resolve(p, v) for v in p["values"]}
         mods = {c for v, (k, cl) in resolved.items() if k == "class" and str(v) != p["default"] for c in cl if c not in bases}
+        # lo que la galería quita de la raíz antes de poner el valor de la celda: las clases de TODOS los valores del eje (también las del
+        # valor por defecto), salvo las de la pieza base. Así la celda sale bien sea cual sea la variante con la que está escrito el ejemplo.
+        quitar = {c for v, (k, cl) in resolved.items() if k == "class" for c in cl if c not in bases}
         for v in p["values"]:
             kind, cl = resolved[v]
             label = f"{p['name']}={v}"
@@ -571,13 +576,13 @@ def analyze(sch, example, classes_in_css, fid_cfg=None, css_rules=None):
                 elif it["default"]:
                     it["state"] = "visible"
                 else:
-                    it["state"] = "visible" if spec_presente(cl, example) else "missing"
+                    it["state"] = "visible" if spec_presente(cl, example, slug) else "missing"
                 items.append(it)
                 continue
             cl = cl
             it = {"axis": p["name"], "kind": p["kind"], "value": v, "label": label, "classes": cl,
                   "default": (p["kind"] == "enum" and v == p["default"]), "mods": sorted(mods),
-                  "scope": "root"}
+                  "quitar": sorted(quitar), "scope": "root"}
             if kind == "class":
                 it["scope"], destino = clasificar(p, resolved, v, cl)
                 if it["scope"] == "child" and p["kind"] == "enum" and destino:
@@ -640,6 +645,33 @@ def _en_hijo(text, block, remove, add):
     return text
 
 
+def _fija_color(clase, css_rules):
+    """¿Alguna regla del CSS con esta clase en su último compuesto pone color de texto o de fondo? Así se distingue un contenedor que
+    cambia cómo se ve la variante (una superficie oscura) de uno que solo coloca (una fila, una columna)."""
+    for sel, cuerpo in css_rules or []:
+        for una in sel.split(","):
+            ultimo = re.split(r"[\s>+~]+", una.strip())[-1]
+            if ":" in ultimo or not re.search(r"\.%s(?![\w-])" % re.escape(clase), ultimo):
+                continue
+            if re.search(r"(^|;)\s*(background(-color)?|color)\s*:", cuerpo):
+                return True
+    return False
+
+
+def _contexto(example, root, css_rules=None):
+    """(apertura, cierre) de los elementos que envuelven a la raíz en el ejemplo y que fijan color o fondo, de fuera adentro y sin sus
+    `id`: ese contenedor (un bloque de fondo oscuro, una superficie) forma parte de cómo se ve la variante, y sin él un texto claro se
+    pinta sobre el blanco de la vista previa. Los que solo colocan (filas, columnas, rejillas) no se llevan: no cambian la variante.
+    Sin raíz, sin reglas de CSS o si la raíz es de primer nivel, no hay contexto."""
+    if not root or not css_rules:
+        return "", ""
+    anc = sorted((e for e in elementos(example) if e["start"] < root["start"] and e["end"] > root["end"]
+                  and any(_fija_color(c, css_rules) for c in _class_tokens(e["open"]))), key=lambda e: e["start"])
+    pre = "".join(re.sub(r'\s+id\s*=\s*("[^"]*"|\'[^\']*\')', "", e["open"]) for e in anc)
+    post = "".join("</%s>" % e["tag"] for e in reversed(anc))
+    return pre, post
+
+
 def _unique_ids(html_text, k):
     ids = set(re.findall(r'\bid\s*=\s*"([^"]+)"', html_text))
     if not ids or k == 0:
@@ -699,7 +731,7 @@ def nota_no_pintadas(no_gen):
     return ("No se han podido pintar: " + ", ".join(no_gen) + ".") if no_gen else ""
 
 
-def gallery(sch, example, analysis, pairs=None):
+def gallery(sch, example, analysis, pairs=None, css_rules=None):
     """(html | None, no_generables) — la rejilla «Todas las variantes» y las variantes que no se pudieron pintar.
 
     Se recorre cada eje por separado (no el producto de todos) y, aparte, las combinaciones que el CSS escribe como compuesto y miden contraste (las que no llegan a AA, primero). Cada celda es el elemento raíz del ejemplo con las
@@ -783,13 +815,13 @@ def gallery(sch, example, analysis, pairs=None):
     for (axis, kind), its in por_eje.items():
         celdas = []
         for it in its[:MAX_CELLS_PER_AXIS]:
-            opts = [(it["label"], [] if it["default"] else it["classes"])] if kind == "enum" else [
+            opts = [(it["label"], it["classes"])] if kind == "enum" else [
                 (f"{axis}=true", it["classes"]), (f"{axis}=false", [])]
             for etiqueta, add in opts:
                 if it.get("target"):
-                    celdas.append((etiqueta, _unique_ids(_en_hijo(base_de(it), it["target"], set(it["mods"]), add), k)))
+                    celdas.append((etiqueta, _unique_ids(_en_hijo(base_de(it), it["target"], set(it.get("quitar") or it["mods"]), add), k)))
                 else:
-                    tag = _with_classes(open_tag, set(it["mods"]) | (set(it["classes"]) if kind == "bool" else set()), add)
+                    tag = _with_classes(open_tag, set(it.get("quitar") or it["mods"]) | (set(it["classes"]) if kind == "bool" else set()), add)
                     celdas.append((etiqueta, _unique_ids(tag + body, k)))
                 k += 1
         if len(its) > MAX_CELLS_PER_AXIS:
@@ -855,12 +887,13 @@ def gallery(sch, example, analysis, pairs=None):
            ".ds-gallery section{margin:0 0 32px}.ds-gallery__row{display:flex;flex-wrap:wrap;align-items:center;gap:24px 32px}"
            ".ds-gallery figure{margin:0;display:flex;flex-direction:column;gap:8px;align-items:flex-start}.ds-gallery figcaption{font:12px/1.3 ui-monospace,monospace;color:#4a4a4a}"
            ".ds-gallery__stage{padding:8px;min-width:48px;min-height:32px;outline:1px dashed #bebebe;outline-offset:0}</style>"]
+    pre, post = _contexto(example, root, css_rules)
     for titulo, celdas in secciones:
         out.append(f"<section><h3>{titulo}</h3><div class=\"ds-gallery__row\">")
         for etiqueta, h in celdas:
-            out.append(f"<figure><div class=\"ds-gallery__stage\">{h}</div><figcaption>{etiqueta}</figcaption></figure>")
+            out.append(f"<figure><div class=\"ds-gallery__stage\">{pre}{h}{post}</div><figcaption>{etiqueta}</figcaption></figure>")
         out.append("</div></section>")
-    nota = ("La galería clona el elemento raíz del ejemplo y solo cambia sus clases" + (" y atributos" if spec_ejes else "") + ": una variante que necesita otro marcado "
+    nota = ("La galería clona el elemento raíz del ejemplo, con los contenedores que le dan color o fondo, y solo cambia sus clases" + (" y atributos" if spec_ejes else "") + ": una variante que necesita otro marcado "
             "(otro contenido, otro icono) puede verse incompleta; si es el caso, añádela al ejemplo de código.")
     if analysis.get("ignored_reasons"):
         nota = ("No se pintan por su naturaleza (declarado en coverageIgnore): "

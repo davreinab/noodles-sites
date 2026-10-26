@@ -588,7 +588,7 @@ class Tokens:
 
     def tokens_md(self, meta):
         L = ["<!-- ⚙️ ARCHIVO GENERADO por scripts/ds-sync.py — NO EDITAR A MANO. -->", "",
-             f"# {meta['designSystem']} · Tokens  ·  _(espejo generado de Figma)_", "",
+             f"# {meta['designSystem']} · Tokens  ·  _(espejo generado de la fuente)_", "",
              f"> Última sync: **{self.synced_at}** · modo de adopción: `{meta['adoptionMode']}` · "
              f"{len(self.tokens)} variables en {len(self.collections)} colecciones · {len(self.text_styles)} text styles · {len(self.effect_styles)} effect styles.",
              "> Cada token se consume en código como `var(--nombre)`. Los alias conservan su referencia y su valor resuelto.", "", "## Índice", ""]
@@ -889,6 +889,12 @@ class Components:
                 ver.pop("staleSince", None); ver.pop("reason", None)
                 self.findings.append(("info", "verification-restored", f"{c['name']}: la anatomía vuelve a ser la verificada ({ver.get('date', '?')}); vuelve a «verified»"))
             sch["meta"]["verification"] = ver
+        if (sch.get("figma") or {}).get("fileKey") == "repo":
+            # Modo repo: no hay maestro de Figma con el que comparar; la fuente del repo es el maestro. El contrato consta como
+            # verificado y no caduca; ds-fidelity sigue comprobando CSS, ejemplo, cobertura de variantes y contraste.
+            sch["meta"]["verification"] = {"status": "verified", "date": self.synced_at[:10], "by": "fuente del repo",
+                                           "figmaVersion": sch["meta"]["anatomyHash"],
+                                           "note": "modo repo: la fuente (design-system/source/) es el maestro; se comprueba con ds-fidelity"}
         old_rules = existing.get("rules") or {}
         if any(old_rules.values()):
             self.keep_existing.add(s)
@@ -1748,6 +1754,44 @@ def check_dump(raw_vars, raw_comps, textos):
 
 
 # ────────────────────────────── main ──────────────────────────────
+def marcar_base_inicial(ds, dry=False):
+    """Base inicial de componentes (12.22.0): solo la recibe un proyecto NUEVO que la elige al crearse, y eso lo dice
+    `starterBase: "pending"` en su manifest. Un proyecto anterior (sin la marca) o que ya empezó su design system, con Figma,
+    en el repo o vacío, queda marcado «not-applicable»: la base nunca se carga en él. Se marca sola, lo primero que hace el
+    sync (antes de cualquier comprobación, para que también quede marcado un proyecto que aún no tiene volcados), sin
+    depender de que alguien se acuerde. Devuelve True si cambió el manifest."""
+    mpath = os.path.join(ds, "agent-manifest.json")
+    manifest = read_json(mpath, None)
+    if not isinstance(manifest, dict):
+        return False
+
+    def iniciado():
+        if manifest.get("figmaSources"):
+            return True
+        for rel in ("sync/components.json", "sync/variables.json"):
+            d = read_json(os.path.join(ds, rel), {}) or {}
+            if any(d.get(k) for k in ("components", "collections", "variables")):
+                return True
+        sch_dir = os.path.join(ds, "schemas", "components")
+        if os.path.isdir(sch_dir) and any(f.endswith(".schema.json") and not f.startswith("_") for f in os.listdir(sch_dir)):
+            return True
+        src = read_json(os.path.join(ds, "source", "tokens.json"), {}) or {}
+        return any((c or {}).get("tokens") for c in src.get("collections") or [])
+
+    sb = manifest.get("starterBase")
+    if sb is None or (sb == "pending" and iniciado()):
+        manifest["starterBase"] = "not-applicable"
+        manifest["starterBaseNote"] = ("El proyecto ya usaba init-proyecto o ya había empezado su design system cuando se añadió la base "
+                                       "inicial de componentes (12.22.0): no se le carga y la skill no debe aplicársela.")
+        if not dry:
+            with open(mpath, "w", encoding="utf-8") as fh:
+                json.dump(manifest, fh, ensure_ascii=False, indent=2)
+                fh.write("\n")
+        print("[MIGRACIÓN] agent-manifest.json → starterBase: not-applicable (el proyecto ya tiene o ha empezado su design system; la base inicial no se carga)")
+        return True
+    return False
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--root", default=None)
@@ -1769,6 +1813,7 @@ def main():
     for k, v in (user_cfg or {}).items():
         cfg[k] = {**cfg[k], **v} if isinstance(v, dict) and isinstance(cfg.get(k), dict) else v
     os.chdir(root)
+    marcar_base_inicial(ds, args.dry)
 
     if args.variables_diff:
         sys.exit(variables_diff(ds, args.dry))

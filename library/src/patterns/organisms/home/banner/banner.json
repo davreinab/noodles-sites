@@ -1,0 +1,158 @@
+{
+  "title": "Banner",
+  "description": "Banner de campaña de la Home (wireframe UX): una pieza gráfica de campaña a todo el ancho del contenido, dentro de un marco con borde de tinta, radius/lg y elevation/2. La imagen…",
+  "status": "Ready",
+  "sheet": {
+    "contrast": {
+      "pairs": [],
+      "fail": 0,
+      "untestable": [],
+      "exempt": 0,
+      "label": "Sin parejas medibles"
+    },
+    "pending": null,
+    "edit": {
+      "slug": "banner",
+      "name": "Banner",
+      "fileKey": "v4mnn154qUmiB35CCnRfgh",
+      "nodeId": "92:884",
+      "current": {
+        "description": "Banner de campaña de la Home (wireframe UX): una pieza gráfica de campaña a todo el ancho del contenido, dentro de un marco con borde de tinta, radius/lg y elevation/2. La imagen lleva el mensaje; el banner entero es un enlace a la campaña y su texto alternativo repite lo que dice la pieza. Se oculta si no hay campaña. No es un carrusel. Sin variables propias.",
+        "Propósito": "Banner de campaña de la Home (wireframe UX): una pieza gráfica a todo el ancho del contenido; el banner entero es el enlace a la campaña.",
+        "Accesibilidad (rol, nombre, estados y teclado)": "El texto alternativo repite lo que dice la pieza (la imagen lleva el mensaje). Marco con borde de tinta y foco visible en el enlace.",
+        "Cuándo usar / qué NO hace": "En la Home, solo con campaña activa; sin ella se oculta. No es un carrusel ni lleva texto HTML encima de la imagen."
+      },
+      "proposed": {},
+      "pending": null
+    },
+    "figma": {
+      "fromRepo": false,
+      "nodeId": "92:884",
+      "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=92-884",
+      "page": "Pattern / Home",
+      "type": "COMPONENT_SET",
+      "variants": 2,
+      "lastSync": "2026-10-22 · 09:38 UTC",
+      "verification": "verified",
+      "verificationLabel": "Verificado"
+    },
+    "description": [
+      "Banner de campaña de la Home (wireframe UX): una pieza gráfica de campaña a todo el ancho del contenido, dentro de un marco con borde de tinta, radius/lg y elevation/2. La imagen lleva el mensaje; el banner entero es un enlace a la campaña y su texto alternativo repite lo que dice la pieza. Se oculta si no hay campaña. No es un carrusel. Sin variables propias."
+    ],
+    "props": [
+      {
+        "name": "breakpoint",
+        "type": "enum",
+        "values": [
+          "Desktop",
+          "Mobile"
+        ],
+        "default": "Desktop",
+        "figma": "Breakpoint"
+      }
+    ],
+    "cssStates": [],
+    "events": [],
+    "slots": [],
+    "icons": {
+      "swap": [],
+      "defaults": []
+    },
+    "nested": [],
+    "tokens": [
+      {
+        "group": "border",
+        "items": [
+          "border/width/thin"
+        ]
+      },
+      {
+        "group": "color",
+        "items": [
+          "color/border/default",
+          "color/effect/shadow-ink",
+          "color/surface/page",
+          "color/text/secondary"
+        ]
+      },
+      {
+        "group": "font",
+        "items": [
+          "font/family/body",
+          "font/line-height/desktop/caption",
+          "font/size/desktop/caption",
+          "font/style/body"
+        ]
+      },
+      {
+        "group": "layout",
+        "items": [
+          "layout/frame",
+          "layout/margin",
+          "layout/section-y"
+        ]
+      },
+      {
+        "group": "radius",
+        "items": [
+          "radius/lg",
+          "radius/none"
+        ]
+      },
+      {
+        "group": "space",
+        "items": [
+          "space/16",
+          "space/48"
+        ]
+      }
+    ],
+    "tokenCount": 16,
+    "textStyles": [
+      "Desktop/caption"
+    ],
+    "classes": [
+      "banner",
+      "banner__box",
+      "section",
+      "section__inner"
+    ],
+    "manual": [
+      {
+        "label": "Propósito",
+        "md": "Banner de campaña de la Home (wireframe UX): una pieza gráfica a todo el ancho del contenido; el banner entero es el enlace a la campaña.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      },
+      {
+        "label": "Accesibilidad (rol, nombre, estados y teclado)",
+        "md": "El texto alternativo repite lo que dice la pieza (la imagen lleva el mensaje). Marco con borde de tinta y foco visible en el enlace.",
+        "todo": false,
+        "na": false,
+        "canNA": true
+      },
+      {
+        "label": "Cuándo usar / qué NO hace",
+        "md": "En la Home, solo con campaña activa; sin ella se oculta. No es un carrusel ni lleva texto HTML encima de la imagen.",
+        "todo": false,
+        "na": false,
+        "canNA": false
+      }
+    ],
+    "manualTodo": 0,
+    "notes": ""
+  },
+  "ds": {
+    "slug": "banner",
+    "kind": "pattern",
+    "verification": "verified",
+    "figmaNodeId": "92:884",
+    "contract": "../../../../../../design-system/schemas/components/banner.schema.json"
+  },
+  "variants": {
+    "default": {
+      "_title": "Ejemplo de código"
+    }
+  }
+}

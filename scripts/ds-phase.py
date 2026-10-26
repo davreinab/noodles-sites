@@ -128,6 +128,9 @@ class Proyecto:
             return False, "patterns.md no tiene la sección de Composición de pantalla"
         bloque = t.split("## Composición de pantalla", 1)[1][:4000]
         pend = bloque.count("⬜ TODO")
+        if pend == 0 and "norma de la base inicial" in t.split("## Composición de pantalla", 1)[1].split("\n", 1)[0]:
+            return True, ("reglas de composición preestablecidas por la base inicial (confirmadas): avisa al usuario de que existen "
+                          "antes de montar la primera pantalla; las puede ajustar")
         return (pend == 0, "reglas de composición escritas" if pend == 0 else
                 "quedan %d reglas de composición en TODO" % pend)
 
@@ -175,7 +178,7 @@ def main():
                         "blockedBy": ["el módulo '%s' no está activo en este proyecto" % mod],
                         "why": f.get("why")})
             continue
-        motivos, no_aplica, puede = [], [], True
+        motivos, no_aplica, avisos, puede = [], [], [], True
         for cond in f.get("requires") or []:
             # Una condición puede ser un id o {"id", "module"}: si su módulo está apagado, no aplica
             cmod = cond.get("module") if isinstance(cond, dict) else None
@@ -190,8 +193,10 @@ def main():
             ok, por = fn()
             if not ok:
                 puede = False; motivos.append(por)
+            elif "avisa al usuario" in por:
+                avisos.append(por)
         out.append({"id": f["id"], "title": f.get("title"), "canStart": puede,
-                    "blockedBy": motivos, "notApplicable": no_aplica, "why": f.get("why")})
+                    "blockedBy": motivos, "notApplicable": no_aplica, "notices": avisos, "why": f.get("why")})
         if not puede:
             bloqueadas += 1
 
@@ -209,6 +214,8 @@ def main():
               ("✘ Todavía no puedes empezar «%s»." % x["title"]))
         for m in x["blockedBy"]:
             print("   falta: %s" % m)
+        for m in x.get("notices") or []:
+            print("   ℹ %s" % m)
         for m in x.get("notApplicable") or []:
             print("   – %s" % m)
         if not x["canStart"] and x.get("why"):

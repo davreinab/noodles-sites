@@ -26,6 +26,7 @@
       "pending": null
     },
     "figma": {
+      "fromRepo": false,
       "nodeId": "21:177",
       "url": "https://www.figma.com/design/v4mnn154qUmiB35CCnRfgh/?node-id=21-177",
       "page": "Brand assets",

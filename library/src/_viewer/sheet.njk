@@ -27,7 +27,7 @@
 <section class="pl-sheet" aria-label="Ficha del componente">
 
   <dl class="pl-kpis">
-    <div class="pl-kpi">
+    {% if not sh.figma.fromRepo %}<div class="pl-kpi">
       <dt>Figma</dt>
       <dd>{% if sh.figma.url %}<a href="{{ sh.figma.url }}" target="_blank" rel="noopener"><code>{{ sh.figma.nodeId }}</code></a>{% else %}<code>{{ sh.figma.nodeId or "—" }}</code>{% endif %}</dd>
     </div>
@@ -35,11 +35,12 @@
     <div class="pl-kpi"><dt>Tipo</dt><dd>{{ "Conjunto de variantes" if sh.figma.type == "COMPONENT_SET" else ("Componente" if sh.figma.type == "COMPONENT" else (sh.figma.type or "—")) }}</dd></div>
     <div class="pl-kpi"><dt>Variantes</dt><dd class="pl-kpi__num">{{ sh.figma.variants if sh.figma.variants !== null else "—" }}</dd></div>
     <div class="pl-kpi pl-kpi--{{ sh.figma.verification }}"><dt>Contra el maestro</dt><dd><span class="pl-pill pl-pill--{{ sh.figma.verification }}">{{ sh.figma.verificationLabel }}</span></dd></div>
+    {% endif %}
     <div class="pl-kpi"><dt>Última sync</dt><dd>{{ sh.figma.lastSync or "—" }}</dd></div>
     <div class="pl-kpi"><dt>Contraste AA</dt><dd>{% if sh.contrast %}<span class="pl-pill pl-pill--{{ 'fail' if sh.contrast.fail else ('verified' if sh.contrast.pairs.length else 'none') }}">{{ sh.contrast.label }}</span>{% else %}<span class="pl-muted">Sin CSS todavía</span>{% endif %}</dd></div>
   </dl>
 
-  {% if sh.coverage and not sh.coverage.complete %}
+  {% if sh.coverage and not sh.coverage.complete and not sh.figma.fromRepo %}
   <p class="pl-coverage">Este ejemplo muestra <b>{{ sh.coverage.visible }} de {{ sh.coverage.total }}</b> variantes de Figma: faltan {{ sh.coverage.missing | join(", ") }}.{% if sh.figma.url %} <a href="{{ sh.figma.url }}" target="_blank" rel="noopener">Ver en Figma</a>.{% endif %} La pestaña «Todas las variantes» enseña las que se pueden generar.</p>
   {% endif %}
 
@@ -47,7 +48,7 @@
 
     <article class="pl-card" data-edit-block="description">
       <h2 class="pl-card__title">
-        Descripción <span class="pl-card__src">desde Figma</span>
+        Descripción{% if not sh.figma.fromRepo %} <span class="pl-card__src">desde Figma</span>{% endif %}
         {% if sh.pending and sh.pending.description %}<span class="pl-pill pl-pill--pending">{{ sh.pending.statusLabel }}</span>{% endif %}
         {% if sh.pending and sh.pending.descriptionByAI %}<span class="pl-pill pl-pill--ai">Borrador de la IA</span>{% endif %}
         <button type="button" class="pl-edit" data-edit-open hidden>Editar</button>
@@ -56,11 +57,11 @@
         {% if sh.pending and sh.pending.description %}
         {% for p in sh.pending.description %}<p>{{ p }}</p>{% endfor %}
         <details class="pl-current">
-          <summary>Texto actual en Figma</summary>
-          {% if sh.description.length %}{% for p in sh.description %}<p>{{ p }}</p>{% endfor %}{% else %}<p class="pl-muted">Sin descripción en Figma.</p>{% endif %}
+          <summary>Texto actual{% if not sh.figma.fromRepo %} en Figma{% endif %}</summary>
+          {% if sh.description.length %}{% for p in sh.description %}<p>{{ p }}</p>{% endfor %}{% else %}<p class="pl-muted">Sin descripción{% if not sh.figma.fromRepo %} en Figma{% endif %}.</p>{% endif %}
         </details>
         {% elif sh.description.length %}{% for p in sh.description %}<p>{{ p }}</p>{% endfor %}
-        {% else %}<p class="pl-muted">Sin descripción en Figma.</p>{% endif %}
+        {% else %}<p class="pl-muted">Sin descripción{% if not sh.figma.fromRepo %} en Figma{% endif %}.</p>{% endif %}
       </div>
       {{ editForm() }}
     </article>
@@ -103,7 +104,7 @@
       {% if sh.props.length %}
       <div class="pl-table-wrap">
         <table class="pl-table">
-          <thead><tr><th scope="col">Propiedad</th><th scope="col">Tipo</th><th scope="col">Valores</th><th scope="col">Por defecto</th><th scope="col">Nombre en Figma</th></tr></thead>
+          <thead><tr><th scope="col">Propiedad</th><th scope="col">Tipo</th><th scope="col">Valores</th><th scope="col">Por defecto</th>{% if not sh.figma.fromRepo %}<th scope="col">Nombre en Figma</th>{% endif %}</tr></thead>
           <tbody>
             {% for p in sh.props %}
             <tr>
@@ -111,7 +112,7 @@
               <td><span class="pl-type pl-type--{{ p.type }}">{{ p.type }}</span></td>
               <td>{% if p.values.length %}<span class="pl-chips">{% for v in p.values %}<span class="pl-chip{% if v == p.default %} pl-chip--on{% endif %}">{{ v }}</span>{% endfor %}</span>{% else %}<span class="pl-muted">—</span>{% endif %}</td>
               <td>{% if p.default !== "" %}<code>{{ p.default }}</code>{% else %}<span class="pl-muted">—</span>{% endif %}</td>
-              <td>{% if p.figma %}<code class="pl-figma-name">{{ p.figma }}</code>{% else %}<span class="pl-muted">igual</span>{% endif %}</td>
+              {% if not sh.figma.fromRepo %}<td>{% if p.figma %}<code class="pl-figma-name">{{ p.figma }}</code>{% else %}<span class="pl-muted">igual</span>{% endif %}</td>{% endif %}
             </tr>
             {% endfor %}
           </tbody>

@@ -27,6 +27,10 @@ import re
 import subprocess
 import sys
 
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import ds_common as dcom  # noqa: E402
+
 CUMPLE, NO_CUMPLE, PENDIENTE, NO_APLICA = "cumple", "no-cumple", "pendiente", "no-aplica"
 
 
@@ -147,22 +151,57 @@ class Rater:
         return CUMPLE, "%d contratos con claves obligatorias y valores cerrados" % len(self.schemas)
 
     def c_runnable_patterns(self):
+        """Cada pieza que se construye tiene ejemplo ejecutable y sus clases existen en components.css. No se le piden a lo que no se
+        construye: las piezas internas (las de ds_common.interno_de) y las partes de otro componente (las que algún componente propio
+        instancia, según relations.uses: las cubre el ejemplo de su padre). El detalle separa lo no construido de lo construido sin
+        ejemplo."""
         if not self.schemas:
             return PENDIENTE, "sin contratos de componente todavía"
         css = self.css_text()
         if not css:
             return PENDIENTE, "css/components.css vacío o inexistente"
-        bad = []
+        cfg = dcom.load_config(os.path.join(self.root, "scripts") if os.path.isdir(os.path.join(self.root, "scripts")) else HERE)
+        validos = [s for s in self.schemas.values() if isinstance(s, dict) and s.get("meta")]
+        padres = dcom.partes_de(validos, cfg)
+        internas, partes = [], []
+        sin_construir, sin_ejemplo, huerfanas_l = [], [], []
+        construibles = 0
         for slug, sch in self.schemas.items():
-            code = (sch or {}).get("code") or ((sch or {}).get("source") or {}).get("code") or {}
+            if not isinstance(sch, dict) or not sch.get("meta"):
+                continue
+            if dcom.interno_de(sch, cfg) is not None:
+                internas.append(slug); continue
+            code = sch.get("code") or (sch.get("source") or {}).get("code") or {}
+            clases = [c for c in (code.get("classes") or []) if c]
+            reales = [c for c in clases if re.search(r"[.\s,{]" + re.escape(c) + r"\b", css)]
             if not code.get("example"):
-                bad.append("%s: sin ejemplo de código" % slug); continue
-            huerfanas = [c for c in (code.get("classes") or []) if not re.search(r"[.\s,{]" + re.escape(c) + r"\b", css)]
+                if padres.get((sch.get("meta") or {}).get("slug") or slug):
+                    partes.append(slug); continue
+                construibles += 1
+                (sin_ejemplo if reales else sin_construir).append(slug); continue
+            construibles += 1
+            huerfanas = [c for c in clases if c not in reales]
             if huerfanas:
-                bad.append("%s: clases sin realizar en components.css (%s)" % (slug, ", ".join(huerfanas[:3])))
-        if bad:
-            return NO_CUMPLE, "%d contratos sin ejemplo ejecutable (p. ej. %s)" % (len(bad), bad[0])
-        return CUMPLE, "%d contratos con ejemplo y clases existentes" % len(self.schemas)
+                huerfanas_l.append("%s (%s)" % (slug, ", ".join(huerfanas[:3])))
+        excl = []
+        if internas:
+            excl.append("%d internas" % len(internas))
+        if partes:
+            excl.append("%d partes de otro componente" % len(partes))
+        nota = (" · fuera de la cuenta: " + ", ".join(excl)) if excl else ""
+        if not construibles:
+            return PENDIENTE, "ninguna pieza construible todavía" + nota
+        malos = len(sin_construir) + len(sin_ejemplo) + len(huerfanas_l)
+        if malos:
+            partes_txt = []
+            if sin_construir:
+                partes_txt.append("%d sin construir (sin CSS ni ejemplo, p. ej. %s)" % (len(sin_construir), sin_construir[0]))
+            if sin_ejemplo:
+                partes_txt.append("%d construidas sin ejemplo (p. ej. %s)" % (len(sin_ejemplo), sin_ejemplo[0]))
+            if huerfanas_l:
+                partes_txt.append("%d con clases sin realizar en components.css (p. ej. %s)" % (len(huerfanas_l), huerfanas_l[0]))
+            return NO_CUMPLE, "%d de %d piezas construibles sin ejemplo ejecutable: %s%s" % (malos, construibles, "; ".join(partes_txt), nota)
+        return CUMPLE, "%d piezas construibles con ejemplo y clases existentes%s" % (construibles, nota)
 
     def c_scoped_retrieval(self):
         r = self.manifest.get("retrieval") or {}

@@ -303,9 +303,9 @@ document.querySelectorAll('[data-timer]').forEach(timer => {
   };
   const setState = state => {
     timer.dataset.state = state;
-    if (state === 'idle') { actionButton.dataset.timerAction = 'start'; actionButton.innerHTML = '<span class="icon icon-play" aria-hidden="true"></span>Start'; label.textContent = 'Ready'; }
-    if (state === 'running') { actionButton.dataset.timerAction = 'pause'; actionButton.innerHTML = '<span class="icon icon-pause" aria-hidden="true"></span>Pause'; label.textContent = 'Remaining'; }
-    if (state === 'paused') { actionButton.dataset.timerAction = 'resume'; actionButton.innerHTML = '<span class="icon icon-play" aria-hidden="true"></span>Resume'; label.textContent = 'Paused'; }
+    if (state === 'idle') { actionButton.dataset.timerAction = 'start'; actionButton.innerHTML = '<span class="icon icon-play" aria-hidden="true" data-ds="icon-play"></span>Start'; label.textContent = 'Ready'; }
+    if (state === 'running') { actionButton.dataset.timerAction = 'pause'; actionButton.innerHTML = '<span class="icon icon-pause" aria-hidden="true" data-ds="icon-pause"></span>Pause'; label.textContent = 'Remaining'; }
+    if (state === 'paused') { actionButton.dataset.timerAction = 'resume'; actionButton.innerHTML = '<span class="icon icon-play" aria-hidden="true" data-ds="icon-play"></span>Resume'; label.textContent = 'Paused'; }
     if (state === 'done') { actionButton.hidden = true; label.textContent = 'Done!'; }
   };
   actionButton.addEventListener('click', () => {

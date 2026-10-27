@@ -19,6 +19,42 @@
         },
         {
           "theme": "light",
+          "state": ".ingredient-item .ingredient-item__percent",
+          "fg": "#6b6455",
+          "bg": "#ffffff",
+          "fgVar": "--ingredient-meta",
+          "bgVar": "--color-surface-card",
+          "ratio": 5.87,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".ingredient-item .ingredient-item__name",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--ingredient-text",
+          "bgVar": "--color-surface-card",
+          "ratio": 18.73,
+          "need": 3.0,
+          "large": true,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".ingredient-item .ingredient-item__text",
+          "fg": "#6b6455",
+          "bg": "#ffffff",
+          "fgVar": "--ingredient-meta",
+          "bgVar": "--color-surface-card",
+          "ratio": 5.87,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
           "state": ".ingredient-item.ingredient-item--secondary",
           "fg": "#121212",
           "bg": "#ffffff",
@@ -28,11 +64,48 @@
           "need": 4.5,
           "large": false,
           "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".ingredient-item.ingredient-item--secondary .ingredient-item__percent",
+          "fg": "#6b6455",
+          "bg": "#ffffff",
+          "fgVar": "--ingredient-meta",
+          "bgVar": "--color-surface-card",
+          "ratio": 5.87,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".ingredient-item.ingredient-item--secondary .ingredient-item__name",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--ingredient-text",
+          "bgVar": "--color-surface-card",
+          "ratio": 18.73,
+          "need": 3.0,
+          "large": true,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".ingredient-item.ingredient-item--secondary .ingredient-item__text",
+          "fg": "#6b6455",
+          "bg": "#ffffff",
+          "fgVar": "--ingredient-meta",
+          "bgVar": "--color-surface-card",
+          "ratio": 5.87,
+          "need": 4.5,
+          "large": false,
+          "pass": true
         }
       ],
       "fail": 0,
       "untestable": [],
       "exempt": 0,
+      "recommend": [],
       "label": "Cumple AA"
     },
     "pending": null,

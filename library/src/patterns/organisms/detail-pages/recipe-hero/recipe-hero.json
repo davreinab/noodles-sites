@@ -4,11 +4,37 @@
   "status": "Ready",
   "sheet": {
     "contrast": {
-      "pairs": [],
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".recipe-hero .recipe-hero__back",
+          "fg": "#121212",
+          "bg": "#ffcb05",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-brand",
+          "ratio": 12.31,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".recipe-hero .recipe-hero__description",
+          "fg": "#121212",
+          "bg": "#ffcb05",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-brand",
+          "ratio": 12.31,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
       "fail": 0,
       "untestable": [],
       "exempt": 0,
-      "label": "Sin parejas medibles"
+      "recommend": [],
+      "label": "Cumple AA"
     },
     "pending": null,
     "edit": {

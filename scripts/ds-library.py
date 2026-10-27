@@ -193,8 +193,18 @@ def contraste(s, ctx):
     dc, rules, themes = ctx
     r = dc.component_pairs(s["meta"]["slug"], rules, themes)
     fallos = [x for x in r["pairs"] if not x["pass"]]
-    return {"pairs": r["pairs"], "fail": len(fallos), "untestable": r["untestable"], "exempt": r["exempt"],
-            "label": ("Sin parejas medibles" if not r["pairs"] else
+    usa = [u for u in ((s.get("relations") or {}).get("uses") or []) if u]
+    # los fondos sobre los que cumple AA, para los textos sin fondo propio (varios estados repiten los mismos: una vez por color de texto)
+    recom, vistos = [], set()
+    for u in r["untestable"]:
+        rc = u.get("recommend")
+        if rc and (u["theme"], tuple(rc["ok"]), tuple(rc["fail"])) not in vistos:
+            vistos.add((u["theme"], tuple(rc["ok"]), tuple(rc["fail"])))
+            recom.append({"theme": u["theme"], "state": u["state"], "need": rc["need"], "ok": rc["ok"][:6], "fail": rc["fail"][:6]})
+    sin_pares = ("Sin colores propios: sus textos son los de las piezas que usa (" + ", ".join(usa[:6]) + ")") if (r.get("sin_colores_propios") and usa and not r["untestable"]) \
+        else "Sin parejas medibles"
+    return {"pairs": r["pairs"], "fail": len(fallos), "untestable": r["untestable"], "exempt": r["exempt"], "recommend": recom[:6],
+            "label": (sin_pares if not r["pairs"] else
                       "Cumple AA" if not fallos else f"{len(fallos)} por debajo de AA")}
 
 

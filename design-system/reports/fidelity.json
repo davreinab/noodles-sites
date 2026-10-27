@@ -1,16 +1,66 @@
 {
   "root": ".",
   "errors": 0,
-  "warnings": 0,
-  "infos": 0,
-  "byCheck": {},
-  "contracts": 77,
-  "contractsWithCss": 77,
+  "warnings": 1,
+  "infos": 4,
+  "byCheck": {
+    "contrast-below-aa": 1,
+    "variant-coverage-unchecked": 3,
+    "example-without-data-ds": 1
+  },
+  "contracts": 130,
+  "contractsWithCss": 130,
   "verification": {
-    "verified": 77,
+    "verified": 130,
     "unverified": 0,
     "stale": 0,
     "internal": 0
   },
-  "findings": []
+  "findings": [
+    {
+      "severity": "warn",
+      "code": "contrast-below-aa",
+      "file": "design-system/css/components.css",
+      "line": 2849,
+      "property": "where-to-buy",
+      "value": ".where-to-buy .where-to-buy__retailer",
+      "suggestion": "texto #6b6455 (--color-text-secondary) sobre #ffcb05 (--color-surface-brand): 3.85:1, AA pide 4.5:1. Cambia la pareja de tokens en Figma (con propuesta) y sincroniza"
+    },
+    {
+      "severity": "info",
+      "code": "variant-coverage-unchecked",
+      "file": "design-system/schemas/components/anchor-nav-item.schema.json",
+      "line": 0,
+      "property": "anchor-nav-item",
+      "value": "1",
+      "suggestion": "no se puede comprobar la cobertura de 1 variante(s) (current=true): ni el contrato ni el CSS dicen cómo se representan: decláralo en ds-fidelity.config.json → modifiers.anchor-nav-item ({\"propiedad\": {\"valor\": \".clase\"}}; un atributo: \"[aria-invalid=\\\"true\\\"]\"; un elemento interno: {\"target\": \".x\", \"add\": \"[disabled]\"} o {\"target\": \".x\", \"presence\": true}; sin un elemento: {\"target\": \".x\", \"presence\": false}; un trozo de texto: {\"target\": \".x\", \"text\": \"€\"}; un estado que solo define el CSS (un pseudoelemento, una barra nativa): {\"css\": \".x::after\"}); no hace falta tocar el schema"
+    },
+    {
+      "severity": "info",
+      "code": "example-without-data-ds",
+      "file": "design-system/schemas/components/contest-how-to.schema.json",
+      "line": 0,
+      "property": "contest-how-to",
+      "value": "data-ds",
+      "suggestion": "el elemento raíz del «Ejemplo de código» no lleva data-ds=\"contest-how-to\": sin esa marca una pantalla no dice qué contrato (y qué maestro de Figma) es cada bloque"
+    },
+    {
+      "severity": "info",
+      "code": "variant-coverage-unchecked",
+      "file": "design-system/schemas/components/faq-list.schema.json",
+      "line": 0,
+      "property": "faq-list",
+      "value": "2",
+      "suggestion": "no se puede comprobar la cobertura de 2 variante(s) (results=true, empty=true): ni el contrato ni el CSS dicen cómo se representan: decláralo en ds-fidelity.config.json → modifiers.faq-list ({\"propiedad\": {\"valor\": \".clase\"}}; un atributo: \"[aria-invalid=\\\"true\\\"]\"; un elemento interno: {\"target\": \".x\", \"add\": \"[disabled]\"} o {\"target\": \".x\", \"presence\": true}; sin un elemento: {\"target\": \".x\", \"presence\": false}; un trozo de texto: {\"target\": \".x\", \"text\": \"€\"}; un estado que solo define el CSS (un pseudoelemento, una barra nativa): {\"css\": \".x::after\"}); no hace falta tocar el schema"
+    },
+    {
+      "severity": "info",
+      "code": "variant-coverage-unchecked",
+      "file": "design-system/schemas/components/pagination-item.schema.json",
+      "line": 0,
+      "property": "pagination-item",
+      "value": "1",
+      "suggestion": "no se puede comprobar la cobertura de 1 variante(s) (current=true): ni el contrato ni el CSS dicen cómo se representan: decláralo en ds-fidelity.config.json → modifiers.pagination-item ({\"propiedad\": {\"valor\": \".clase\"}}; un atributo: \"[aria-invalid=\\\"true\\\"]\"; un elemento interno: {\"target\": \".x\", \"add\": \"[disabled]\"} o {\"target\": \".x\", \"presence\": true}; sin un elemento: {\"target\": \".x\", \"presence\": false}; un trozo de texto: {\"target\": \".x\", \"text\": \"€\"}; un estado que solo define el CSS (un pseudoelemento, una barra nativa): {\"css\": \".x::after\"}); no hace falta tocar el schema"
+    }
+  ]
 }

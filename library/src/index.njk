@@ -6,18 +6,21 @@ permalink: /
 {% set d = dashboard %}
 {% macro complink(c) %}<a class="pl-dash__comp" href="{{ c.url }}">{{ c.title }}</a>{% endmacro %}
 {% macro flagchip(f) %}<span class="pl-flag pl-flag--{{ f.tone }}"{% if f.detail %} title="{{ f.detail }}"{% endif %}>{{ f.label }}</span>{% endmacro %}
+{# El motivo de un aviso, visible: qué es, el dato concreto y qué hacer. Antes solo salía como texto emergente. #}
+{% macro whyitems(f) %}{% if f.items %}<ul class="pl-dash__why">{% for i in f.items %}<li><b>{{ i.title }}</b> <code>{{ i.code }}</code>{% if i.value %} · {{ i.value }}{% endif %}{% if i.suggestion %}<span class="pl-dash__todo">Qué hacer: {{ i.suggestion }}</span>{% endif %}</li>{% endfor %}</ul>{% endif %}{% endmacro %}
 {% macro complist(rows, key, more) %}
   {% if rows.length %}
   <ul class="pl-dash__list">
     {% for r in rows %}{% if loop.index0 < more %}
     <li>{{ complink(r) }}<span class="pl-dash__where">{{ r.group }}</span>
-      {% for f in r.flags %}{% if f.key == key and f.detail %}<span class="pl-dash__detail">{{ f.detail }}</span>{% endif %}{% endfor %}</li>
+      {% for f in r.flags %}{% if f.key == key %}{% if f.items %}{{ whyitems(f) }}{% elif f.detail %}<span class="pl-dash__detail">{{ f.detail }}</span>{% endif %}{% endif %}{% endfor %}</li>
     {% endif %}{% endfor %}
   </ul>
   {% if rows.length > more %}
   <details class="pl-dash__more"><summary>Los {{ rows.length - more }} restantes</summary>
     <ul class="pl-dash__list">
-      {% for r in rows %}{% if loop.index0 >= more %}<li>{{ complink(r) }}<span class="pl-dash__where">{{ r.group }}</span></li>{% endif %}{% endfor %}
+      {% for r in rows %}{% if loop.index0 >= more %}<li>{{ complink(r) }}<span class="pl-dash__where">{{ r.group }}</span>
+        {% for f in r.flags %}{% if f.key == key %}{% if f.items %}{{ whyitems(f) }}{% elif f.detail %}<span class="pl-dash__detail">{{ f.detail }}</span>{% endif %}{% endif %}{% endfor %}</li>{% endif %}{% endfor %}
     </ul>
   </details>
   {% endif %}
@@ -67,13 +70,13 @@ permalink: /
 
 <section class="pl-dash__sec" id="atencion">
   <h2>Componentes que piden atención <span class="pl-nav__count">{{ d.totals.attention }}</span></h2>
-  <p class="pl-muted">Primero los que tienen algo roto o esperan una decisión; después, lo que falta por escribir o construir. Pasa el ratón por una marca para ver el detalle.</p>
+  <p class="pl-muted">Primero los que tienen algo roto o esperan una decisión; después, lo que falta por escribir o construir. Debajo de cada marca de fidelidad se lee qué es y qué hacer. Las notas informativas no cuentan aquí: están al final de «Avisos de fidelidad».</p>
   {% if d.attention.length %}
   <table class="pl-dash__table">
     <thead><tr><th>Componente</th><th>Grupo</th><th>Qué pide</th></tr></thead>
     <tbody>
       {% for r in d.attention %}{% if loop.index0 < 30 %}
-      <tr><td>{{ complink(r) }}</td><td class="pl-dash__where">{{ r.group }}</td><td>{% for f in r.flags %}{{ flagchip(f) }} {% endfor %}</td></tr>
+      <tr><td>{{ complink(r) }}</td><td class="pl-dash__where">{{ r.group }}</td><td>{% for f in r.flags %}{{ flagchip(f) }} {% endfor %}{% for f in r.flags %}{{ whyitems(f) }}{% endfor %}</td></tr>
       {% endif %}{% endfor %}
     </tbody>
   </table>
@@ -82,7 +85,7 @@ permalink: /
     <table class="pl-dash__table">
       <tbody>
         {% for r in d.attention %}{% if loop.index0 >= 30 %}
-        <tr><td>{{ complink(r) }}</td><td class="pl-dash__where">{{ r.group }}</td><td>{% for f in r.flags %}{{ flagchip(f) }} {% endfor %}</td></tr>
+        <tr><td>{{ complink(r) }}</td><td class="pl-dash__where">{{ r.group }}</td><td>{% for f in r.flags %}{{ flagchip(f) }} {% endfor %}{% for f in r.flags %}{{ whyitems(f) }}{% endfor %}</td></tr>
         {% endif %}{% endfor %}
       </tbody>
     </table>
@@ -155,7 +158,22 @@ permalink: /
   <h2>Avisos de fidelidad <span class="pl-nav__count">{{ d.counts.fidelity }}</span></h2>
   {% if d.fidelity %}
   <p class="pl-muted">Informe de <code>scripts/ds-fidelity.py</code> del {{ d.fidelity.at }} ({{ d.fidelity.ago }}){% if d.fidelity.olderThanSync %}, <strong>anterior al último sync</strong>: vuelve a ejecutarlo con <code>--out design-system/reports/fidelity.json</code>{% endif %}. {% for bc in d.fidelity.byCheck %}{{ bc[0] }} {{ bc[1] }}{% if not loop.last %} · {% endif %}{% endfor %}.</p>
+  {% if d.fidelity.byCheck.length %}
+  <p class="pl-muted">Qué se ha encontrado, por tipo. Cada aviso dice debajo de su componente qué es y qué hacer.</p>
+  <ul class="pl-dash__checks">
+    {% for c in d.fidelity.byCheck %}<li><b>{{ c.title }}</b> <code>{{ c.code }}</code> <span class="pl-nav__count">{{ c.n }}</span>{% if c.info %} <span class="pl-flag pl-flag--muted">nota</span>{% endif %}{% if c.why %}<span class="pl-dash__detail">{{ c.why }}</span>{% endif %}</li>{% endfor %}
+  </ul>
+  {% endif %}
   {{ complist(d.lists.fidelity, "fidelity", 12) }}
+  {% if d.notes.length %}
+  <details class="pl-dash__more"><summary>Notas informativas: {{ d.notes.length }} componentes (no piden nada)</summary>
+    <p class="pl-muted">Una nota no es un fallo: la herramienta avisa de algo que no puede comprobar o de una buena práctica. No cuentan como «piden atención».</p>
+    <ul class="pl-dash__list">
+      {% for n in d.notes %}<li>{{ complink(n) }}<span class="pl-dash__where">{{ n.group }}</span>
+        <ul class="pl-dash__why">{% for i in n.items %}<li><b>{{ i.title }}</b> <code>{{ i.code }}</code>{% if i.value %} · {{ i.value }}{% endif %}{% if i.suggestion %}<span class="pl-dash__todo">Qué hacer: {{ i.suggestion }}</span>{% endif %}</li>{% endfor %}</ul></li>{% endfor %}
+    </ul>
+  </details>
+  {% endif %}
   {% else %}<p class="pl-muted">No hay informe guardado. Ejecuta <code>python3 scripts/ds-fidelity.py --out design-system/reports/fidelity.json</code>.</p>{% endif %}
 </section>
 

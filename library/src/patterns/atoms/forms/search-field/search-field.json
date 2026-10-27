@@ -24,9 +24,20 @@
           "theme": "light",
           "state": ".search-field .icon",
           "why": "color que no se puede resolver con tokens.css"
+        },
+        {
+          "theme": "light",
+          "state": ".search-field .search-field__input",
+          "why": "fondo transparente o semitransparente: depende de dónde se ponga"
+        },
+        {
+          "theme": "light",
+          "state": ".search-field .search-field__clear",
+          "why": "fondo transparente o semitransparente: depende de dónde se ponga"
         }
       ],
       "exempt": 0,
+      "recommend": [],
       "label": "Cumple AA"
     },
     "pending": null,

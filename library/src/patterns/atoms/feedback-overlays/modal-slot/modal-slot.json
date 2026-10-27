@@ -21,6 +21,7 @@
       "fail": 0,
       "untestable": [],
       "exempt": 0,
+      "recommend": [],
       "label": "Cumple AA"
     },
     "pending": null,

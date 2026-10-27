@@ -55,8 +55,30 @@
         }
       ],
       "fail": 0,
-      "untestable": [],
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".alert .alert__close",
+          "why": "fondo transparente o semitransparente: depende de dónde se ponga"
+        },
+        {
+          "theme": "light",
+          "state": ".alert.alert--success .alert__close",
+          "why": "fondo transparente o semitransparente: depende de dónde se ponga"
+        },
+        {
+          "theme": "light",
+          "state": ".alert.alert--alert .alert__close",
+          "why": "fondo transparente o semitransparente: depende de dónde se ponga"
+        },
+        {
+          "theme": "light",
+          "state": ".alert.alert--error .alert__close",
+          "why": "fondo transparente o semitransparente: depende de dónde se ponga"
+        }
+      ],
       "exempt": 0,
+      "recommend": [],
       "label": "Cumple AA"
     },
     "pending": null,

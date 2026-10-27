@@ -16,11 +16,36 @@
           "need": 4.5,
           "large": false,
           "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".mobile-menu .mobile-menu__social-label",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".mobile-menu .mobile-menu__copyright",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
         }
       ],
       "fail": 0,
       "untestable": [],
       "exempt": 0,
+      "recommend": [],
       "label": "Cumple AA"
     },
     "pending": null,

@@ -80,7 +80,10 @@ Dos normas para cualquier pantalla, flujo o landing que se genere en `UI/`:
 
 1. **Cada componente del DS que se coloca en una pantalla lleva `data-ds="<slug>"` en su elemento raíz.**
    Es lo que permite saber con certeza qué piezas usa la pantalla; una clase sola también se detecta, pero
-   es una pista, no una declaración.
+   es una pista, no una declaración. Se cuenta **por elemento**, no por componente: con diez botones y uno
+   marcado, quedan nueve por marcar. También cuenta el HTML que escribe un script (un icono que cambia al
+   pulsar). Y el `data-ds` tiene que ser el del elemento: `<section class="faq" data-ds="faq-list">` se avisa
+   (`screen-data-ds-mismatch`), porque el slug existe pero ese elemento no es esa pieza.
 2. **Al terminar una pantalla o un flujo se ejecuta el informe y se entrega**:
    `python3 scripts/screen-report.py UI/<pantalla>.html [más archivos o carpetas]`. Sale de los datos (el
    HTML, los contratos, las propuestas y `token-audit.py`), nunca de memoria. Por pantalla cuenta:
@@ -92,5 +95,6 @@ Dos normas para cualquier pantalla, flujo o landing que se genere en `UI/`:
    qué clases ajenas quedan.
 
 La marca que el proyecto use para «nuevo módulo» (algo que aún no es del DS) se declara en
-`scripts/screen-report.config.json → newModuleClasses`; vacía por defecto. `ds-fidelity.py` avisa
-(`screen-without-data-ds`) de las pantallas con componentes detectados solo por clase.
+`scripts/screen-report.config.json → newModuleClasses`; vacía por defecto. `ds-fidelity.py` avisa de las pantallas
+con elementos sin `data-ds` (`screen-without-data-ds`, una línea por pantalla con el número y la lista) y de los
+`data-ds` que no corresponden al elemento (`screen-data-ds-mismatch`).

@@ -10,10 +10,42 @@
         {
           "theme": "light",
           "state": ".checkbox",
-          "why": "sin fondo propio: depende de dónde se ponga"
+          "why": "sin fondo propio: depende de dónde se ponga",
+          "recommend": {
+            "need": 4.5,
+            "ok": [
+              "--color-surface-card #ffffff (18.73:1)",
+              "--color-surface-page #fff5d9 (17.23:1)",
+              "--color-surface-brand #ffcb05 (12.31:1)",
+              "--nutrition-track #e4dcc8 (13.71:1)"
+            ],
+            "fail": [
+              "--color-surface-inverse #121212 (1.00:1)",
+              "--color-surface-natural #007a33 (3.42:1)",
+              "--badge-new-bg #e1251b (4.00:1)"
+            ]
+          }
         }
       ],
       "exempt": 0,
+      "recommend": [
+        {
+          "theme": "light",
+          "state": ".checkbox",
+          "need": 4.5,
+          "ok": [
+            "--color-surface-card #ffffff (18.73:1)",
+            "--color-surface-page #fff5d9 (17.23:1)",
+            "--color-surface-brand #ffcb05 (12.31:1)",
+            "--nutrition-track #e4dcc8 (13.71:1)"
+          ],
+          "fail": [
+            "--color-surface-inverse #121212 (1.00:1)",
+            "--color-surface-natural #007a33 (3.42:1)",
+            "--badge-new-bg #e1251b (4.00:1)"
+          ]
+        }
+      ],
       "label": "Sin parejas medibles"
     },
     "pending": null,

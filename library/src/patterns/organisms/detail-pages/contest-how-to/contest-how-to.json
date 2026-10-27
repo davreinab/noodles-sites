@@ -8,7 +8,8 @@
       "fail": 0,
       "untestable": [],
       "exempt": 0,
-      "label": "Sin parejas medibles"
+      "recommend": [],
+      "label": "Sin colores propios: sus textos son los de las piezas que usa (contest-conditions, icon-arrow-right, icon-calendar-clock, icon-trophy, link, pillar-item)"
     },
     "pending": null,
     "edit": {

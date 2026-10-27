@@ -10,7 +10,21 @@
         {
           "theme": "light",
           "state": ".link",
-          "why": "sin fondo propio: depende de dónde se ponga"
+          "why": "sin fondo propio: depende de dónde se ponga",
+          "recommend": {
+            "need": 4.5,
+            "ok": [
+              "--color-surface-card #ffffff (18.73:1)",
+              "--color-surface-page #fff5d9 (17.23:1)",
+              "--color-surface-brand #ffcb05 (12.31:1)",
+              "--nutrition-track #e4dcc8 (13.71:1)"
+            ],
+            "fail": [
+              "--color-surface-inverse #121212 (1.00:1)",
+              "--color-surface-natural #007a33 (3.42:1)",
+              "--badge-new-bg #e1251b (4.00:1)"
+            ]
+          }
         },
         {
           "theme": "light",
@@ -20,7 +34,21 @@
         {
           "theme": "light",
           "state": ".link:hover",
-          "why": "sin fondo propio: depende de dónde se ponga"
+          "why": "sin fondo propio: depende de dónde se ponga",
+          "recommend": {
+            "need": 4.5,
+            "ok": [
+              "--color-surface-card #ffffff (5.48:1)",
+              "--color-surface-page #fff5d9 (5.04:1)"
+            ],
+            "fail": [
+              "--color-surface-inverse #121212 (3.42:1)",
+              "--color-surface-brand #ffcb05 (3.60:1)",
+              "--color-surface-natural #007a33 (1.00:1)",
+              "--nutrition-track #e4dcc8 (4.01:1)",
+              "--badge-new-bg #e1251b (1.17:1)"
+            ]
+          }
         },
         {
           "theme": "light",
@@ -30,7 +58,21 @@
         {
           "theme": "light",
           "state": ".link.link--dark",
-          "why": "sin fondo propio: depende de dónde se ponga"
+          "why": "sin fondo propio: depende de dónde se ponga",
+          "recommend": {
+            "need": 4.5,
+            "ok": [
+              "--color-surface-inverse #121212 (17.23:1)",
+              "--color-surface-natural #007a33 (5.04:1)"
+            ],
+            "fail": [
+              "--color-surface-card #ffffff (1.09:1)",
+              "--color-surface-page #fff5d9 (1.00:1)",
+              "--color-surface-brand #ffcb05 (1.40:1)",
+              "--badge-new-bg #e1251b (4.31:1)",
+              "--nutrition-track #e4dcc8 (1.26:1)"
+            ]
+          }
         },
         {
           "theme": "light",
@@ -40,7 +82,21 @@
         {
           "theme": "light",
           "state": ".link.link--dark:hover",
-          "why": "sin fondo propio: depende de dónde se ponga"
+          "why": "sin fondo propio: depende de dónde se ponga",
+          "recommend": {
+            "need": 4.5,
+            "ok": [
+              "--color-surface-inverse #121212 (12.31:1)"
+            ],
+            "fail": [
+              "--color-surface-card #ffffff (1.52:1)",
+              "--color-surface-page #fff5d9 (1.40:1)",
+              "--color-surface-brand #ffcb05 (1.00:1)",
+              "--color-surface-natural #007a33 (3.60:1)",
+              "--badge-new-bg #e1251b (3.08:1)",
+              "--nutrition-track #e4dcc8 (1.11:1)"
+            ]
+          }
         },
         {
           "theme": "light",
@@ -49,6 +105,72 @@
         }
       ],
       "exempt": 0,
+      "recommend": [
+        {
+          "theme": "light",
+          "state": ".link",
+          "need": 4.5,
+          "ok": [
+            "--color-surface-card #ffffff (18.73:1)",
+            "--color-surface-page #fff5d9 (17.23:1)",
+            "--color-surface-brand #ffcb05 (12.31:1)",
+            "--nutrition-track #e4dcc8 (13.71:1)"
+          ],
+          "fail": [
+            "--color-surface-inverse #121212 (1.00:1)",
+            "--color-surface-natural #007a33 (3.42:1)",
+            "--badge-new-bg #e1251b (4.00:1)"
+          ]
+        },
+        {
+          "theme": "light",
+          "state": ".link:hover",
+          "need": 4.5,
+          "ok": [
+            "--color-surface-card #ffffff (5.48:1)",
+            "--color-surface-page #fff5d9 (5.04:1)"
+          ],
+          "fail": [
+            "--color-surface-inverse #121212 (3.42:1)",
+            "--color-surface-brand #ffcb05 (3.60:1)",
+            "--color-surface-natural #007a33 (1.00:1)",
+            "--nutrition-track #e4dcc8 (4.01:1)",
+            "--badge-new-bg #e1251b (1.17:1)"
+          ]
+        },
+        {
+          "theme": "light",
+          "state": ".link.link--dark",
+          "need": 4.5,
+          "ok": [
+            "--color-surface-inverse #121212 (17.23:1)",
+            "--color-surface-natural #007a33 (5.04:1)"
+          ],
+          "fail": [
+            "--color-surface-card #ffffff (1.09:1)",
+            "--color-surface-page #fff5d9 (1.00:1)",
+            "--color-surface-brand #ffcb05 (1.40:1)",
+            "--badge-new-bg #e1251b (4.31:1)",
+            "--nutrition-track #e4dcc8 (1.26:1)"
+          ]
+        },
+        {
+          "theme": "light",
+          "state": ".link.link--dark:hover",
+          "need": 4.5,
+          "ok": [
+            "--color-surface-inverse #121212 (12.31:1)"
+          ],
+          "fail": [
+            "--color-surface-card #ffffff (1.52:1)",
+            "--color-surface-page #fff5d9 (1.40:1)",
+            "--color-surface-brand #ffcb05 (1.00:1)",
+            "--color-surface-natural #007a33 (3.60:1)",
+            "--badge-new-bg #e1251b (3.08:1)",
+            "--nutrition-track #e4dcc8 (1.11:1)"
+          ]
+        }
+      ],
       "label": "Sin parejas medibles"
     },
     "pending": null,

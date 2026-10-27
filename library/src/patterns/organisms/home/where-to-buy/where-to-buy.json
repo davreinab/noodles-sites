@@ -4,11 +4,49 @@
   "status": "Ready",
   "sheet": {
     "contrast": {
-      "pairs": [],
-      "fail": 0,
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".where-to-buy .where-to-buy__kicker",
+          "fg": "#121212",
+          "bg": "#ffcb05",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-brand",
+          "ratio": 12.31,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".where-to-buy .where-to-buy__title",
+          "fg": "#121212",
+          "bg": "#ffcb05",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-brand",
+          "ratio": 12.31,
+          "need": 3.0,
+          "large": true,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".where-to-buy .where-to-buy__retailer",
+          "fg": "#6b6455",
+          "bg": "#ffcb05",
+          "fgVar": "--color-text-secondary",
+          "bgVar": "--color-surface-brand",
+          "ratio": 3.85,
+          "need": 4.5,
+          "large": false,
+          "pass": false
+        }
+      ],
+      "fail": 1,
       "untestable": [],
       "exempt": 0,
-      "label": "Sin parejas medibles"
+      "recommend": [],
+      "label": "1 por debajo de AA"
     },
     "pending": null,
     "edit": {

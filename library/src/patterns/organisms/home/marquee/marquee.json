@@ -4,11 +4,37 @@
   "status": "Ready",
   "sheet": {
     "contrast": {
-      "pairs": [],
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".marquee .marquee__item",
+          "fg": "#ffcb05",
+          "bg": "#121212",
+          "fgVar": "--color-text-brand-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 12.31,
+          "need": 3.0,
+          "large": true,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".marquee .marquee__sep",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
       "fail": 0,
       "untestable": [],
       "exempt": 0,
-      "label": "Sin parejas medibles"
+      "recommend": [],
+      "label": "Cumple AA"
     },
     "pending": null,
     "edit": {

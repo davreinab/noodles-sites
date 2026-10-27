@@ -17,6 +17,10 @@ Cómo:
      (`:root[data-theme="dark"]`). Texto grande (≥ 24 px, o ≥ 18,66 px y peso ≥ 700) pide 3:1; el resto 4,5:1.
   4. Exentos (WCAG 1.4.3): estados deshabilitados. No comprobables: fondo transparente o semitransparente
      (depende de dónde se ponga el componente) o color que no se puede resolver; se cuentan aparte, sin inventar.
+  5. (12.27.0) Un elemento interno escrito como regla suelta (`.slug__el { color }`) se mide igual que `.slug .slug__el`. Un componente SIN fondo propio
+     no falla: queda como no comprobable y trae una recomendación (`recommend`): sobre qué fondos del propio CSS del proyecto cumple AA y sobre cuáles no
+     (`fondos_del_css`, ordenados por cuánto se usan). Lo mismo si el fondo del texto es ambiguo: otro elemento de la pieza tiene fondo propio, o el papel
+     lo pinta un `::before`/`::after`. `sin_colores_propios` dice que la pieza solo compone otras (sus textos son los de sus piezas).
 """
 import re
 
@@ -202,9 +206,58 @@ def weight(value, vars_):
     return {"normal": 400, "bold": 700}.get(v.strip().lower()) or (int(float(v)) if re.fullmatch(r"[\d.]+", v.strip()) else None)
 
 
+def _opaco(raw):
+    """¿Es un fondo de color sólido (no degradado ni transparente)? Sin resolver variables: basta con que no sea transparente, `none` ni un degradado."""
+    return bool(raw) and "gradient(" not in raw and raw.strip().lower() not in ("transparent", "none", "inherit", "unset")
+
+
+def fondos_del_css(rules, vars_, slug=None):
+    """[(etiqueta, color, veces)] de los fondos opacos que el propio CSS del proyecto ya usa como superficie (reglas de una clase sin pseudoclase, sin
+    degradados): son los sitios donde un componente sin fondo propio puede acabar. La etiqueta es el token (`--surface-default`) si el valor es una
+    variable, y el color si no. `veces` = en cuántas reglas aparece ese color: las superficies de verdad se usan en muchos componentes y las de un
+    solo componente (el fondo de un chip) casi en uno; el orden de la recomendación se apoya en eso."""
+    vistos, out = {}, []
+    for sel, body in rules:
+        if ":" in sel and sel.replace(" ", "") not in (":root",):
+            continue
+        partes = [x for x in sel.split(",") if x.strip()]
+        if slug and all(any(own(c, slug) for c in re.findall(r"\.([\w-]+)", x)) for x in partes):
+            continue
+        d = declarations(body)
+        raw = d.get("background") or d.get("background-color")
+        if not raw or "gradient(" in raw or decorativo("background", raw):
+            continue
+        col = parse_color(resolve(raw, vars_))
+        if col is None or col[3] < 1:
+            continue
+        hexv = hexcol(col)
+        m = VAR_RE.search(raw)
+        etiqueta = m.group(1) if m else hexv
+        if hexv not in vistos:
+            vistos[hexv] = len(out)
+            out.append([col, 1, {etiqueta: 1}])
+        else:
+            fila = out[vistos[hexv]]
+            fila[1] += 1
+            fila[2][etiqueta] = fila[2].get(etiqueta, 0) + 1
+    # la etiqueta de un color es el token con el que más se escribe (el de superficie, no el de un chip que casualmente es del mismo color)
+    return [(max(f[2].items(), key=lambda kv: kv[1])[0], f[0], f[1]) for f in out]
+
+
+def recomendar(fg, superficies, tam):
+    """Sobre qué fondos el color de texto `fg` cumple AA y sobre cuáles no: {need, ok: [...], fail: [...]}."""
+    size, w = tam
+    large = bool(size and (size >= 24 or (size >= 18.66 and (w or 400) >= 700)))
+    need = CONTRAST_LARGE if large else CONTRAST_TEXT
+    filas = sorted(((n, ratio(fg, col), et, hexcol(col)) for et, col, n in superficies), reverse=True)  # primero los fondos más usados
+    txt = lambda n, r, et, hx: "%s %s (%s:1)" % (et, hx, ("%.2f" % r))
+    return {"need": need, "ok": [txt(*x) for x in filas if x[1] >= need], "fail": [txt(*x) for x in filas if x[1] < need]}
+
+
 def component_pairs(slug, rules, themes):
     """Parejas texto/fondo de un componente. Devuelve dict con pairs, untestable y exempt."""
     base_rules, elem_rules = [], []  # (compuesto, decl, orden) / (compuesto ancestro, simple elemento, decl, orden)
+    raiz = (frozenset(), frozenset(), frozenset())  # sin ancestro: una regla `.slug__el` pesa una clase, no dos, y vale en todos los estados
     for order, (sel, body) in enumerate(rules):
         decl = declarations(body)
         for part in sel.split(","):
@@ -213,12 +266,31 @@ def component_pairs(slug, rules, themes):
                 c = compound(bits[0])
                 if c and any(x == slug or x.startswith(slug + "--") for x in c[0]):
                     base_rules.append((c, decl, order))
+                elif c and any(x.startswith(slug + "__") for x in c[0]):
+                    # un elemento interno escrito como regla de un solo selector BEM (`.slug__el { color }`): cuenta como `.slug .slug__el`
+                    elem_rules.append((raiz, c, decl, order))
             elif len(bits) == 2:
                 a, b = compound(bits[0]), compound(bits[1])
                 if a and b and any(own(x, slug) for x in a[0]):
                     elem_rules.append((a, b, decl, order))
-    if not base_rules:
-        return {"pairs": [], "untestable": [], "exempt": 0}
+    # ¿algún elemento interno de la pieza tiene fondo propio? Entonces el fondo de un texto escrito como regla suelta `.slug__el` es ambiguo: puede ir
+    # sobre la raíz o dentro de ese elemento (una tarjeta clara dentro de una banda oscura), y medirlo contra la raíz da fallos falsos.
+    fondo_interno = any(("background" in d or "background-color" in d) and _opaco(d.get("background") or d.get("background-color"))
+                        for _, el, d, _ in elem_rules if el[0] and any(x.startswith(slug + "__") for x in el[0]))
+    # elementos cuyo papel lo pinta un pseudoelemento (`.slug__ticket::before { background }`): su fondo tampoco es el de la raíz
+    fondo_pseudo = set()
+    for sel, body in rules:
+        d = declarations(body)
+        if not _opaco(d.get("background") or d.get("background-color") or d.get("background-image")):
+            continue
+        for part in sel.split(","):
+            m = re.fullmatch(r"\s*\.([\w-]+)[\w.:()-]*::?(?:before|after)\s*", part)
+            if m and m.group(1).startswith(slug + "__"):
+                fondo_pseudo.add(m.group(1))
+    coloristas = [d for _, d, _ in base_rules] + [d for _, _, d, _ in elem_rules]
+    sin_colores = not any(k in ("color", "background", "background-color") for d in coloristas for k in d)
+    if not base_rules and not elem_rules:
+        return {"pairs": [], "untestable": [], "exempt": 0, "sin_colores_propios": True}
 
     def cascade(state, applicable):
         """Propiedades que quedan en el estado, incluidas las personalizadas locales (--badge-bg…)."""
@@ -243,10 +315,13 @@ def component_pairs(slug, rules, themes):
         c = (c[0] | {slug}, c[1])  # en el HTML el elemento lleva siempre su clase base (button button--primary); sin los :not
         if toca and c not in states:
             states.append(c)
+    if not states and elem_rules:
+        states.append((frozenset({slug}), frozenset()))  # sin reglas de color en la raíz: el estado por defecto, para medir sus elementos
     pairs, untestable, exempt = [], [], 0
     for theme, theme_vars_ in themes.items():
         if theme_vars_ is None:
             continue
+        superficies = fondos_del_css(rules, theme_vars_, slug)
         for st in states:
             name = "".join("." + x for x in sorted(st[0], key=lambda x: (x != slug, x))) + "".join(":" + p for p in sorted(st[1]))
             if any("disabled" in x for x in st[0]) or "disabled" in st[1]:
@@ -270,10 +345,12 @@ def component_pairs(slug, rules, themes):
             targets = [(None, p)]
             # Elementos internos: por cada elemento, la cascada de TODAS sus reglas que aplican en este estado
             # (12.8.3: antes cada regla se medía suelta y una general ganaba a la específica que la pisa).
-            por_elemento = {}
+            por_elemento, sueltas = {}, set()
             for anc, el, decl, order in elem_rules:
                 if applies(anc, st):
                     por_elemento.setdefault((el[0], el[1], el[2]), []).append((spec(anc, el), order, decl))
+                    if anc is raiz:
+                        sueltas.add((el[0], el[1], el[2]))
             for el, reglas in por_elemento.items():
                 q, propio, ev = dict(p), {}, dict(vars_)
                 for _, _, decl in sorted(reglas, key=lambda r: (r[0], r[1])):
@@ -286,6 +363,9 @@ def component_pairs(slug, rules, themes):
                 if "color" not in propio:
                     continue
                 q.update(propio)
+                if "background" not in propio and ((el in sueltas and fondo_interno) or (set(el[0]) & fondo_pseudo)):
+                    q.pop("background", None)
+                    q["_ambiguo"] = True  # su fondo depende del elemento de la pieza que lo contenga
                 q["_vars"] = ev
                 targets.append(("".join("." + x for x in sorted(el[0])) + "".join(":" + y for y in sorted(el[1]))
                                 + "".join(f":not(.{x})" for x in sorted(el[2])), q))
@@ -293,17 +373,23 @@ def component_pairs(slug, rules, themes):
                 if "color" not in q:
                     continue
                 vars_t = q.pop("_vars", vars_)
+                ambiguo = q.pop("_ambiguo", False)
                 where = name + (f" {elem}" if elem else "")
                 fg = parse_color(resolve(q.get("color"), vars_t))
                 bg_raw = q.get("background")
                 bg_val = resolve(bg_raw, vars_t) if bg_raw else None
                 bg = first_color(bg_val)
                 if fg is None or bg is None or fg[3] < 1 or bg[3] < 1:
-                    why = ("sin fondo propio: depende de dónde se ponga" if not bg_raw else
+                    why = ("el fondo depende del elemento de la pieza que lo contenga (varios tienen fondo propio)" if ambiguo else
+                           "sin fondo propio: depende de dónde se ponga" if not bg_raw else
                            "fondo transparente o semitransparente: depende de dónde se ponga" if bg is not None and bg[3] < 1 else
                            "color semitransparente" if fg is not None and fg[3] < 1 else
                            "color que no se puede resolver con tokens.css")
-                    untestable.append({"theme": theme, "state": where, "why": why})
+                    nota = {"theme": theme, "state": where, "why": why}
+                    sup = fondos_del_css(rules, theme_vars_) if ambiguo else superficies
+                    if not bg_raw and fg is not None and fg[3] == 1 and sup:
+                        nota["recommend"] = recomendar(fg, sup, (px(q.get("font-size"), vars_t), weight(q.get("font-weight"), vars_t)))
+                    untestable.append(nota)
                     continue
                 size, w = px(q.get("font-size"), vars_t), weight(q.get("font-weight"), vars_t)
                 large = bool(size and (size >= 24 or (size >= 18.66 and (w or 400) >= 700)))
@@ -318,4 +404,4 @@ def component_pairs(slug, rules, themes):
         k = (x["theme"], x["state"], x["fg"], x["bg"])
         if k not in seen:
             seen.add(k); uniq.append(x)
-    return {"pairs": uniq, "untestable": untestable, "exempt": exempt}
+    return {"pairs": uniq, "untestable": untestable, "exempt": exempt, "sin_colores_propios": sin_colores}

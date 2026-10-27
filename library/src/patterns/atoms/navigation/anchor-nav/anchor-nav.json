@@ -4,11 +4,62 @@
   "status": "Ready",
   "sheet": {
     "contrast": {
-      "pairs": [],
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".anchor-nav .anchor-nav__label",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--chip-text",
+          "bgVar": "--chip-bg",
+          "ratio": 18.73,
+          "need": 3.0,
+          "large": true,
+          "pass": true
+        }
+      ],
       "fail": 0,
-      "untestable": [],
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".anchor-nav .anchor-nav__item",
+          "why": "el fondo depende del elemento de la pieza que lo contenga (varios tienen fondo propio)",
+          "recommend": {
+            "need": 4.5,
+            "ok": [
+              "--color-surface-card #ffffff (18.73:1)",
+              "--color-surface-page #fff5d9 (17.23:1)",
+              "--color-surface-brand #ffcb05 (12.31:1)",
+              "--nutrition-track #e4dcc8 (13.71:1)"
+            ],
+            "fail": [
+              "--color-surface-inverse #121212 (1.00:1)",
+              "--color-surface-natural #007a33 (3.42:1)",
+              "--badge-new-bg #e1251b (4.00:1)"
+            ]
+          }
+        }
+      ],
       "exempt": 0,
-      "label": "Sin parejas medibles"
+      "recommend": [
+        {
+          "theme": "light",
+          "state": ".anchor-nav .anchor-nav__item",
+          "need": 4.5,
+          "ok": [
+            "--color-surface-card #ffffff (18.73:1)",
+            "--color-surface-page #fff5d9 (17.23:1)",
+            "--color-surface-brand #ffcb05 (12.31:1)",
+            "--nutrition-track #e4dcc8 (13.71:1)"
+          ],
+          "fail": [
+            "--color-surface-inverse #121212 (1.00:1)",
+            "--color-surface-natural #007a33 (3.42:1)",
+            "--badge-new-bg #e1251b (4.00:1)"
+          ]
+        }
+      ],
+      "label": "Cumple AA"
     },
     "pending": null,
     "edit": {

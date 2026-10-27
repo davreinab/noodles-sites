@@ -5,6 +5,7 @@
 // has nothing to compare. Everything is per component: the project-wide governance stays out on purpose.
 import fs from "node:fs";
 import path from "node:path";
+import { loadFidelity, CODES } from "../../lib/fidelity.js";
 
 const LIB = path.resolve("src/patterns");
 const DS = path.resolve("../design-system");
@@ -173,15 +174,7 @@ export default function () {
 
   // ── fidelity report: warnings per component (the screen-level ones are not about a component) ──
   const fidPath = path.join(DS, "reports", "fidelity.json");
-  const fid = readJson(fidPath, null);
-  const fidByComp = new Map();
-  if (fid && Array.isArray(fid.findings)) {
-    for (const f of fid.findings) {
-      const slug = f.property;
-      if (!slug || !bySlug.has(slug)) continue;
-      fidByComp.set(slug, (fidByComp.get(slug) || []).concat({ code: f.code, value: f.value, severity: f.severity }));
-    }
-  }
+  const { report: fid, byComp: fidByComp } = loadFidelity(fidPath, new Set(bySlug.keys()));
 
   // ── per-component flags ──
   const FLAG = {
@@ -200,6 +193,7 @@ export default function () {
   for (const k of Object.keys(FLAG)) counts[k] = 0;
   let contrastPairs = 0;
   const attention = [];
+  const notes = [];
   for (const c of comps) {
     const flags = [];
     const sh = c.sheet || {};
@@ -221,8 +215,11 @@ export default function () {
       }
       if (!c.hasExample && !c.parte) flags.push({ ...FLAG.example, detail: "" });
       if (c.lifecycle === "deprecated") flags.push({ ...FLAG.retired, detail: "" });
-      const fw = fidByComp.get(c.slug) || [];
-      if (fw.length) flags.push({ ...FLAG.fidelity, label: `fidelidad (${fw.length})`, detail: fw.map((f) => `${f.code}: ${f.value}`).join(" · ") });
+      // los avisos piden algo; las notas informativas (severity info) no: van aparte y no cuentan como «pide atención»
+      const fw = (fidByComp.get(c.slug) || { warnings: [] }).warnings;
+      if (fw.length) flags.push({ ...FLAG.fidelity, label: `fidelidad (${fw.length})`, detail: fw.map((f) => f.title).join(" · "), items: fw });
+      const fn = (fidByComp.get(c.slug) || { notes: [] }).notes;
+      if (fn.length) notes.push({ slug: c.slug, title: c.title, url: c.url, group: c.group, items: fn });
     }
     for (const f of flags) counts[f.key] += 1;
     if (flags.length) attention.push({ slug: c.slug, title: c.title, url: c.url, group: c.group, level: c.level, kind: c.kind, flags, weight: flags.length });
@@ -286,9 +283,10 @@ export default function () {
     retirements,
     policy: { blockNewUsageFromDay: policy.blockNewUsageFromDay ?? null, minNoticeDays: policy.minNoticeDays ?? null },
     attention,
+    notes,
     lists,
     fidelity: fid
-      ? { errors: fid.errors || 0, warnings: fid.warnings || 0, byCheck: Object.entries(fid.byCheck || {}).sort((a, b) => b[1] - a[1]), at: fmtDate(fidMtime, true), ago: agoLabel(fidMtime), olderThanSync: !!(fidMtime && manifest.lastSync && fidMtime < manifest.lastSync) }
+      ? { errors: fid.errors || 0, warnings: fid.warnings || 0, byCheck: Object.entries(fid.byCheck || {}).sort((a, b) => b[1] - a[1]).map(([code, n]) => ({ code, n, info: (fid.findings || []).some((f) => f.code === code) && (fid.findings || []).filter((f) => f.code === code).every((f) => f.severity === "info"), title: (CODES[code] || [code, ""])[0], why: (CODES[code] || [code, ""])[1] })), at: fmtDate(fidMtime, true), ago: agoLabel(fidMtime), olderThanSync: !!(fidMtime && manifest.lastSync && fidMtime < manifest.lastSync) }
       : null,
   };
 }

@@ -8,6 +8,7 @@
       "fail": 0,
       "untestable": [],
       "exempt": 0,
+      "recommend": [],
       "label": "Sin parejas medibles"
     },
     "pending": null,

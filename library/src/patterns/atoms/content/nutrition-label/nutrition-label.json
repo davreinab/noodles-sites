@@ -16,11 +16,36 @@
           "need": 4.5,
           "large": false,
           "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".nutrition-label .nutrition-label__caption",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-default",
+          "bgVar": "--nutrition-bg",
+          "ratio": 18.73,
+          "need": 3.0,
+          "large": true,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".nutrition-label .nutrition-label__note",
+          "fg": "#6b6455",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-secondary",
+          "bgVar": "--nutrition-bg",
+          "ratio": 5.87,
+          "need": 4.5,
+          "large": false,
+          "pass": true
         }
       ],
       "fail": 0,
       "untestable": [],
       "exempt": 0,
+      "recommend": [],
       "label": "Cumple AA"
     },
     "pending": null,

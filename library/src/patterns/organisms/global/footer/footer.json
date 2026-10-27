@@ -16,11 +16,61 @@
           "need": 4.5,
           "large": false,
           "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".footer .footer__legal",
+          "fg": "#fff5d9",
+          "bg": "#121212",
+          "fgVar": "--color-text-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
         }
       ],
       "fail": 0,
-      "untestable": [],
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".footer .footer__ticket",
+          "why": "el fondo depende del elemento de la pieza que lo contenga (varios tienen fondo propio)",
+          "recommend": {
+            "need": 4.5,
+            "ok": [
+              "--color-surface-card #ffffff (18.73:1)",
+              "--color-surface-page #fff5d9 (17.23:1)",
+              "--color-surface-brand #ffcb05 (12.31:1)",
+              "--nutrition-track #e4dcc8 (13.71:1)"
+            ],
+            "fail": [
+              "--color-surface-inverse #121212 (1.00:1)",
+              "--color-surface-natural #007a33 (3.42:1)",
+              "--badge-new-bg #e1251b (4.00:1)"
+            ]
+          }
+        }
+      ],
       "exempt": 0,
+      "recommend": [
+        {
+          "theme": "light",
+          "state": ".footer .footer__ticket",
+          "need": 4.5,
+          "ok": [
+            "--color-surface-card #ffffff (18.73:1)",
+            "--color-surface-page #fff5d9 (17.23:1)",
+            "--color-surface-brand #ffcb05 (12.31:1)",
+            "--nutrition-track #e4dcc8 (13.71:1)"
+          ],
+          "fail": [
+            "--color-surface-inverse #121212 (1.00:1)",
+            "--color-surface-natural #007a33 (3.42:1)",
+            "--badge-new-bg #e1251b (4.00:1)"
+          ]
+        }
+      ],
       "label": "Cumple AA"
     },
     "pending": null,

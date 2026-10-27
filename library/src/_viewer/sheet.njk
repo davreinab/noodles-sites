@@ -158,6 +158,26 @@
       </dl>
     </article>
 
+    {% if pattern.fidelity and (pattern.fidelity.warnings.length or pattern.fidelity.notes.length) %}
+    <article class="pl-card pl-card--wide" id="avisos">
+      <h2 class="pl-card__title">Avisos de esta ficha <span class="pl-card__src">de scripts/ds-fidelity.py</span><span class="pl-card__count">{{ pattern.fidelity.warnings.length }}{% if pattern.fidelity.notes.length %} + {{ pattern.fidelity.notes.length }} notas{% endif %}</span></h2>
+      {% if pattern.fidelity.warnings.length %}
+      <p class="pl-muted">Cosas que piden un arreglo. Cada una dice qué es, por qué importa y qué hacer.</p>
+      <ul class="pl-fid">
+        {% for i in pattern.fidelity.warnings %}<li class="pl-fid__warn"><b>{{ i.title }}</b> <code>{{ i.code }}</code>{% if i.value %} · {{ i.value }}{% endif %}
+          {% if i.why %}<span class="pl-fid__why">Por qué importa: {{ i.why }}</span>{% endif %}{% if i.suggestion %}<span class="pl-fid__todo">Qué hacer: {{ i.suggestion }}</span>{% endif %}</li>{% endfor %}
+      </ul>
+      {% endif %}
+      {% if pattern.fidelity.notes.length %}
+      <p class="pl-muted">Notas informativas: no son un fallo y no piden nada por sí solas.</p>
+      <ul class="pl-fid">
+        {% for i in pattern.fidelity.notes %}<li class="pl-fid__note"><b>{{ i.title }}</b> <code>{{ i.code }}</code>{% if i.value %} · {{ i.value }}{% endif %}
+          {% if i.why %}<span class="pl-fid__why">{{ i.why }}</span>{% endif %}{% if i.suggestion %}<span class="pl-fid__todo">Qué hacer si importa: {{ i.suggestion }}</span>{% endif %}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </article>
+    {% endif %}
+
     {% if sh.contrast %}
     <article class="pl-card pl-card--wide">
       <h2 class="pl-card__title">Contraste AA <span class="pl-card__src">calculado desde el CSS y los tokens</span><span class="pl-card__count">{{ sh.contrast.pairs.length }}</span></h2>
@@ -181,6 +201,15 @@
       {% else %}<p class="pl-muted">Ningún estado de su CSS tiene texto y fondo propios que se puedan medir.</p>{% endif %}
       {% if sh.contrast.untestable.length or sh.contrast.exempt %}
       <p class="pl-proposal-note pl-proposal-note--neutral">{% if sh.contrast.untestable.length %}{{ sh.contrast.untestable.length }} estado{{ "s" if sh.contrast.untestable.length > 1 }} sin fondo propio o con fondo transparente: su contraste depende de dónde se ponga y hay que comprobarlo en la pantalla.{% endif %}{% if sh.contrast.exempt %} {{ sh.contrast.exempt }} estado{{ "s" if sh.contrast.exempt > 1 }} deshabilitado{{ "s" if sh.contrast.exempt > 1 }}, exento{{ "s" if sh.contrast.exempt > 1 }} por WCAG.{% endif %}</p>
+      {% endif %}
+      {% if sh.contrast.recommend and sh.contrast.recommend.length %}
+      <div class="pl-contrast-reco">
+        <h3 class="pl-contrast-reco__title">Dónde puede ir para cumplir AA</h3>
+        <p class="pl-muted">Sin fondo propio, este componente no falla: depende de la superficie en la que se ponga. Estos son los fondos que el CSS del proyecto ya usa y cómo queda el texto sobre cada uno.</p>
+        {% for rc in sh.contrast.recommend %}
+        <p class="pl-contrast-reco__row"><strong>{{ rc.state }}</strong> ({{ 'modo oscuro' if rc.theme == 'dark' else 'modo claro' }}, pide {{ rc.need }}:1) · <b>Cumple sobre:</b> {{ rc.ok | join(' · ') if rc.ok.length else 'ninguno de los fondos del proyecto' }}{% if rc.fail.length %} · <b>No cumple sobre:</b> {{ rc.fail | join(' · ') }}{% endif %}</p>
+        {% endfor %}
+      </div>
       {% endif %}
     </article>
     {% endif %}

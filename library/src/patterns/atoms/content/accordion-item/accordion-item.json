@@ -4,11 +4,48 @@
   "status": "Ready",
   "sheet": {
     "contrast": {
-      "pairs": [],
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".accordion-item .accordion-item__panel",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--accordion-answer",
+          "bgVar": "--accordion-bg",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".accordion-item:hover .accordion-item__panel",
+          "fg": "#121212",
+          "bg": "#ffcb05",
+          "fgVar": "--accordion-answer",
+          "bgVar": "--accordion-bg-hover",
+          "ratio": 12.31,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
       "fail": 0,
-      "untestable": [],
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".accordion-item .accordion-item__button",
+          "why": "fondo transparente o semitransparente: depende de dónde se ponga"
+        },
+        {
+          "theme": "light",
+          "state": ".accordion-item:hover .accordion-item__button",
+          "why": "fondo transparente o semitransparente: depende de dónde se ponga"
+        }
+      ],
       "exempt": 0,
-      "label": "Sin parejas medibles"
+      "recommend": [],
+      "label": "Cumple AA"
     },
     "pending": null,
     "edit": {

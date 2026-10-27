@@ -29,7 +29,9 @@ no vacío; los que no la tienen ya los señala agent-readiness con `runnable-pat
      tener un modificador reconocible en el CSS: `.<clase-base>--<valor>` (patrón configurable) o un
      mapa explícito por componente (config → modifiers). El eje de estado (`state`) se excluye por
      defecto: hover y press son pseudoclases, no modificadores. Un eje booleano (`no`/`yes`) acepta
-     `.<clase-base>--<eje>`.
+     `.<clase-base>--<eje>`. Lo declarado con su motivo en `coverageIgnore.components.<slug>` («eje=valor»:
+     un placeholder de slot, una barra nativa, una cantidad) no se pide: la misma justificación cierra este
+     aviso y variant-not-in-example.
   3. example-class-missing · Cada clase del «Ejemplo de código» (`source.code.example`) existe como
      selector en el CSS. example-external-image · El ejemplo no carga imágenes de fuera (http/https):
      lo que no sale de Figma no es del DS. example-placeholder-ellipsis · El ejemplo no usa «…» o «...»
@@ -49,9 +51,11 @@ no vacío; los que no la tienen ya los señala agent-readiness con `runnable-pat
   6. example-without-data-ds (nota, no aviso) · El elemento raíz del «Ejemplo de código» lleva
      data-ds="<slug>": es la marca que permite seguir el hilo pantalla → contrato → maestro de Figma, y la
      que un futuro validador de desarrollo necesitará. Severidad `info` por defecto.
-  6b. screen-without-data-ds · Una pantalla de UI/ con componentes detectados solo por clase, sin data-ds en
-     su elemento raíz: una línea por pantalla con la lista. Aviso por defecto; el informe por pantalla es
-     scripts/screen-report.py.
+  6b. screen-without-data-ds · Cuenta por ELEMENTO (12.26.0): cada elemento cuya clase es la de un contrato y que no
+     lleva data-ds. Con diez botones y uno marcado, avisa de nueve. Lee también el HTML que escribe un script
+     (una cadena con `<span class="icon …">` es parte de la pantalla). Una línea por pantalla con la lista; aviso por
+     defecto. screen-data-ds-mismatch · un data-ds de un contrato conocido en un elemento que no lleva ninguna clase
+     de ese contrato (`<section class="faq" data-ds="faq-list">`). Informe por pantalla: scripts/screen-report.py.
   7. contrast-below-aa · El texto de cada componente cumple WCAG 2.1 AA (4,5:1; 3:1 si es grande) en
      cada estado que su CSS escribe, en claro y, si existe, en oscuro. Se calcula desde el CSS y tokens.css
      (scripts/ds_contrast.py: cascada de modificadores y pseudoclases, variables locales incluidas). Exentos:
@@ -116,6 +120,7 @@ DEFAULT_CONFIG = {
         "screen-state-anatomy": "warn",
         "example-without-data-ds": "info",
         "screen-without-data-ds": "warn",
+        "screen-data-ds-mismatch": "warn",
         "contrast-below-aa": "warn"
     },
     "contrastExceptions": [],
@@ -423,6 +428,9 @@ class Audit:
         mods_cfg = (self.cfg.get("modifiers") or {}).get(slug) or {}
         excluded = {a.lower() for a in self.cfg.get("excludeAxes") or []}
         booleans = {b.lower() for b in self.cfg.get("booleanValues") or []}
+        # lo declarado en coverageIgnore.components.<slug> con su motivo («eje=valor», lista o {"eje=valor": "motivo"}) cierra este aviso igual
+        # que cierra variant-not-in-example: la misma justificación vale para los dos
+        sin_css = {str(x).lower() for x in ((self.cfg.get("coverageIgnore") or {}).get("components") or {}).get(slug) or []}
         for axis, values, default_v, figma_axis in self.enum_props(sch):
             if axis.lower() in excluded or figma_axis.lower() in excluded or not values:
                 continue
@@ -431,6 +439,8 @@ class Audit:
             for value in values:
                 value = str(value)
                 if value == default:
+                    continue
+                if f"{axis}={value}".lower() in sin_css or (figma_axis and f"{figma_axis}={value}".lower() in sin_css):
                     continue
                 candidates = []
                 if isinstance(axis_cfg, dict) and value in axis_cfg and dv is not None and dv.modificador_spec(axis_cfg[value]):
@@ -480,7 +490,8 @@ class Audit:
         if a["unchecked"]:
             self.add("variant-coverage-unchecked", sch["_file"], 0, slug, str(len(a["unchecked"])),
                      f"no se puede comprobar la cobertura de {len(a['unchecked'])} variante(s) ({', '.join(a['unchecked'][:8])}{' …' if len(a['unchecked']) > 8 else ''}): "
-                     f"ni el contrato ni el CSS dicen cómo se representan: decláralo en ds-fidelity.config.json → modifiers.{slug} ({{\"propiedad\": {{\"valor\": \".clase\"}}}}; un atributo: \"[aria-invalid=\\\"true\\\"]\"; un elemento interno: {{\"target\": \".x\", \"add\": \"[disabled]\"}} o {{\"target\": \".x\", \"presence\": true}}); no hace falta tocar el schema")
+                     f"ni el contrato ni el CSS dicen cómo se representan: decláralo en ds-fidelity.config.json → modifiers.{slug} ({{\"propiedad\": {{\"valor\": \".clase\"}}}}; un atributo: \"[aria-invalid=\\\"true\\\"]\"; un elemento interno: {{\"target\": \".x\", \"add\": \"[disabled]\"}} o {{\"target\": \".x\", \"presence\": true}}; sin un elemento: {{\"target\": \".x\", \"presence\": false}}; un trozo de texto: {{\"target\": \".x\", \"text\": \"€\"}}; "
+                     f"un estado que solo define el CSS (un pseudoelemento, una barra nativa): {{\"css\": \".x::after\"}}); no hace falta tocar el schema")
 
     # ── 3. ejemplo frente a CSS ────────────────────────────────────────────────
     def example(self, sch):
@@ -537,6 +548,8 @@ class Audit:
             by_slug[slug] = st
             for c in self.own_classes(s):
                 by_class.setdefault(c, (slug, st))
+        clases_construibles = {sl: set(dcom.clases_propias(sch)) for sch in self.schemas
+                               for sl in [sch["meta"].get("slug", "")] if sl and not self.interno(sch)}
         files = []
         for pat in self.cfg.get("screens") or []:
             files.extend(sorted(glob.glob(os.path.join(self.root, pat), recursive=True)))
@@ -558,12 +571,18 @@ class Audit:
                         usa_internos[slug] = internos.get(slug, "")
                     elif st != "verified":
                         pend[slug] = st
-            solo_clase = sorted({by_class[c][0] for c in used if c in by_class and by_class[c][1] != "interno"}
-                                - set(re.findall(r'data-ds\s*=\s*["\']([^"\']+)["\']', html)))
-            if solo_clase:
-                rel = os.path.relpath(f, self.root)
-                self.add("screen-without-data-ds", rel, 0, "pantalla", f"{len(solo_clase)} componentes sin data-ds",
-                         f"usa componentes detectados solo por clase, sin data-ds en su elemento raíz: {', '.join(solo_clase)}. Añade data-ds=\"<slug>\" al raíz de cada uno")
+            an = dcom.analizar_pantalla(html, clases_construibles)
+            rel = os.path.relpath(f, self.root)
+            if an["sin_marcar"]:
+                n = sum(an["sin_marcar"].values())
+                lista = ", ".join("%s ×%d" % (k, v) for k, v in sorted(an["sin_marcar"].items(), key=lambda kv: (-kv[1], kv[0])))
+                self.add("screen-without-data-ds", rel, 0, "pantalla", f"{n} elementos sin data-ds",
+                         f"{n} elementos son un componente (llevan la clase de su contrato) y no llevan data-ds en su elemento raíz: {lista}. "
+                         f"Añade data-ds=\"<slug>\" a cada uno; el informe por pantalla es scripts/screen-report.py")
+            if an["no_coinciden"]:
+                lista = "; ".join("data-ds=\"%s\" en <%s class=\"%s\">" % x for x in an["no_coinciden"][:6]) + (" …" if len(an["no_coinciden"]) > 6 else "")
+                self.add("screen-data-ds-mismatch", rel, 0, "pantalla", f"{len(an['no_coinciden'])} data-ds que no corresponden",
+                         f"un data-ds nombra un contrato que ninguna clase del elemento es: {lista}. Cambia el data-ds por el slug del componente que ese elemento es de verdad")
             if usa_internos:
                 rel = os.path.relpath(f, self.root)
                 lista = ", ".join(f"{k} ({v})" for k, v in sorted(usa_internos.items()))
@@ -717,7 +736,7 @@ def main():
         if cc:
             print(f"Contraste AA: {cc['pairs']} parejas texto/fondo medidas · {cc['fail']} por debajo"
                   + (f" ({cc['excepted']} con excepción temporal atada a propuesta)" if cc["excepted"] else "")
-                  + f" · {cc['untestable']} no comprobables (sin fondo propio o transparente)")
+                  + f" · {cc['untestable']} no comprobables (sin fondo propio o transparente: la ficha recomienda sobre qué fondos cumplen)")
         if by_code:
             print("Avisos por comprobación: " + ", ".join(f"{k} {v}" for k, v in sorted(by_code.items(), key=lambda kv: -kv[1])))
         if errors:

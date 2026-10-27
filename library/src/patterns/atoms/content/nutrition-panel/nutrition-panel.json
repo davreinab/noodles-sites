@@ -4,11 +4,61 @@
   "status": "Ready",
   "sheet": {
     "contrast": {
-      "pairs": [],
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".nutrition-panel .nutrition-panel__title",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--nutrition-label",
+          "bgVar": "--nutrition-bg",
+          "ratio": 18.73,
+          "need": 3.0,
+          "large": true,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".nutrition-panel .nutrition-panel__base",
+          "fg": "#6b6455",
+          "bg": "#ffffff",
+          "fgVar": "--nutrition-meta",
+          "bgVar": "--nutrition-bg",
+          "ratio": 5.87,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".nutrition-panel .nutrition-panel__note",
+          "fg": "#6b6455",
+          "bg": "#ffffff",
+          "fgVar": "--nutrition-meta",
+          "bgVar": "--nutrition-bg",
+          "ratio": 5.87,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".nutrition-panel .nutrition-panel__allergens",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--nutrition-allergen",
+          "bgVar": "--nutrition-bg",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
       "fail": 0,
       "untestable": [],
       "exempt": 0,
-      "label": "Sin parejas medibles"
+      "recommend": [],
+      "label": "Cumple AA"
     },
     "pending": null,
     "edit": {

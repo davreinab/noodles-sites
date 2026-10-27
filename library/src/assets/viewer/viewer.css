@@ -1692,3 +1692,20 @@ a {
   border-left-color: var(--ink);
 }
 
+
+/* Recomendación de fondos para un componente sin fondo propio (tarjeta «Contraste AA»). */
+.pl-contrast-reco { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--rule); }
+.pl-contrast-reco__title { font-size: 14px; font-weight: 600; margin: 0 0 4px; }
+.pl-contrast-reco__row { font-size: 13px; margin: 8px 0 0; line-height: 1.5; overflow-wrap: anywhere; }
+
+/* Avisos de fidelidad con su motivo y su «qué hacer», a la vista (portada y ficha). */
+.pl-dash__why, .pl-fid { list-style: none; margin: 6px 0 0; padding: 0; }
+.pl-dash__why li, .pl-fid li { margin: 0 0 8px; font-size: 13px; line-height: 1.5; max-width: 90ch; }
+.pl-dash__why code, .pl-fid code { font-size: 12px; }
+.pl-dash__todo, .pl-fid__todo, .pl-fid__why { display: block; margin-top: 2px; color: var(--muted); }
+.pl-fid__warn { border-left: 3px solid var(--ink); padding-left: 10px; }
+.pl-fid__note { border-left: 3px solid var(--rule); padding-left: 10px; }
+.pl-dash__checks { list-style: none; margin: 8px 0 16px; padding: 0; }
+.pl-dash__checks li { margin: 0 0 10px; font-size: 14px; }
+.pl-dash__checks .pl-dash__detail { display: block; margin-top: 2px; }
+

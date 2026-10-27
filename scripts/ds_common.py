@@ -118,3 +118,62 @@ def partes_de(schemas, cfg):
                 padres.setdefault(u, []).append(meta.get("slug"))
     return {k: sorted(set(v)) for k, v in padres.items()}
 
+
+# ── pantallas: qué elementos son componentes y cuáles llevan data-ds ────────────────────────────────────────────────────────────
+_ETIQUETA = re.compile(r"<([a-zA-Z][\w-]*)\b([^<>]*)>")
+_CLASE = re.compile(r"""\bclass\s*=\s*\\*["']([^"'\\]*)""")
+_DATA_DS = re.compile(r"""\bdata-ds\s*=\s*\\*["']([^"'\\]*)""")
+
+
+def elementos_de_pantalla(html):
+    """[{tag, classes, data_ds}] de cada etiqueta de apertura con clase o con data-ds. Sin comentarios ni `<style>`; lo que hay dentro de un
+    `<script>` SÍ se lee: el HTML que escribe el JavaScript (un icono que cambia al pulsar) es parte de la pantalla. Las cadenas de un script
+    pueden llevar las comillas escapadas (`class=\\"x\\"`): también valen."""
+    limpio = re.sub(r"<!--.*?-->", "", html or "", flags=re.S)
+    limpio = re.sub(r"<style\b.*?</style>", "", limpio, flags=re.S | re.I)
+    out = []
+    for m in _ETIQUETA.finditer(limpio):
+        c, d = _CLASE.search(m.group(2)), _DATA_DS.search(m.group(2))
+        if c or d:
+            out.append({"tag": m.group(1).lower(), "classes": c.group(1).split() if c else [], "data_ds": d.group(1).strip() if d else None})
+    return out
+
+
+def clases_propias(sch):
+    """Las clases de un contrato que son SUYAS: su slug como bloque (`slug`, `slug__parte`, `slug--modificador`). `code.classes` lleva todas las
+    clases del ejemplo, también las de lo que el componente compone, y con ellas dos componentes parecen compartir elemento. Si el contrato no usa su
+    slug como clase (la pieza se llama de otra forma en el CSS), son las del elemento que lleva `data-ds=<slug>` en su ejemplo; sin ninguna de las
+    dos pistas, [] (no se puede comprobar)."""
+    slug = (sch.get("meta") or {}).get("slug", "")
+    code = sch.get("code") or (sch.get("source") or {}).get("code") or {}
+    propias = [c for c in (code.get("classes") or []) if c and (c == slug or c.startswith(slug + "__") or c.startswith(slug + "--"))]
+    if propias:
+        return propias
+    for e in elementos_de_pantalla(code.get("example") or ""):
+        if e["data_ds"] == slug and e["classes"]:
+            return list(e["classes"])
+    return []
+
+
+def analizar_pantalla(html, clases_por_slug):
+    """Cuenta por ELEMENTO, no por componente y pantalla (12.26.0): con diez botones y solo uno marcado, quedan nueve sin marcar.
+
+    `clases_por_slug`: {slug: clases PROPIAS del contrato (`clases_propias`)} de los componentes que se construyen (sin los internos). Devuelve:
+      marcados      {slug: n}   elementos con data-ds="<slug>"
+      sin_marcar    {slug: n}   elementos cuya clase es exactamente el slug (el bloque) y que no llevan data-ds
+      no_coinciden  [(slug, etiqueta, clases)]  elementos con un data-ds de un contrato conocido y ninguna clase propia de ese contrato:
+                    el slug existe pero no es el de ese elemento (p. ej. `<section class="faq" data-ds="faq-list">`)."""
+    marcados, sin_marcar, no_coinciden = {}, {}, []
+    for e in elementos_de_pantalla(html):
+        d = e["data_ds"]
+        if d:
+            marcados[d] = marcados.get(d, 0) + 1
+            propias = set(clases_por_slug.get(d) or [])
+            if propias and not (propias & set(e["classes"])):
+                no_coinciden.append((d, e["tag"], " ".join(e["classes"])))
+        else:
+            for t in e["classes"]:
+                if t in clases_por_slug:
+                    sin_marcar[t] = sin_marcar.get(t, 0) + 1
+    return {"marcados": marcados, "sin_marcar": sin_marcar, "no_coinciden": no_coinciden}
+

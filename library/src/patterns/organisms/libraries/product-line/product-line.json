@@ -31,8 +31,40 @@
         }
       ],
       "fail": 0,
-      "untestable": [],
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".product-line .product-line__name",
+          "why": "el fondo depende del elemento de la pieza que lo contenga (varios tienen fondo propio)"
+        },
+        {
+          "theme": "light",
+          "state": ".product-line .product-line__description",
+          "why": "el fondo depende del elemento de la pieza que lo contenga (varios tienen fondo propio)"
+        },
+        {
+          "theme": "light",
+          "state": ".product-line .product-line__subtitle",
+          "why": "el fondo depende del elemento de la pieza que lo contenga (varios tienen fondo propio)"
+        },
+        {
+          "theme": "light",
+          "state": ".product-line.product-line--dark .product-line__name",
+          "why": "el fondo depende del elemento de la pieza que lo contenga (varios tienen fondo propio)"
+        },
+        {
+          "theme": "light",
+          "state": ".product-line.product-line--dark .product-line__description",
+          "why": "el fondo depende del elemento de la pieza que lo contenga (varios tienen fondo propio)"
+        },
+        {
+          "theme": "light",
+          "state": ".product-line.product-line--dark .product-line__subtitle",
+          "why": "el fondo depende del elemento de la pieza que lo contenga (varios tienen fondo propio)"
+        }
+      ],
       "exempt": 0,
+      "recommend": [],
       "label": "Cumple AA"
     },
     "pending": null,

@@ -8,8 +8,11 @@ import nunjucks from "nunjucks";
 import beautify from "js-beautify";
 import MarkdownIt from "markdown-it";
 import { LEVELS, STATUSES } from "../../lib/library-config.js";
+import { loadFidelity } from "../../lib/fidelity.js";
 
 const ROOT = path.resolve("src/patterns");
+// avisos y notas de fidelidad por componente (design-system/reports/fidelity.json), para la tarjeta «Avisos de esta ficha»
+const fidelity = loadFidelity(path.resolve("..", "design-system", "reports", "fidelity.json"), null);
 
 // Markdown docs: no raw HTML; headings are demoted two levels so `#` becomes <h3>
 // (the page already has <h1> for the pattern and <h2> for the "Documentation" section).
@@ -163,6 +166,7 @@ export default function () {
       inheritedFrom: null,
       docHtml,
       sheet: renderSheet(meta.sheet),
+      fidelity: (fidelity.byComp.get(meta.ds && meta.ds.slug) || null),
       templatePath,
       source: source.trim(),
       usage: `{% from "${templatePath}" import render as ${alias} %}\n{{ ${alias}({ ... }) }}`,

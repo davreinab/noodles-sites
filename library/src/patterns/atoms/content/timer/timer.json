@@ -6,8 +6,124 @@
     "contrast": {
       "pairs": [],
       "fail": 0,
-      "untestable": [],
+      "untestable": [
+        {
+          "theme": "light",
+          "state": ".timer .timer__title",
+          "why": "el fondo depende del elemento de la pieza que lo contenga (varios tienen fondo propio)",
+          "recommend": {
+            "need": 3.0,
+            "ok": [
+              "--color-surface-card #ffffff (18.73:1)",
+              "--color-surface-page #fff5d9 (17.23:1)",
+              "--color-surface-brand #ffcb05 (12.31:1)",
+              "--color-surface-natural #007a33 (3.42:1)",
+              "--nutrition-track #e4dcc8 (13.71:1)",
+              "--badge-new-bg #e1251b (4.00:1)"
+            ],
+            "fail": [
+              "--color-surface-inverse #121212 (1.00:1)"
+            ]
+          }
+        },
+        {
+          "theme": "light",
+          "state": ".timer .timer__subtitle",
+          "why": "el fondo depende del elemento de la pieza que lo contenga (varios tienen fondo propio)",
+          "recommend": {
+            "need": 4.5,
+            "ok": [
+              "--color-surface-card #ffffff (5.87:1)",
+              "--color-surface-page #fff5d9 (5.40:1)"
+            ],
+            "fail": [
+              "--color-surface-inverse #121212 (3.19:1)",
+              "--color-surface-brand #ffcb05 (3.85:1)",
+              "--color-surface-natural #007a33 (1.07:1)",
+              "--nutrition-track #e4dcc8 (4.29:1)",
+              "--badge-new-bg #e1251b (1.25:1)"
+            ]
+          }
+        },
+        {
+          "theme": "light",
+          "state": ".timer .timer__time",
+          "why": "el fondo depende del elemento de la pieza que lo contenga (varios tienen fondo propio)",
+          "recommend": {
+            "need": 3.0,
+            "ok": [
+              "--color-surface-card #ffffff (18.73:1)",
+              "--color-surface-page #fff5d9 (17.23:1)",
+              "--color-surface-brand #ffcb05 (12.31:1)",
+              "--color-surface-natural #007a33 (3.42:1)",
+              "--nutrition-track #e4dcc8 (13.71:1)",
+              "--badge-new-bg #e1251b (4.00:1)"
+            ],
+            "fail": [
+              "--color-surface-inverse #121212 (1.00:1)"
+            ]
+          }
+        },
+        {
+          "theme": "light",
+          "state": ".timer .timer__label",
+          "why": "el fondo depende del elemento de la pieza que lo contenga (varios tienen fondo propio)",
+          "recommend": {
+            "need": 4.5,
+            "ok": [
+              "--color-surface-card #ffffff (5.87:1)",
+              "--color-surface-page #fff5d9 (5.40:1)"
+            ],
+            "fail": [
+              "--color-surface-inverse #121212 (3.19:1)",
+              "--color-surface-brand #ffcb05 (3.85:1)",
+              "--color-surface-natural #007a33 (1.07:1)",
+              "--nutrition-track #e4dcc8 (4.29:1)",
+              "--badge-new-bg #e1251b (1.25:1)"
+            ]
+          }
+        },
+        {
+          "theme": "light",
+          "state": ".timer .timer__reset",
+          "why": "color que no se puede resolver con tokens.css"
+        }
+      ],
       "exempt": 0,
+      "recommend": [
+        {
+          "theme": "light",
+          "state": ".timer .timer__title",
+          "need": 3.0,
+          "ok": [
+            "--color-surface-card #ffffff (18.73:1)",
+            "--color-surface-page #fff5d9 (17.23:1)",
+            "--color-surface-brand #ffcb05 (12.31:1)",
+            "--color-surface-natural #007a33 (3.42:1)",
+            "--nutrition-track #e4dcc8 (13.71:1)",
+            "--badge-new-bg #e1251b (4.00:1)"
+          ],
+          "fail": [
+            "--color-surface-inverse #121212 (1.00:1)"
+          ]
+        },
+        {
+          "theme": "light",
+          "state": ".timer .timer__subtitle",
+          "need": 4.5,
+          "ok": [
+            "--color-surface-card #ffffff (5.87:1)",
+            "--color-surface-page #fff5d9 (5.40:1)"
+          ],
+          "fail": [
+            "--color-surface-inverse #121212 (3.19:1)",
+            "--color-surface-brand #ffcb05 (3.85:1)",
+            "--color-surface-natural #007a33 (1.07:1)",
+            "--nutrition-track #e4dcc8 (4.29:1)",
+            "--badge-new-bg #e1251b (1.25:1)"
+          ]
+        }
+      ],
       "label": "Sin parejas medibles"
     },
     "pending": null,

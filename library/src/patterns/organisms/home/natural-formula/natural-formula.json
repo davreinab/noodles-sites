@@ -16,11 +16,24 @@
           "need": 4.5,
           "large": false,
           "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".natural-formula .natural-formula__title",
+          "fg": "#ffffff",
+          "bg": "#007a33",
+          "fgVar": "--color-text-on-natural",
+          "bgVar": "--color-surface-natural",
+          "ratio": 5.48,
+          "need": 3.0,
+          "large": true,
+          "pass": true
         }
       ],
       "fail": 0,
       "untestable": [],
       "exempt": 0,
+      "recommend": [],
       "label": "Cumple AA"
     },
     "pending": null,

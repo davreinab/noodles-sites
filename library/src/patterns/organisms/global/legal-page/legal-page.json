@@ -4,11 +4,85 @@
   "status": "Ready",
   "sheet": {
     "contrast": {
-      "pairs": [],
+      "pairs": [
+        {
+          "theme": "light",
+          "state": ".legal-page .legal-page__lead",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-card",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".legal-page .legal-page__intro",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-card",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".legal-page .legal-page__text",
+          "fg": "#6b6455",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-secondary",
+          "bgVar": "--color-surface-card",
+          "ratio": 5.87,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".legal-page .legal-page__list",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-card",
+          "ratio": 18.73,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".legal-page .legal-page__heading",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-card",
+          "ratio": 18.73,
+          "need": 3.0,
+          "large": true,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".legal-page .legal-page__updated",
+          "fg": "#6b6455",
+          "bg": "#ffffff",
+          "fgVar": "--color-text-secondary",
+          "bgVar": "--color-surface-card",
+          "ratio": 5.87,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        }
+      ],
       "fail": 0,
       "untestable": [],
       "exempt": 0,
-      "label": "Sin parejas medibles"
+      "recommend": [],
+      "label": "Cumple AA"
     },
     "pending": null,
     "edit": {

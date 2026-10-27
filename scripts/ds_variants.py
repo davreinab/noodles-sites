@@ -257,9 +257,16 @@ def modificador_spec(raw):
     if isinstance(raw, str) and raw.strip().startswith("["):
         add = parse_add(raw)
         return {"target": None, "add": add, "presence": False} if add["attrs"] else None
-    if isinstance(raw, dict) and (raw.get("target") or raw.get("add")):
-        return {"target": (str(raw["target"]).strip() or None) if raw.get("target") else None,
-                "add": parse_add(raw.get("add") or ""), "presence": bool(raw.get("presence"))}
+    if isinstance(raw, dict) and raw.get("css"):
+        # un estado que solo existe en el CSS (un pseudoelemento, una barra nativa): no hay elemento en el ejemplo; se da por cubierto si el CSS lo escribe
+        return {"target": None, "add": parse_add(""), "presence": False, "css": str(raw["css"]).strip(), "text": None, "absent": False}
+    if isinstance(raw, dict) and (raw.get("target") or raw.get("add") or raw.get("text")):
+        target = (str(raw["target"]).strip() or None) if raw.get("target") else None
+        explicito_no = "presence" in raw and raw["presence"] is False
+        texto = str(raw["text"]) if raw.get("text") else None
+        return {"target": target, "add": parse_add(raw.get("add") or ""), "presence": bool(raw.get("presence")), "text": texto,
+                # `presence: false` con un target y nada más (o con un texto): el estado es la AUSENCIA de ese elemento o de ese texto
+                "absent": bool(explicito_no and (target or texto) and not raw.get("add")), "css": None}
     return None
 
 
@@ -334,13 +341,60 @@ def sin_presencia(text, target):
     return "".join(out)
 
 
-def spec_presente(spec, example, slug=None):
-    """¿El ejemplo muestra ese estado? Presencia: sale algún elemento que case. Atributo o clase: algún elemento que case
-    (o, sin target, alguna muestra: un elemento de primer nivel o uno con el data-ds del componente, aunque el ejemplo
-    lo envuelva en un contenedor de maquetación) lo lleva con ese valor."""
+def _texto_de(example, e):
+    """El texto visible de un elemento (con lo que lleva dentro), sin etiquetas."""
+    return re.sub(r"<[^>]+>", "", example[e["open_end"]:e["end"]])
+
+
+def _muestras_de(example, slug=None):
+    """Rangos (inicio, fin) de las muestras: los elementos de primer nivel y los que llevan el data-ds del componente."""
+    els = elementos(example)
+    rangos = {(t["start"], t["end"]) for t in top_level(example)}
+    rangos |= {(e["start"], e["end"]) for e in els if e["attrs"].get("data-ds") and (slug is None or e["attrs"].get("data-ds") == slug)}
+    return sorted(rangos)
+
+
+def sin_texto(text, target, texto):
+    """El texto del raíz sin esa cadena dentro del elemento `target` (solo en el contenido, no en las etiquetas)."""
+    els = [e for e in elementos(text) if (coincide(e, target) if target else e["start"] == 0)]
+    if not els:
+        return text
+    e = els[0]
+    dentro = text[e["open_end"]:e["end"]]
+    nuevo = "".join(part if part.startswith("<") else part.replace(texto, "") for part in re.split(r"(<[^>]*>)", dentro))
+    return text[:e["open_end"]] + nuevo + text[e["end"]:]
+
+
+def tiene_texto(text, spec):
+    """¿Algún elemento de este texto que case con el target lleva ese texto dentro?"""
+    return any(spec["text"] in _texto_de(text, e) for e in elementos(text) if (coincide(e, spec["target"]) if spec["target"] else e["start"] == 0))
+
+
+def spec_presente(spec, example, slug=None, css_rules=None):
+    """¿El ejemplo muestra ese estado? Presencia: sale algún elemento que case. Ausencia (`presence: false`): alguna muestra NO lo lleva. Texto: algún
+    elemento que case lleva ese texto (o, en ausencia, alguna muestra no). Atributo o clase: algún elemento que case (o, sin target, alguna muestra: un
+    elemento de primer nivel o uno con el data-ds del componente, aunque el ejemplo lo envuelva en un contenedor de maquetación) lo lleva con ese valor.
+    Estado definido solo por el CSS (`css`): el CSS escribe ese selector."""
+    if spec.get("css"):
+        buscado = re.sub(r"\s+", "", spec["css"])
+        return any(buscado in re.sub(r"\s+", "", sel) for sel, _ in (css_rules or []))
     els = elementos(example)
     if not els:
         return False
+    if spec.get("absent"):
+        for a_, b_ in _muestras_de(example, slug):
+            dentro = elementos(example[a_:b_])[1:]
+            if spec.get("text"):
+                if not any(spec["text"] in _texto_de(example[a_:b_], e) for e in dentro if (coincide(e, spec["target"]) if spec["target"] else False)) \
+                        and not (not spec["target"] and spec["text"] in re.sub(r"<[^>]+>", "", example[a_:b_])):
+                    return True
+            elif not any(coincide(e, spec["target"]) for e in dentro):
+                return True
+        return False
+    if spec.get("text"):
+        if spec["target"]:
+            return any(spec["text"] in _texto_de(example, e) for e in els if coincide(e, spec["target"]))
+        return any(spec["text"] in re.sub(r"<[^>]+>", "", example[a_:b_]) for a_, b_ in _muestras_de(example, slug))
     tops = {t["start"] for t in top_level(example)}
     tops |= {e["start"] for e in els if e["attrs"].get("data-ds") and (slug is None or e["attrs"].get("data-ds") == slug)}
     cand = [e for e in els if (coincide(e, spec["target"]) if spec["target"] else e["start"] in tops)]
@@ -419,11 +473,18 @@ def analyze(sch, example, classes_in_css, fid_cfg=None, css_rules=None):
                 used.append(t)
     # la pieza base sale de los elementos marcados con data-ds=<slug> (las muestras), no de todas las clases del ejemplo: un contenedor de la
     # muestra con un nombre parecido al slug no es la base. Sin raíz marcada, vale lo de antes.
-    raiz_toks = []
+    raiz_toks, comunes = [], None
     for e in elementos(example):
         if e["attrs"].get("data-ds") == slug:
-            raiz_toks += [t for t in _class_tokens(e["open"]) if t not in raiz_toks]
+            toks = _class_tokens(e["open"])
+            raiz_toks += [t for t in toks if t not in raiz_toks]
+            comunes = set(toks) if comunes is None else comunes & set(toks)
     bases = _bases(slug, raiz_toks if raiz_toks else used)
+    # y las clases sin «--» que llevan TODAS las muestras marcadas: una pieza puede llevar a la vez su clase visual y otra con el nombre del slug,
+    # y las dos son base (la que no se parece al slug quedaba fuera y la celda acababa quitándola)
+    for c in sorted(comunes or []):
+        if "--" not in c and c not in bases:
+            bases.append(c)
     pattern = fid_cfg.get("modifierPattern") or ".{base}--{value}"
     mods_cfg = (fid_cfg.get("modifiers") or {}).get(slug) or {}
     ignore_values = {v.lower() for v in (cov.get("values") if cov.get("values") is not None else DEFAULT_IGNORE_VALUES)}
@@ -582,7 +643,7 @@ def analyze(sch, example, classes_in_css, fid_cfg=None, css_rules=None):
                 elif it["default"]:
                     it["state"] = "visible"
                 else:
-                    it["state"] = "visible" if spec_presente(cl, example, slug) else "missing"
+                    it["state"] = "visible" if spec_presente(cl, example, slug, css_rules) else "missing"
                 items.append(it)
                 continue
             cl = cl
@@ -811,6 +872,11 @@ def gallery(sch, example, analysis, pairs=None, css_rules=None):
         (la variante clara está en un bloque oscuro). Si no sale en ningún sitio, el de la raíz."""
         busca = set(it.get("classes") or [])
         if busca:
+            otras = set(it.get("quitar") or []) - busca  # las clases de los demás valores del eje: el elemento que ES este valor no las lleva
+            candidatos = [e for e in elementos(example) if busca <= set(_class_tokens(e["open"]))]
+            for e in candidatos:
+                if not (otras & set(_class_tokens(e["open"]))):
+                    return (e["start"], e["end"])
             for e in elementos(example):
                 if busca & set(_class_tokens(e["open"])):
                     return (e["start"], e["end"])
@@ -834,6 +900,8 @@ def gallery(sch, example, analysis, pairs=None, css_rules=None):
         if not sp["target"]:
             return text, raiz_rango
         orden = [(text, raiz_rango)] + [(example[a_:b_], (a_, b_)) for a_, b_ in sorted(muestras) if not (root and (a_, b_) == (root["start"], root["end"]))]
+        if sp.get("text") and not sp.get("absent"):
+            return next(((t_, r_) for t_, r_ in orden if tiene_texto(t_, sp)), (text, raiz_rango))
         return next(((t_, r_) for t_, r_ in orden if _destino(t_, sp["target"])), (text, raiz_rango))
     k, secciones = 0, []
     for (axis, kind), its in por_eje.items():
@@ -880,8 +948,23 @@ def gallery(sch, example, analysis, pairs=None, css_rules=None):
                         continue
                 celdas.append((it["label"], envolver(_unique_ids(h, k), r_))); k += 1
             else:
+                if sp.get("css"):
+                    no_gen.append(f"{it['label']} (es un estado que solo define el CSS, «{sp['css']}»: no tiene elemento propio y no se puede pintar aquí)")
+                    continue
                 bs, r_ = base_spec(sp)
-                if sp["presence"]:
+                if sp.get("text"):
+                    if not (tiene_texto(bs, sp) or sp.get("absent")):
+                        no_gen.append(f"{it['label']} (el texto «{sp['text']}» no sale en «{donde}» del ejemplo)")
+                        continue
+                    con, sin = bs, sin_texto(bs, sp["target"], sp["text"])
+                    if sp.get("absent"):
+                        con, sin = sin, con
+                elif sp.get("absent"):
+                    if not _destino(bs, sp["target"]):
+                        no_gen.append(f"{it['label']} (el elemento «{donde}» no sale en el ejemplo)")
+                        continue
+                    con, sin = sin_presencia(bs, sp["target"]), bs
+                elif sp["presence"]:
                     if not spec_presente(sp, bs):
                         no_gen.append(f"{it['label']} (el elemento «{donde}» no sale en el ejemplo)")
                         continue

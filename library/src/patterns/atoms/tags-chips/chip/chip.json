@@ -61,6 +61,7 @@
         }
       ],
       "exempt": 1,
+      "recommend": [],
       "label": "Cumple AA"
     },
     "pending": null,

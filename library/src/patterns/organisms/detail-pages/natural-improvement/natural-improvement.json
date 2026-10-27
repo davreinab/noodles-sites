@@ -16,11 +16,60 @@
           "need": 4.5,
           "large": false,
           "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".natural-improvement .natural-improvement__title",
+          "fg": "#121212",
+          "bg": "#fff5d9",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-page",
+          "ratio": 17.23,
+          "need": 3.0,
+          "large": true,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".natural-improvement .natural-improvement__subtitle",
+          "fg": "#121212",
+          "bg": "#fff5d9",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-page",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".natural-improvement .natural-improvement__heading",
+          "fg": "#121212",
+          "bg": "#fff5d9",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-page",
+          "ratio": 17.23,
+          "need": 3.0,
+          "large": true,
+          "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".natural-improvement .natural-improvement__origins-text",
+          "fg": "#121212",
+          "bg": "#fff5d9",
+          "fgVar": "--color-text-default",
+          "bgVar": "--color-surface-page",
+          "ratio": 17.23,
+          "need": 4.5,
+          "large": false,
+          "pass": true
         }
       ],
       "fail": 0,
       "untestable": [],
       "exempt": 0,
+      "recommend": [],
       "label": "Cumple AA"
     },
     "pending": null,

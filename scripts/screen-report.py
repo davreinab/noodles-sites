@@ -140,22 +140,22 @@ def auditoria(root, rels):
     return por
 
 
-def informe_de(root, f, rel, por_slug, por_clase, css_ds, cfg, audit):
+def informe_de(root, f, rel, por_slug, por_clase, css_ds, cfg, audit, clases_slug):
     html = read(f)
-    cuerpo = re.sub(r"<(script|style)\b.*?</\1>", "", html, flags=re.S | re.I)
+    # lo que hay dentro de un <script> SÍ cuenta (12.26.0): el HTML que escribe el JavaScript es parte de la pantalla
+    cuerpo = re.sub(r"<style\b.*?</style>", "", re.sub(r"<!--.*?-->", "", html, flags=re.S), flags=re.S | re.I)
     estilos = "".join(re.findall(r"<style\b[^>]*>(.*?)</style>", html, flags=re.S | re.I))
-    marcados = {}
-    for slug in re.findall(r"""data-ds\s*=\s*["']([^"']+)["']""", cuerpo):
-        marcados[slug] = marcados.get(slug, 0) + 1
+    an = dcom.analizar_pantalla(html, clases_slug)
+    marcados, sin_marcar = an["marcados"], an["sin_marcar"]
     usadas = set()
-    for attr in re.findall(r"""class\s*=\s*["']([^"']*)["']""", cuerpo):
-        usadas.update(attr.split())
+    for e in dcom.elementos_de_pantalla(html):
+        usadas.update(e["classes"])
     por_clases = {por_clase[c] for c in usadas if c in por_clase}
-    comps = sorted(set(marcados) | por_clases)
+    comps = sorted(set(marcados) | por_clases | set(sin_marcar))
     detalle = []
     for s in comps:
         st, motivo = por_slug.get(s, ("no existe en el DS", None))
-        detalle.append({"slug": s, "status": st, "dataDs": marcados.get(s, 0), "byClassOnly": s not in marcados})
+        detalle.append({"slug": s, "status": st, "dataDs": marcados.get(s, 0), "unmarked": sin_marcar.get(s, 0), "byClassOnly": s not in marcados})
     internos = [d["slug"] for d in detalle if d["status"] == "interno"]
     ovs = overrides(root_global[0], html)
     enlaces = [o["ref"] for o in ovs]
@@ -167,7 +167,7 @@ def informe_de(root, f, rel, por_slug, por_clase, css_ds, cfg, audit):
         marca = marca.lstrip(".")
         nuevos[marca] = len(re.findall(r"""class\s*=\s*["'][^"']*(?<![\w-])%s(?![\w-])""" % re.escape(marca), cuerpo))
     hallazgos = (audit or {}).get(rel) if audit is not None else None
-    return {"file": rel, "components": detalle, "internal": internos, "newModules": nuevos, "overrides": ovs,
+    return {"file": rel, "components": detalle, "mismatch": [{"dataDs": a, "tag": b, "classes": c} for a, b, c in an["no_coinciden"]], "internal": internos, "newModules": nuevos, "overrides": ovs,
             "foreignClasses": ajenas, "classesInPageStyle": sorted(c for c in ajenas if c in en_pagina),
             "tokenAudit": None if hallazgos is None else hallazgos}
 
@@ -185,8 +185,13 @@ def imprimir(rep, cfg):
     ok = [d for d in comps if d["status"] == "verified"]
     print("Componentes del DS: %d (%d verificados)" % (len(comps), len(ok)))
     for d in comps:
-        marca = "data-ds ×%d" % d["dataDs"] if d["dataDs"] else "solo por clase, sin data-ds"
+        if d["dataDs"]:
+            marca = "data-ds ×%d" % d["dataDs"] + (" · %d elementos sin data-ds" % d["unmarked"] if d["unmarked"] else "")
+        else:
+            marca = "solo por clase, sin data-ds" + (" (%d elementos)" % d["unmarked"] if d["unmarked"] else "")
         print("  - %s · %s · %s" % (d["slug"], d["status"], marca))
+    for m in rep.get("mismatch") or []:
+        print("  ! data-ds=\"%s\" en <%s class=\"%s\">: ninguna clase del elemento es de ese contrato" % (m["dataDs"], m["tag"], m["classes"]))
     if rep["internal"]:
         print("Piezas internas de Figma (no deberían estar en una pantalla): " + ", ".join(rep["internal"]))
     marcas = cfg.get("newModuleClasses") or []
@@ -213,13 +218,15 @@ def imprimir(rep, cfg):
 
 def accionable(reps):
     print("\n## Lo accionable\n")
-    sin_ver, sin_ds, internos, ovs_vivos, ajenas, errores = {}, {}, {}, [], {}, 0
+    sin_ver, sin_ds, internos, ovs_vivos, ajenas, errores, mal = {}, {}, {}, [], {}, 0, []
     for r in reps:
         for d in r["components"]:
             if d["status"] in ("unverified", "stale", "no existe en el DS"):
                 sin_ver.setdefault(d["slug"], d["status"])
-            if d["byClassOnly"] and d["status"] != "interno":
-                sin_ds.setdefault(r["file"], []).append(d["slug"])
+            if d.get("unmarked") and d["status"] != "interno":
+                sin_ds.setdefault(r["file"], []).append((d["slug"], d["unmarked"]))
+        for m in r.get("mismatch") or []:
+            mal.append((r["file"], m))
         for s in r["internal"]:
             internos.setdefault(s, []).append(r["file"])
         for o in r["overrides"]:
@@ -229,11 +236,18 @@ def accionable(reps):
         errores += sum(1 for x in (r["tokenAudit"] or []) if x.get("severity") == "error")
     print("- Componentes sin verificar: " + (", ".join("%s (%s)" % (k, v) for k, v in sorted(sin_ver.items())) if sin_ver else "ninguno"))
     if sin_ds:
-        print("- Componentes sin data-ds (añadirlo en su elemento raíz):")
+        print("- Elementos sin data-ds (añadirlo en el elemento raíz de cada componente):")
         for f, lista in sorted(sin_ds.items()):
-            print("    %s: %d · %s" % (f, len(lista), ", ".join(lista[:12]) + (" …" if len(lista) > 12 else "")))
+            lista = sorted(lista, key=lambda x: (-x[1], x[0]))
+            print("    %s: %d · %s" % (f, sum(n for _, n in lista), ", ".join("%s ×%d" % x for x in lista[:12]) + (" …" if len(lista) > 12 else "")))
     else:
-        print("- Componentes sin data-ds: ninguno")
+        print("- Elementos sin data-ds: ninguno")
+    if mal:
+        print("- data-ds que no corresponden al elemento (cambia el slug por el del componente que es):")
+        for f, m in mal[:12]:
+            print("    %s: data-ds=\"%s\" en <%s class=\"%s\">" % (f, m["dataDs"], m["tag"], m["classes"]))
+    else:
+        print("- data-ds que no corresponden al elemento: ninguno")
     print("- Piezas internas de Figma: " + (", ".join(sorted(internos)) if internos else "ninguna"))
     print("- Overrides vivos: " + (", ".join("%s en %s" % (dscr(o), f) for f, o in ovs_vivos) if ovs_vivos else "ninguno"))
     print("- Clases ajenas al DS: " + (", ".join(sorted(ajenas)) if ajenas else "ninguna"))
@@ -262,10 +276,15 @@ def main(argv):
         por_slug[slug] = ("interno", motivo) if motivo else (estado(s), None)
         for c in clases_propias(s):
             por_clase.setdefault(c, slug)
+    clases_slug = {}
+    for s in contratos(root):
+        sl = s["meta"].get("slug", "")
+        if sl and not dcom.interno_de(s, cfg_ds):
+            clases_slug[sl] = set(dcom.clases_propias(s))
     css_ds = clases_definidas(read(os.path.join(root, "design-system", "css", "components.css")))
     rels = [os.path.relpath(f, root).replace(os.sep, "/") for f in files]
     audit = auditoria(root, rels)
-    reps = [informe_de(root, f, rel, por_slug, por_clase, css_ds, cfg, audit) for f, rel in zip(files, rels)]
+    reps = [informe_de(root, f, rel, por_slug, por_clase, css_ds, cfg, audit, clases_slug) for f, rel in zip(files, rels)]
     if a.json:
         print(json.dumps(reps, ensure_ascii=False, indent=2))
         return 0

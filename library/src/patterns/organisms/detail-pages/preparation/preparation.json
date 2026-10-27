@@ -16,11 +16,24 @@
           "need": 4.5,
           "large": false,
           "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".preparation .preparation__subtitle",
+          "fg": "#ffcb05",
+          "bg": "#121212",
+          "fgVar": "--color-text-brand-on-inverse",
+          "bgVar": "--color-surface-inverse",
+          "ratio": 12.31,
+          "need": 4.5,
+          "large": false,
+          "pass": true
         }
       ],
       "fail": 0,
       "untestable": [],
       "exempt": 0,
+      "recommend": [],
       "label": "Cumple AA"
     },
     "pending": null,

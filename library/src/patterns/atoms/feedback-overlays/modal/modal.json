@@ -16,11 +16,24 @@
           "need": 4.5,
           "large": false,
           "pass": true
+        },
+        {
+          "theme": "light",
+          "state": ".modal .modal__title",
+          "fg": "#121212",
+          "bg": "#ffffff",
+          "fgVar": "--modal-title",
+          "bgVar": "--modal-bg",
+          "ratio": 18.73,
+          "need": 3.0,
+          "large": true,
+          "pass": true
         }
       ],
       "fail": 0,
       "untestable": [],
       "exempt": 0,
+      "recommend": [],
       "label": "Cumple AA"
     },
     "pending": null,
